@@ -1,0 +1,6 @@
+.godot/
+__pycache__/
+preview/software/
+preview/*.avi
+preview/*.log
+tests/import_test.log

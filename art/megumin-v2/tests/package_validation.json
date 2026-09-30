@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "native_tests": {
+    "passed": 65,
+    "failed": 0
+  },
+  "video": "preview/megumin_casting_v2.mp4",
+  "video_seconds": 4.233333,
+  "video_dimensions": [
+    1440,
+    900
+  ],
+  "video_fps": 30,
+  "rendering": "Godot native animation/mesh export + deterministic offline software rasterization; not engine screen capture",
+  "excluded": [
+    ".godot cache",
+    "intermediate four-pose video",
+    "per-frame PNG/bin raster cache",
+    "temporary render logs"
+  ],
+  "portable_dependencies": [
+    "Godot 4.6",
+    "Python with NumPy and Pillow (only to rebuild software preview)",
+    "ffmpeg (only to encode software preview)"
+  ],
+  "known_review_items": [
+    "Fast authored-pose switches are still visible",
+    "A few minor prop/matte edge specks",
+    "Godot GPU/shader composition and STS2 in-game integration are unverified"
+  ]
+}

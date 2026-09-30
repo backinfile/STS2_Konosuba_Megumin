@@ -14,3 +14,4 @@ Thumbs.db
 
 # Keep the reviewed functional test evidence
 !art/megumin/tests/godot_test.log
+!art/megumin-v2/tests/godot_test.log

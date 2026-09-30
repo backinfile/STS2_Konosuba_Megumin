@@ -1,0 +1,68 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS  Six separately authored casting silhouettes loaded
+PASS  VFX are disabled by default
+PASS  All six native animation resources remain available
+PASS  Idle remains looping
+PASS  Unknown animation is rejected
+PASS  Lowercase alias resolves to Cast
+PASS  Authored-pose switches are discrete native property keys
+PASS  Full cast-to-exhaust sequence is 3.50 seconds
+PASS  Phase 1 uses its own authored coil silhouette
+PASS  coil left sole stays exactly on its anchor
+PASS  coil right sole stays exactly on its anchor
+PASS  coil uses the same rigid, unscaled staff length
+PASS  coil prop and palm share the same gripping point
+PASS  coil has one opaque pose, without crossfade ghosts
+PASS  Phase 2 uses its own authored raise silhouette
+PASS  raise left sole stays exactly on its anchor
+PASS  raise right sole stays exactly on its anchor
+PASS  raise uses the same rigid, unscaled staff length
+PASS  raise prop and palm share the same gripping point
+PASS  raise has one opaque pose, without crossfade ghosts
+PASS  Phase 3 uses its own authored chant silhouette
+PASS  chant left sole stays exactly on its anchor
+PASS  chant right sole stays exactly on its anchor
+PASS  chant uses the same rigid, unscaled staff length
+PASS  chant prop and palm share the same gripping point
+PASS  chant has one opaque pose, without crossfade ghosts
+PASS  Phase 4 uses its own authored release silhouette
+PASS  release left sole stays exactly on its anchor
+PASS  release right sole stays exactly on its anchor
+PASS  release uses the same rigid, unscaled staff length
+PASS  release prop and palm share the same gripping point
+PASS  release has one opaque pose, without crossfade ghosts
+PASS  Phase 5 uses its own authored recover silhouette
+PASS  recover left sole stays exactly on its anchor
+PASS  recover right sole stays exactly on its anchor
+PASS  recover uses the same rigid, unscaled staff length
+PASS  recover prop and palm share the same gripping point
+PASS  recover has one opaque pose, without crossfade ghosts
+PASS  Phase 6 uses its own authored exhaust silhouette
+PASS  exhaust left sole stays exactly on its anchor
+PASS  exhaust right sole stays exactly on its anchor
+PASS  exhaust uses the same rigid, unscaled staff length
+PASS  exhaust prop and palm share the same gripping point
+PASS  exhaust has one opaque pose, without crossfade ghosts
+PASS  Chant and exhaustion reuse identical pinned leg cutouts
+PASS  Release retains its newly drawn forward-load legs
+PASS  Pose motion uses a dense native Polygon2D control mesh
+PASS  Pose textures use mipmapped linear minification
+PASS  Repeated visual seeks across the release cannot manufacture damage
+PASS  No damage marker before the full-body release
+PASS  Exactly one damage marker crosses Attack=1.55s
+PASS  Holding exhaustion does not emit extra damage
+PASS  Interrupted cast cannot leak a later damage signal
+PASS  Legacy Hit clears any authored casting-pose index
+PASS  Cast preserves opt-in automatic return to Idle
+PASS  Attack preserves opt-in automatic return to Idle
+PASS  Hit preserves opt-in automatic return to Idle
+PASS  Relaxed preserves opt-in automatic return to Idle
+PASS  Dead reaches its dedicated terminal pose
+PASS  Dead prevents accidental animation restart
+PASS  Dead remains terminal after extra elapsed time
+PASS  Explicit reset restores a clean Idle
+PASS  Normal deferred playback has no impact before 1.55s
+PASS  Normal deferred playback emits exactly one release impact
+PASS  Normal deferred playback does not duplicate the release event
+RESULT  65 passed / 0 failed

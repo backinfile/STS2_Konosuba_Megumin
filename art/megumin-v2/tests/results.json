@@ -1,0 +1,15 @@
+{
+	"authored_poses": 6,
+	"common_leg_poses": [
+		"chant",
+		"exhaust"
+	],
+	"effects_default": false,
+	"engine": "4.6.3-stable (official)",
+	"failed": 0,
+	"graphics_validation": "Godot graphical capture unavailable: local Unix display socket blocked; native geometry checked with deterministic offline raster preview",
+	"impact_marker_seconds": 1.55,
+	"passed": 65,
+	"release_uses_new_legs": true,
+	"scope": "standalone editable Godot project; not STS2 integration"
+}

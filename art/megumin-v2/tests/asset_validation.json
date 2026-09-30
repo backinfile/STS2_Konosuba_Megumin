@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "source_pixels_modified": false,
+  "textures": [
+    {
+      "file": "assets/poses/v2/chant.png",
+      "width": 1111,
+      "height": 1416,
+      "mode": "RGBA",
+      "sha256": "82cfe872af91270abe9cfd938cb9e54a906070c8197a4d0d06efb774ddfcfe59",
+      "mipmaps_configured": true
+    },
+    {
+      "file": "assets/poses/v2/chant_upper.png",
+      "width": 1111,
+      "height": 1415,
+      "mode": "RGBA",
+      "sha256": "816e5a56c9dc05fca6cbb8660063c4dbba238a44251c0394ce982989519d0642",
+      "mipmaps_configured": true
+    },
+    {
+      "file": "assets/poses/v2/coil.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "7c75128e158674d51e69a877b118e660612241bd6ce443964ee7c05f1604662f",
+      "mipmaps_configured": true
+    },
+    {
+      "file": "assets/poses/v2/exhaust.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "02e389156e7cf1c07aae7f8ada821f33ea5a21a145fc7531967074eea2f8d910",
+      "mipmaps_configured": true
+    },
+    {
+      "file": "assets/poses/v2/exhaust_upper.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "62afbacf790bc2c5a2a808010998aca345c8c29d46b37ddd59b0b2c2370bb2bb",
+      "mipmaps_configured": true
+    },
+    {
+      "file": "assets/poses/v2/raise.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "06e3e24c51ad9e21e18349eb958bba8f0854d1338f07c752aae0ff5e68bd25d2",
+      "mipmaps_configured": true
+    },
+    {
+      "file": "assets/poses/v2/recover.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "565283a73818570969212705423cc9865d016fce35d97f95fed97fe3396cd70b",
+      "mipmaps_configured": true
+    },
+    {
+      "file": "assets/poses/v2/release.png",
+      "width": 1484,
+      "height": 1060,
+      "mode": "RGBA",
+      "sha256": "2dbdb0c8cdd6a384a344503295d5c2d2002a902a5b94b78218d2c308aa8b2e3c",
+      "mipmaps_configured": true
+    }
+  ]
+}
