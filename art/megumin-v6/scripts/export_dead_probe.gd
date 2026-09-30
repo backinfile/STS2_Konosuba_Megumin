@@ -6,7 +6,8 @@ func run()->void:
  rig.seek_pose(0.);rig.player.stop()
  var probes=[
   {"name":"kneeling_ground_contact","hip_x":311.00135321,"hip_drop":471.20049697,"torso_lean":22.,"head_tilt":35.,"R_shoulder":-8.,"R_elbow":-10.,"R_wrist":0.,"L_shoulder":-5.,"L_elbow":-20.,"L_wrist":-10.,"R_heel_raise":60.,"L_heel_raise":65.,"cape_collapse":1.,"staff_ground_contact":1.,"face_state":1},
-  {"name":"folded_upper_body","hip_x":3.,"hip_drop":12.,"torso_lean":42.,"head_tilt":50.,"R_shoulder":-12.,"R_elbow":-10.,"R_wrist":0.,"L_shoulder":-5.,"L_elbow":-20.,"L_wrist":-10.,"R_heel_raise":0.,"L_heel_raise":0.,"cape_collapse":0.,"staff_ground_contact":1.,"face_state":1}]
+  {"name":"folded_upper_body","hip_x":3.,"hip_drop":12.,"torso_lean":42.,"head_tilt":50.,"R_shoulder":-12.,"R_elbow":-10.,"R_wrist":0.,"L_shoulder":-5.,"L_elbow":-20.,"L_wrist":-10.,"R_heel_raise":0.,"L_heel_raise":0.,"cape_collapse":0.,"staff_ground_contact":1.,"face_state":1},
+  {"name":"supported_loss_of_support","hip_x":8.,"hip_drop":5.,"torso_lean":32.,"head_tilt":50.,"R_shoulder":-50.,"R_elbow":-50.,"R_wrist":0.,"L_shoulder":-32.,"L_elbow":0.,"L_wrist":0.,"R_heel_raise":2.,"L_heel_raise":3.,"cape_collapse":0.,"staff_ground_contact":1.,"face_state":1}]
  var geometry={};var frames=[];var metrics=[]
  DirAccess.make_dir_recursive_absolute("res://preview/dead_probe")
  for fi in range(probes.size()):

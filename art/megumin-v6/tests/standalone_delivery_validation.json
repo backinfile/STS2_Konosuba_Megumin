@@ -1,0 +1,174 @@
+{
+  "passed": true,
+  "scope": "Independent clean rebuild and headless runtime verification of five delivered states; Dead is unfinished and excluded from runtime loading. No frames re-rendered; every freshly exported native geometry buffer is byte-identical to the frozen rendered source.",
+  "isolated_directory": "separate clean temporary directory",
+  "isolated_start": "Fresh directory with no .godot cache or .import files; no sibling v1/v2/v3 project. Local source PNGs only.",
+  "commands": [
+    "python tools/build_v6.py",
+    "python tools/build_timeline.py",
+    "python tools/build_states_v6.py",
+    "bash tools/run_tests.sh",
+    "godot --headless --path . --script tests/test_runtime_states.gd",
+    "godot --headless --path . --script scripts/export_five_states_review.gd",
+    "python tools/test_five_states_review.py",
+    "ffmpeg -v error -i preview/megumin_v6_five_states_review.mp4 -f null -"
+  ],
+  "deterministic_rebuild": {
+    "passed": true,
+    "checked_files": 38,
+    "changed": []
+  },
+  "native_exports_match_frozen_review": [
+    {
+      "directory": "preview/software",
+      "files_checked": 218,
+      "changed_files": [],
+      "passed": true
+    },
+    {
+      "directory": "preview/five_states",
+      "files_checked": 604,
+      "changed_files": [],
+      "passed": true
+    }
+  ],
+  "active_source_unchanged": true,
+  "active_source_files_checked": 38,
+  "headless_smoke": "passed; no graphical window or framebuffer recording claimed",
+  "native_error_lines": [],
+  "main_validation": {
+    "passed": true,
+    "checks": 41
+  },
+  "main_continuity": {
+    "authored_boundaries_tested": 10,
+    "max_vertex_delta_px_at_0_0002_seconds": 0.00898440834134817,
+    "passed": true
+  },
+  "five_states_validation": {
+    "passed": true,
+    "checks": 123,
+    "numeric_frames": 603,
+    "movie_frames": 581,
+    "exact_keyframes": 22,
+    "existing_renders_checked": true
+  },
+  "native_runtime_validation": {
+    "passed": true,
+    "checks": 44,
+    "details": "tests/runtime_states_validation.json",
+    "auto_return_to_Idle": [
+      "Cast",
+      "Attack",
+      "Hit",
+      "Relaxed"
+    ],
+    "attack_impact_method_and_signal": "one native invocation each",
+    "Dead": "resource absent; not loaded; play_state returns false; does not lock other states"
+  },
+  "master_sha256": "948002171a29ae117a1ae090d728753e2bc792b30477976e11e20d75bbe6b221",
+  "master_identical_to_approved_local_source": true,
+  "states": [
+    {
+      "name": "Idle",
+      "duration": 3.0,
+      "timeline_start": 0.0,
+      "timeline_end": 3.0
+    },
+    {
+      "name": "Cast",
+      "duration": 4.8,
+      "timeline_start": 3.0,
+      "timeline_end": 7.8
+    },
+    {
+      "name": "Attack",
+      "duration": 7.2,
+      "timeline_start": 7.8,
+      "timeline_end": 15.0
+    },
+    {
+      "name": "Hit",
+      "duration": 0.95,
+      "timeline_start": 15.0,
+      "timeline_end": 15.95
+    },
+    {
+      "name": "Relaxed",
+      "duration": 3.4,
+      "timeline_start": 15.95,
+      "timeline_end": 19.349999999999998
+    }
+  ],
+  "videos": {
+    "preview/megumin_v6_mage_legmotion_fix.mp4": {
+      "sha256": "87e1ba8c59d20593b08d5d66cac1641b2d2ab136c6ae6fe494b1a492bfd79d54",
+      "bytes": 884646,
+      "width": 1440,
+      "height": 960,
+      "r_frame_rate": "30/1",
+      "duration": "7.233333",
+      "nb_frames": "217"
+    },
+    "preview/megumin_v6_mage_mainchain_review.mp4": {
+      "sha256": "600713b0f54a3e98df726604d9e3661e80cbbc644b323d043b1de8c1df3cc608",
+      "bytes": 1065866,
+      "width": 1440,
+      "height": 960,
+      "r_frame_rate": "30/1",
+      "duration": "7.233333",
+      "nb_frames": "217"
+    },
+    "preview/megumin_v6_five_states_review.mp4": {
+      "sha256": "7f08f68b9adbaca48edd0b93afa22f98da6e17de6c0e7d4201ca872023b14550",
+      "bytes": 2361166,
+      "width": 1440,
+      "height": 960,
+      "r_frame_rate": "30/1",
+      "duration": "19.366667",
+      "nb_frames": "581"
+    }
+  },
+  "five_state_video_full_decode": "passed with empty ffmpeg error log",
+  "visual_scope": "Previously sampled full-size key PNGs/contact sheets reviewed by author, parent and independent QA. This isolation check did not watch the entire video or create new graphic renders.",
+  "frozen_source_hashes": {
+    "assets/anatomy_v6.json": "31c7249561d4cfbba3d71fbcd20ac0c434f5bff7e49edadaf20145a0c7b38a13",
+    "assets/rig_geometry.json": "dd9d27832c9669c86d85e3d02afdea948d057d74d24430846c04d64c49890652",
+    "assets/source/megumin_closedeyes_v6_raw.png": "22fd8fa218329951eaca8a538a3db27b2a5ccae37cfdae8d69db981c3d39ab76",
+    "assets/source/megumin_master_v6.png": "948002171a29ae117a1ae090d728753e2bc792b30477976e11e20d75bbe6b221",
+    "assets/source/megumin_backing_v6_raw.png": "683bce0718e9daa535eb346f297bf38018c220469ce91809cb5a43211bd85bee",
+    "assets/source/megumin_approved_v6.png": "948002171a29ae117a1ae090d728753e2bc792b30477976e11e20d75bbe6b221",
+    "assets/source/megumin_staff_v6_raw.png": "e88dff0686b1cd959c3a3b326930e28b679743a35f13bd33e292f71eaa540cd5",
+    "assets/source/megumin_cape_v6_raw.png": "1dac124a0dd7de9c47d07307691be0318fcd6f48f0425a55b7ebf2d3a44de269",
+    "assets/source/megumin_free_arm_v6_raw.png": "fb68971a809756544a59e3d6a7ad82cc8030f6afe365e70fb8b9cf5294fd4ea5",
+    "assets/source/megumin_unstaffed_v6_raw.png": "00bec8f234d0b4862d42c6b9b9c4594f3fe2c08cb22b935fbc352b9896533c17",
+    "animations/Attack.tres": "1709dcfe6235a5cc36ca130a49d88e1db446083daa95b6035d9eb23e399832a0",
+    "animations/Hit.tres": "52decc31a86a1e1373df5087f36fa61a5e587ed4e2953d13ce2b4747e35eeaaf",
+    "animations/Idle.tres": "95acc5185a0154b2ed411a794775779efcfc2e34d2bd117a2ceae8d942136339",
+    "animations/MageCast.tres": "9897936df15841cfae185fac1ce6953da4ceb5e63c2b85c2cbc6ed3a47a8477f",
+    "animations/art_directed_keys.json": "0ce6254c2e57dd270f621d0e1f604d018786bf727bc32229a63f17fb1ab3b5c8",
+    "animations/Dead_unreviewed_legacy.tres": "c775d4f8933d56c1faa696b07333a16b4dd19f98038d350f7c82dcff089adb23",
+    "animations/Cast.tres": "0094b0de71f3523a684ef12b4f5562924358c8cf77e42d6c6eec9f0240c2e3ac",
+    "animations/Relaxed.tres": "7430ffa106a278d072db4a1f56b7334917bfa4aebbfc0d033c8cd71d11bcabf1",
+    "scripts/export_dead_probe.gd": "000a6c5264780b2ad200a3d69bbf394625162fa02aa72b96027b6a81ee2c2ab8",
+    "scripts/preview.gd": "029f6b42dc233b01770769884f357a0a8a4f46ce6d2315a35267ebf629cb1fb6",
+    "scripts/export_five_states_review.gd": "6c47e2a5c859efb8e5e01e66e753dafc6b623e135ce237edf5248c1004b1e9d1",
+    "scripts/preview.gd.uid": "7716d05a19cb6d5d9298493109f77e847417b6927378a2650f5e93aeef937c14",
+    "scripts/megumin_rig.gd": "896df46d9b891eda398a7dfa022462d1d96c8596d22809d253be8d03cee4f10f",
+    "scripts/export_software_review.gd": "09c20f8f9ece07d21adda2a960a00e659e119ddd8a4f1cc5c3204adefdb55715",
+    "scripts/megumin_rig.gd.uid": "5cbbe45dfcf4a9b2568578cfa1dfb47e0a2ccb9556b23839a094644454625cc5",
+    "scripts/export_software_review.gd.uid": "596323f3abe467094f16d38b00e32186d14e5343b1120f2ddedf8b602bb3a67e",
+    "scenes/preview.tscn": "68bf442b742a42afe14b7351b384270c495e3f4e4d868f886ef867459ded1308",
+    "scenes/megumin.tscn": "f073e868d167f07aae00d3466d4a9509975f3658aee2446977ad5b1dc2ce9e6e",
+    "tools/test_five_states_review.py": "6ac1feb0dde260cb5aeb867b1b31c2a30216bc66abe0a823a307344ef582244d",
+    "tools/validate_v6.py": "05795d8f001e14b893394eb9b2fa6a4404f37b331c32c639f4c61435d9401d12",
+    "tools/build_states_v6.py": "462cfc8f017ca0dfa807a89055c394dba6e0e7035760b20d03298dbbae77cb60",
+    "tools/build_timeline.py": "7959e8d0c1ebfac12cde6156a6032a267b86c980275b79140f026ec7a9d871c6",
+    "tools/build_v6.py": "291edb85996a33fe045725a561dcb2f53aba8b9a4f9e60a473796a633b028ed4",
+    "tools/render_five_states_review.py": "98338458d232741fede59d5cf31e7343d8007ed9e96265fc19cfba0731f91a3e",
+    "tools/contact_five_states_review.py": "ef8e9e271ebc647a5e777402f3f420ff1fe90d0c789035d7e8e9dbfb2b0936e5",
+    "tools/run_tests.sh": "905caa97bfc33c78463ce9bcd7784d0aa5d72b2e33dfc4aa79598c25f654f670",
+    "tools/render_software_review.py": "e44107c15541564d12cbd39c87485f8a2a8fa734dcb304765f1bedc1826f8cac",
+    "tools/run_five_states_review.sh": "d661410b4afff907bbc90cf2d788711f3ca3536cce115357452faf2b2b035c30"
+  }
+}

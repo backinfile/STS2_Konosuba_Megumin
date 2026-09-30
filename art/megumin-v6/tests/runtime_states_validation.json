@@ -1,0 +1,262 @@
+{
+  "Dead": "not loaded; play_state rejected; artwork/animation unfinished",
+  "checks": [
+    {
+      "name": "Dead exact resource absent",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Dead not present in native AnimationPlayer",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Dead request rejected without locking",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "invalid state rejected",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Idle loaded",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Cast loaded",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Attack loaded",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Hit loaded",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Relaxed loaded",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reset selects Idle and clears death controls",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Cast entry accepted from Idle",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Cast naturally completes once",
+      "passed": true,
+      "value": [
+        "Cast"
+      ]
+    },
+    {
+      "name": "Cast automatically returns Idle",
+      "passed": true,
+      "value": "Idle"
+    },
+    {
+      "name": "Cast return seam subpixel at 120 Hz",
+      "passed": true,
+      "value": 0.0777608081698418
+    },
+    {
+      "name": "Cast feet remain fixed through native playback",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Cast bones retain unit scale through native playback",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Cast expected impact method and signal count",
+      "passed": true,
+      "value": {
+        "method_calls": 0,
+        "signals": 0
+      }
+    },
+    {
+      "name": "Cast playback finite and continuous",
+      "passed": true,
+      "value": {
+        "max_vertex_step_px_at_120fps": 8.93248558044434
+      }
+    },
+    {
+      "name": "Attack entry accepted from Idle",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Attack naturally completes once",
+      "passed": true,
+      "value": [
+        "Attack"
+      ]
+    },
+    {
+      "name": "Attack automatically returns Idle",
+      "passed": true,
+      "value": "Idle"
+    },
+    {
+      "name": "Attack return seam subpixel at 120 Hz",
+      "passed": true,
+      "value": 0.0555790029466152
+    },
+    {
+      "name": "Attack feet remain fixed through native playback",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Attack bones retain unit scale through native playback",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Attack expected impact method and signal count",
+      "passed": true,
+      "value": {
+        "method_calls": 1,
+        "signals": 1
+      }
+    },
+    {
+      "name": "Attack playback finite and continuous",
+      "passed": true,
+      "value": {
+        "max_vertex_step_px_at_120fps": 15.3849039077759
+      }
+    },
+    {
+      "name": "Hit entry accepted from Idle",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Hit naturally completes once",
+      "passed": true,
+      "value": [
+        "Hit"
+      ]
+    },
+    {
+      "name": "Hit automatically returns Idle",
+      "passed": true,
+      "value": "Idle"
+    },
+    {
+      "name": "Hit return seam subpixel at 120 Hz",
+      "passed": true,
+      "value": 0.0770054683089256
+    },
+    {
+      "name": "Hit feet remain fixed through native playback",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Hit bones retain unit scale through native playback",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Hit expected impact method and signal count",
+      "passed": true,
+      "value": {
+        "method_calls": 0,
+        "signals": 0
+      }
+    },
+    {
+      "name": "Hit playback finite and continuous",
+      "passed": true,
+      "value": {
+        "max_vertex_step_px_at_120fps": 9.54101467132568
+      }
+    },
+    {
+      "name": "Relaxed entry accepted from Idle",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Relaxed naturally completes once",
+      "passed": true,
+      "value": [
+        "Relaxed"
+      ]
+    },
+    {
+      "name": "Relaxed automatically returns Idle",
+      "passed": true,
+      "value": "Idle"
+    },
+    {
+      "name": "Relaxed return seam subpixel at 120 Hz",
+      "passed": true,
+      "value": 0.0763970240950584
+    },
+    {
+      "name": "Relaxed feet remain fixed through native playback",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Relaxed bones retain unit scale through native playback",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Relaxed expected impact method and signal count",
+      "passed": true,
+      "value": {
+        "method_calls": 0,
+        "signals": 0
+      }
+    },
+    {
+      "name": "Relaxed playback finite and continuous",
+      "passed": true,
+      "value": {
+        "max_vertex_step_px_at_120fps": 4.04928016662598
+      }
+    },
+    {
+      "name": "Idle remains looping after more than two cycles",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Dead stays unavailable after all state plays",
+      "passed": true,
+      "value": null
+    }
+  ],
+  "passed": true,
+  "runtime": "Godot headless AnimationPlayer manual advance at 120 Hz; native completion and method callbacks; no graphic-window claim",
+  "states": [
+    "Idle",
+    "Cast",
+    "Attack",
+    "Hit",
+    "Relaxed"
+  ]
+}

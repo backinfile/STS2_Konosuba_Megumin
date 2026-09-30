@@ -1,0 +1,892 @@
+{
+  "passed": true,
+  "numeric_frames_tested": 603,
+  "movie_frames": 581,
+  "exact_keyframes": 22,
+  "render_validation_run": false,
+  "visual_review": "Manual key-PNG inspection is separate; see tests/five_states_visual_review.md when present.",
+  "scope": "Native Godot Polygon2D vertices, transforms, UVs and triangles. Offline raster, not a Godot window recording.",
+  "checks": [
+    {
+      "name": "only five requested states exported",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "30 fps, original timing",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "no retiming beyond terminal frame rounding",
+      "passed": true,
+      "value": 0.016666666666697694,
+      "category": "numeric"
+    },
+    {
+      "name": "source hashes unchanged during export",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "res://animations/Attack.tres unchanged after export",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "res://animations/Cast.tres unchanged after export",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "res://animations/Hit.tres unchanged after export",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "res://animations/Idle.tres unchanged after export",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "res://animations/Relaxed.tres unchanged after export",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "res://assets/rig_geometry.json unchanged after export",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "res://scripts/megumin_rig.gd unchanged after export",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "L_foot original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "L_forearm_hidden original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "L_hand original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "L_leg_skin original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "L_mother_cuff original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "L_upper_hidden original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "R_continuous_sleeve original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "R_foot original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "R_hand original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "R_leg_skin original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "R_white_bandage_texture original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "bodice original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "complete_cape original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "head_hat_hair original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "neck_skin_continuity original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "skirt_back original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "skirt_front original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "staff_grip_occlusion original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "staff_original_head original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "staff_original_lower original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "torso_occlusion original source texture unchanged",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "same visible cutout topology and depth throughout",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "finite native vertices",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "finite exported native transforms",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "large view native geometry stays inside fixed review panel",
+      "passed": true,
+      "value": {
+        "minimum": [
+          217.05161376953126,
+          154.5504223632813
+        ],
+        "maximum": [
+          644.6870056152344,
+          858.52
+        ]
+      },
+      "category": "numeric"
+    },
+    {
+      "name": "320 px reference native geometry stays inside fixed review panel",
+      "passed": true,
+      "value": {
+        "minimum": [
+          1000.3891453598485,
+          451.9299081008953
+        ],
+        "maximum": [
+          1224.78132263688,
+          821.3223140495868
+        ]
+      },
+      "category": "numeric"
+    },
+    {
+      "name": "all bone scales remain one",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Idle minimal hip travel",
+      "passed": true,
+      "value": {
+        "max_drop": 0.900000000062656,
+        "max_abs_x": 0.0500000000151634
+      },
+      "category": "numeric"
+    },
+    {
+      "name": "Idle no death-only controls",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Idle terminal leg stance equals current neutral anatomy",
+      "passed": true,
+      "value": 0.00014060504293428623,
+      "category": "numeric"
+    },
+    {
+      "name": "Cast minimal hip travel",
+      "passed": true,
+      "value": {
+        "max_drop": 0.749999999988699,
+        "max_abs_x": 0.40000000004406
+      },
+      "category": "numeric"
+    },
+    {
+      "name": "Cast no death-only controls",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Cast terminal leg stance equals current neutral anatomy",
+      "passed": true,
+      "value": 0.00014060504293428623,
+      "category": "numeric"
+    },
+    {
+      "name": "Attack minimal hip travel",
+      "passed": true,
+      "value": {
+        "max_drop": 1.5,
+        "max_abs_x": 0.999999999969674
+      },
+      "category": "numeric"
+    },
+    {
+      "name": "Attack no death-only controls",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Attack terminal leg stance equals current neutral anatomy",
+      "passed": true,
+      "value": 0.00014060504293428623,
+      "category": "numeric"
+    },
+    {
+      "name": "Hit minimal hip travel",
+      "passed": true,
+      "value": {
+        "max_drop": 1.99937274264554,
+        "max_abs_x": 0.59974436121016
+      },
+      "category": "numeric"
+    },
+    {
+      "name": "Hit no death-only controls",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Hit terminal leg stance equals current neutral anatomy",
+      "passed": true,
+      "value": 0.00014060504293428623,
+      "category": "numeric"
+    },
+    {
+      "name": "Relaxed minimal hip travel",
+      "passed": true,
+      "value": {
+        "max_drop": 1.5,
+        "max_abs_x": 0.9
+      },
+      "category": "numeric"
+    },
+    {
+      "name": "Relaxed no death-only controls",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Relaxed terminal leg stance equals current neutral anatomy",
+      "passed": true,
+      "value": 0.00014060504293428623,
+      "category": "numeric"
+    },
+    {
+      "name": "R upper bone length fixed",
+      "passed": true,
+      "value": 9.695005695675718e-05,
+      "category": "numeric"
+    },
+    {
+      "name": "R lower bone length fixed",
+      "passed": true,
+      "value": 0.00011345234497639467,
+      "category": "numeric"
+    },
+    {
+      "name": "R upper arm segment length fixed",
+      "passed": true,
+      "value": 7.296703036274721e-05,
+      "category": "numeric"
+    },
+    {
+      "name": "R forearm arm segment length fixed",
+      "passed": true,
+      "value": 9.423420966925278e-05,
+      "category": "numeric"
+    },
+    {
+      "name": "R foot anchor fixed",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "R full-sequence IK reachable",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "R foot orientation fixed",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "L upper bone length fixed",
+      "passed": true,
+      "value": 6.620053608230592e-05,
+      "category": "numeric"
+    },
+    {
+      "name": "L lower bone length fixed",
+      "passed": true,
+      "value": 6.140305464441553e-05,
+      "category": "numeric"
+    },
+    {
+      "name": "L upper arm segment length fixed",
+      "passed": true,
+      "value": 9.873849168684501e-05,
+      "category": "numeric"
+    },
+    {
+      "name": "L forearm arm segment length fixed",
+      "passed": true,
+      "value": 0.00014658320290550364,
+      "category": "numeric"
+    },
+    {
+      "name": "L foot anchor fixed",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "L full-sequence IK reachable",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "L foot orientation fixed",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "complete_cape no inverted mesh triangles",
+      "passed": true,
+      "value": 0.7982419196708875,
+      "category": "numeric"
+    },
+    {
+      "name": "skirt_back no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9999996185302734,
+      "category": "numeric"
+    },
+    {
+      "name": "skirt_back rigid shape / no stretch",
+      "passed": true,
+      "value": 7.54821120096949e-06,
+      "category": "numeric"
+    },
+    {
+      "name": "L_leg_skin no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9378090608865023,
+      "category": "numeric"
+    },
+    {
+      "name": "R_leg_skin no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9342915216257097,
+      "category": "numeric"
+    },
+    {
+      "name": "R_white_bandage_texture no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9342915216257097,
+      "category": "numeric"
+    },
+    {
+      "name": "L_upper_hidden no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9995041767964484,
+      "category": "numeric"
+    },
+    {
+      "name": "L_upper_hidden rigid shape / no stretch",
+      "passed": true,
+      "value": 9.777855214565534e-05,
+      "category": "numeric"
+    },
+    {
+      "name": "R_foot no inverted mesh triangles",
+      "passed": true,
+      "value": 1.0,
+      "category": "numeric"
+    },
+    {
+      "name": "R_foot rigid shape / no stretch",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "L_foot no inverted mesh triangles",
+      "passed": true,
+      "value": 1.0,
+      "category": "numeric"
+    },
+    {
+      "name": "L_foot rigid shape / no stretch",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "torso_occlusion no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9999755637142002,
+      "category": "numeric"
+    },
+    {
+      "name": "torso_occlusion rigid shape / no stretch",
+      "passed": true,
+      "value": 0.00010180367794987433,
+      "category": "numeric"
+    },
+    {
+      "name": "bodice no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9999899915412979,
+      "category": "numeric"
+    },
+    {
+      "name": "bodice rigid shape / no stretch",
+      "passed": true,
+      "value": 0.00010363797517243256,
+      "category": "numeric"
+    },
+    {
+      "name": "skirt_front no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9999983278039384,
+      "category": "numeric"
+    },
+    {
+      "name": "skirt_front rigid shape / no stretch",
+      "passed": true,
+      "value": 7.629067511061294e-06,
+      "category": "numeric"
+    },
+    {
+      "name": "R_continuous_sleeve no inverted mesh triangles",
+      "passed": true,
+      "value": 0.7770470515630828,
+      "category": "numeric"
+    },
+    {
+      "name": "neck_skin_continuity no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9999739039121778,
+      "category": "numeric"
+    },
+    {
+      "name": "neck_skin_continuity rigid shape / no stretch",
+      "passed": true,
+      "value": 0.0001377562013473721,
+      "category": "numeric"
+    },
+    {
+      "name": "head_hat_hair no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9990675000008196,
+      "category": "numeric"
+    },
+    {
+      "name": "head_hat_hair rigid shape / no stretch",
+      "passed": true,
+      "value": 0.0001696710634178089,
+      "category": "numeric"
+    },
+    {
+      "name": "L_forearm_hidden no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9988940159562401,
+      "category": "numeric"
+    },
+    {
+      "name": "L_forearm_hidden rigid shape / no stretch",
+      "passed": true,
+      "value": 0.0001330888050432577,
+      "category": "numeric"
+    },
+    {
+      "name": "staff_original_head no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9982409285647529,
+      "category": "numeric"
+    },
+    {
+      "name": "staff_original_head rigid shape / no stretch",
+      "passed": true,
+      "value": 0.0002343331975680485,
+      "category": "numeric"
+    },
+    {
+      "name": "staff_original_lower no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9994714293628931,
+      "category": "numeric"
+    },
+    {
+      "name": "staff_original_lower rigid shape / no stretch",
+      "passed": true,
+      "value": 0.00020642813876747823,
+      "category": "numeric"
+    },
+    {
+      "name": "staff_grip_occlusion no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9999981908323472,
+      "category": "numeric"
+    },
+    {
+      "name": "staff_grip_occlusion rigid shape / no stretch",
+      "passed": true,
+      "value": 0.00010211392678627362,
+      "category": "numeric"
+    },
+    {
+      "name": "L_mother_cuff no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9999836743378839,
+      "category": "numeric"
+    },
+    {
+      "name": "L_mother_cuff rigid shape / no stretch",
+      "passed": true,
+      "value": 0.00012503632031268808,
+      "category": "numeric"
+    },
+    {
+      "name": "R_hand no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9996142541058362,
+      "category": "numeric"
+    },
+    {
+      "name": "R_hand rigid shape / no stretch",
+      "passed": true,
+      "value": 0.00011261172140208942,
+      "category": "numeric"
+    },
+    {
+      "name": "L_hand no inverted mesh triangles",
+      "passed": true,
+      "value": 0.9997209567576647,
+      "category": "numeric"
+    },
+    {
+      "name": "L_hand rigid shape / no stretch",
+      "passed": true,
+      "value": 0.0001271213646933944,
+      "category": "numeric"
+    },
+    {
+      "name": "Idle to Cast exact continuous boundary",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "Cast to Attack exact continuous boundary",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "Attack to Hit exact continuous boundary",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "Hit to Relaxed exact continuous boundary",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "Idle 3 s loop including cape closes",
+      "passed": true,
+      "value": 0.0,
+      "category": "numeric"
+    },
+    {
+      "name": "Attack first 12 tracks exactly preserve MageCast",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Attack impact is single method at 3.5 s",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Idle resource exists with correct name",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Idle has no impact method",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Cast resource exists with correct name",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Cast has no impact method",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Attack resource exists with correct name",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Hit resource exists with correct name",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Hit has no impact method",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Relaxed resource exists with correct name",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    },
+    {
+      "name": "Relaxed has no impact method",
+      "passed": true,
+      "value": null,
+      "category": "numeric"
+    }
+  ],
+  "measurements": {
+    "complete_cape": {
+      "vertex_count": 340,
+      "triangle_count": 608,
+      "checked_non_degenerate_triangles": 608,
+      "minimum_signed_area_ratio": 0.7982419196708875
+    },
+    "skirt_back": {
+      "vertex_count": 6,
+      "triangle_count": 4,
+      "checked_non_degenerate_triangles": 4,
+      "minimum_signed_area_ratio": 0.9999996185302734
+    },
+    "L_leg_skin": {
+      "vertex_count": 526,
+      "triangle_count": 902,
+      "checked_non_degenerate_triangles": 901,
+      "minimum_signed_area_ratio": 0.9378090608865023
+    },
+    "R_leg_skin": {
+      "vertex_count": 570,
+      "triangle_count": 985,
+      "checked_non_degenerate_triangles": 984,
+      "minimum_signed_area_ratio": 0.9342915216257097
+    },
+    "R_white_bandage_texture": {
+      "vertex_count": 570,
+      "triangle_count": 437,
+      "checked_non_degenerate_triangles": 437,
+      "minimum_signed_area_ratio": 0.9342915216257097
+    },
+    "L_upper_hidden": {
+      "vertex_count": 27,
+      "triangle_count": 25,
+      "checked_non_degenerate_triangles": 25,
+      "minimum_signed_area_ratio": 0.9995041767964484
+    },
+    "R_foot": {
+      "vertex_count": 17,
+      "triangle_count": 15,
+      "checked_non_degenerate_triangles": 15,
+      "minimum_signed_area_ratio": 1.0
+    },
+    "L_foot": {
+      "vertex_count": 17,
+      "triangle_count": 15,
+      "checked_non_degenerate_triangles": 15,
+      "minimum_signed_area_ratio": 1.0
+    },
+    "torso_occlusion": {
+      "vertex_count": 16,
+      "triangle_count": 14,
+      "checked_non_degenerate_triangles": 14,
+      "minimum_signed_area_ratio": 0.9999755637142002
+    },
+    "bodice": {
+      "vertex_count": 21,
+      "triangle_count": 19,
+      "checked_non_degenerate_triangles": 19,
+      "minimum_signed_area_ratio": 0.9999899915412979
+    },
+    "skirt_front": {
+      "vertex_count": 22,
+      "triangle_count": 20,
+      "checked_non_degenerate_triangles": 20,
+      "minimum_signed_area_ratio": 0.9999983278039384
+    },
+    "R_continuous_sleeve": {
+      "vertex_count": 203,
+      "triangle_count": 348,
+      "checked_non_degenerate_triangles": 348,
+      "minimum_signed_area_ratio": 0.7770470515630828
+    },
+    "neck_skin_continuity": {
+      "vertex_count": 11,
+      "triangle_count": 9,
+      "checked_non_degenerate_triangles": 9,
+      "minimum_signed_area_ratio": 0.9999739039121778
+    },
+    "head_hat_hair": {
+      "vertex_count": 66,
+      "triangle_count": 64,
+      "checked_non_degenerate_triangles": 64,
+      "minimum_signed_area_ratio": 0.9990675000008196
+    },
+    "L_forearm_hidden": {
+      "vertex_count": 18,
+      "triangle_count": 16,
+      "checked_non_degenerate_triangles": 16,
+      "minimum_signed_area_ratio": 0.9988940159562401
+    },
+    "staff_original_head": {
+      "vertex_count": 49,
+      "triangle_count": 47,
+      "checked_non_degenerate_triangles": 47,
+      "minimum_signed_area_ratio": 0.9982409285647529
+    },
+    "staff_original_lower": {
+      "vertex_count": 53,
+      "triangle_count": 51,
+      "checked_non_degenerate_triangles": 51,
+      "minimum_signed_area_ratio": 0.9994714293628931
+    },
+    "staff_grip_occlusion": {
+      "vertex_count": 4,
+      "triangle_count": 2,
+      "checked_non_degenerate_triangles": 2,
+      "minimum_signed_area_ratio": 0.9999981908323472
+    },
+    "L_mother_cuff": {
+      "vertex_count": 9,
+      "triangle_count": 7,
+      "checked_non_degenerate_triangles": 7,
+      "minimum_signed_area_ratio": 0.9999836743378839
+    },
+    "R_hand": {
+      "vertex_count": 18,
+      "triangle_count": 16,
+      "checked_non_degenerate_triangles": 16,
+      "minimum_signed_area_ratio": 0.9996142541058362
+    },
+    "L_hand": {
+      "vertex_count": 21,
+      "triangle_count": 19,
+      "checked_non_degenerate_triangles": 19,
+      "minimum_signed_area_ratio": 0.9997209567576647
+    }
+  }
+}

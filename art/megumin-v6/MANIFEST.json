@@ -1,0 +1,569 @@
+{
+  "version": "v6_five_states_delivery",
+  "completed_states": [
+    "Idle",
+    "Cast",
+    "Attack",
+    "Hit",
+    "Relaxed"
+  ],
+  "incomplete_states": [
+    "Dead"
+  ],
+  "preview": "preview/megumin_v6_five_states_review.mp4",
+  "validation_scope": "Numerical and documented sampled still-image QA; offline software raster of native Godot timeline. No STS2 or graphical framebuffer validation.",
+  "excluded": "Godot/Python caches; .import/.log files; binary/per-frame render intermediates; rejected Dead probe images, superseded faulty mainchain MP4, and duplicate before-frame caches. Dead legacy source retained as explicitly unreviewed history.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 138,
+      "sha256": "84481f29a66965385ac3c18c6bbd6357a5c4353aa9398a4efd14c842c5ec8a26"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3887,
+      "sha256": "cb0e6cec49bd0b92d8a63205407ac93a80b600239241207dfb8e4509ca0b34bc"
+    },
+    {
+      "path": "animations/Attack.tres",
+      "bytes": 137519,
+      "sha256": "1709dcfe6235a5cc36ca130a49d88e1db446083daa95b6035d9eb23e399832a0"
+    },
+    {
+      "path": "animations/Cast.tres",
+      "bytes": 100202,
+      "sha256": "0094b0de71f3523a684ef12b4f5562924358c8cf77e42d6c6eec9f0240c2e3ac"
+    },
+    {
+      "path": "animations/Dead_unreviewed_legacy.tres",
+      "bytes": 68876,
+      "sha256": "c775d4f8933d56c1faa696b07333a16b4dd19f98038d350f7c82dcff089adb23"
+    },
+    {
+      "path": "animations/Hit.tres",
+      "bytes": 22702,
+      "sha256": "52decc31a86a1e1373df5087f36fa61a5e587ed4e2953d13ce2b4747e35eeaaf"
+    },
+    {
+      "path": "animations/Idle.tres",
+      "bytes": 63337,
+      "sha256": "95acc5185a0154b2ed411a794775779efcfc2e34d2bd117a2ceae8d942136339"
+    },
+    {
+      "path": "animations/MageCast.tres",
+      "bytes": 136644,
+      "sha256": "9897936df15841cfae185fac1ce6953da4ceb5e63c2b85c2cbc6ed3a47a8477f"
+    },
+    {
+      "path": "animations/Relaxed.tres",
+      "bytes": 71504,
+      "sha256": "7430ffa106a278d072db4a1f56b7334917bfa4aebbfc0d033c8cd71d11bcabf1"
+    },
+    {
+      "path": "animations/art_directed_keys.json",
+      "bytes": 3186,
+      "sha256": "0ce6254c2e57dd270f621d0e1f604d018786bf727bc32229a63f17fb1ab3b5c8"
+    },
+    {
+      "path": "assets/anatomy_v6.json",
+      "bytes": 1784,
+      "sha256": "31c7249561d4cfbba3d71fbcd20ac0c434f5bff7e49edadaf20145a0c7b38a13"
+    },
+    {
+      "path": "assets/rig_geometry.json",
+      "bytes": 614106,
+      "sha256": "dd9d27832c9669c86d85e3d02afdea948d057d74d24430846c04d64c49890652"
+    },
+    {
+      "path": "assets/source/megumin_approved_v6.png",
+      "bytes": 1592081,
+      "sha256": "948002171a29ae117a1ae090d728753e2bc792b30477976e11e20d75bbe6b221"
+    },
+    {
+      "path": "assets/source/megumin_backing_v6_raw.png",
+      "bytes": 1479965,
+      "sha256": "683bce0718e9daa535eb346f297bf38018c220469ce91809cb5a43211bd85bee"
+    },
+    {
+      "path": "assets/source/megumin_cape_v6_raw.png",
+      "bytes": 1173449,
+      "sha256": "1dac124a0dd7de9c47d07307691be0318fcd6f48f0425a55b7ebf2d3a44de269"
+    },
+    {
+      "path": "assets/source/megumin_closedeyes_v6_raw.png",
+      "bytes": 1614772,
+      "sha256": "22fd8fa218329951eaca8a538a3db27b2a5ccae37cfdae8d69db981c3d39ab76"
+    },
+    {
+      "path": "assets/source/megumin_free_arm_v6_raw.png",
+      "bytes": 747258,
+      "sha256": "fb68971a809756544a59e3d6a7ad82cc8030f6afe365e70fb8b9cf5294fd4ea5"
+    },
+    {
+      "path": "assets/source/megumin_master_v6.png",
+      "bytes": 1592081,
+      "sha256": "948002171a29ae117a1ae090d728753e2bc792b30477976e11e20d75bbe6b221"
+    },
+    {
+      "path": "assets/source/megumin_staff_v6_raw.png",
+      "bytes": 949926,
+      "sha256": "e88dff0686b1cd959c3a3b326930e28b679743a35f13bd33e292f71eaa540cd5"
+    },
+    {
+      "path": "assets/source/megumin_unstaffed_v6_raw.png",
+      "bytes": 1516002,
+      "sha256": "00bec8f234d0b4862d42c6b9b9c4594f3fe2c08cb22b935fbc352b9896533c17"
+    },
+    {
+      "path": "docs/ACCEPTANCE.md",
+      "bytes": 3433,
+      "sha256": "38dda13d2cd97b2b92b9f4bff01753b40673acae1dc095c1a6732b3a0f611128"
+    },
+    {
+      "path": "docs/ART_PROVENANCE.md",
+      "bytes": 1603,
+      "sha256": "df6f85664b79d0f298ea35c53ab4072f9c9d7fd9107c231be28bc2ad22679fb4"
+    },
+    {
+      "path": "docs/DEAD_LIMITATION.md",
+      "bytes": 670,
+      "sha256": "f07d2358b11fbd0b4c9ddcc6c5e97b55fb388d58ab4a420e77585ddf7e8901a2"
+    },
+    {
+      "path": "docs/INDEPENDENT_VISUAL_QA.md",
+      "bytes": 18743,
+      "sha256": "9b10f49b8337aafcaff9ad87b5e428740c8f04fd6024b8173e5b91d362fb6e5e"
+    },
+    {
+      "path": "docs/MAINCHAIN_REVIEW_STATUS.md",
+      "bytes": 1023,
+      "sha256": "73d5038399e04671aeeab2d14744bdd312cc0773a9c1e1bc22e4f39ba61402e5"
+    },
+    {
+      "path": "docs/MOIRE_BASE_CHECK.txt",
+      "bytes": 399,
+      "sha256": "e594b04075c46a26ae7a385f266c563c6f84c7432741c46703cfa0726106cf1f"
+    },
+    {
+      "path": "docs/MOIRE_SUPPLEMENTS_CHECK.txt",
+      "bytes": 570,
+      "sha256": "40b1d3cb0a08ab73d2b492861177e4c91105541a98c7ba6519d743ed7250c551"
+    },
+    {
+      "path": "docs/OFFICIAL_SOURCES.txt",
+      "bytes": 1663,
+      "sha256": "e74421d71b5abd3bb53c24624da820946d7dd2070433718a46b78a8972a4a928"
+    },
+    {
+      "path": "docs/STATE_PLAN.md",
+      "bytes": 1011,
+      "sha256": "f33cd3d00f910db3ca3f9d6d1664e61b38a8f875582411dcfd33783498bc7865"
+    },
+    {
+      "path": "docs/VISUAL_REVIEW_STAGE1.md",
+      "bytes": 685,
+      "sha256": "1010ff3cd153ba3108d64b4ff51fb4772acc243faeca45200b5cdb481bc4752f"
+    },
+    {
+      "path": "docs/source_alpha_inventory.json",
+      "bytes": 1997,
+      "sha256": "3666f0ac51b4c21b16509924b66e47ef0c8904fd0222bcd28ea2c5713b7c6d6f"
+    },
+    {
+      "path": "preview/anatomy_landmarks_v6.png",
+      "bytes": 722492,
+      "sha256": "47e47760812ac71cb49e2d76aa7c29f547ad6d21e7ff72664adb9f7d60e0ea7c"
+    },
+    {
+      "path": "preview/five_states/contact_attack.png",
+      "bytes": 369288,
+      "sha256": "c245304939217090fe890d818c1b463b0320e1fb8c0a52044851f9abb555f2c1"
+    },
+    {
+      "path": "preview/five_states/contact_cast.png",
+      "bytes": 245356,
+      "sha256": "44f9237bc86469ca3b03466a67a5dc3c75aa8674c4ea24673dd8692f0b6e15a5"
+    },
+    {
+      "path": "preview/five_states/contact_hit.png",
+      "bytes": 244895,
+      "sha256": "0d8e523efb11c7d489d35cbbca0ffaebb55c5e2490381792d162ba7d80c2095e"
+    },
+    {
+      "path": "preview/five_states/contact_idle.png",
+      "bytes": 190116,
+      "sha256": "92f4588fb6b5d03db15ae52215b4493e7931f329793e54a5e55f3d01b308a32e"
+    },
+    {
+      "path": "preview/five_states/contact_relaxed.png",
+      "bytes": 315656,
+      "sha256": "aad5f1807ac63713ef617b5efd44e63b18e43c79c5b1c5efd1b2ab2ecc491003"
+    },
+    {
+      "path": "preview/five_states/key_attack_00.png",
+      "bytes": 241087,
+      "sha256": "283a5626769c7e89902595a3edc7a5a2b8f6d96a5a153d72ec5623ef372f0ffc"
+    },
+    {
+      "path": "preview/five_states/key_attack_01.png",
+      "bytes": 235533,
+      "sha256": "eda361bf2bd035c3391bf55fb224d5acacbd5b9a2a8681ec6d7b282bf6b259f3"
+    },
+    {
+      "path": "preview/five_states/key_attack_02.png",
+      "bytes": 244211,
+      "sha256": "805ef43f37488ac34db216df62b31afe157de0987901466ecebad7068a7dc6fa"
+    },
+    {
+      "path": "preview/five_states/key_attack_03.png",
+      "bytes": 236124,
+      "sha256": "dee5af8e45b97fd4cf41e5b7b010edf2d0b63032534ed6fee6898ad3302d8ea1"
+    },
+    {
+      "path": "preview/five_states/key_attack_04.png",
+      "bytes": 243605,
+      "sha256": "0c60f6c517f01cf9530083c41526aecd1946dda553be333feca024fcc1153f45"
+    },
+    {
+      "path": "preview/five_states/key_attack_05.png",
+      "bytes": 237862,
+      "sha256": "5c46e5d15eab88ef471b4e0ff9aa66d481d3a3a2b2afb7a2815a8b8e455f6a5a"
+    },
+    {
+      "path": "preview/five_states/key_cast_00.png",
+      "bytes": 240985,
+      "sha256": "fd0cbcc6139bc60ae3f54137ae4e443cade083af9e09c54aaad807ed1afadb47"
+    },
+    {
+      "path": "preview/five_states/key_cast_01.png",
+      "bytes": 235762,
+      "sha256": "ab3b4c92be9cd7c34926a53a78501a51116d47a10f51e232c34d2e4deeff15ef"
+    },
+    {
+      "path": "preview/five_states/key_cast_02.png",
+      "bytes": 237451,
+      "sha256": "dbe75b72140f4cb562874b20916415c57862ca8373051587b47a3cfcda3b4102"
+    },
+    {
+      "path": "preview/five_states/key_cast_03.png",
+      "bytes": 239478,
+      "sha256": "9213c71205cd7387b8091e5c134cdd81af0b6b36ac6bc5df5ae5a67978745677"
+    },
+    {
+      "path": "preview/five_states/key_hit_00.png",
+      "bytes": 235944,
+      "sha256": "10a509d313db29c1071d05309db35c2f4916e95d061e987578f90cf39f6b0473"
+    },
+    {
+      "path": "preview/five_states/key_hit_01.png",
+      "bytes": 235589,
+      "sha256": "9f1688d58eb06542020d636a699cb962f7c0a213581c0165c0213598f9029279"
+    },
+    {
+      "path": "preview/five_states/key_hit_02.png",
+      "bytes": 238497,
+      "sha256": "af2596c2068439ff8b1d0ec7ca5aa81e9a3624962bab9564cd000004fb24dbb4"
+    },
+    {
+      "path": "preview/five_states/key_hit_03.png",
+      "bytes": 236515,
+      "sha256": "28b01fcf553ff11d5eccb69582b88f12f465032842a9dca5fb71f25a1d974fd5"
+    },
+    {
+      "path": "preview/five_states/key_idle_00.png",
+      "bytes": 237707,
+      "sha256": "a271c20949a2a4967a4f4e91ea0b9308bc66941e81a987fcef2e228f9344b067"
+    },
+    {
+      "path": "preview/five_states/key_idle_01.png",
+      "bytes": 238126,
+      "sha256": "c328f3707a0056bd0890f87699e285b389bbef0613813f17976777665f3f8be6"
+    },
+    {
+      "path": "preview/five_states/key_idle_02.png",
+      "bytes": 238047,
+      "sha256": "a1ebf39cfa52048074ed0fa081b17aba1eba607a9813867ff3c4a0425ef741fb"
+    },
+    {
+      "path": "preview/five_states/key_relaxed_00.png",
+      "bytes": 242297,
+      "sha256": "ba17791c47aff2c0936527727ab0ad9bdd258e3a0e9157e54746f52f23f58d0c"
+    },
+    {
+      "path": "preview/five_states/key_relaxed_01.png",
+      "bytes": 242275,
+      "sha256": "d672963a4673bd5a9e2ad2509c8a87fcea1ff30a7b44271baa21dab9da6dd6b9"
+    },
+    {
+      "path": "preview/five_states/key_relaxed_02.png",
+      "bytes": 240653,
+      "sha256": "93f801b09a93811064efb14ea3c494f383eb508b04f2231e93431e3d848a0481"
+    },
+    {
+      "path": "preview/five_states/key_relaxed_03.png",
+      "bytes": 240225,
+      "sha256": "c5731015590958f0327abf53d636253f4576ea3d4be12282d10ff1222990110c"
+    },
+    {
+      "path": "preview/five_states/key_relaxed_04.png",
+      "bytes": 238596,
+      "sha256": "7676470836047f7be25d4c998930d3a2f9ba8bcb45c291626e2a704feecbb851"
+    },
+    {
+      "path": "preview/five_states/native_geometry.json",
+      "bytes": 1851814,
+      "sha256": "e6cf140512a082c7491c0e78984cfd0c39d61a3d353d21c58d2a92a2ea547e15"
+    },
+    {
+      "path": "preview/leg_motion_before_strip.png",
+      "bytes": 317627,
+      "sha256": "cd0412f8b716f7c210b75821d40493a1ddf55581bac526773507a624059843f8"
+    },
+    {
+      "path": "preview/legmotion_fix/compare_0080.png",
+      "bytes": 422989,
+      "sha256": "145b0d2a1d4eddfe6c02804ae739428c93b8661ae3f5e7da755f1599b3066307"
+    },
+    {
+      "path": "preview/legmotion_fix/compare_0105.png",
+      "bytes": 429088,
+      "sha256": "b15f7d45e2e6b66e4889c6093e9fd801b3a826138f4a8a871ddbe89a501e7dd1"
+    },
+    {
+      "path": "preview/legmotion_fix/compare_0150.png",
+      "bytes": 439720,
+      "sha256": "b06827ef495ea70734d3b2ace59b53f402cf67221f52a23c1e33c71b2156bb01"
+    },
+    {
+      "path": "preview/legmotion_fix/frame_0000.png",
+      "bytes": 229385,
+      "sha256": "b3e4c42ec46c05fed869676040b9df8d35b3ce9ea7e13cb65ad62a33766bd6d0"
+    },
+    {
+      "path": "preview/legmotion_fix/frame_0080.png",
+      "bytes": 228427,
+      "sha256": "81a2aeab140f7540845c91817f883b2371c3c222ccd84bc45d0fbba085e84c95"
+    },
+    {
+      "path": "preview/legmotion_fix/frame_0105.png",
+      "bytes": 232836,
+      "sha256": "991777f712a81dcb84d556874b0709c628635ecb0e29a66e183ebd24ff0c1a99"
+    },
+    {
+      "path": "preview/legmotion_fix/frame_0150.png",
+      "bytes": 233878,
+      "sha256": "6e43b30d8fe7bf386d64e02ed79b14239f1a86b5a3f0cb51e9d0caa67c24f7f7"
+    },
+    {
+      "path": "preview/legmotion_fix/frame_0216.png",
+      "bytes": 231358,
+      "sha256": "680b0b281aadb05872bb15b116763c60f91d0d95314f89bef0b214ae732a081f"
+    },
+    {
+      "path": "preview/megumin_v6_five_states_review.mp4",
+      "bytes": 2361166,
+      "sha256": "7f08f68b9adbaca48edd0b93afa22f98da6e17de6c0e7d4201ca872023b14550"
+    },
+    {
+      "path": "preview/megumin_v6_mage_legmotion_fix.mp4",
+      "bytes": 884646,
+      "sha256": "87e1ba8c59d20593b08d5d66cac1641b2d2ab136c6ae6fe494b1a492bfd79d54"
+    },
+    {
+      "path": "project.godot",
+      "bytes": 463,
+      "sha256": "ab6d9058800f5721fdd1b9fac9b6a23975a35685754ae0969ced9bd8fa6d0212"
+    },
+    {
+      "path": "scenes/megumin.tscn",
+      "bytes": 444,
+      "sha256": "f073e868d167f07aae00d3466d4a9509975f3658aee2446977ad5b1dc2ce9e6e"
+    },
+    {
+      "path": "scenes/preview.tscn",
+      "bytes": 172,
+      "sha256": "68bf442b742a42afe14b7351b384270c495e3f4e4d868f886ef867459ded1308"
+    },
+    {
+      "path": "scripts/export_dead_probe.gd",
+      "bytes": 2915,
+      "sha256": "000a6c5264780b2ad200a3d69bbf394625162fa02aa72b96027b6a81ee2c2ab8"
+    },
+    {
+      "path": "scripts/export_dead_probe.gd.uid",
+      "bytes": 20,
+      "sha256": "3ed39fbdb8325dc551964b4e1681be8fec38a459f06fd3549714113738ace159"
+    },
+    {
+      "path": "scripts/export_five_states_review.gd",
+      "bytes": 6342,
+      "sha256": "6c47e2a5c859efb8e5e01e66e753dafc6b623e135ce237edf5248c1004b1e9d1"
+    },
+    {
+      "path": "scripts/export_five_states_review.gd.uid",
+      "bytes": 20,
+      "sha256": "249cce833b20a6819ee7a56bee853548f3aff368189bf3366004c7969dbf5944"
+    },
+    {
+      "path": "scripts/export_software_review.gd",
+      "bytes": 1955,
+      "sha256": "09c20f8f9ece07d21adda2a960a00e659e119ddd8a4f1cc5c3204adefdb55715"
+    },
+    {
+      "path": "scripts/export_software_review.gd.uid",
+      "bytes": 19,
+      "sha256": "596323f3abe467094f16d38b00e32186d14e5343b1120f2ddedf8b602bb3a67e"
+    },
+    {
+      "path": "scripts/megumin_rig.gd",
+      "bytes": 11102,
+      "sha256": "896df46d9b891eda398a7dfa022462d1d96c8596d22809d253be8d03cee4f10f"
+    },
+    {
+      "path": "scripts/megumin_rig.gd.uid",
+      "bytes": 20,
+      "sha256": "5cbbe45dfcf4a9b2568578cfa1dfb47e0a2ccb9556b23839a094644454625cc5"
+    },
+    {
+      "path": "scripts/preview.gd",
+      "bytes": 2646,
+      "sha256": "029f6b42dc233b01770769884f357a0a8a4f46ce6d2315a35267ebf629cb1fb6"
+    },
+    {
+      "path": "scripts/preview.gd.uid",
+      "bytes": 20,
+      "sha256": "7716d05a19cb6d5d9298493109f77e847417b6927378a2650f5e93aeef937c14"
+    },
+    {
+      "path": "tests/five_states_frame_metrics.json",
+      "bytes": 1488961,
+      "sha256": "063e13e8ecc1b08e3bf43332b07c4fbcc3ce2c678d2e6ae88cda180cd4b0495a"
+    },
+    {
+      "path": "tests/five_states_validation.json",
+      "bytes": 22622,
+      "sha256": "f40209395d66653f787fbbdd94230705923b00b3bb06ab73b4fc6e4a556949e1"
+    },
+    {
+      "path": "tests/five_states_visual_review.md",
+      "bytes": 2927,
+      "sha256": "5b5da8cf02d3cbb7aa1d574390602b009cf95c2f305e0d15544f53617985f59b"
+    },
+    {
+      "path": "tests/frame_metrics.json",
+      "bytes": 482183,
+      "sha256": "56e1a705ecc37836af3a10acdc1ac8d940d66f4d6497df7dd0c571fff9929ed5"
+    },
+    {
+      "path": "tests/leg_motion_fix_metrics.json",
+      "bytes": 648,
+      "sha256": "c1467eb9904f76ff803d500c7487141922649e9271e290ca30e0e42a0709cc15"
+    },
+    {
+      "path": "tests/legmotion_fix_continuity.json",
+      "bytes": 120,
+      "sha256": "fea722c94fd16d02bd87fd9f7a31bd88117e6a6b548e43138e17d3eccfc76809"
+    },
+    {
+      "path": "tests/legmotion_fix_validation.json",
+      "bytes": 5391,
+      "sha256": "5d5993ce6817b81022b3003a3ef3bfe146df7bd1e14888131f1e1e3baba1b112"
+    },
+    {
+      "path": "tests/runtime_states_validation.json",
+      "bytes": 5701,
+      "sha256": "aeb472ab35143b0a2ff9a40285eef7922306558a093ae3c7120ee91314cfb2fd"
+    },
+    {
+      "path": "tests/standalone_delivery_validation.json",
+      "bytes": 8232,
+      "sha256": "e7ffe483cdec6f24d4eee16d396aabf90c7f6efee58b2e62b7753f01f3f5042a"
+    },
+    {
+      "path": "tests/standalone_resource_comparison.json",
+      "bytes": 60,
+      "sha256": "3847d13683a3d78840d1bb71108af20334ac5676fad67015b9ecc38cd4c7a919"
+    },
+    {
+      "path": "tests/test_continuity.gd",
+      "bytes": 1118,
+      "sha256": "a6ef1c9cdba3c55d570803674b95a1ebad016df79e87200cacca118cc21bb6fb"
+    },
+    {
+      "path": "tests/test_continuity.gd.uid",
+      "bytes": 20,
+      "sha256": "fb7d8357c98e22c71997a2ea074f325258e0c5e3dbbb50646c82d74aefae82fe"
+    },
+    {
+      "path": "tests/test_runtime_states.gd",
+      "bytes": 4971,
+      "sha256": "d4b78c9d5de27b8f3f820285df71760351fbdd1f04559b2e21736f4d0918eedc"
+    },
+    {
+      "path": "tests/test_runtime_states.gd.uid",
+      "bytes": 19,
+      "sha256": "6922f600914153ae00c38661f053a4af9ec75f717904d4167a71fab39cb2fd8e"
+    },
+    {
+      "path": "tests/v6_continuity.json",
+      "bytes": 120,
+      "sha256": "fea722c94fd16d02bd87fd9f7a31bd88117e6a6b548e43138e17d3eccfc76809"
+    },
+    {
+      "path": "tests/v6_validation.json",
+      "bytes": 5391,
+      "sha256": "5d5993ce6817b81022b3003a3ef3bfe146df7bd1e14888131f1e1e3baba1b112"
+    },
+    {
+      "path": "tools/build_states_v6.py",
+      "bytes": 13731,
+      "sha256": "462cfc8f017ca0dfa807a89055c394dba6e0e7035760b20d03298dbbae77cb60"
+    },
+    {
+      "path": "tools/build_timeline.py",
+      "bytes": 3300,
+      "sha256": "7959e8d0c1ebfac12cde6156a6032a267b86c980275b79140f026ec7a9d871c6"
+    },
+    {
+      "path": "tools/build_v6.py",
+      "bytes": 12323,
+      "sha256": "291edb85996a33fe045725a561dcb2f53aba8b9a4f9e60a473796a633b028ed4"
+    },
+    {
+      "path": "tools/contact_five_states_review.py",
+      "bytes": 1123,
+      "sha256": "ef8e9e271ebc647a5e777402f3f420ff1fe90d0c789035d7e8e9dbfb2b0936e5"
+    },
+    {
+      "path": "tools/render_five_states_review.py",
+      "bytes": 5147,
+      "sha256": "98338458d232741fede59d5cf31e7343d8007ed9e96265fc19cfba0731f91a3e"
+    },
+    {
+      "path": "tools/render_software_review.py",
+      "bytes": 7254,
+      "sha256": "e44107c15541564d12cbd39c87485f8a2a8fa734dcb304765f1bedc1826f8cac"
+    },
+    {
+      "path": "tools/run_five_states_review.sh",
+      "bytes": 1117,
+      "sha256": "d661410b4afff907bbc90cf2d788711f3ca3536cce115357452faf2b2b035c30"
+    },
+    {
+      "path": "tools/run_tests.sh",
+      "bytes": 707,
+      "sha256": "905caa97bfc33c78463ce9bcd7784d0aa5d72b2e33dfc4aa79598c25f654f670"
+    },
+    {
+      "path": "tools/test_five_states_review.py",
+      "bytes": 9292,
+      "sha256": "6ac1feb0dde260cb5aeb867b1b31c2a30216bc66abe0a823a307344ef582244d"
+    },
+    {
+      "path": "tools/validate_v6.py",
+      "bytes": 3645,
+      "sha256": "05795d8f001e14b893394eb9b2fa6a4404f37b331c32c639f4c61435d9401d12"
+    }
+  ],
+  "repository_note": "Retested 41 main-chain + 120 numeric five-state + 44 runtime checks, decoded full MP4, rebuilt 18 source/resource files without byte changes. No frame rerender in this integration step; prior isolated delivery report retained."
+}

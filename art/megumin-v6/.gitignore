@@ -2,4 +2,7 @@
 *.import
 __pycache__/
 preview/software/
+preview/five_states/software/
 *.log
+preview/five_states/frame_*
+preview/five_states/*.bin

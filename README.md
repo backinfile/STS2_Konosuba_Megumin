@@ -2,12 +2,13 @@
 
 当前包含**玩法设计研究与独立的角色美术／动画原型**。尚未接入 Slay the Spire 2，不是可安装的 Mod，也不代表卡池、数值或游戏接口已经定稿。
 
-## 当前阶段保存 v6
+## 当前五状态交付 v6
 
-- [v6 阶段快照](art/megumin-v6/README.md)：已确认的侧身造型，施法链稳站修正，六状态仍在制作
-- [当前稳站主链预览](art/megumin-v6/preview/megumin_v6_mage_legmotion_fix.mp4)：7.233 秒、217 帧、30 fps、1440 × 960
+- [v6 工程与使用说明](art/megumin-v6/README.md)：Idle / Cast / Attack / Hit / Relaxed 五状态
+- [五状态无特效预览](art/megumin-v6/preview/megumin_v6_five_states_review.mp4)：19.366667 秒、581 帧、30 fps、1440 × 960
+- [Dead 未完成原因](art/megumin-v6/docs/DEAD_LIMITATION.md)
 
-这是按当前制作状态保存的检查点，不是六状态终版。主链资产和轨道匹配该视频；后续新增的实验控制默认关闭。Idle/Cast/Attack/Hit/Relaxed 已接独立轨道但尚未完整视频和目视验收，Dead 仍是未完成草案。预览为 Godot 时间轴导出数据的软件光栅输出，非游戏实机。
+Dead 尚未完成，运行时不加载并拒绝该状态请求；本次不是六状态终版。保留旧阶段提交作为历史。预览由 Godot 原生时间轴与网格数据离线软件光栅生成，未验证 Godot 图形后端或 STS2 游戏实机；数值与静帧检查不代表用户最终动作验收。
 
 ## 连续动作 v3（保留比较）
 
@@ -42,7 +43,7 @@ v2 视频是从实际 Godot 动画／网格数据生成的软件光栅预览，*
 - `art/megumin/`：角色美术与 Godot 动画原型的独立项目根；源图、运行资源、预览、工具和测试分别管理
 - `art/megumin-v2/`：独立的六关键姿态重做版，保留自己的项目根和导入设置；与 v1 并列比较
 - `art/megumin-v3/`：连续 FK/IK 版本，保留自己的源图、原生时间轴、验证和无特效预览
-- `art/megumin-v6/`：侧身造型和稳站施法链的阶段快照，六状态未完，保留检查和未验候选标注
+- `art/megumin-v6/`：侧身造型的五状态交付，Dead 未完成，保留检查和未验候选标注
 - `docs/`：跨目录导航和工程接入说明；具体美术制作与验证记录随美术项目保存
 
 先完成角色资源与动作验证，再根据实际 STS2 Mod 接口引入游戏工程。不提前建立空的 cards、powers、relics 等目录，也不把 Godot 展示代码误标为已实现的游戏逻辑。

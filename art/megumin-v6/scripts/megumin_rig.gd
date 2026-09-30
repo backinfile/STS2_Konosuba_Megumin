@@ -70,7 +70,7 @@ func _ready()->void:
    for tri in p.triangles:tris.append(PackedInt32Array(tri))
    node.polygons=tris
   bones[p.bone].add_child(node)
-  pieces.append({"node":node,"rest":rest,"bone":p.bone,"knee_weights":p.get("knee_weights",[]),"hip_weights":p.get("hip_weights",[]),"ankle_weights":p.get("ankle_weights",[]),"elbow_weights":p.get("elbow_weights",[])})
+  pieces.append({"node":node,"rest":rest,"bone":p.bone,"knee_weights":p.get("knee_weights",[]),"hip_weights":p.get("hip_weights",[]),"ankle_weights":p.get("ankle_weights",[]),"elbow_weights":p.get("elbow_weights",[]),"rest_z":p.z})
  player=get_node("AnimationPlayer")
  for state in STATES:
   if FileAccess.file_exists("res://animations/%s.tres"%state) and not player.has_animation(state):player.get_animation_library("").add_animation(state,load("res://animations/%s.tres"%state))
@@ -107,6 +107,10 @@ func update_pose()->void:
   _solve_leg(side)
  _ground_staff()
  for p in pieces:
+  p.node.z_index=p.rest_z
+  if cape_collapse>.05:
+   var death_depth={"L_leg_skin":-1,"L_foot":0,"R_leg_skin":1,"R_white_bandage_texture":2,"R_foot":3}
+   if death_depth.has(String(p.node.name)):p.node.z_index=death_depth[String(p.node.name)]
   if p.node.name=="closed_eyes_face":p.node.visible=face_state==1
   if p.bone.ends_with("_leg"):_skin_leg(p)
   elif p.bone=="R_arm_cloth":_arm_cloth(p)
