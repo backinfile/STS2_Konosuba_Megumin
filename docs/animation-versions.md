@@ -59,3 +59,13 @@ bash art/megumin-v2/tools/run_tests.sh
 - 自包含 `assets/baseline/` 取代上一版兄弟 v1 目录依赖；仓库副本运行重建与回归验证
 - 59 项约束／回归与 8 处阶段边界通过；细节见 `tests/continuous_validation.json`、`tests/timeline_continuity.json` 和 `docs/LEG_CONNECTION_REVIEW.md`
 - 仍为软件光栅预览，不是 Godot 图形实录或 STS2 验收；少量 cutout 风格及高倍纹理弯曲仍保留说明
+
+## v6：侧身造型与稳站主链阶段存档
+
+- 当前文件 `art/megumin-v6/preview/megumin_v6_mage_legmotion_fix.mp4`：7.233秒、217帧、30fps、1440×960
+- 已确认的侧身造型，修正腿部外蹲／站姿，主链资产及轨道对应该预览
+- 快照保存录制后新增的默认关闭实验项 heel_raise/cape_collapse；不宣称全部源码与视频录制时逐字节相同
+- Idle/Cast/Attack/Hit/Relaxed 独立轨道进行中，尚未完整状态视频及目视验收；Dead_unreviewed_legacy.tres 和 dead_probe 为未验草案
+- 主链41项数值检查、10处边界连续性与headless预览smoke复验；不代表六状态完成
+- 软件光栅预览不是Godot图形后端／STS2游戏实机验收；具体阶段边界见项目README
+- 此提交保留先前已提交版本，不引入商用游戏文件、缓存或凭据

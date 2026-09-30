@@ -42,3 +42,5 @@ python design/docs/build_simple_design.py
 - v2 的 `.png.import` 包含已设置的 mipmap 导入参数，属于应保留的纹理配置；`.godot/` 才是应排除的实际导入缓存
 
 - `art/megumin-v3/` 保留连续骨骼小样，v1/v2 不覆盖。腿部连接修正版将基线几何与原图哈希收进 `assets/baseline/`，重建、验证与 Godot 运行均不依赖兄弟 v1 目录。只提交最终预览与结构化检查报告，不提交原生几何帧转储、逐帧中间图或临时日志。
+
+- `art/megumin-v6/` 是用户要求立即保存的制作中快照；未等六状态完成。已复核主链与尚未完成的独立状态在项目 README 区分，候选 Dead 明确保留未验名称。快照与活动制作源分离，后续改动另行提交。

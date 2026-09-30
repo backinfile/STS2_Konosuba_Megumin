@@ -1,0 +1,13 @@
+config_version=5
+[application]
+config/name="Megumin v6 · Right Facing Mage"
+run/main_scene="res://scenes/preview.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+[display]
+window/size/viewport_width=1440
+window/size/viewport_height=960
+window/stretch/mode="canvas_items"
+[rendering]
+renderer/rendering_method="gl_compatibility"
+textures/canvas_textures/default_texture_filter=2
+environment/defaults/default_clear_color=Color(0.035,0.05,0.08,1)

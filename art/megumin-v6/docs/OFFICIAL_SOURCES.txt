@@ -1,0 +1,19 @@
+Official Megumin visual references, retrieved 2026-09-30. All files visually inspected.
+
+1. first-megumin.png — 980x785 RGBA. Primary model-sheet reference: front and side full-body, hat-off face, eyepatch, bent arm/hand poses.
+Source page: https://konosuba.com/1st/character/
+Original image: https://konosuba.com/1st/character/img/megumin.png
+
+2. bakuen-adventurer.png — 976x1378 RGBA. High-resolution adventurer outfit, staff grip, hand at hat, spread standing pose.
+Source page: https://konosuba.com/bakuen/character/ (冒険者服)
+Original image: https://konosuba.com/bakuen/character/img/megmin-2.png
+
+3. third-megumin.png — 367x669 RGBA. Isolated full-body standard outfit; same basic pose as first-season front view. Not independent anatomy evidence.
+Source page: https://konosuba.com/3rd/character/
+Original image: https://konosuba.com/3rd/character/img/megumin.png
+
+4. bakuen-school.png — 488x689 RGBA. Full-body school outfit, forward-reaching hand and bent arm. Secondary anatomy/face only, do not substitute this costume for adventurer outfit.
+Source page: https://konosuba.com/bakuen/character/ (制服)
+Original image: https://konosuba.com/bakuen/character/img/megmin.png
+
+Use #1 for canonical front/side anatomy and costume construction; #2 for higher-resolution hand/staff and contemporary shading reference. #3 duplicates #1's frontal pose; #4 is a different outfit. Head-to-body ratio should exclude hat. Large brim and cape exaggerate silhouette but not shoulder breadth. Preserve slim shoulders/limbs, short torso, clean shoulder-elbow-wrist chains, opposite leg treatments, and face-framing hair. Do not infer limbs from cape folds.

@@ -1,0 +1,97 @@
+{
+  "canvas": [
+    1024,
+    1536
+  ],
+  "landmarks": {
+    "neck": [
+      610,
+      423
+    ],
+    "waist": [
+      619,
+      664
+    ],
+    "pelvis": [
+      607,
+      772
+    ],
+    "R_shoulder": [
+      545,
+      519
+    ],
+    "R_elbow": [
+      506,
+      616
+    ],
+    "R_wrist": [
+      429,
+      612
+    ],
+    "R_grip": [
+      400,
+      598
+    ],
+    "L_shoulder": [
+      675,
+      519
+    ],
+    "L_elbow": [
+      711,
+      658
+    ],
+    "L_wrist": [
+      765,
+      803
+    ],
+    "R_hip": [
+      557,
+      765
+    ],
+    "R_knee": [
+      495,
+      1035
+    ],
+    "R_ankle": [
+      449,
+      1386
+    ],
+    "R_sole": [
+      461,
+      1510
+    ],
+    "L_hip": [
+      657,
+      779
+    ],
+    "L_knee": [
+      687,
+      1040
+    ],
+    "L_ankle": [
+      714,
+      1359
+    ],
+    "L_sole": [
+      756,
+      1445
+    ]
+  },
+  "bone_lengths_px": {
+    "R": {
+      "upper_arm": 104.546640309481,
+      "forearm": 77.10382610480494,
+      "thigh": 277.02707448911923,
+      "shin": 354.0014124265608
+    },
+    "L": {
+      "upper_arm": 143.58621103713267,
+      "forearm": 154.72879499304582,
+      "thigh": 262.7184805071771,
+      "shin": 320.14059411452337
+    }
+  },
+  "note": "Hip/ankle hidden under skirt/boots: anatomically inferred, not image-edge pivots. R is screen-left white-leg staff side.",
+  "stance_horizontal_px": 295,
+  "sole_height_difference_px": 65
+}

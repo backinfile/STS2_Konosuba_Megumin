@@ -1,0 +1,86 @@
+[
+  {
+    "file": "megumin_approved_v6.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "sha256": "948002171a29ae117a1ae090d728753e2bc792b30477976e11e20d75bbe6b221",
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "transparent_pixels": 1022787,
+    "near_opaque_pixels": 505123
+  },
+  {
+    "file": "megumin_backing_v6_raw.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "sha256": "683bce0718e9daa535eb346f297bf38018c220469ce91809cb5a43211bd85bee",
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "transparent_pixels": 913766,
+    "near_opaque_pixels": 635633
+  },
+  {
+    "file": "megumin_cape_v6_raw.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "sha256": "1dac124a0dd7de9c47d07307691be0318fcd6f48f0425a55b7ebf2d3a44de269",
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "transparent_pixels": 986973,
+    "near_opaque_pixels": 570919
+  },
+  {
+    "file": "megumin_free_arm_v6_raw.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "sha256": "fb68971a809756544a59e3d6a7ad82cc8030f6afe365e70fb8b9cf5294fd4ea5",
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "transparent_pixels": 1499947,
+    "near_opaque_pixels": 65506
+  },
+  {
+    "file": "megumin_master_v6.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "sha256": "948002171a29ae117a1ae090d728753e2bc792b30477976e11e20d75bbe6b221",
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "transparent_pixels": 1022787,
+    "near_opaque_pixels": 505123
+  },
+  {
+    "file": "megumin_staff_v6_raw.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "sha256": "e88dff0686b1cd959c3a3b326930e28b679743a35f13bd33e292f71eaa540cd5",
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "transparent_pixels": 1480631,
+    "near_opaque_pixels": 76274
+  },
+  {
+    "file": "megumin_unstaffed_v6_raw.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "sha256": "00bec8f234d0b4862d42c6b9b9c4594f3fe2c08cb22b935fbc352b9896533c17",
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "transparent_pixels": 1040985,
+    "near_opaque_pixels": 499226
+  }
+]

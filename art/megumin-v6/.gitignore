@@ -1,0 +1,5 @@
+.godot/
+*.import
+__pycache__/
+preview/software/
+*.log

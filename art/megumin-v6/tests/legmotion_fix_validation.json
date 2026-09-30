@@ -1,0 +1,236 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "217 native frames / 30fps / 7.2s",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "approved mother source unchanged",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "single cutout identity throughout",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "all bone scales remain one",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "R upper bone fixed",
+      "passed": true,
+      "value": 9.695005695675718e-05
+    },
+    {
+      "name": "R lower bone fixed",
+      "passed": true,
+      "value": 0.00011345234497639467
+    },
+    {
+      "name": "R upper arm length fixed",
+      "passed": true,
+      "value": 6.856675543076562e-05
+    },
+    {
+      "name": "R forearm arm length fixed",
+      "passed": true,
+      "value": 9.423420966925278e-05
+    },
+    {
+      "name": "R true-ankle foot anchor fixed",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "R IK reachable",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "R start matches mother anatomical stance",
+      "passed": true,
+      "value": 0.00014060504293428623
+    },
+    {
+      "name": "R end matches mother anatomical stance",
+      "passed": true,
+      "value": 0.00014060504293428623
+    },
+    {
+      "name": "L upper bone fixed",
+      "passed": true,
+      "value": 3.568295812783617e-05
+    },
+    {
+      "name": "L lower bone fixed",
+      "passed": true,
+      "value": 6.140305464441553e-05
+    },
+    {
+      "name": "L upper arm length fixed",
+      "passed": true,
+      "value": 9.007003151850768e-05
+    },
+    {
+      "name": "L forearm arm length fixed",
+      "passed": true,
+      "value": 0.00012792649818038626
+    },
+    {
+      "name": "L true-ankle foot anchor fixed",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "L IK reachable",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "L start matches mother anatomical stance",
+      "passed": true,
+      "value": 5.340576171875e-05
+    },
+    {
+      "name": "L end matches mother anatomical stance",
+      "passed": true,
+      "value": 5.340576171875e-05
+    },
+    {
+      "name": "skirt_back rigid shape",
+      "passed": true,
+      "value": 7.54821120096949e-06
+    },
+    {
+      "name": "L_leg_skin no folded mesh triangles",
+      "passed": true,
+      "value": 0.9483276940882206
+    },
+    {
+      "name": "R_leg_skin no folded mesh triangles",
+      "passed": true,
+      "value": 0.9447459736547899
+    },
+    {
+      "name": "R_white_bandage_texture no folded mesh triangles",
+      "passed": true,
+      "value": 0.9447459736547899
+    },
+    {
+      "name": "L_upper_hidden rigid shape",
+      "passed": true,
+      "value": 9.749581028017928e-05
+    },
+    {
+      "name": "R_foot rigid shape",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "L_foot rigid shape",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "torso_occlusion rigid shape",
+      "passed": true,
+      "value": 9.673479706862054e-05
+    },
+    {
+      "name": "bodice rigid shape",
+      "passed": true,
+      "value": 0.000102094154868837
+    },
+    {
+      "name": "skirt_front rigid shape",
+      "passed": true,
+      "value": 7.629067511061294e-06
+    },
+    {
+      "name": "R_continuous_sleeve no folded mesh triangles",
+      "passed": true,
+      "value": 0.7770470515630828
+    },
+    {
+      "name": "neck_skin_continuity rigid shape",
+      "passed": true,
+      "value": 0.00012645003575073588
+    },
+    {
+      "name": "head_hat_hair rigid shape",
+      "passed": true,
+      "value": 0.00016686516084973846
+    },
+    {
+      "name": "L_forearm_hidden rigid shape",
+      "passed": true,
+      "value": 0.0001330888050432577
+    },
+    {
+      "name": "staff_original_head rigid shape",
+      "passed": true,
+      "value": 0.0002343331975680485
+    },
+    {
+      "name": "staff_original_lower rigid shape",
+      "passed": true,
+      "value": 0.00020642813876747823
+    },
+    {
+      "name": "staff_grip_occlusion rigid shape",
+      "passed": true,
+      "value": 0.00010211392678627362
+    },
+    {
+      "name": "L_mother_cuff rigid shape",
+      "passed": true,
+      "value": 0.00012503632031268808
+    },
+    {
+      "name": "R_hand rigid shape",
+      "passed": true,
+      "value": 0.00011261172140208942
+    },
+    {
+      "name": "L_hand rigid shape",
+      "passed": true,
+      "value": 0.0001271213646933944
+    },
+    {
+      "name": "staff stays near upright, no horizontal swing",
+      "passed": true,
+      "value": [
+        -4.999593885177666,
+        28.999999668633667
+      ]
+    }
+  ],
+  "measurements": {
+    "L_leg_skin": {
+      "vertices": 526,
+      "min_triangle_area_ratio": 0.9483276940882206
+    },
+    "R_leg_skin": {
+      "vertices": 570,
+      "min_triangle_area_ratio": 0.9447459736547899
+    },
+    "R_white_bandage_texture": {
+      "vertices": 570,
+      "min_triangle_area_ratio": 0.9447459736547899
+    },
+    "R_continuous_sleeve": {
+      "vertices": 203,
+      "min_triangle_area_ratio": 0.7770470515630828
+    },
+    "staff_global_rotation_deg": [
+      -4.999593885177666,
+      28.999999668633667
+    ]
+  },
+  "scope": "Godot native transforms and UV meshes; offline software raster preview is not engine framebuffer capture."
+}

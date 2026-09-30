@@ -1,0 +1,447 @@
+{
+  "version": "v6_stage_save_20260930",
+  "complete_six_states": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 54,
+      "sha256": "0bac28a579a288a30ee8f1bc92f07f1d7ef8124f6d252146af88225de31fecd4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1506,
+      "sha256": "11c6814ee2c8f7f81ab140a5252b100a0fb3810679bf179647a3a612565af040"
+    },
+    {
+      "path": "animations/Attack.tres",
+      "bytes": 137519,
+      "sha256": "1709dcfe6235a5cc36ca130a49d88e1db446083daa95b6035d9eb23e399832a0"
+    },
+    {
+      "path": "animations/Cast.tres",
+      "bytes": 100202,
+      "sha256": "0094b0de71f3523a684ef12b4f5562924358c8cf77e42d6c6eec9f0240c2e3ac"
+    },
+    {
+      "path": "animations/Dead_unreviewed_legacy.tres",
+      "bytes": 68876,
+      "sha256": "c775d4f8933d56c1faa696b07333a16b4dd19f98038d350f7c82dcff089adb23"
+    },
+    {
+      "path": "animations/Hit.tres",
+      "bytes": 22702,
+      "sha256": "52decc31a86a1e1373df5087f36fa61a5e587ed4e2953d13ce2b4747e35eeaaf"
+    },
+    {
+      "path": "animations/Idle.tres",
+      "bytes": 63337,
+      "sha256": "95acc5185a0154b2ed411a794775779efcfc2e34d2bd117a2ceae8d942136339"
+    },
+    {
+      "path": "animations/MageCast.tres",
+      "bytes": 136644,
+      "sha256": "9897936df15841cfae185fac1ce6953da4ceb5e63c2b85c2cbc6ed3a47a8477f"
+    },
+    {
+      "path": "animations/Relaxed.tres",
+      "bytes": 71504,
+      "sha256": "7430ffa106a278d072db4a1f56b7334917bfa4aebbfc0d033c8cd71d11bcabf1"
+    },
+    {
+      "path": "animations/art_directed_keys.json",
+      "bytes": 3186,
+      "sha256": "0ce6254c2e57dd270f621d0e1f604d018786bf727bc32229a63f17fb1ab3b5c8"
+    },
+    {
+      "path": "assets/anatomy_v6.json",
+      "bytes": 1784,
+      "sha256": "31c7249561d4cfbba3d71fbcd20ac0c434f5bff7e49edadaf20145a0c7b38a13"
+    },
+    {
+      "path": "assets/rig_geometry.json",
+      "bytes": 614106,
+      "sha256": "dd9d27832c9669c86d85e3d02afdea948d057d74d24430846c04d64c49890652"
+    },
+    {
+      "path": "assets/source/megumin_approved_v6.png",
+      "bytes": 1592081,
+      "sha256": "948002171a29ae117a1ae090d728753e2bc792b30477976e11e20d75bbe6b221"
+    },
+    {
+      "path": "assets/source/megumin_backing_v6_raw.png",
+      "bytes": 1479965,
+      "sha256": "683bce0718e9daa535eb346f297bf38018c220469ce91809cb5a43211bd85bee"
+    },
+    {
+      "path": "assets/source/megumin_cape_v6_raw.png",
+      "bytes": 1173449,
+      "sha256": "1dac124a0dd7de9c47d07307691be0318fcd6f48f0425a55b7ebf2d3a44de269"
+    },
+    {
+      "path": "assets/source/megumin_closedeyes_v6_raw.png",
+      "bytes": 1614772,
+      "sha256": "22fd8fa218329951eaca8a538a3db27b2a5ccae37cfdae8d69db981c3d39ab76"
+    },
+    {
+      "path": "assets/source/megumin_free_arm_v6_raw.png",
+      "bytes": 747258,
+      "sha256": "fb68971a809756544a59e3d6a7ad82cc8030f6afe365e70fb8b9cf5294fd4ea5"
+    },
+    {
+      "path": "assets/source/megumin_master_v6.png",
+      "bytes": 1592081,
+      "sha256": "948002171a29ae117a1ae090d728753e2bc792b30477976e11e20d75bbe6b221"
+    },
+    {
+      "path": "assets/source/megumin_staff_v6_raw.png",
+      "bytes": 949926,
+      "sha256": "e88dff0686b1cd959c3a3b326930e28b679743a35f13bd33e292f71eaa540cd5"
+    },
+    {
+      "path": "assets/source/megumin_unstaffed_v6_raw.png",
+      "bytes": 1516002,
+      "sha256": "00bec8f234d0b4862d42c6b9b9c4594f3fe2c08cb22b935fbc352b9896533c17"
+    },
+    {
+      "path": "docs/ACCEPTANCE.md",
+      "bytes": 2055,
+      "sha256": "b06ce246a2f56866d318a2a1d941e94ce566b9a3eca1c7fb7490268ded95445a"
+    },
+    {
+      "path": "docs/ART_PROVENANCE.md",
+      "bytes": 1603,
+      "sha256": "df6f85664b79d0f298ea35c53ab4072f9c9d7fd9107c231be28bc2ad22679fb4"
+    },
+    {
+      "path": "docs/INDEPENDENT_VISUAL_QA.md",
+      "bytes": 15811,
+      "sha256": "d7b2c4a9030ed1956595068fd39410bad6de6a65a6342f806f6b5b6f75dd7a0a"
+    },
+    {
+      "path": "docs/MAINCHAIN_REVIEW_STATUS.md",
+      "bytes": 1023,
+      "sha256": "73d5038399e04671aeeab2d14744bdd312cc0773a9c1e1bc22e4f39ba61402e5"
+    },
+    {
+      "path": "docs/MOIRE_BASE_CHECK.txt",
+      "bytes": 399,
+      "sha256": "e594b04075c46a26ae7a385f266c563c6f84c7432741c46703cfa0726106cf1f"
+    },
+    {
+      "path": "docs/MOIRE_SUPPLEMENTS_CHECK.txt",
+      "bytes": 570,
+      "sha256": "40b1d3cb0a08ab73d2b492861177e4c91105541a98c7ba6519d743ed7250c551"
+    },
+    {
+      "path": "docs/OFFICIAL_SOURCES.txt",
+      "bytes": 1663,
+      "sha256": "e74421d71b5abd3bb53c24624da820946d7dd2070433718a46b78a8972a4a928"
+    },
+    {
+      "path": "docs/STATE_PLAN.md",
+      "bytes": 1011,
+      "sha256": "f33cd3d00f910db3ca3f9d6d1664e61b38a8f875582411dcfd33783498bc7865"
+    },
+    {
+      "path": "docs/VISUAL_REVIEW_STAGE1.md",
+      "bytes": 685,
+      "sha256": "1010ff3cd153ba3108d64b4ff51fb4772acc243faeca45200b5cdb481bc4752f"
+    },
+    {
+      "path": "docs/source_alpha_inventory.json",
+      "bytes": 1997,
+      "sha256": "3666f0ac51b4c21b16509924b66e47ef0c8904fd0222bcd28ea2c5713b7c6d6f"
+    },
+    {
+      "path": "preview/anatomy_landmarks_v6.png",
+      "bytes": 722492,
+      "sha256": "47e47760812ac71cb49e2d76aa7c29f547ad6d21e7ff72664adb9f7d60e0ea7c"
+    },
+    {
+      "path": "preview/dead_probe/candidate_00.png",
+      "bytes": 231583,
+      "sha256": "890e862a51a8e49f63e101117559e609570fc7499e45a1bb052d92861e6ebcda"
+    },
+    {
+      "path": "preview/dead_probe/candidate_01.png",
+      "bytes": 233602,
+      "sha256": "f41d6f2648a50ef89f910bb2649b761c30ff27c53b02fe2ec2b2ebccec3421f8"
+    },
+    {
+      "path": "preview/dead_probe/frame_0000.bin",
+      "bytes": 20792,
+      "sha256": "a41651ea54c8c390a1abe168c42903bc13d7d80384077c35678433f6e3092fa5"
+    },
+    {
+      "path": "preview/dead_probe/frame_0000.png",
+      "bytes": 203837,
+      "sha256": "a13faf6fd184b08c602dc3cb02d7c715f56c94a4635fa4f3d91b2f7208b81f91"
+    },
+    {
+      "path": "preview/dead_probe/frame_0001.bin",
+      "bytes": 20792,
+      "sha256": "5d06fe2330ed114538cc7efd5bacf748ada08c2758e66a6c8b0fa2d3f3293161"
+    },
+    {
+      "path": "preview/dead_probe/frame_0001.png",
+      "bytes": 231890,
+      "sha256": "c8ebbaeb6ad94451bf2ad2d6f0c897402bc7b81e8af66f858db1933a5cac4b45"
+    },
+    {
+      "path": "preview/dead_probe/metrics.json",
+      "bytes": 4486,
+      "sha256": "13b2192cf7f8c808461a18a26af779d7fa3b425dd2e0642303f606da053d4302"
+    },
+    {
+      "path": "preview/dead_probe/native_geometry.json",
+      "bytes": 100284,
+      "sha256": "b96034322da6df4114e98b1e0ad8c418c074034fea5727df38dc794ce1171af8"
+    },
+    {
+      "path": "preview/leg_motion_before/frame_0000.png",
+      "bytes": 229342,
+      "sha256": "aa9bf1ba57d1cb3dd91740ad6e9c7aaf0ad4c8fa22b7c607b68b9e56fb7b6282"
+    },
+    {
+      "path": "preview/leg_motion_before/frame_0030.png",
+      "bytes": 232829,
+      "sha256": "d1d01d329f0ebcc1cf78879796102cfd400b3cd65e18250c9611a0023fe56076"
+    },
+    {
+      "path": "preview/leg_motion_before/frame_0080.png",
+      "bytes": 228036,
+      "sha256": "f18c0ae0d9cdfa0e3c23b3e5f527aad078b86cb803d04f91a9bb1b5b74bdf75c"
+    },
+    {
+      "path": "preview/leg_motion_before/frame_0105.png",
+      "bytes": 232367,
+      "sha256": "79fb83f20b214bace9c062ab61ac6de33419a2064fcb1779a62e1b89f0e012a3"
+    },
+    {
+      "path": "preview/leg_motion_before/frame_0150.png",
+      "bytes": 227701,
+      "sha256": "af0df91840474902f270359f6b32398e1c3f9acdae9f7025c110b693d0790ca7"
+    },
+    {
+      "path": "preview/leg_motion_before/frame_0216.png",
+      "bytes": 231304,
+      "sha256": "a80d939ac6a73d7e527ece37c52d78ad6fcff587eb9c947faa73d31838217c67"
+    },
+    {
+      "path": "preview/leg_motion_before_strip.png",
+      "bytes": 317627,
+      "sha256": "cd0412f8b716f7c210b75821d40493a1ddf55581bac526773507a624059843f8"
+    },
+    {
+      "path": "preview/legmotion_before/MageCast.tres",
+      "bytes": 137182,
+      "sha256": "875872fc156155a4910e488501b3dc01f3ead9a21eba677d31040f321aeef52b"
+    },
+    {
+      "path": "preview/legmotion_before/anatomy_v6.json",
+      "bytes": 1414,
+      "sha256": "0710e3cee2934e8501029e3ea0aa54d67324d7bdde615de6f2c15c9630651c0a"
+    },
+    {
+      "path": "preview/legmotion_before/art_directed_keys.json",
+      "bytes": 3107,
+      "sha256": "78df12bc16f0dd653365d532620ec2b05abca148c25994a46ca4f15ca540026d"
+    },
+    {
+      "path": "preview/legmotion_before/frame_0080.png",
+      "bytes": 228036,
+      "sha256": "f18c0ae0d9cdfa0e3c23b3e5f527aad078b86cb803d04f91a9bb1b5b74bdf75c"
+    },
+    {
+      "path": "preview/legmotion_before/frame_0105.png",
+      "bytes": 232367,
+      "sha256": "79fb83f20b214bace9c062ab61ac6de33419a2064fcb1779a62e1b89f0e012a3"
+    },
+    {
+      "path": "preview/legmotion_before/frame_0150.png",
+      "bytes": 227701,
+      "sha256": "af0df91840474902f270359f6b32398e1c3f9acdae9f7025c110b693d0790ca7"
+    },
+    {
+      "path": "preview/legmotion_before/frame_metrics.json",
+      "bytes": 485533,
+      "sha256": "546009f6dbb9fa850057682561b2d80d7ae22f63438e0be79b30c5cb8360b0a1"
+    },
+    {
+      "path": "preview/legmotion_fix/compare_0080.png",
+      "bytes": 422989,
+      "sha256": "145b0d2a1d4eddfe6c02804ae739428c93b8661ae3f5e7da755f1599b3066307"
+    },
+    {
+      "path": "preview/legmotion_fix/compare_0105.png",
+      "bytes": 429088,
+      "sha256": "b15f7d45e2e6b66e4889c6093e9fd801b3a826138f4a8a871ddbe89a501e7dd1"
+    },
+    {
+      "path": "preview/legmotion_fix/compare_0150.png",
+      "bytes": 439720,
+      "sha256": "b06827ef495ea70734d3b2ace59b53f402cf67221f52a23c1e33c71b2156bb01"
+    },
+    {
+      "path": "preview/legmotion_fix/frame_0000.png",
+      "bytes": 229385,
+      "sha256": "b3e4c42ec46c05fed869676040b9df8d35b3ce9ea7e13cb65ad62a33766bd6d0"
+    },
+    {
+      "path": "preview/legmotion_fix/frame_0080.png",
+      "bytes": 228427,
+      "sha256": "81a2aeab140f7540845c91817f883b2371c3c222ccd84bc45d0fbba085e84c95"
+    },
+    {
+      "path": "preview/legmotion_fix/frame_0105.png",
+      "bytes": 232836,
+      "sha256": "991777f712a81dcb84d556874b0709c628635ecb0e29a66e183ebd24ff0c1a99"
+    },
+    {
+      "path": "preview/legmotion_fix/frame_0150.png",
+      "bytes": 233878,
+      "sha256": "6e43b30d8fe7bf386d64e02ed79b14239f1a86b5a3f0cb51e9d0caa67c24f7f7"
+    },
+    {
+      "path": "preview/legmotion_fix/frame_0216.png",
+      "bytes": 231358,
+      "sha256": "680b0b281aadb05872bb15b116763c60f91d0d95314f89bef0b214ae732a081f"
+    },
+    {
+      "path": "preview/megumin_v6_mage_legmotion_fix.mp4",
+      "bytes": 884646,
+      "sha256": "87e1ba8c59d20593b08d5d66cac1641b2d2ab136c6ae6fe494b1a492bfd79d54"
+    },
+    {
+      "path": "preview/megumin_v6_mage_mainchain_review.mp4",
+      "bytes": 1065866,
+      "sha256": "600713b0f54a3e98df726604d9e3661e80cbbc644b323d043b1de8c1df3cc608"
+    },
+    {
+      "path": "project.godot",
+      "bytes": 463,
+      "sha256": "ab6d9058800f5721fdd1b9fac9b6a23975a35685754ae0969ced9bd8fa6d0212"
+    },
+    {
+      "path": "scenes/megumin.tscn",
+      "bytes": 444,
+      "sha256": "f073e868d167f07aae00d3466d4a9509975f3658aee2446977ad5b1dc2ce9e6e"
+    },
+    {
+      "path": "scenes/preview.tscn",
+      "bytes": 172,
+      "sha256": "68bf442b742a42afe14b7351b384270c495e3f4e4d868f886ef867459ded1308"
+    },
+    {
+      "path": "scripts/export_dead_probe.gd",
+      "bytes": 2631,
+      "sha256": "14bf9c078bf3120ed1fdb238fbc6de3fba16577f0c84472b47104782143582a4"
+    },
+    {
+      "path": "scripts/export_dead_probe.gd.uid",
+      "bytes": 19,
+      "sha256": "a9f395d6b3b472920c726c5ecd118b91e76a28fdb2f5f05c3d116af3dad86c31"
+    },
+    {
+      "path": "scripts/export_software_review.gd",
+      "bytes": 1955,
+      "sha256": "09c20f8f9ece07d21adda2a960a00e659e119ddd8a4f1cc5c3204adefdb55715"
+    },
+    {
+      "path": "scripts/export_software_review.gd.uid",
+      "bytes": 19,
+      "sha256": "596323f3abe467094f16d38b00e32186d14e5343b1120f2ddedf8b602bb3a67e"
+    },
+    {
+      "path": "scripts/megumin_rig.gd",
+      "bytes": 10846,
+      "sha256": "f93252dff0559c9db62afb7b8dc54b23a44b9027b060e45cde7e08a9b2a0739f"
+    },
+    {
+      "path": "scripts/megumin_rig.gd.uid",
+      "bytes": 20,
+      "sha256": "5cbbe45dfcf4a9b2568578cfa1dfb47e0a2ccb9556b23839a094644454625cc5"
+    },
+    {
+      "path": "scripts/preview.gd",
+      "bytes": 2646,
+      "sha256": "029f6b42dc233b01770769884f357a0a8a4f46ce6d2315a35267ebf629cb1fb6"
+    },
+    {
+      "path": "scripts/preview.gd.uid",
+      "bytes": 20,
+      "sha256": "7716d05a19cb6d5d9298493109f77e847417b6927378a2650f5e93aeef937c14"
+    },
+    {
+      "path": "tests/frame_metrics.json",
+      "bytes": 482183,
+      "sha256": "56e1a705ecc37836af3a10acdc1ac8d940d66f4d6497df7dd0c571fff9929ed5"
+    },
+    {
+      "path": "tests/leg_motion_fix_metrics.json",
+      "bytes": 648,
+      "sha256": "c1467eb9904f76ff803d500c7487141922649e9271e290ca30e0e42a0709cc15"
+    },
+    {
+      "path": "tests/legmotion_fix_continuity.json",
+      "bytes": 120,
+      "sha256": "fea722c94fd16d02bd87fd9f7a31bd88117e6a6b548e43138e17d3eccfc76809"
+    },
+    {
+      "path": "tests/legmotion_fix_validation.json",
+      "bytes": 5391,
+      "sha256": "5d5993ce6817b81022b3003a3ef3bfe146df7bd1e14888131f1e1e3baba1b112"
+    },
+    {
+      "path": "tests/test_continuity.gd",
+      "bytes": 1118,
+      "sha256": "a6ef1c9cdba3c55d570803674b95a1ebad016df79e87200cacca118cc21bb6fb"
+    },
+    {
+      "path": "tests/test_continuity.gd.uid",
+      "bytes": 20,
+      "sha256": "fb7d8357c98e22c71997a2ea074f325258e0c5e3dbbb50646c82d74aefae82fe"
+    },
+    {
+      "path": "tests/v6_continuity.json",
+      "bytes": 120,
+      "sha256": "fea722c94fd16d02bd87fd9f7a31bd88117e6a6b548e43138e17d3eccfc76809"
+    },
+    {
+      "path": "tests/v6_validation.json",
+      "bytes": 5391,
+      "sha256": "5d5993ce6817b81022b3003a3ef3bfe146df7bd1e14888131f1e1e3baba1b112"
+    },
+    {
+      "path": "tools/build_states_v6.py",
+      "bytes": 13731,
+      "sha256": "462cfc8f017ca0dfa807a89055c394dba6e0e7035760b20d03298dbbae77cb60"
+    },
+    {
+      "path": "tools/build_timeline.py",
+      "bytes": 3300,
+      "sha256": "7959e8d0c1ebfac12cde6156a6032a267b86c980275b79140f026ec7a9d871c6"
+    },
+    {
+      "path": "tools/build_v6.py",
+      "bytes": 12323,
+      "sha256": "291edb85996a33fe045725a561dcb2f53aba8b9a4f9e60a473796a633b028ed4"
+    },
+    {
+      "path": "tools/render_software_review.py",
+      "bytes": 7254,
+      "sha256": "e44107c15541564d12cbd39c87485f8a2a8fa734dcb304765f1bedc1826f8cac"
+    },
+    {
+      "path": "tools/run_tests.sh",
+      "bytes": 707,
+      "sha256": "905caa97bfc33c78463ce9bcd7784d0aa5d72b2e33dfc4aa79598c25f654f670"
+    },
+    {
+      "path": "tools/validate_v6.py",
+      "bytes": 3645,
+      "sha256": "05795d8f001e14b893394eb9b2fa6a4404f37b331c32c639f4c61435d9401d12"
+    }
+  ],
+  "repository_note": "Stage snapshot copied intact, then retested at art/megumin-v6; manifest refreshed for regenerated test evidence and repository cache exclusions."
+}
