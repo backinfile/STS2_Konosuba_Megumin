@@ -1,0 +1,176 @@
+{
+  "version": "v3_continuous_natural_idle_final",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 75,
+      "sha256": "40c8ad51ade23de55a798ebce5fbe83c4ffd7ed8539f7026ed4396139ee881ed"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4784,
+      "sha256": "71a70f00632bc3414814af09f06d4676dffdd2eac17c9ae82fe1214f33588d1f"
+    },
+    {
+      "path": "animations/ContinuousCast.tres",
+      "bytes": 104400,
+      "sha256": "a01a57e254e19c577e366fa0f11092018b12d9b0671c162deac06a2a4fe846a1"
+    },
+    {
+      "path": "animations/art_directed_keys.json",
+      "bytes": 4376,
+      "sha256": "e85b4c2ec1d24db27a1dfaaf7850cb779a8ac0e4eb037d0236a2767e95b1d5e5"
+    },
+    {
+      "path": "assets/rig_geometry.json",
+      "bytes": 97070,
+      "sha256": "4a2c1dede801ede9660683df51243bd8cfd18da77a7f792b06339dba49f116bb"
+    },
+    {
+      "path": "assets/source/megumin_body_occlusion_v3.png",
+      "bytes": 1641523,
+      "sha256": "892c0ed61e8217e2ee19639cf15e45e235231ef806b889f7ba7b08d0f985d1d5"
+    },
+    {
+      "path": "assets/source/megumin_cape_complete_v3.png",
+      "bytes": 1097571,
+      "sha256": "77bb18bd6e7a54bdd8a973bb5738032ceb510b27c21c2123e4484cc7c429766d"
+    },
+    {
+      "path": "assets/source/megumin_master.png",
+      "bytes": 1780979,
+      "sha256": "3e8e9fe383832011aef8f67be9156ec35d0fba88a25d60b33f5da32b1c64cf0f"
+    },
+    {
+      "path": "assets/source/megumin_occlusion_base.png",
+      "bytes": 1532139,
+      "sha256": "cd9c7c504ea99ccd61c188a64c0dab19accb6298b15d4c2b554f6737c3fc7014"
+    },
+    {
+      "path": "assets/source/megumin_staff_complete.png",
+      "bytes": 980547,
+      "sha256": "ea69e44e02f8fe8a58d1858a0c70c94e509df9ece258c394a8675c76f5f2992a"
+    },
+    {
+      "path": "docs/ART_AND_CLEANUP.md",
+      "bytes": 1419,
+      "sha256": "585ab1f84434ad64d303f0344385eb0bb7694b7c16db557a73c745a1f0868c56"
+    },
+    {
+      "path": "docs/ART_PROVENANCE.md",
+      "bytes": 1179,
+      "sha256": "fdb0d82ad21e451cfa5280da2c377d8384352706cb44161d09cf7ce4bc72d7ae"
+    },
+    {
+      "path": "preview/continuous_contact_sheet.jpg",
+      "bytes": 348492,
+      "sha256": "87fb92efcbcc5f0afd19842e3673a0cb850b3c5cf032659b50c7c31463380ce6"
+    },
+    {
+      "path": "preview/end_natural_v3.png",
+      "bytes": 311782,
+      "sha256": "e1dfe769987756dc32c1ab30f3dd23de6d5961b5417158984d3ec64d13caec9a"
+    },
+    {
+      "path": "preview/idle_natural_v3.png",
+      "bytes": 311246,
+      "sha256": "8c78b1eb3161d0204e8be9ff461c85701a4e4ab605081db55ff1bacac1da28cc"
+    },
+    {
+      "path": "preview/megumin_continuous_v3.mp4",
+      "bytes": 1092260,
+      "sha256": "f7ba49caf1db3b2fe3479c3ff9c1afae1f8a3a0cdbc1f3747b7a210d2bf8d705"
+    },
+    {
+      "path": "project.godot",
+      "bytes": 467,
+      "sha256": "63a0b95d6220f6b4ea0668ca9a8f8f5e0c2676ef84a803eb04b80d1b5af63921"
+    },
+    {
+      "path": "scenes/megumin.tscn",
+      "bytes": 454,
+      "sha256": "209bb80374b3d229436f07a563df905309933ba2b8c6289e3cdd021882112195"
+    },
+    {
+      "path": "scenes/preview.tscn",
+      "bytes": 172,
+      "sha256": "68bf442b742a42afe14b7351b384270c495e3f4e4d868f886ef867459ded1308"
+    },
+    {
+      "path": "scripts/export_software_review.gd",
+      "bytes": 2084,
+      "sha256": "d2f8a04dbb6bcb3056e32b87b9ae764a0be10d5a2955a3ae9a5f9fdf3814be88"
+    },
+    {
+      "path": "scripts/export_software_review.gd.uid",
+      "bytes": 20,
+      "sha256": "866f54781a3927b9e843e9a97536538f97ff99720618e7e5f561085afe152abc"
+    },
+    {
+      "path": "scripts/megumin_rig.gd",
+      "bytes": 6717,
+      "sha256": "766e7adbc12d8d4033a1a23ff51d7ae78a5c42f6c48c39436a961f5eb4e13ef5"
+    },
+    {
+      "path": "scripts/megumin_rig.gd.uid",
+      "bytes": 20,
+      "sha256": "c1d57f237e1db0492d8f5b1051885854e821ec448113f7da39e0c88beefbbc8c"
+    },
+    {
+      "path": "scripts/preview.gd",
+      "bytes": 2589,
+      "sha256": "94458fe2b508efb636836e94e46ebfef0ddd894e2cef3a86aa95cfe49523d50c"
+    },
+    {
+      "path": "scripts/preview.gd.uid",
+      "bytes": 19,
+      "sha256": "15a4c8f4f613289d7d1df4dda6314dbba26b3257c56460d92f37c4fc68a25967"
+    },
+    {
+      "path": "tests/continuous_validation.json",
+      "bytes": 8680,
+      "sha256": "31ebd6176c3137e7d1ad332f6375192c0e2b5be683a55d7cbdf62891a97987bd"
+    },
+    {
+      "path": "tests/frame_metrics.json",
+      "bytes": 406697,
+      "sha256": "66ef82f430b35fbd4fe6f92df750393308c312eeb12b4d6578e791be7ed01e3c"
+    },
+    {
+      "path": "tests/test_timeline.gd",
+      "bytes": 1530,
+      "sha256": "cb101997a2c79de7753664cdb3a03214ebf9bd5a2195fd2a64a8a43920e82307"
+    },
+    {
+      "path": "tests/test_timeline.gd.uid",
+      "bytes": 20,
+      "sha256": "575b9dae7eda9c20c05f8064ecd2d40595a026bf6d342581312b2d3c9cccf3e3"
+    },
+    {
+      "path": "tests/timeline_continuity.json",
+      "bytes": 173,
+      "sha256": "edc841b4da840f129c32d04d82db69ce01e5bec025ed9b6935354885f755d713"
+    },
+    {
+      "path": "tools/build_continuous.py",
+      "bytes": 9091,
+      "sha256": "63e7faf03530e3db488d8c81277d05106925e57beafe4b458638bf10d4b7ae0a"
+    },
+    {
+      "path": "tools/render_software_review.py",
+      "bytes": 7219,
+      "sha256": "03b2e72204b19ede527cbc43381b7c16c7959c06df34f431456ec0c90aa3ff1e"
+    },
+    {
+      "path": "tools/run_tests.sh",
+      "bytes": 776,
+      "sha256": "f48cc659c41c31d399cd8eefaed9eca90efeb809529cf554dad108fc50b40895"
+    },
+    {
+      "path": "tools/validate_continuous.py",
+      "bytes": 6618,
+      "sha256": "eedc501c6e6eb405fc943af2fb489f3efef6b9edfa6f9d9c02f4d113ed3c86ad"
+    }
+  ],
+  "repository_packaging_note": "v1 baseline scripts point to ../megumin; tests rerun after relocation; caches, native frame dumps and temporary logs omitted."
+}

@@ -1,0 +1,365 @@
+{
+  "engine": "4.6.3-stable (official)",
+  "passed": true,
+  "checks": [
+    {
+      "name": "163 native frames at 30 fps",
+      "passed": true,
+      "value": 163
+    },
+    {
+      "name": "all frames use identical source cutouts",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "all joint scales fixed at one",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "both IK chains reach planted targets",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "left upper leg bone fixed",
+      "passed": true,
+      "value": 7.62939449998612e-05
+    },
+    {
+      "name": "left lower leg bone fixed",
+      "passed": true,
+      "value": 6.1035155994204615e-05
+    },
+    {
+      "name": "left ankle / sole anchored",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "left_upper FK bone fixed",
+      "passed": true,
+      "value": 4.063949249655252e-05
+    },
+    {
+      "name": "left_forearm FK bone fixed",
+      "passed": true,
+      "value": 5.457960138244289e-05
+    },
+    {
+      "name": "right upper leg bone fixed",
+      "passed": true,
+      "value": 7.62939449998612e-05
+    },
+    {
+      "name": "right lower leg bone fixed",
+      "passed": true,
+      "value": 7.629394599462103e-05
+    },
+    {
+      "name": "right ankle / sole anchored",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "right_upper FK bone fixed",
+      "passed": true,
+      "value": 3.174981944198407e-05
+    },
+    {
+      "name": "right_forearm FK bone fixed",
+      "passed": true,
+      "value": 6.803144265177252e-05
+    },
+    {
+      "name": "staff_complete_lower rigid distances",
+      "passed": true,
+      "value": 0.00021273217998896143
+    },
+    {
+      "name": "thigh_left rigid distances",
+      "passed": true,
+      "value": 0.0001143352574644041
+    },
+    {
+      "name": "thigh_right rigid distances",
+      "passed": true,
+      "value": 0.00011030181071447487
+    },
+    {
+      "name": "shin_left rigid distances",
+      "passed": true,
+      "value": 7.566438445394397e-05
+    },
+    {
+      "name": "knee_cap_left rigid distances",
+      "passed": true,
+      "value": 6.863404779267057e-05
+    },
+    {
+      "name": "shin_right rigid distances",
+      "passed": true,
+      "value": 6.800337061463324e-05
+    },
+    {
+      "name": "boot_right rigid distances",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "knee_cap_right rigid distances",
+      "passed": true,
+      "value": 5.535913287246785e-05
+    },
+    {
+      "name": "boot_left rigid distances",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "skirt rigid distances",
+      "passed": true,
+      "value": 0.0001103491751450747
+    },
+    {
+      "name": "occlusion_torso rigid distances",
+      "passed": true,
+      "value": 0.00018064233333348056
+    },
+    {
+      "name": "arm_left_upper rigid distances",
+      "passed": true,
+      "value": 8.514536931159e-05
+    },
+    {
+      "name": "arm_right_upper rigid distances",
+      "passed": true,
+      "value": 6.990741900381181e-05
+    },
+    {
+      "name": "left_sleeve_drape rigid distances",
+      "passed": true,
+      "value": 0.00010030507573333125
+    },
+    {
+      "name": "arm_left_forearm rigid distances",
+      "passed": true,
+      "value": 0.00012635937682503595
+    },
+    {
+      "name": "arm_right_forearm rigid distances",
+      "passed": true,
+      "value": 0.00013855329309464537
+    },
+    {
+      "name": "head_hat rigid distances",
+      "passed": true,
+      "value": 0.00017078108533041814
+    },
+    {
+      "name": "staff_complete_top rigid distances",
+      "passed": true,
+      "value": 0.0002725758001815848
+    },
+    {
+      "name": "hand_left rigid distances",
+      "passed": true,
+      "value": 0.0001262155040677726
+    },
+    {
+      "name": "hand_right rigid distances",
+      "passed": true,
+      "value": 0.00012150544456801526
+    },
+    {
+      "name": "start left knee naturally extended (5-12 deg)",
+      "passed": true,
+      "value": 8.000062343646846
+    },
+    {
+      "name": "start right knee naturally extended (5-12 deg)",
+      "passed": true,
+      "value": 7.999948459470431
+    },
+    {
+      "name": "end left knee naturally extended (5-12 deg)",
+      "passed": true,
+      "value": 8.000062343646846
+    },
+    {
+      "name": "end right knee naturally extended (5-12 deg)",
+      "passed": true,
+      "value": 7.999948459470431
+    },
+    {
+      "name": "left end returns to neutral hip",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "right end returns to neutral hip",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "whole staff fixed shape",
+      "passed": true,
+      "value": 0.00040034016774370684
+    },
+    {
+      "name": "hand and staff share single FK transform",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "no sprite or alpha pose crossfade code",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "single authored action timeline",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "strictly ordered frame samples",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "megumin_master.png byte-identical to frozen v1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "megumin_occlusion_base.png byte-identical to frozen v1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "megumin_staff_complete.png byte-identical to frozen v1",
+      "passed": true,
+      "value": null
+    }
+  ],
+  "measurements": {
+    "source_canvas_px": [
+      1024,
+      1536
+    ],
+    "stance_px": {
+      "v1": 553,
+      "v3": 453,
+      "reduction_percent": 18.083182640144667
+    },
+    "cutout_bbox_px": {
+      "boot_right": [
+        197.35632183908046,
+        266.0
+      ],
+      "boot_left": [
+        195.8019801980198,
+        301.0
+      ],
+      "head_hat": [
+        610,
+        393
+      ],
+      "hand_left": [
+        115.6871907327955,
+        119.9148164118269
+      ],
+      "hand_right": [
+        102,
+        100
+      ]
+    },
+    "bone_lengths_px": {
+      "left": {
+        "upper_arm": 115.0,
+        "forearm": 83.5224520712844,
+        "thigh": 221.92341021172146,
+        "shin": 222.0923231451281
+      },
+      "right": {
+        "upper_arm": 108.40664186294121,
+        "forearm": 91.67878707749138,
+        "thigh": 205.73040611440985,
+        "shin": 191.3243319601561
+      }
+    },
+    "per_part_max_rigidity_error_px": {
+      "staff_complete_lower": 0.00021273217998896143,
+      "thigh_left": 0.0001143352574644041,
+      "thigh_right": 0.00011030181071447487,
+      "shin_left": 7.566438445394397e-05,
+      "knee_cap_left": 6.863404779267057e-05,
+      "shin_right": 6.800337061463324e-05,
+      "boot_right": 0.0,
+      "knee_cap_right": 5.535913287246785e-05,
+      "boot_left": 0.0,
+      "skirt": 0.0001103491751450747,
+      "occlusion_torso": 0.00018064233333348056,
+      "arm_left_upper": 8.514536931159e-05,
+      "arm_right_upper": 6.990741900381181e-05,
+      "left_sleeve_drape": 0.00010030507573333125,
+      "arm_left_forearm": 0.00012635937682503595,
+      "arm_right_forearm": 0.00013855329309464537,
+      "head_hat": 0.00017078108533041814,
+      "staff_complete_top": 0.0002725758001815848,
+      "hand_left": 0.0001262155040677726,
+      "hand_right": 0.00012150544456801526
+    },
+    "neutral_stance": {
+      "pelvis_pivot_px": [
+        614,
+        852
+      ],
+      "hip_vertical_offset_px": -16.6879351,
+      "pelvis_roll_deg": 8.53055893,
+      "torso_counter_roll_deg": -8.53055893,
+      "knee_flexion_deg": {
+        "start": {
+          "left": 8.000062343646846,
+          "right": 7.999948459470431
+        },
+        "end": {
+          "left": 8.000062343646846,
+          "right": 7.999948459470431
+        }
+      }
+    },
+    "staff": {
+      "source_tip_points": [
+        [
+          336,
+          1513
+        ],
+        [
+          712,
+          22
+        ]
+      ],
+      "source_tip_to_tip_px": 1537.6790952601261,
+      "fixed_registration_scale": 0.83,
+      "rig_tip_to_tip_px": 1276.2736490659047,
+      "runtime_scale": 1
+    },
+    "max_vertex_frame_step_px": 158.1897913168994,
+    "camera": {
+      "large_constant_scale": 0.42,
+      "large_origin": [
+        443,
+        856
+      ],
+      "reference_constant_scale": 0.22889842632331903,
+      "reference_origin": [
+        1104,
+        820
+      ],
+      "auto_zoom": false
+    }
+  },
+  "scope": "Native AnimationPlayer/Polygon2D geometry and FK/IK invariants. Software raster preview, not engine framebuffer capture."
+}

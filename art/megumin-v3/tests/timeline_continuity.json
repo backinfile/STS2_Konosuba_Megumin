@@ -1,0 +1,8 @@
+{
+  "epsilon_seconds": 0.0001,
+  "failures": [],
+  "max_boundary_vertex_delta_px": 0.0092685054987669,
+  "passed": true,
+  "segment_boundary_tests": 8,
+  "track_count": 12
+}
