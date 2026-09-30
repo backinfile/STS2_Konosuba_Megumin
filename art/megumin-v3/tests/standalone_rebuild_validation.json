@@ -1,0 +1,13 @@
+{
+  "isolated_directory": "/tmp/megumin-legfix-isolated-ae3c5c_a",
+  "external_v1_directory_present": false,
+  "rebuild_exit_code": 0,
+  "rebuilt_assets_changed": [],
+  "run_tests_exit_code": 0,
+  "validation_passed": true,
+  "validation_count": 59,
+  "timeline_passed": true,
+  "timeline_max_boundary_delta_px": 0.0092685054987669,
+  "preview_smoke_log": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org",
+  "video_rendered": false
+}

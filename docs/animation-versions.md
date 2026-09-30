@@ -51,3 +51,11 @@ bash art/megumin-v2/tools/run_tests.sh
 - 仓库副本修正了重建／源图校验所需 v1 相对路径，并重新运行 `bash art/megumin-v3/tools/run_tests.sh`
 - 输出仍是 Godot 导出网格的软件光栅预览；未声称引擎图形渲染、最终用户美术验收或 STS2 接入完成
 - 这是单动作连续小样，尚无六状态 API、完整倒地、口型或头部换向；右宽袖和高倍膝盖纹理仍可见 cutout 接界
+
+### v3 腿部连接修正版
+
+- 新预览 `art/megumin-v3/preview/megumin_continuous_v3_legfix.mp4`，旧片仍保留
+- 膝盖改为连续 UV 网格连接，清除靴口重复袜子和裙片误带皮肤；骨长、头手尺寸、足底锚点和既有时间轴保持
+- 自包含 `assets/baseline/` 取代上一版兄弟 v1 目录依赖；仓库副本运行重建与回归验证
+- 59 项约束／回归与 8 处阶段边界通过；细节见 `tests/continuous_validation.json`、`tests/timeline_continuity.json` 和 `docs/LEG_CONNECTION_REVIEW.md`
+- 仍为软件光栅预览，不是 Godot 图形实录或 STS2 验收；少量 cutout 风格及高倍纹理弯曲仍保留说明

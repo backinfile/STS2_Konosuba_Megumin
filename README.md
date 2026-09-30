@@ -5,8 +5,10 @@
 ## 最新连续动作 v3
 
 - [v3 连续骨骼小样](art/megumin-v3/README.md)：收窄站距、固定头手与骨长、自然 Idle 起止、无全身姿态切换
-- [v3 无特效预览](art/megumin-v3/preview/megumin_continuous_v3.mp4)：5.433 秒、30 fps、1440 × 960
-- [v3 静态首帧](art/megumin-v3/preview/idle_natural_v3.png)
+- [v3 腿部连接修正版预览](art/megumin-v3/preview/megumin_continuous_v3_legfix.mp4)：5.433 秒、30 fps、1440 × 960
+- [v3 修正版静态首帧](art/megumin-v3/preview/leg_review/idle_legfix.png)
+
+本轮修复膝盖连接、靴口重复袜子和裙片误带的皮肤，原版 v3 视频保留供比较。
 
 v3 是连续动作审核小样，尚不是六状态终版。视频为 Godot 原生时间轴导出网格的软件光栅预览，未完成引擎图形窗口或 STS2 实机验收；仍可见少量 cutout 接界。
 

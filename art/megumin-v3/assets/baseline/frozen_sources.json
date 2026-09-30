@@ -1,0 +1,9 @@
+{
+  "description": "Frozen v1 imagegen source PNG SHA256 baselines; source bytes must remain unchanged.",
+  "source_sha256": {
+    "megumin_master.png": "3e8e9fe383832011aef8f67be9156ec35d0fba88a25d60b33f5da32b1c64cf0f",
+    "megumin_occlusion_base.png": "cd9c7c504ea99ccd61c188a64c0dab19accb6298b15d4c2b554f6737c3fc7014",
+    "megumin_staff_complete.png": "ea69e44e02f8fe8a58d1858a0c70c94e509df9ece258c394a8675c76f5f2992a"
+  },
+  "geometry_v1_sha256": "0eebb73a5cb35bfd86c758d7bf4cb4369cbbc9a398a831c274d4633ba3f9d70d"
+}

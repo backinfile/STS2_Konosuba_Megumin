@@ -2,7 +2,7 @@
 class_name MeguminContinuousRig
 extends Node2D
 ## One source anatomy, fixed-length FK arms and planted two-segment leg IK.
-## All bone scales stay Vector2.ONE. Only cloth vertices deform.
+## All bone scales stay Vector2.ONE. Only narrow knee blend bands and cloth deform.
 const ORIGIN = Vector2(575,1508)
 const HIP = Vector2(619,701)
 const PELVIS = Vector2(614,852)
@@ -44,6 +44,7 @@ func _ready() -> void:
   _bone(side+"_forearm",bones[side+"_upper"],REST[side+"_forearm"]-REST[side+"_upper"])
   _bone(side+"_hand",bones[side+"_forearm"],REST[side+"_hand"]-REST[side+"_forearm"])
   for part in ["thigh_","shin_","boot_","knee_"]:_bone(part+side,anatomy,REST[part+side]-ORIGIN)
+  _bone("leg_"+side,anatomy,Vector2.ZERO)
  _bone("left_cuff",bones.left_upper,REST.left_cuff-REST.left_upper)
  _bone("cape",anatomy,Vector2.ZERO)
  var geometry: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/rig_geometry.json"))
@@ -62,7 +63,7 @@ func _ready() -> void:
    for tri in data.triangles:tris.append(PackedInt32Array(tri))
    node.polygons=tris
   bones[data.bone].add_child(node)
-  pieces.append({"node":node,"rest":vertices,"local":local,"bone":data.bone})
+  pieces.append({"node":node,"rest":vertices,"local":local,"bone":data.bone,"skin_weights":data.get("skin_weights",[]),"hip_weights":data.get("hip_weights",[])})
  player=get_node("AnimationPlayer")
  update_pose()
  if autoplay and not Engine.is_editor_hint():player.play("ContinuousCast")
@@ -92,6 +93,9 @@ func update_pose() -> void:
   _solve_leg(side)
  bones.left_cuff.rotation=deg_to_rad(-.65*(pelvis_tilt+torso_lean+left_shoulder))
  for piece in pieces:
+  if piece.bone.begins_with("leg_"):
+   _skin_leg(piece)
+   continue
   if piece.bone!="cape":continue
   var posed=PackedVector2Array()
   for v in piece.rest:
@@ -102,6 +106,24 @@ func update_pose() -> void:
    q+=Vector2(sin(elapsed*2.3+v.y*.006)*9.,sin(elapsed*2.1-v.x*.009)*10.)*pin*cape_strength
    posed.append(q-ORIGIN)
   piece.node.polygon=posed
+
+func _skin_leg(piece:Dictionary) -> void:
+ var side:String=piece.bone.trim_prefix("leg_")
+ var k0:Vector2=REST["shin_"+side];var k:Vector2=ik_metrics[side].knee
+ var upper_angle:float=bones["thigh_"+side].rotation
+ var lower_angle:float=bones["shin_"+side].rotation
+ var posed=PackedVector2Array()
+ for i in range(piece.rest.size()):
+  var v:Vector2=piece.rest[i]
+  # Rotation blending about one exact knee center keeps joint radii; no LBS squash.
+  var angle=lerp_angle(upper_angle,lower_angle,piece.skin_weights[i])
+  var q=k+(v-k0).rotated(angle)
+  if piece.hip_weights[i]<1.:
+   var h:Vector2=ik_metrics[side].hip;var h0:Vector2=REST["thigh_"+side]
+   var hip_angle=lerp_angle(bones.pelvis.rotation,upper_angle,piece.hip_weights[i])
+   q=h+(v-h0).rotated(hip_angle)
+  posed.append(q)
+ piece.node.polygon=posed
 
 func _solve_leg(side:String) -> void:
  var h0:Vector2=REST["thigh_"+side];var k0:Vector2=REST["shin_"+side];var a0:Vector2=REST["boot_"+side]

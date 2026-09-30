@@ -1,5 +1,16 @@
 {
-  "version": "v3_continuous_natural_idle_final",
+  "version": "v3_continuous_legfix_frozen",
+  "preview": "preview/megumin_continuous_v3_legfix.mp4",
+  "validation": "59/59; headless Godot geometry and offline software preview; not STS2 verified",
+  "excludes": [
+    ".godot",
+    "__pycache__",
+    "preview/software generated frames",
+    "preview/iteration_01",
+    "*.import",
+    "*.log",
+    "rejected intermediate settle_leg_no_hip_blend.png"
+  ],
   "files": [
     {
       "path": ".gitignore",
@@ -8,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4784,
-      "sha256": "71a70f00632bc3414814af09f06d4676dffdd2eac17c9ae82fe1214f33588d1f"
+      "bytes": 5374,
+      "sha256": "bb27940ea5900135e396586da08331ed287ef34bd903b2a27fd65d61463d1aba"
     },
     {
       "path": "animations/ContinuousCast.tres",
@@ -22,9 +33,19 @@
       "sha256": "e85b4c2ec1d24db27a1dfaaf7850cb779a8ac0e4eb037d0236a2767e95b1d5e5"
     },
     {
+      "path": "assets/baseline/frozen_sources.json",
+      "bytes": 521,
+      "sha256": "19c22917577f01bb0d52f4fdad9e3ca680581c76b0164f3aaec4c1a26d193f13"
+    },
+    {
+      "path": "assets/baseline/rig_geometry_v1.json",
+      "bytes": 71696,
+      "sha256": "0eebb73a5cb35bfd86c758d7bf4cb4369cbbc9a398a831c274d4633ba3f9d70d"
+    },
+    {
       "path": "assets/rig_geometry.json",
-      "bytes": 97070,
-      "sha256": "4a2c1dede801ede9660683df51243bd8cfd18da77a7f792b06339dba49f116bb"
+      "bytes": 300643,
+      "sha256": "89c75171964b0f14fca43bb51a997d3a805eebdd9cac34eae5d9fc910831b1d6"
     },
     {
       "path": "assets/source/megumin_body_occlusion_v3.png",
@@ -58,8 +79,13 @@
     },
     {
       "path": "docs/ART_PROVENANCE.md",
-      "bytes": 1179,
-      "sha256": "fdb0d82ad21e451cfa5280da2c377d8384352706cb44161d09cf7ce4bc72d7ae"
+      "bytes": 1228,
+      "sha256": "165509315aa7f0bc991f1068bfe87deb4f7b571abc93d93bb69cf5a91252424a"
+    },
+    {
+      "path": "docs/LEG_CONNECTION_REVIEW.md",
+      "bytes": 3186,
+      "sha256": "98e1b10f0488d1df583d55dd3260b18dd49aacbdfbe47e6719c2a70b38dec87a"
     },
     {
       "path": "preview/continuous_contact_sheet.jpg",
@@ -77,9 +103,54 @@
       "sha256": "8c78b1eb3161d0204e8be9ff461c85701a4e4ab605081db55ff1bacac1da28cc"
     },
     {
+      "path": "preview/leg_review/end_legfix.png",
+      "bytes": 311319,
+      "sha256": "9a7c47bcb9f2183f6847fea09db61b22f2caadb51a75207890708a5bf9afef95"
+    },
+    {
+      "path": "preview/leg_review/idle_legfix.png",
+      "bytes": 310758,
+      "sha256": "2ecf6d870097b2d8158420fe58c2798583b92dc2c216af2cf55fb7f297c43e53"
+    },
+    {
+      "path": "preview/leg_review/idle_legs_before_after.png",
+      "bytes": 387822,
+      "sha256": "bfffd0be8ee2b1b81ea1dc732ce60f8d53284024bcd8053addbcc5aeff29421c"
+    },
+    {
+      "path": "preview/leg_review/release_legfix.png",
+      "bytes": 310963,
+      "sha256": "60c1d8badc1848184410debfb4212966209c43ae10e8ba98f787b300d64f9160"
+    },
+    {
+      "path": "preview/leg_review/release_legs_before_after.png",
+      "bytes": 398063,
+      "sha256": "2b34a5e40554410c478f93d1b888f20863bf8cef20e4fd70e000979d8ad367c8"
+    },
+    {
+      "path": "preview/leg_review/settle_legs_before_after.png",
+      "bytes": 416488,
+      "sha256": "e4bbd2925a68dccf146f72536a1a704861c9ad7489aa3554609a5a516f859034"
+    },
+    {
+      "path": "preview/leg_review/source_proportion_measurements.json",
+      "bytes": 2079,
+      "sha256": "aab63cdb0f7bff335480694e4a3a9d80bb7722841862df9a5a245506ae4f0807"
+    },
+    {
+      "path": "preview/leg_review/source_vs_delivered_same_head.png",
+      "bytes": 843009,
+      "sha256": "ceb7ca82c877658742aeb79b5fa704a1a682a46f8be5da2d871a0d14238656c2"
+    },
+    {
       "path": "preview/megumin_continuous_v3.mp4",
       "bytes": 1092260,
       "sha256": "f7ba49caf1db3b2fe3479c3ff9c1afae1f8a3a0cdbc1f3747b7a210d2bf8d705"
+    },
+    {
+      "path": "preview/megumin_continuous_v3_legfix.mp4",
+      "bytes": 1099274,
+      "sha256": "5a7fc25713e5a47fa420d1ac7830b72998fb6f985f8946baac0b5cce8c67c99c"
     },
     {
       "path": "project.godot",
@@ -108,8 +179,8 @@
     },
     {
       "path": "scripts/megumin_rig.gd",
-      "bytes": 6717,
-      "sha256": "766e7adbc12d8d4033a1a23ff51d7ae78a5c42f6c48c39436a961f5eb4e13ef5"
+      "bytes": 7746,
+      "sha256": "225c8501ef65d6f614c98a9ceba94302e9e6b5c0e00a666fdbe2a6ecc69c1836"
     },
     {
       "path": "scripts/megumin_rig.gd.uid",
@@ -127,14 +198,34 @@
       "sha256": "15a4c8f4f613289d7d1df4dda6314dbba26b3257c56460d92f37c4fc68a25967"
     },
     {
+      "path": "tests/baseline_bf0e567.json",
+      "bytes": 406821,
+      "sha256": "f5358d0c5aa12b4e94cc2542f691f6cae88b4f2a3ceeeb106c5dcc0ae13cc477"
+    },
+    {
       "path": "tests/continuous_validation.json",
-      "bytes": 8680,
-      "sha256": "31ebd6176c3137e7d1ad332f6375192c0e2b5be683a55d7cbdf62891a97987bd"
+      "bytes": 11182,
+      "sha256": "4da751d10470b25cd226cd441c35c47ba74151d92c2176d53047d18cf2cbcdf7"
     },
     {
       "path": "tests/frame_metrics.json",
-      "bytes": 406697,
-      "sha256": "66ef82f430b35fbd4fe6f92df750393308c312eeb12b4d6578e791be7ed01e3c"
+      "bytes": 428702,
+      "sha256": "d256d619e33d94ab50423a27779e82f2a8030eb8f8949a25dcea5f8581c53f03"
+    },
+    {
+      "path": "tests/legfix_timeline_continuity.json",
+      "bytes": 173,
+      "sha256": "edc841b4da840f129c32d04d82db69ce01e5bec025ed9b6935354885f755d713"
+    },
+    {
+      "path": "tests/legfix_validation.json",
+      "bytes": 11182,
+      "sha256": "4da751d10470b25cd226cd441c35c47ba74151d92c2176d53047d18cf2cbcdf7"
+    },
+    {
+      "path": "tests/standalone_rebuild_validation.json",
+      "bytes": 458,
+      "sha256": "eddf48b32fa8b7b150159190a7d57f9ef54638e340847dec6732bd4d0ddf30c5"
     },
     {
       "path": "tests/test_timeline.gd",
@@ -153,8 +244,13 @@
     },
     {
       "path": "tools/build_continuous.py",
-      "bytes": 9091,
-      "sha256": "63e7faf03530e3db488d8c81277d05106925e57beafe4b458638bf10d4b7ae0a"
+      "bytes": 12078,
+      "sha256": "43950641cf00648253db34cbe5908dca6ac9fba5a34f2da9b2203524529991b3"
+    },
+    {
+      "path": "tools/leg_review_compare.py",
+      "bytes": 3077,
+      "sha256": "551297818e7e8f31f63c73e509bb2eec156d25eb2330591b12607eacd971227c"
     },
     {
       "path": "tools/render_software_review.py",
@@ -168,9 +264,9 @@
     },
     {
       "path": "tools/validate_continuous.py",
-      "bytes": 6618,
-      "sha256": "eedc501c6e6eb405fc943af2fb489f3efef6b9edfa6f9d9c02f4d113ed3c86ad"
+      "bytes": 9679,
+      "sha256": "65e0fd21213097b321b1ac3df682da84ec6e7f74827a007df6dcf9b2db1e30d3"
     }
   ],
-  "repository_packaging_note": "v1 baseline scripts point to ../megumin; tests rerun after relocation; caches, native frame dumps and temporary logs omitted."
+  "repository_packaging_note": "Self-contained baseline adopted; rebuilt and reran checks at art/megumin-v3; repository cache exclusions retained; old v3 MP4 unchanged."
 }
