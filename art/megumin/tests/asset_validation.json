@@ -1,0 +1,37 @@
+{
+  "size": [
+    1600,
+    1760
+  ],
+  "mode": "RGBA",
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "alpha_bbox": [
+    189,
+    158,
+    1340,
+    1640
+  ],
+  "ground_anchor": [
+    760,
+    1640
+  ],
+  "all_four_canvas_edges_transparent": true,
+  "nonzero_alpha_pixels": 602060,
+  "source_pixels_preserved": true,
+  "video": {
+    "width": 1440,
+    "height": 900,
+    "r_frame_rate": "30/1",
+    "duration": "21.133333",
+    "nb_frames": "634"
+  },
+  "engine_errors_in_render_log": 0,
+  "source_sha256": {
+    "assets/source/megumin_occlusion_base.png": "cd9c7c504ea99ccd61c188a64c0dab19accb6298b15d4c2b554f6737c3fc7014",
+    "assets/source/megumin_master.png": "3e8e9fe383832011aef8f67be9156ec35d0fba88a25d60b33f5da32b1c64cf0f",
+    "assets/source/megumin_staff_complete.png": "ea69e44e02f8fe8a58d1858a0c70c94e509df9ece258c394a8675c76f5f2992a",
+    "assets/poses/megumin_relaxed.png": "11c89b0c6ce178a773759b78a092a84164c913980c6865bb7c2bf7df754e117c",
+    "assets/poses/megumin_dead.png": "8044dfb2391a10af404b6b71dfa0aeb2c86395c5c06d32cd24cdac7a7212b9d1"
+  }
+}

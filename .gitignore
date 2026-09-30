@@ -1,0 +1,16 @@
+# Generated Godot / Python caches
+.godot/
+__pycache__/
+*.py[cod]
+# Local render intermediates and logs
+*.avi
+*.log
+# Local credentials and editor/OS files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Keep the reviewed functional test evidence
+!art/megumin/tests/godot_test.log

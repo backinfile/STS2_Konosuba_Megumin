@@ -1,0 +1,29 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS  16 independent source-texture pieces constructed
+PASS  Native Animation library loaded
+PASS  Idle loops
+PASS  Invalid state rejected
+PASS  Cast automatically returns to Idle
+PASS  Hit automatically returns to Idle
+PASS  Relaxed automatically returns to Idle
+PASS  No damage signal before the Attack impact frame
+PASS  Exactly one damage signal at Attack=0.72s
+PASS  Attack completes once and returns to Idle
+PASS  Idle sole remains planted
+PASS  Idle sole remains planted
+PASS  Cast sole remains planted
+PASS  Cast sole remains planted
+PASS  Attack sole remains planted
+PASS  Attack sole remains planted
+PASS  Hit sole remains planted
+PASS  Hit sole remains planted
+PASS  Cast articulates upper arm and forearm independently
+PASS  Staff and palm share a non-sliding wrist pivot
+PASS  Cape has independent mesh movement
+PASS  Interrupted Attack does not leak an impact signal
+PASS  Dead reaches dedicated terminal pose
+PASS  Dead blocks accidental return to Idle
+PASS  Dead holds its terminal state
+PASS  Explicit reset restores Idle
+RESULT  26 passed / 0 failed

@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "package": "Megumin_Animation_Godot46_v1",
+  "version": "1.0-art-study",
+  "engine_tested": "Godot 4.6.3 stable",
+  "scope": "Standalone art and animation study; not integrated into STS2",
+  "states": [
+    "Idle",
+    "Cast",
+    "Attack",
+    "Hit",
+    "Relaxed",
+    "Dead"
+  ],
+  "tests": {
+    "passed": 26,
+    "failed": 0,
+    "fresh_directory_import_and_tests": true
+  },
+  "runtime_png": {
+    "path": "assets/runtime/megumin_idle_neutral.png",
+    "canvas": [
+      1600,
+      1760
+    ],
+    "ground_anchor": [
+      760,
+      1640
+    ],
+    "alpha_bbox": [
+      189,
+      158,
+      1340,
+      1640
+    ]
+  },
+  "preview": {
+    "path": "preview/megumin_reel.mp4",
+    "resolution": [
+      1440,
+      900
+    ],
+    "fps": 30,
+    "frames": 634,
+    "seconds": 21.133333
+  },
+  "limitations": [
+    "Cast is a finite demonstration; no cross-turn persistent preparation gameplay state",
+    "Blast beam is demonstration VFX, not final Explosion effect",
+    "Relaxed and Dead use dedicated pose transitions, not full skeletal collapse",
+    "Minor cutout/UV seams remain at high magnification"
+  ],
+  "excluded_patterns": [
+    ".godot/**",
+    "*.import",
+    "*.avi",
+    "tools/xorg-dummy.conf",
+    "preview/encode.log",
+    "preview/import.log",
+    "quality/first_six_seconds.jpg",
+    "MANIFEST.json"
+  ],
+  "file_count_excluding_manifest": 52,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 79,
+      "sha256": "cb14b68c9af082bea95acbaeb2319faf38d3cf44adf3c4dbecfb1614ef6a33bb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4615,
+      "sha256": "168351bc7d427df56099a7613f6ee4500b72dca5808544729a862c4be6233c50"
+    },
+    {
+      "path": "animations/Attack.tres",
+      "bytes": 6052,
+      "sha256": "6214edc30e53ba856d3c04360c0167e4a12a2c52b630083e0a4ac8bb8fcefe44"
+    },
+    {
+      "path": "animations/Cast.tres",
+      "bytes": 5346,
+      "sha256": "be5bece10adc650509c20bdb3837718adb412f4537d17f903d7630129e89816f"
+    },
+    {
+      "path": "animations/Dead.tres",
+      "bytes": 4934,
+      "sha256": "028141fe74d76682a4a70c80cd6979256e4819f3e70e2c936462acd28783716a"
+    },
+    {
+      "path": "animations/Hit.tres",
+      "bytes": 5166,
+      "sha256": "033f095712ff545896ac49581507e57d0e2567562832581c91e2438e7f2ddad2"
+    },
+    {
+      "path": "animations/Idle.tres",
+      "bytes": 5127,
+      "sha256": "b63b676ac5edcc94befb5d521c38cea76f90cbeedc990f78a735ee02b42542f2"
+    },
+    {
+      "path": "animations/Relaxed.tres",
+      "bytes": 5730,
+      "sha256": "f1c4bcec5183ea393cebf0732c872888067643bfc01ffdee7f61700ad93b6916"
+    },
+    {
+      "path": "assets/poses/megumin_dead.png",
+      "bytes": 1445087,
+      "sha256": "8044dfb2391a10af404b6b71dfa0aeb2c86395c5c06d32cd24cdac7a7212b9d1"
+    },
+    {
+      "path": "assets/poses/megumin_relaxed.png",
+      "bytes": 1640744,
+      "sha256": "11c89b0c6ce178a773759b78a092a84164c913980c6865bb7c2bf7df754e117c"
+    },
+    {
+      "path": "assets/rig_geometry.json",
+      "bytes": 71696,
+      "sha256": "0eebb73a5cb35bfd86c758d7bf4cb4369cbbc9a398a831c274d4633ba3f9d70d"
+    },
+    {
+      "path": "assets/runtime/megumin_idle_neutral.png",
+      "bytes": 1041029,
+      "sha256": "32a9459cb53ba785a6693eeaa33b44db14922a048ef286e610518ea93f457b15"
+    },
+    {
+      "path": "assets/source/megumin_master.png",
+      "bytes": 1780979,
+      "sha256": "3e8e9fe383832011aef8f67be9156ec35d0fba88a25d60b33f5da32b1c64cf0f"
+    },
+    {
+      "path": "assets/source/megumin_occlusion_base.png",
+      "bytes": 1532139,
+      "sha256": "cd9c7c504ea99ccd61c188a64c0dab19accb6298b15d4c2b554f6737c3fc7014"
+    },
+    {
+      "path": "assets/source/megumin_staff_complete.png",
+      "bytes": 980547,
+      "sha256": "ea69e44e02f8fe8a58d1858a0c70c94e509df9ece258c394a8675c76f5f2992a"
+    },
+    {
+      "path": "docs/ART_PROVENANCE.md",
+      "bytes": 2376,
+      "sha256": "e113f6bec25d6a533c32586d536e454c5c04d497bdc567cd4ee6aa2d37816242"
+    },
+    {
+      "path": "docs/IMAGE_PROMPTS.txt",
+      "bytes": 7731,
+      "sha256": "4cca45bed095c9f194038fdd53502b02e36b2ec5d7047a8f5b930b6cbc41da4c"
+    },
+    {
+      "path": "docs/INTEGRATION.md",
+      "bytes": 4187,
+      "sha256": "41874777456251529cd4592e6787c049c7aa332525ef3455874259e89d714b77"
+    },
+    {
+      "path": "preview/key_Attack.png",
+      "bytes": 365120,
+      "sha256": "62c19378a4b7317ce005ec208cf69fa763ae196c47b0c894be92918a61523313"
+    },
+    {
+      "path": "preview/key_Cast.png",
+      "bytes": 363415,
+      "sha256": "8eda8d74512b76a9539e11a395477341f75632e0927898b5daa3959f6341c975"
+    },
+    {
+      "path": "preview/key_Dead.png",
+      "bytes": 227576,
+      "sha256": "5c9d03dde8aca971c4eae050b85620cc40fa325ee010659e5d512912c796db0b"
+    },
+    {
+      "path": "preview/key_Hit.png",
+      "bytes": 320347,
+      "sha256": "1b0bf26d980c23a693f44418527ab588a7c2d540fae6223b95897ede119d3890"
+    },
+    {
+      "path": "preview/key_Idle.png",
+      "bytes": 351364,
+      "sha256": "c6e27ba8c32cc56cb2c8ba47f43fa0ccd299907d6a3f0fb5e1c294d6a01f87bc"
+    },
+    {
+      "path": "preview/key_Relaxed.png",
+      "bytes": 279755,
+      "sha256": "8c04060532ca5bcaecf0b847cf08496fd8fd977fcb30832ce361e912eea0780a"
+    },
+    {
+      "path": "preview/megumin_reel.mp4",
+      "bytes": 7596240,
+      "sha256": "a2738e520f0db6d25132d213fe8b4de0be004502c5217b10416e3b1e593a59a8"
+    },
+    {
+      "path": "preview/six_state_contact_sheet.jpg",
+      "bytes": 163125,
+      "sha256": "81a0dc734e39059c44124017642ba5d0ad45346daf47a970c5ec97b36dfd878f"
+    },
+    {
+      "path": "project.godot",
+      "bytes": 760,
+      "sha256": "6bb6aa92b1a19db9d78529931ffd8c9085b243fa883c204f9d5a7d5cba28a274"
+    },
+    {
+      "path": "quality/alpha_report.json",
+      "bytes": 836,
+      "sha256": "0697b93cd02ffd160ee8095e24165becd80023239ba3ad14a92ca2a3cfc5e678"
+    },
+    {
+      "path": "quality/dead_alpha_check.jpg",
+      "bytes": 159453,
+      "sha256": "922a2ba632185f849a4821ef41df691a73fe9ceeac767615877151b021ce34c4"
+    },
+    {
+      "path": "quality/relaxed_alpha_check.jpg",
+      "bytes": 179184,
+      "sha256": "94ea50ec50ef1552eb36226c6d59b97ac68444a765d1728ac5e8d0e196f3acd0"
+    },
+    {
+      "path": "quality/standing_alpha_check.jpg",
+      "bytes": 354538,
+      "sha256": "7671e2bff3bc75b2194f1113699c44dab1e2242306b94900c10a6279c9b202e6"
+    },
+    {
+      "path": "render_preview.sh",
+      "bytes": 991,
+      "sha256": "55eb7f1a94378d3b6ced7e39e84b0d401d632cdb5a5be65e7f70c5394d7a85da"
+    },
+    {
+      "path": "requirements-build.txt",
+      "bytes": 129,
+      "sha256": "a35f00e3cd58808fff43e6101e4627a1266a67a82673d9304d8714c4a0752eb4"
+    },
+    {
+      "path": "scenes/export_runtime.tscn",
+      "bytes": 176,
+      "sha256": "a06d469ff45e6e4e2cfc145b239d3a9ab011a5f31956ae4bad95522e9d75b31e"
+    },
+    {
+      "path": "scenes/megumin.tscn",
+      "bytes": 978,
+      "sha256": "e3a90965ab322f3fad1f015aaa23d7b9444764ed66c1ec0aff01000f5c26d7d2"
+    },
+    {
+      "path": "scenes/preview.tscn",
+      "bytes": 163,
+      "sha256": "7bc5343bec30f23ee8d50e31efa19dd421f326826b9cd2052e0ee98e1512b767"
+    },
+    {
+      "path": "scripts/export_runtime.gd",
+      "bytes": 848,
+      "sha256": "c2073255e7209da9fe08bd0fd2da3ad18eb1278cddae52601ffb41500f9f4377"
+    },
+    {
+      "path": "scripts/export_runtime.gd.uid",
+      "bytes": 19,
+      "sha256": "a1e515005902133f2df07444b95f6342b2ca542fd042179f7be34f6f58af5e6d"
+    },
+    {
+      "path": "scripts/megumin_rig.gd",
+      "bytes": 8387,
+      "sha256": "36f2813bfd606c255214ac074cc5b3d4c5beb53d223913978e4a6a9929b6c184"
+    },
+    {
+      "path": "scripts/megumin_rig.gd.uid",
+      "bytes": 20,
+      "sha256": "34221a426b84b3cf10510258d80626bf195a74a097212175c1b794c12bb2607f"
+    },
+    {
+      "path": "scripts/preview.gd",
+      "bytes": 5162,
+      "sha256": "0fefb738d37dd0cf34d69f7b37b8d111e190d144d7b255f6ff5101a8446684d6"
+    },
+    {
+      "path": "scripts/preview.gd.uid",
+      "bytes": 19,
+      "sha256": "5a9d07fdaafa33302df6cb8532de32a7f340c947fc5b18fd82c0c4e53a212a55"
+    },
+    {
+      "path": "tests/asset_validation.json",
+      "bytes": 1062,
+      "sha256": "c7571369a445fab3f50ab752b10692110141fe823bfa9c9f0f11ea711b933011"
+    },
+    {
+      "path": "tests/godot_test.log",
+      "bytes": 1141,
+      "sha256": "d86a72d0bea90f3e794ea19cd4a767ecbe2eeb6c73dbf5700499e0c4aa6d8c2a"
+    },
+    {
+      "path": "tests/package_validation.json",
+      "bytes": 228,
+      "sha256": "83d2865ed10d8d853f677c31df669936363dabad1e828bb828b4b846fc46d91b"
+    },
+    {
+      "path": "tests/results.json",
+      "bytes": 207,
+      "sha256": "e378ec24619a2810abd3800645a1c5178f59a1d317c2a63c95971c9d1fa42f86"
+    },
+    {
+      "path": "tests/test_rig.gd",
+      "bytes": 3568,
+      "sha256": "b489a238639bee36d15ee39c4f4efb69feefa23a0685b4f354450f6171416a58"
+    },
+    {
+      "path": "tests/test_rig.gd.uid",
+      "bytes": 20,
+      "sha256": "a77a3f9deda1d2af7888b0d31b7d1b1d0b94d92916966db49e56277ee0500fe1"
+    },
+    {
+      "path": "tools/run_tests.sh",
+      "bytes": 433,
+      "sha256": "06ad326663d984544cfd315e68ac558f17683ead71b4f71b9dc832014139a9a4"
+    },
+    {
+      "path": "tools_build.py",
+      "bytes": 11018,
+      "sha256": "8dee1bdf44cc552f0ca62a8b842d0487561fab94e713e3e5e122bcc6faca6008"
+    }
+  ],
+  "repository_packaging_note": "Temporary preview logs omitted; functional tests rerun at art/megumin with writable XDG directories; manifest refreshed for repository files."
+}

@@ -1,0 +1,6 @@
+{
+  "fresh_import_without_cache": true,
+  "relocated_project_tests": true,
+  "path_references": "res:// and script-relative; no cloud workspace paths in runnable source",
+  "network_listener_started_by_delivery_scripts": false
+}

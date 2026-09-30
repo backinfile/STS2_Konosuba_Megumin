@@ -1,0 +1,3 @@
+# Only for regenerating rig_geometry.json and Animation resources.
+# Not needed to open or run the Godot project.
+scipy>=1.10,<2

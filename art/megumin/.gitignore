@@ -1,0 +1,6 @@
+.godot/
+*.import
+.DS_Store
+preview/*.avi
+preview/encode.log
+preview/import.log

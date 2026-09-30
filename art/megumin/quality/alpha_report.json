@@ -1,0 +1,53 @@
+{
+  "standing": {
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "zero_fraction": 0.6045754750569662,
+    "alpha_ge250_fraction": 0.36474863688151044,
+    "bbox": [
+      0,
+      20,
+      1024,
+      1516
+    ]
+  },
+  "relaxed": {
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "zero_fraction": 0.6936518351236979,
+    "alpha_ge250_fraction": 0.28132375081380206,
+    "bbox": [
+      143,
+      12,
+      1450,
+      1004
+    ]
+  },
+  "dead": {
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "zero_fraction": 0.7272516886393229,
+    "alpha_ge250_fraction": 0.25234031677246094,
+    "bbox": [
+      30,
+      21,
+      1519,
+      982
+    ]
+  }
+}

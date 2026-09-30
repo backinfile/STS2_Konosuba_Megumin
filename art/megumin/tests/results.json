@@ -1,0 +1,12 @@
+{
+	"engine": "4.6.3-stable (official)",
+	"failed": 0,
+	"impact_marker_seconds": 0.72,
+	"origin": [
+		575,
+		1508
+	],
+	"passed": 26,
+	"pieces": 16,
+	"scope": "standalone Godot project; not STS2 integration"
+}
