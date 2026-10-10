@@ -1,0 +1,758 @@
+{
+  "seams": [
+    {
+      "from": "idle_loop",
+      "to": "chant_enter",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "chant_enter",
+      "to": "chant_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "chant_ack",
+      "to": "chant_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "chant_cancel",
+      "to": "idle_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "explosion_release",
+      "to": "explosion_hold",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "explosion_hold",
+      "to": "explosion_exit",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "explosion_exit",
+      "to": "relaxed_fall",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "relaxed_fall",
+      "to": "relaxed_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "relaxed_loop",
+      "to": "get_up",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "get_up",
+      "to": "idle_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "hit",
+      "to": "idle_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "hit_chant",
+      "to": "chant_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "hit_down",
+      "to": "relaxed_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "dead",
+      "to": "dead_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "dead_from_down",
+      "to": "dead_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "attack_short",
+      "to": "idle_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "from": "cast_short",
+      "to": "idle_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    }
+  ],
+  "loops": [
+    {
+      "name": "idle_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "name": "chant_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "name": "explosion_hold",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "name": "relaxed_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    },
+    {
+      "name": "dead_loop",
+      "maxVertexDistance": 0,
+      "attachmentMismatches": [],
+      "drawOrderMatches": true
+    }
+  ],
+  "motion": {
+    "idle_loop": {
+      "chest": {
+        "rangeX": 6.49742881719817e-08,
+        "rangeY": 1.399999973798458
+      },
+      "head": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "cape_l": {
+        "rangeX": 1.4999029936540254,
+        "rangeY": 1.399999973798458
+      },
+      "cape_r": {
+        "rangeX": 1.4999029936540182,
+        "rangeY": 1.399999973798458
+      },
+      "upper_r": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "fore_r": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "hand_r": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "staff": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "upper_l": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "fore_l": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "hand_l": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "head_cage_0": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "head_cage_1": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "head_cage_2": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "head_cage_3": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "head_cage_4": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "head_cage_5": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "grip_cage_0": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "grip_cage_1": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "grip_cage_2": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "grip_cage_3": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "left_grip_cage_0": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "left_grip_cage_1": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "left_grip_cage_2": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "left_grip_cage_3": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_r_edge_0": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_r_edge_1": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_r_edge_2": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_r_edge_3": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_r_edge_4": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_r_edge_5": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_l_edge_0": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_l_edge_1": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_l_edge_2": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_l_edge_3": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_l_edge_4": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      },
+      "arm_l_edge_5": {
+        "rangeX": 6.497428728380328e-08,
+        "rangeY": 1.399999973798458
+      }
+    },
+    "chant_loop": {
+      "chest": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "head": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.8000001880171794
+      },
+      "cape_l": {
+        "rangeX": 1.4996524337384614,
+        "rangeY": 0.800000188017151
+      },
+      "cape_r": {
+        "rangeX": 1.499655963538995,
+        "rangeY": 0.800000188017151
+      },
+      "upper_r": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "fore_r": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "hand_r": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "staff": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "upper_l": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "fore_l": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "hand_l": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "head_cage_0": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.8000001880171794
+      },
+      "head_cage_1": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.8000001880171794
+      },
+      "head_cage_2": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.8000001880171794
+      },
+      "head_cage_3": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.8000001880171794
+      },
+      "head_cage_4": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.8000001880171794
+      },
+      "head_cage_5": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.8000001880171794
+      },
+      "grip_cage_0": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "grip_cage_1": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "grip_cage_2": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "grip_cage_3": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "left_grip_cage_0": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "left_grip_cage_1": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "left_grip_cage_2": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "left_grip_cage_3": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_r_edge_0": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_r_edge_1": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_r_edge_2": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_r_edge_3": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_r_edge_4": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_r_edge_5": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_l_edge_0": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_l_edge_1": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_l_edge_2": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_l_edge_3": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_l_edge_4": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      },
+      "arm_l_edge_5": {
+        "rangeX": 3.712817431278381e-08,
+        "rangeY": 0.800000188017151
+      }
+    },
+    "relaxed_loop": {
+      "chest": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "head": {
+        "rangeX": 8.168115073203808e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "cape_l": {
+        "rangeX": 1.4998199390460627,
+        "rangeY": 0.17599868774414062
+      },
+      "cape_r": {
+        "rangeX": 1.4998287606760314,
+        "rangeY": 0.17599868774414062
+      },
+      "upper_r": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "fore_r": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "hand_r": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "staff": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "upper_l": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "fore_l": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "hand_l": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "head_cage_0": {
+        "rangeX": 8.168115073203808e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "head_cage_1": {
+        "rangeX": 8.168115073203808e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "head_cage_2": {
+        "rangeX": 8.168115073203808e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "head_cage_3": {
+        "rangeX": 8.168115073203808e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "head_cage_4": {
+        "rangeX": 8.168115073203808e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "head_cage_5": {
+        "rangeX": 8.168115073203808e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "grip_cage_0": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "grip_cage_1": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "grip_cage_2": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "grip_cage_3": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "left_grip_cage_0": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "left_grip_cage_1": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "left_grip_cage_2": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "left_grip_cage_3": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_r_edge_0": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_r_edge_1": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_r_edge_2": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_r_edge_3": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_r_edge_4": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_r_edge_5": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_l_edge_0": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_l_edge_1": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_l_edge_2": {
+        "rangeX": 8.168115073203808e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_l_edge_3": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_l_edge_4": {
+        "rangeX": 8.168143494913238e-09,
+        "rangeY": 0.17599868774414062
+      },
+      "arm_l_edge_5": {
+        "rangeX": 8.168115073203808e-09,
+        "rangeY": 0.17599868774414062
+      }
+    },
+    "explosion_hold": {
+      "chest": {
+        "rangeX": 3.702420692253128e-08,
+        "rangeY": 0.797760009765625
+      },
+      "head": {
+        "rangeX": 3.7024205923330555e-08,
+        "rangeY": 0.797760009765625
+      },
+      "cape_l": {
+        "rangeX": 1.499575938322792,
+        "rangeY": 0.797760009765625
+      },
+      "cape_r": {
+        "rangeX": 1.4995754619652963,
+        "rangeY": 0.797760009765625
+      },
+      "upper_r": {
+        "rangeX": 3.7024206811508975e-08,
+        "rangeY": 0.797760009765625
+      },
+      "fore_r": {
+        "rangeX": 3.7024205923330555e-08,
+        "rangeY": 0.797760009765625
+      },
+      "hand_r": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "staff": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "upper_l": {
+        "rangeX": 3.7024206811508975e-08,
+        "rangeY": 0.797760009765625
+      },
+      "fore_l": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "hand_l": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "head_cage_0": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "head_cage_1": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "head_cage_2": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "head_cage_3": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "head_cage_4": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "head_cage_5": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "grip_cage_0": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "grip_cage_1": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "grip_cage_2": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "grip_cage_3": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "left_grip_cage_0": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "left_grip_cage_1": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "left_grip_cage_2": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "left_grip_cage_3": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_r_edge_0": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_r_edge_1": {
+        "rangeX": 3.7024206811508975e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_r_edge_2": {
+        "rangeX": 3.7024205923330555e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_r_edge_3": {
+        "rangeX": 3.7024205923330555e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_r_edge_4": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_r_edge_5": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_l_edge_0": {
+        "rangeX": 3.7024205923330555e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_l_edge_1": {
+        "rangeX": 3.7024206811508975e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_l_edge_2": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_l_edge_3": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_l_edge_4": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      },
+      "arm_l_edge_5": {
+        "rangeX": 3.7024207699687395e-08,
+        "rangeY": 0.797760009765625
+      }
+    }
+  },
+  "attackEqualsCastExceptEvent": true
+}

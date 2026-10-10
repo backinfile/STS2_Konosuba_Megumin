@@ -1,0 +1,1417 @@
+[
+  {
+    "animation": "get_up",
+    "time": 0.9,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 0.33489486371107224,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "body",
+        "attachment": "brace/body",
+        "foldedArea": 3.28479394068535,
+        "foldedTriangles": 3
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.06773124016530388,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.167655979456109,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 3.8550760240178352
+  },
+  {
+    "animation": "get_up",
+    "time": 0.94,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 0.39258341957451526,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "body",
+        "attachment": "brace/body",
+        "foldedArea": 3.8566673143229524,
+        "foldedTriangles": 4
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.05287638873796202,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.2158255827806066,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.04538685575260126,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 4.563339561168637
+  },
+  {
+    "animation": "get_up",
+    "time": 0.95,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 0.4064805493763535,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "body",
+        "attachment": "kneel-rise/body",
+        "foldedArea": 0.3714557797841519,
+        "foldedTriangles": 7
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.047361536376090974,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.22710410120594382,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.05822861222657627,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 1.1106305789691164
+  },
+  {
+    "animation": "get_up",
+    "time": 0.96667,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 0.42859182591413036,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "body",
+        "attachment": "kneel-rise/body",
+        "foldedArea": 0.046410270124368824,
+        "foldedTriangles": 4
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.03775693346799647,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.24488524016046842,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.07992759029612562,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 0.8375718599630897
+  },
+  {
+    "animation": "get_up",
+    "time": 0.978,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 0.4430275780621522,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "body",
+        "attachment": "kneel-rise/body",
+        "foldedArea": 0.02361814139248486,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.031689475794762195,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.25626524238704285,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.09478105619874083,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 0.8493814938351829
+  },
+  {
+    "animation": "get_up",
+    "time": 1,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 0.5799881251441481,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "body",
+        "attachment": "kneel-rise/body",
+        "foldedArea": 0.0007077328059104104,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.022813708083252393,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.27735103676531203,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.12354570423030908,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 1.004406307028932
+  },
+  {
+    "animation": "get_up",
+    "time": 1.045,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 1.2871492616973166,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "body",
+        "attachment": "kneel-rise/body",
+        "foldedArea": 0.00015172447711364612,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.027729374275445404,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.001446342462842587,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.3140606227391425,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.18093557733620852,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 1.8114729029880692
+  },
+  {
+    "animation": "get_up",
+    "time": 1.078,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "kneel-rise/cape",
+        "foldedArea": 0.8297779144693346,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "body",
+        "attachment": "kneel-rise/body",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.13738186004896963,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.011713370433626302,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.3354045847761835,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.23513524047419498,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 1.549412970202309
+  },
+  {
+    "animation": "get_up",
+    "time": 1.08334,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "kneel-rise/cape",
+        "foldedArea": 0.7441570583547407,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "body",
+        "attachment": "kneel-rise/body",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.22981664692377304,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.013074189361844013,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.3385465838168287,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "kneel-rise/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.24462418154593316,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "head",
+        "attachment": "kneel-rise/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "kneel-rise/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 1.5702186600031196
+  },
+  {
+    "animation": "get_up",
+    "time": 1.11667,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "kneel-rise/cape",
+        "foldedArea": 0.24767434177132622,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "body",
+        "attachment": "kneel-rise/body",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 16.54509554933847,
+        "foldedTriangles": 22
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.01849876014211027,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.3935665901171337,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "kneel-rise/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.3008068572833224,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "head",
+        "attachment": "kneel-rise/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "kneel-rise/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 17.505642098652363
+  },
+  {
+    "animation": "get_up",
+    "time": 1.21667,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "kneel-rise/cape",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "body",
+        "attachment": "kneel-rise/body",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "kneel-rise/leg_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.004317445383048124,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "kneel-rise/arm_l",
+        "foldedArea": 0.06813595131187,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "kneel-rise/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "kneel-rise/arm_r",
+        "foldedArea": 0.5070133060733366,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "kneel-rise/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "kneel-rise/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 0.5794667027682547
+  },
+  {
+    "animation": "relaxed_fall",
+    "time": 0.65,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 0.020174057636046294,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "body",
+        "attachment": "brace/body",
+        "foldedArea": 0.013269775237188197,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 0.03344383287323449
+  },
+  {
+    "animation": "relaxed_fall",
+    "time": 0.7,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 0.3411916780308419,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "body",
+        "attachment": "brace/body",
+        "foldedArea": 0.09952342465381503,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.032237875242816294,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 0.44595409399467295,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.01742517618553796,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 0.9363322481076841
+  },
+  {
+    "animation": "relaxed_fall",
+    "time": 0.72,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 0.479410316190571,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "body",
+        "attachment": "brace/body",
+        "foldedArea": 0.2682102571231193,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.006714777290550422,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.10895388300961438,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "brace/arm_l",
+        "foldedArea": 5.029211721809948,
+        "foldedTriangles": 6
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.04789245724800434,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 5.940393412671807
+  },
+  {
+    "animation": "relaxed_fall",
+    "time": 0.75,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "brace/cape",
+        "foldedArea": 13.491072345278697,
+        "foldedTriangles": 4
+      },
+      {
+        "slot": "body",
+        "attachment": "brace/body",
+        "foldedArea": 0.6296629047937337,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "brace/leg_l",
+        "foldedArea": 0.09262539653542853,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.25303015649856253,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "lower/arm_l",
+        "foldedArea": 1.183830603472404,
+        "foldedTriangles": 5
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.09026215433947937,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 15.740483560918305
+  },
+  {
+    "animation": "relaxed_fall",
+    "time": 0.76667,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "lower/cape",
+        "foldedArea": 16.00562714826045,
+        "foldedTriangles": 28
+      },
+      {
+        "slot": "body",
+        "attachment": "brace/body",
+        "foldedArea": 0.9042493966039953,
+        "foldedTriangles": 7
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "lower/leg_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.2890025864136766,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "lower/arm_l",
+        "foldedArea": 1.3022899713031753,
+        "foldedTriangles": 5
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.12231972334852581,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 18.623488825929822
+  },
+  {
+    "animation": "relaxed_fall",
+    "time": 0.786,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "lower/cape",
+        "foldedArea": 5.942098024185322,
+        "foldedTriangles": 3
+      },
+      {
+        "slot": "body",
+        "attachment": "brace/body",
+        "foldedArea": 7.505957474143977,
+        "foldedTriangles": 10
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "lower/leg_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.2881463813899152,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "lower/arm_l",
+        "foldedArea": 1.6394922222148616,
+        "foldedTriangles": 7
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.15768283774852188,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 15.533376939682599
+  },
+  {
+    "animation": "relaxed_fall",
+    "time": 0.8,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "lower/cape",
+        "foldedArea": 5.067669710119877,
+        "foldedTriangles": 3
+      },
+      {
+        "slot": "body",
+        "attachment": "brace/body",
+        "foldedArea": 16.18356291094212,
+        "foldedTriangles": 10
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "lower/leg_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.32030711833657755,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "lower/arm_l",
+        "foldedArea": 3.4424248852781103,
+        "foldedTriangles": 9
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "brace/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "brace/arm_r",
+        "foldedArea": 0.18212612307939546,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "head",
+        "attachment": "brace/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "brace/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 25.19609074775608
+  },
+  {
+    "animation": "relaxed_fall",
+    "time": 0.82,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "lower/cape",
+        "foldedArea": 3.9328289373687273,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "body",
+        "attachment": "lower/body",
+        "foldedArea": 3.6867860025747947,
+        "foldedTriangles": 3
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "lower/leg_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "brace/leg_r",
+        "foldedArea": 0.3951090135446991,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "lower/arm_l",
+        "foldedArea": 10.486957796938853,
+        "foldedTriangles": 13
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "lower/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "lower/arm_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "head",
+        "attachment": "lower/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "lower/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 18.501681750427075
+  },
+  {
+    "animation": "chant_enter",
+    "time": 0.275,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "turn-upright/cape",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "body",
+        "attachment": "E01/body",
+        "foldedArea": 1.6147547786555638,
+        "foldedTriangles": 11
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "turn-upright/leg_l",
+        "foldedArea": 0.0006410260414704272,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "turn-upright/leg_r",
+        "foldedArea": 0.40384436281822556,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "turn-upright/arm_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "turn-upright/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "turn-upright/arm_r",
+        "foldedArea": 0.15554298203411052,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "head",
+        "attachment": "turn-upright/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "turn-upright/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 2.1747831495493704
+  },
+  {
+    "animation": "chant_enter",
+    "time": 0.28334,
+    "slots": [
+      {
+        "slot": "cape",
+        "attachment": "turn-upright/cape",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "body",
+        "attachment": "turn-upright/body",
+        "foldedArea": 0.5454152344761606,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "turn-upright/leg_l",
+        "foldedArea": 0.0006399196393025441,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "turn-upright/leg_r",
+        "foldedArea": 0.31268375196583387,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "turn-upright/arm_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "turn-upright/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "turn-upright/arm_r",
+        "foldedArea": 0.1263950913613481,
+        "foldedTriangles": 2
+      },
+      {
+        "slot": "head",
+        "attachment": "turn-upright/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "turn-upright/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 0.9851339974426451
+  },
+  {
+    "animation": "chant_enter",
+    "time": 0.49167,
+    "slots": [
+      {
+        "slot": "body_under",
+        "attachment": "E05/body_under",
+        "foldedArea": 0.08298960493656082,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "cape",
+        "attachment": "E05/cape",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "body",
+        "attachment": "turn-upright/body",
+        "foldedArea": 102.585559677161,
+        "foldedTriangles": 42
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "turn-upright/leg_l",
+        "foldedArea": 1.1747182778844991,
+        "foldedTriangles": 8
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "E05/leg_r",
+        "foldedArea": 0.11584943266712167,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "E05/arm_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "E05/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "turn-upright/arm_r",
+        "foldedArea": 0.02982442068285085,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "E05/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "E05/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 103.98894141333203
+  },
+  {
+    "animation": "chant_enter",
+    "time": 0.5,
+    "slots": [
+      {
+        "slot": "body_under",
+        "attachment": "E05/body_under",
+        "foldedArea": 0.0766664658632088,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "cape",
+        "attachment": "E05/cape",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "body",
+        "attachment": "E05/body",
+        "foldedArea": 57.253677554726686,
+        "foldedTriangles": 29
+      },
+      {
+        "slot": "leg_l",
+        "attachment": "turn-upright/leg_l",
+        "foldedArea": 1.82785471417854,
+        "foldedTriangles": 8
+      },
+      {
+        "slot": "leg_r",
+        "attachment": "E05/leg_r",
+        "foldedArea": 0.10279736228486991,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "arm_l",
+        "attachment": "E05/arm_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_l",
+        "attachment": "E05/hand_l",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "arm_r",
+        "attachment": "turn-upright/arm_r",
+        "foldedArea": 0.16493466770108478,
+        "foldedTriangles": 1
+      },
+      {
+        "slot": "head",
+        "attachment": "E05/head",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      },
+      {
+        "slot": "hand_r",
+        "attachment": "E05/hand_r",
+        "foldedArea": 0,
+        "foldedTriangles": 0
+      }
+    ],
+    "totalFoldedArea": 59.42593076475438
+  }
+]

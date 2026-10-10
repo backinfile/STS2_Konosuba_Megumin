@@ -1,0 +1,7 @@
+synthetic.png
+size:40,20
+filter:Linear,Linear
+quad
+bounds:0,0,20,20
+alternative
+bounds:20,0,20,20

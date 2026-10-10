@@ -10,6 +10,11 @@
 - [游戏内原速录像：19 个动作、完整动作链、正常战斗](art/megumin-quartet-spine/actions-v9/verification/recordings/index.html)
 - [v8 / v9 原速对照](art/megumin-quartet-spine/actions-v9/verification/recordings/comparison.html)
 
+## Spine 研究与检查工具
+
+- [Spine 资料索引](docs/research/spine/README.md)：原版 162 骨架 / 948 动画研究、惠惠 v9 版本化审查与重点证据
+- [动画连续性检查 CLI](tools/spine-smoothness-auditor/README.md)：循环、mix、骨骼 / 网格连续性风险与合成回归测试
+
 下列 v1–v6 内容为历史阶段记录。
 
 ## 历史五状态交付 v6

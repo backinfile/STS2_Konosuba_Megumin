@@ -1,0 +1,26 @@
+{
+  "fps": 120,
+  "physics": "none",
+  "meshVertices": 32,
+  "ignoreBones": "^(helper|backup)_",
+  "thresholds": {
+    "step": 0.03,
+    "speed": 3,
+    "acceleration": 60,
+    "jerk": 3000,
+    "madMultiplier": 8,
+    "loopPosition": 0.002,
+    "loopVelocity": 0.1,
+    "triangleAreaRatio": 0.02
+  },
+  "suppressions": [
+    {
+      "animation": "hit",
+      "start": 0.06,
+      "end": 0.12,
+      "metrics": ["acceleration", "jerk"],
+      "reason": "示例：已人工确认的打击停顿。请按你的素材调整或删除。"
+    }
+  ],
+  "transitions": []
+}

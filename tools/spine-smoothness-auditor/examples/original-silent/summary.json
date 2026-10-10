@@ -1,0 +1,793 @@
+{
+  "schemaVersion": 1,
+  "title": "Spine continuity risk audit / Spine 连续性风险检查",
+  "generatedAt": "2026-10-10T09:12:34.415Z",
+  "input": {
+    "filename": "silent.skel",
+    "sha256": "17294850ae4e0b397b4dc2733af03d2b0d53d88fa504ad69a36d68bb2bbac6b0",
+    "spineVersion": "4.2.43",
+    "runtimeVersion": "4.2.120",
+    "atlas": "silent.atlas",
+    "regionGeometry": true
+  },
+  "skeleton": {
+    "bones": 141,
+    "slots": 56,
+    "physicsConstraints": 0,
+    "availableAnimations": [
+      {
+        "name": "attack",
+        "duration": 0.9333333969116211
+      },
+      {
+        "name": "cast",
+        "duration": 1.3000000715255737
+      },
+      {
+        "name": "die",
+        "duration": 1.8666667938232422
+      },
+      {
+        "name": "hurt",
+        "duration": 0.7333333492279053
+      },
+      {
+        "name": "idle_loop",
+        "duration": 1.0666667222976685
+      },
+      {
+        "name": "relaxed_loop",
+        "duration": 7.000000476837158
+      },
+      {
+        "name": "shiv",
+        "duration": 0.7000000476837158
+      }
+    ],
+    "skin": "(default)"
+  },
+  "referenceScale": {
+    "value": 1280.675364224879,
+    "source": "setup-visible geometry bounding-box diagonal (before clipping/occlusion)"
+  },
+  "configuration": {
+    "fps": 60,
+    "physics": "none",
+    "meshVertices": 16,
+    "thresholds": {
+      "step": 0.03,
+      "speed": 3,
+      "acceleration": 60,
+      "jerk": 3000,
+      "madMultiplier": 8,
+      "loopPosition": 0.002,
+      "loopVelocity": 0.1,
+      "triangleAreaRatio": 0.02
+    },
+    "bones": null,
+    "ignoreBones": null,
+    "slots": null,
+    "ignoreSlots": null,
+    "visibleBonesOnly": false,
+    "suppressStepped": false,
+    "suppressions": []
+  },
+  "units": {
+    "step": "reference-scale units",
+    "speed": "reference-scale units / second",
+    "acceleration": "reference-scale units / second^2",
+    "jerk": "reference-scale units / second^3",
+    "time": "seconds; transition time 0 is the requested switch"
+  },
+  "warnings": [
+    "Continuity risk signals are review candidates, not an aesthetic score or universal quality standard. Deliberate impacts/holds can produce strong signals.",
+    "Geometry only: no pixels/textures, silhouette matching across attachment swaps, perceptual salience, occlusion, clipping, anti-aliasing, camera motion or real frame pacing.",
+    "Single skeleton, skin and track 0 only. Match production tracks, timeScale, mix configuration, interruptions and engine behavior separately.",
+    "Finite sampling can miss subframe jumps or alias fast rotations (especially >=180 degrees/sample). Verify suspect times at 2x/4x FPS.",
+    "Derivative magnitudes depend on FPS around actual discontinuities; compare identical settings. Quantiles pool landmarks, so rig density can bias cross-character comparisons.",
+    "Bone probes include helper bones by default; use visible-geometry summaries, --visible-bones-only or bone filters. Bone influence is a dependency approximation, not pixel visibility.",
+    "Triangle collapse/flip is a geometric hint, not proof of a rendering defect. First visible pose is the reference and may already be distorted."
+  ],
+  "projection": "Compact publication of the original report: per-frame arrays, landmark series and complete event/signal lists are omitted. Regenerate the full report with the documented CLI commands.",
+  "sourceCommit": "64ed626b7ec9692bc54536b0123fc3cb580c28da",
+  "analyses": [
+    {
+      "name": "idle_loop",
+      "type": "animation",
+      "duration": 1.0666667222976685,
+      "sampleCount": 66,
+      "effectiveFps": 60.937496821861885,
+      "summary": {
+        "step": {
+          "count": 51025,
+          "median": 0.00030334042880522254,
+          "p95": 0.0016229915497510195,
+          "p99": 0.0027994610972873566,
+          "max": 0.21578869829220196,
+          "rms": 0.002433950642100739
+        },
+        "speed": {
+          "count": 51025,
+          "median": 0.018484806416260442,
+          "p95": 0.09890104240486129,
+          "p99": 0.17059215171887515,
+          "max": 13.149623116374748,
+          "rms": 0.14831885951758222
+        },
+        "acceleration": {
+          "count": 50240,
+          "median": 0.08008073942626587,
+          "p95": 0.7348165085114473,
+          "p99": 1.662390514072671,
+          "max": 786.81449254696,
+          "rms": 6.13615053968095
+        },
+        "jerk": {
+          "count": 49455,
+          "median": 4.905522141294049,
+          "p95": 44.78407855962882,
+          "p99": 125.65074747702137,
+          "max": 47898.43075158724,
+          "rms": 518.1596552051443
+        }
+      },
+      "byKind": {
+        "bone": {
+          "step": {
+            "count": 27495,
+            "median": 0.00016137719865898115,
+            "p95": 0.001755694395834495,
+            "p99": 0.003145358339204077,
+            "max": 0.21578869829220196,
+            "rms": 0.0032524128434006593
+          },
+          "speed": {
+            "count": 27495,
+            "median": 0.009833922530402639,
+            "p95": 0.10698762166632561,
+            "p99": 0.19167026379886498,
+            "max": 13.149623116374748,
+            "rms": 0.1981938973081101
+          },
+          "acceleration": {
+            "count": 27072,
+            "median": 0.022202365656388383,
+            "p95": 0.7620820697245909,
+            "p99": 1.8245283261398388,
+            "max": 786.81449254696,
+            "rms": 8.351742855030194
+          },
+          "jerk": {
+            "count": 26649,
+            "median": 2.1453287130904575,
+            "p95": 46.02152742580539,
+            "p99": 152.0446724986645,
+            "max": 47898.43075158724,
+            "rms": 705.4398344736842
+          }
+        },
+        "visible-geometry": {
+          "step": {
+            "count": 23530,
+            "median": 0.0003850173837675119,
+            "p95": 0.0014437610335030508,
+            "p99": 0.00254619263741883,
+            "max": 0.004946712678839203,
+            "rms": 0.000696987937675955
+          },
+          "speed": {
+            "count": 23530,
+            "median": 0.023461995599694314,
+            "p95": 0.08797918339062034,
+            "p99": 0.1551586057505579,
+            "max": 0.3014402881454274,
+            "rms": 0.04247270023700442
+          },
+          "acceleration": {
+            "count": 23168,
+            "median": 0.11441404167215734,
+            "p95": 0.7043616477066703,
+            "p99": 1.4697575031617045,
+            "max": 5.279432810263706,
+            "rms": 0.3795865652851669
+          },
+          "jerk": {
+            "count": 22806,
+            "median": 7.171663997515667,
+            "p95": 43.547552465024424,
+            "p99": 101.82693660795898,
+            "max": 396.4263726020506,
+            "rms": 26.810873076807614
+          }
+        }
+      },
+      "signalCount": 33,
+      "suppressedCount": 0,
+      "signalCountByKind": {
+        "bone": 33,
+        "visible-geometry": 0
+      },
+      "loopSeam": {
+        "matchedLandmarks": 785,
+        "unmatchedLandmarks": 0,
+        "maxPositionGap": 3.044214462856472e-07,
+        "positionRisk": false,
+        "worst": [
+          {
+            "id": "slot:right cape/right cape#default/right cape/v20",
+            "kind": "visible-geometry",
+            "slot": "right cape",
+            "bone": "leg_upper_r",
+            "attachment": "right cape",
+            "vertex": 20,
+            "magnitude": 3.044214462856472e-07
+          },
+          {
+            "id": "slot:right cape/right cape#default/right cape/v36",
+            "kind": "visible-geometry",
+            "slot": "right cape",
+            "bone": "leg_upper_r",
+            "attachment": "right cape",
+            "vertex": 36,
+            "magnitude": 2.3948134942478776e-07
+          },
+          {
+            "id": "slot:right cape/right cape#default/right cape/v6",
+            "kind": "visible-geometry",
+            "slot": "right cape",
+            "bone": "leg_upper_r",
+            "attachment": "right cape",
+            "vertex": 6,
+            "magnitude": 2.338011414833029e-07
+          },
+          {
+            "id": "slot:right cape/right cape#default/right cape/v43",
+            "kind": "visible-geometry",
+            "slot": "right cape",
+            "bone": "leg_upper_r",
+            "attachment": "right cape",
+            "vertex": 43,
+            "magnitude": 2.3304093416725372e-07
+          },
+          {
+            "id": "slot:right cape/right cape#default/right cape/v0",
+            "kind": "visible-geometry",
+            "slot": "right cape",
+            "bone": "leg_upper_r",
+            "attachment": "right cape",
+            "vertex": 0,
+            "magnitude": 2.3134051028445452e-07
+          },
+          {
+            "id": "slot:right cape/right cape#default/right cape/v3",
+            "kind": "visible-geometry",
+            "slot": "right cape",
+            "bone": "leg_upper_r",
+            "attachment": "right cape",
+            "vertex": 3,
+            "magnitude": 2.2702396848871532e-07
+          },
+          {
+            "id": "slot:right cape/right cape#default/right cape/v13",
+            "kind": "visible-geometry",
+            "slot": "right cape",
+            "bone": "leg_upper_r",
+            "attachment": "right cape",
+            "vertex": 13,
+            "magnitude": 2.1479427148077348e-07
+          },
+          {
+            "id": "slot:right cape/right cape#default/right cape/v30",
+            "kind": "visible-geometry",
+            "slot": "right cape",
+            "bone": "leg_upper_r",
+            "attachment": "right cape",
+            "vertex": 30,
+            "magnitude": 2.0289904973239542e-07
+          },
+          {
+            "id": "slot:right cape/right cape#default/right cape/v46",
+            "kind": "visible-geometry",
+            "slot": "right cape",
+            "bone": "leg_upper_r",
+            "attachment": "right cape",
+            "vertex": 46,
+            "magnitude": 2.0075045557994398e-07
+          },
+          {
+            "id": "slot:right cape/right cape#default/right cape/v40",
+            "kind": "visible-geometry",
+            "slot": "right cape",
+            "bone": "leg_upper_r",
+            "attachment": "right cape",
+            "vertex": 40,
+            "magnitude": 1.884105851988053e-07
+          }
+        ],
+        "discreteEvents": [],
+        "note": "Only identical landmark identities are compared; changed/hidden attachments are separate events.",
+        "maxVelocityGap": 2.6334472170665495,
+        "maxVelocityUncertainty": 11.053399376572164,
+        "velocityRisk": false,
+        "worstVelocity": [
+          {
+            "id": "bone:blade_shine/y-axis",
+            "kind": "bone",
+            "bone": "blade_shine",
+            "landmark": "y-axis",
+            "setupLength": 0,
+            "visibleInfluence": false,
+            "magnitude": 2.6334472170665495,
+            "uncertainty": 10.759789182279661,
+            "risk": false
+          },
+          {
+            "id": "bone:blade_shine/x-axis",
+            "kind": "bone",
+            "bone": "blade_shine",
+            "landmark": "x-axis",
+            "setupLength": 0,
+            "visibleInfluence": false,
+            "magnitude": 1.75653351767178,
+            "uncertainty": 10.815214906195665,
+            "risk": false
+          },
+          {
+            "id": "bone:blade_shine/origin",
+            "kind": "bone",
+            "bone": "blade_shine",
+            "landmark": "origin",
+            "setupLength": 0,
+            "visibleInfluence": false,
+            "magnitude": 1.2464364731945103,
+            "uncertainty": 11.053399376572164,
+            "risk": false
+          },
+          {
+            "id": "slot:top arm cloak/top arm cloak#default/top arm cloak/v19",
+            "kind": "visible-geometry",
+            "slot": "top arm cloak",
+            "bone": "arm_upper_l",
+            "attachment": "top arm cloak",
+            "vertex": 19,
+            "magnitude": 0.04265653351477972,
+            "uncertainty": 0.007741103924597831,
+            "risk": false
+          },
+          {
+            "id": "bone:arm_flap_l5/x-axis",
+            "kind": "bone",
+            "bone": "arm_flap_l5",
+            "landmark": "x-axis",
+            "setupLength": 98.62649536132812,
+            "visibleInfluence": true,
+            "magnitude": 0.04188515039210432,
+            "uncertainty": 0.00770442930615998,
+            "risk": false
+          },
+          {
+            "id": "bone:cape_corner_r/y-axis",
+            "kind": "bone",
+            "bone": "cape_corner_r",
+            "landmark": "y-axis",
+            "setupLength": 0,
+            "visibleInfluence": true,
+            "magnitude": 0.041458046567232044,
+            "uncertainty": 0.00579293519651541,
+            "risk": false
+          },
+          {
+            "id": "bone:cape_corner_r/origin",
+            "kind": "bone",
+            "bone": "cape_corner_r",
+            "landmark": "origin",
+            "setupLength": 0,
+            "visibleInfluence": true,
+            "magnitude": 0.041335145262012006,
+            "uncertainty": 0.005837407933839886,
+            "risk": false
+          },
+          {
+            "id": "bone:cape_corner_r/x-axis",
+            "kind": "bone",
+            "bone": "cape_corner_r",
+            "landmark": "x-axis",
+            "setupLength": 0,
+            "visibleInfluence": true,
+            "magnitude": 0.041312655142427754,
+            "uncertainty": 0.005858424307568948,
+            "risk": false
+          },
+          {
+            "id": "slot:cloak back/cloak back#default/cloak back/v14",
+            "kind": "visible-geometry",
+            "slot": "cloak back",
+            "bone": "capeBase",
+            "attachment": "cloak back",
+            "vertex": 14,
+            "magnitude": 0.04130622868371957,
+            "uncertainty": 0.0058381925834045,
+            "risk": false
+          },
+          {
+            "id": "bone:cape_corner_l/x-axis",
+            "kind": "bone",
+            "bone": "cape_corner_l",
+            "landmark": "x-axis",
+            "setupLength": 0,
+            "visibleInfluence": true,
+            "magnitude": 0.03955588038034751,
+            "uncertainty": 0.012789525035287349,
+            "risk": false
+          }
+        ],
+        "velocityMethod": "5-point fourth-order one-sided endpoint derivatives. Heuristic uncertainty is summed difference from 3-point estimates; risk requires gap > threshold + uncertainty. Not a rigorous error bound; increase FPS to verify. Fewer than 5 matched samples: unavailable. No acceleration seam claim.",
+        "physicsInterpretation": "Endpoint diagnostic on first sequential cycle from reset, not a settled-loop physics simulation."
+      },
+      "angularAliasingRisks": [],
+      "continuitySignalsCount": 33,
+      "discreteEventsCount": 0,
+      "geometryEventsCount": 0,
+      "steppedKeysCount": 0
+    },
+    {
+      "name": "attack",
+      "type": "animation",
+      "duration": 0.9333333969116211,
+      "sampleCount": 58,
+      "effectiveFps": 61.07142441126793,
+      "summary": {
+        "step": {
+          "count": 43057,
+          "median": 0.0005617715249084821,
+          "p95": 0.048540280461655434,
+          "p99": 0.0843665488651575,
+          "max": 0.8678546565353501,
+          "rms": 0.031072662474887273
+        },
+        "speed": {
+          "count": 43057,
+          "median": 0.034308187219851106,
+          "p95": 2.964424069115742,
+          "p99": 5.152385311857986,
+          "max": 53.001120056565526,
+          "rms": 1.8976517575919132
+        },
+        "acceleration": {
+          "count": 42172,
+          "median": 0.8030522006889891,
+          "p95": 81.60060143154702,
+          "p99": 208.7694103633671,
+          "max": 3761.2815360949608,
+          "rms": 132.72388850484515
+        },
+        "jerk": {
+          "count": 41287,
+          "median": 34.61765358577653,
+          "p95": 4490.302037902459,
+          "p99": 14114.803034182505,
+          "max": 429982.7266190879,
+          "rms": 13111.31033725795
+        }
+      },
+      "byKind": {
+        "bone": {
+          "step": {
+            "count": 24111,
+            "median": 0.00022404674107563,
+            "p95": 0.04758235221326536,
+            "p99": 0.0888629535642285,
+            "max": 0.8678546565353501,
+            "rms": 0.036776119522577644
+          },
+          "speed": {
+            "count": 24111,
+            "median": 0.01368285361219124,
+            "p95": 2.9059220265027657,
+            "p99": 5.426987151559769,
+            "max": 53.001120056565526,
+            "rms": 2.2459700035628534
+          },
+          "acceleration": {
+            "count": 23688,
+            "median": 0.3144314306603678,
+            "p95": 80.63760827914268,
+            "p99": 268.7236992464805,
+            "max": 3761.2815360949608,
+            "rms": 172.80838329504857
+          },
+          "jerk": {
+            "count": 23265,
+            "median": 14.733197763419785,
+            "p95": 4499.4626752332115,
+            "p99": 20309.589170245617,
+            "max": 429982.7266190879,
+            "rms": 17291.475422681247
+          }
+        },
+        "visible-geometry": {
+          "step": {
+            "count": 18946,
+            "median": 0.0010401600420116507,
+            "p95": 0.04918207844765176,
+            "p99": 0.07275677597018859,
+            "max": 0.294298650667534,
+            "rms": 0.021749539321550375
+          },
+          "speed": {
+            "count": 18946,
+            "median": 0.06352405538133574,
+            "p95": 3.003619586304815,
+            "p99": 4.443359944070908,
+            "max": 17.973237798580456,
+            "rms": 1.3282753466559618
+          },
+          "acceleration": {
+            "count": 18484,
+            "median": 1.3075697903767294,
+            "p95": 82.51969545408862,
+            "p99": 150.70553340032168,
+            "max": 873.0632530415327,
+            "rms": 43.82309535014911
+          },
+          "jerk": {
+            "count": 18022,
+            "median": 79.00662095679488,
+            "p95": 4477.289334103143,
+            "p99": 9682.276037102196,
+            "max": 94254.02041900741,
+            "rms": 2800.871444645199
+          }
+        }
+      },
+      "signalCount": 11982,
+      "suppressedCount": 0,
+      "signalCountByKind": {
+        "bone": 6194,
+        "visible-geometry": 5788
+      },
+      "angularAliasingRisks": [
+        {
+          "bone": "hand_l",
+          "start": 0.06417436897754669,
+          "end": 0.06666667014360428,
+          "degreesPerSample": 1129.956115760791,
+          "note": "Average key-to-key rotation exceeds 90 degrees per sample; increase FPS. Bezier peaks and parent composition can be faster."
+        }
+      ],
+      "continuitySignalsCount": 11982,
+      "discreteEventsCount": 37,
+      "geometryEventsCount": 39,
+      "steppedKeysCount": 106
+    },
+    {
+      "name": "attack -> idle_loop",
+      "type": "transition",
+      "duration": 0.498245620727539,
+      "sampleCount": 31,
+      "effectiveFps": 60,
+      "summary": {
+        "step": {
+          "count": 23550,
+          "median": 0.00020200826715055094,
+          "p95": 0.0020724656870608677,
+          "p99": 0.06477967979706516,
+          "max": 0.09883414784276108,
+          "rms": 0.010354640920234581
+        },
+        "speed": {
+          "count": 23550,
+          "median": 0.012215559812541939,
+          "p95": 0.12504279523050427,
+          "p99": 3.88678078782391,
+          "max": 6.035942189231276,
+          "rms": 0.6214087363326661
+        },
+        "acceleration": {
+          "count": 22765,
+          "median": 0.096973643822026,
+          "p95": 1.6363684878057545,
+          "p99": 5.7990174683156095,
+          "max": 383.40135054685607,
+          "rms": 16.506010901163133
+        },
+        "jerk": {
+          "count": 21980,
+          "median": 4.549648577181774,
+          "p95": 144.2510400388204,
+          "p99": 922.372535222755,
+          "max": 45910.427720142354,
+          "rms": 1454.6120680580568
+        }
+      },
+      "byKind": {
+        "bone": {
+          "step": {
+            "count": 12690,
+            "median": 0.00010481178044506232,
+            "p95": 0.0029506863580085387,
+            "p99": 0.0837717330792363,
+            "max": 0.09883414784276108,
+            "rms": 0.014089954003584707
+          },
+          "speed": {
+            "count": 12690,
+            "median": 0.00632212563208411,
+            "p95": 0.17722572640447182,
+            "p99": 5.026303984754179,
+            "max": 6.035942189231276,
+            "rms": 0.8455635442866302
+          },
+          "acceleration": {
+            "count": 12267,
+            "median": 0.04741914713857972,
+            "p95": 1.8194440184532894,
+            "p99": 9.888389941716728,
+            "max": 383.40135054685607,
+            "rms": 22.457425083534684
+          },
+          "jerk": {
+            "count": 11844,
+            "median": 2.604804980428878,
+            "p95": 173.82941584786258,
+            "p99": 12553.51380102047,
+            "max": 45910.427720142354,
+            "rms": 1979.400005107987
+          }
+        },
+        "visible-geometry": {
+          "step": {
+            "count": 10860,
+            "median": 0.00028020993690336144,
+            "p95": 0.0015315822233646942,
+            "p99": 0.002600091313443445,
+            "max": 0.014807463890076053,
+            "rms": 0.000724004409969255
+          },
+          "speed": {
+            "count": 10860,
+            "median": 0.01696508891202285,
+            "p95": 0.09223365977739648,
+            "p99": 0.1564202110747721,
+            "max": 0.9043129116853612,
+            "rms": 0.04369822325781589
+          },
+          "acceleration": {
+            "count": 10498,
+            "median": 0.12423080899396287,
+            "p95": 1.5057184039702298,
+            "p99": 3.8345595670933177,
+            "max": 46.780169976326356,
+            "rms": 1.218965634087104
+          },
+          "jerk": {
+            "count": 10136,
+            "median": 5.759633766179152,
+            "p95": 131.77267691006026,
+            "p99": 392.27698734778966,
+            "max": 2857.605658052481,
+            "rms": 100.47206217207594
+          }
+        }
+      },
+      "signalCount": 1289,
+      "suppressedCount": 0,
+      "signalCountByKind": {
+        "bone": 1289,
+        "visible-geometry": 0
+      },
+      "switchInstant": {
+        "matchedLandmarks": 785,
+        "unmatchedLandmarks": 0,
+        "maxPositionGap": 0,
+        "positionRisk": false,
+        "worst": [
+          {
+            "id": "slot:shadow/shadow#default/shadow/v0",
+            "kind": "visible-geometry",
+            "slot": "shadow",
+            "bone": "shadow",
+            "attachment": "shadow",
+            "vertex": 0,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:shadow/shadow#default/shadow/v1",
+            "kind": "visible-geometry",
+            "slot": "shadow",
+            "bone": "shadow",
+            "attachment": "shadow",
+            "vertex": 1,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:shadow/shadow#default/shadow/v2",
+            "kind": "visible-geometry",
+            "slot": "shadow",
+            "bone": "shadow",
+            "attachment": "shadow",
+            "vertex": 2,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:shadow/shadow#default/shadow/v3",
+            "kind": "visible-geometry",
+            "slot": "shadow",
+            "bone": "shadow",
+            "attachment": "shadow",
+            "vertex": 3,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:hair/hair#default/hair/v0",
+            "kind": "visible-geometry",
+            "slot": "hair",
+            "bone": "hair1",
+            "attachment": "hair",
+            "vertex": 0,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:hair/hair#default/hair/v4",
+            "kind": "visible-geometry",
+            "slot": "hair",
+            "bone": "hair1",
+            "attachment": "hair",
+            "vertex": 4,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:hair/hair#default/hair/v8",
+            "kind": "visible-geometry",
+            "slot": "hair",
+            "bone": "hair1",
+            "attachment": "hair",
+            "vertex": 8,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:hair/hair#default/hair/v13",
+            "kind": "visible-geometry",
+            "slot": "hair",
+            "bone": "hair1",
+            "attachment": "hair",
+            "vertex": 13,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:hair/hair#default/hair/v17",
+            "kind": "visible-geometry",
+            "slot": "hair",
+            "bone": "hair1",
+            "attachment": "hair",
+            "vertex": 17,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:hair/hair#default/hair/v22",
+            "kind": "visible-geometry",
+            "slot": "hair",
+            "bone": "hair1",
+            "attachment": "hair",
+            "vertex": 22,
+            "magnitude": 0
+          }
+        ],
+        "discreteEvents": [
+          {
+            "type": "attachment-change",
+            "slot": "slash",
+            "from": "slash",
+            "to": null
+          }
+        ],
+        "note": "Only identical landmark identities are compared; changed/hidden attachments are separate events."
+      },
+      "angularAliasingRisks": [],
+      "continuitySignalsCount": 1289,
+      "discreteEventsCount": 1,
+      "geometryEventsCount": 0,
+      "steppedKeysCount": 0
+    }
+  ]
+}

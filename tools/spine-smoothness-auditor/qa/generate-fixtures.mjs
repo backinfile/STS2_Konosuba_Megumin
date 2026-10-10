@@ -1,0 +1,46 @@
+// Independent QA fixtures. Entirely synthetic; no game/source artwork included.
+import fs from 'node:fs';
+import path from 'node:path';
+const dir = new URL('./fixtures/', import.meta.url);
+fs.mkdirSync(dir, {recursive: true});
+const skeleton = {skeleton:{spine:'4.2.43',x:0,y:0,width:100,height:100},bones:[{name:'root'},{name:'tip',parent:'root',x:100,length:20}],slots:[{name:'art',bone:'tip',attachment:'quad'}],skins:[{name:'default',attachments:{art:{quad:{type:'mesh',uvs:[0,0,1,0,1,1,0,1],triangles:[0,1,2,2,3,0],vertices:[-10,-10,10,-10,10,10,-10,10],hull:4},alternative:{type:'mesh',uvs:[0,0,1,0,1,1,0,1],triangles:[0,1,2,2,3,0],vertices:[990,-10,1010,-10,1010,10,990,10],hull:4}}}}],animations:{}};
+const translate = keys => ({bones:{root:{translate:keys.map(([time,x,curve])=>({time,x,...(curve?{curve}:{})}))}}});
+const rotate = keys => ({bones:{root:{rotate:keys.map(([time,value])=>({time,value}))}}});
+const write=(name,data)=>fs.writeFileSync(new URL(name+'.json',dir),JSON.stringify(data,null,2)+'\n');
+const a=skeleton.animations;
+a.stationary=translate([[0,0],[1,0]]);
+a.constant_velocity=translate([[0,0],[1,100]]);
+a.constant_velocity_long=translate([[0,0],[2,200]]);
+a.constant_velocity_short=translate([[0,0],[1.013,101.3]]);
+a.closed_velocity_kink=translate([[0,0],[0.5,50],[1,0]]);
+a.stepped_jump=translate([[0,0,'stepped'],[0.5,100],[1,100]]);
+a.cusp=translate([[0,0],[0.5,100],[1,0]]);
+a.smooth_loop=translate(Array.from({length:241},(_,i)=>[i/240,20*Math.sin(2*Math.PI*i/240)]));
+a.rotation_across_world_wrap=rotate([[0,170],[1,190]]);
+a.genuine_spin=rotate([[0,0],[1,720]]);
+a.aliasing_spin=rotate([[0,0],[0.1,3600]]);
+a.zero_duration={};
+a.from_a=translate([[0,0],[1,100]]);
+a.to_b=translate([[0,200],[1,300]]);
+a.attachment_swap={slots:{art:{attachment:[{time:0,name:'quad'},{time:0.5,name:'alternative'},{time:1,name:'alternative'}]}}};
+a.attachment_hide={slots:{art:{attachment:[{time:0,name:'quad'},{time:0.5,name:null},{time:1,name:null}]}}};
+a.deform_only={attachments:{default:{art:{quad:{deform:[{time:0},{time:0.5,vertices:[0,0,0,0,50,0,0,0]},{time:1}]}}}}};
+a.tiny_duration=translate([[0,0],[0.01,1]]);
+a.triangle_collapse={attachments:{default:{art:{quad:{deform:[{time:0},{time:0.5,vertices:[0,0,0,0,-20,-20,0,0]},{time:1}]}}}}};
+write('adversarial',skeleton);
+const scaled=structuredClone(skeleton);
+scaled.skeleton.width*=10;scaled.skeleton.height*=10;
+for(const b of scaled.bones){if(b.x)b.x*=10;if(b.length)b.length*=10;}
+for(const att of Object.values(scaled.skins[0].attachments.art)) att.vertices=att.vertices.map(x=>x*10);
+for(const animation of Object.values(scaled.animations)){for(const b of Object.values(animation.bones??{})){for(const k of b.translate??[]) k.x*=10;} for(const k of animation.attachments?.default?.art?.quad?.deform??[]){if(k.vertices)k.vertices=k.vertices.map(x=>x*10);}}
+write('adversarial-scaled10',scaled);
+const incompatible=structuredClone(skeleton);incompatible.skeleton.spine='3.8.99';write('incompatible-version',incompatible);
+const unsorted=structuredClone(skeleton);unsorted.animations={bad:translate([[1,100],[0,0],[0.5,50]])};write('unsorted-keys',unsorted);
+const invalid=structuredClone(skeleton);invalid.animations={bad:translate([[0,0],[1,100]])};invalid.animations.bad.bones.missing={rotate:[{time:0,value:2}]};write('missing-bone',invalid);
+const overflow=structuredClone(skeleton);overflow.animations={bad:translate([[0,0],[1,1e300]])};write('overflow-transform',overflow);
+const physics=structuredClone(skeleton);physics.physics=[{name:'spring',bone:'tip',x:1,y:1,rotate:1,inertia:0.8,strength:50,damping:0.9,mass:1,gravity:0.5,mix:1}];write('physics',physics);
+const weighted=structuredClone(skeleton);weighted.skins[0].attachments.art.quad.vertices=[1,1,-10,-10,1,1,1,10,-10,1,1,1,10,10,1,1,1,-10,10,1];write('weighted-mesh',weighted);
+const region=structuredClone(skeleton);region.skins[0].attachments.art={quad:{type:'region',width:20,height:20},alternative:{type:'region',x:1000,width:20,height:20}};delete region.animations.deform_only;delete region.animations.triangle_collapse;write('region',region);
+fs.writeFileSync(new URL('synthetic.atlas',dir),'synthetic.png\nsize:40,20\nfilter:Linear,Linear\nquad\nbounds:0,0,20,20\nalternative\nbounds:20,0,20,20\n');
+fs.writeFileSync(new URL('invalid-json.json',dir),'{ invalid');
+console.log('Generated synthetic Spine JSON fixtures (including deliberately invalid cases).');

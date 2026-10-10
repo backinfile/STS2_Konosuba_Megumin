@@ -1,0 +1,6820 @@
+{
+  "commit": "23d31cc4d17c0102f37aba65a650a29868e2556f",
+  "file": "art/megumin-quartet-spine/actions-v9/export/megumin.json",
+  "bones": 64,
+  "slots": 11,
+  "version": "4.2.43",
+  "constraints": {
+    "ik": 0,
+    "transform": 0,
+    "path": 0,
+    "physics": 0
+  },
+  "attachments": [
+    {
+      "slot": "body_under",
+      "name": "E00/body_under",
+      "type": "MeshAttachment",
+      "vertices": 383,
+      "triangles": 534,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.000010034069419
+    },
+    {
+      "slot": "body_under",
+      "name": "E05/body_under",
+      "type": "MeshAttachment",
+      "vertices": 344,
+      "triangles": 488,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "body_under",
+      "name": "brace/body_under",
+      "type": "MeshAttachment",
+      "vertices": 300,
+      "triangles": 395,
+      "weighted": true,
+      "minWeightSum": 0.9999899701215327,
+      "maxWeightSum": 1.0000100263860077
+    },
+    {
+      "slot": "body_under",
+      "name": "prone/body_under",
+      "type": "MeshAttachment",
+      "vertices": 411,
+      "triangles": 601,
+      "weighted": true,
+      "minWeightSum": 0.9999899566173553,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "body_under",
+      "name": "E01/body_under",
+      "type": "MeshAttachment",
+      "vertices": 383,
+      "triangles": 534,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.000010034069419
+    },
+    {
+      "slot": "body_under",
+      "name": "turn-upright/body_under",
+      "type": "MeshAttachment",
+      "vertices": 383,
+      "triangles": 534,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.000010034069419
+    },
+    {
+      "slot": "body_under",
+      "name": "E08/body_under",
+      "type": "MeshAttachment",
+      "vertices": 344,
+      "triangles": 488,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "body_under",
+      "name": "E12/body_under",
+      "type": "MeshAttachment",
+      "vertices": 344,
+      "triangles": 488,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "body_under",
+      "name": "release/body_under",
+      "type": "MeshAttachment",
+      "vertices": 344,
+      "triangles": 488,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "body_under",
+      "name": "fall-lean/body_under",
+      "type": "MeshAttachment",
+      "vertices": 344,
+      "triangles": 488,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "body_under",
+      "name": "crouch/body_under",
+      "type": "MeshAttachment",
+      "vertices": 300,
+      "triangles": 395,
+      "weighted": true,
+      "minWeightSum": 0.9999899701215327,
+      "maxWeightSum": 1.0000100263860077
+    },
+    {
+      "slot": "body_under",
+      "name": "lower/body_under",
+      "type": "MeshAttachment",
+      "vertices": 411,
+      "triangles": 601,
+      "weighted": true,
+      "minWeightSum": 0.9999899566173553,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "body_under",
+      "name": "kneel-rise/body_under",
+      "type": "MeshAttachment",
+      "vertices": 300,
+      "triangles": 395,
+      "weighted": true,
+      "minWeightSum": 0.9999899701215327,
+      "maxWeightSum": 1.0000100263860077
+    },
+    {
+      "slot": "cape",
+      "name": "E00/cape",
+      "type": "MeshAttachment",
+      "vertices": 340,
+      "triangles": 399,
+      "weighted": true,
+      "minWeightSum": 0.9999899566173553,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "cape",
+      "name": "E01/cape",
+      "type": "MeshAttachment",
+      "vertices": 338,
+      "triangles": 385,
+      "weighted": true,
+      "minWeightSum": 0.9999899566173553,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "cape",
+      "name": "turn-upright/cape",
+      "type": "MeshAttachment",
+      "vertices": 329,
+      "triangles": 425,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "cape",
+      "name": "E05/cape",
+      "type": "MeshAttachment",
+      "vertices": 337,
+      "triangles": 451,
+      "weighted": true,
+      "minWeightSum": 0.9999899640679359,
+      "maxWeightSum": 1.0000100322067738
+    },
+    {
+      "slot": "cape",
+      "name": "E08/cape",
+      "type": "MeshAttachment",
+      "vertices": 398,
+      "triangles": 497,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.0000100396573544
+    },
+    {
+      "slot": "cape",
+      "name": "E12/cape",
+      "type": "MeshAttachment",
+      "vertices": 366,
+      "triangles": 464,
+      "weighted": true,
+      "minWeightSum": 0.9999899752438068,
+      "maxWeightSum": 1.0000100345350802
+    },
+    {
+      "slot": "cape",
+      "name": "release/cape",
+      "type": "MeshAttachment",
+      "vertices": 378,
+      "triangles": 489,
+      "weighted": true,
+      "minWeightSum": 0.9999899647664279,
+      "maxWeightSum": 1.000010035932064
+    },
+    {
+      "slot": "cape",
+      "name": "fall-lean/cape",
+      "type": "MeshAttachment",
+      "vertices": 328,
+      "triangles": 477,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "cape",
+      "name": "crouch/cape",
+      "type": "MeshAttachment",
+      "vertices": 307,
+      "triangles": 399,
+      "weighted": true,
+      "minWeightSum": 0.9999899710528553,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "cape",
+      "name": "brace/cape",
+      "type": "MeshAttachment",
+      "vertices": 200,
+      "triangles": 208,
+      "weighted": true,
+      "minWeightSum": 0.9999899752438068,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "cape",
+      "name": "lower/cape",
+      "type": "MeshAttachment",
+      "vertices": 186,
+      "triangles": 182,
+      "weighted": true,
+      "minWeightSum": 0.9999899640679359,
+      "maxWeightSum": 1.0000100396573544
+    },
+    {
+      "slot": "cape",
+      "name": "prone/cape",
+      "type": "MeshAttachment",
+      "vertices": 107,
+      "triangles": 92,
+      "weighted": true,
+      "minWeightSum": 0.9999899596441537,
+      "maxWeightSum": 1.000010034069419
+    },
+    {
+      "slot": "cape",
+      "name": "kneel-rise/cape",
+      "type": "MeshAttachment",
+      "vertices": 345,
+      "triangles": 457,
+      "weighted": true,
+      "minWeightSum": 0.9999899566173553,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "body",
+      "name": "E00/body",
+      "type": "MeshAttachment",
+      "vertices": 261,
+      "triangles": 357,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.000010034069419
+    },
+    {
+      "slot": "body",
+      "name": "E01/body",
+      "type": "MeshAttachment",
+      "vertices": 253,
+      "triangles": 340,
+      "weighted": true,
+      "minWeightSum": 0.9999899799004197,
+      "maxWeightSum": 1.0000100303441286
+    },
+    {
+      "slot": "body",
+      "name": "turn-upright/body",
+      "type": "MeshAttachment",
+      "vertices": 244,
+      "triangles": 326,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100224278867
+    },
+    {
+      "slot": "body",
+      "name": "E05/body",
+      "type": "MeshAttachment",
+      "vertices": 224,
+      "triangles": 283,
+      "weighted": true,
+      "minWeightSum": 0.9999899640679359,
+      "maxWeightSum": 1.0000100433826447
+    },
+    {
+      "slot": "body",
+      "name": "E08/body",
+      "type": "MeshAttachment",
+      "vertices": 251,
+      "triangles": 327,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100319739431
+    },
+    {
+      "slot": "body",
+      "name": "E12/body",
+      "type": "MeshAttachment",
+      "vertices": 228,
+      "triangles": 295,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100322067738
+    },
+    {
+      "slot": "body",
+      "name": "release/body",
+      "type": "MeshAttachment",
+      "vertices": 201,
+      "triangles": 255,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "body",
+      "name": "fall-lean/body",
+      "type": "MeshAttachment",
+      "vertices": 222,
+      "triangles": 277,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.0000100433826447
+    },
+    {
+      "slot": "body",
+      "name": "crouch/body",
+      "type": "MeshAttachment",
+      "vertices": 216,
+      "triangles": 279,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100433826447
+    },
+    {
+      "slot": "body",
+      "name": "brace/body",
+      "type": "MeshAttachment",
+      "vertices": 239,
+      "triangles": 312,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "body",
+      "name": "lower/body",
+      "type": "MeshAttachment",
+      "vertices": 278,
+      "triangles": 400,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100210309029
+    },
+    {
+      "slot": "body",
+      "name": "prone/body",
+      "type": "MeshAttachment",
+      "vertices": 262,
+      "triangles": 379,
+      "weighted": true,
+      "minWeightSum": 0.9999899596441537,
+      "maxWeightSum": 1.000010034069419
+    },
+    {
+      "slot": "body",
+      "name": "kneel-rise/body",
+      "type": "MeshAttachment",
+      "vertices": 236,
+      "triangles": 300,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "leg_l",
+      "name": "E00/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 200,
+      "triangles": 276,
+      "weighted": true,
+      "minWeightSum": 0.9999899717513472,
+      "maxWeightSum": 1.0000100238248706
+    },
+    {
+      "slot": "leg_l",
+      "name": "E01/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 191,
+      "triangles": 277,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "leg_l",
+      "name": "turn-upright/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 195,
+      "triangles": 281,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "leg_l",
+      "name": "E05/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 201,
+      "triangles": 290,
+      "weighted": true,
+      "minWeightSum": 0.9999899640679359,
+      "maxWeightSum": 1.0000100322067738
+    },
+    {
+      "slot": "leg_l",
+      "name": "E08/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 199,
+      "triangles": 291,
+      "weighted": true,
+      "minWeightSum": 0.9999899640679359,
+      "maxWeightSum": 1.000010035932064
+    },
+    {
+      "slot": "leg_l",
+      "name": "E12/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 192,
+      "triangles": 278,
+      "weighted": true,
+      "minWeightSum": 0.9999899659305811,
+      "maxWeightSum": 1.0000100322067738
+    },
+    {
+      "slot": "leg_l",
+      "name": "release/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 176,
+      "triangles": 255,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100210309029
+    },
+    {
+      "slot": "leg_l",
+      "name": "fall-lean/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 169,
+      "triangles": 246,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.0000100303441286
+    },
+    {
+      "slot": "leg_l",
+      "name": "crouch/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 135,
+      "triangles": 155,
+      "weighted": true,
+      "minWeightSum": 0.9999899750109762,
+      "maxWeightSum": 1.0000100210309029
+    },
+    {
+      "slot": "leg_l",
+      "name": "brace/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 139,
+      "triangles": 166,
+      "weighted": true,
+      "minWeightSum": 0.9999899752438068,
+      "maxWeightSum": 1.0000100368633866
+    },
+    {
+      "slot": "leg_l",
+      "name": "lower/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 124,
+      "triangles": 140,
+      "weighted": true,
+      "minWeightSum": 0.9999899810645729,
+      "maxWeightSum": 1.0000100270844996
+    },
+    {
+      "slot": "leg_l",
+      "name": "prone/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 91,
+      "triangles": 101,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "leg_l",
+      "name": "kneel-rise/leg_l",
+      "type": "MeshAttachment",
+      "vertices": 190,
+      "triangles": 271,
+      "weighted": true,
+      "minWeightSum": 0.9999899733811617,
+      "maxWeightSum": 1.0000100387260318
+    },
+    {
+      "slot": "leg_r",
+      "name": "E00/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 225,
+      "triangles": 322,
+      "weighted": true,
+      "minWeightSum": 0.9999899789690971,
+      "maxWeightSum": 1.0000100322067738
+    },
+    {
+      "slot": "leg_r",
+      "name": "E01/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 227,
+      "triangles": 329,
+      "weighted": true,
+      "minWeightSum": 0.9999899789690971,
+      "maxWeightSum": 1.000010029427358
+    },
+    {
+      "slot": "leg_r",
+      "name": "turn-upright/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 217,
+      "triangles": 321,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.000010035932064
+    },
+    {
+      "slot": "leg_r",
+      "name": "E05/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 231,
+      "triangles": 335,
+      "weighted": true,
+      "minWeightSum": 0.9999899566173553,
+      "maxWeightSum": 1.0000100319157355
+    },
+    {
+      "slot": "leg_r",
+      "name": "E08/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 214,
+      "triangles": 319,
+      "weighted": true,
+      "minWeightSum": 0.9999899566173553,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "leg_r",
+      "name": "E12/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 222,
+      "triangles": 321,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100210309029
+    },
+    {
+      "slot": "leg_r",
+      "name": "release/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 196,
+      "triangles": 291,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.000010035932064
+    },
+    {
+      "slot": "leg_r",
+      "name": "fall-lean/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 204,
+      "triangles": 305,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.0000100210309029
+    },
+    {
+      "slot": "leg_r",
+      "name": "crouch/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 224,
+      "triangles": 326,
+      "weighted": true,
+      "minWeightSum": 0.9999899724498391,
+      "maxWeightSum": 1.0000100275501609
+    },
+    {
+      "slot": "leg_r",
+      "name": "brace/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 221,
+      "triangles": 335,
+      "weighted": true,
+      "minWeightSum": 0.9999899603426456,
+      "maxWeightSum": 1.0000100322067738
+    },
+    {
+      "slot": "leg_r",
+      "name": "lower/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 231,
+      "triangles": 356,
+      "weighted": true,
+      "minWeightSum": 0.999989973846823,
+      "maxWeightSum": 1.0000100256875157
+    },
+    {
+      "slot": "leg_r",
+      "name": "prone/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 210,
+      "triangles": 321,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.000010034069419
+    },
+    {
+      "slot": "leg_r",
+      "name": "kneel-rise/leg_r",
+      "type": "MeshAttachment",
+      "vertices": 225,
+      "triangles": 340,
+      "weighted": true,
+      "minWeightSum": 0.9999899566173553,
+      "maxWeightSum": 1.0000100433826447
+    },
+    {
+      "slot": "arm_l",
+      "name": "E00/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 68,
+      "triangles": 89,
+      "weighted": true,
+      "minWeightSum": 0.9999899789690971,
+      "maxWeightSum": 1.0000100198667496
+    },
+    {
+      "slot": "arm_l",
+      "name": "E01/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 76,
+      "triangles": 93,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "arm_l",
+      "name": "turn-upright/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 69,
+      "triangles": 84,
+      "weighted": true,
+      "minWeightSum": 0.9999899864196777,
+      "maxWeightSum": 1.0000100154429674
+    },
+    {
+      "slot": "arm_l",
+      "name": "E05/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 61,
+      "triangles": 73,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "arm_l",
+      "name": "E08/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 75,
+      "triangles": 100,
+      "weighted": true,
+      "minWeightSum": 0.9999899733811617,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "arm_l",
+      "name": "E12/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 68,
+      "triangles": 88,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "arm_l",
+      "name": "release/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 77,
+      "triangles": 101,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "arm_l",
+      "name": "fall-lean/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 146,
+      "triangles": 186,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100296456367
+    },
+    {
+      "slot": "arm_l",
+      "name": "crouch/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 163,
+      "triangles": 197,
+      "weighted": true,
+      "minWeightSum": 0.9999899671820458,
+      "maxWeightSum": 1.0000100345350802
+    },
+    {
+      "slot": "arm_l",
+      "name": "brace/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 104,
+      "triangles": 120,
+      "weighted": true,
+      "minWeightSum": 0.999989977106452,
+      "maxWeightSum": 1.0000100396573544
+    },
+    {
+      "slot": "arm_l",
+      "name": "lower/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 93,
+      "triangles": 103,
+      "weighted": true,
+      "minWeightSum": 0.9999899826943874,
+      "maxWeightSum": 1.000010021700291
+    },
+    {
+      "slot": "arm_l",
+      "name": "prone/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 52,
+      "triangles": 54,
+      "weighted": true,
+      "minWeightSum": 0.9999899826943874,
+      "maxWeightSum": 1.0000100266188383
+    },
+    {
+      "slot": "arm_l",
+      "name": "kneel-rise/arm_l",
+      "type": "MeshAttachment",
+      "vertices": 138,
+      "triangles": 176,
+      "weighted": true,
+      "minWeightSum": 0.9999899566173553,
+      "maxWeightSum": 1.000010022893548
+    },
+    {
+      "slot": "hand_l",
+      "name": "E00/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 76,
+      "triangles": 85,
+      "weighted": true,
+      "minWeightSum": 0.9999899826943874,
+      "maxWeightSum": 1.000010034069419
+    },
+    {
+      "slot": "hand_l",
+      "name": "E01/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 79,
+      "triangles": 89,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "hand_l",
+      "name": "turn-upright/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 87,
+      "triangles": 99,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "hand_l",
+      "name": "E05/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 94,
+      "triangles": 106,
+      "weighted": true,
+      "minWeightSum": 0.9999899864196777,
+      "maxWeightSum": 1.0000100173056126
+    },
+    {
+      "slot": "hand_l",
+      "name": "E08/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 98,
+      "triangles": 112,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "hand_l",
+      "name": "E12/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 95,
+      "triangles": 108,
+      "weighted": true,
+      "minWeightSum": 0.9999899864196777,
+      "maxWeightSum": 1.000010022893548
+    },
+    {
+      "slot": "hand_l",
+      "name": "release/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 94,
+      "triangles": 106,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "hand_l",
+      "name": "fall-lean/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 51,
+      "triangles": 63,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_l",
+      "name": "crouch/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 53,
+      "triangles": 65,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_l",
+      "name": "brace/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 65,
+      "triangles": 76,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_l",
+      "name": "lower/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 90,
+      "triangles": 115,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_l",
+      "name": "prone/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 88,
+      "triangles": 113,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_l",
+      "name": "kneel-rise/hand_l",
+      "type": "MeshAttachment",
+      "vertices": 63,
+      "triangles": 78,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "arm_r",
+      "name": "E00/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 78,
+      "triangles": 102,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "arm_r",
+      "name": "E01/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 80,
+      "triangles": 104,
+      "weighted": true,
+      "minWeightSum": 0.9999899566173553,
+      "maxWeightSum": 1.0000100266188383
+    },
+    {
+      "slot": "arm_r",
+      "name": "turn-upright/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 54,
+      "triangles": 62,
+      "weighted": true,
+      "minWeightSum": 0.9999899845570326,
+      "maxWeightSum": 1.0000100190518424
+    },
+    {
+      "slot": "arm_r",
+      "name": "E05/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 77,
+      "triangles": 108,
+      "weighted": true,
+      "minWeightSum": 0.9999899789690971,
+      "maxWeightSum": 1.0000100210309029
+    },
+    {
+      "slot": "arm_r",
+      "name": "E08/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 54,
+      "triangles": 68,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "arm_r",
+      "name": "E12/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 54,
+      "triangles": 68,
+      "weighted": true,
+      "minWeightSum": 0.9999899929389358,
+      "maxWeightSum": 1.0000100322067738
+    },
+    {
+      "slot": "arm_r",
+      "name": "release/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 36,
+      "triangles": 46,
+      "weighted": true,
+      "minWeightSum": 0.9999899864196777,
+      "maxWeightSum": 1.000010035932064
+    },
+    {
+      "slot": "arm_r",
+      "name": "fall-lean/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 132,
+      "triangles": 178,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "arm_r",
+      "name": "crouch/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 151,
+      "triangles": 199,
+      "weighted": true,
+      "minWeightSum": 0.9999899715185165,
+      "maxWeightSum": 1.0000100303441286
+    },
+    {
+      "slot": "arm_r",
+      "name": "brace/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 163,
+      "triangles": 213,
+      "weighted": true,
+      "minWeightSum": 0.9999899696558714,
+      "maxWeightSum": 1.0000100266188383
+    },
+    {
+      "slot": "arm_r",
+      "name": "lower/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 134,
+      "triangles": 177,
+      "weighted": true,
+      "minWeightSum": 0.9999899677932262,
+      "maxWeightSum": 1.0000100284814835
+    },
+    {
+      "slot": "arm_r",
+      "name": "prone/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 143,
+      "triangles": 183,
+      "weighted": true,
+      "minWeightSum": 0.9999899799004197,
+      "maxWeightSum": 1.0000100297475
+    },
+    {
+      "slot": "arm_r",
+      "name": "kneel-rise/arm_r",
+      "type": "MeshAttachment",
+      "vertices": 123,
+      "triangles": 160,
+      "weighted": true,
+      "minWeightSum": 0.9999899640679359,
+      "maxWeightSum": 1.000010026153177
+    },
+    {
+      "slot": "head",
+      "name": "E00/head",
+      "type": "MeshAttachment",
+      "vertices": 901,
+      "triangles": 1587,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "E01/head",
+      "type": "MeshAttachment",
+      "vertices": 852,
+      "triangles": 1492,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "turn-upright/head",
+      "type": "MeshAttachment",
+      "vertices": 854,
+      "triangles": 1494,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "E05/head",
+      "type": "MeshAttachment",
+      "vertices": 821,
+      "triangles": 1424,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "E08/head",
+      "type": "MeshAttachment",
+      "vertices": 755,
+      "triangles": 1303,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "E12/head",
+      "type": "MeshAttachment",
+      "vertices": 758,
+      "triangles": 1308,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "release/head",
+      "type": "MeshAttachment",
+      "vertices": 717,
+      "triangles": 1231,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "fall-lean/head",
+      "type": "MeshAttachment",
+      "vertices": 809,
+      "triangles": 1412,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "crouch/head",
+      "type": "MeshAttachment",
+      "vertices": 750,
+      "triangles": 1308,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "brace/head",
+      "type": "MeshAttachment",
+      "vertices": 706,
+      "triangles": 1226,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "lower/head",
+      "type": "MeshAttachment",
+      "vertices": 609,
+      "triangles": 1026,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "prone/head",
+      "type": "MeshAttachment",
+      "vertices": 637,
+      "triangles": 1074,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "head",
+      "name": "kneel-rise/head",
+      "type": "MeshAttachment",
+      "vertices": 562,
+      "triangles": 959,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "staff",
+      "name": "rigid_staff",
+      "type": "MeshAttachment",
+      "vertices": 4,
+      "triangles": 2,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "E00/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 46,
+      "triangles": 61,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "E01/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 44,
+      "triangles": 60,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "turn-upright/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 37,
+      "triangles": 48,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "E05/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 40,
+      "triangles": 55,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "E08/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 43,
+      "triangles": 58,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "E12/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 37,
+      "triangles": 48,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "release/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 37,
+      "triangles": 47,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "fall-lean/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 35,
+      "triangles": 45,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "crouch/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 36,
+      "triangles": 48,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "brace/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 43,
+      "triangles": 57,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "lower/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 41,
+      "triangles": 55,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "prone/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 37,
+      "triangles": 50,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    },
+    {
+      "slot": "hand_r",
+      "name": "kneel-rise/hand_r",
+      "type": "MeshAttachment",
+      "vertices": 31,
+      "triangles": 39,
+      "weighted": true,
+      "minWeightSum": 1,
+      "maxWeightSum": 1
+    }
+  ],
+  "animations": [
+    {
+      "name": "idle_loop",
+      "duration": 3.4000000953674316,
+      "timelines": 140,
+      "keys": 26252,
+      "constantTimelines": 124,
+      "constantKeys": 25420,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E00/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E00/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E00/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E00/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E00/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E00/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E00/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E00/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E00/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 26.434223387860904,
+          "max": 26.434223387860914,
+          "minTime": 0,
+          "maxTime": 0.06666666666666667
+        },
+        "fore_r->hand_r": {
+          "min": 34.21959009253319,
+          "max": 34.21959009253321,
+          "minTime": 0.058333333333333334,
+          "maxTime": 0.016666666666666666
+        },
+        "upper_l->fore_l": {
+          "min": 25.283087236380755,
+          "max": 25.283087236380755,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_l->hand_l": {
+          "min": 34.13361367474429,
+          "max": 34.13361367474429,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 26.52522280647357,
+          "max": 26.52522280647357,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 24.154966974396295,
+          "max": 24.154966974396295,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 25.241220593495502,
+          "max": 25.241220593495502,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 23.516379511205614,
+          "max": 23.516379511205614,
+          "minTime": 0,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 11.393932171433326,
+          "maxX": 11.393932171433326,
+          "minY": 31.030270000000037,
+          "maxY": 31.030270000000037
+        },
+        "foot_r": {
+          "minX": -23.272707817315915,
+          "maxX": -23.272707817315915,
+          "minY": 31.030270000000034,
+          "maxY": 31.030270000000034
+        },
+        "toe_l": {
+          "minX": 26.181795574844614,
+          "maxX": 26.181795574844614,
+          "minY": 1.6969700000000678,
+          "maxY": 1.6969700000000678
+        },
+        "toe_r": {
+          "minX": -14.303014413904627,
+          "maxX": -14.303014413904627,
+          "minY": 1.6969700000000643,
+          "maxY": 1.6969700000000643
+        }
+      },
+      "poseJumpMax": {
+        "bone": "cape_l",
+        "time": 0.13333333333333333,
+        "distance": 0.015307528280555274
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "chant_enter",
+      "duration": 1.2999999523162842,
+      "timelines": 140,
+      "keys": 10197,
+      "constantTimelines": 68,
+      "constantKeys": 5372,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "turn-upright/body_under"
+          },
+          {
+            "time": 0.48333001136779785,
+            "name": "E05/body_under"
+          },
+          {
+            "time": 0.5333300232887268,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E00/cape"
+          },
+          {
+            "time": 0.05000000074505806,
+            "name": "E01/cape"
+          },
+          {
+            "time": 0.16666999459266663,
+            "name": "turn-upright/cape"
+          },
+          {
+            "time": 0.48333001136779785,
+            "name": "E05/cape"
+          },
+          {
+            "time": 0.75,
+            "name": "E08/cape"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "E12/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E00/body"
+          },
+          {
+            "time": 0.05000000074505806,
+            "name": "E01/body"
+          },
+          {
+            "time": 0.2833299934864044,
+            "name": "turn-upright/body"
+          },
+          {
+            "time": 0.5,
+            "name": "E05/body"
+          },
+          {
+            "time": 0.75,
+            "name": "E08/body"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "E12/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E00/leg_l"
+          },
+          {
+            "time": 0.05000000074505806,
+            "name": "E01/leg_l"
+          },
+          {
+            "time": 0.25,
+            "name": "turn-upright/leg_l"
+          },
+          {
+            "time": 0.5166699886322021,
+            "name": "E05/leg_l"
+          },
+          {
+            "time": 0.75,
+            "name": "E08/leg_l"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "E12/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E00/leg_r"
+          },
+          {
+            "time": 0.05000000074505806,
+            "name": "E01/leg_r"
+          },
+          {
+            "time": 0.26666998863220215,
+            "name": "turn-upright/leg_r"
+          },
+          {
+            "time": 0.4666700065135956,
+            "name": "E05/leg_r"
+          },
+          {
+            "time": 0.6499999761581421,
+            "name": "E08/leg_r"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "E12/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E00/arm_l"
+          },
+          {
+            "time": 0.05000000074505806,
+            "name": "E01/arm_l"
+          },
+          {
+            "time": 0.25,
+            "name": "turn-upright/arm_l"
+          },
+          {
+            "time": 0.48333001136779785,
+            "name": "E05/arm_l"
+          },
+          {
+            "time": 0.7333300113677979,
+            "name": "E08/arm_l"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "E12/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E00/hand_l"
+          },
+          {
+            "time": 0.05000000074505806,
+            "name": "E01/hand_l"
+          },
+          {
+            "time": 0.25,
+            "name": "turn-upright/hand_l"
+          },
+          {
+            "time": 0.48333001136779785,
+            "name": "E05/hand_l"
+          },
+          {
+            "time": 0.75,
+            "name": "E08/hand_l"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "E12/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E00/arm_r"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/arm_r"
+          },
+          {
+            "time": 0.26666998863220215,
+            "name": "turn-upright/arm_r"
+          },
+          {
+            "time": 0.5333300232887268,
+            "name": "E05/arm_r"
+          },
+          {
+            "time": 0.75,
+            "name": "E08/arm_r"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "E12/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E00/head"
+          },
+          {
+            "time": 0.05000000074505806,
+            "name": "E01/head"
+          },
+          {
+            "time": 0.25,
+            "name": "turn-upright/head"
+          },
+          {
+            "time": 0.48333001136779785,
+            "name": "E05/head"
+          },
+          {
+            "time": 0.75,
+            "name": "E08/head"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "E12/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E00/hand_r"
+          },
+          {
+            "time": 0.05000000074505806,
+            "name": "E01/hand_r"
+          },
+          {
+            "time": 0.25,
+            "name": "turn-upright/hand_r"
+          },
+          {
+            "time": 0.48333001136779785,
+            "name": "E05/hand_r"
+          },
+          {
+            "time": 0.75,
+            "name": "E08/hand_r"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "E12/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 11.604451626758397,
+          "max": 26.434223387860904,
+          "minTime": 0.7416666666666667,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 4.311654465890346,
+          "max": 41.5049560719293,
+          "minTime": 0.275,
+          "maxTime": 0.6166666666666667
+        },
+        "upper_l->fore_l": {
+          "min": 25.283087236380755,
+          "max": 40.67731617320846,
+          "minTime": 0,
+          "maxTime": 0.6166666666666667
+        },
+        "fore_l->hand_l": {
+          "min": 22.210540209433894,
+          "max": 35.8823493284868,
+          "minTime": 0.5583333333333333,
+          "maxTime": 0.9166666666666666
+        },
+        "thigh_r->shin_r": {
+          "min": 26.52522280647357,
+          "max": 29.26607784212414,
+          "minTime": 0,
+          "maxTime": 1.1333333333333333
+        },
+        "shin_r->foot_r": {
+          "min": 24.154966974396295,
+          "max": 31.590220000372156,
+          "minTime": 0,
+          "maxTime": 1.1333333333333333
+        },
+        "thigh_l->shin_l": {
+          "min": 25.241220593495502,
+          "max": 30.04893285406204,
+          "minTime": 0,
+          "maxTime": 0.8333333333333334
+        },
+        "shin_l->foot_l": {
+          "min": 23.516379511205614,
+          "max": 29.01196797752312,
+          "minTime": 0,
+          "maxTime": 1.1333333333333333
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 11.393932171433326,
+          "maxX": 31.865952144995905,
+          "minY": 31.030270000000037,
+          "maxY": 38.60184022063116
+        },
+        "foot_r": {
+          "minX": -38.132415449368125,
+          "maxX": -23.272707817315915,
+          "minY": 31.030270000000034,
+          "maxY": 38.60184025771318
+        },
+        "toe_l": {
+          "minX": 26.181795574844614,
+          "maxX": 52.85084600316737,
+          "minY": 1.6969700000000678,
+          "maxY": 4.922380347519471
+        },
+        "toe_r": {
+          "minX": -33.80542290747418,
+          "maxX": -14.303014413904627,
+          "minY": 1.6969700000000643,
+          "maxY": 3.886090220030063
+        }
+      },
+      "poseJumpMax": {
+        "bone": "arm_r_edge_3",
+        "time": 0.275,
+        "distance": 4.591259069869743
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 131.37928150295377
+    },
+    {
+      "name": "chant_loop",
+      "duration": 2.4000000953674316,
+      "timelines": 140,
+      "keys": 18572,
+      "constantTimelines": 124,
+      "constantKeys": 17980,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E12/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E12/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E12/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E12/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E12/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E12/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E12/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E12/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E12/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 14.921102802393552,
+          "max": 14.921102802393552,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 28.211820738647162,
+          "max": 28.21182073864717,
+          "minTime": 0,
+          "maxTime": 0.016666666666666666
+        },
+        "upper_l->fore_l": {
+          "min": 36.926872424479335,
+          "max": 36.926872424479335,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_l->hand_l": {
+          "min": 31.45859110352156,
+          "max": 31.45859110352156,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 29.26607784212414,
+          "max": 29.26607784212414,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 31.590220000372156,
+          "max": 31.590220000372156,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 27.18907441425428,
+          "max": 27.18907441425428,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 29.01196797752312,
+          "max": 29.01196797752312,
+          "minTime": 0,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 26.747372987230435,
+          "maxX": 26.747372987230435,
+          "minY": 36.10894026329045,
+          "maxY": 36.10894026329045
+        },
+        "foot_r": {
+          "minX": -37.446327489282474,
+          "maxX": -37.446327489282474,
+          "minY": 33.43421032001499,
+          "maxY": 33.43421032001499
+        },
+        "toe_l": {
+          "minX": 40.92347662895899,
+          "maxX": 40.92347662895899,
+          "minY": 4.547050251693804,
+          "maxY": 4.547050251693804
+        },
+        "toe_r": {
+          "minX": -33.434214103069365,
+          "maxX": -33.434214103069365,
+          "minY": 3.477160348625251,
+          "maxY": 3.477160348625251
+        }
+      },
+      "poseJumpMax": {
+        "bone": "cape_r",
+        "time": 0.16666666666666666,
+        "distance": 0.018151766283748073
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "chant_cancel",
+      "duration": 1.2999999523162842,
+      "timelines": 140,
+      "keys": 10197,
+      "constantTimelines": 68,
+      "constantKeys": 5372,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          },
+          {
+            "time": 0.7833300232887268,
+            "name": "E05/body_under"
+          },
+          {
+            "time": 0.833329975605011,
+            "name": "turn-upright/body_under"
+          },
+          {
+            "time": 0.916670024394989,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E12/cape"
+          },
+          {
+            "time": 0.36667001247406006,
+            "name": "E08/cape"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "E05/cape"
+          },
+          {
+            "time": 0.833329975605011,
+            "name": "turn-upright/cape"
+          },
+          {
+            "time": 1.149999976158142,
+            "name": "E01/cape"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "E00/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E12/body"
+          },
+          {
+            "time": 0.36667001247406006,
+            "name": "E08/body"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "E05/body"
+          },
+          {
+            "time": 0.8666700124740601,
+            "name": "turn-upright/body"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "E01/body"
+          },
+          {
+            "time": 1.2333300113677979,
+            "name": "E00/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E12/leg_l"
+          },
+          {
+            "time": 0.36667001247406006,
+            "name": "E08/leg_l"
+          },
+          {
+            "time": 0.6000000238418579,
+            "name": "E05/leg_l"
+          },
+          {
+            "time": 0.8500000238418579,
+            "name": "turn-upright/leg_l"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "E01/leg_l"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "E00/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E12/leg_r"
+          },
+          {
+            "time": 0.36667001247406006,
+            "name": "E08/leg_r"
+          },
+          {
+            "time": 0.666670024394989,
+            "name": "E05/leg_r"
+          },
+          {
+            "time": 0.9333299994468689,
+            "name": "turn-upright/leg_r"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "E01/leg_r"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "E00/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E12/arm_l"
+          },
+          {
+            "time": 0.36667001247406006,
+            "name": "E08/arm_l"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "E05/arm_l"
+          },
+          {
+            "time": 0.833329975605011,
+            "name": "turn-upright/arm_l"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "E01/arm_l"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "E00/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E12/hand_l"
+          },
+          {
+            "time": 0.36667001247406006,
+            "name": "E08/hand_l"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "E05/hand_l"
+          },
+          {
+            "time": 0.833329975605011,
+            "name": "turn-upright/hand_l"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "E01/hand_l"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "E00/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E12/arm_r"
+          },
+          {
+            "time": 0.36667001247406006,
+            "name": "E08/arm_r"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "E05/arm_r"
+          },
+          {
+            "time": 0.8166700005531311,
+            "name": "turn-upright/arm_r"
+          },
+          {
+            "time": 1.100000023841858,
+            "name": "E01/arm_r"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "E00/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E12/head"
+          },
+          {
+            "time": 0.36667001247406006,
+            "name": "E08/head"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "E05/head"
+          },
+          {
+            "time": 0.833329975605011,
+            "name": "turn-upright/head"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "E01/head"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "E00/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E12/hand_r"
+          },
+          {
+            "time": 0.36667001247406006,
+            "name": "E08/hand_r"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "E05/hand_r"
+          },
+          {
+            "time": 0.833329975605011,
+            "name": "turn-upright/hand_r"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "E01/hand_r"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "E00/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 10.420004522797303,
+          "max": 26.434223387860904,
+          "minTime": 0.6,
+          "maxTime": 1.2999999523162842
+        },
+        "fore_r->hand_r": {
+          "min": 5.337500510430778,
+          "max": 44.02096145627919,
+          "minTime": 1.075,
+          "maxTime": 0.7166666666666667
+        },
+        "upper_l->fore_l": {
+          "min": 25.283087236380755,
+          "max": 43.407004532707845,
+          "minTime": 1.2999999523162842,
+          "maxTime": 0.6666666666666666
+        },
+        "fore_l->hand_l": {
+          "min": 22.940599263073036,
+          "max": 36.27093143862997,
+          "minTime": 0.925,
+          "maxTime": 0.4666666666666667
+        },
+        "thigh_r->shin_r": {
+          "min": 26.52522280647357,
+          "max": 29.26607784212414,
+          "minTime": 1.2999999523162842,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 24.154966974396295,
+          "max": 31.590220000372156,
+          "minTime": 1.2999999523162842,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 25.241220593495502,
+          "max": 30.04893291028312,
+          "minTime": 1.2999999523162842,
+          "maxTime": 0.4666666666666667
+        },
+        "shin_l->foot_l": {
+          "min": 23.516379511205614,
+          "max": 29.01196797752312,
+          "minTime": 1.2999999523162842,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 11.393932171433326,
+          "maxX": 31.86595226831617,
+          "minY": 31.030270000000037,
+          "maxY": 38.60184026382363
+        },
+        "foot_r": {
+          "minX": -38.132415459104294,
+          "maxX": -23.272707817315915,
+          "minY": 31.030270000000034,
+          "maxY": 38.60184029726581
+        },
+        "toe_l": {
+          "minX": 26.181795574844614,
+          "maxX": 52.85084618496199,
+          "minY": 1.6969700000000678,
+          "maxY": 4.922380359769136
+        },
+        "toe_r": {
+          "minX": -33.80542291274961,
+          "maxX": -14.303014413904627,
+          "minY": 1.6969700000000643,
+          "maxY": 3.8860902265445034
+        }
+      },
+      "poseJumpMax": {
+        "bone": "arm_r_edge_5",
+        "time": 1.075,
+        "distance": 4.033438879257031
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 131.37928150295377
+    },
+    {
+      "name": "chant_ack",
+      "duration": 0.5,
+      "timelines": 140,
+      "keys": 3980,
+      "constantTimelines": 120,
+      "constantKeys": 3720,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E12/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E12/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E12/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E12/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E12/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E12/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E12/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E12/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E12/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 14.921102802393552,
+          "max": 14.921102802393552,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 28.211820738647162,
+          "max": 28.211820738647162,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "upper_l->fore_l": {
+          "min": 36.926872424479335,
+          "max": 36.926872424479335,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_l->hand_l": {
+          "min": 31.45859110352156,
+          "max": 31.45859110352156,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 29.26607784212414,
+          "max": 29.26607784212414,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 31.590220000372156,
+          "max": 31.590220000372156,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 27.18907441425428,
+          "max": 27.18907441425428,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 29.01196797752312,
+          "max": 29.01196797752312,
+          "minTime": 0,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 26.747372987230435,
+          "maxX": 26.747372987230435,
+          "minY": 36.10894026329045,
+          "maxY": 36.10894026329045
+        },
+        "foot_r": {
+          "minX": -37.446327489282474,
+          "maxX": -37.446327489282474,
+          "minY": 33.43421032001499,
+          "maxY": 33.43421032001499
+        },
+        "toe_l": {
+          "minX": 40.92347662895899,
+          "maxX": 40.92347662895899,
+          "minY": 4.547050251693804,
+          "maxY": 4.547050251693804
+        },
+        "toe_r": {
+          "minX": -33.434214103069365,
+          "maxX": -33.434214103069365,
+          "minY": 3.477160348625251,
+          "maxY": 3.477160348625251
+        }
+      },
+      "poseJumpMax": {
+        "bone": "head_cage_5",
+        "time": 0.375,
+        "distance": 0.21914946582605302
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "explosion_release",
+      "duration": 0.699999988079071,
+      "timelines": 141,
+      "keys": 5528,
+      "constantTimelines": 68,
+      "constantKeys": 2924,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1,
+        "EventTimeline": 1
+      },
+      "events": [
+        {
+          "time": 0.4399999976158142,
+          "name": "release"
+        }
+      ],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E12/cape"
+          },
+          {
+            "time": 0.4166699945926666,
+            "name": "release/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E12/body"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "release/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E12/leg_l"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "release/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E12/leg_r"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "release/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E12/arm_l"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "release/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E12/hand_l"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "release/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E12/arm_r"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "release/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E12/head"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "release/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E12/hand_r"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "release/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 14.921102802393552,
+          "max": 22.367787024750257,
+          "minTime": 0,
+          "maxTime": 0.45
+        },
+        "fore_r->hand_r": {
+          "min": 28.211820738647162,
+          "max": 28.68402483184058,
+          "minTime": 0,
+          "maxTime": 0.45
+        },
+        "upper_l->fore_l": {
+          "min": 36.926872424479335,
+          "max": 41.5886329671675,
+          "minTime": 0,
+          "maxTime": 0.45
+        },
+        "fore_l->hand_l": {
+          "min": 31.092715657673274,
+          "max": 31.45859110352156,
+          "minTime": 0.36666666666666664,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 29.088904092742794,
+          "max": 29.26607784212414,
+          "minTime": 0.45,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 31.590220000372156,
+          "max": 33.085691139514225,
+          "minTime": 0,
+          "maxTime": 0.45
+        },
+        "thigh_l->shin_l": {
+          "min": 27.18907441425428,
+          "max": 28.68671770062458,
+          "minTime": 0,
+          "maxTime": 0.45
+        },
+        "shin_l->foot_l": {
+          "min": 29.01196797752312,
+          "max": 29.82272962172603,
+          "minTime": 0,
+          "maxTime": 0.45
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 26.747372987230435,
+          "maxX": 34.17491215427201,
+          "minY": 33.063509841461226,
+          "maxY": 36.10894026329045
+        },
+        "foot_r": {
+          "minX": -46.40006719543068,
+          "maxX": -37.446327489282474,
+          "minY": 30.840759892959632,
+          "maxY": 33.43421032001499
+        },
+        "toe_l": {
+          "minX": 40.92347662895899,
+          "maxX": 45.84438506900731,
+          "minY": 4.547050251693804,
+          "maxY": 7.223949923248362
+        },
+        "toe_r": {
+          "minX": -44.17730415857291,
+          "maxX": -33.434214103069365,
+          "minY": 3.477160348625251,
+          "maxY": 3.6119799754334174
+        }
+      },
+      "poseJumpMax": {
+        "bone": "cape_l",
+        "time": 0.3333333333333333,
+        "distance": 1.4664902309655083
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 25.90306188232335
+    },
+    {
+      "name": "explosion_hold",
+      "duration": 0.699999988079071,
+      "timelines": 140,
+      "keys": 5516,
+      "constantTimelines": 124,
+      "constantKeys": 5332,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "release/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "release/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "release/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "release/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "release/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "release/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "release/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "release/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "release/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 22.367787024750257,
+          "max": 22.367787024750257,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 28.68402483184058,
+          "max": 28.68402483184059,
+          "minTime": 0,
+          "maxTime": 0.03333333333333333
+        },
+        "upper_l->fore_l": {
+          "min": 41.5886329671675,
+          "max": 41.588632967167506,
+          "minTime": 0,
+          "maxTime": 0.075
+        },
+        "fore_l->hand_l": {
+          "min": 31.131009593090557,
+          "max": 31.131009593090557,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 29.088904092742794,
+          "max": 29.088904092742794,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 33.085691139514225,
+          "max": 33.085691139514225,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 28.68671770062458,
+          "max": 28.68671770062458,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 29.82272962172603,
+          "max": 29.82272962172603,
+          "minTime": 0,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 34.17491215427201,
+          "maxX": 34.17491215427201,
+          "minY": 33.063509841461226,
+          "maxY": 33.063509841461226
+        },
+        "foot_r": {
+          "minX": -46.40006719543068,
+          "maxX": -46.40006719543068,
+          "minY": 30.840759892959632,
+          "maxY": 30.840759892959632
+        },
+        "toe_l": {
+          "minX": 45.84438506900731,
+          "maxX": 45.84438506900731,
+          "minY": 7.223949923248362,
+          "maxY": 7.223949923248362
+        },
+        "toe_r": {
+          "minX": -44.17730415857291,
+          "maxX": -44.17730415857291,
+          "minY": 3.6119799754334174,
+          "maxY": 3.6119799754334174
+        }
+      },
+      "poseJumpMax": {
+        "bone": "cape_r",
+        "time": 0.041666666666666664,
+        "distance": 0.062165905891262925
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "explosion_exit",
+      "duration": 0.6000000238418579,
+      "timelines": 140,
+      "keys": 4759,
+      "constantTimelines": 61,
+      "constantKeys": 2257,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "release/cape"
+          },
+          {
+            "time": 0.0666700005531311,
+            "name": "fall-lean/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "release/body"
+          },
+          {
+            "time": 0.2833299934864044,
+            "name": "fall-lean/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "release/leg_l"
+          },
+          {
+            "time": 0.20000000298023224,
+            "name": "fall-lean/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "release/leg_r"
+          },
+          {
+            "time": 0.25,
+            "name": "fall-lean/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "release/arm_l"
+          },
+          {
+            "time": 0.4333299994468689,
+            "name": "fall-lean/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "release/hand_l"
+          },
+          {
+            "time": 0.25,
+            "name": "fall-lean/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "release/arm_r"
+          },
+          {
+            "time": 0.3166700005531311,
+            "name": "fall-lean/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "release/head"
+          },
+          {
+            "time": 0.25,
+            "name": "fall-lean/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "release/hand_r"
+          },
+          {
+            "time": 0.25,
+            "name": "fall-lean/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 14.14742531318928,
+          "max": 22.367787024750257,
+          "minTime": 0.36666666666666664,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 16.137959539339114,
+          "max": 28.68402483184058,
+          "minTime": 0.5083333333333333,
+          "maxTime": 0
+        },
+        "upper_l->fore_l": {
+          "min": 29.055734237879943,
+          "max": 41.5886329671675,
+          "minTime": 0.3416666666666667,
+          "maxTime": 0
+        },
+        "fore_l->hand_l": {
+          "min": 18.492368646471622,
+          "max": 31.131009593090557,
+          "minTime": 0.3333333333333333,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 26.172201101770153,
+          "max": 29.088904092742794,
+          "minTime": 0.6000000238418579,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 30.885194613056097,
+          "max": 33.085691139514225,
+          "minTime": 0.6000000238418579,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 25.954841191094765,
+          "max": 28.68671770062458,
+          "minTime": 0.6000000238418579,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 25.41451958345646,
+          "max": 29.82272962172603,
+          "minTime": 0.6000000238418579,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 29.77669211481784,
+          "maxX": 34.17491215427201,
+          "minY": 33.063509841461226,
+          "maxY": 36.508799930114776
+        },
+        "foot_r": {
+          "minX": -46.40006719543068,
+          "maxX": -35.73201781314961,
+          "minY": 30.840759892959632,
+          "maxY": 33.40166993906024
+        },
+        "toe_l": {
+          "minX": 41.169505280506826,
+          "maxX": 45.84438506900731,
+          "minY": 7.223949923248362,
+          "maxY": 8.803539886207641
+        },
+        "toe_r": {
+          "minX": -44.17730415857291,
+          "maxX": -34.955224152400724,
+          "minY": 3.6119799754334174,
+          "maxY": 4.401769950122894
+        }
+      },
+      "poseJumpMax": {
+        "bone": "left_grip_cage_0",
+        "time": 0.3333333333333333,
+        "distance": 2.85888560481806
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 134.25874256379842
+    },
+    {
+      "name": "relaxed_fall",
+      "duration": 1.399999976158142,
+      "timelines": 140,
+      "keys": 10936,
+      "constantTimelines": 61,
+      "constantKeys": 5185,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "fall-lean/cape"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "crouch/cape"
+          },
+          {
+            "time": 0.4166699945926666,
+            "name": "brace/cape"
+          },
+          {
+            "time": 0.7666699886322021,
+            "name": "lower/cape"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "prone/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "fall-lean/body"
+          },
+          {
+            "time": 0.23332999646663666,
+            "name": "crouch/body"
+          },
+          {
+            "time": 0.5,
+            "name": "brace/body"
+          },
+          {
+            "time": 0.800000011920929,
+            "name": "lower/body"
+          },
+          {
+            "time": 1.033329963684082,
+            "name": "prone/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "fall-lean/leg_l"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "crouch/leg_l"
+          },
+          {
+            "time": 0.48333001136779785,
+            "name": "brace/leg_l"
+          },
+          {
+            "time": 0.7666699886322021,
+            "name": "lower/leg_l"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "prone/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "fall-lean/leg_r"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "crouch/leg_r"
+          },
+          {
+            "time": 0.44999998807907104,
+            "name": "brace/leg_r"
+          },
+          {
+            "time": 0.8500000238418579,
+            "name": "lower/leg_r"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "prone/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "fall-lean/arm_l"
+          },
+          {
+            "time": 0.23332999646663666,
+            "name": "crouch/arm_l"
+          },
+          {
+            "time": 0.44999998807907104,
+            "name": "brace/arm_l"
+          },
+          {
+            "time": 0.7333300113677979,
+            "name": "lower/arm_l"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "prone/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "fall-lean/hand_l"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "crouch/hand_l"
+          },
+          {
+            "time": 0.44999998807907104,
+            "name": "brace/hand_l"
+          },
+          {
+            "time": 0.800000011920929,
+            "name": "lower/hand_l"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "prone/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "fall-lean/arm_r"
+          },
+          {
+            "time": 0.20000000298023224,
+            "name": "crouch/arm_r"
+          },
+          {
+            "time": 0.44999998807907104,
+            "name": "brace/arm_r"
+          },
+          {
+            "time": 0.800000011920929,
+            "name": "lower/arm_r"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "prone/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "fall-lean/head"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "crouch/head"
+          },
+          {
+            "time": 0.44999998807907104,
+            "name": "brace/head"
+          },
+          {
+            "time": 0.800000011920929,
+            "name": "lower/head"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "prone/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "fall-lean/hand_r"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "crouch/hand_r"
+          },
+          {
+            "time": 0.44999998807907104,
+            "name": "brace/hand_r"
+          },
+          {
+            "time": 0.800000011920929,
+            "name": "lower/hand_r"
+          },
+          {
+            "time": 1.0666699409484863,
+            "name": "prone/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 16.63790255484016,
+          "max": 34.90101763576668,
+          "minTime": 0.11666666666666667,
+          "maxTime": 0.65
+        },
+        "fore_r->hand_r": {
+          "min": 15.595909013031427,
+          "max": 29.143422559795724,
+          "minTime": 1.05,
+          "maxTime": 0.65
+        },
+        "upper_l->fore_l": {
+          "min": 13.380895934556214,
+          "max": 45.69409954169004,
+          "minTime": 0.8833333333333333,
+          "maxTime": 0.3
+        },
+        "fore_l->hand_l": {
+          "min": 6.424931902013389,
+          "max": 32.281880535088696,
+          "minTime": 0.9,
+          "maxTime": 0.38333333333333336
+        },
+        "thigh_r->shin_r": {
+          "min": 22.091288447701576,
+          "max": 31.021341353297903,
+          "minTime": 0.8083333333333333,
+          "maxTime": 1.0833333333333333
+        },
+        "shin_r->foot_r": {
+          "min": 30.885194613056097,
+          "max": 57.60210831606707,
+          "minTime": 0,
+          "maxTime": 0.9333333333333333
+        },
+        "thigh_l->shin_l": {
+          "min": 24.360267587794393,
+          "max": 42.479296562818426,
+          "minTime": 1.2333333333333334,
+          "maxTime": 0.3333333333333333
+        },
+        "shin_l->foot_l": {
+          "min": 24.78511264125115,
+          "max": 51.32889426368154,
+          "minTime": 0.10833333333333334,
+          "maxTime": 0.7166666666666667
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": -125.2079412178814,
+          "maxX": 29.77669211481784,
+          "minY": 31.46293062399356,
+          "maxY": 65.62690665239826
+        },
+        "foot_r": {
+          "minX": -128.7599381817006,
+          "maxX": -3.237377521890245,
+          "minY": 26.348420416504286,
+          "maxY": 39.073406548956186
+        },
+        "toe_l": {
+          "minX": -161.61592042085243,
+          "maxX": 41.169505280506826,
+          "minY": 7.260792776252924,
+          "maxY": 66.23845281995467
+        },
+        "toe_r": {
+          "minX": -182.85244819762,
+          "maxX": -2.699494379217312,
+          "minY": 4.401769950122894,
+          "maxY": 33.57719611890718
+        }
+      },
+      "poseJumpMax": {
+        "bone": "head_cage_5",
+        "time": 0.15833333333333333,
+        "distance": 4.782355083764128
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 208.95388945353193
+    },
+    {
+      "name": "relaxed_loop",
+      "duration": 3,
+      "timelines": 140,
+      "keys": 23180,
+      "constantTimelines": 124,
+      "constantKeys": 22444,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "prone/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "prone/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "prone/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "prone/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "prone/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "prone/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "prone/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "prone/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "prone/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 19.3036397689279,
+          "max": 19.3036397689279,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 17.661048147869266,
+          "max": 17.661048147869266,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "upper_l->fore_l": {
+          "min": 34.195346038861366,
+          "max": 34.195346038861366,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_l->hand_l": {
+          "min": 10.967988196644907,
+          "max": 10.967988196644907,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 30.500918454824262,
+          "max": 30.500918454824262,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 42.623979273681584,
+          "max": 42.623979273681584,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 24.360267587794393,
+          "max": 24.360267587794393,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 39.082068843919565,
+          "max": 39.082068843919565,
+          "minTime": 0,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": -125.2079412178814,
+          "maxX": -125.2079412178814,
+          "minY": 56.83195914794921,
+          "maxY": 56.83195914794921
+        },
+        "foot_r": {
+          "minX": -128.7599381817006,
+          "maxX": -128.7599381817006,
+          "minY": 38.18397810031891,
+          "maxY": 38.18397810031891
+        },
+        "toe_l": {
+          "minX": -161.61592042085243,
+          "maxX": -161.61592042085243,
+          "minY": 59.19995881530761,
+          "maxY": 59.19995881530761
+        },
+        "toe_r": {
+          "minX": -180.5599082041329,
+          "maxX": -180.5599082041329,
+          "minY": 30.19198860141755,
+          "maxY": 30.19198860141755
+        }
+      },
+      "poseJumpMax": {
+        "bone": "cape_r",
+        "time": 0.23333333333333334,
+        "distance": 0.013162299639954737
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "get_up",
+      "duration": 3.6700000762939453,
+      "timelines": 140,
+      "keys": 28556,
+      "constantTimelines": 61,
+      "constantKeys": 13542,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          },
+          {
+            "time": 3.1500000953674316,
+            "name": "E05/body_under"
+          },
+          {
+            "time": 3.200000047683716,
+            "name": "turn-upright/body_under"
+          },
+          {
+            "time": 3.283329963684082,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "prone/cape"
+          },
+          {
+            "time": 0.26666998863220215,
+            "name": "lower/cape"
+          },
+          {
+            "time": 0.6833299994468689,
+            "name": "brace/cape"
+          },
+          {
+            "time": 1.0499999523162842,
+            "name": "kneel-rise/cape"
+          },
+          {
+            "time": 1.600000023841858,
+            "name": "fall-lean/cape"
+          },
+          {
+            "time": 2.1500000953674316,
+            "name": "E12/cape"
+          },
+          {
+            "time": 2.733330011367798,
+            "name": "E08/cape"
+          },
+          {
+            "time": 2.9333300590515137,
+            "name": "E05/cape"
+          },
+          {
+            "time": 3.200000047683716,
+            "name": "turn-upright/cape"
+          },
+          {
+            "time": 3.516669988632202,
+            "name": "E01/cape"
+          },
+          {
+            "time": 3.6333301067352295,
+            "name": "E00/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "prone/body"
+          },
+          {
+            "time": 0.21667000651359558,
+            "name": "lower/body"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "brace/body"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "kneel-rise/body"
+          },
+          {
+            "time": 1.600000023841858,
+            "name": "fall-lean/body"
+          },
+          {
+            "time": 2.083329916000366,
+            "name": "E12/body"
+          },
+          {
+            "time": 2.733330011367798,
+            "name": "E08/body"
+          },
+          {
+            "time": 2.950000047683716,
+            "name": "E05/body"
+          },
+          {
+            "time": 3.233330011367798,
+            "name": "turn-upright/body"
+          },
+          {
+            "time": 3.450000047683716,
+            "name": "E01/body"
+          },
+          {
+            "time": 3.5999999046325684,
+            "name": "E00/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "prone/leg_l"
+          },
+          {
+            "time": 0.21667000651359558,
+            "name": "lower/leg_l"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "brace/leg_l"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "kneel-rise/leg_l"
+          },
+          {
+            "time": 1.600000023841858,
+            "name": "fall-lean/leg_l"
+          },
+          {
+            "time": 2.1500000953674316,
+            "name": "E12/leg_l"
+          },
+          {
+            "time": 2.733330011367798,
+            "name": "E08/leg_l"
+          },
+          {
+            "time": 2.983330011367798,
+            "name": "E05/leg_l"
+          },
+          {
+            "time": 3.216670036315918,
+            "name": "turn-upright/leg_l"
+          },
+          {
+            "time": 3.4333300590515137,
+            "name": "E01/leg_l"
+          },
+          {
+            "time": 3.6333301067352295,
+            "name": "E00/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "prone/leg_r"
+          },
+          {
+            "time": 0.21667000651359558,
+            "name": "lower/leg_r"
+          },
+          {
+            "time": 0.5,
+            "name": "brace/leg_r"
+          },
+          {
+            "time": 1.216670036315918,
+            "name": "kneel-rise/leg_r"
+          },
+          {
+            "time": 1.600000023841858,
+            "name": "fall-lean/leg_r"
+          },
+          {
+            "time": 2.166670083999634,
+            "name": "E12/leg_r"
+          },
+          {
+            "time": 2.733330011367798,
+            "name": "E08/leg_r"
+          },
+          {
+            "time": 3.033329963684082,
+            "name": "E05/leg_r"
+          },
+          {
+            "time": 3.299999952316284,
+            "name": "turn-upright/leg_r"
+          },
+          {
+            "time": 3.466670036315918,
+            "name": "E01/leg_r"
+          },
+          {
+            "time": 3.6333301067352295,
+            "name": "E00/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "prone/arm_l"
+          },
+          {
+            "time": 0.21667000651359558,
+            "name": "lower/arm_l"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "brace/arm_l"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "kneel-rise/arm_l"
+          },
+          {
+            "time": 1.600000023841858,
+            "name": "fall-lean/arm_l"
+          },
+          {
+            "time": 1.899999976158142,
+            "name": "E12/arm_l"
+          },
+          {
+            "time": 2.733330011367798,
+            "name": "E08/arm_l"
+          },
+          {
+            "time": 2.950000047683716,
+            "name": "E05/arm_l"
+          },
+          {
+            "time": 3.200000047683716,
+            "name": "turn-upright/arm_l"
+          },
+          {
+            "time": 3.4333300590515137,
+            "name": "E01/arm_l"
+          },
+          {
+            "time": 3.6333301067352295,
+            "name": "E00/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "prone/hand_l"
+          },
+          {
+            "time": 0.21667000651359558,
+            "name": "lower/hand_l"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "brace/hand_l"
+          },
+          {
+            "time": 1.0833300352096558,
+            "name": "kneel-rise/hand_l"
+          },
+          {
+            "time": 1.600000023841858,
+            "name": "fall-lean/hand_l"
+          },
+          {
+            "time": 2.1500000953674316,
+            "name": "E12/hand_l"
+          },
+          {
+            "time": 2.733330011367798,
+            "name": "E08/hand_l"
+          },
+          {
+            "time": 2.9333300590515137,
+            "name": "E05/hand_l"
+          },
+          {
+            "time": 3.200000047683716,
+            "name": "turn-upright/hand_l"
+          },
+          {
+            "time": 3.4333300590515137,
+            "name": "E01/hand_l"
+          },
+          {
+            "time": 3.6333301067352295,
+            "name": "E00/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "prone/arm_r"
+          },
+          {
+            "time": 0.21667000651359558,
+            "name": "lower/arm_r"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "brace/arm_r"
+          },
+          {
+            "time": 1.149999976158142,
+            "name": "kneel-rise/arm_r"
+          },
+          {
+            "time": 1.5833300352096558,
+            "name": "fall-lean/arm_r"
+          },
+          {
+            "time": 2.083329916000366,
+            "name": "E12/arm_r"
+          },
+          {
+            "time": 2.733330011367798,
+            "name": "E08/arm_r"
+          },
+          {
+            "time": 2.950000047683716,
+            "name": "E05/arm_r"
+          },
+          {
+            "time": 3.1833300590515137,
+            "name": "turn-upright/arm_r"
+          },
+          {
+            "time": 3.466670036315918,
+            "name": "E01/arm_r"
+          },
+          {
+            "time": 3.6500000953674316,
+            "name": "E00/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "prone/head"
+          },
+          {
+            "time": 0.21667000651359558,
+            "name": "lower/head"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "brace/head"
+          },
+          {
+            "time": 1.0833300352096558,
+            "name": "kneel-rise/head"
+          },
+          {
+            "time": 1.600000023841858,
+            "name": "fall-lean/head"
+          },
+          {
+            "time": 2.1500000953674316,
+            "name": "E12/head"
+          },
+          {
+            "time": 2.733330011367798,
+            "name": "E08/head"
+          },
+          {
+            "time": 2.9333300590515137,
+            "name": "E05/head"
+          },
+          {
+            "time": 3.200000047683716,
+            "name": "turn-upright/head"
+          },
+          {
+            "time": 3.4333300590515137,
+            "name": "E01/head"
+          },
+          {
+            "time": 3.6333301067352295,
+            "name": "E00/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "prone/hand_r"
+          },
+          {
+            "time": 0.21667000651359558,
+            "name": "lower/hand_r"
+          },
+          {
+            "time": 0.5666700005531311,
+            "name": "brace/hand_r"
+          },
+          {
+            "time": 1.0833300352096558,
+            "name": "kneel-rise/hand_r"
+          },
+          {
+            "time": 1.600000023841858,
+            "name": "fall-lean/hand_r"
+          },
+          {
+            "time": 2.1500000953674316,
+            "name": "E12/hand_r"
+          },
+          {
+            "time": 2.733330011367798,
+            "name": "E08/hand_r"
+          },
+          {
+            "time": 2.9333300590515137,
+            "name": "E05/hand_r"
+          },
+          {
+            "time": 3.200000047683716,
+            "name": "turn-upright/hand_r"
+          },
+          {
+            "time": 3.4333300590515137,
+            "name": "E01/hand_r"
+          },
+          {
+            "time": 3.6333301067352295,
+            "name": "E00/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 10.427746121293481,
+          "max": 40.4851599007499,
+          "minTime": 2.966666666666667,
+          "maxTime": 0.8333333333333334
+        },
+        "fore_r->hand_r": {
+          "min": 5.285847680923347,
+          "max": 44.01099926355639,
+          "minTime": 3.45,
+          "maxTime": 3.0833333333333335
+        },
+        "upper_l->fore_l": {
+          "min": 20.205302900827096,
+          "max": 49.29784285895888,
+          "minTime": 0.3,
+          "maxTime": 1.2833333333333334
+        },
+        "fore_l->hand_l": {
+          "min": 10.784502146430457,
+          "max": 36.26950315551447,
+          "minTime": 0.13333333333333333,
+          "maxTime": 2.8333333333333335
+        },
+        "thigh_r->shin_r": {
+          "min": 20.071508951220274,
+          "max": 48.001470912432474,
+          "minTime": 0.5333333333333333,
+          "maxTime": 1.2333333333333334
+        },
+        "shin_r->foot_r": {
+          "min": 24.154966974396295,
+          "max": 57.53852300301872,
+          "minTime": 3.6700000762939453,
+          "maxTime": 0.36666666666666664
+        },
+        "thigh_l->shin_l": {
+          "min": 24.04448373411789,
+          "max": 32.35870853852604,
+          "minTime": 0.5833333333333334,
+          "maxTime": 0.31666666666666665
+        },
+        "shin_l->foot_l": {
+          "min": 23.516379511205614,
+          "max": 51.06361185478613,
+          "minTime": 3.6700000762939453,
+          "maxTime": 0.6833333333333333
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": -125.2079412178814,
+          "maxX": 63.07116163738627,
+          "minY": 31.030270000000037,
+          "maxY": 65.63198980014924
+        },
+        "foot_r": {
+          "minX": -128.7599381817006,
+          "maxX": -23.272707817315915,
+          "minY": 26.348583772072097,
+          "maxY": 39.07391871411144
+        },
+        "toe_l": {
+          "minX": -161.61592042085243,
+          "maxX": 78.1185949403654,
+          "minY": 1.6969700000000678,
+          "maxY": 66.24252030146654
+        },
+        "toe_r": {
+          "minX": -182.8537682180457,
+          "maxX": -14.303014413904627,
+          "minY": 1.6969700000000643,
+          "maxY": 33.57914828498593
+        }
+      },
+      "poseJumpMax": {
+        "bone": "arm_r_edge_5",
+        "time": 3.441666666666667,
+        "distance": 4.060806284269899
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 227.245783542111
+    },
+    {
+      "name": "hit",
+      "duration": 0.41999998688697815,
+      "timelines": 140,
+      "keys": 3468,
+      "constantTimelines": 105,
+      "constantKeys": 2835,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E00/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E00/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E00/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E00/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E00/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E00/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E00/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E00/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E00/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 26.434223387860904,
+          "max": 26.434223387860914,
+          "minTime": 0,
+          "maxTime": 0.025
+        },
+        "fore_r->hand_r": {
+          "min": 34.21959009253319,
+          "max": 34.21959009253321,
+          "minTime": 0.016666666666666666,
+          "maxTime": 0.041666666666666664
+        },
+        "upper_l->fore_l": {
+          "min": 25.283087236380755,
+          "max": 25.283087236380755,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_l->hand_l": {
+          "min": 34.13361367474429,
+          "max": 34.13361367474429,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 26.52522280647357,
+          "max": 26.52522280647357,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 24.154966974396295,
+          "max": 24.154966974396295,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 25.241220593495502,
+          "max": 25.241220593495502,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 23.516379511205614,
+          "max": 23.516379511205614,
+          "minTime": 0,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 11.393932171433326,
+          "maxX": 11.393932171433326,
+          "minY": 31.030270000000037,
+          "maxY": 31.030270000000037
+        },
+        "foot_r": {
+          "minX": -23.272707817315915,
+          "maxX": -23.272707817315915,
+          "minY": 31.030270000000034,
+          "maxY": 31.030270000000034
+        },
+        "toe_l": {
+          "minX": 26.181795574844614,
+          "maxX": 26.181795574844614,
+          "minY": 1.6969700000000678,
+          "maxY": 1.6969700000000678
+        },
+        "toe_r": {
+          "minX": -14.303014413904627,
+          "maxX": -14.303014413904627,
+          "minY": 1.6969700000000643,
+          "maxY": 1.6969700000000643
+        }
+      },
+      "poseJumpMax": {
+        "bone": "head_cage_5",
+        "time": 0.11666666666666667,
+        "distance": 0.6152887837147717
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "hit_chant",
+      "duration": 0.41999998688697815,
+      "timelines": 140,
+      "keys": 3468,
+      "constantTimelines": 105,
+      "constantKeys": 2835,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E12/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E12/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E12/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E12/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E12/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E12/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E12/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E12/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E12/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 14.921102802393552,
+          "max": 14.921102802393552,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 28.211820738647162,
+          "max": 28.21182073864717,
+          "minTime": 0,
+          "maxTime": 0.058333333333333334
+        },
+        "upper_l->fore_l": {
+          "min": 36.926872424479335,
+          "max": 36.926872424479335,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_l->hand_l": {
+          "min": 31.45859110352156,
+          "max": 31.45859110352156,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 29.26607784212414,
+          "max": 29.26607784212414,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 31.590220000372156,
+          "max": 31.590220000372156,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 27.18907441425428,
+          "max": 27.18907441425428,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 29.01196797752312,
+          "max": 29.01196797752312,
+          "minTime": 0,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 26.747372987230435,
+          "maxX": 26.747372987230435,
+          "minY": 36.10894026329045,
+          "maxY": 36.10894026329045
+        },
+        "foot_r": {
+          "minX": -37.446327489282474,
+          "maxX": -37.446327489282474,
+          "minY": 33.43421032001499,
+          "maxY": 33.43421032001499
+        },
+        "toe_l": {
+          "minX": 40.92347662895899,
+          "maxX": 40.92347662895899,
+          "minY": 4.547050251693804,
+          "maxY": 4.547050251693804
+        },
+        "toe_r": {
+          "minX": -33.434214103069365,
+          "maxX": -33.434214103069365,
+          "minY": 3.477160348625251,
+          "maxY": 3.477160348625251
+        }
+      },
+      "poseJumpMax": {
+        "bone": "head_cage_5",
+        "time": 0.11666666666666667,
+        "distance": 0.6141470492178163
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "hit_down",
+      "duration": 0.41999998688697815,
+      "timelines": 140,
+      "keys": 3468,
+      "constantTimelines": 105,
+      "constantKeys": 2835,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "prone/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "prone/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "prone/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "prone/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "prone/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "prone/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "prone/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "prone/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "prone/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 19.3036397689279,
+          "max": 19.3036397689279,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 17.661048147869266,
+          "max": 17.661048147869266,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "upper_l->fore_l": {
+          "min": 34.19534603886135,
+          "max": 34.19534603886137,
+          "minTime": 0.008333333333333333,
+          "maxTime": 0.058333333333333334
+        },
+        "fore_l->hand_l": {
+          "min": 10.967988196644907,
+          "max": 10.967988196644907,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 30.500918454824262,
+          "max": 30.500918454824262,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 42.623979273681584,
+          "max": 42.623979273681584,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 24.360267587794393,
+          "max": 24.360267587794393,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 39.082068843919565,
+          "max": 39.082068843919565,
+          "minTime": 0,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": -125.2079412178814,
+          "maxX": -125.2079412178814,
+          "minY": 56.83195914794921,
+          "maxY": 56.83195914794921
+        },
+        "foot_r": {
+          "minX": -128.7599381817006,
+          "maxX": -128.7599381817006,
+          "minY": 38.18397810031891,
+          "maxY": 38.18397810031891
+        },
+        "toe_l": {
+          "minX": -161.61592042085243,
+          "maxX": -161.61592042085243,
+          "minY": 59.19995881530761,
+          "maxY": 59.19995881530761
+        },
+        "toe_r": {
+          "minX": -180.5599082041329,
+          "maxX": -180.5599082041329,
+          "minY": 30.19198860141755,
+          "maxY": 30.19198860141755
+        }
+      },
+      "poseJumpMax": {
+        "bone": "head_cage_4",
+        "time": 0.11666666666666667,
+        "distance": 0.6384575391519264
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "dead",
+      "duration": 1.850000023841858,
+      "timelines": 140,
+      "keys": 14414,
+      "constantTimelines": 61,
+      "constantKeys": 6832,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E00/cape"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "turn-upright/cape"
+          },
+          {
+            "time": 0.44999998807907104,
+            "name": "fall-lean/cape"
+          },
+          {
+            "time": 0.7333300113677979,
+            "name": "crouch/cape"
+          },
+          {
+            "time": 0.916670024394989,
+            "name": "brace/cape"
+          },
+          {
+            "time": 1.2000000476837158,
+            "name": "lower/cape"
+          },
+          {
+            "time": 1.399999976158142,
+            "name": "prone/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E00/body"
+          },
+          {
+            "time": 0.25,
+            "name": "turn-upright/body"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "fall-lean/body"
+          },
+          {
+            "time": 0.7666699886322021,
+            "name": "crouch/body"
+          },
+          {
+            "time": 0.9833300113677979,
+            "name": "brace/body"
+          },
+          {
+            "time": 1.2333300113677979,
+            "name": "lower/body"
+          },
+          {
+            "time": 1.4500000476837158,
+            "name": "prone/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E00/leg_l"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "turn-upright/leg_l"
+          },
+          {
+            "time": 0.48333001136779785,
+            "name": "fall-lean/leg_l"
+          },
+          {
+            "time": 0.7333300113677979,
+            "name": "crouch/leg_l"
+          },
+          {
+            "time": 0.9666699767112732,
+            "name": "brace/leg_l"
+          },
+          {
+            "time": 1.1833300590515137,
+            "name": "lower/leg_l"
+          },
+          {
+            "time": 1.466670036315918,
+            "name": "prone/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E00/leg_r"
+          },
+          {
+            "time": 0.25,
+            "name": "turn-upright/leg_r"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "fall-lean/leg_r"
+          },
+          {
+            "time": 0.699999988079071,
+            "name": "crouch/leg_r"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "brace/leg_r"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "lower/leg_r"
+          },
+          {
+            "time": 1.466670036315918,
+            "name": "prone/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E00/arm_l"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "turn-upright/arm_l"
+          },
+          {
+            "time": 0.5,
+            "name": "fall-lean/arm_l"
+          },
+          {
+            "time": 0.800000011920929,
+            "name": "crouch/arm_l"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "brace/arm_l"
+          },
+          {
+            "time": 1.149999976158142,
+            "name": "lower/arm_l"
+          },
+          {
+            "time": 1.466670036315918,
+            "name": "prone/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E00/hand_l"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "turn-upright/hand_l"
+          },
+          {
+            "time": 0.44999998807907104,
+            "name": "fall-lean/hand_l"
+          },
+          {
+            "time": 0.7333300113677979,
+            "name": "crouch/hand_l"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "brace/hand_l"
+          },
+          {
+            "time": 1.2333300113677979,
+            "name": "lower/hand_l"
+          },
+          {
+            "time": 1.466670036315918,
+            "name": "prone/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E00/arm_r"
+          },
+          {
+            "time": 0.20000000298023224,
+            "name": "turn-upright/arm_r"
+          },
+          {
+            "time": 0.550000011920929,
+            "name": "fall-lean/arm_r"
+          },
+          {
+            "time": 0.7833300232887268,
+            "name": "crouch/arm_r"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "brace/arm_r"
+          },
+          {
+            "time": 1.149999976158142,
+            "name": "lower/arm_r"
+          },
+          {
+            "time": 1.466670036315918,
+            "name": "prone/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E00/head"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "turn-upright/head"
+          },
+          {
+            "time": 0.44999998807907104,
+            "name": "fall-lean/head"
+          },
+          {
+            "time": 0.7333300113677979,
+            "name": "crouch/head"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "brace/head"
+          },
+          {
+            "time": 1.2333300113677979,
+            "name": "lower/head"
+          },
+          {
+            "time": 1.466670036315918,
+            "name": "prone/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E00/hand_r"
+          },
+          {
+            "time": 0.1833299994468689,
+            "name": "turn-upright/hand_r"
+          },
+          {
+            "time": 0.44999998807907104,
+            "name": "fall-lean/hand_r"
+          },
+          {
+            "time": 0.7333300113677979,
+            "name": "crouch/hand_r"
+          },
+          {
+            "time": 0.949999988079071,
+            "name": "brace/hand_r"
+          },
+          {
+            "time": 1.2333300113677979,
+            "name": "lower/hand_r"
+          },
+          {
+            "time": 1.466670036315918,
+            "name": "prone/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 14.306736670751125,
+          "max": 34.312288366001496,
+          "minTime": 0.55,
+          "maxTime": 1.1
+        },
+        "fore_r->hand_r": {
+          "min": 4.346225157082514,
+          "max": 34.219590092533196,
+          "minTime": 0.2,
+          "maxTime": 0
+        },
+        "upper_l->fore_l": {
+          "min": 14.22950176441448,
+          "max": 44.614784173887465,
+          "minTime": 1.2666666666666666,
+          "maxTime": 0.8333333333333334
+        },
+        "fore_l->hand_l": {
+          "min": 3.850470224935981,
+          "max": 34.13361367474429,
+          "minTime": 1.3083333333333333,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 22.279795102636562,
+          "max": 31.102591582747905,
+          "minTime": 1.225,
+          "maxTime": 1.5
+        },
+        "shin_r->foot_r": {
+          "min": 24.154966974396295,
+          "max": 57.05455293627251,
+          "minTime": 0,
+          "maxTime": 1.3333333333333333
+        },
+        "thigh_l->shin_l": {
+          "min": 24.317316470213616,
+          "max": 42.4863785078417,
+          "minTime": 1.1916666666666667,
+          "maxTime": 0.85
+        },
+        "shin_l->foot_l": {
+          "min": 23.516379511205614,
+          "max": 51.27344462177663,
+          "minTime": 0,
+          "maxTime": 1.15
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": -125.2079412178814,
+          "maxX": 29.77669197170925,
+          "minY": 31.030270000000037,
+          "maxY": 65.61912146888156
+        },
+        "foot_r": {
+          "minX": -128.7599381817006,
+          "maxX": -3.30067950330978,
+          "minY": 26.34842033020466,
+          "maxY": 39.072619044978055
+        },
+        "toe_l": {
+          "minX": -161.61592042085243,
+          "maxX": 41.16950514454951,
+          "minY": 1.6969700000000678,
+          "maxY": 66.23222829683046
+        },
+        "toe_r": {
+          "minX": -182.85038763554346,
+          "maxX": -2.762364792131111,
+          "minY": 1.6969700000000643,
+          "maxY": 33.5742132058657
+        }
+      },
+      "poseJumpMax": {
+        "bone": "toe_l",
+        "time": 0.9916666666666667,
+        "distance": 5.56572632242468
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 227.245783542111
+    },
+    {
+      "name": "dead_from_down",
+      "duration": 0.44999998807907104,
+      "timelines": 140,
+      "keys": 3596,
+      "constantTimelines": 128,
+      "constantKeys": 3584,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "prone/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "prone/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "prone/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "prone/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "prone/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "prone/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "prone/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "prone/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "prone/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 19.3036397689279,
+          "max": 19.3036397689279,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 17.661048147869266,
+          "max": 17.661048147869266,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "upper_l->fore_l": {
+          "min": 34.195346038861366,
+          "max": 34.195346038861366,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_l->hand_l": {
+          "min": 10.967988196644907,
+          "max": 10.967988196644907,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 30.500918454824262,
+          "max": 30.500918454824262,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 42.623979273681584,
+          "max": 42.623979273681584,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 24.360267587794393,
+          "max": 24.360267587794393,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 39.082068843919565,
+          "max": 39.082068843919565,
+          "minTime": 0,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": -125.2079412178814,
+          "maxX": -125.2079412178814,
+          "minY": 56.83195914794921,
+          "maxY": 56.83195914794921
+        },
+        "foot_r": {
+          "minX": -128.7599381817006,
+          "maxX": -128.7599381817006,
+          "minY": 38.18397810031891,
+          "maxY": 38.18397810031891
+        },
+        "toe_l": {
+          "minX": -161.61592042085243,
+          "maxX": -161.61592042085243,
+          "minY": 59.19995881530761,
+          "maxY": 59.19995881530761
+        },
+        "toe_r": {
+          "minX": -180.5599082041329,
+          "maxX": -180.5599082041329,
+          "minY": 30.19198860141755,
+          "maxY": 30.19198860141755
+        }
+      },
+      "poseJumpMax": {
+        "distance": 0
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "dead_loop",
+      "duration": 2,
+      "timelines": 140,
+      "keys": 15500,
+      "constantTimelines": 128,
+      "constantKeys": 15488,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "prone/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "prone/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "prone/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "prone/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "prone/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "prone/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "prone/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "prone/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "prone/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 19.3036397689279,
+          "max": 19.3036397689279,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 17.661048147869266,
+          "max": 17.661048147869266,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "upper_l->fore_l": {
+          "min": 34.195346038861366,
+          "max": 34.195346038861366,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "fore_l->hand_l": {
+          "min": 10.967988196644907,
+          "max": 10.967988196644907,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_r->shin_r": {
+          "min": 30.500918454824262,
+          "max": 30.500918454824262,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_r->foot_r": {
+          "min": 42.623979273681584,
+          "max": 42.623979273681584,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "thigh_l->shin_l": {
+          "min": 24.360267587794393,
+          "max": 24.360267587794393,
+          "minTime": 0,
+          "maxTime": 0
+        },
+        "shin_l->foot_l": {
+          "min": 39.082068843919565,
+          "max": 39.082068843919565,
+          "minTime": 0,
+          "maxTime": 0
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": -125.2079412178814,
+          "maxX": -125.2079412178814,
+          "minY": 56.83195914794921,
+          "maxY": 56.83195914794921
+        },
+        "foot_r": {
+          "minX": -128.7599381817006,
+          "maxX": -128.7599381817006,
+          "minY": 38.18397810031891,
+          "maxY": 38.18397810031891
+        },
+        "toe_l": {
+          "minX": -161.61592042085243,
+          "maxX": -161.61592042085243,
+          "minY": 59.19995881530761,
+          "maxY": 59.19995881530761
+        },
+        "toe_r": {
+          "minX": -180.5599082041329,
+          "maxX": -180.5599082041329,
+          "minY": 30.19198860141755,
+          "maxY": 30.19198860141755
+        }
+      },
+      "poseJumpMax": {
+        "distance": 0
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "attack_short",
+      "duration": 1.496000051498413,
+      "timelines": 141,
+      "keys": 11807,
+      "constantTimelines": 68,
+      "constantKeys": 6188,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1,
+        "EventTimeline": 1
+      },
+      "events": [
+        {
+          "time": 0.7599999904632568,
+          "name": "impact"
+        }
+      ],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          },
+          {
+            "time": 0.21667000651359558,
+            "name": "turn-upright/body_under"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/body_under"
+          },
+          {
+            "time": 0.2833299934864044,
+            "name": null
+          },
+          {
+            "time": 1.2333300113677979,
+            "name": "E05/body_under"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/body_under"
+          },
+          {
+            "time": 1.2999999523162842,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E00/cape"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/cape"
+          },
+          {
+            "time": 0.08332999795675278,
+            "name": "turn-upright/cape"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/cape"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/cape"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/cape"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/cape"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/cape"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/cape"
+          },
+          {
+            "time": 1.4166699647903442,
+            "name": "E01/cape"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E00/body"
+          },
+          {
+            "time": 0.05000000074505806,
+            "name": "E01/body"
+          },
+          {
+            "time": 0.15000000596046448,
+            "name": "turn-upright/body"
+          },
+          {
+            "time": 0.26666998863220215,
+            "name": "E05/body"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/body"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/body"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/body"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/body"
+          },
+          {
+            "time": 1.283329963684082,
+            "name": "turn-upright/body"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/body"
+          },
+          {
+            "time": 1.466670036315918,
+            "name": "E00/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E00/leg_l"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/leg_l"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "turn-upright/leg_l"
+          },
+          {
+            "time": 0.2833299934864044,
+            "name": "E05/leg_l"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/leg_l"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/leg_l"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/leg_l"
+          },
+          {
+            "time": 1.149999976158142,
+            "name": "E05/leg_l"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "turn-upright/leg_l"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/leg_l"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E00/leg_r"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/leg_r"
+          },
+          {
+            "time": 0.15000000596046448,
+            "name": "turn-upright/leg_r"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/leg_r"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "E08/leg_r"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/leg_r"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/leg_r"
+          },
+          {
+            "time": 1.1666699647903442,
+            "name": "E05/leg_r"
+          },
+          {
+            "time": 1.2999999523162842,
+            "name": "turn-upright/leg_r"
+          },
+          {
+            "time": 1.399999976158142,
+            "name": "E01/leg_r"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E00/arm_l"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/arm_l"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "turn-upright/arm_l"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/arm_l"
+          },
+          {
+            "time": 0.38332998752593994,
+            "name": "E08/arm_l"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/arm_l"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/arm_l"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/arm_l"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/arm_l"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/arm_l"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E00/hand_l"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/hand_l"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "turn-upright/hand_l"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/hand_l"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/hand_l"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/hand_l"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/hand_l"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/hand_l"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/hand_l"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/hand_l"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E00/arm_r"
+          },
+          {
+            "time": 0.016669999808073044,
+            "name": "E01/arm_r"
+          },
+          {
+            "time": 0.15000000596046448,
+            "name": "turn-upright/arm_r"
+          },
+          {
+            "time": 0.2833299934864044,
+            "name": "E05/arm_r"
+          },
+          {
+            "time": 0.38332998752593994,
+            "name": "E08/arm_r"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/arm_r"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/arm_r"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/arm_r"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/arm_r"
+          },
+          {
+            "time": 1.399999976158142,
+            "name": "E01/arm_r"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E00/head"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/head"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "turn-upright/head"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/head"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/head"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/head"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/head"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/head"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/head"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/head"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E00/hand_r"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/hand_r"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "turn-upright/hand_r"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/hand_r"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/hand_r"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/hand_r"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/hand_r"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/hand_r"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/hand_r"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/hand_r"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 9.759779225135082,
+          "max": 26.434223387860904,
+          "minTime": 1.1416666666666666,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 4.699581974033204,
+          "max": 44.956455361367055,
+          "minTime": 0.15,
+          "maxTime": 1.2
+        },
+        "upper_l->fore_l": {
+          "min": 25.283087236380755,
+          "max": 44.584652936570805,
+          "minTime": 0,
+          "maxTime": 1.15
+        },
+        "fore_l->hand_l": {
+          "min": 22.266557181354866,
+          "max": 36.230489018093934,
+          "minTime": 0.2916666666666667,
+          "maxTime": 1.0666666666666667
+        },
+        "thigh_r->shin_r": {
+          "min": 26.52522280647357,
+          "max": 29.26607784212414,
+          "minTime": 0,
+          "maxTime": 0.5833333333333334
+        },
+        "shin_r->foot_r": {
+          "min": 24.154966974396295,
+          "max": 31.590220000372156,
+          "minTime": 0,
+          "maxTime": 0.5833333333333334
+        },
+        "thigh_l->shin_l": {
+          "min": 25.241220593495502,
+          "max": 30.054450648383007,
+          "minTime": 0,
+          "maxTime": 1.0666666666666667
+        },
+        "shin_l->foot_l": {
+          "min": 23.516379511205614,
+          "max": 29.01196797752312,
+          "minTime": 0,
+          "maxTime": 0.5833333333333334
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 11.393932171433326,
+          "maxX": 31.865360356893113,
+          "minY": 31.030270000000037,
+          "maxY": 38.60170098784313
+        },
+        "foot_r": {
+          "minX": -38.132411700393455,
+          "maxX": -23.272707817315915,
+          "minY": 31.030270000000034,
+          "maxY": 38.60145443444638
+        },
+        "toe_l": {
+          "minX": 26.181795574844614,
+          "maxX": 52.849701399550355,
+          "minY": 1.6969700000000678,
+          "maxY": 4.922349097992786
+        },
+        "toe_r": {
+          "minX": -33.80542088045945,
+          "maxX": -14.303014413904627,
+          "minY": 1.6969700000000643,
+          "maxY": 3.886054077130453
+        }
+      },
+      "poseJumpMax": {
+        "bone": "arm_r_edge_4",
+        "time": 1.3916666666666666,
+        "distance": 7.099877209554894
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    },
+    {
+      "name": "cast_short",
+      "duration": 1.496000051498413,
+      "timelines": 140,
+      "keys": 11806,
+      "constantTimelines": 68,
+      "constantKeys": 6188,
+      "types": {
+        "AttachmentTimeline": 11,
+        "TranslateTimeline": 64,
+        "RotateTimeline": 64,
+        "DrawOrderTimeline": 1
+      },
+      "events": [],
+      "attachmentSwitches": {
+        "body_under": [
+          {
+            "time": 0,
+            "name": null
+          },
+          {
+            "time": 0.21667000651359558,
+            "name": "turn-upright/body_under"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/body_under"
+          },
+          {
+            "time": 0.2833299934864044,
+            "name": null
+          },
+          {
+            "time": 1.2333300113677979,
+            "name": "E05/body_under"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/body_under"
+          },
+          {
+            "time": 1.2999999523162842,
+            "name": null
+          }
+        ],
+        "cape": [
+          {
+            "time": 0,
+            "name": "E00/cape"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/cape"
+          },
+          {
+            "time": 0.08332999795675278,
+            "name": "turn-upright/cape"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/cape"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/cape"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/cape"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/cape"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/cape"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/cape"
+          },
+          {
+            "time": 1.4166699647903442,
+            "name": "E01/cape"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/cape"
+          }
+        ],
+        "body": [
+          {
+            "time": 0,
+            "name": "E00/body"
+          },
+          {
+            "time": 0.05000000074505806,
+            "name": "E01/body"
+          },
+          {
+            "time": 0.15000000596046448,
+            "name": "turn-upright/body"
+          },
+          {
+            "time": 0.26666998863220215,
+            "name": "E05/body"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/body"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/body"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/body"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/body"
+          },
+          {
+            "time": 1.283329963684082,
+            "name": "turn-upright/body"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/body"
+          },
+          {
+            "time": 1.466670036315918,
+            "name": "E00/body"
+          }
+        ],
+        "leg_l": [
+          {
+            "time": 0,
+            "name": "E00/leg_l"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/leg_l"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "turn-upright/leg_l"
+          },
+          {
+            "time": 0.2833299934864044,
+            "name": "E05/leg_l"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/leg_l"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/leg_l"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/leg_l"
+          },
+          {
+            "time": 1.149999976158142,
+            "name": "E05/leg_l"
+          },
+          {
+            "time": 1.2666699886322021,
+            "name": "turn-upright/leg_l"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/leg_l"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/leg_l"
+          }
+        ],
+        "leg_r": [
+          {
+            "time": 0,
+            "name": "E00/leg_r"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/leg_r"
+          },
+          {
+            "time": 0.15000000596046448,
+            "name": "turn-upright/leg_r"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/leg_r"
+          },
+          {
+            "time": 0.3333300054073334,
+            "name": "E08/leg_r"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/leg_r"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/leg_r"
+          },
+          {
+            "time": 1.1666699647903442,
+            "name": "E05/leg_r"
+          },
+          {
+            "time": 1.2999999523162842,
+            "name": "turn-upright/leg_r"
+          },
+          {
+            "time": 1.399999976158142,
+            "name": "E01/leg_r"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/leg_r"
+          }
+        ],
+        "arm_l": [
+          {
+            "time": 0,
+            "name": "E00/arm_l"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/arm_l"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "turn-upright/arm_l"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/arm_l"
+          },
+          {
+            "time": 0.38332998752593994,
+            "name": "E08/arm_l"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/arm_l"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/arm_l"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/arm_l"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/arm_l"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/arm_l"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/arm_l"
+          }
+        ],
+        "hand_l": [
+          {
+            "time": 0,
+            "name": "E00/hand_l"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/hand_l"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "turn-upright/hand_l"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/hand_l"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/hand_l"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/hand_l"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/hand_l"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/hand_l"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/hand_l"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/hand_l"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/hand_l"
+          }
+        ],
+        "arm_r": [
+          {
+            "time": 0,
+            "name": "E00/arm_r"
+          },
+          {
+            "time": 0.016669999808073044,
+            "name": "E01/arm_r"
+          },
+          {
+            "time": 0.15000000596046448,
+            "name": "turn-upright/arm_r"
+          },
+          {
+            "time": 0.2833299934864044,
+            "name": "E05/arm_r"
+          },
+          {
+            "time": 0.38332998752593994,
+            "name": "E08/arm_r"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/arm_r"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/arm_r"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/arm_r"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/arm_r"
+          },
+          {
+            "time": 1.399999976158142,
+            "name": "E01/arm_r"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/arm_r"
+          }
+        ],
+        "head": [
+          {
+            "time": 0,
+            "name": "E00/head"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/head"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "turn-upright/head"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/head"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/head"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/head"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/head"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/head"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/head"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/head"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/head"
+          }
+        ],
+        "staff": [
+          {
+            "time": 0,
+            "name": "rigid_staff"
+          }
+        ],
+        "hand_r": [
+          {
+            "time": 0,
+            "name": "E00/hand_r"
+          },
+          {
+            "time": 0.033330000936985016,
+            "name": "E01/hand_r"
+          },
+          {
+            "time": 0.13333000242710114,
+            "name": "turn-upright/hand_r"
+          },
+          {
+            "time": 0.25,
+            "name": "E05/hand_r"
+          },
+          {
+            "time": 0.4000000059604645,
+            "name": "E08/hand_r"
+          },
+          {
+            "time": 0.5,
+            "name": "E12/hand_r"
+          },
+          {
+            "time": 1.0166699886322021,
+            "name": "E08/hand_r"
+          },
+          {
+            "time": 1.11667001247406,
+            "name": "E05/hand_r"
+          },
+          {
+            "time": 1.25,
+            "name": "turn-upright/hand_r"
+          },
+          {
+            "time": 1.38332998752594,
+            "name": "E01/hand_r"
+          },
+          {
+            "time": 1.4833300113677979,
+            "name": "E00/hand_r"
+          }
+        ]
+      },
+      "lengths": {
+        "upper_r->fore_r": {
+          "min": 9.759779225135082,
+          "max": 26.434223387860904,
+          "minTime": 1.1416666666666666,
+          "maxTime": 0
+        },
+        "fore_r->hand_r": {
+          "min": 4.699581974033204,
+          "max": 44.956455361367055,
+          "minTime": 0.15,
+          "maxTime": 1.2
+        },
+        "upper_l->fore_l": {
+          "min": 25.283087236380755,
+          "max": 44.584652936570805,
+          "minTime": 0,
+          "maxTime": 1.15
+        },
+        "fore_l->hand_l": {
+          "min": 22.266557181354866,
+          "max": 36.230489018093934,
+          "minTime": 0.2916666666666667,
+          "maxTime": 1.0666666666666667
+        },
+        "thigh_r->shin_r": {
+          "min": 26.52522280647357,
+          "max": 29.26607784212414,
+          "minTime": 0,
+          "maxTime": 0.5833333333333334
+        },
+        "shin_r->foot_r": {
+          "min": 24.154966974396295,
+          "max": 31.590220000372156,
+          "minTime": 0,
+          "maxTime": 0.5833333333333334
+        },
+        "thigh_l->shin_l": {
+          "min": 25.241220593495502,
+          "max": 30.054450648383007,
+          "minTime": 0,
+          "maxTime": 1.0666666666666667
+        },
+        "shin_l->foot_l": {
+          "min": 23.516379511205614,
+          "max": 29.01196797752312,
+          "minTime": 0,
+          "maxTime": 0.5833333333333334
+        }
+      },
+      "footPaths": {
+        "foot_l": {
+          "minX": 11.393932171433326,
+          "maxX": 31.865360356893113,
+          "minY": 31.030270000000037,
+          "maxY": 38.60170098784313
+        },
+        "foot_r": {
+          "minX": -38.132411700393455,
+          "maxX": -23.272707817315915,
+          "minY": 31.030270000000034,
+          "maxY": 38.60145443444638
+        },
+        "toe_l": {
+          "minX": 26.181795574844614,
+          "maxX": 52.849701399550355,
+          "minY": 1.6969700000000678,
+          "maxY": 4.922349097992786
+        },
+        "toe_r": {
+          "minX": -33.80542088045945,
+          "maxX": -14.303014413904627,
+          "minY": 1.6969700000000643,
+          "maxY": 3.886054077130453
+        }
+      },
+      "poseJumpMax": {
+        "bone": "arm_r_edge_4",
+        "time": 1.3916666666666666,
+        "distance": 7.099877209554894
+      },
+      "scales": {
+        "min": 1,
+        "max": 1
+      },
+      "loopBoneDelta": 0
+    }
+  ],
+  "texturePages": [
+    {
+      "name": "E00-body.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 895385
+    },
+    {
+      "name": "E00.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 923068
+    },
+    {
+      "name": "E01.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 875668
+    },
+    {
+      "name": "E05-body.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 891193
+    },
+    {
+      "name": "E05.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 935738
+    },
+    {
+      "name": "E08.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 875894
+    },
+    {
+      "name": "E12.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 855798
+    },
+    {
+      "name": "brace-body.png",
+      "width": 2048,
+      "height": 1024,
+      "rgbaBytes": 8388608,
+      "fileBytes": 767280
+    },
+    {
+      "name": "brace.png",
+      "width": 2048,
+      "height": 1024,
+      "rgbaBytes": 8388608,
+      "fileBytes": 710960
+    },
+    {
+      "name": "crouch.png",
+      "width": 2048,
+      "height": 1024,
+      "rgbaBytes": 8388608,
+      "fileBytes": 804555
+    },
+    {
+      "name": "fall-lean.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 892897
+    },
+    {
+      "name": "kneel-rise.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 786768
+    },
+    {
+      "name": "lower.png",
+      "width": 2048,
+      "height": 1024,
+      "rgbaBytes": 8388608,
+      "fileBytes": 671314
+    },
+    {
+      "name": "prone-body.png",
+      "width": 2048,
+      "height": 1024,
+      "rgbaBytes": 8388608,
+      "fileBytes": 682139
+    },
+    {
+      "name": "prone.png",
+      "width": 2048,
+      "height": 1024,
+      "rgbaBytes": 8388608,
+      "fileBytes": 630687
+    },
+    {
+      "name": "release.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 828558
+    },
+    {
+      "name": "staff-master.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 262785
+    },
+    {
+      "name": "turn-upright.png",
+      "width": 2048,
+      "height": 2048,
+      "rgbaBytes": 16777216,
+      "fileBytes": 918747
+    }
+  ],
+  "uncompressedRGBABytes": 251658240,
+  "pngBytes": 14209434,
+  "jsonBytes": 9586446,
+  "originalPlayableComparators": [
+    {
+      "path": "Slay the Spire 2/animations/characters/defect/defect.skel",
+      "bones": 95,
+      "slots": 62,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.5,
+          "keyframe_count": 1165,
+          "curves": {
+            "linear": 121,
+            "stepped": 330,
+            "bezier": 497
+          }
+        },
+        {
+          "name": "cast",
+          "duration": 1.233333,
+          "keyframe_count": 859,
+          "curves": {
+            "linear": 44,
+            "stepped": 194,
+            "bezier": 464
+          }
+        },
+        {
+          "name": "idle_loop",
+          "duration": 12.000001,
+          "keyframe_count": 2505,
+          "curves": {
+            "linear": 13,
+            "stepped": 1021,
+            "bezier": 1323
+          }
+        }
+      ]
+    },
+    {
+      "path": "Slay the Spire 2/animations/characters/ironclad/ironclad.skel",
+      "bones": 79,
+      "slots": 72,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.166667,
+          "keyframe_count": 857,
+          "curves": {
+            "linear": 155,
+            "stepped": 167,
+            "bezier": 335
+          }
+        },
+        {
+          "name": "cast",
+          "duration": 1.566667,
+          "keyframe_count": 547,
+          "curves": {
+            "linear": 68,
+            "stepped": 83,
+            "bezier": 259
+          }
+        },
+        {
+          "name": "idle_loop",
+          "duration": 2,
+          "keyframe_count": 180,
+          "curves": {
+            "linear": 0,
+            "stepped": 1,
+            "bezier": 107
+          }
+        }
+      ]
+    },
+    {
+      "path": "Slay the Spire 2/animations/characters/necrobinder/necrobinder.skel",
+      "bones": 133,
+      "slots": 60,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1,
+          "keyframe_count": 1419,
+          "curves": {
+            "linear": 220,
+            "stepped": 227,
+            "bezier": 714
+          }
+        },
+        {
+          "name": "cast",
+          "duration": 0.966667,
+          "keyframe_count": 945,
+          "curves": {
+            "linear": 82,
+            "stepped": 88,
+            "bezier": 534
+          }
+        },
+        {
+          "name": "idle_loop",
+          "duration": 2,
+          "keyframe_count": 1037,
+          "curves": {
+            "linear": 38,
+            "stepped": 9,
+            "bezier": 827
+          }
+        }
+      ]
+    },
+    {
+      "path": "Slay the Spire 2/animations/characters/regent/regent.skel",
+      "bones": 100,
+      "slots": 78,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.388889,
+          "keyframe_count": 616,
+          "curves": {
+            "linear": 54,
+            "stepped": 116,
+            "bezier": 297
+          }
+        },
+        {
+          "name": "cast",
+          "duration": 1.875,
+          "keyframe_count": 547,
+          "curves": {
+            "linear": 9,
+            "stepped": 68,
+            "bezier": 336
+          }
+        },
+        {
+          "name": "idle_loop",
+          "duration": 19.444445,
+          "keyframe_count": 2769,
+          "curves": {
+            "linear": 27,
+            "stepped": 152,
+            "bezier": 2479
+          }
+        }
+      ]
+    },
+    {
+      "path": "Slay the Spire 2/animations/characters/silent/silent.skel",
+      "bones": 141,
+      "slots": 56,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 0.933333,
+          "keyframe_count": 944,
+          "curves": {
+            "linear": 281,
+            "stepped": 106,
+            "bezier": 359
+          }
+        },
+        {
+          "name": "cast",
+          "duration": 1.3,
+          "keyframe_count": 901,
+          "curves": {
+            "linear": 7,
+            "stepped": 119,
+            "bezier": 568
+          }
+        },
+        {
+          "name": "idle_loop",
+          "duration": 1.066667,
+          "keyframe_count": 420,
+          "curves": {
+            "linear": 37,
+            "stepped": 0,
+            "bezier": 251
+          }
+        }
+      ]
+    }
+  ]
+}

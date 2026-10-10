@@ -1,0 +1,413 @@
+{
+  "verifiedAt": "2026-10-10T09:13:53.035Z",
+  "runtime": "4.2.120",
+  "node": "v24.19.0",
+  "syntheticTests": 33,
+  "assets": [
+    {
+      "name": "megumin",
+      "input": {
+        "filename": "megumin.json",
+        "sha256": "2691ef294c09da2ada158ad6e3c69454d5f83e3cf8aef7f171e710822946150b",
+        "spineVersion": "4.2.43",
+        "runtimeVersion": "4.2.120",
+        "atlas": "megumin.atlas",
+        "regionGeometry": true
+      },
+      "skeleton": {
+        "bones": 64,
+        "slots": 11,
+        "physicsConstraints": 0,
+        "availableAnimations": [
+          {
+            "name": "idle_loop",
+            "duration": 3.4000000953674316
+          },
+          {
+            "name": "chant_enter",
+            "duration": 1.2999999523162842
+          },
+          {
+            "name": "chant_loop",
+            "duration": 2.4000000953674316
+          },
+          {
+            "name": "chant_cancel",
+            "duration": 1.2999999523162842
+          },
+          {
+            "name": "chant_ack",
+            "duration": 0.5
+          },
+          {
+            "name": "explosion_release",
+            "duration": 0.699999988079071
+          },
+          {
+            "name": "explosion_hold",
+            "duration": 0.699999988079071
+          },
+          {
+            "name": "explosion_exit",
+            "duration": 0.6000000238418579
+          },
+          {
+            "name": "relaxed_fall",
+            "duration": 1.399999976158142
+          },
+          {
+            "name": "relaxed_loop",
+            "duration": 3
+          },
+          {
+            "name": "get_up",
+            "duration": 3.6700000762939453
+          },
+          {
+            "name": "hit",
+            "duration": 0.41999998688697815
+          },
+          {
+            "name": "hit_chant",
+            "duration": 0.41999998688697815
+          },
+          {
+            "name": "hit_down",
+            "duration": 0.41999998688697815
+          },
+          {
+            "name": "dead",
+            "duration": 1.850000023841858
+          },
+          {
+            "name": "dead_from_down",
+            "duration": 0.44999998807907104
+          },
+          {
+            "name": "dead_loop",
+            "duration": 2
+          },
+          {
+            "name": "attack_short",
+            "duration": 1.496000051498413
+          },
+          {
+            "name": "cast_short",
+            "duration": 1.496000051498413
+          },
+          {
+            "name": "_bind/E00",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/E01",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/turn-upright",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/E05",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/E08",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/E12",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/release",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/fall-lean",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/crouch",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/brace",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/lower",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/prone",
+            "duration": 0.10000000149011612
+          },
+          {
+            "name": "_bind/kneel-rise",
+            "duration": 0.10000000149011612
+          }
+        ],
+        "skin": "(default)"
+      },
+      "referenceScale": {
+        "value": 417.6956763142602,
+        "source": "setup-visible geometry bounding-box diagonal (before clipping/occlusion)"
+      },
+      "analyses": [
+        {
+          "name": "idle_loop",
+          "samples": 206,
+          "signals": 0,
+          "discrete": 0,
+          "geometry": 5,
+          "loop": {
+            "positionGap": 0,
+            "velocityGap": 0.0000132155813448759,
+            "velocityUncertainty": 0.000011012984461875215,
+            "positionRisk": false,
+            "velocityRisk": false
+          }
+        },
+        {
+          "name": "chant_enter",
+          "samples": 79,
+          "signals": 18,
+          "discrete": 52,
+          "geometry": 67,
+          "loop": null
+        },
+        {
+          "name": "chant_loop",
+          "samples": 146,
+          "signals": 0,
+          "discrete": 0,
+          "geometry": 1,
+          "loop": {
+            "positionGap": 0,
+            "velocityGap": 0.00001344070655209703,
+            "velocityUncertainty": 0.000019532542275518623,
+            "positionRisk": false,
+            "velocityRisk": false
+          }
+        },
+        {
+          "name": "chant_enter -> chant_loop",
+          "samples": 31,
+          "signals": 0,
+          "discrete": 0,
+          "geometry": 1,
+          "loop": null
+        }
+      ]
+    },
+    {
+      "name": "ironclad",
+      "input": {
+        "filename": "ironclad.skel",
+        "sha256": "66a1fa2e702bbb54d2f6894f0c5c8b77733996377416a50614d2d4e380e08f52",
+        "spineVersion": "4.2.43",
+        "runtimeVersion": "4.2.120",
+        "atlas": "ironclad.atlas",
+        "regionGeometry": true
+      },
+      "skeleton": {
+        "bones": 79,
+        "slots": 72,
+        "physicsConstraints": 0,
+        "availableAnimations": [
+          {
+            "name": "attack",
+            "duration": 1.1666667461395264
+          },
+          {
+            "name": "cast",
+            "duration": 1.5666667222976685
+          },
+          {
+            "name": "die",
+            "duration": 2.3333334922790527
+          },
+          {
+            "name": "hurt",
+            "duration": 1
+          },
+          {
+            "name": "idle_loop",
+            "duration": 2
+          },
+          {
+            "name": "relaxed_loop",
+            "duration": 12.000000953674316
+          },
+          {
+            "name": "relaxed_loop2",
+            "duration": 12.000000953674316
+          }
+        ],
+        "skin": "(default)"
+      },
+      "referenceScale": {
+        "value": 1473.6665637319793,
+        "source": "setup-visible geometry bounding-box diagonal (before clipping/occlusion)"
+      },
+      "analyses": [
+        {
+          "name": "idle_loop",
+          "samples": 121,
+          "signals": 0,
+          "discrete": 2,
+          "geometry": 0,
+          "loop": {
+            "positionGap": 4.173952693433273e-8,
+            "velocityGap": 0.012021585597852094,
+            "velocityUncertainty": 0.0011336280661581493,
+            "positionRisk": false,
+            "velocityRisk": false
+          }
+        },
+        {
+          "name": "attack",
+          "samples": 72,
+          "signals": 5509,
+          "discrete": 109,
+          "geometry": 19,
+          "loop": null
+        },
+        {
+          "name": "attack -> idle_loop",
+          "samples": 31,
+          "signals": 105,
+          "discrete": 1,
+          "geometry": 0,
+          "loop": null
+        }
+      ]
+    },
+    {
+      "name": "lagavulin",
+      "input": {
+        "filename": "lagavulin_matriarch.skel",
+        "sha256": "0b6f983cbf3e5c04259b3a52f7bdacf8e01bef00830f69f8596f03aee4f797a1",
+        "spineVersion": "4.2.43",
+        "runtimeVersion": "4.2.120",
+        "atlas": "lagavulin_matriarch.atlas",
+        "regionGeometry": true
+      },
+      "skeleton": {
+        "bones": 218,
+        "slots": 70,
+        "physicsConstraints": 0,
+        "availableAnimations": [
+          {
+            "name": "animation",
+            "duration": 1.3333333730697632
+          },
+          {
+            "name": "attack_double",
+            "duration": 1.100000023841858
+          },
+          {
+            "name": "attack_heavy",
+            "duration": 1.2666667699813843
+          },
+          {
+            "name": "cast",
+            "duration": 1.433333396911621
+          },
+          {
+            "name": "die",
+            "duration": 3.3333334922790527
+          },
+          {
+            "name": "hurt",
+            "duration": 1
+          },
+          {
+            "name": "hurt_sleeping",
+            "duration": 0.6666666865348816
+          },
+          {
+            "name": "idle_loop",
+            "duration": 2.6666667461395264
+          },
+          {
+            "name": "sleep_loop",
+            "duration": 3.3333334922790527
+          },
+          {
+            "name": "wake_up",
+            "duration": 1.8333333730697632
+          },
+          {
+            "name": "_tracks/eyes_closed_loop",
+            "duration": 0
+          },
+          {
+            "name": "_tracks/eyes_dead",
+            "duration": 0
+          },
+          {
+            "name": "_tracks/eyes_open",
+            "duration": 1.3333333730697632
+          },
+          {
+            "name": "_tracks/eyes_open_loop",
+            "duration": 5.000000476837158
+          }
+        ],
+        "skin": "(default)"
+      },
+      "referenceScale": {
+        "value": 2913.6550458147326,
+        "source": "setup-visible geometry bounding-box diagonal (before clipping/occlusion)"
+      },
+      "analyses": [
+        {
+          "name": "idle_loop",
+          "samples": 162,
+          "signals": 0,
+          "discrete": 0,
+          "geometry": 4,
+          "loop": {
+            "positionGap": 9.226799281685524e-7,
+            "velocityGap": 0.008545536113123824,
+            "velocityUncertainty": 0.002959505294214808,
+            "positionRisk": false,
+            "velocityRisk": false
+          }
+        },
+        {
+          "name": "wake_up",
+          "samples": 112,
+          "signals": 163,
+          "discrete": 5,
+          "geometry": 28,
+          "loop": null
+        },
+        {
+          "name": "_tracks/eyes_closed_loop",
+          "samples": 1,
+          "signals": 0,
+          "discrete": 0,
+          "geometry": 0,
+          "loop": null
+        },
+        {
+          "name": "wake_up -> idle_loop",
+          "samples": 31,
+          "signals": 0,
+          "discrete": 0,
+          "geometry": 0,
+          "loop": null
+        }
+      ]
+    }
+  ],
+  "codeSha256": {
+    "lib/runtime.mjs": "b732318079ec8ca70a1fe482125dc3a92ba9c5ddaf65c0b335a153009de8efbf",
+    "lib/metrics.mjs": "58ef6dfea259cde6bea26f5eda194f6f4bd784bcda0ae889271bd44e4b5fd24b",
+    "lib/audit.mjs": "5324109bfd0cada617d17d6aed58c5d1156f58b30fa7deefd1564350e60cab4d",
+    "bin/spine-audit.mjs": "878cdf1ca005e225192961179450e5d1390a92974d99aa288248be24a3ccd20e"
+  }
+}

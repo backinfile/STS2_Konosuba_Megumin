@@ -1,0 +1,20 @@
+{
+  "name": "spine-smoothness-auditor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Texture-free Spine 4.2 continuity risk diagnostics",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "spine-audit": "bin/spine-audit.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs qa/reliability.test.mjs",
+    "demo": "node bin/spine-audit.mjs --input fixtures/synthetic.json --loops smooth_loop,closed_velocity_kink --out out-demo"
+  },
+  "dependencies": {
+    "@esotericsoftware/spine-core": "4.2.120"
+  }
+}

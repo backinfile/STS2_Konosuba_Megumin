@@ -1,0 +1,1583 @@
+{
+  "schemaVersion": 1,
+  "title": "Spine continuity risk audit / Spine 连续性风险检查",
+  "generatedAt": "2026-10-10T09:15:34.288Z",
+  "input": {
+    "filename": "megumin.json",
+    "sha256": "2691ef294c09da2ada158ad6e3c69454d5f83e3cf8aef7f171e710822946150b",
+    "spineVersion": "4.2.43",
+    "runtimeVersion": "4.2.120",
+    "atlas": "megumin.atlas",
+    "regionGeometry": true
+  },
+  "skeleton": {
+    "bones": 64,
+    "slots": 11,
+    "physicsConstraints": 0,
+    "availableAnimations": [
+      {
+        "name": "idle_loop",
+        "duration": 3.4000000953674316
+      },
+      {
+        "name": "chant_enter",
+        "duration": 1.2999999523162842
+      },
+      {
+        "name": "chant_loop",
+        "duration": 2.4000000953674316
+      },
+      {
+        "name": "chant_cancel",
+        "duration": 1.2999999523162842
+      },
+      {
+        "name": "chant_ack",
+        "duration": 0.5
+      },
+      {
+        "name": "explosion_release",
+        "duration": 0.699999988079071
+      },
+      {
+        "name": "explosion_hold",
+        "duration": 0.699999988079071
+      },
+      {
+        "name": "explosion_exit",
+        "duration": 0.6000000238418579
+      },
+      {
+        "name": "relaxed_fall",
+        "duration": 1.399999976158142
+      },
+      {
+        "name": "relaxed_loop",
+        "duration": 3
+      },
+      {
+        "name": "get_up",
+        "duration": 3.6700000762939453
+      },
+      {
+        "name": "hit",
+        "duration": 0.41999998688697815
+      },
+      {
+        "name": "hit_chant",
+        "duration": 0.41999998688697815
+      },
+      {
+        "name": "hit_down",
+        "duration": 0.41999998688697815
+      },
+      {
+        "name": "dead",
+        "duration": 1.850000023841858
+      },
+      {
+        "name": "dead_from_down",
+        "duration": 0.44999998807907104
+      },
+      {
+        "name": "dead_loop",
+        "duration": 2
+      },
+      {
+        "name": "attack_short",
+        "duration": 1.496000051498413
+      },
+      {
+        "name": "cast_short",
+        "duration": 1.496000051498413
+      },
+      {
+        "name": "_bind/E00",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/E01",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/turn-upright",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/E05",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/E08",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/E12",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/release",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/fall-lean",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/crouch",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/brace",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/lower",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/prone",
+        "duration": 0.10000000149011612
+      },
+      {
+        "name": "_bind/kneel-rise",
+        "duration": 0.10000000149011612
+      }
+    ],
+    "skin": "(default)"
+  },
+  "referenceScale": {
+    "value": 417.6956763142602,
+    "source": "setup-visible geometry bounding-box diagonal (before clipping/occlusion)"
+  },
+  "configuration": {
+    "fps": 60,
+    "physics": "none",
+    "meshVertices": 16,
+    "thresholds": {
+      "step": 0.03,
+      "speed": 3,
+      "acceleration": 60,
+      "jerk": 3000,
+      "madMultiplier": 8,
+      "loopPosition": 0.002,
+      "loopVelocity": 0.1,
+      "triangleAreaRatio": 0.02
+    },
+    "bones": null,
+    "ignoreBones": null,
+    "slots": null,
+    "ignoreSlots": null,
+    "visibleBonesOnly": false,
+    "suppressStepped": false,
+    "suppressions": []
+  },
+  "units": {
+    "step": "reference-scale units",
+    "speed": "reference-scale units / second",
+    "acceleration": "reference-scale units / second^2",
+    "jerk": "reference-scale units / second^3",
+    "time": "seconds; transition time 0 is the requested switch"
+  },
+  "warnings": [
+    "Continuity risk signals are review candidates, not an aesthetic score or universal quality standard. Deliberate impacts/holds can produce strong signals.",
+    "Geometry only: no pixels/textures, silhouette matching across attachment swaps, perceptual salience, occlusion, clipping, anti-aliasing, camera motion or real frame pacing.",
+    "Single skeleton, skin and track 0 only. Match production tracks, timeScale, mix configuration, interruptions and engine behavior separately.",
+    "Finite sampling can miss subframe jumps or alias fast rotations (especially >=180 degrees/sample). Verify suspect times at 2x/4x FPS.",
+    "Derivative magnitudes depend on FPS around actual discontinuities; compare identical settings. Quantiles pool landmarks, so rig density can bias cross-character comparisons.",
+    "Bone probes include helper bones by default; use visible-geometry summaries, --visible-bones-only or bone filters. Bone influence is a dependency approximation, not pixel visibility.",
+    "Triangle collapse/flip is a geometric hint, not proof of a rendering defect. First visible pose is the reference and may already be distorted."
+  ],
+  "projection": "Compact publication of the original report: per-frame arrays, landmark series and complete event/signal lists are omitted. Regenerate the full report with the documented CLI commands.",
+  "sourceCommit": "23d31cc4d17c0102f37aba65a650a29868e2556f",
+  "analyses": [
+    {
+      "name": "idle_loop",
+      "type": "animation",
+      "duration": 3.4000000953674316,
+      "sampleCount": 206,
+      "effectiveFps": 60.294115955854416,
+      "summary": {
+        "step": {
+          "count": 69700,
+          "median": 2.0012894510820732e-05,
+          "p95": 5.1354470443132404e-05,
+          "p99": 6.315706841859917e-05,
+          "max": 7.293356247190781e-05,
+          "rms": 3.0418332125226944e-05
+        },
+        "speed": {
+          "count": 69700,
+          "median": 0.0012066597822477064,
+          "p95": 0.0030963723957497234,
+          "p99": 0.0038079996066628587,
+          "max": 0.0043974646727547575,
+          "rms": 0.001834046444342077
+        },
+        "acceleration": {
+          "count": 69360,
+          "median": 0.002242136988839436,
+          "p95": 0.005756255827674929,
+          "p99": 0.007031323282412227,
+          "max": 0.008160661256300869,
+          "rms": 0.0033977263533109324
+        },
+        "jerk": {
+          "count": 69020,
+          "median": 0.004075116052971524,
+          "p95": 0.020018194002756975,
+          "p99": 0.0320291103654564,
+          "max": 0.0640582208767904,
+          "rms": 0.009570744372269771
+        }
+      },
+      "byKind": {
+        "bone": {
+          "step": {
+            "count": 39360,
+            "median": 1.1314283091617983e-05,
+            "p95": 5.1130671376686863e-05,
+            "p99": 6.470909956706619e-05,
+            "max": 7.293356247190781e-05,
+            "rms": 2.8456327143268557e-05
+          },
+          "speed": {
+            "count": 39360,
+            "median": 0.0006821846966833771,
+            "p95": 0.0030828786288866414,
+            "p99": 0.0039015779526956136,
+            "max": 0.0043974646727547575,
+            "rms": 0.0017157490884539552
+          },
+          "acceleration": {
+            "count": 39168,
+            "median": 0.0013186016684251188,
+            "p95": 0.005684359537520501,
+            "p99": 0.007205968040978188,
+            "max": 0.008160661256300869,
+            "rms": 0.0031784305651373027
+          },
+          "jerk": {
+            "count": 38976,
+            "median": 0.002202932286384765,
+            "p95": 0.015988980852471635,
+            "p99": 0.024293278793955243,
+            "max": 0.03681422606726772,
+            "rms": 0.007529880754819202
+          }
+        },
+        "visible-geometry": {
+          "step": {
+            "count": 30340,
+            "median": 2.628559008580394e-05,
+            "p95": 5.481994986638546e-05,
+            "p99": 6.274634895686912e-05,
+            "max": 6.78535145755935e-05,
+            "rms": 3.278915706308573e-05
+          },
+          "speed": {
+            "count": 30340,
+            "median": 0.0015848664166015188,
+            "p95": 0.003305320413937968,
+            "p99": 0.0037832356398119697,
+            "max": 0.0040911676758330915,
+            "rms": 0.0019769932380563934
+          },
+          "acceleration": {
+            "count": 30192,
+            "median": 0.0029218685440427702,
+            "p95": 0.006117982415429913,
+            "p99": 0.006992275179997795,
+            "max": 0.0076116294926545786,
+            "rms": 0.0036627049171102017
+          },
+          "jerk": {
+            "count": 30044,
+            "median": 0.00800727759134638,
+            "p95": 0.024021832798431144,
+            "p99": 0.0320291104141467,
+            "max": 0.0640582208767904,
+            "rms": 0.011699353834798608
+          }
+        }
+      },
+      "signalCount": 0,
+      "suppressedCount": 0,
+      "signalCountByKind": {
+        "bone": 0,
+        "visible-geometry": 0
+      },
+      "loopSeam": {
+        "matchedLandmarks": 340,
+        "unmatchedLandmarks": 0,
+        "maxPositionGap": 0,
+        "positionRisk": false,
+        "worst": [
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v0",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 0,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v22",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 22,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v45",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 45,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v67",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 67,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v90",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 90,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v113",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 113,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v135",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 135,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v158",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 158,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v180",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 180,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v203",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 203,
+            "magnitude": 0
+          }
+        ],
+        "discreteEvents": [],
+        "note": "Only identical landmark identities are compared; changed/hidden attachments are separate events.",
+        "maxVelocityGap": 1.32155813448759e-05,
+        "maxVelocityUncertainty": 1.1012984461875215e-05,
+        "velocityRisk": false,
+        "worstVelocity": [
+          {
+            "id": "slot:head/E00/head#default/E00/head/v180",
+            "kind": "visible-geometry",
+            "slot": "head",
+            "bone": "root",
+            "attachment": "E00/head",
+            "vertex": 180,
+            "magnitude": 1.32155813448759e-05,
+            "uncertainty": 1.1012984455181351e-05,
+            "risk": false
+          },
+          {
+            "id": "slot:head/E00/head#default/E00/head/v0",
+            "kind": "visible-geometry",
+            "slot": "head",
+            "bone": "root",
+            "attachment": "E00/head",
+            "vertex": 0,
+            "magnitude": 1.3215581341529184e-05,
+            "uncertainty": 1.1012984461875215e-05,
+            "risk": false
+          },
+          {
+            "id": "slot:head/E00/head#default/E00/head/v240",
+            "kind": "visible-geometry",
+            "slot": "head",
+            "bone": "root",
+            "attachment": "E00/head",
+            "vertex": 240,
+            "magnitude": 9.177486997455353e-06,
+            "uncertainty": 1.0645884969660586e-05,
+            "risk": false
+          },
+          {
+            "id": "slot:staff/rigid_staff#default/rigid_staff/v2",
+            "kind": "visible-geometry",
+            "slot": "staff",
+            "bone": "root",
+            "attachment": "rigid_staff",
+            "vertex": 2,
+            "magnitude": 8.443288046494982e-06,
+            "uncertainty": 6.2406911601419444e-06,
+            "risk": false
+          },
+          {
+            "id": "slot:arm_l/E00/arm_l#default/E00/arm_l/v13",
+            "kind": "visible-geometry",
+            "slot": "arm_l",
+            "bone": "root",
+            "attachment": "E00/arm_l",
+            "vertex": 13,
+            "magnitude": 6.648454399339216e-06,
+            "uncertainty": 5.536108982194572e-06,
+            "risk": false
+          },
+          {
+            "id": "slot:head/E00/head#default/E00/head/v600",
+            "kind": "visible-geometry",
+            "slot": "head",
+            "bone": "root",
+            "attachment": "E00/head",
+            "vertex": 600,
+            "magnitude": 6.607790693355462e-06,
+            "uncertainty": 5.506492248509055e-06,
+            "risk": false
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v45",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 45,
+            "magnitude": 6.607790675784665e-06,
+            "uncertainty": 5.506492237631472e-06,
+            "risk": false
+          },
+          {
+            "id": "slot:head/E00/head#default/E00/head/v420",
+            "kind": "visible-geometry",
+            "slot": "head",
+            "bone": "root",
+            "attachment": "E00/head",
+            "vertex": 420,
+            "magnitude": 6.607790674110006e-06,
+            "uncertainty": 5.506492227590459e-06,
+            "risk": false
+          },
+          {
+            "id": "slot:head/E00/head#default/E00/head/v780",
+            "kind": "visible-geometry",
+            "slot": "head",
+            "bone": "root",
+            "attachment": "E00/head",
+            "vertex": 780,
+            "magnitude": 6.6077906699267205e-06,
+            "uncertainty": 5.506492230101037e-06,
+            "risk": false
+          },
+          {
+            "id": "slot:cape/E00/cape#default/E00/cape/v67",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E00/cape",
+            "vertex": 67,
+            "magnitude": 6.607790668252712e-06,
+            "uncertainty": 5.50649222005959e-06,
+            "risk": false
+          }
+        ],
+        "velocityMethod": "5-point fourth-order one-sided endpoint derivatives. Heuristic uncertainty is summed difference from 3-point estimates; risk requires gap > threshold + uncertainty. Not a rigorous error bound; increase FPS to verify. Fewer than 5 matched samples: unavailable. No acceleration seam claim.",
+        "physicsInterpretation": "Endpoint diagnostic on first sequential cycle from reset, not a settled-loop physics simulation."
+      },
+      "angularAliasingRisks": [],
+      "continuitySignalsCount": 0,
+      "discreteEventsCount": 0,
+      "geometryEventsCount": 5,
+      "steppedKeysCount": 0
+    },
+    {
+      "name": "chant_loop",
+      "type": "animation",
+      "duration": 2.4000000953674316,
+      "sampleCount": 146,
+      "effectiveFps": 60.416664265924126,
+      "summary": {
+        "step": {
+          "count": 49300,
+          "median": 1.704762435423937e-05,
+          "p95": 4.285275940348881e-05,
+          "p99": 7.07668028250521e-05,
+          "max": 8.631263133798716e-05,
+          "rms": 2.6247588020802638e-05
+        },
+        "speed": {
+          "count": 49300,
+          "median": 0.0010299605971416698,
+          "p95": 0.0025890207777490054,
+          "p99": 0.004275494167454016,
+          "max": 0.005214721269455651,
+          "rms": 0.00158579171324316
+        },
+        "acceleration": {
+          "count": 48960,
+          "median": 0.002684428443224889,
+          "p95": 0.006819617529786545,
+          "p99": 0.011192438755523285,
+          "max": 0.01369152070822885,
+          "rms": 0.004164607706701506
+        },
+        "jerk": {
+          "count": 48620,
+          "median": 0.008056201477023892,
+          "p95": 0.029941011283950048,
+          "p99": 0.040281007409606114,
+          "max": 0.06704095746626977,
+          "rms": 0.013476634202180813
+        }
+      },
+      "byKind": {
+        "bone": {
+          "step": {
+            "count": 27840,
+            "median": 9.348284710997145e-06,
+            "p95": 4.1340846169468695e-05,
+            "p99": 7.598276838550325e-05,
+            "max": 8.631263133798716e-05,
+            "rms": 2.4332086942762604e-05
+          },
+          "speed": {
+            "count": 27840,
+            "median": 0.000564792178846585,
+            "p95": 0.0024976760234900006,
+            "p99": 0.004590625407542415,
+            "max": 0.005214721269455651,
+            "rms": 0.0014700635277101592
+          },
+          "acceleration": {
+            "count": 27648,
+            "median": 0.0015499408472924086,
+            "p95": 0.0065353955407879095,
+            "p99": 0.011998201713248205,
+            "max": 0.01369152070822885,
+            "rms": 0.003860935017991313
+          },
+          "jerk": {
+            "count": 27456,
+            "median": 0.0029239210363404835,
+            "p95": 0.022495231869117265,
+            "p99": 0.03621599845648606,
+            "max": 0.066303066844649,
+            "rms": 0.011270001472426754
+          }
+        },
+        "visible-geometry": {
+          "step": {
+            "count": 21460,
+            "median": 2.2576081523784097e-05,
+            "p95": 5.044983853411559e-05,
+            "p99": 6.774327394033863e-05,
+            "max": 8.280959241559978e-05,
+            "rms": 2.8541637530345894e-05
+          },
+          "speed": {
+            "count": 21460,
+            "median": 0.0013639715378626033,
+            "p95": 0.0030480109569857375,
+            "p99": 0.004092822637927969,
+            "max": 0.005003079342971307,
+            "rms": 0.0017243905322705572
+          },
+          "acceleration": {
+            "count": 21312,
+            "median": 0.003600288807191503,
+            "p95": 0.00799228949868201,
+            "p99": 0.010731663959341015,
+            "max": 0.013217380145972282,
+            "rms": 0.004528316471904567
+          },
+          "jerk": {
+            "count": 21164,
+            "median": 0.008604026990821667,
+            "p95": 0.03222480595703377,
+            "p99": 0.04190967338441721,
+            "max": 0.06704095746626977,
+            "rms": 0.015889016355519106
+          }
+        }
+      },
+      "signalCount": 0,
+      "suppressedCount": 0,
+      "signalCountByKind": {
+        "bone": 0,
+        "visible-geometry": 0
+      },
+      "loopSeam": {
+        "matchedLandmarks": 340,
+        "unmatchedLandmarks": 0,
+        "maxPositionGap": 0,
+        "positionRisk": false,
+        "worst": [
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v0",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 0,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v24",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 24,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v48",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 48,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v73",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 73,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v97",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 97,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v121",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 121,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v146",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 146,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v170",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 170,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v194",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 194,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v219",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 219,
+            "magnitude": 0
+          }
+        ],
+        "discreteEvents": [],
+        "note": "Only identical landmark identities are compared; changed/hidden attachments are separate events.",
+        "maxVelocityGap": 1.344070655209703e-05,
+        "maxVelocityUncertainty": 1.9532542275518623e-05,
+        "velocityRisk": false,
+        "worstVelocity": [
+          {
+            "id": "slot:arm_l/E12/arm_l#default/E12/arm_l/v13",
+            "kind": "visible-geometry",
+            "slot": "arm_l",
+            "bone": "root",
+            "attachment": "E12/arm_l",
+            "vertex": 13,
+            "magnitude": 1.344070655209703e-05,
+            "uncertainty": 1.1286415180767124e-05,
+            "risk": false
+          },
+          {
+            "id": "slot:hand_r/E12/hand_r#default/E12/hand_r/v7",
+            "kind": "visible-geometry",
+            "slot": "hand_r",
+            "bone": "root",
+            "attachment": "E12/hand_r",
+            "vertex": 7,
+            "magnitude": 1.3426364947055191e-05,
+            "uncertainty": 1.1219291243441502e-05,
+            "risk": false
+          },
+          {
+            "id": "slot:hand_r/E12/hand_r#default/E12/hand_r/v36",
+            "kind": "visible-geometry",
+            "slot": "hand_r",
+            "bone": "root",
+            "attachment": "E12/hand_r",
+            "vertex": 36,
+            "magnitude": 1.3426364929447748e-05,
+            "uncertainty": 1.1219291235895455e-05,
+            "risk": false
+          },
+          {
+            "id": "slot:arm_r/E12/arm_r#default/E12/arm_r/v45",
+            "kind": "visible-geometry",
+            "slot": "arm_r",
+            "bone": "root",
+            "attachment": "E12/arm_r",
+            "vertex": 45,
+            "magnitude": 1.0483600028460879e-05,
+            "uncertainty": 1.4162056145266243e-05,
+            "risk": false
+          },
+          {
+            "id": "slot:arm_r/E12/arm_r#default/E12/arm_r/v38",
+            "kind": "visible-geometry",
+            "slot": "arm_r",
+            "bone": "root",
+            "attachment": "E12/arm_r",
+            "vertex": 38,
+            "magnitude": 1.0483600000792473e-05,
+            "uncertainty": 1.4162056159520466e-05,
+            "risk": false
+          },
+          {
+            "id": "slot:arm_l/E12/arm_l#default/E12/arm_l/v22",
+            "kind": "visible-geometry",
+            "slot": "arm_l",
+            "bone": "root",
+            "attachment": "E12/arm_l",
+            "vertex": 22,
+            "magnitude": 8.844116383262921e-06,
+            "uncertainty": 7.437304565127434e-06,
+            "risk": false
+          },
+          {
+            "id": "slot:arm_r/E12/arm_r#default/E12/arm_r/v3",
+            "kind": "visible-geometry",
+            "slot": "arm_r",
+            "bone": "root",
+            "attachment": "E12/arm_r",
+            "vertex": 3,
+            "magnitude": 8.828294779258624e-06,
+            "uncertainty": 8.092603507268834e-06,
+            "risk": false
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v292",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 292,
+            "magnitude": 7.119143215716276e-06,
+            "uncertainty": 1.9532542275518623e-05,
+            "risk": false
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v97",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 97,
+            "magnitude": 6.758733037164715e-06,
+            "uncertainty": 1.5443680505442308e-05,
+            "risk": false
+          },
+          {
+            "id": "slot:arm_l/E12/arm_l#default/E12/arm_l/v67",
+            "kind": "visible-geometry",
+            "slot": "arm_l",
+            "bone": "root",
+            "attachment": "E12/arm_l",
+            "vertex": 67,
+            "magnitude": 6.735819731756822e-06,
+            "uncertainty": 8.691255609317734e-06,
+            "risk": false
+          }
+        ],
+        "velocityMethod": "5-point fourth-order one-sided endpoint derivatives. Heuristic uncertainty is summed difference from 3-point estimates; risk requires gap > threshold + uncertainty. Not a rigorous error bound; increase FPS to verify. Fewer than 5 matched samples: unavailable. No acceleration seam claim.",
+        "physicsInterpretation": "Endpoint diagnostic on first sequential cycle from reset, not a settled-loop physics simulation."
+      },
+      "angularAliasingRisks": [],
+      "continuitySignalsCount": 0,
+      "discreteEventsCount": 0,
+      "geometryEventsCount": 1,
+      "steppedKeysCount": 0
+    },
+    {
+      "name": "get_up",
+      "type": "animation",
+      "duration": 3.6700000762939453,
+      "sampleCount": 222,
+      "effectiveFps": 60.217982399382166,
+      "summary": {
+        "step": {
+          "count": 73796,
+          "median": 0.0020654274251597953,
+          "p95": 0.00851203284935458,
+          "p99": 0.012537009830355798,
+          "max": 0.043068031224225686,
+          "rms": 0.004101456608820828
+        },
+        "speed": {
+          "count": 73796,
+          "median": 0.12437587233547406,
+          "p95": 0.5125774443053929,
+          "p99": 0.7549534373052381,
+          "max": 2.593469946236504,
+          "rms": 0.24698144188180474
+        },
+        "acceleration": {
+          "count": 71984,
+          "median": 0.617806261303873,
+          "p95": 2.806573795717601,
+          "p99": 4.7085790961789895,
+          "max": 31.53029583270274,
+          "rms": 1.5512936949329659
+        },
+        "jerk": {
+          "count": 70188,
+          "median": 7.217461078189124,
+          "p95": 45.4530369052271,
+          "p99": 117.35099095205678,
+          "max": 2494.3809733927596,
+          "rms": 51.77993367260347
+        }
+      },
+      "byKind": {
+        "bone": {
+          "step": {
+            "count": 42432,
+            "median": 0.0020030193160214833,
+            "p95": 0.008733626377627967,
+            "p99": 0.012887797358918922,
+            "max": 0.017748671561937334,
+            "rms": 0.004109664364505958
+          },
+          "speed": {
+            "count": 42432,
+            "median": 0.12061778191780503,
+            "p95": 0.5259213594907819,
+            "p99": 0.7760771545261956,
+            "max": 1.0687891917291736,
+            "rms": 0.24747569636918665
+          },
+          "acceleration": {
+            "count": 42240,
+            "median": 0.5901069930244891,
+            "p95": 2.956508056923983,
+            "p99": 5.058179912949669,
+            "max": 31.53029583270274,
+            "rms": 1.6304294246655826
+          },
+          "jerk": {
+            "count": 42048,
+            "median": 7.091425500173612,
+            "p95": 50.72237286275587,
+            "p99": 131.64552711225448,
+            "max": 2494.3809733927596,
+            "rms": 63.647365905744024
+          }
+        },
+        "visible-geometry": {
+          "step": {
+            "count": 31364,
+            "median": 0.0021304921603962274,
+            "p95": 0.008246790287898676,
+            "p99": 0.011610722097350326,
+            "max": 0.043068031224225686,
+            "rms": 0.004090326215837561
+          },
+          "speed": {
+            "count": 31364,
+            "median": 0.1282939394167611,
+            "p95": 0.4966050724080788,
+            "p99": 0.699174258902361,
+            "max": 2.593469946236504,
+            "rms": 0.2463111920730363
+          },
+          "acceleration": {
+            "count": 29744,
+            "median": 0.646209647467607,
+            "p95": 2.625881998354783,
+            "p99": 3.984322570558632,
+            "max": 23.323407378324298,
+            "rms": 1.4314130772421765
+          },
+          "jerk": {
+            "count": 28140,
+            "median": 7.355766036563351,
+            "p95": 36.200687206392324,
+            "p99": 96.79145254356659,
+            "max": 853.4339526548086,
+            "rms": 25.185492602955367
+          }
+        }
+      },
+      "signalCount": 17,
+      "suppressedCount": 0,
+      "signalCountByKind": {
+        "bone": 0,
+        "visible-geometry": 17
+      },
+      "angularAliasingRisks": [],
+      "continuitySignalsCount": 17,
+      "discreteEventsCount": 97,
+      "geometryEventsCount": 162,
+      "steppedKeysCount": 0
+    },
+    {
+      "name": "relaxed_fall",
+      "type": "animation",
+      "duration": 1.399999976158142,
+      "sampleCount": 85,
+      "effectiveFps": 60.00000102179393,
+      "summary": {
+        "step": {
+          "count": 27984,
+          "median": 0.003553748564264697,
+          "p95": 0.011221891525745127,
+          "p99": 0.016823314844096496,
+          "max": 0.02564805014566163,
+          "rms": 0.0057600439514350074
+        },
+        "speed": {
+          "count": 27984,
+          "median": 0.21322491748708078,
+          "p95": 0.6733135030111683,
+          "p99": 1.0093989078357528,
+          "max": 1.538883034946721,
+          "rms": 0.3456026429716779
+        },
+        "acceleration": {
+          "count": 27068,
+          "median": 1.3157196989440068,
+          "p95": 5.239082870844133,
+          "p99": 8.271197386794377,
+          "max": 17.82686227155978,
+          "rms": 2.583034003893178
+        },
+        "jerk": {
+          "count": 26152,
+          "median": 20.686653937849286,
+          "p95": 79.89744819104206,
+          "p99": 172.27976027014387,
+          "max": 520.4725827854036,
+          "rms": 43.257687850185064
+        }
+      },
+      "byKind": {
+        "bone": {
+          "step": {
+            "count": 16128,
+            "median": 0.003529627048839163,
+            "p95": 0.011432640719148016,
+            "p99": 0.01649174191141688,
+            "max": 0.02287906325145468,
+            "rms": 0.005804501566843512
+          },
+          "speed": {
+            "count": 16128,
+            "median": 0.21177762653690183,
+            "p95": 0.6859584548306844,
+            "p99": 0.9895045315361753,
+            "max": 1.37274381846497,
+            "rms": 0.34827009994161556
+          },
+          "acceleration": {
+            "count": 15936,
+            "median": 1.192556666303198,
+            "p95": 5.241593364680265,
+            "p99": 7.728434668219357,
+            "max": 15.758172975334174,
+            "rms": 2.5001719171360235
+          },
+          "jerk": {
+            "count": 15744,
+            "median": 20.336485699498553,
+            "p95": 79.63867672936297,
+            "p99": 169.60230857693736,
+            "max": 452.2893076120914,
+            "rms": 42.56885693579752
+          }
+        },
+        "visible-geometry": {
+          "step": {
+            "count": 11856,
+            "median": 0.003591624691298122,
+            "p95": 0.01085763326178088,
+            "p99": 0.017682452076365384,
+            "max": 0.02564805014566163,
+            "rms": 0.005699010451190963
+          },
+          "speed": {
+            "count": 11856,
+            "median": 0.21549748514778744,
+            "p95": 0.6514580068011149,
+            "p99": 1.0609471426497448,
+            "max": 1.538883034946721,
+            "rms": 0.34194063289467197
+          },
+          "acceleration": {
+            "count": 11132,
+            "median": 1.457729692727107,
+            "p95": 5.2233041670287035,
+            "p99": 9.184107148384573,
+            "max": 17.82686227155978,
+            "rms": 2.6972282443682545
+          },
+          "jerk": {
+            "count": 10408,
+            "median": 20.987525428929416,
+            "p95": 80.45924923128085,
+            "p99": 177.61040247206114,
+            "max": 520.4725827854036,
+            "rms": 44.27931025105606
+          }
+        }
+      },
+      "signalCount": 0,
+      "suppressedCount": 0,
+      "signalCountByKind": {
+        "bone": 0,
+        "visible-geometry": 0
+      },
+      "angularAliasingRisks": [],
+      "continuitySignalsCount": 0,
+      "discreteEventsCount": 36,
+      "geometryEventsCount": 91,
+      "steppedKeysCount": 0
+    },
+    {
+      "name": "hit",
+      "type": "animation",
+      "duration": 0.41999998688697815,
+      "sampleCount": 27,
+      "effectiveFps": 61.90476383752029,
+      "summary": {
+        "step": {
+          "count": 8840,
+          "median": 0,
+          "p95": 0.0013211085835110909,
+          "p99": 0.002333938433210339,
+          "max": 0.0028438971372527233,
+          "rms": 0.0004994002280531756
+        },
+        "speed": {
+          "count": 8840,
+          "median": 0,
+          "p95": 0.08178291486597507,
+          "p99": 0.14448190751919826,
+          "max": 0.17605078065982982,
+          "rms": 0.030915253178035628
+        },
+        "acceleration": {
+          "count": 8500,
+          "median": 5.318245546419513e-14,
+          "p95": 1.1321093095916555,
+          "p99": 2.025246624930496,
+          "max": 2.6290779554709545,
+          "rms": 0.44804397736831947
+        },
+        "jerk": {
+          "count": 8160,
+          "median": 6.584494691620866e-12,
+          "p95": 19.345920808438805,
+          "p99": 32.57674867002811,
+          "max": 39.08606721349312,
+          "rms": 7.12000494698886
+        }
+      },
+      "byKind": {
+        "bone": {
+          "step": {
+            "count": 4992,
+            "median": 0,
+            "p95": 0.0015828503706209886,
+            "p99": 0.0024688930050596304,
+            "max": 0.0028438971372527233,
+            "rms": 0.0005386523981050839
+          },
+          "speed": {
+            "count": 4992,
+            "median": 0,
+            "p95": 0.09798597838342364,
+            "p99": 0.15283623841832217,
+            "max": 0.17605078065982982,
+            "rms": 0.03334514949520917
+          },
+          "acceleration": {
+            "count": 4800,
+            "median": 0,
+            "p95": 1.423697479114113,
+            "p99": 2.217287188076994,
+            "max": 2.6290779554709545,
+            "rms": 0.4833266439298821
+          },
+          "jerk": {
+            "count": 4608,
+            "median": 0,
+            "p95": 22.567799593409326,
+            "p99": 34.045055836068904,
+            "max": 39.08606721349312,
+            "rms": 7.680567764976004
+          }
+        },
+        "visible-geometry": {
+          "step": {
+            "count": 3848,
+            "median": 0.00012067445230176741,
+            "p95": 0.001111307199989851,
+            "p99": 0.0019180906064520237,
+            "max": 0.0024027345691285257,
+            "rms": 0.00044332961546271314
+          },
+          "speed": {
+            "count": 3848,
+            "median": 0.007470323470963018,
+            "p95": 0.06879520976630774,
+            "p99": 0.11873894601137869,
+            "max": 0.14874071606614742,
+            "rms": 0.02744421514739794
+          },
+          "acceleration": {
+            "count": 3700,
+            "median": 0.10696845175356687,
+            "p95": 0.9622925190277261,
+            "p99": 1.745799287261397,
+            "max": 2.2132525504365814,
+            "rms": 0.39763376241994286
+          },
+          "jerk": {
+            "count": 3552,
+            "median": 1.7727942141231088,
+            "p95": 15.776116690429731,
+            "p99": 26.747228239854813,
+            "max": 33.00861587551657,
+            "rms": 6.3191176483848
+          }
+        }
+      },
+      "signalCount": 0,
+      "suppressedCount": 0,
+      "signalCountByKind": {
+        "bone": 0,
+        "visible-geometry": 0
+      },
+      "angularAliasingRisks": [],
+      "continuitySignalsCount": 0,
+      "discreteEventsCount": 0,
+      "geometryEventsCount": 9,
+      "steppedKeysCount": 0
+    },
+    {
+      "name": "explosion_release",
+      "type": "animation",
+      "duration": 0.699999988079071,
+      "sampleCount": 43,
+      "effectiveFps": 60.00000102179393,
+      "summary": {
+        "step": {
+          "count": 14136,
+          "median": 0,
+          "p95": 0.002782698164569684,
+          "p99": 0.0037561353345524806,
+          "max": 0.007021772848187089,
+          "rms": 0.0010894426675144941
+        },
+        "speed": {
+          "count": 14136,
+          "median": 0,
+          "p95": 0.16696189271752498,
+          "p99": 0.22536812391114494,
+          "max": 0.42130637806602983,
+          "rms": 0.06536656116405581
+        },
+        "acceleration": {
+          "count": 13652,
+          "median": 0,
+          "p95": 2.3061540255696427,
+          "p99": 3.3187762300483485,
+          "max": 6.5972029122564,
+          "rms": 0.9165300591846325
+        },
+        "jerk": {
+          "count": 13168,
+          "median": 0,
+          "p95": 62.600582777832244,
+          "p99": 138.7388462398162,
+          "max": 311.788935117788,
+          "rms": 29.21146515914826
+        }
+      },
+      "byKind": {
+        "bone": {
+          "step": {
+            "count": 8064,
+            "median": 0,
+            "p95": 0.002770407571537094,
+            "p99": 0.003724653685227469,
+            "max": 0.007021772848187089,
+            "rms": 0.001092236471166772
+          },
+          "speed": {
+            "count": 8064,
+            "median": 0,
+            "p95": 0.16622445712301112,
+            "p99": 0.22347922491947675,
+            "max": 0.42130637806602983,
+            "rms": 0.06553418938604712
+          },
+          "acceleration": {
+            "count": 7872,
+            "median": 0,
+            "p95": 2.246388986920499,
+            "p99": 3.313506387543943,
+            "max": 6.5972029122564,
+            "rms": 0.904479041078019
+          },
+          "jerk": {
+            "count": 7680,
+            "median": 0,
+            "p95": 58.816552652075096,
+            "p99": 137.4245857203818,
+            "max": 311.788935117788,
+            "rms": 29.139402183100167
+          }
+        },
+        "visible-geometry": {
+          "step": {
+            "count": 6072,
+            "median": 0,
+            "p95": 0.0028096546439848255,
+            "p99": 0.003804302821514978,
+            "max": 0.00670415908643408,
+            "rms": 0.001085721205981269
+          },
+          "speed": {
+            "count": 6072,
+            "median": 0,
+            "p95": 0.16857928150997778,
+            "p99": 0.22825817317811223,
+            "max": 0.4022495520363135,
+            "rms": 0.06514327346825945
+          },
+          "acceleration": {
+            "count": 5780,
+            "median": 0,
+            "p95": 2.392638021501525,
+            "p99": 3.3268706852197907,
+            "max": 6.298772183214748,
+            "rms": 0.9326923882763454
+          },
+          "jerk": {
+            "count": 5488,
+            "median": 0,
+            "p95": 64.16350792000168,
+            "p99": 144.32102251289933,
+            "max": 260.6885939026258,
+            "rms": 29.312013866394192
+          }
+        }
+      },
+      "signalCount": 0,
+      "suppressedCount": 0,
+      "signalCountByKind": {
+        "bone": 0,
+        "visible-geometry": 0
+      },
+      "angularAliasingRisks": [],
+      "continuitySignalsCount": 0,
+      "discreteEventsCount": 9,
+      "geometryEventsCount": 3,
+      "steppedKeysCount": 0
+    },
+    {
+      "name": "chant_enter -> chant_loop",
+      "type": "transition",
+      "duration": 0.49999999633202175,
+      "sampleCount": 31,
+      "effectiveFps": 60,
+      "summary": {
+        "step": {
+          "count": 10200,
+          "median": 1.3626016842072097e-05,
+          "p95": 6.810358535891411e-05,
+          "p99": 8.944901588510784e-05,
+          "max": 0.0001643942943065756,
+          "rms": 3.176099451941003e-05
+        },
+        "speed": {
+          "count": 10200,
+          "median": 0.0008175610105243254,
+          "p95": 0.004086215121534847,
+          "p99": 0.005366940953106471,
+          "max": 0.009863657658394523,
+          "rms": 0.001905659671164591
+        },
+        "acceleration": {
+          "count": 9860,
+          "median": 0.00394533463539127,
+          "p95": 0.0315902813430101,
+          "p99": 0.13594571543698752,
+          "max": 0.2825815741846302,
+          "rms": 0.026057363118828576
+        },
+        "jerk": {
+          "count": 9520,
+          "median": 0.01034801739097175,
+          "p95": 2.2620400942532144,
+          "p99": 9.316668982603131,
+          "max": 19.991069772194113,
+          "rms": 2.0810641057673984
+        }
+      },
+      "byKind": {
+        "bone": {
+          "step": {
+            "count": 5760,
+            "median": 0,
+            "p95": 6.810358535891411e-05,
+            "p99": 8.369679652007786e-05,
+            "max": 0.0001643942943065756,
+            "rms": 2.911989744660531e-05
+          },
+          "speed": {
+            "count": 5760,
+            "median": 0,
+            "p95": 0.004086215121534847,
+            "p99": 0.005021807791204673,
+            "max": 0.009863657658394523,
+            "rms": 0.0017471938467963127
+          },
+          "acceleration": {
+            "count": 5568,
+            "median": 0,
+            "p95": 0.025032728394758254,
+            "p99": 0.13594571543684664,
+            "max": 0.2825815741846302,
+            "rms": 0.024170237999984696
+          },
+          "jerk": {
+            "count": 5376,
+            "median": 0.006336998030321152,
+            "p95": 0.7514360039293814,
+            "p99": 9.31666898256716,
+            "max": 19.991069772194113,
+            "rms": 1.928387353196079
+          }
+        },
+        "visible-geometry": {
+          "step": {
+            "count": 4440,
+            "median": 2.4066327107920503e-05,
+            "p95": 7.028459425255208e-05,
+            "p99": 9.925532547597604e-05,
+            "max": 0.00015775241801810385,
+            "rms": 3.48906326710282e-05
+          },
+          "speed": {
+            "count": 4440,
+            "median": 0.00144397962647523,
+            "p95": 0.004217075655153126,
+            "p99": 0.005955319528558564,
+            "max": 0.009465145081086217,
+            "rms": 0.0020934379602616806
+          },
+          "acceleration": {
+            "count": 4292,
+            "median": 0.004734401562389595,
+            "p95": 0.03699338237975095,
+            "p99": 0.13611404491560228,
+            "max": 0.2715644201539845,
+            "rms": 0.028318748083303695
+          },
+          "jerk": {
+            "count": 4144,
+            "median": 0.01578133855995222,
+            "p95": 6.759047254751333,
+            "p99": 10.704921287080145,
+            "max": 19.19473460264644,
+            "rms": 2.2638393029603505
+          }
+        }
+      },
+      "signalCount": 0,
+      "suppressedCount": 0,
+      "signalCountByKind": {
+        "bone": 0,
+        "visible-geometry": 0
+      },
+      "switchInstant": {
+        "matchedLandmarks": 340,
+        "unmatchedLandmarks": 0,
+        "maxPositionGap": 0,
+        "positionRisk": false,
+        "worst": [
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v0",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 0,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v24",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 24,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v48",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 48,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v73",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 73,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v97",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 97,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v121",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 121,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v146",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 146,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v170",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 170,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v194",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 194,
+            "magnitude": 0
+          },
+          {
+            "id": "slot:cape/E12/cape#default/E12/cape/v219",
+            "kind": "visible-geometry",
+            "slot": "cape",
+            "bone": "root",
+            "attachment": "E12/cape",
+            "vertex": 219,
+            "magnitude": 0
+          }
+        ],
+        "discreteEvents": [],
+        "note": "Only identical landmark identities are compared; changed/hidden attachments are separate events."
+      },
+      "angularAliasingRisks": [],
+      "continuitySignalsCount": 0,
+      "discreteEventsCount": 0,
+      "geometryEventsCount": 1,
+      "steppedKeysCount": 0
+    }
+  ]
+}

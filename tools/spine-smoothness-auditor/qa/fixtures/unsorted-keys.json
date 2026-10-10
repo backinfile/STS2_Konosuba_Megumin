@@ -1,0 +1,122 @@
+{
+  "skeleton": {
+    "spine": "4.2.43",
+    "x": 0,
+    "y": 0,
+    "width": 100,
+    "height": 100
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "name": "tip",
+      "parent": "root",
+      "x": 100,
+      "length": 20
+    }
+  ],
+  "slots": [
+    {
+      "name": "art",
+      "bone": "tip",
+      "attachment": "quad"
+    }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "attachments": {
+        "art": {
+          "quad": {
+            "type": "mesh",
+            "uvs": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            "triangles": [
+              0,
+              1,
+              2,
+              2,
+              3,
+              0
+            ],
+            "vertices": [
+              -10,
+              -10,
+              10,
+              -10,
+              10,
+              10,
+              -10,
+              10
+            ],
+            "hull": 4
+          },
+          "alternative": {
+            "type": "mesh",
+            "uvs": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            "triangles": [
+              0,
+              1,
+              2,
+              2,
+              3,
+              0
+            ],
+            "vertices": [
+              990,
+              -10,
+              1010,
+              -10,
+              1010,
+              10,
+              990,
+              10
+            ],
+            "hull": 4
+          }
+        }
+      }
+    }
+  ],
+  "animations": {
+    "bad": {
+      "bones": {
+        "root": {
+          "translate": [
+            {
+              "time": 1,
+              "x": 100
+            },
+            {
+              "time": 0,
+              "x": 0
+            },
+            {
+              "time": 0.5,
+              "x": 50
+            }
+          ]
+        }
+      }
+    }
+  }
+}

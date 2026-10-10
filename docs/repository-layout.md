@@ -52,3 +52,7 @@ python design/docs/build_simple_design.py
 - v6 后续五状态交付在原目录更新。前一阶段保存于 Git 历史 `264ff53114cba6c1c372a9782315044398811181`；移除旧错误阶段片、Dead probe 与被取代的阶段 manifest，以当前五状态 README/MANIFEST 为准。
 
 - `art/megumin-quartet-spine/actions-v7/` 保留尺寸跳变复现基线；`actions-v8/` 保留校准版；`actions-v9/` 为当前连续节奏版本。`verification/` 保存连续性、去摩尔纹、原生游戏检查与 v8/v9 原速录像对照，数据通过不能替代动作画面验收。
+
+## Spine 研究与诊断
+
+`docs/research/spine/` 保存固定版本的原版研究、惠惠 v9 审查、少量派生统计和重点图证。`tools/spine-smoothness-auditor/` 为独立 Node.js 诊断工具，固定官方 Spine runtime 依赖并附授权说明。全量审计包、原版游戏资产、node_modules、逐帧运行输出及临时日志不提交。资料归档不代表修改动画资产或完成新一轮游戏实机验证。
