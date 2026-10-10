@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-10",
+  "renderer": "Official Spine WebGL 4.2.95",
+  "checked": [
+    "reference versus rendered key poses",
+    "chant turn intermediate 0.45s",
+    "release exit intermediate 0.333s",
+    "brace to prone intermediate 0.82s",
+    "recovery intermediate 1.0s and 1.58s",
+    "time input updates immediately",
+    "60fps next-frame button",
+    "0.25 playback",
+    "attachment-switch neighboring-frame gallery",
+    "full flow returns to idle_loop and stops after final hold",
+    "dark background with 320px canvas",
+    "prone final pose comparison",
+    "no browser warnings or errors in final playback"
+  ],
+  "art_status": "review candidate; local outline and cloth transitions remain visible",
+  "not_verified": [
+    "Spine Editor import",
+    "Godot/STS2 integration"
+  ]
+}

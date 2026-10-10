@@ -1,0 +1,48 @@
+{
+  "palmDrift": 0.04008583570929214,
+  "palmFloor": 0.9798772931098938,
+  "freeHandDistanceFromStaff": 33.55163435312337,
+  "runtime": "@esotericsoftware/spine-core 4.2.95",
+  "animations": 19,
+  "actionClips": 18,
+  "bones": 24,
+  "samples": 2962,
+  "maxIKError": 0.23255307719093193,
+  "maxStretch": 1.0164394986203795,
+  "stretchAt": {
+    "clip": "chant_loop",
+    "time": 0.5,
+    "bone": "thigh_r"
+  },
+  "maxSourceMappingError": 0.00003213593453210706,
+  "minClothY": -0.08416389673948288,
+  "idleAnchorDrift": 0,
+  "supportError": 0.01824995351269725,
+  "loopSeams": {
+    "idle_loop": 0,
+    "chant_loop": 0,
+    "explosion_hold": 0,
+    "relaxed_loop": 0
+  },
+  "transitionSeams": {
+    "cast_short -> idle_loop": 0,
+    "chant_enter -> chant_loop": 0,
+    "chant_cancel -> idle_loop": 0,
+    "chant_ack -> chant_loop": 0,
+    "attack_short -> idle_loop": 0,
+    "hit -> idle_loop": 0,
+    "hit_chant -> chant_loop": 0,
+    "explosion_release -> explosion_hold": 0,
+    "explosion_exit -> relaxed_fall": 0,
+    "relaxed_fall -> relaxed_loop": 0,
+    "relaxed_loop -> get_up": 0,
+    "get_up -> idle_loop": 0,
+    "dead_from_down -> dead": 0,
+    "hit_down -> relaxed_loop": 0
+  },
+  "eventCounts": {
+    "release": 1,
+    "impact": 1
+  },
+  "passed": true
+}

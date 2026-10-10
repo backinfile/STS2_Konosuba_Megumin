@@ -1,0 +1,21 @@
+{
+  "version": "0.4.0",
+  "preview": "actions-v4/preview.html",
+  "keyframes": "actions-v4/keyframes.html",
+  "reviewFrames": "actions-v4/review-frames.html",
+  "visualFramesReviewed": 54,
+  "checked": [
+    "Complete demo returns to idle after chant, release, three damage pulses, collapse and recovery",
+    "Single release event in complete demo",
+    "Chant hit returns to chant_loop",
+    "Dead holds at 1.30 seconds and disables gameplay controls",
+    "Death from down selects dead_from_down and holds at 0.45 seconds",
+    "320 pixel mode and dark background reviewed",
+    "Final viewport has no visible canvas clipping"
+  ],
+  "remainingLimits": [
+    "Native Spine editor import not tested",
+    "STS2 integration not performed",
+    "2D part animation uses discrete corrective art for hands, limbs, boots and cape"
+  ]
+}

@@ -11,6 +11,12 @@ __pycache__/
 !.env.example
 .DS_Store
 Thumbs.db
+/.local/
+/mod/bin/
+/mod/obj/
+/dist/
+/tools/vendor/STS2_Mcp/bin/
+/tools/vendor/STS2_Mcp/obj/
 
 # Keep the reviewed functional test evidence
 !art/megumin/tests/godot_test.log

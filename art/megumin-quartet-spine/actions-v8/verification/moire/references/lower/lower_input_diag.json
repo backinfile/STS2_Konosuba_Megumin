@@ -1,0 +1,193 @@
+{
+  "pixels": [
+    1671,
+    941
+  ],
+  "lattice": {
+    "detected": false,
+    "components_above_tau": 510,
+    "isolated_components_kept": 510,
+    "rejected_large_components": 0,
+    "notched_bins": 612,
+    "notched_bins_pct": 0.0318,
+    "max_peak_excess": 1.515,
+    "peaks_top": [
+      {
+        "excess": 1.515,
+        "support": 2,
+        "period_px": 3.09,
+        "angle_deg": -139.4
+      },
+      {
+        "excess": 1.515,
+        "support": 2,
+        "period_px": 3.09,
+        "angle_deg": 40.6
+      },
+      {
+        "excess": 1.469,
+        "support": 4,
+        "period_px": 2.23,
+        "angle_deg": -179.8
+      },
+      {
+        "excess": 1.469,
+        "support": 4,
+        "period_px": 2.23,
+        "angle_deg": 0.2
+      },
+      {
+        "excess": 1.442,
+        "support": 2,
+        "period_px": 2.67,
+        "angle_deg": -83.6
+      },
+      {
+        "excess": 1.442,
+        "support": 2,
+        "period_px": 2.67,
+        "angle_deg": 96.4
+      },
+      {
+        "excess": 1.411,
+        "support": 4,
+        "period_px": 42.75,
+        "angle_deg": -91.4
+      },
+      {
+        "excess": 1.411,
+        "support": 4,
+        "period_px": 42.75,
+        "angle_deg": 88.6
+      },
+      {
+        "excess": 1.398,
+        "support": 2,
+        "period_px": 2.2,
+        "angle_deg": -152.0
+      },
+      {
+        "excess": 1.398,
+        "support": 2,
+        "period_px": 2.2,
+        "angle_deg": 28.0
+      },
+      {
+        "excess": 1.397,
+        "support": 2,
+        "period_px": 2.38,
+        "angle_deg": -103.6
+      },
+      {
+        "excess": 1.397,
+        "support": 2,
+        "period_px": 2.38,
+        "angle_deg": 76.4
+      }
+    ]
+  },
+  "granule": {
+    "level": "none",
+    "flagged_windows": 0,
+    "flat_windows": [],
+    "oriented_windows": [
+      {
+        "box": [
+          838,
+          498,
+          934,
+          594
+        ],
+        "band_std": 1.627,
+        "kurtosis": 3.68,
+        "anisotropy": 0.828,
+        "mid_blob_cov_pct": 13.12,
+        "mid_blob_median_area": 104.5
+      },
+      {
+        "box": [
+          1042,
+          175,
+          1138,
+          271
+        ],
+        "band_std": 1.4029,
+        "kurtosis": 7.32,
+        "anisotropy": 0.614,
+        "mid_blob_cov_pct": 9.62,
+        "mid_blob_median_area": 52.0
+      },
+      {
+        "box": [
+          1026,
+          467,
+          1122,
+          563
+        ],
+        "band_std": 3.7551,
+        "kurtosis": 17.65,
+        "anisotropy": 0.495,
+        "mid_blob_cov_pct": 9.93,
+        "mid_blob_median_area": 119.5
+      }
+    ]
+  },
+  "scale_index": {
+    "scale_tile_pct": 0.0,
+    "level": "none",
+    "tiles": 190,
+    "flagged_tiles": 0,
+    "median_cov_pct": 3.5,
+    "median_area_cv": 0.884,
+    "tile": 128,
+    "stride": 64,
+    "thresholds": {
+      "min_cov_pct": 19.0,
+      "max_area_cv": 0.65,
+      "min_circ": 0.55,
+      "max_aniso": 0.35,
+      "min_band_std": 0.3,
+      "blob_area_min": 12,
+      "blob_area_max": 300,
+      "suspected_min_pct": 2.0,
+      "structured_min_pct": 6.0
+    },
+    "flagged_tile_boxes": [],
+    "measured_on": "1280x721",
+    "canvas_normalized_for_grading": true,
+    "canon_long_edge": 1280,
+    "heatmap": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\lower\\lower_input_scaleheat.png"
+  },
+  "scale_index_native": {
+    "scale_tile_pct": 0.0,
+    "level": "none",
+    "pixels": [
+      1671,
+      941
+    ]
+  },
+  "thresholds": {
+    "lattice_min_peaks": 2,
+    "lattice_min_excess": 2.5,
+    "granule_min_band_std": 0.35,
+    "granule_max_kurtosis": 8.0,
+    "granule_min_mid_blob_cov_pct": 19.0,
+    "granule_max_anisotropy": 0.35,
+    "flat_min_flagged": 2,
+    "pervasive_min_flagged": 3,
+    "pervasive_min_ratio": 0.6
+  },
+  "flags": {
+    "lattice": false,
+    "granule_flat": false,
+    "granule_pervasive": false,
+    "granule_suspected": false,
+    "scale_structured": false,
+    "scale_suspected": false
+  },
+  "stage": "diagnose",
+  "source": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\lower.png",
+  "source_sha256": "6555bc2ab2ddcb762ae4f941765aa67f995abfdee2381db979134a0f7f165370",
+  "time": "2026-10-10T14:51:02+08:00",
+  "board": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\lower\\lower_input_diag_board.png"
+}

@@ -1,0 +1,983 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>惠惠体系复盘 · 原版五职业与Karen</title><style>
+:root{--bg:#f6f2ea;--surface:#fffdf7;--border:#d7ccbb;--text:#302a24;--text-dim:#746b61;--red:#96352e;--green:#456952;--gold:#846528;--ink:#26201b;--sans:'Segoe UI','Microsoft YaHei',sans-serif;--serif:'Palatino Linotype','Noto Serif SC',SimSun,serif;--mono:Consolas,'Cascadia Mono',monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.85 var(--sans)}a{color:var(--red);text-underline-offset:4px}p{margin:0 0 16px}h1,h2,h3{line-height:1.4;margin:0 0 18px}h1,h2{font-family:var(--serif);font-weight:600}h1{font-size:clamp(38px,4.5vw,62px);letter-spacing:-1px;margin:17px 0 22px}h1 em{font-style:normal;color:var(--red)}h2{font-size:30px}h3{font-size:19px}.wrap{display:grid;grid-template-columns:165px minmax(0,1fr);gap:44px;max-width:1450px;margin:auto;padding:30px 40px 55px}.main{min-width:0}.toc{position:sticky;top:25px;align-self:start;padding-top:15px;border-top:3px solid var(--red)}.toc strong{font:11px var(--mono);letter-spacing:1px;color:var(--red);display:block;margin-bottom:22px}.toc a{display:block;text-decoration:none;color:var(--text-dim);font-size:13px;padding:9px 0}.toc a:hover{color:var(--red)}.eyebrow{font:11px var(--mono);letter-spacing:1.4px;color:var(--red)}header{padding:20px 0 35px;border-bottom:2px solid var(--ink)}.lead{font-size:18px;max-width:890px;color:var(--text-dim)}.notice{border-left:3px solid var(--red);padding:16px 20px;background:#ece0d2;margin:22px 0}.notice p:last-child{margin:0}.badge{display:inline-block;font-size:11px;padding:2px 7px;border:1px solid currentColor;color:var(--green);margin-right:8px;line-height:1.8}.badge.draft{color:var(--gold)}.badge.history{color:var(--text-dim)}small{display:block;color:var(--text-dim);font-size:12px;font-weight:400;line-height:1.8;margin-top:6px}.muted{color:var(--text-dim);font-size:13px}.legend{display:flex;flex-wrap:wrap;gap:7px 15px;font-size:12px;margin-top:25px}.legend>span{display:flex;align-items:center}.toc a.sub{padding-left:12px;font-size:12px}.support-system{padding:28px 0;margin:25px 0;border-block:1px solid var(--border);scroll-margin-top:25px}.support-system>h3{font-size:23px;margin-top:10px}.support-system h4{font-size:16px;margin:20px 0 10px}section{padding:44px 0;border-bottom:1px solid var(--border);scroll-margin-top:25px}.section-title{margin-top:9px}.table-scroll{overflow:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:13px;min-width:690px;line-height:1.9}caption{color:var(--text-dim);font-size:12px;text-align:left;padding-bottom:12px}th,td{padding:16px 18px 16px 0;border-bottom:1px solid var(--border);text-align:left;vertical-align:top;overflow-wrap:break-word}thead th{font-size:12px;color:var(--red)}tbody th{width:23%}.status-table tbody th{width:20%}.status-table td:nth-child(2){width:35%}.status-table td:nth-child(3){width:45%}.system-tail{margin:28px 0;padding-top:24px;border-top:1px solid var(--border)}.system-tail p,.system-tail li{font-size:14px}.token-card{max-width:660px}tbody th a{text-decoration:none}.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}.two>*{min-width:0}.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;list-style:none;padding:0;margin:27px 0}.flow li{border-top:2px solid var(--border);padding-top:16px}.flow span{display:block;font:13px var(--mono);color:var(--red)}.flow b{display:block;margin:8px 0}.flow p{font-size:13px;color:var(--text-dim)}.definition{border-left:2px solid var(--border);padding-left:19px;margin:20px 0}.definition h3{font-size:16px;color:var(--red);margin-bottom:8px}.spell{background:var(--ink);color:#fbf4e7;padding:27px 30px;border-top:4px solid var(--red);margin:26px 0}.spell .cost{color:#dfb393;font:18px var(--mono)}.spell h3{font:30px var(--serif);margin:10px 0 20px}.spell p{font-size:18px;line-height:2}.spell small{color:#cfbda5}.given-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.given-card{border-top:2px solid var(--red);padding-top:18px}.given-card>div{display:flex;gap:12px;align-items:baseline}.given-card h3{font-size:21px;font-family:var(--serif)}.cost{font:15px var(--mono);color:var(--red);white-space:nowrap}.card-text{font-size:16px}.given-card .muted{margin-top:12px;font-size:12px}.conventions{padding-left:23px}.conventions>li{padding:9px 0 13px}.conventions .badge{margin-left:12px}.conventions p{font-size:13px;color:var(--text-dim);margin:8px 0 0}.calc{margin:27px 0;padding:25px;background:var(--surface);border:1px solid var(--border)}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}.controls label{font-size:13px}.controls label b{font:23px var(--mono);color:var(--red);margin-left:7px}input[type=range]{width:100%;accent-color:var(--red);margin:15px 0}input,button{font:inherit}button{cursor:pointer;background:var(--surface);border:1px solid var(--border);color:var(--text);padding:7px 13px;font-size:13px}button:disabled{cursor:default;opacity:.5}button:hover:enabled{color:var(--red);border-color:var(--red)}:focus-visible{outline:2px solid var(--red);outline-offset:4px}.calc-result{display:flex;align-items:center;gap:27px;margin:12px 0 20px}.calc-result strong{font:58px/1 var(--serif);color:var(--red)}.calc-result p{font:16px/1.7 var(--mono);margin:0}.calc .muted{margin:0}.record{padding:22px 0;border-top:1px solid var(--border)}.record h3{font:25px var(--serif);margin-top:12px}.record>b{display:block;color:var(--red);margin-bottom:10px}.record p{font-size:14px}.record .muted{font-size:13px}details{padding:16px 0}summary{cursor:pointer;font-weight:600;color:var(--red)}details[open]>summary{margin-bottom:18px}.large-details{border:1px solid var(--border);padding:18px 23px;margin:22px 0}.large-details p{font-size:13px}li{margin-bottom:11px}li p{margin:5px 0}.decl-demo{background:var(--surface);padding:23px;border:1px solid var(--border);margin-top:22px}.decl-demo p{font-size:13px}.decl-readout{display:flex;align-items:center;gap:22px;margin:14px 0 18px}.decl-readout strong{font:47px var(--serif);color:var(--red)}.decl-readout span{font-size:14px}.buttons{display:flex;gap:12px;flex-wrap:wrap}.pending{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 32px;padding-left:22px}.pending li{font-size:14px}.pending p{color:var(--text-dim);font-size:13px}.ref-links{font-size:13px;margin:20px 0}footer{padding:26px 0;font-size:12px;color:var(--text-dim)}.result-note{font-weight:600;color:var(--red)}.old-names{font-size:13px;line-height:2}.material-list li{font-size:13px}
+@media(max-width:1120px){.wrap{padding-inline:28px;gap:28px;grid-template-columns:135px minmax(0,1fr)}.given-cards{grid-template-columns:1fr}.given-card{display:grid;grid-template-columns:180px minmax(0,1fr);gap:0 20px}.given-card small,.given-card .muted{grid-column:2}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.wrap{display:block;padding-top:0}.toc{display:flex;gap:20px;white-space:nowrap;overflow:auto;top:0;background:var(--bg);z-index:2;border-top:0;border-bottom:1px solid var(--border);padding:8px 0}.toc strong{display:none}.toc a{font-size:12px;padding:7px 0}header{padding-top:32px}section{scroll-margin-top:65px}.two{gap:24px}.controls{gap:15px}}
+@media(max-width:580px){.wrap{padding-inline:18px}h2{font-size:26px}.two,.pending,.controls{grid-template-columns:1fr}.controls{gap:5px}.flow{gap:14px}.given-card{display:block}.spell{padding:22px}.spell p{font-size:16px}.calc{padding:20px}.calc-result{gap:18px}.calc-result p{font-size:13px}.conventions .badge{margin-left:0;margin-top:5px;display:table}.large-details{padding:17px}.decl-readout{gap:15px}.legend{display:block}.legend>span{margin-bottom:7px}section{padding-block:35px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{.toc,.buttons{display:none}.wrap{display:block;padding:0}body{background:white}.given-card,.record{break-inside:avoid}}
+
+.audit-system{border-top:2px solid var(--border);padding:30px 0;scroll-margin-top:70px}
+.audit-system>h3{font:29px var(--serif);color:var(--red)}
+.audit-system h4{font-size:17px;margin:26px 0 10px}
+#megumin-audit .muted{overflow-wrap:anywhere}
+.audit-table tbody th{width:auto}.audit-card-roles table{min-width:1120px;table-layout:fixed}
+.audit-card-roles th:nth-child(1){width:14%}.audit-card-roles th:nth-child(2){width:22%}
+.audit-card-roles th:nth-child(3){width:9%}.audit-card-roles th:nth-child(4){width:18%}
+.audit-card-roles th:nth-child(5){width:16%}.audit-card-roles th:nth-child(6){width:21%}
+
+.audit-system{border-top:2px solid var(--border);padding:30px 0;scroll-margin-top:70px}
+.audit-system>h3{font:29px var(--serif);color:var(--red)}
+.audit-system h4{font-size:17px;margin:26px 0 10px}
+#megumin-audit .muted{overflow-wrap:anywhere}
+.audit-table tbody th{width:auto}.audit-card-roles table{min-width:1120px;table-layout:fixed}
+.audit-card-roles th:nth-child(1){width:14%}.audit-card-roles th:nth-child(2){width:22%}
+.audit-card-roles th:nth-child(3){width:9%}.audit-card-roles th:nth-child(4){width:18%}
+.audit-card-roles th:nth-child(5){width:16%}.audit-card-roles th:nth-child(6){width:21%}
+
+.review-finding{border-top:1px solid var(--border);padding:25px 0}.review-finding h3{margin-top:14px;font-family:var(--serif);font-size:25px}.proposal{border-left:3px solid var(--green);padding:12px 17px;background:#eef1e8}.summary-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:28px 0}.summary-strip>div{border-top:2px solid var(--red);padding-top:13px}.summary-strip b{font:21px var(--serif);display:block}.summary-strip p{font-size:13px;color:var(--text-dim);margin-top:8px}.review-scope{font-size:13px;color:var(--text-dim)}.comparison table{min-width:1000px}.comparison tbody th{width:10%}.comparison td:nth-child(2){width:25%}.comparison td:nth-child(3){width:34%}.comparison td:nth-child(4){width:31%}.compact{font-size:12px;padding:10px 0}.compact[open]>summary{margin-bottom:10px}.compact p{font-size:12px;line-height:2}.route{padding:25px;border:1px solid var(--border);background:var(--surface)}.route h3{font:29px var(--serif);margin-top:12px}dt{font-size:12px;color:var(--red);font-weight:700;margin-top:15px}dd{margin:5px 0 17px;font-size:14px}.source-entry{scroll-margin-top:40px;border-top:1px solid var(--border)}.source-entry>summary{font-size:14px}.source-path{font-size:12px;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.65 var(--mono);background:#efe9df;padding:17px;max-height:480px;overflow:auto}.return-link{font-size:13px}.review-next li{padding:8px 0;font-size:16px}.review-keyline{font-size:19px;line-height:1.8;color:var(--red)}
+@media(max-width:700px){.summary-strip{grid-template-columns:1fr;gap:10px}.route{padding:20px}.review-finding h3{font-size:22px}}
+</style></head><body><aside data-design-status="taxonomy-superseded" style="padding:20px 30px;background:#ecdccd;border-bottom:2px solid #96352e;color:#302a24;font:15px/1.8 Microsoft YaHei,sans-serif"><b>本页体系划分已被用户修正，以下保留历史分析。</b> 当前采用爆裂大体系、技能牌大体系、10张以内的宣言小体系；技能点为局外成长，魔力积蓄为待评估运转体系。<a href="原版五职业与华恋及惠惠体系表.html">打开新的统一体系表 →</a></aside><div class="wrap"><nav class="toc" aria-label="体系复盘章节"><strong>MEGUMIN / REVIEW</strong><a href="#megumin-audit">惠惠逐项分析</a><a href="#audit-explosion">爆裂逐卡定位</a><a href="#audit-declaration">宣言逐卡定位</a><a href="#audit-bonus">增伤小体系</a><a href="#audit-support">共享燃料与配套</a><a href="#basis">文档与纠正依据</a><a href="#inventory">当前全部内容</a><a href="#ports">惠惠体系完整性</a><a href="#comparison">原版五职业与Karen</a><a href="#findings">需要补充什么</a><a href="#routes">两套体系怎样连接</a><a href="#cards">现有卡牌怎么处理</a><a href="#rules">先明确宣言规则</a><a href="#not-now">暂不新增的体系</a><a href="#next">写卡顺序</a><a href="#sources">来源与范围</a><a href="惠惠当前设计总览.html">返回当前总览</a></nav><main class="main"><header><span class="eyebrow">SYSTEM REVIEW · 2026.10.09</span><h1>从共同核心，<br><em>看体系是否完整。</em></h1><p class="lead">当前存在爆裂、宣言两个真实的体系核心，以及爆裂内的增伤小体系；优先缺口是入口与基础支撑，不是再增加一批完成奖励。</p><p>已用体系分析流程逐项检查当前19张设计：七项判定、来源与收益、三个端口、五类定位、独立性及风险。宣言完成奖励较多，独立起步与基础支撑较薄；爆裂已有后续生成与持续抽牌，缺口应具体到重复运作的资源和准备期防守。</p><div class="summary-strip"><div><b>爆裂：主体系候选</b><p>爆裂狂提供入口，吟唱记录技能，回合末统一兑现。</p></div><div><b>增伤：爆裂内的小配套</b><p>卡面直接写下一次伤害提高多少；不再设威力关键词。</p></div><div><b>宣言：主体系候选</b><p>围绕悬挂与完成，连接运转、防守和爆裂输出。</p></div></div><p class="review-scope">本次分析直接使用当前卡面，明确区分生成牌、助手候选、未定属性及通用配套。体系分类是设计判断，未实战证明成熟大体系；补牌建议未自动采用。</p><p class="review-scope">原版采用本地v0.107.1程序集提取源码（59260271，2026-06-18）；Karen采用本地工作区源码，HEAD e5a9115，以逐文件内容和摘要为准。不是最新版本或实战强度排名。</p></header>
+<section id="megumin-audit"><span class="eyebrow">MEGUMIN / FULL TEMPLATE AUDIT</span><h2 class="section-title">把文档的分析方法逐项用到惠惠身上</h2><p>分析当前总览中19张有具体卡面的设计，包含生成牌、联机牌与助手候选；这不是19张已定稿奖励卡。爆裂狂是玩家Buff，不计卡数；重复展示的吾名惠惠只计一次。爆裂鉴赏、局外技能点、暂存和历史方案不计。</p><p><a href="参考资料/设计方法/体系分析流程.md">体系分析流程</a> · <a href="参考资料/设计方法/卡牌分析流程.md">卡牌分析流程</a> · <a href="docs/惠惠体系逐项分析.json">本次逐项分析数据</a></p><p>文档将体系分为大体系、小体系、效果组。爆裂与宣言已经通过共同核心和牌间需求检查，但完整初始牌组、稀有度及实战稳定性尚未确定，因此记录为大体系候选，不提前认定为成熟大体系；“候选”是证据状态，不是新增第四类。增伤按当前结构与用户决定明确列为小体系。</p><ul><li>体系成员只收录直接使用吟唱／爆裂、宣言或其专属生成牌的卡。普通抽牌、减费和保留另列通用配套，不因它们也能被技能计数就全部扩进体系。</li><li>触发牌数＝纯触发＋触发兼收益；收益牌数＝纯收益＋触发兼收益。两者有交集，不能相加当总数。跨体系是独立标记。仅提供来源或调节规则、没有直接触发指定事件的卡记为配套，不硬塞进触发／收益。</li><li>分类依次检查突破限制、引导／基础／核心、中坚。每张牌在每个体系内只归一类；跨体系牌分别解释。Token不是奖励池选牌，表内的选牌含义对它改为生成与使用价值。</li><li>下面的触发统计是卡牌满足条件后的潜在职责，不是每次打出都能触发，也不是同一手牌能兑现的次数。宣言牌自身不推进自己的进度；推进其他宣言还受多宣言计数规则限制。</li><li>牌种按当前稿统计；爆裂、咒文及宣言候选的建议类型不当作用户定稿。只采用明确写出的稀有度；未指定的保留为未定。费用按升级前统计，复制牌费用保留未定。</li></ul><h3>先确认当前卡池的边界</h3><div class="table-scroll audit-table "><table><thead><tr><th scope="col">范围</th><th scope="col">类型</th><th scope="col">升级前费用</th><th scope="col">稀有度</th></tr></thead><tbody><tr><th scope="row">当前19张设计</th><td>技能：16 · 能力：2 · 未定：1</td><td>0：6 · 1：10 · 2：1 · 3：1 · 未定：1</td><td>普通：2 · 罕见：4 · 稀有：1 · 未定：12</td></tr></tbody></table></div><div class="table-scroll audit-table "><table><thead><tr><th scope="col">稀有度</th><th scope="col">类型分布</th><th scope="col">费用分布</th></tr></thead><tbody><tr><th scope="row">普通（2张）</th><td>技能：2</td><td>1：2</td></tr><tr><th scope="row">罕见（4张）</th><td>技能：4</td><td>0：2 · 1：2</td></tr><tr><th scope="row">稀有（1张）</th><td>能力：1</td><td>1：1</td></tr><tr><th scope="row">未定（12张）</th><td>技能：10 · 能力：1 · 未定：1</td><td>0：4 · 1：5 · 2：1 · 3：1 · 未定：1</td></tr></tbody></table></div><p>16种技能的统计包含建议类型；2种能力不会推进技能连打，联机牌类型未定。12张稀有度未定，因此不能用现有分布宣称“普通池已足够”或“核心全在稀有池”。初始牌组未定，也不把打击、防御示例加入分母。</p><details><summary>19张具体卡面的来源与全部归位</summary><div class="table-scroll audit-table "><table><thead><tr><th scope="col">卡牌</th><th scope="col">设计状态</th><th scope="col">基础属性</th><th scope="col">当前卡面</th><th scope="col">在各体系中的定位</th></tr></thead><tbody><tr><th scope="row"><a href="惠惠当前设计总览.html#explosion">爆裂魔法</a></th><td>生成牌／技能类型为建议</td><td>3费 · 技能 · 未定</td><td>保留。开始吟唱。在回合结束时，对所有敌人造成等同于吟唱期间打出的技能牌数量的伤害。消耗。</td><td>爆裂与吟唱：机制核心牌<br>下一次爆裂增伤配套：机制中坚牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#explosion">咒文续接</a></th><td>用户指定效果／名称暂定</td><td>0费 · 技能 · 未定</td><td>吟唱：获得1点能量，抽2张牌。消耗。</td><td>爆裂与吟唱：机制核心牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#might-system">爆裂咒文</a></th><td>Token／技能类型为建议</td><td>0费 · 技能 · 未定</td><td>下一次爆裂魔法造成的伤害提高2点。消耗。</td><td>爆裂与吟唱：机制中坚牌<br>下一次爆裂增伤配套：机制中坚牌</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-unfold">咒文展开</a></th><td>助手候选／稀有度亦为草案</td><td>1费 · 技能 · 普通</td><td>将2张爆裂咒文加入手牌。</td><td>爆裂与吟唱：机制中坚牌<br>下一次爆裂增伤配套：机制中坚牌</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-steady">稳住声线</a></th><td>助手候选／稀有度亦为草案</td><td>1费 · 技能 · 普通</td><td>获得6点格挡。将1张爆裂咒文加入手牌。</td><td>爆裂与吟唱：机制引导牌<br>下一次爆裂增伤配套：机制引导牌</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-trim">删繁就简</a></th><td>助手候选／稀有度亦为草案</td><td>0费 · 技能 · 罕见</td><td>消耗1张手牌以抽2张牌。消耗。</td><td>通用配套，未硬归专属体系</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-memo">咒文备忘</a></th><td>助手候选／稀有度亦为草案</td><td>1费 · 技能 · 罕见</td><td>抽2张牌。选择1张手牌，使其本回合保留。</td><td>通用配套，未硬归专属体系</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-breath">一息贯通</a></th><td>助手候选／稀有度亦为草案</td><td>0费 · 技能 · 罕见</td><td>本回合你下一张技能牌的耗能减少1。消耗。</td><td>通用配套，未硬归专属体系</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-familiar">烂熟于心</a></th><td>助手候选／稀有度亦为草案</td><td>1费 · 能力 · 稀有</td><td>每当你开始吟唱，抽2张牌。</td><td>爆裂与吟唱：突破限制牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-my_name">吾名惠惠！</a></th><td>用户参考效果与罕见稀有度／名称、类型暂定</td><td>1费 · 技能 · 罕见</td><td>红魔族宣言：获得2点能量。</td><td>红魔族宣言：机制核心牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-genius">红魔族第一的天才</a></th><td>宣言或配套候选／类型按当前稿</td><td>1费 · 技能 · 未定</td><td>红魔族宣言：抽3张牌。</td><td>红魔族宣言：机制核心牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-forbidden_verse">禁忌的咒文</a></th><td>宣言或配套候选／类型按当前稿</td><td>1费 · 技能 · 未定</td><td>红魔族宣言：将2张爆裂咒文加入手牌。</td><td>爆裂与吟唱：机制中坚牌<br>红魔族宣言：机制核心牌<br>下一次爆裂增伤配套：机制中坚牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-one_breath">一口气念完</a></th><td>宣言或配套候选／类型按当前稿</td><td>0费 · 技能 · 未定</td><td>红魔族宣言：本回合你接下来的2张技能牌耗能减少1。</td><td>红魔族宣言：机制核心牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-stay_on_stage">绝不退场</a></th><td>宣言或配套候选／类型按当前稿</td><td>1费 · 技能 · 未定</td><td>红魔族宣言：获得等同于你本回合已打出的技能牌数量的格挡。</td><td>红魔族宣言：机制核心牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-copy_last_skill">复制技能（未命名）</a></th><td>宣言或配套候选／类型按当前稿</td><td>未定费 · 技能 · 未定</td><td>红魔族宣言：复制你最后打出的技能牌。</td><td>红魔族宣言：机制核心牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-rephrase">改口重来</a></th><td>宣言或配套候选／类型按当前稿</td><td>0费 · 技能 · 未定</td><td>将1张悬挂中的红魔族宣言牌返回手牌。
+消耗。</td><td>红魔族宣言：机制中坚牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-not_finished">还没介绍完呢</a></th><td>宣言或配套候选／类型按当前稿</td><td>1费 · 技能 · 未定</td><td>将弃牌堆中1张具有红魔族宣言的牌加入手牌。本回合其耗能减少1。
+消耗。</td><td>红魔族宣言：机制中坚牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-more_enthusiastic">越说越起劲</a></th><td>宣言或配套候选／类型按当前稿</td><td>1费 · 能力 · 未定</td><td>每当你完成一次红魔族宣言，下一次爆裂魔法造成的伤害提高2点。</td><td>爆裂与吟唱：机制中坚牌<br>红魔族宣言：机制核心牌<br>下一次爆裂增伤配套：机制中坚牌</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#multiplayer">人人都是爆裂狂</a></th><td>用户指定联机效果／类型稀有度未定</td><td>2费 · 未定 · 未定</td><td>所有玩家获得爆裂狂。本场战斗，所有玩家的爆裂魔法耗能永久减少1。</td><td>爆裂与吟唱：机制中坚牌</td></tr></tbody></table></div></details><article class="audit-system" id="audit-explosion"><h3>爆裂与吟唱</h3><p class="review-keyline">体系成立；大体系候选，尚未证明可稳定承担完整构筑</p><p><b>共同核心：</b>吟唱姿态与爆裂魔法卡牌标签：开始吟唱后，实际技能出牌累积K，回合末由爆裂兑现；针对该标签的增伤与费用支持属于同一大框架。</p><p><b>扳机定义：</b>E1＝开始吟唱；E2＝吟唱期间实际打出技能；E3＝直接提高下一次爆裂伤害（来自下属增伤配套）。生成、抽牌、消耗本身不是E2。</p><div class="table-scroll audit-table "><table><thead><tr><th scope="col">文档的七项检查</th><th scope="col">结论</th><th scope="col">当前牌面依据</th></tr></thead><tbody><tr><th scope="row">共同核心</th><td>通过</td><td>有明确姿态、计数与特定结算牌，并非把所有高伤害牌拼在一起。</td></tr><tr><th scope="row">不同职责</th><td>通过</td><td>入口、燃料来源、条件运转、终结与长期支持均已出现。</td></tr><tr><th scope="row">触发与收益</th><td>结构通过，稳定性待验</td><td>技能来源能接爆裂结算；开始吟唱接烂熟于心，吟唱条件接咒文续接。Buff提供入口，但不保证抽到后续燃料。</td></tr><tr><th scope="row">多个端口</th><td>三个端口均有牌，防御薄</td><td>稳住声线让来源牌兼顾防守；当前仅一张直接成员提供格挡，不能据此称防御体系已完整。</td></tr><tr><th scope="row">持续收益与构筑动机</th><td>通过</td><td>留爆裂等减费、准备手牌、选择何时铺能力和开始吟唱，都能影响构筑；烂熟于心提供重复收益。</td></tr><tr><th scope="row">牌间需求</th><td>通过</td><td>爆裂需要后续技能；续接需要先吟唱；咒文来源需要爆裂兑现；长期能力需要多次开吟唱。</td></tr><tr><th scope="row">逐卡定位</th><td>已逐张列明，入口仍少</td><td>稳住声线可作引导；多数专属配件在没有爆裂时价值很低。通用技能能供燃料，但不等于已补齐专属基础牌层。</td></tr></tbody></table></div><h4>来源、收益与三个端口</h4><p><b>来源：</b>爆裂狂在回合开始补爆裂或降低原牌费用，是非卡牌来源；爆裂魔法建立吟唱。咒文展开、稳住声线、禁忌的咒文提供后续可打出的咒文；人人都是爆裂狂提供Buff入口及本场费用支持。来源列表不等于直接触发牌列表。</p><p><b>输出：</b>爆裂魔法把K与下一次增伤合并成群伤；爆裂咒文、越说越起劲提供直接增伤，生成牌间接供应它们。</p><p><b>防御：</b>稳住声线在提供咒文来源时立即给6格挡。已有防御入口，但没有按吟唱进展兑现防御的专属收益牌；绝不退场属于宣言桥接，不能说它直接读取吟唱K。</p><p><b>运转：</b>咒文续接在吟唱中回能抽牌，烂熟于心在开始吟唱时抽牌；咒文生成提供后续行动，联机牌降低爆裂启动费用。删繁就简、咒文备忘、一息贯通另列为通用支持。</p><div class="table-scroll audit-table "><table><thead><tr><th scope="col">角色</th><th scope="col">卡牌名单</th></tr></thead><tbody><tr><th scope="row">扳机触发牌（含兼具）</th><td>爆裂魔法、咒文续接、咒文展开、稳住声线、爆裂咒文、禁忌的咒文、越说越起劲</td></tr><tr><th scope="row">扳机收益牌（含兼具）</th><td>爆裂魔法、咒文续接、烂熟于心</td></tr><tr><th scope="row">触发＋收益牌</th><td>爆裂魔法、咒文续接</td></tr><tr><th scope="row">跨体系联动牌</th><td>禁忌的咒文、越说越起劲</td></tr><tr><th scope="row">仅配套／上游来源</th><td>人人都是爆裂狂</td></tr></tbody></table></div><h4>数量与分布</h4><div class="table-scroll audit-table "><table><thead><tr><th scope="col">体系卡数</th><th scope="col">类型</th><th scope="col">升级前费用</th><th scope="col">稀有度</th></tr></thead><tbody><tr><th scope="row">9</th><td>技能：6 · 能力：2 · 未定：1</td><td>0：2 · 1：5 · 2：1 · 3：1</td><td>普通：2 · 稀有：1 · 未定：6</td></tr></tbody></table></div><div class="table-scroll audit-table "><table><thead><tr><th scope="col">触发（含兼具）</th><th scope="col">收益（含兼具）</th><th scope="col">触发＋收益</th><th scope="col">跨体系（可重叠）</th><th scope="col">仅配套</th></tr></thead><tbody><tr><th scope="row">7</th><td>3</td><td>2</td><td>2</td><td>1</td></tr></tbody></table></div><div class="table-scroll audit-table "><table><thead><tr><th scope="col">机制引导牌</th><th scope="col">机制基础牌</th><th scope="col">机制核心牌</th><th scope="col">突破限制牌</th><th scope="col">机制中坚牌</th></tr></thead><tbody><tr><th scope="row">1</th><td>0</td><td>2</td><td>1</td><td>5</td></tr></tbody></table></div><h4>逐张定位</h4><div class="table-scroll audit-table audit-card-roles"><table><thead><tr><th scope="col">名称／分类</th><th scope="col">扳机角色与依据</th><th scope="col">端口</th><th scope="col">选牌／使用定位</th><th scope="col">独立性</th><th scope="col">依赖或风险</th></tr></thead><tbody><tr><th scope="row"><a href="惠惠当前设计总览.html#explosion">爆裂魔法</a><small>机制核心牌</small></th><td><b>触发+收益</b><small>E1触发；读取E2累积的K与E3增伤结算。</small></td><td>输出</td><td>建立吟唱并兑现技能数，是终结与计数中心。</td><td>需要后续技能；在普通技能牌组中也能获得基础收益。</td><td>本身不计自己的K；3费启动后是否仍有行动取决于费用与手牌。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#explosion">咒文续接</a><small>机制核心牌</small></th><td><b>触发+收益</b><small>作为技能制造E2，同时因吟唱条件获得回能与抽牌。</small></td><td>运转</td><td>把已进入吟唱的条件换成回能与补牌，续上连打。</td><td>无吟唱时不能获得牌面奖励。</td><td>一次性消耗；不是每轮都可获得的基础资源。</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-unfold">咒文展开</a><small>机制中坚牌</small></th><td><b>扳机触发</b><small>本牌在吟唱中制造E2；咒文之后另行制造E2／E3。</small></td><td>运转、输出（间接）</td><td>集中生成咒文，增加后续技能与增伤来源。</td><td>没有爆裂及宣言需求时，生成物价值有限。</td><td>自己与咒文均需实际打出；不能把生成两张直接记作三次触发。</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-steady">稳住声线</a><small>机制引导牌</small></th><td><b>扳机触发</b><small>本牌制造E2；生成的咒文要之后打出。</small></td><td>防御、运转、输出（间接）</td><td>先用立即格挡站稳，再通过咒文引导进入爆裂。</td><td>6格挡可独立使用，是当前最明确的普通入口。</td><td>只有一个格挡入口，不代表准备期防守已充分。</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-familiar">烂熟于心</a><small>突破限制牌</small></th><td><b>扳机收益</b><small>监听E1。突破依据是新增持续资源转换，不是数值更大。</small></td><td>运转</td><td>把每次开始吟唱变成可重复的抽牌时点。</td><td>没有多次吟唱就只剩提前投入。</td><td>稀有候选；要先布置，打出能力本身不抽牌，也不增加K。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#might-system">爆裂咒文</a><small>机制中坚牌</small></th><td><b>扳机触发</b><small>直接制造E3；按技能建议类型，在吟唱中同时制造E2。</small></td><td>输出</td><td>用生成的0费技能补一次出牌与直接增伤。</td><td>不是奖励池选牌；没有下一次爆裂时无法兑现伤害。</td><td>无额外保留；技能类型仍为建议，不能默认随时有来源。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-forbidden_verse">禁忌的咒文</a><small>机制中坚牌</small></th><td><b>扳机触发</b><small>本牌在吟唱中制造E2；完成后才产生后续咒文。</small><small>跨体系：宣言收益→咒文来源→爆裂触发</small></td><td>运转、输出（间接）</td><td>把完成宣言的奖励接成下一段咒文燃料。</td><td>同时依赖宣言完成及后续实际出牌。</td><td>生成奖励属于宣言，不能算作吟唱专属收益。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-more_enthusiastic">越说越起劲</a><small>机制中坚牌</small></th><td><b>扳机触发</b><small>安装后在完成宣言时制造E3，不在打出能力时立即增伤。</small><small>跨体系：宣言完成收益→爆裂增伤来源</small></td><td>输出</td><td>把完成宣言接成下一次爆裂的直接增伤。</td><td>需要宣言完成以及爆裂兑现。</td><td>能力本身不制造技能计数；只是安装了后续增伤规则。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#multiplayer">人人都是爆裂狂</a><small>机制中坚牌</small></th><td><b>配套</b><small>入口与费用支持，不直接发生E1／E2／E3；减费不取消吟唱限制。</small></td><td>运转</td><td>为全队接入爆裂狂并降低本场爆裂的启动成本。</td><td>队友还需要自己的技能牌支撑收益。</td><td>牌种未定；不能计入技能触发数。获得Buff不立即生成爆裂。</td></tr></tbody></table></div><p><b>缺失或薄弱处：</b>没有完全空白的功能端口；薄弱的是准备期独立防守、低稀有度的入口密度，以及一次性续接用完后，第二次爆裂的手牌与能量保障。后续爆裂本身已有Buff来源，不能再把缺口写成“没有第二张爆裂”。</p><p><b>体系结论：</b>保留为主要设计方向。先补和核实基础支撑；不因共享技能燃料就把宣言全部吞并，也不把三张通用工具算成专属核心。</p></article><article class="audit-system" id="audit-declaration"><h3>红魔族宣言</h3><p class="review-keyline">体系成立；大体系候选，奖励层多于独立入口与基础层</p><p><b>共同核心：</b>悬挂中的宣言牌、连续3张技能的进度与完成事件。共同核心是明确触发条件，不是抽牌、回能等奖励种类。</p><p><b>扳机定义：</b>D1＝对已经悬挂的宣言有效的技能出牌，连续三次形成D2完成事件。宣言本身先悬挂，从之后的技能开始计；其他宣言是否同时推进，依最终多宣言规则。</p><div class="table-scroll audit-table "><table><thead><tr><th scope="col">文档的七项检查</th><th scope="col">结论</th><th scope="col">当前牌面依据</th></tr></thead><tbody><tr><th scope="row">共同核心</th><td>通过</td><td>统一的悬挂、三连与完成事件；不是六种奖励拼盘。</td></tr><tr><th scope="row">不同职责</th><td>通过，但比例偏奖励</td><td>有六张完成奖励、两张对象管理、一个持续奖励能力。</td></tr><tr><th scope="row">触发与收益</th><td>条件性通过</td><td>技能能推进，六张宣言及一个能力承接收益；体系内触发牌同时依赖悬挂或弃牌目标，不能用8这个数字推断第一段稳定。</td></tr><tr><th scope="row">多个端口</th><td>通过</td><td>运转最完整，防御有一张延后兑现，输出依赖明确的爆裂桥接。</td></tr><tr><th scope="row">持续收益与构筑动机</th><td>通过</td><td>选择先挂哪份收益、第三张技能打什么、是否回收重开，影响构筑与顺序。</td></tr><tr><th scope="row">牌间需求</th><td>通过</td><td>奖励需要三连，三连需要牌与费用，回收需要已有宣言；完成奖励又可支持后续三连。闭合结构不等于无限循环。</td></tr><tr><th scope="row">逐卡定位</th><td>已逐张列明，基础层缺口明显</td><td>六张本体均为依赖扳机的核心奖励；没有即时收益意味着暂不能确认为独立可抓的引导或基础牌。</td></tr></tbody></table></div><h4>来源、收益与三个端口</h4><p><b>来源：</b>6张宣言提供待完成对象；8张体系内技能可条件性地推进其他已悬挂对象。体系外另有8种当前建议技能可作燃料，但受费用、牌型和目标条件限制。生成咒文、抽牌、回收不等于自动打出。</p><p><b>输出：</b>越说越起劲监听完成后提高下一次爆裂伤害；禁忌的咒文通过生成物连接同一输出。共享爆裂是合法的跨体系输出端，不要求再添一个独立杀敌规则。</p><p><b>防御：</b>绝不退场提供完成后的格挡，统计本回合全部技能。尚无宣言本体提供悬挂即生效的防御；这是当前纯后续效果方向，需要其他牌补起步防守。</p><p><b>运转：</b>吾名惠惠回能，天才抽牌，禁忌的咒文生成，一口气念完减费，复制牌提供选择性复用；还没介绍完呢回收，改口重来调整未完成对象。</p><div class="table-scroll audit-table "><table><thead><tr><th scope="col">角色</th><th scope="col">卡牌名单</th></tr></thead><tbody><tr><th scope="row">扳机触发牌（含兼具）</th><td>吾名惠惠！、红魔族第一的天才、禁忌的咒文、一口气念完、绝不退场、复制技能（未命名）、改口重来、还没介绍完呢</td></tr><tr><th scope="row">扳机收益牌（含兼具）</th><td>吾名惠惠！、红魔族第一的天才、禁忌的咒文、一口气念完、绝不退场、复制技能（未命名）、越说越起劲</td></tr><tr><th scope="row">触发＋收益牌</th><td>吾名惠惠！、红魔族第一的天才、禁忌的咒文、一口气念完、绝不退场、复制技能（未命名）</td></tr><tr><th scope="row">跨体系联动牌</th><td>禁忌的咒文、越说越起劲</td></tr><tr><th scope="row">仅配套／上游来源</th><td>无</td></tr></tbody></table></div><h4>数量与分布</h4><div class="table-scroll audit-table "><table><thead><tr><th scope="col">体系卡数</th><th scope="col">类型</th><th scope="col">升级前费用</th><th scope="col">稀有度</th></tr></thead><tbody><tr><th scope="row">9</th><td>技能：8 · 能力：1</td><td>0：2 · 1：6 · 未定：1</td><td>罕见：1 · 未定：8</td></tr></tbody></table></div><div class="table-scroll audit-table "><table><thead><tr><th scope="col">触发（含兼具）</th><th scope="col">收益（含兼具）</th><th scope="col">触发＋收益</th><th scope="col">跨体系（可重叠）</th><th scope="col">仅配套</th></tr></thead><tbody><tr><th scope="row">8</th><td>7</td><td>6</td><td>2</td><td>0</td></tr></tbody></table></div><div class="table-scroll audit-table "><table><thead><tr><th scope="col">机制引导牌</th><th scope="col">机制基础牌</th><th scope="col">机制核心牌</th><th scope="col">突破限制牌</th><th scope="col">机制中坚牌</th></tr></thead><tbody><tr><th scope="row">0</th><td>0</td><td>7</td><td>0</td><td>2</td></tr></tbody></table></div><h4>逐张定位</h4><div class="table-scroll audit-table audit-card-roles"><table><thead><tr><th scope="col">名称／分类</th><th scope="col">扳机角色与依据</th><th scope="col">端口</th><th scope="col">选牌／使用定位</th><th scope="col">独立性</th><th scope="col">依赖或风险</th></tr></thead><tbody><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-my_name">吾名惠惠！</a><small>机制核心牌</small></th><td><b>触发+收益</b><small>条件性D1；自身完成D2后回能。</small></td><td>运转</td><td>完成三连后补能量，支付后续动作。</td><td>未完成前只有付费悬挂，没有即时回报。</td><td>不能用将来得到的2能量反过来支付完成它之前的技能。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-genius">红魔族第一的天才</a><small>机制核心牌</small></th><td><b>触发+收益</b><small>条件性D1；自身完成D2后抽牌。</small></td><td>运转</td><td>完成后补三张牌，为下一段提供手牌。</td><td>需要先有三张技能可接。</td><td>抽到牌不等于有费用打出；初始手牌不足时不能自己解锁。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-forbidden_verse">禁忌的咒文</a><small>机制核心牌</small></th><td><b>触发+收益</b><small>条件性D1；自身完成D2后生成咒文。</small><small>跨体系：宣言收益→爆裂／增伤来源</small></td><td>运转、输出（跨体系）</td><td>完成后提供两个0费咒文，接长技能序列并支持爆裂。</td><td>完成之前不提供燃料。</td><td>手牌空间和实际打出仍有成本；单次只给两张，不自动完成下一份三连。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-one_breath">一口气念完</a><small>机制核心牌</small></th><td><b>触发+收益</b><small>条件性D1；自身完成D2后赋予减费。</small></td><td>运转</td><td>以0费铺好后续两次技能减费。</td><td>不用能量悬挂，但占手牌且仍需三连。</td><td>减费不能补手牌；0费技能也消耗一次减费机会。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-stay_on_stage">绝不退场</a><small>机制核心牌</small></th><td><b>触发+收益</b><small>条件性D1；自身完成D2后读取本回合全部技能数。</small></td><td>防御</td><td>把完成三连与本回合技能数量转成格挡。</td><td>未完成时没有格挡。</td><td>越早完成，兑现时统计越少；不是回合结束自动按最终总数补格挡。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-copy_last_skill">复制技能（未命名）</a><small>机制核心牌</small></th><td><b>触发+收益</b><small>条件性D1；自身完成D2后复制最近技能。</small></td><td>运转</td><td>通过安排第三张技能，选择复制哪种资源或战术动作。</td><td>依赖完成及有价值的目标；费用未定，不能判断单抓强度。</td><td>复制到手仍是解释建议；不默认自动打出、不默认保留临时减费，不因此认定突破三连限制。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-rephrase">改口重来</a><small>机制中坚牌</small></th><td><b>扳机触发</b><small>本身可对其他有效悬挂对象提供D1；返回目标不发生D2，具体顺序待定。</small></td><td>运转</td><td>收回暂时接不完或顺序不合适的悬挂牌。</td><td>没有悬挂目标就不能打。</td><td>不触发完成、损失旧进度、重打仍付费；无即时效果可反复赚，也没有已确认的槽位可释放。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-not_finished">还没介绍完呢</a><small>机制中坚牌</small></th><td><b>扳机触发</b><small>本牌提供条件性D1；回收动作不产生D2。</small></td><td>运转</td><td>从弃牌堆取回宣言并降低本回合重打费用。</td><td>需要弃牌堆里有目标。</td><td>自身消耗；取回不算悬挂或完成，还要重打与重新三连。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-more_enthusiastic">越说越起劲</a><small>机制核心牌</small></th><td><b>扳机收益</b><small>安装后监听D2；打出能力不产生D1或D2。</small><small>跨体系：宣言收益→爆裂／增伤来源</small></td><td>输出（跨体系）</td><td>用持续完成宣言的行为积累下一次爆裂增伤。</td><td>没有完成事件或爆裂时无回报。</td><td>能力不是技能，通常应在连续技能之前布置；直接增伤不变成独立关键词。</td></tr></tbody></table></div><p><b>缺失或薄弱处：</b>三个端口都能接到，但第一段三连前的独立资源、立即防守与低稀有度入口尚未充分确定。没有明确突破限制牌不是必须补一张的配额；先验证现有回收与复制是否已经带来足够选择。</p><p><b>体系结论：</b>保留为第二个真实体系，不降格为普通抽牌工具。下一步优先完善它依赖的基础技能层与多宣言规则，继续遵守宣言本体只有后续效果的决定。</p></article><article class="audit-system" id="audit-bonus"><h3>下一次爆裂增伤配套</h3><p class="review-keyline">小体系，嵌套在爆裂内，不作为第三个主体系</p><p><b>共同核心：</b>爆裂魔法这一明确卡牌标签，以及“增伤写入→保留至下一次结算→用后清除”的共同结算关系。不是因为都造成高伤害而成组，也不重新引入威力资源关键词。</p><p><b>扳机定义：</b>B1＝爆裂咒文打出或越说越起劲监听到宣言完成后，写入下一次爆裂增伤；B2＝下一次爆裂伤害结算，读取并清除这些增伤。</p><div class="table-scroll audit-table "><table><thead><tr><th scope="col">文档的七项检查</th><th scope="col">结论</th><th scope="col">当前牌面依据</th></tr></thead><tbody><tr><th scope="row">共同核心</th><td>通过</td><td>卡牌标签与同一次延后兑现关系足够明确。</td></tr><tr><th scope="row">不同职责</th><td>通过</td><td>三种上游来源、两种直接增伤来源与共享终结牌。</td></tr><tr><th scope="row">触发与收益</th><td>通过，但收益单一</td><td>两种增伤写入方式都要等同一张爆裂兑现，没有其他读取增伤的奖励。</td></tr><tr><th scope="row">多个端口</th><td>未形成独立多端口</td><td>生成与附带格挡存在，但核心增伤目前只兑现输出，不能把上游功能写成完整的防御／运转收益。</td></tr><tr><th scope="row">持续收益与构筑动机</th><td>有局部动机</td><td>可以预先打咒文积累，或在吟唱中兼得技能计数；不能据此要求扩张为主构筑。</td></tr><tr><th scope="row">牌间需求</th><td>通过</td><td>来源需要爆裂结算，爆裂能从来源受益。</td></tr><tr><th scope="row">逐卡定位</th><td>已列明</td><td>同一张牌在小体系和父体系中的职责不同，不能把两个表相加当新增卡数。</td></tr></tbody></table></div><h4>来源、收益与三个端口</h4><p><b>来源：</b>直接增伤来源只有爆裂咒文、越说越起劲两张。咒文展开、稳住声线、禁忌的咒文是三张上游生成来源；爆裂魔法是共享兑现牌。故完整关系涉及6张，并非6张直接增伤牌。</p><p><b>输出：</b>爆裂魔法是唯一共享兑现牌，两种直接来源提高它下一次的伤害。</p><p><b>防御：</b>稳住声线在生成咒文时顺带提供防守；没有按已取得增伤或爆裂增伤结算而给防御的收益牌。</p><p><b>运转：</b>三张生成牌提供咒文；宣言提供外部循环。没有以增伤累积／消耗为扳机的抽牌或回能收益，因此不形成自身的运转闭环。</p><div class="table-scroll audit-table "><table><thead><tr><th scope="col">角色</th><th scope="col">卡牌名单</th></tr></thead><tbody><tr><th scope="row">扳机触发牌（含兼具）</th><td>爆裂咒文、越说越起劲</td></tr><tr><th scope="row">扳机收益牌（含兼具）</th><td>爆裂魔法</td></tr><tr><th scope="row">触发＋收益牌</th><td>无</td></tr><tr><th scope="row">跨体系联动牌</th><td>越说越起劲、禁忌的咒文</td></tr><tr><th scope="row">仅配套／上游来源</th><td>咒文展开、稳住声线、禁忌的咒文</td></tr></tbody></table></div><h4>数量与分布</h4><div class="table-scroll audit-table "><table><thead><tr><th scope="col">体系卡数</th><th scope="col">类型</th><th scope="col">升级前费用</th><th scope="col">稀有度</th></tr></thead><tbody><tr><th scope="row">6</th><td>技能：5 · 能力：1</td><td>0：1 · 1：4 · 3：1</td><td>普通：2 · 未定：4</td></tr></tbody></table></div><div class="table-scroll audit-table "><table><thead><tr><th scope="col">触发（含兼具）</th><th scope="col">收益（含兼具）</th><th scope="col">触发＋收益</th><th scope="col">跨体系（可重叠）</th><th scope="col">仅配套</th></tr></thead><tbody><tr><th scope="row">2</th><td>1</td><td>0</td><td>2</td><td>3</td></tr></tbody></table></div><div class="table-scroll audit-table "><table><thead><tr><th scope="col">机制引导牌</th><th scope="col">机制基础牌</th><th scope="col">机制核心牌</th><th scope="col">突破限制牌</th><th scope="col">机制中坚牌</th></tr></thead><tbody><tr><th scope="row">1</th><td>0</td><td>0</td><td>0</td><td>5</td></tr></tbody></table></div><h4>逐张定位</h4><div class="table-scroll audit-table audit-card-roles"><table><thead><tr><th scope="col">名称／分类</th><th scope="col">扳机角色与依据</th><th scope="col">端口</th><th scope="col">选牌／使用定位</th><th scope="col">独立性</th><th scope="col">依赖或风险</th></tr></thead><tbody><tr><th scope="row"><a href="惠惠当前设计总览.html#might-system">爆裂咒文</a><small>机制中坚牌</small></th><td><b>扳机触发</b><small>制造B1；燃料用途不等于满足机制基础牌的选牌标准。</small></td><td>输出</td><td>最小的直接增伤单位，提供稳定的+2写入。</td><td>可在吟唱外预先使用；不是普通奖励池入口。</td><td>必须依赖爆裂兑现，不能只因它是触发牌就按文档归为独立可抓的机制基础牌。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-more_enthusiastic">越说越起劲</a><small>机制中坚牌</small></th><td><b>扳机触发</b><small>安装后完成宣言时制造B1。</small><small>跨体系：宣言收益→增伤来源</small></td><td>输出</td><td>把宣言完成转成另一种持续增伤来源。</td><td>需要两个体系接通。</td><td>它是宣言的收益牌，但在增伤小体系中是来源，不是读取已有增伤的收益牌。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#explosion">爆裂魔法</a><small>机制中坚牌</small></th><td><b>扳机收益</b><small>B2读取既有B1；在本组不算增伤来源。</small></td><td>输出</td><td>承接并兑现所有下一次增伤。</td><td>没有本组来源时仍能依K造成伤害，不满足本小体系的强依赖核心牌标准。</td><td>共享父体系终结牌，不是新增的一张增伤奖励卡。</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-unfold">咒文展开</a><small>机制中坚牌</small></th><td><b>配套</b><small>上游来源，不直接发生B1。</small></td><td>运转</td><td>一次提供两份后续增伤燃料。</td><td>需要再打出咒文并最终爆裂。</td><td>生成不是直接写入增伤。</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-steady">稳住声线</a><small>机制引导牌</small></th><td><b>配套</b><small>上游来源，不直接发生B1。</small></td><td>防御、运转</td><td>用立即格挡带出一份咒文，展示增伤配套的价值。</td><td>格挡本身可独立使用。</td><td>防御发生在生成时，不按累积增伤变化。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#decl-card-forbidden_verse">禁忌的咒文</a><small>机制中坚牌</small></th><td><b>配套</b><small>上游来源，之后实际打出咒文才产生B1。</small><small>跨体系：宣言收益→咒文来源→增伤</small></td><td>运转</td><td>把宣言奖励转成两份增伤燃料。</td><td>依赖宣言完成与爆裂结算。</td><td>不能把宣言完成、生成、咒文打出合算为同一个自动触发。</td></tr></tbody></table></div><p><b>缺失或薄弱处：</b>缺少由增伤本身驱动的防御和运转收益，兑现出口也单一。这正是保留小配套的依据，不是必须补齐成大体系的任务。</p><p><b>体系结论：</b>维持小体系。先检验两种增伤来源和三种咒文生成方式的价值区分，不恢复旧11张威力牌，也不为了填表增加新的增伤关键词。</p></article><article class="audit-system" id="audit-support"><h3>共享燃料与通用配套</h3><p>宣言体系外的8种技能候选：爆裂魔法、咒文续接、爆裂咒文、咒文展开、稳住声线、删繁就简、咒文备忘、一息贯通。这些是可用的触发面，不能把全部都当作稳定起步牌；续接需要吟唱，咒文需要生成，爆裂还要支付启动费用。</p><div class="table-scroll audit-table "><table><thead><tr><th scope="col">卡牌</th><th scope="col">功能</th><th scope="col">如何参与</th><th scope="col">为何不另立体系</th></tr></thead><tbody><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-trim">删繁就简</a></th><td>通用过牌与消耗工具</td><td>有另一张手牌可消耗时，0费换新牌；吟唱中提供一次技能，宣言中提供一次有效推进。</td><td>没有监听消耗的当前配套，不能因为这张牌消耗手牌就另立消耗体系。自身也消耗，不能当长战稳定引擎。</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-memo">咒文备忘</a></th><td>通用过牌与跨回合准备</td><td>抽2并选择保留关键工具，可帮助等待爆裂减费或准备宣言。</td><td>不直接读取吟唱或宣言，故不硬归专属核心；1费前置投入且没有立即防御。</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html#card-breath">一息贯通</a></th><td>通用技能减费</td><td>安排下一张技能的费用，可帮助开爆裂或接后续技能。</td><td>0费技能也会用掉折扣；一次性减费不是能量体系或独立费用作弊体系。</td></tr></tbody></table></div><p>五类统计中“基础牌为0”指符合独立可抓标准的专属成员为0，并不表示没有能推进机制的技能。已有通用技能和生成物必须与未定初始牌组一起检验，不能只凭分类数字再强行补卡。</p></article><h3>把真正的桥接与共享触发分开</h3><div class="table-scroll audit-table "><table><thead><tr><th scope="col">卡或关系</th><th scope="col">各体系中的职责</th><th scope="col">判定</th></tr></thead><tbody><tr><th scope="row">禁忌的咒文</th><td>宣言中为完成收益；爆裂中为条件性技能触发与咒文来源；增伤中为上游配套。</td><td>明确的跨体系转换。</td></tr><tr><th scope="row">越说越起劲</th><td>宣言中为完成收益；爆裂与增伤中为后续直接增伤来源。</td><td>明确的跨体系转换，能力打出本身不增加技能计数。</td></tr><tr><th scope="row">爆裂咒文与普通技能</th><td>同一张技能可同时增加吟唱K、推进已有宣言；咒文另外写入增伤。</td><td>共享触发兼容性。无需把所有技能都计为两个体系的专属成员。</td></tr><tr><th scope="row">绝不退场</th><td>完成时读取本回合全部技能，其中可能含吟唱外的技能。</td><td>可与吟唱一起使用，但不是“把吟唱K转为格挡”的卡。</td></tr><tr><th scope="row">复制技能（未命名）</th><td>复制目标可能来自另一个体系。</td><td>目标依赖的潜在连接；当前不计为固定跨体系桥，也不认定自动重放。</td></tr></tbody></table></div><h3>哪些内容不应另算体系</h3><div class="table-scroll audit-table "><table><thead><tr><th scope="col">方向</th><th scope="col">当前归类</th><th scope="col">依据</th></tr></thead><tbody><tr><th scope="row">长篇咏唱</th><td>构筑方式</td><td>把等待减费、保留准备、生成咒文、通用资源工具和吟唱兑现组合起来，没有另一个需要单列的共同核心。</td></tr><tr><th scope="row">抽牌／回能／减费／保留</th><td>运转功能标签</td><td>当前不存在把这些所有动作统一接成收益的监听规则，不能各拆一个体系。</td></tr><tr><th scope="row">消耗</th><td>当前只是成本与功能</td><td>多张牌消耗自己或手牌，但当前没有围绕消耗事件给收益的卡。</td></tr><tr><th scope="row">联机</th><td>作用范围与卡牌用途</td><td>人人都是爆裂狂服务同一爆裂核心；全体玩家不是另一个独立扳机。</td></tr><tr><th scope="row">技能连打</th><td>两个体系的共享燃料</td><td>吟唱记录技能、宣言要求连续技能；可描述兼容关系，不额外重复计成第三个大体系。</td></tr></tbody></table></div><h3>由这次分析得出的改牌顺序</h3><div class="table-scroll audit-table "><table><thead><tr><th scope="col">顺序</th><th scope="col">先处理什么</th><th scope="col">具体依据</th></tr></thead><tbody><tr><th scope="row">1</th><td>先确定规则与起步条件</td><td>多宣言究竟全部推进还是只推进一个；初始技能与立即防守有哪些。否则无法判断第一段三连的可达性，也无法判断宣言引导牌能否独立抓取。</td></tr><tr><th scope="row">2</th><td>先补基础层，少加同类奖励</td><td>保留纯后续宣言。优先核实或补充不要求已吟唱／已完成宣言的低稀有度技能与防守；当前已有删繁就简、备忘、减费工具，要检查它们的条件和密度，而非宣称完全没有。</td></tr><tr><th scope="row">3</th><td>补爆裂重复运作的资源保障</td><td>爆裂狂已有后续爆裂来源，烂熟于心已有持续抽牌。重点检查消耗牌用完之后的手牌、能量和准备期生存，不再无条件追加生成爆裂的牌。</td></tr><tr><th scope="row">4</th><td>重审配套的实际抓取理由</td><td>改口重来失去即时效果套利后只剩顺序修正；复制宣言要明确费用与副本规则；增伤小体系保持少量配套。宣言球外观随每张卡一并设计。</td></tr></tbody></table></div><p class="muted">这是设计结构分析与暂定角色判断；没有更改卡面、确定新规则或运行新的数值模型。当前玩法数据核对指纹：2e08968f188fa8f20e9c72bf7785c8c027381bd1b435edd879f171e1bbd0eda8</p></section>
+<section id="basis"><span class="eyebrow">00 / RESTORED RESEARCH</span><h2 class="section-title">先纠正体系与伤害路线的混用</h2><p>已找回五职业的逐职业体系分析、体系判定流程，以及Karen的设计文档。上文已将分析模板实际用于惠惠；下面保留此前找回的原研究分类与纠错依据。</p><article class="review-finding"><h3>把伤害端专题当成全体系目录</h3><p><b>上一版：</b>用力量、小刀、黑暗等杀敌路线概括六职业，重心落在有没有不同伤害出口。</p><p><b>本次修正：</b>完整体系先用既有大／小体系列表；伤害专题只用于解释输出端的不同兑现方式。</p><p><a href="#research-summary">五职业卡牌分析总结</a> · <a href="#research-damage_only">此前：原版五职业与Karen伤害体系分析</a></p></article><article class="review-finding"><h3>遗漏或抬高了部分体系</h3><p><b>上一版：</b>战士易伤、自损和亡灵虚无没有进入对照；球种、灵魂与完整主体系混在同一层。</p><p><b>本次修正：</b>恢复战士4大3小、静默3大3小、故障1大3小、亡灵3大2小、储君3大2小的原研究分类，并展示全部名称。</p><p><a href="#research-ironclad">铁甲战士卡牌分析</a> · <a href="#research-silent">静默猎手卡牌分析</a> · <a href="#research-defect">故障机器人卡牌分析</a> · <a href="#research-necrobinder">亡灵契约师卡牌分析</a> · <a href="#research-regent">储君卡牌分析</a></p></article><article class="review-finding"><h3>弱化了运转体系与Karen双主轴</h3><p><b>上一版：</b>把宣言是否拥有独立杀敌出口当作重要判断，同时把Karen拆成少数功能关系。</p><p><b>本次修正：</b>恢复约定＋闪耀双主轴；宣言按悬挂对象、连续技能扳机、完成收益及多端口配套评估。共享爆裂输出可以成立。</p><p><a href="#research-method">体系分析流程</a> · <a href="#research-karen">Karen卡牌设计文档：当前卡池、原版参照与后续设计准则</a></p></article><p><a href="#prior-research">查看12份原文与摘录 →</a></p></section>
+<section id="inventory"><span class="eyebrow">01 / CURRENT DESIGN</span><h2 class="section-title">按共同核心整理当前体系与其他内容</h2><p>爆裂与宣言分别作为主体系候选，增伤是用户指定的小配套；长篇咏唱是组合构筑，联机卡和局外成长另列。主体系候选表示值得按完整体系继续设计，不表示当前卡池已成熟。</p><div class="table-scroll "><table><thead><tr><th scope="col">内容与层次</th><th scope="col">当前设计</th><th scope="col">复盘判断</th></tr></thead><tbody><tr><th scope="row"><a href="惠惠当前设计总览.html#explosion">爆裂狂＋吟唱＋爆裂魔法</a><small>主体系候选：爆裂与吟唱 · 用户核心规则</small></th><td>爆裂狂生成或给原牌减费；3费爆裂保留，进入吟唱，回合末按期间技能数加额外增伤造成一次群伤，消耗。</td><td>已有稳定爆裂入口、技能计数与输出兑现。下一步按防守、运转及来源／收益角色补齐，不把爆裂狂和吟唱再拆成独立大体系。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#might-system">下一次爆裂增伤＋爆裂咒文</a><small>爆裂内的小配套 · 用户指定：取消威力关键词</small></th><td>卡面直接写“下一次爆裂魔法造成的伤害提高X点”。咒文提高2点；越说越起劲在完成宣言时提高2点。增伤在下一次爆裂结算后清除。</td><td>保留少量直接增伤牌与咒文来源即可，不要求发展成独立资源体系。不同咒文用法可作为小配套内的选择。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#declaration-cards">红魔族宣言</a><small>主体系候选：悬挂与连续技能 · 统一规则已给，现有9张卡面</small></th><td>关键词短句：连续打出3张技能牌触发后续效果。宣言牌打出后悬挂；回合结束未完成进度归零。现有6张纯宣言和3张配套，写卡时需同时设计对应宣言球外观。</td><td>悬挂对象、连续技能条件和完成事件构成明确核心；已有抽牌、回能、减费、格挡与爆裂增伤连接。应按偏运转和防守的主体系候选继续补齐，不能因共享爆裂输出就降为普通工具。</td></tr><tr><th scope="row"><a href="惠惠长篇咏唱流派设计.html">长篇咏唱</a><small>同一主轴内的构筑候选 · 6张新配套＋已有咒文续接</small></th><td>防守等待爆裂减费，保存启动牌，生成咒文，靠一次性启动与付费抽牌继续出牌。</td><td>这是爆裂与宣言可共同参与的具体构筑方式；“构筑方向”不与两套机制体系处在同一分类层。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#multiplayer">人人都是爆裂狂</a><small>联机支持单卡 · 2费／升级1费，效果已给</small></th><td>所有玩家获得爆裂狂，当前战斗全体已有和未来生成的爆裂耗能永久-1。</td><td>改变团队取得和支付爆裂的条件，不自动为队友提供额外增伤或整套技能循环。无需另立“联机流”。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#other-designs">技能点／冒险者卡</a><small>局外成长 · 方向已定，结构未定</small></th><td>离开战斗内攒点学习的旧方案，具体来源、时间范围和解锁结构未定。</td><td>单列。不能用局外成长补偿战斗卡池缺少抽牌或防守，也不能把它当作已存在的战斗资源。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#explosion">爆裂鉴赏／打分</a><small>稀有单卡位置 · 用户指定题材，卡面未写</small></th><td>保留鉴赏题材，定位为一张稀有牌。</td><td>可以留给改变爆裂运用方式的特殊牌，不需要增加评分货币或升级成独立体系。</td></tr><tr><th scope="row"><a href="惠惠当前设计总览.html#history">暂停、备用与未采用的方向</a><small>历史和素材 · 不属于当前可用规则</small></th><td>魔力积蓄、压缩魔力、回流一击暂停；小聪明、反复练习未采用；透支、驻留、脱力、双面、魔眼、道具为备用；独立非攻击伤害流已停止。</td><td>本次不自动恢复。先完善爆裂、宣言两个主体系候选与增伤小配套，再判断是否需要新的共同核心。</td></tr></tbody></table></div><details><summary>这次如何判断体系是否成立</summary><ul><li>体系核心可以是关键词、资源、能力规则、卡牌标签或明确触发条件；先找出稳定来源与收益之间的互相需求。</li><li>输出、防御、运转是体系的端口或职责，不是互相排斥的体系类别。大体系通常覆盖多个端口，不要求每个体系都有独立伤害出口。</li><li>体系与具体构筑不同：球体系内可有闪电、黑暗等方向；同一套牌也可同时使用弃牌、小刀和中毒。</li><li>用机制引导、基础、核心、突破限制和中坚五类角色检查配套完整性，允许连接牌在不同体系中承担不同角色。</li><li>原研究的体系数和卡数是参照，不能拿来强行填满惠惠卡池；仍需区分已写骨架、助手候选和成熟体系。</li></ul></details></section>
+<section id="ports"><span class="eyebrow">PORTS AND CARD ROLES</span><h2 class="section-title">分别检查爆裂、宣言与增伤小配套</h2><p>来源与收益是否成对，输出、防御、运转由哪些牌承接，再看缺少引导、基础、核心、突破还是中坚牌。共享一个伤害出口不妨碍两个体系成立。</p><div class="table-scroll "><table><thead><tr><th scope="col">当前定位与核心</th><th scope="col">来源与触发</th><th scope="col">已有端口</th><th scope="col">需要补齐</th></tr></thead><tbody><tr><th scope="row">爆裂与吟唱<small>主体系候选</small><p>爆裂魔法、吟唱期间技能牌数、等待减费与回合末兑现。</p></th><td>爆裂狂提供入口；开启吟唱后，实际打出的技能积累本次伤害。</td><td><p><b>输出：</b>爆裂魔法；爆裂咒文等小配套直接提高下一次伤害。</p><p><b>防御：</b>稳住声线支持准备与连打；独立防守和削弱尚需补足。</p><p><b>运转：</b>专属：咒文续接、烂熟于心、咒文生成与联机减费。通用：一息贯通、咒文备忘、删繁就简；不混入专属成员计数。</p></td><td>没有完全空白的功能端口；薄弱的是准备期独立防守、低稀有度的入口密度，以及一次性续接用完后，第二次爆裂的手牌与能量保障。后续爆裂本身已有Buff来源，不能再把缺口写成“没有第二张爆裂”。</td></tr><tr><th scope="row">红魔族宣言<small>主体系候选</small><p>悬挂宣言牌，连续3张技能触发卡面后续效果，并可由其他牌监听完成。</p></th><td>宣言先悬挂，随后普通技能、咒文和符合类型的其他宣言提供连续出牌事件。</td><td><p><b>输出：</b>越说越起劲将完成事件连接到下一次爆裂增伤；允许共享爆裂输出。</p><p><b>防御：</b>绝不退场在完成时获得格挡，是已有延后防守收益。</p><p><b>运转：</b>吾名惠惠、红魔族第一的天才、一口气念完、禁忌的咒文、复制技能、完成后的回收。</p></td><td>三个端口都能接到，但第一段三连前的独立资源、立即防守与低稀有度入口尚未充分确定。没有明确突破限制牌不是必须补一张的配额；先验证现有回收与复制是否已经带来足够选择。</td></tr><tr><th scope="row">下一次爆裂增伤<small>用户指定的小体系</small><p>围绕下一次爆裂魔法的直接增伤，取消威力关键词。</p></th><td>爆裂咒文直接提供增伤；越说越起劲在完成宣言时提供增伤。</td><td><p><b>输出：</b>提高下一次爆裂伤害，结算后清除。</p><p><b>防御：</b>无独立防守端。</p><p><b>运转：</b>依托咒文生成与宣言运转，本组不另建独立资源循环。</p></td><td>保持少量配套即可；是否需要咒文转换牌，留待实际卡池缺口决定。</td></tr></tbody></table></div></section>
+<section id="comparison"><span class="eyebrow">02 / SIX REFERENCES</span><h2 class="section-title">六职业按原研究的大／小体系重新对照</h2><p>五职业列出原分析文档中的完整体系分组；Karen采用自身设计文档的双主轴与副轴分类。这些是既有研究结论，非官方分类或最新版本重计，不能把数量直接当作惠惠的配额。</p><div class="table-scroll comparison"><table><thead><tr><th scope="col">角色与分类依据</th><th scope="col">大体系／主轴</th><th scope="col">小体系／副轴或连接层</th><th scope="col">修正与对惠惠的启发</th></tr></thead><tbody><tr><th scope="row">铁甲战士<small>沿用既有研究分类：4大／3小；不是最新版本重新统计。</small></th><td><ul><li>易伤体系</li><li>消耗体系</li><li>自损与生命资源体系</li><li>格挡体系</li></ul></td><td><ul><li>攻击牌连动体系</li><li>力量与多段输出轴</li><li>打击名称体系</li></ul></td><td><p>此前表格漏掉易伤和自损两条主体系，却把力量输出放在最醒目位置。应借鉴共同状态或事件怎样同时支撑输出、防御、运转；直接伤害强不等于体系层级更高。</p><p><a href="#research-ironclad">铁甲战士卡牌分析</a></p><details class="compact"><summary>代表卡牌关系与源码</summary><p>消耗可触发抽牌和格挡，普通防御也能建设未来进攻。</p><p>力量＋多段攻击；格挡保留＋全身撞击；消耗本身还可以成为特定攻击的输入。</p><p>同一张格挡牌，在格挡兑现构筑里兼具输出价值；力量投入则更需要攻击段数。消耗工具能服务两者，不必单独包办伤害。</p><p><a href="#source-Inflame">燃烧</a> · <a href="#source-Whirlwind">旋风斩</a> · <a href="#source-BurningPact">燃烧契约</a> · <a href="#source-DarkEmbracePower">黑暗之拥：消耗抽牌</a> · <a href="#source-FeelNoPainPower">无惧疼痛：消耗格挡</a> · <a href="#source-BarricadePower">壁垒：保留格挡</a> · <a href="#source-BodySlam">全身撞击</a></p></details></td></tr><tr><th scope="row">静默猎手<small>沿用既有研究分类：3大／3小；不是最新版本重新统计。</small></th><td><ul><li>中毒体系</li><li>小刀体系</li><li>弃牌与奇巧体系</li></ul></td><td><ul><li>出牌与抽牌连动体系</li><li>虚弱与增伤状态轴</li><li>技能牌标签体系</li></ul></td><td><p>弃牌与奇巧本身就是大体系，运转可以构成职业主轴。宣言同样应按自己的悬挂、连续技能与完成收益来评估；可以与爆裂共享输出。</p><p><a href="#research-silent">静默猎手卡牌分析</a></p><details class="compact"><summary>代表卡牌关系与源码</summary><p>杂技等弃牌工具连接奇巧牌，取得牌和能量；小刀与中毒都可使用这套运转。</p><p>小刀经营生成次数和单刀收益；中毒经营目标上的层数与结算。涂毒把有未被格挡伤害的攻击接入中毒。</p><p>精准需要小刀，增加毒层不会自动强化每一把刀。共享弃牌不抹去抓牌偏好，涂毒才是明确的连接牌。</p><p><a href="#source-Acrobatics">杂技</a> · <a href="#source-Tactician">战术大师</a> · <a href="#source-Reflex">本能反应</a> · <a href="#source-BladeDance">刀刃之舞</a> · <a href="#source-Accuracy">精准</a> · <a href="#source-PoisonPower">中毒结算</a> · <a href="#source-EnvenomPower">涂毒：攻击连接中毒</a></p></details></td></tr><tr><th scope="row">故障机器人<small>沿用既有研究分类：1大／3小；不是最新版本重新统计。</small></th><td><ul><li>充能球体系</li></ul></td><td><ul><li>状态牌废料体系</li><li>零费与一费回收体系</li><li>能力牌连动体系</li></ul></td><td><p>全体系口径先看充能球这一大体系；闪电与黑暗是球体系内部的输出方向。不能把不同球种、爪击单卡核心和巨型球体系无差别并列。</p><p><a href="#research-defect">故障机器人卡牌分析</a></p><details class="compact"><summary>代表卡牌关系与源码</summary><p>球的生成与激发共用操作框架，冰球和冷静头脑、冰川提供防守与补牌支持。</p><p>闪电被动直接输出；黑暗把被动转成未来激发伤害；爪击＋零费回收又是另一套投入。</p><p>黑暗要经营释放时机和球序；闪电可以持续兑现。等待是一项选择，等待时的防守也有专门牌支持。</p><p><a href="#source-Glacier">冰川</a> · <a href="#source-Coolheaded">冷静头脑</a> · <a href="#source-LightningOrb">闪电球</a> · <a href="#source-DarkOrb">黑暗球</a> · <a href="#source-Claw">爪击</a> · <a href="#source-AllForOne">万物一心</a></p></details></td></tr><tr><th scope="row">亡灵契约师<small>沿用既有研究分类：3大／2小；不是最新版本重新统计。</small></th><td><ul><li>奥斯提与召唤体系</li><li>灾厄与负面状态体系</li><li>虚无牌体系</li></ul></td><td><ul><li>灵魂体系</li><li>高费与死亡节奏轴</li></ul></td><td><p>此前漏掉虚无大体系，并用灵魂填进三条代表线。灵魂在原研究中是小体系，虚无有稳定来源、使用或消耗事件与收益，应恢复其位置。</p><p><a href="#research-necrobinder">亡灵契约师卡牌分析</a></p><details class="compact"><summary>代表卡牌关系与源码</summary><p>灵魂负责抽牌；奥斯提的生命可承担保护与特定攻击；改变卡牌的效果另提供运转选择。</p><p>奥斯提攻击；灾厄达到当前生命的处决；纠缠把打出灵魂转成伤害，吞噬生命把它转成召唤。</p><p>堆奥斯提生命、推进灾厄阈值、提高灵魂频率并非同一种投资；桥接能力把不同用途接起来。</p><p><a href="#source-Soul">灵魂</a> · <a href="#source-HauntPower">纠缠：灵魂连接伤害</a> · <a href="#source-DevourLifePower">吞噬生命：灵魂连接召唤</a> · <a href="#source-Unleash">出击</a> · <a href="#source-DoomPower">灾厄判定</a> · <a href="#source-EndOfDays">末日降临</a></p></details></td></tr><tr><th scope="row">储君<small>沿用既有研究分类：3大／2小；不是最新版本重新统计。</small></th><td><ul><li>星资源体系</li><li>铸造与君王之剑体系</li><li>生成牌体系</li></ul></td><td><ul><li>牌堆顶部与自动打出体系</li><li>技能与多牌连打体系</li></ul></td><td><p>星是资源，但围绕它有来源、支付、触发和多端口收益，因此是大体系；生成牌也有共同事件与收益。不能仅因“负责资源／生成”就降成普通工具。</p><p><a href="#research-regent">储君卡牌分析</a></p><details class="compact"><summary>代表卡牌关系与源码</summary><p>星作为可储存和支付的资源；铸造建设君王之剑；生成牌可通过创世之柱取得防守，大爆炸连接多种资源。</p><p>星费牌支付储备；铸剑强化固定攻击载体，再取回与使用。生成牌频率还能服务另一组收益。</p><p>有星不等于剑自动更强；铸造不等于所有星费牌变强。生成、支付、打出是不同事件，各有受益牌。</p><p><a href="#source-GatherLight">收集光辉</a> · <a href="#source-BigBang">大爆炸</a> · <a href="#source-Furnace">熔炉</a> · <a href="#source-SovereignBlade">君王之剑</a> · <a href="#source-PillarOfCreation">创世之柱</a> · <a href="#source-SevenStars">七星</a></p></details></td></tr><tr><th scope="row">Karen<small>Karen设计文档提出双主轴；后三项按副轴或连接层处理，不强行等同五职业小体系的统计口径。</small></th><td><ul><li>约定</li><li>闪耀</li></ul></td><td><ul><li>临时力量与保留</li><li>移牌收益</li><li>禁用遗物</li></ul></td><td><p>应先恢复约定＋闪耀双主轴。库存、周转、清空和耗尽历史是内部用法；临时力量、移牌、禁用遗物为副轴或连接层，特殊终结牌另列。</p><p><a href="#research-karen">Karen卡牌设计文档：当前卡池、原版参照与后续设计准则</a> · <a href="#research-karen_style">Karen卡牌风格分析与设计指导草案</a></p><details class="compact"><summary>代表卡牌关系与源码</summary><p>约定中的存取与移牌能连接抽牌、临时力量和卡牌成长；闪耀另外管理牌的寿命与耗尽收益。</p><p>约定库存支持背靠背；取牌支持过去与未来的临时力量及多段攻击；旋转随移动成长；耗尽记录可支持我们犯下的罪过。</p><p>留库存能支持背靠背，取空能触发舞台正在等待着。相同约定工具服务保留或清空两种目的；最后的台词又改变整理牌堆的目标。</p><p><a href="#source-KarenNextStage">下一个舞台</a> · <a href="#source-KarenBackToBackCard">背靠背</a> · <a href="#source-KarenStageIsWaitingPower">舞台正在等待着：取空回能</a> · <a href="#source-KarenPastAndFuture">过去与未来</a> · <a href="#source-KarenShineStrikeBarrage">用你的闪耀贯穿我吧</a> · <a href="#source-KarenSpin">旋转</a> · <a href="#source-KarenCarryingGuilt">我们犯下的罪过</a> · <a href="#source-KarenStarlight02Power">Starlight第二幕：重放与耗尽</a> · <a href="#source-KarenLastWord">最后的台词</a></p></details></td></tr></tbody></table></div><div class="notice"><p><b>统一口径：</b>先看共同核心、稳定触发与收益、多个端口和牌间需求。输出主轴只是其中一个观察角度；运转体系能成为大体系，同一大体系内也能存在不同构筑方向。</p></div></section>
+<section id="findings"><span class="eyebrow">03 / GAPS AND CHANGES</span><h2 class="section-title">按体系缺口补牌，再决定是否新增主轴</h2><p class="review-scope">以下补充建议尚未采用；现有卡面已同步取消威力关键词的决定。</p><article class="review-finding" id="finding-floor"><span class="badge">先补</span><h3>把基础行动与宣言奖励分开</h3><p>纯宣言在悬挂时不产生即时资源，这是现在明确的设计方向。已写配套中，稳住声线能立即防守；咒文备忘能付费抽牌；但续接需要吟唱，删繁就简需要支付手牌，一些启动牌还会消耗。</p><p class="proposal"><b>建议：</b>补一小组不要求吟唱、不要求先完成宣言的基础过牌、独立防守、虚弱或手牌准备。把这些职责写在其他牌上，不把即时效果加回宣言。</p><p class="muted">先让玩家有办法完成第一段三连，也能在不能发动时活过这一回合。当前初始牌组未定，不能据此断言一定卡死。</p><details class="compact"><summary>参考关系</summary><p><a href="#source-Acrobatics">杂技</a> · <a href="#source-Glacier">冰川</a> · <a href="#source-Coolheaded">冷静头脑</a> · <a href="#source-GatherLight">收集光辉</a></p></details></article><article class="review-finding" id="finding-differentiate"><span class="badge">优先设计</span><h3>按主体系补齐卡牌角色</h3><p>逐卡分类后，爆裂有1张明确引导、2张核心、1张突破与5张中坚；宣言有7张核心奖励与2张中坚，尚无可明确认定的独立引导或基础牌。</p><p class="proposal"><b>建议：</b>先结合初始牌组检验现有通用技能能否支撑第一段三连，再补低稀有度入口与防守；不要把缺少某一分类机械地变成必须补卡的配额。</p><p class="muted">分类依据是无配套时是否可抓及是否改变机制边界；六张纯后续宣言均依赖三连，不能按奖励种类分别算成熟流派。</p><details class="compact"><summary>参考关系</summary><p><a href="#source-BladeDance">刀刃之舞</a> · <a href="#source-Accuracy">精准</a> · <a href="#source-EnvenomPower">涂毒：攻击连接中毒</a> · <a href="#source-KarenBackToBackCard">背靠背</a> · <a href="#source-KarenStageIsWaitingPower">舞台正在等待着：取空回能</a></p></details></article><article class="review-finding" id="finding-repeated_combat"><span class="badge">随后补</span><h3>已有后续爆裂来源，补的是再次运作的资源</h3><p>爆裂狂已经能在下一回合补新爆裂，烂熟于心也提供重复抽牌。问题是续接、删繁就简、一息贯通会消耗，后续爆裂还要重新准备费用、技能和防守。</p><p class="proposal"><b>建议：</b>核实已有非消耗生成牌、宣言与烂熟于心能否支撑重复运作，再决定补哪一种资源；不笼统追加新的爆裂生成器。</p><p class="muted">不要求每回合指数增长，也不新增永久额外增伤规则。已有持续能力可以扩展，不能把它们当成不存在。</p><details class="compact"><summary>参考关系</summary><p><a href="#source-DarkEmbracePower">黑暗之拥：消耗抽牌</a> · <a href="#source-Furnace">熔炉</a> · <a href="#source-Claw">爪击</a> · <a href="#source-KarenSpin">旋转</a></p></details></article><article class="review-finding" id="finding-tools"><span class="badge">补基础时一并处理</span><h3>普通战术牌需要明确的位置</h3><p>爆裂是回合末群伤，当前卡池草稿大多围绕技能连续使用；普通攻击既不增加吟唱计数，也可能打断宣言，所以需要说明它何时值得打。</p><p class="proposal"><b>建议：</b>保留少量独立的单体处理、削弱或防守工具，服务启动失败、准备回合和具体敌人局面。可以是普通杖击或小聪明题材，不必扩成新流派。</p><p class="muted">回合末结算本身不等于敌人会先行动；这里只指出回合内主动调整手段较少，而不是断言延迟必然挨打。也不恢复已停止的非攻击伤害流。</p><details class="compact"><summary>参考关系</summary><p><a href="#source-BodySlam">全身撞击</a> · <a href="#source-Unleash">出击</a> · <a href="#source-EndOfDays">末日降临</a></p></details></article><article class="review-finding" id="finding-declaration_rules"><span class="badge">先明确</span><h3>多张宣言的计数方式比追加奖励更关键</h3><p>如果新打出的宣言也是技能，它就能推进已经悬挂的宣言。在全部独立计数与只推进最早一张两种规则下，同一批卡会形成完全不同的循环。</p><p class="proposal"><b>建议：</b>建议每张悬挂牌从自己入场后独立计数，每次技能推进所有当时已悬挂的宣言。当前仍标为建议；先不因球状展示自动设置槽位上限。</p><p class="muted">这直接决定卡组是在并行安排多份后续收益，还是排队完成一份任务。需要明确时序，不能把完成奖励默认算成无限自动回能。</p></article><article class="review-finding" id="finding-special"><span class="badge">最后补少量</span><h3>用少量特殊牌改变既有工具的用途</h3><p>能力多在已有循环上加抽牌或额外增伤。新增的复制技能宣言已经能奖励安排第三张技能的顺序，是值得继续展开的操作选择；爆裂鉴赏仍留有稀有单卡位置。</p><p class="proposal"><b>建议：</b>基础支撑齐了以后，再探索改变一项选择的稀有牌：例如自愿提前结算本次吟唱，放弃后续计数；或改变咒文的用途。每张先说明失去什么、得到什么。</p><p class="muted">这些是未采用的方向，不改现行回合末爆裂，也不建立新评分货币。少量改变玩法的牌比继续叠一批同类奖励更有价值。</p><details class="compact"><summary>参考关系</summary><p><a href="#source-CorruptionPower">腐化：技能减费与消耗</a> · <a href="#source-EnvenomPower">涂毒：攻击连接中毒</a> · <a href="#source-KarenStarlight02Power">Starlight第二幕：重放与耗尽</a> · <a href="#source-KarenLastWord">最后的台词</a></p></details></article></section>
+<section id="routes"><span class="eyebrow">04 / BUILD DIRECTIONS</span><h2 class="section-title">爆裂与宣言各有经营对象，可以共同构筑</h2><div class="two"><article class="route"><span class="eyebrow">主体系候选</span><h3>爆裂：准备与兑现</h3><dl><dt>想要的牌</dt><dd>稳定开启吟唱的费用、准备回合防守、可用技能与后续补给。</dd><dt>怎样行动</dt><dd>选择何时打出爆裂、在吟唱窗口内安排多少技能、怎样支持下一次爆裂。</dd><dt>专属投入</dt><dd>支持准备与计数的牌、少量直接增伤配套，以及改变兑现方式的候选牌。</dd><dt>尚缺什么</dt><dd>基础支撑、重复启动与真正有意义的突破牌。</dd></dl></article><article class="route"><span class="eyebrow">主体系候选</span><h3>宣言：悬挂与完成</h3><dl><dt>想要的牌</dt><dd>适合当前局面的宣言、连续技能来源、完成后的续行与回收。</dd><dt>怎样行动</dt><dd>先安排要完成的宣言，再组织技能顺序；复制宣言还要求安排第三张技能的内容。</dd><dt>专属投入</dt><dd>围绕悬挂与完成事件的牌，不要求另造一套杀敌出口。</dd><dt>尚缺什么</dt><dd>多宣言规则、第一段启动、回收职责与每张宣言球的视觉设计。</dd></dl></article></div><div class="notice"><p>同一张咒文可以同时积累爆裂的技能数、提高下一次伤害并推进宣言，这是跨体系连接。是否形成不同选择，应看爆裂的准备／兑现时机、宣言的悬挂对象／完成顺序怎样影响出牌，而不能仅因共用技能就判为同一个体系。</p></div><p class="review-keyline">这里比较两个主体系候选的经营重点；具体卡组可以同时使用它们。增伤继续作为爆裂内的小配套。</p></section>
+<section id="cards"><span class="eyebrow">05 / CARD RESPONSIBILITIES</span><h2 class="section-title">哪些保留，哪些值得重新写</h2><p>去掉宣言的即时效果后，要同步检查配套的用途，而不只是删掉卡面第一行。</p><div class="table-scroll "><table><thead><tr><th scope="col">卡牌</th><th scope="col">处理建议</th><th scope="col">原因</th></tr></thead><tbody><tr><th scope="row">6张纯宣言牌</th><td><span class="badge draft">保留结构</span></td><td>吾名惠惠、红魔族第一的天才、禁忌的咒文、一口气念完、绝不退场与新增的复制技能宣言继续只写宣言后的效果。去掉即时奖励带来了明确的先投入后兑现，不因启动困难又把额外效果加回去。 写宣言卡时也需配套设计对应的悬挂宣言球外观。</td></tr><tr><th scope="row">新增：复制最后打出的技能</th><td><span class="badge draft">值得围绕出牌顺序展开</span></td><td>通过安排完成三连的第三张技能，选择复制补牌、费用、防守或生成牌，已经带来不同于单纯增加数值的选择。效果已由用户指定；本稿仅建议完成时生成副本加入手牌，复制费用、升级等细则未定，不自动打出。</td></tr><tr><th scope="row">改口重来</th><td><span class="badge draft">优先重做或暂缓</span></td><td>即时奖励移除后，收回再打失去了原先的收益；目前也没规定槽位上限，不能用“腾位置”当既定理由。若保留，建议改为放弃一份未完成宣言来换取当下补牌，而不是只清零再付费。此处仅建议，原卡面未改。</td></tr><tr><th scope="row">还没介绍完呢</th><td><span class="badge draft">保留角色</span></td><td>它从弃牌堆取回已完成或正常弃掉的宣言，能开始新一轮收益，与收回未完成宣言有清楚区别。尚未证明费用强度，不将两种回收混为一谈。</td></tr><tr><th scope="row">一息贯通／一口气念完</th><td><span class="badge draft">明确分工</span></td><td>前者在第一段尚未完成时就能启动下一张付费技能；后者需要完成宣言后再支持两张技能。两者有启动与续行的区别，可以共存，不应仅因都减费就删除一个。</td></tr><tr><th scope="row">稳住声线／咒文备忘</th><td><span class="badge draft">作为基础支撑扩展</span></td><td>即时防守加咒文、抽牌加保留，分别覆盖准备与连打。增加相邻职责的普通牌，比继续新增全是延后奖励的宣言更能补齐卡池。</td></tr><tr><th scope="row">烂熟于心／越说越起劲</th><td><span class="badge draft">保留并观察长期职责</span></td><td>已经分别提供进入吟唱的补牌、完成宣言的额外增伤来源。后续能力应带来新的取舍，避免每张都只奖励相同的一串技能。</td></tr></tbody></table></div><p><a href="惠惠当前设计总览.html#declaration-cards">查看当前宣言与配套</a> · <a href="惠惠长篇咏唱流派设计.html#cards">查看6张长篇咏唱候选</a></p></section>
+<section id="rules"><span class="eyebrow">06 / DECLARATION RULES</span><h2 class="section-title">多张宣言如何推进，需要先决定</h2><p>“全部各自计数”偏向并行准备；“只推进最早一张”偏向队列管理。它们会改变抓牌价值和行动顺序，不能等到做数值时才补。</p><div class="table-scroll "><table><thead><tr><th scope="col">规则</th><th scope="col">现状</th><th scope="col">建议与边界</th></tr></thead><tbody><tr><th scope="row">自己的宣言是否计自己</th><td>当前按不计；悬挂后才开始记录。</td><td>保留这项解释，让卡面“此后连续3张”的语义一致。</td></tr><tr><th scope="row">新宣言能否推进旧宣言</th><td>候选宣言牌按技能设计；多张推进方式未定。</td><td>建议可以，并推进所有此前已悬挂的宣言；不能把刚挂的新牌也算进自己的进度。</td></tr><tr><th scope="row">攻击或能力穿插</th><td>按连续的当前解释，打出非技能使未完成进度归零。</td><td>保留；未完成牌是否继续悬挂沿用工作推演。能力铺设应安排在三连之前。</td></tr><tr><th scope="row">回合结束</th><td>用户明确：未完成进度归零。</td><td>本次不更改；卡牌继续悬挂仍作为现行推演，不能宣传进度跨回合保留。</td></tr><tr><th scope="row">完成与回收</th><td>达到条件触发一次后续效果，然后本牌弃置。</td><td>结算第三张技能及其产生的事件顺序需固定；同时完成时建议依悬挂先后处理，仍未采用。</td></tr><tr><th scope="row">爆裂、咒文的技能类型</th><td>仍为草稿建议。爆裂自身不计入其刚开启的吟唱计数。</td><td>建议明确为技能：这使它们可以推进已悬挂宣言，但生成和消耗未打出的咒文不会推进。</td></tr></tbody></table></div><p class="muted">这里只提出规则选择；不把建议写成用户已确认，也不从能量球的外观自动继承槽位、激发或顶出。</p></section>
+<section id="not-now"><span class="eyebrow">07 / SCOPE CONTROL</span><h2 class="section-title">这些方向现在不必一起重开</h2><div class="table-scroll "><table><thead><tr><th scope="col">方向</th><th scope="col">当前建议</th><th scope="col">理由</th></tr></thead><tbody><tr><th scope="row">为凑数量新增第三大体系或第二伤害出口</th><td>先补齐两个现有候选</td><td>体系可以偏运转、防守并共享输出。是否增加新主体系，应由当前两者补齐后仍存在的机制或体验缺口决定，不能仅根据伤害路线数量下结论。</td></tr><tr><th scope="row">恢复魔力积蓄</th><td>继续暂停</td><td>现行爆裂不再取出积蓄，入口和出口已脱节。现在重开会额外增加牌区管理，并冲淡刚确定的保留减费与宣言。</td></tr><tr><th scope="row">小聪明／反复练习</th><td>保留为题材或后备方向</td><td>小聪明可先服务少量战术牌；练习可先服务特定单卡。未证明专属投入和完整循环前，不提升为新主体系。</td></tr><tr><th scope="row">透支、驻留、脱力、双面、魔眼、道具</th><td>不同时展开</td><td>这些都额外引入负担、状态或管理对象。当前支撑牌、宣言时序和构筑分化尚未补齐，没有必要一并启动。</td></tr><tr><th scope="row">战斗内技能点、评分货币、广义非攻击增伤</th><td>不恢复</td><td>分别违背已确定的局外成长、稀有单卡和下一次爆裂额外增伤定位。当前缺口不足以推翻这些用户决定。</td></tr></tbody></table></div></section>
+<section id="next"><span class="eyebrow">08 / NEXT CARDS</span><h2 class="section-title">接下来按这个顺序写卡</h2><ol class="review-next"><li>多宣言究竟全部推进还是只推进一个；初始技能与立即防守有哪些。否则无法判断第一段三连的可达性，也无法判断宣言引导牌能否独立抓取。</li><li>保留纯后续宣言。优先核实或补充不要求已吟唱／已完成宣言的低稀有度技能与防守；当前已有删繁就简、备忘、减费工具，要检查它们的条件和密度，而非宣称完全没有。</li><li>爆裂狂已有后续爆裂来源，烂熟于心已有持续抽牌。重点检查消耗牌用完之后的手牌、能量和准备期生存，不再无条件追加生成爆裂的牌。</li><li>改口重来失去即时效果套利后只剩顺序修正；复制宣言要明确费用与副本规则；增伤小体系保持少量配套。宣言球外观随每张卡一并设计。</li><li>逐卡定位已完成；在规则、起始卡池和稀有度补齐后复核分类，再开展数值与实战验证。</li></ol><p class="return-link"><a href="惠惠当前设计总览.html">回到已给规则与当前卡面 →</a></p></section>
+<section id="sources"><span class="eyebrow">09 / EVIDENCE</span><h2 class="section-title">来源与核对范围</h2><div id="prior-research"><h3>找回的体系分析原文</h3><p>找回并复读既有体系研究；沿用其分类，明确与伤害端专题的不同口径。卡牌数和体系数是原研究快照，不宣称最新版本完整统计。</p><details class="source-entry" id="research-method"><summary>体系分析流程</summary><p>体系按共同核心、触发与收益、多端口和牌间需求判定，不要求每个体系都有独立杀敌出口。</p><p><a href="file:///D:/Github/STS2_Konosuba_Megumin/design/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E4%BD%93%E7%B3%BB%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B.md">打开原文</a> · 原文起始行 34</p><p class="source-path">D:\Github\STS2_Konosuba_Megumin\design\参考资料\设计方法\体系分析流程.md</p><p class="muted">SHA256：e496a30f019ba7e5193495e1226404f70eb3c01934bd6b02a7be984e347500d9</p><pre>## 三个端口
+
+判断一个机制是否形成体系时，优先看它是否覆盖多个端口。
+
+| 端口 | 含义 | 常见表现 |
+| --- | --- | --- |
+| 输出端 | 机制如何造成伤害或提高伤害 | 直接伤害、额外攻击、增伤、斩杀、反伤 |
+| 防御端 | 机制如何减少伤害或提供生存 | 格挡、虚弱、力量降低、覆甲、无实体、回血 |
+| 运转端 | 机制如何让牌组持续运作 | 抽牌、能量、减费、检索、复制、生成、回收、保留、消耗触发 |
+
+成熟体系通常至少覆盖其中两个端口，强体系往往三个端口都有。
+
+## 扳机触发与扳机收益
+
+整理体系时，除了输出端、防御端、运转端，还必须统计牌在体系中的扳机角色。
+
+一个体系通常由“扳机”和“收益”组成：
+
+| 角色 | 含义 | 常见表现 |
+| --- | --- | --- |
+| 扳机触发牌 | 打出后会触发这个体系的扳机，或直接制造该体系正在监听的事件 | 给予易伤、消耗卡牌、失去生命、获得格挡、打出攻击牌 |
+| 扳机收益牌 | 当体系扳机触发，或核心资源、状态满足时，获得额外收益 | 每当消耗时抽牌、敌人每有一层易伤就加伤、每当失血时加力量 |
+| 触发+收益牌 | 同一张牌既制造扳机，又从同一体系或相邻体系获得收益 | 先给予易伤再按易伤层数结算、消耗牌同时根据消耗数量造成伤害 |
+| 跨体系联动牌 | 把一个体系的扳机接到另一个体系的收益上 | 自损并消耗牌、获得格挡并给予易伤、生成攻击牌并免费打出 |
+
+判断体系时，不能只数“相关牌数量”，还要看扳机和收益是否成对存在。
+
+如果只有大量扳机触发牌，但没有足够收益牌，通常只是资源来源或功能标签。  
+如果只有收益牌，但本职业内缺少稳定触发牌，这个体系依赖外部条件，通常只能算小体系或不稳定体系。  
+如果触发牌和收益牌都存在，并且能覆盖多个端口，才更接近成熟体系。
+
+</pre></details><details class="source-entry" id="research-summary"><summary>五职业卡牌分析总结</summary><p>总体结构与规模对照；这里的数量是旧研究归纳，不作为最新卡池统计或惠惠配额。</p><p><a href="file:///D:/Github/STS2_Konosuba_Megumin/design/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E4%BA%94%E8%81%8C%E4%B8%9A%E5%8D%A1%E7%89%8C%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93.md">打开原文</a> · 原文起始行 82</p><p class="source-path">D:\Github\STS2_Konosuba_Megumin\design\参考资料\设计方法\五职业卡牌分析总结.md</p><p class="muted">SHA256：4e4c66eab5856bde76de6a6fec4785f50c2eb163ce9518a75a61c61453cf55d1</p><pre>## 5. 大体系与小体系数量
+
+五职业没有固定的“3 大 2 小”公式。真正稳定的是：每个主体系都必须说清触发、收益和继续抓牌理由；副轴可以缺一个端口，但要能服务主体系。
+
+| 职业 | 大体系 | 小体系 | 主体系 | 结构判断 |
+| --- | ---: | ---: | --- | --- |
+| 铁甲战士 | 4 | 3 | 消耗、格挡、易伤、自损 | 多个中型主轴并列，副轴主要放大输出。 |
+| 静默猎手 | 3 | 3 | 弃牌与奇巧、小刀、中毒 | 三条主线清楚，副轴围绕低费、虚弱和技能密度。 |
+| 故障机器人 | 1 | 3 | 充能球 | 一个压倒性主体系吞下多数职业身份，副轴给燃料和上限。 |
+| 亡灵契约师 | 3 | 2 | 奥斯提与召唤、灾厄、虚无 | 专属对象、状态和临时牌三条主线并行，灵魂负责连接。 |
+| 储君 | 3 | 2 | 星资源、铸造与君王之剑、生成牌 | 双费用、专属衍生牌和生成牌共同构成职业身份。 |
+
+设计结论：
+
+1. 大体系数量可以是 1-4 个；故障机器人证明“一个绝对主体系”成立，铁甲战士证明“多主轴并列”也成立。
+2. 小体系不是牌少的杂项，而是核心明确但端口不完整的副方向。
+3. 如果某组牌只有共同用途，例如抽牌、能量、高伤害、保护队友，不应强行升格为体系。
+4. 新职业默认可以先规划 2-3 个大体系、2-3 个小体系，再根据职业第一机制调整密度。
+
+## 6. 体系密度与角色结构
+
+体系卡牌数在五职业里跨度很大，从 7 张小体系到 41 张巨型主体系都有。体系统计允许跨体系重复计数，因此不要把体系数简单相加去凑 88 张。
+
+| 职业 | 最大体系 | 最大体系卡数 | 成熟方式 | 主要缺口 |
+| --- | --- | ---: | --- | --- |
+| 铁甲战士 | 格挡体系 | 20 | 大量格挡来源 + 保留格挡 + 格挡转伤害 | 副轴防御端，尤其力量和打击名称。 |
+| 静默猎手 | 弃牌与奇巧体系 | 20 | 弃牌触发、奇巧收益、重抽、生成小刀和爆发连接完整 | 中毒缺体系内运转，虚弱收益偏少。 |
+| 故障机器人 | 充能球体系 | 41 | 球种、槽位、集中、被动和激发组成完整闭环 | 副轴多依附充能球，独立防御端不足。 |
+| 亡灵契约师 | 奥斯提与召唤体系 | 25 | 专属对象的生成、攻击、死亡、生命和最大生命都有收益 | 灵魂收益牌少，灾厄/虚无普通层引导可更强。 |
+| 储君 | 星资源体系 | 31 | 星既是费用，也是触发、花费和收益资源 | 生成牌收益少于来源，星资源防御端偏依赖连接牌。 |
+
+设计结论：
+
+1. 大体系不需要平均 14-16 张；职业第一机制可以吃到 25-40 张以上。
+2. 中等主体系通常在 12-20 张之间，必须至少覆盖输出、防御、运转中的两个端口。
+3. 小体系通常在 7-11 张之间，可以缺防御或终结，但需要能解释它依附哪个主体系。
+4. 体系内部最重要的不是数量，而是“入口、来源、收益、突破、补洞”是否都有人承担。
+
+</pre></details><details class="source-entry" id="research-ironclad"><summary>铁甲战士卡牌分析</summary><p>恢复原研究中的完整大／小体系列表。</p><p><a href="file:///D:/Github/STS2_Card_Reserch/docs/mods/ironclad_card_analysis_zh.md">打开原文</a> · 原文起始行 27</p><p class="source-path">D:\Github\STS2_Card_Reserch\docs\mods\ironclad_card_analysis_zh.md</p><p class="muted">SHA256：d6b353de9d3a4e3a816748ffa7916fab9f88136958e4b863c8b19aa59a4b7261</p><pre>## 2. 体系分布摘要
+
+| 体系 | 判定 | 卡牌数 | 引导 | 基础 | 核心 | 突破 | 中坚 | 触发牌 | 收益牌 | 端口覆盖 | 结论 |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| 易伤体系 | 大体系 | 13 | 3 | 5 | 3 | 1 | 1 | 7 | 7 | 输出/防御/运转 | 入口和收益成对存在，`凶恶` 把易伤转为抽牌后，易伤不只是增伤状态。 |
+| 消耗体系 | 大体系 | 18 | 3 | 4 | 7 | 2 | 2 | 10 | 12 | 输出/防御/运转 | 触发、收益、抽牌、能量和防御都完整，是铁甲战士最成熟的体系之一。 |
+| 自损与生命资源体系 | 大体系 | 12 | 1 | 4 | 2 | 2 | 3 | 9 | 4 | 输出/防御/运转 | 触发多于收益，构筑强度取决于能否把生命损失转成输出或运转。 |
+| 格挡体系 | 大体系 | 20 | 1 | 12 | 2 | 2 | 3 | 15 | 5 | 输出/防御/运转 | 格挡来源极多，真正质变来自保留格挡和格挡转伤害。 |
+| 攻击牌连动体系 | 小体系 | 10 | 1 | 3 | 3 | 1 | 2 | 7 | 4 | 输出/防御/运转 | 触发条件太宽，更像低费攻击、复制和连打插件，而不是独立主体系。 |
+| 力量与多段输出轴 | 小体系 | 15 | 3 | 3 | 3 | 2 | 4 | 7 | 9 | 输出/运转；防御缺失 | 输出轴很清楚，但缺少防御端，需要依附格挡、消耗或自损体系。 |
+| 打击名称体系 | 小体系 | 7 | 1 | 4 | 0 | 1 | 1 | 5 | 2 | 输出/运转；防御缺失 | 名称核心明确但规模小，主要作为早期输出和副轴奖励。 |
+
+</pre></details><details class="source-entry" id="research-silent"><summary>静默猎手卡牌分析</summary><p>恢复原研究中的完整大／小体系列表。</p><p><a href="file:///D:/Github/STS2_Card_Reserch/docs/mods/silent_card_analysis_zh.md">打开原文</a> · 原文起始行 27</p><p class="source-path">D:\Github\STS2_Card_Reserch\docs\mods\silent_card_analysis_zh.md</p><p class="muted">SHA256：661804e7f6ca5adcee9fc45f8f35aa7a5cf54103fce3630c6538eb5b63aadf04</p><pre>## 2. 体系分布摘要
+
+| 体系 | 判定 | 卡牌数 | 引导 | 基础 | 核心 | 突破 | 中坚 | 触发牌 | 收益牌 | 端口覆盖 | 结论 |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| 中毒体系 | 大体系 | 12 | 1 | 5 | 4 | 2 | 0 | 9 | 4 | 输出/防御 | 中毒来源充足，输出收益清楚，但运转端主要依赖弃牌和抽牌体系外接。 |
+| 小刀体系 | 大体系 | 12 | 1 | 5 | 2 | 2 | 2 | 9 | 4 | 输出/防御/运转 | 小刀生成、增伤、保留和群体化完整，是静默最直观的低费攻击体系。 |
+| 弃牌与奇巧体系 | 大体系 | 20 | 2 | 7 | 5 | 3 | 3 | 11 | 10 | 输出/防御/运转 | 触发和收益最完整，既能过牌也能制造小刀和爆发，是职业主体系。 |
+| 出牌与抽牌连动体系 | 小体系 | 11 | 1 | 3 | 3 | 2 | 2 | 3 | 8 | 输出/防御/运转 | 触发条件很宽，更像多牌连打奖励层，需要弃牌、小刀或低费牌支撑。 |
+| 虚弱与增伤状态轴 | 小体系 | 11 | 0 | 5 | 1 | 1 | 4 | 9 | 2 | 输出/防御 | 虚弱来源很多，但收益牌少，主要作为防御和攻击倍率副轴。 |
+| 技能牌标签体系 | 小体系 | 9 | 1 | 3 | 1 | 2 | 2 | 4 | 6 | 输出/防御/运转 | 技能密度高，但本体系更像弃牌/连打体系的插件，不适合单独成型。 |
+
+</pre></details><details class="source-entry" id="research-defect"><summary>故障机器人卡牌分析</summary><p>恢复原研究中的完整大／小体系列表。</p><p><a href="file:///D:/Github/STS2_Card_Reserch/docs/mods/defect_card_analysis_zh.md">打开原文</a> · 原文起始行 27</p><p class="source-path">D:\Github\STS2_Card_Reserch\docs\mods\defect_card_analysis_zh.md</p><p class="muted">SHA256：a9c9d91f90f52b77c712236b617e01dad90e611952b3d8234e8a0b41d86e8330</p><pre>## 2. 体系分布摘要
+
+| 体系 | 判定 | 卡牌数 | 引导 | 基础 | 核心 | 突破 | 中坚 | 触发牌 | 收益牌 | 端口覆盖 | 结论 |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| 充能球体系 | 大体系 | 41 | 2 | 19 | 9 | 6 | 5 | 22 | 21 | 输出/防御/运转 | 职业绝对主体系，球种、槽位、集中、被动和激发都形成完整闭环。 |
+| 状态牌废料体系 | 小体系 | 11 | 1 | 5 | 3 | 1 | 1 | 7 | 6 | 输出/防御/运转 | 有生成与收益，但更像“副作用转资源”插件，需要状态牌密度支持。 |
+| 零费与一费回收体系 | 小体系 | 8 | 1 | 3 | 1 | 2 | 1 | 5 | 4 | 输出/运转；防御缺失 | 低费回收能形成输出/运转循环，但缺少防御端。 |
+| 能力牌连动体系 | 小体系 | 9 | 0 | 2 | 2 | 3 | 2 | 3 | 6 | 输出/防御/运转 | 依赖罕见/稀有能力牌密度，常作为充能球和零费体系的上限层。 |
+
+</pre></details><details class="source-entry" id="research-necrobinder"><summary>亡灵契约师卡牌分析</summary><p>恢复原研究中的完整大／小体系列表。</p><p><a href="file:///D:/Github/STS2_Card_Reserch/docs/mods/necrobinder_card_analysis_zh.md">打开原文</a> · 原文起始行 27</p><p class="source-path">D:\Github\STS2_Card_Reserch\docs\mods\necrobinder_card_analysis_zh.md</p><p class="muted">SHA256：183dff39184388b216273be68626e26cd56cdfce2b7627bf7508a4931b606fdb</p><pre>## 2. 体系分布摘要
+
+| 体系 | 判定 | 卡牌数 | 引导 | 基础 | 核心 | 突破 | 中坚 | 触发牌 | 收益牌 | 端口覆盖 | 结论 |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| 奥斯提与召唤体系 | 大体系 | 25 | 1 | 11 | 5 | 5 | 3 | 17 | 10 | 输出/防御/运转 | 职业第一主体系，召唤、奥斯提攻击、奥斯提死亡和最大生命收益都有闭环。 |
+| 灾厄与负面状态体系 | 大体系 | 20 | 1 | 7 | 6 | 4 | 2 | 14 | 8 | 输出/防御/运转 | 灾厄既是斩杀阈值也是负面状态触发源，输出和防御收益都完整。 |
+| 灵魂体系 | 小体系 | 11 | 0 | 5 | 2 | 1 | 3 | 7 | 4 | 输出/防御/运转 | 灵魂本身是抽牌衍生物，收益牌少但能连接召唤和消耗牌堆。 |
+| 虚无牌体系 | 大体系 | 16 | 0 | 8 | 2 | 3 | 3 | 12 | 4 | 输出/防御/运转 | 虚无有稳定来源和明确奖励，偏向用一次性牌制造长期规则收益。 |
+| 高费与死亡节奏轴 | 小体系 | 10 | 1 | 1 | 3 | 1 | 4 | 7 | 3 | 输出/防御/运转 | 读取 2 费以上、死亡或高费终结，更多是节奏副轴而非独立主体系。 |
+
+</pre></details><details class="source-entry" id="research-regent"><summary>储君卡牌分析</summary><p>恢复原研究中的完整大／小体系列表。</p><p><a href="file:///D:/Github/STS2_Card_Reserch/docs/mods/regent_card_analysis_zh.md">打开原文</a> · 原文起始行 27</p><p class="source-path">D:\Github\STS2_Card_Reserch\docs\mods\regent_card_analysis_zh.md</p><p class="muted">SHA256：0408e8cf68dffb5f44dd406683b2209890a07c810cae86cda9ab086f4bc441d9</p><pre>## 2. 体系分布摘要
+
+| 体系 | 判定 | 卡牌数 | 引导 | 基础 | 核心 | 突破 | 中坚 | 触发牌 | 收益牌 | 端口覆盖 | 结论 |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| 星资源体系 | 大体系 | 31 | 2 | 8 | 7 | 3 | 11 | 10 | 23 | 输出/防御/运转 | 职业第一主体系，星既是替代费用，也是触发、花费和收益资源。 |
+| 铸造与君王之剑体系 | 大体系 | 13 | 1 | 4 | 3 | 4 | 1 | 9 | 7 | 输出/防御/运转 | 铸造持续强化君王之剑，稀有能力负责改变范围、重放和防御端。 |
+| 生成牌体系 | 大体系 | 14 | 0 | 7 | 2 | 2 | 3 | 11 | 3 | 输出/防御/运转 | 生成来源很多，收益集中在 `创世之柱`、`武器库`、`超质量体`。 |
+| 牌堆顶部与自动打出体系 | 小体系 | 8 | 1 | 3 | 1 | 0 | 3 | 7 | 2 | 输出/防御/运转 | 有明确牌堆顶操控和自动打出，但收益牌较少，更像稳定性副轴。 |
+| 技能与多牌连打体系 | 小体系 | 10 | 1 | 2 | 3 | 3 | 1 | 3 | 7 | 输出/防御/运转 | 技能计数和出牌计数有奖励，但需要星、生成牌或低费牌支撑。 |
+
+</pre></details><details class="source-entry" id="research-ironclad_systems"><summary>铁甲战士体系逐卡整理</summary><p>提供易伤、消耗、自损和格挡的来源、收益及端口明细。</p><p><a href="file:///D:/Github/STS2_Card_Reserch/docs/mods/ironclad_systems_zh.md">打开原文</a> · 原文起始行 9</p><p class="source-path">D:\Github\STS2_Card_Reserch\docs\mods\ironclad_systems_zh.md</p><p class="muted">SHA256：64e9f286a36d387b560045948396b7cefd093ebe6006f49dbf7a0bd11fea8b1e</p><pre>## 体系总览
+
+| 体系 | 判定 | 卡牌数 | 机制触发牌 | 机制收益牌 | 触发+收益 | 跨体系牌 | 核心 | 结论 |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| 易伤体系 | 大体系 | 13 | 7 | 7 | 1 | 4 | 易伤状态与易伤层数 | 成熟体系 |
+| 消耗体系 | 大体系 | 18 | 10 | 12 | 4 | 7 | 卡牌被消耗、消耗牌堆数量 | 成熟体系 |
+| 自损与生命资源体系 | 大体系 | 12 | 9 | 4 | 1 | 6 | 自己回合失去生命、战斗中失去生命次数 | 成熟体系 |
+| 格挡体系 | 大体系 | 20 | 15 | 5 | 0 | 10 | 格挡值、获得格挡事件、格挡保留 | 成熟体系 |
+| 攻击牌连动体系 | 小体系 | 10 | 7 | 4 | 1 | 4 | 打出攻击牌、攻击牌标签 | 小体系，偏运转和输出 |
+| 力量与多段输出轴 | 小体系 | 15 | 7 | 9 | 1 | 7 | 力量数值、多段攻击 | 小体系，更像输出轴 |
+| 打击名称体系 | 小体系 | 7 | 5 | 2 | 0 | 4 | 名字中含有“打击”的卡牌标签 | 小体系 |
+
+## 易伤体系
+
+- 核心：敌人的易伤状态与易伤层数。
+- 判定：大体系。
+- 扳机定义：给予易伤、提高易伤层数、让敌人处于易伤状态。
+- 输出端：`熔融之拳`、`欺凌`、`拆卸`、`残酷`、`破击`。
+- 防御端：`上勾拳` 的虚弱、`巨像` 的易伤敌人减伤、`挑衅` 的格挡。
+- 运转端：`凶恶` 把给予易伤转为抽牌，`主宰` 把易伤层数转为力量。
+- 卡牌数量：13。
+- 角色统计：机制触发牌 7（含触发+收益 1）；机制收益牌 7（含触发+收益 1）；跨体系联动牌 4。
+- 体系内分类统计：机制引导牌 3；机制基础牌 5；机制核心牌 3；突破限制牌 1；机制中坚牌 1。
+- 结论：易伤有明确状态核心，并覆盖输出、防御、运转，是铁甲战士的成熟体系。
+
+| 名称 | 分类 | 扳机角色 | 端口 | 定位 | 独立性 | 依赖或风险 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 痛击 | 机制基础牌 | 扳机触发 | 输出 | 起始牌中的易伤来源，兼顾基础伤害和状态入口。 | 高 | 2 费会挤压同回合后续收益牌。 |
+| 熔融之拳 | 机制引导牌 | 扳机收益 | 输出 | 普通层易伤倍增收益，提示玩家继续找易伤层数。 | 中 | 需要敌人已有易伤才有高上限。 |
+| 闪电霹雳 | 机制基础牌 | 扳机触发 | 输出 | 低费群体易伤来源，负责铺开多目标易伤。 | 高 | 单体数值低，主要价值在群体触发。 |
+| 战栗 | 机制基础牌 | 扳机触发 | 运转 | 纯易伤堆层工具，给后续易伤收益牌做准备。 | 中 | 自身不造成伤害或格挡，空打节奏亏。 |
+| 欺凌 | 机制引导牌 | 扳机收益 | 输出 | 0 费读取易伤层数，把易伤堆层转成爆发伤害。 | 中 | 没有易伤时只是低额伤害。 |
+| 拆卸 | 机制引导牌 | 扳机收益 | 输出 | 让易伤状态转为额外攻击次数，兼容力量和增伤。 | 高 | 依赖目标已有易伤才能达到效率。 |
+| 上勾拳 | 机制基础牌 | 扳机触发/跨体系 | 输出/防御 | 同时给虚弱和易伤，是易伤体系的防御连接牌。 | 高 | 2 费偏重，升级前易伤层数较少。 |
+| 主宰 | 机制核心牌 | 触发+收益/跨体系 | 运转 | 把易伤层数转为力量，连接易伤和力量轴。 | 中 | 需要先堆易伤，单独打出收益有限。 |
+| 巨像 | 机制核心牌 | 扳机收益/跨体系 | 防御 | 把敌人易伤状态转成当回合减伤。 | 中 | 只对有易伤的敌人有效，且是当回合收益。 |
+| 挑衅 | 机制基础牌 | 扳机触发/跨体系 | 防御 | 格挡同时给易伤，是防御回合的体系入口。 | 高 | 易伤层数低，需要多次触发或升级补足。 |
+| 凶恶 | 突破限制牌 | 扳机收益 | 运转 | 把给予易伤变成抽牌扳机，补足易伤体系续航。 | 低 | 需要稳定易伤来源，本身不提供即时数值。 |
+| 残酷 | 机制核心牌 | 扳机收益 | 输出 | 将易伤状态放大为额外受伤倍率，是易伤输出奖励。 | 中 | 需要持续维持易伤，面对无易伤目标无收益。 |
+| 破击 | 机制中坚牌 | 扳机触发 | 输出 | 高强度易伤堆层和伤害牌，补体系上限但不改变规则。 | 高 | 远古牌稀有，更多是强触发而非构筑入口。 |
+
+| 稀有度 | 类型 | 费用 | 名称 | 体系角色 | 端口 | 效果 | 升级后 |
+| --- | --- | ---: | --- | --- | --- | --- | --- |
+| 基础 | 攻击 | 2 | 痛击 | 扳机触发 | 输出 | 造成8点伤害。&lt;br&gt;给予2层易伤。 | 造成10点伤害。&lt;br&gt;给予3层易伤。 |
+| 普通 | 攻击 | 1 | 熔融之拳 | 扳机收益 | 输出 | 造成10点伤害。&lt;br&gt;将该敌人身上的易伤层数翻倍。 | 造成14点伤害。&lt;br&gt;将该敌人身上的易伤层数翻倍。 |
+| 普通 | 攻击 | 1 | 闪电霹雳 | 扳机触发 | 输出 | 对所有敌人造成4点伤害，给予1层易伤。 | 对所有敌人造成7点伤害，给予1层易伤。 |
+| 普通 | 技能 | 1 | 战栗 | 扳机触发 | 运转 | 给予3层易伤。 | 给予4层易伤。 |
+| 罕见 | 攻击 | 0 | 欺凌 | 扳机收益 | 输出 | 造成4点伤害。&lt;br&gt;该敌人身上每有一层易伤就额外造成2点伤害。 | 造成4点伤害。&lt;br&gt;该敌人身上每有一层易伤就额外造成3点伤害。 |
+| 罕见 | 攻击 | 1 | 拆卸 | 扳机收益 | 输出 | 造成8点伤害。&lt;br&gt;如果该敌人有易伤状态，则攻击两次。 | 造成10点伤害。&lt;br&gt;如果该敌人有易伤状态，则攻击两次。 |
+| 罕见 | 攻击 | 2 | 上勾拳 | 扳机触发/跨体系 | 输出/防御 | 造成13点伤害。&lt;br&gt;给予1层虚弱。&lt;br&gt;给予1层易伤。 | 造成13点伤害。&lt;br&gt;给予2层虚弱。&lt;br&gt;给予2层易伤。 |
+| 罕见 | 技能 | 1 | 主宰 | 触发+收益/跨体系 | 运转 | 给予1层易伤。&lt;br&gt;敌人身上每有一层易伤，就获得1点力量。 | 给予2层易伤。&lt;br&gt;敌人身上每有一层易伤，就获得1点力量。 |
+| 罕见 | 技能 | 1 | 巨像 | 扳机收益/跨体系 | 防御 | 获得5点格挡。&lt;br&gt;在本回合中，有易伤状态的敌人对你造成的伤害降低50%。 | 获得8点格挡。&lt;br&gt;在本回合中，有易伤状态的敌人对你造成的伤害降低50%。 |
+| 罕见 | 技能 | 1 | 挑衅 | 扳机触发/跨体系 | 防御 | 获得7点格挡。&lt;br&gt;给予1层易伤。 | 获得8点格挡。&lt;br&gt;给予2层易伤。 |
+| 罕见 | 能力 | 1 | 凶恶 | 扳机收益 | 运转 | 每当你给予易伤时，抽1张牌。 | 每当你给予易伤时，抽2张牌。 |
+| 稀有 | 能力 | 1 | 残酷 | 扳机收益 | 输出 | 有易伤状态的敌人额外受到25%的伤害。 | 有易伤状态的敌人额外受到50%的伤害。 |
+| 远古 | 攻击 | 1 | 破击 | 扳机触发 | 输出 | 造成20点伤害。&lt;br&gt;给予5层易伤。 | 造成30点伤害。&lt;br&gt;给予7层易伤。 |
+
+</pre></details><details class="source-entry" id="research-karen"><summary>Karen卡牌设计文档：当前卡池、原版参照与后续设计准则</summary><p>恢复约定＋闪耀双主轴，以及临时力量、移牌、禁用遗物的副轴或连接层定位。</p><p><a href="file:///D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/docs/design/%E5%8D%A1%E7%89%8C%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3-Karen%E4%B8%8E%E5%8E%9F%E7%89%88%E5%AF%B9%E7%85%A7.md">打开原文</a> · 原文起始行 68</p><p class="source-path">D:\Godot\Proj\STS2_ShoujoKagekiAijoKaren\docs\design\卡牌设计文档-Karen与原版对照.md</p><p class="muted">SHA256：6b459454797754c113cd46c83252435dbd7ab3550182fb00b5653c8c42f24ddc</p><pre>### 4.1 五职业的可借鉴结构
+
+以下为研究资料中的体系归纳，不是游戏程序内的官方流派分类；体系数量也不作为 Karen 的配额。
+
+| 职业 | 资源或事件中心 | 玩家持续做的选择 | 对 Karen 的启发 |
+| --- | --- | --- | --- |
+| 铁甲战士 | 消耗、生命损失、格挡等事件与资源 | 当前战斗效率与长期资源之间取舍，把防御或代价转为收益 | 耗尽与禁用遗物应有机会成本；转换牌能连接攻防 |
+| 静默猎手 | 弃牌、小刀、中毒等 | 调整手牌、高频出牌、即时伤害与延迟伤害之间选择 | 存取动作需要不同收益对象，不能只剩泛用过牌 |
+| 故障机器人 | 球种、槽位、集中、被动与激发 | 留着产生持续价值，还是立即释放 | 一个主机制允许多种使用方向，不必额外造流派 |
+| 亡灵契约师 | 奥斯提、灵魂、灾厄等 | 培养专属对象、管理生存与兑现节奏 | 衍生牌要连同生成路径评价；准备动作和收益可以分离 |
+| 储君 | 星星、铸造与君王之剑等 | 储备第二资源，选择花费窗口与成长兑现 | 能量外的成本必须进入预算；零能量不等于免费 |
+
+Karen 更适合以“约定＋闪耀”为双主轴，临时力量、移牌和禁用遗物作为副轴或连接层。额外重播是放大效果的手段，不必因为存在独立代码目录，就被定义为必须独立成型的流派。
+
+### 4.2 代表牌的具体对照
+
+下面原版数值直接核对 stable DLL；《后空翻》《杂技》《Stardust》《腐化》另外核对 beta。均为未升级值，括号说明升级。
+
+| 原版样本 | 实际设计 | Karen 对照 | 应学到的内容 |
+| --- | --- | --- | --- |
+| ShrugItOff／耸肩无视 | 普通，1 费，8 格挡、抽 1；升级格挡＋3 | 《坠落》1 费 8 格挡、存 1；升级存牌＋1 | 相同格挡不代表相同价值：抽牌增加即时选择，存牌转移使用时机 |
+| Backflip／后空翻 | 普通，1 费，5 格挡、抽 2；升级格挡＋3 | 《重逢》同规格后再存 1 | 存牌既减少当前可用手牌，也可能触发额外收益，需分构筑评价 |
+| Acrobatics／杂技 | 罕见，1 费，抽 3、弃 1；升级抽牌＋1 | 普通《我们的约定》1 费，抽 3、存 2；升级抽牌＋1 | 弃牌与存牌不能按相同“负面条款”折价，取回成本和触发收益不同 |
+| Coolheaded／冷静头脑 | 普通，1 费，生成冰霜球、抽 1；升级抽牌＋1 | 《观察情况》《勇气打击》的即时效果＋储备 Token | 一张入口牌可同时完成当下战斗与体系准备，产物需按本职业规则兑现 |
+| BodySlam／全身撞击 | 普通，1 费，按当前格挡造成伤害；升级减为 0 费 | 《背靠背》按约定库存造成伤害 | 条件输出允许空仓时很弱；收益对象的稳定性决定强度 |
+| Offering／祭品 | 稀有，0 费，失去 6 生命、得 2 能量、抽 3、消耗；升级抽牌＋2 | 《投下燃料》《迈向那个舞台》 | 爆发需要同时看即时成本、次数和跨战斗代价；闪耀不等价于扣血 |
+| Soul／灵魂 | Token，0 费，抽 2、消耗；升级抽牌＋1 | 《光辉》《侧身》《三明治》 | Token 强度不能脱离制造费用、所在牌堆和取回路径 |
+| Stardust | 罕见，0 能量＋星星 X，随机目标 5 伤害重复 X 次；升级伤害＋2 | X 费《约定之塔桥》 | X 费必须写清消耗哪种资源，以及有没有可兑现的库存 |
+| Corruption／腐化 | Ancient，3 费，技能费用改为 0、打出后进入消耗；升级减 1 费 | 《燃烧吧燃烧吧》《世界上最空虚的人》等规则牌 | 规则突破改变整副牌的评价；获取层级与规则副作用都是预算的一部分 |
+
+以正常完成抽取、存放且没有其他触发的情况计算，打出《重逢》后的手牌净变化是 `−1＋2−1＝0`，《后空翻》是 `−1＋2＝＋1`。这只能描述当前手牌数量，不能把约定中的 1 张视为已经消失的价值。
+
+### 4.3 不应机械套用的研究结论
+
+1. “普通入口、罕见成型、稀有突破”是组织原则，不是要求每张稀有牌改写规则；强终结和独特经济收益也能成立。
+2. “每个体系都有输出、防御、运转”更适合职业整体检查。副轴可以缺一端，由连接牌和通用牌补足。
+3. “两张牌效果相反不好”不应一概采用。Karen 的囤积与清空、保留闪耀与加速耗尽，恰好创造同一资源的竞争用途。
+4. 不强制所有牌都有保底，也不默认所有触发都加“每回合一次”。先证明循环的实际成本和收益，再判断是否需要限制。
+5. 不把增加体系数量当作丰富度。不同牌若只是换一个计数器完成同样的抽牌回能，新增体系并未增加决策。
+
+## 5. Karen 的资源与路线设计
+
+### 5.1 约定：库存、周转与等待
+
+| 使用方向 | 来源与操作样本 | 兑现样本 | 有意义的矛盾 |
+| --- | --- | --- | --- |
+| 囤积库存 | 《坠落》《我们的约定》《昨日夜空》 | 《背靠背》 | 取牌可增强当回合，却减少库存伤害 |
+| 高频周转 | 《双人舞》《舞动》《命运交换之日》 | 《开拓星辰》《神圣星辰》 | 需要先用合适顺序存取，才能拿到减益或降费收益 |
+| 清空库存 | 普通取牌入口与《约定之塔》 | 《舞台正在等待着》 | 保存未来价值和立即拿到能量相冲突 |
+| 跨回合准备 | 《Banana什锦》留在约定至回合结束 | 变化后的《banana晚餐》 | 放弃当前临时力量，等待永久力量，之后仍需取回并打出 |
+| 改写牌堆规则 | 《世界上最空虚的人》《命运舞台的再生产》 | 对既有存取牌整体重新估值 | 原来的库存和取回成本发生变化，必须重新检查循环 |
+
+这些是同一套存取语言的不同使用方向，不应拆成彼此不兼容的专属关键词。
+
+当前最好的入口之一是《重逢》：它先给防御和选牌，再让玩家挑选储备对象。新玩家可先保存暂时不用的牌，熟悉后可转为触发入堆效果、为《神圣星辰》降费或准备变化牌。
+
+后续普通牌若继续包含存取，应说明它与已有牌的区别究竟是战斗职责、来源牌堆、选择精度、兑现时间还是结果去向。只有数字差异时，优先考虑重做旧牌。
+
+### 5.2 闪耀：即时效率、寿命维护与耗尽收益
+
+| 使用方向 | 当前样本 | 设计意义 |
+| --- | --- | --- |
+| 提前借用高效率 | 《闪耀打击》《武术练习》《迈向那个舞台》 | 让玩家在当前战斗获得强效果，同时改变后续牌组 |
+| 保持闪耀资源 | 《舞蹈练习》读取当前闪耀总量 | 不急于耗尽也有构筑理由 |
+| 主动兑现退出 | 《武术练习》耗尽回血、《嫉妒》耗尽奖励遗物 | 卡牌退出并不只有损失 |
+| 以耗尽历史成长 | 《我们犯下的罪过》读取不同耗尽牌种 | 鼓励更新牌组，而非只反复使用同一张牌 |
+| 压缩寿命为爆发 | 《Starlight第二幕》《星光闪耀之时》 | 提前兑现剩余潜力，改变未来资源 |
+| 再生产 | 《耀眼的阳光》与闪耀奖励相关牌 | 把退出后的缺口变成后续选牌问题 |
+
+关键规则：**闪耀耗尽不等于进入普通消耗堆。** 当前补丁在闪耀牌进入消耗堆时恢复闪耀，`CardCmd.Upgrade` 对可升级牌也会恢复。因此“闪耀 6”不能简单解释成整局只能用 6 次；必须连同消耗、升级、复制、再生产和强制耗尽路径评价。
+
+对带闪耀的新牌，至少写明三件事：正常使用的剩余次数如何变化；耗尽时发生什么；恢复或复制能否改变预期代价。数值可以大胆，但不能把实际可被轻易抹除的寿命成本当作可靠制衡。
+
+### 5.3 临时力量与保留：决定爆发窗口
+
+《Banana松饼》《一起吃饭吧》提供临时力量入口，多段攻击提供兑现对象，《约定的那天》《棒球》等改变资源保留方式。这条副轴应让玩家决定“本回合打完，还是准备下一次爆发”。
+
+它与闪耀的连接在于多段、高效率攻击；与约定的连接在于保存攻击或食物、等待变化。后续不必另造“临时力量专用计数器”。
+
+评估力量牌必须列出实际命中次数。增加 1 点力量对单段攻击和四段攻击的影响不同；额外重播再改变总命中数。不能只把力量数值和单次伤害作加法比较。
+
+### 5.4 移牌：动作本身的收益
+
+《旋转》把移动转为成长，《添麻烦了》把相关移动转为格挡，《下一个舞台》把符合条件的移动转为抽牌；《开拓星辰》则明确区分进入和离开约定。
+
+这些牌的价值来自被其他牌操作。其名义费用不能直接当作每次触发的支付成本；例如《下一个舞台》的 3 费不代表触发抽牌要花 3 能量。
+
+对新增监听牌，应逐项定义：谁的牌移动、从哪里到哪里、是否包含打出与结算移动、同一次复合移动算几次、生成和复制是否算移动。卡面保持简短，完整规则放在设计备注和关键词说明中。
+
+### 5.5 禁用遗物：有限资产的转换
+
+《摘星》禁用 2 个遗物换 2 能量，《星罪》禁用 2 个遗物抽 3 张；两者升级都把禁用数降为 1。这一设计的成本不仅是遗物数量，还包括被禁用效果在剩余战斗中的价值。
+
+这条线目前更适合作为资源转换副轴。若要增加支持，优先考虑不同的兑现职责，例如即时防御，而不是复制一张抽牌或回能牌。不要默认返还遗物或取消禁用，使原本的选择成本消失。
+
+</pre></details><details class="source-entry" id="research-karen_style"><summary>Karen卡牌风格分析与设计指导草案</summary><p>解释库存与清空、寿命维护与耗尽等主体系内部的不同用法。</p><p><a href="file:///D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/docs/design/karen-card-design-style-2026-09-28.md">打开原文</a> · 原文起始行 20</p><p class="source-path">D:\Godot\Proj\STS2_ShoujoKagekiAijoKaren\docs\design\karen-card-design-style-2026-09-28.md</p><p class="muted">SHA256：3de559e2cd1f41a54af459aa179256c5ba29bb07939d8595a8babb64f5b1702f</p><pre>## 做得好的结构
+
+### 1. 普通牌在完成战斗职责时教会玩家使用机制
+
+《坠落》1费8格挡并放入1张牌；《重逢》1费5格挡、抽2、放1；《双人舞》伤害后先取再放；《昨日夜空》从弃牌堆准备下一次取牌。这些牌让初期的进攻和防守自然形成约定存量。
+
+《勇气打击》造成群伤，把《侧身》存入约定；《观察情况》提供格挡，把《三明治》存入约定。玩家今天做的事，会准备另一种之后可用的动作。衍生牌不是直接兑现成固定附加数值：取牌方式、持有时机、牌堆数量和入堆收益都能改变它的意义。
+
+简单牌有明确存在价值。《闪耀打击》《体操练习》《迈向那个舞台》承担高效率基础功能；不需要每张普通牌都再加一个独立机制。
+
+### 2. 存放和取出本身都有价值，且目的彼此有冲突
+
+| 现有牌 | 实际规则 | 带来的选择 |
+|---|---|---|
+| 背靠背 | 按约定库存数量×4造成伤害，升级×6 | 有时应先攻击再取牌 |
+| 舞台正在等待着 | 清空约定获得能量 | 有时应尽快取空，和囤积的目标不同 |
+| 开拓星辰 | 放入时群体虚弱；离开时群体易伤 | 牌的位置决定防守阶段与进攻阶段 |
+| 神圣星辰 | 每次被放入约定，战斗内费用减1 | 暂缓打出可以换来更便宜的后续循环 |
+| Banana什锦 | 现在打出获得8临时力量；留在约定至回合结束则变成8永久力量的banana晚餐 | 消耗当前机会换未来收益；变化后仍需取出并支付打牌费用 |
+| 命运交换之日 | 交换手牌和约定；升级去掉消耗 | 改变整个手牌内容，升级让一次性调度变为可重复操作 |
+
+这类冲突比“牌堆有3张所以多几点伤害”更有内容：玩家需要决定何时放、放哪张、何时取，而非单纯追求把条件图标点亮。
+
+### 3. 一张牌可以靠被处理而发挥作用
+
+《开拓星辰》《添麻烦了》《下一个舞台》都没有通常意义上的打出收益。玩家要用其他牌操作它们。《旋转》在移动中成长，《招架》在手牌流动中增值。
+
+它们把存取牌从单纯的整理手牌工具变成战斗动作。同一张《重逢》在不同构筑里可以是基础防御、启动移牌触发、给后续攻击降费、保存变化牌的工具。这是复用既有动作产生深度的好例子。
+
+不能因此推导“所有新牌都要被动触发”：主动操作牌和被操作牌都需要，且新玩家需要容易理解的入口。
+
+### 4. 闪耀把单场战斗连接到整局构筑
+
+《武术练习》平时防御、耗尽回血；《嫉妒》平时攻击、耗尽得遗物；《永不遗忘的闪耀》耗尽给多次闪耀牌奖励；《耀眼的阳光》提供回归牌组的选择。卡牌退出本身可以成为值得争取的结果。
+
+更好的部分在于，不同牌对同一资源持相反态度：《舞蹈练习》利用仍然拥有的闪耀总量，《我们犯下的罪过》利用已经耗尽的不同牌种，《Starlight第二幕》让闪耀牌额外打出后强制耗尽，《星光闪耀之时》把唯一闪耀牌的剩余次数集中兑现。
+
+这让“省着用”和“尽快用完”都可能成立。永久删牌也不只有损失：它能改变后续抽牌质量，同时留下历史收益。
+
+需要注意实际规则：闪耀是跨战斗寿命，但当前代码中进入消耗堆会恢复当前牌闪耀；CardCmd.Upgrade路径也会恢复。因此不能把每张“消耗＋闪耀”的牌粗略按固定若干场后退出计算，更不能将消耗与闪耀耗尽当成同一件事。新增牌若改变这些路径，必须先弄清它是在保护寿命还是加速耗尽。
+
+### 5. 强度经常受获取路径、位置和时间限制
+
+《三明治》《侧身》《光辉》效果很简洁，但通常先生成在约定里；《光辉》不能只看成免费的2能量，需要连同《两人的梦想》的投入和后续取牌一起评估。
+
+《RevueDuet》《行动》《拉伸》打出后进入约定，回到手中所需的路径是它们的使用成本与组合接口。《摘星》《星罪》用本场战斗的遗物能力换即时资源；升级主要减少禁用成本。《骄傲》用开场能量、易伤和虚无造成压力，换整局成长。
+
+这些限制容易在实际操作中感知。它们能支撑较大胆的收益，同时让玩家有机会改变成本。不过现有系统并不自动保证平衡：循环后如果这些成本全部消失，仍须测试。
+
+### 6. 稀有牌中有较多能改变整副牌用途的设计
+
+《世界上最空虚的人》让约定替代抽牌堆；《命运舞台的再生产》提供无限续演；《燃烧吧燃烧吧》让约定取牌升级并消耗；《门票》提供每回合取牌入口；《最后的台词》把整理主要循环牌堆变成终结条件。
+
+这些牌得到后，会改变对很多旧牌的评价。相比之下，把已有格挡加大并再附一次存牌，可能只改变一次出牌效率。
+
+这不是“稀有都必须改规则”的硬要求。《激情》《投下燃料》《Banana蛋糕》等也以直接且明确的收益成立。关键是稀有牌是否提供值得记住的机会或取舍。
+
+### 7. 升级经常改变使用权限或操作范围
+
+《唤醒》升级扩大可选牌堆；《下一个舞台》升级扩大触发范围；《命运交换之日》《约定之塔》升级去掉消耗；《水族馆》《过去与未来》《门票》升级获得固有；《觉醒形态》升级去掉虚无；《摘星》《星罪》升级降低禁用数量。
+
+这些升级使玩家重新决定何时拿、何时打、如何留牌。《勇气打击》《武术练习》等采用普通加数值升级也合理，没有必要把所有升级都做成新规则。
+
+### 8. 主题可以通过操作过程体现
+
+“约定”对应先存放、未来兑现；“重逢”对应重新拿回；“闪耀”对应高强度使用、耗尽、再生产；食物牌围绕临时力量、保存和等待变化；“最后的台词”对应清理主要循环牌堆后的一击。这是依据牌名与机制的解释，不声称对应原作的某个具体镜头。
+
+多人现有样本仅两张，不能据此定绝对规范；但这两张都分享Karen自己的资源、寿命或奖励，身份比普通的“队友伤害增加”更清楚。
+
+</pre></details><details class="source-entry" id="research-old_structure"><summary>此前：原版与Karen流派结构对照</summary><p>代表卡牌关系研究，涉及惠惠旧积蓄的建议已过时；不是六职业完整体系清单。</p><p><a href="原版与Karen流派结构对照.html">打开原文</a> · 原文起始行 1</p><p class="source-path">D:\Github\STS2_Konosuba_Megumin\design\原版与Karen流派结构对照.html</p><p class="muted">SHA256：39eb93e094ffcc270b3211b6a1266eeb186aec80710cdd717d24debc540b3a4a</p><pre>代表卡牌关系研究，涉及惠惠旧积蓄的建议已过时；不是六职业完整体系清单。</pre></details><details class="source-entry" id="research-damage_only"><summary>此前：原版五职业与Karen伤害体系分析</summary><p>用户当时要求只看伤害端；其中力量、闪电、黑暗等分组不能替代全职业体系列表。</p><p><a href="原版五职业与Karen伤害体系分析.html">打开原文</a> · 原文起始行 1</p><p class="source-path">D:\Github\STS2_Konosuba_Megumin\design\原版五职业与Karen伤害体系分析.html</p><p class="muted">SHA256：899e04ee317d2bfe0e93a5863da194a9d144791fa909d07fa3bbd8874dec14cf</p><pre>用户当时要求只看伤害端；其中力量、闪电、黑暗等分组不能替代全职业体系列表。</pre></details><p><a href="docs/体系复盘既有研究依据.json">既有研究摘录与路径快照</a></p></div><h3>此前已核对的代表卡牌源码</h3><p>原版采用本地v0.107.1程序集提取源码（59260271，2026-06-18）；Karen采用本地工作区源码，HEAD e5a9115，以逐文件内容和摘要为准。不是最新版本或实战强度排名。</p><p>从既有研究定位代表关系，再逐文件核对关键事件、资源与出口；官方介绍只补充角色定位。未运行游戏，不建立伤害模型。</p><p>本次保留42个本地源码文件的内容、路径和SHA256，下面摘录关键逻辑。与既有证据重叠的文件摘要均一致；新补来源独立保存。</p><ul><li><a href="https://www.megacrit.com/news/2026-02-19-release-date-trailer/">Mega Crit：五职业阵容</a>：确认五职业为铁甲战士、静默猎手、故障机器人、亡灵契约师、储君。</li><li><a href="https://www.megacrit.com/news/2025-10-16-neowsletter-issue-15/">Mega Crit：亡灵契约师介绍</a>：奥斯提、灾厄、灵魂与改变卡牌的不同职责；具体机制按本地源码。</li><li><a href="https://www.megacrit.com/news/2025-12-11-neowsletter-issue-17/">Mega Crit：储君介绍</a>：星、铸造与生成无色牌之间的联系；具体机制按本地源码。</li><li><a href="https://github.com/backinfile/STS2_ShoujoKagekiAijoKaren">Karen作者仓库</a>：作者项目入口；本次分析针对本地工作区，未将网页HEAD当作本地版本。</li></ul><details><summary>避免把旧版本或简写带入分析</summary><ul><li>完整体系分析与伤害专题采用不同口径；伤害主轴不能替代大／小体系清单。既有研究分类需注明来源和快照，不当作游戏官方分类。</li><li>不把消耗、弃牌、球、约定这些资源或运转层各自都当作唯一伤害流派；也不把每张特殊终结牌都叫成熟流派。</li><li>原版奇巧与一代不可打出的弃牌触发不是同一写法；本地战术大师、本能反应是3费技能带奇巧。</li><li>腐化用于说明“改变已有技能的代价与去向”，不据它的存在推断普通掉落频率或职业强度。</li><li>Karen下一个舞台未升级时由自身进出约定触发，升级后改为自身牌堆移动；不是任意牌移动都会让所有同名牌抽牌。</li><li>Karen最后的台词普通条件实际检查手牌、弃牌和抽牌堆，空虚模式另有分支；不将卡面简写解释为包括消耗堆的所有区域。</li></ul></details><details class="source-entry" id="source-Inflame"><summary>燃烧 <span class="muted">Inflame</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Inflame.cs</p><p class="muted">SHA256：adacf6eebe8337b67563e62dfee2bb3370fb65ff99bb5072ae2360cf966ad810</p><p>获得{StrengthPower:diff()}点[gold]力量[/gold]。</p><pre><code>  17 {
+  18 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new PowerVar&lt;StrengthPower&gt;(2m));
+  19 
+  20 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;IHoverTip&gt;(HoverTipFactory.FromPower&lt;StrengthPower&gt;());
+  21 
+  22 	protected override IEnumerable&lt;string&gt; ExtraRunAssetPaths =&gt; NGroundFireVfx.AssetPaths;
+  23 
+  24 	public Inflame()</code></pre></details><details class="source-entry" id="source-Whirlwind"><summary>旋风斩 <span class="muted">Whirlwind</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Whirlwind.cs</p><p class="muted">SHA256：ffdb3485ce9ae1ed83f8cb076faf6aa4020813131e05e26ee5731220914aafe2</p><p>对所有敌人造成{Damage:diff()}点伤害X次。</p><pre><code>  23 
+  24 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new DamageVar(5m, ValueProp.Move));
+  25 
+  26 	public Whirlwind()
+  27 		: base(0, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
+  28 	{
+  29 	}
+  30 </code></pre></details><details class="source-entry" id="source-BurningPact"><summary>燃烧契约 <span class="muted">BurningPact</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BurningPact.cs</p><p class="muted">SHA256：b802324268261d68dec777a4198b9532b86a1e9633b7e2de62c4d88f9c096ef5</p><p>[gold]消耗[/gold]1张牌。<br>抽{Cards:diff()}张牌。</p><pre><code>  14 {
+  15 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new CardsVar(2));
+  16 
+  17 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;IHoverTip&gt;(HoverTipFactory.FromKeyword(CardKeyword.Exhaust));
+  18 
+  19 	public BurningPact()
+  20 		: base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+  21 	{
+  31 		await CreatureCmd.TriggerAnim(base.Owner.Creature, &quot;Cast&quot;, base.Owner.Character.CastAnimDelay);
+  32 		await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.BaseValue, base.Owner);
+  33 	}
+  34 
+  35 	protected override void OnUpgrade()
+  36 	{
+  37 		base.DynamicVars.Cards.UpgradeValueBy(1m);
+  38 	}</code></pre></details><details class="source-entry" id="source-DarkEmbracePower"><summary>黑暗之拥：消耗抽牌 <span class="muted">DarkEmbracePower</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/DarkEmbracePower.cs</p><p class="muted">SHA256：78eeedaa2a4620ca5e0d2c21a9f6c311e63d664e62c0ede844a90c813149a688</p><pre><code>  36 
+  37 	public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
+  38 	{
+  39 		if (card.Owner.Creature == base.Owner)
+  40 		{
+  41 			if (causedByEthereal)
+  42 			{
+  43 				GetInternalData&lt;Data&gt;().etherealCount++;
+  46 			{
+  47 				await CardPileCmd.Draw(choiceContext, base.Amount, base.Owner.Player);
+  48 			}
+  49 		}
+  50 	}
+  51 
+  52 	public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable&lt;Creature&gt; participants)
+  53 	{
+  56 			Data data = GetInternalData&lt;Data&gt;();
+  57 			await CardPileCmd.Draw(choiceContext, base.Amount * data.etherealCount, base.Owner.Player);
+  58 			data.etherealCount = 0;
+  59 		}
+  60 	}
+  61 }</code></pre></details><details class="source-entry" id="source-FeelNoPainPower"><summary>无惧疼痛：消耗格挡 <span class="muted">FeelNoPainPower</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/FeelNoPainPower.cs</p><p class="muted">SHA256：8cfece87071e6a71e832918c48f77da8fc06ff7490a05b4182cc2fb89e77c049</p><pre><code>  18 
+  19 	public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool _)
+  20 	{
+  21 		if (card.Owner.Creature == base.Owner)
+  22 		{
+  23 			await CreatureCmd.GainBlock(base.Owner, base.Amount, ValueProp.Unpowered, null);
+  24 		}
+  25 	}
+  26 }</code></pre></details><details class="source-entry" id="source-BarricadePower"><summary>壁垒：保留格挡 <span class="muted">BarricadePower</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/BarricadePower.cs</p><p class="muted">SHA256：6dbe0c789b106b530314e05e9bf78fed2033bfcbfcd4dc01a041a105d6647138</p><pre><code>  17 
+  18 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new StringVar(&quot;ApplierName&quot;));
+  19 
+  20 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;IHoverTip&gt;(HoverTipFactory.Static(StaticHoverTip.Block));
+  21 
+  22 	public override Task AfterApplied(Creature? applier, CardModel? cardSource)
+  23 	{
+  24 		Creature applier2 = base.Applier;
+  31 
+  32 	public override bool ShouldClearBlock(Creature creature)
+  33 	{
+  34 		if (base.Owner != creature)
+  35 		{
+  36 			return true;
+  37 		}
+  38 		return false;</code></pre></details><details class="source-entry" id="source-BodySlam"><summary>全身撞击 <span class="muted">BodySlam</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BodySlam.cs</p><p class="muted">SHA256：b554a0550946c792f2564eb1bb1a2f028679ab3a39c6d5166ffc5f9d3089b4d3</p><p>造成你当前[gold]格挡[/gold]值的伤害。{InCombat:<br>（造成{CalculatedDamage:diff()}点伤害）|}</p><pre><code>  15 {
+  16 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlyArray&lt;DynamicVar&gt;(new DynamicVar[3]
+  17 	{
+  18 		new CalculationBaseVar(0m),
+  19 		new ExtraDamageVar(1m),
+  20 		new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) =&gt; card.Owner.Creature.Block)
+  21 	});
+  22 
+  23 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;IHoverTip&gt;(HoverTipFactory.Static(StaticHoverTip.Block));
+  24 
+  25 	public BodySlam()
+  26 		: base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)</code></pre></details><details class="source-entry" id="source-CorruptionPower"><summary>腐化：技能减费与消耗 <span class="muted">CorruptionPower</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/CorruptionPower.cs</p><p class="muted">SHA256：c727aff77fb6162d21824db13fd438335db40afb5e1c6512383ef27178f04450</p><pre><code>  15 
+  16 	public override bool TryModifyEnergyCostInCombatLate(CardModel card, decimal originalCost, out decimal modifiedCost)
+  17 	{
+  18 		if (card.Owner.Creature != base.Owner || card.Type != CardType.Skill)
+  19 		{
+  20 			modifiedCost = originalCost;
+  21 			return false;
+  22 		}
+  26 
+  27 	public override (PileType, CardPilePosition) ModifyCardPlayResultPileTypeAndPosition(CardModel card, bool isAutoPlay, ResourceInfo resources, PileType pileType, CardPilePosition position)
+  28 	{
+  29 		if (card.Owner.Creature != base.Owner)
+  30 		{
+  31 			return (pileType, position);
+  32 		}
+  33 		if (card.Type != CardType.Skill)</code></pre></details><details class="source-entry" id="source-Acrobatics"><summary>杂技 <span class="muted">Acrobatics</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Acrobatics.cs</p><p class="muted">SHA256：3ee3ccd097acd1f4593ab643653b0f283d114e11b7a3bb62c77dc84d73d17c2a</p><p>抽{Cards:diff()}张牌。<br>丢弃1张牌。</p><pre><code>  13 {
+  14 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new CardsVar(3));
+  15 
+  16 	public Acrobatics()
+  17 		: base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+  18 	{
+  19 	}
+  20 
+  22 	{
+  23 		await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.BaseValue, base.Owner);
+  24 		CardModel cardModel = (await CardSelectCmd.FromHandForDiscard(choiceContext, base.Owner, new CardSelectorPrefs(CardSelectorPrefs.DiscardSelectionPrompt, 1), null, this)).FirstOrDefault();
+  25 		if (cardModel != null)
+  26 		{
+  27 			await CardCmd.Discard(choiceContext, cardModel);
+  28 		}
+  29 	}</code></pre></details><details class="source-entry" id="source-Tactician"><summary>战术大师 <span class="muted">Tactician</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Tactician.cs</p><p class="muted">SHA256：c08e162652f37088de6be037ac0120c18bb3ac374b7094bfc5097328d069275d</p><p>获得{Energy:energyIcons()}。</p><pre><code>  12 {
+  13 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new EnergyVar(1));
+  14 
+  15 	public override IEnumerable&lt;CardKeyword&gt; CanonicalKeywords =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;CardKeyword&gt;(CardKeyword.Sly);
+  16 
+  17 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;IHoverTip&gt;(base.EnergyHoverTip);
+  18 
+  19 	public Tactician()
+  25 	{
+  26 		await PlayerCmd.GainEnergy(base.DynamicVars.Energy.IntValue, base.Owner);
+  27 	}
+  28 
+  29 	protected override void OnUpgrade()
+  30 	{
+  31 		base.DynamicVars.Energy.UpgradeValueBy(1m);
+  32 	}</code></pre></details><details class="source-entry" id="source-Reflex"><summary>本能反应 <span class="muted">Reflex</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Reflex.cs</p><p class="muted">SHA256：9da35e8290ad693e532dbc718e9f03c937d8a21703bdaa96d893b75441411690</p><p>抽{Cards:diff()}张牌。</p><pre><code>  11 {
+  12 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new CardsVar(2));
+  13 
+  14 	public override IEnumerable&lt;CardKeyword&gt; CanonicalKeywords =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;CardKeyword&gt;(CardKeyword.Sly);
+  15 
+  16 	public Reflex()
+  17 		: base(3, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+  18 	{
+  23 		await CreatureCmd.TriggerAnim(base.Owner.Creature, &quot;Cast&quot;, base.Owner.Character.AttackAnimDelay);
+  24 		await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.BaseValue, base.Owner);
+  25 	}
+  26 
+  27 	protected override void OnUpgrade()
+  28 	{
+  29 		base.DynamicVars.Cards.UpgradeValueBy(1m);
+  30 	}</code></pre></details><details class="source-entry" id="source-BladeDance"><summary>刀刃之舞 <span class="muted">BladeDance</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BladeDance.cs</p><p class="muted">SHA256：54bcb906b97d99882db1a72781208faf47bdc8c4bab3ba1e0b4898f590323931</p><p>添加{Cards:diff()}张[gold]小刀[/gold]到你的[gold]手牌[/gold]。</p><pre><code>  14 
+  15 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new CardsVar(3));
+  16 
+  17 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;IHoverTip&gt;(HoverTipFactory.FromCard&lt;Shiv&gt;());
+  18 
+  19 	public BladeDance()
+  20 		: base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
+  21 	{</code></pre></details><details class="source-entry" id="source-Accuracy"><summary>精准 <span class="muted">Accuracy</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Accuracy.cs</p><p class="muted">SHA256：1b3831369faab98080eb841161ea57eb53cc0e24cfd8451d0290e516819362e3</p><p>[gold]小刀[/gold]额外造成{AccuracyPower:diff()}点伤害。</p><pre><code>  13 {
+  14 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new PowerVar&lt;AccuracyPower&gt;(4m));
+  15 
+  16 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;IHoverTip&gt;(HoverTipFactory.FromCard&lt;Shiv&gt;());
+  17 
+  18 	public Accuracy()
+  19 		: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+  20 	{</code></pre></details><details class="source-entry" id="source-PoisonPower"><summary>中毒结算 <span class="muted">PoisonPower</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/PoisonPower.cs</p><p class="muted">SHA256：7cf6dfc3987122ccc4a8a0d175871435a30bf0a756b171eb30019a693441b609</p><pre><code>  48 			decimal damage = base.Amount - i;
+  49 			damage = Hook.ModifyDamage(base.Owner.CombatState.RunState, base.Owner.CombatState, base.Owner, null, damage, ValueProp.Unblockable | ValueProp.Unpowered, null, ModifyDamageHookType.All, CardPreviewMode.None, out IEnumerable&lt;AbstractModel&gt; _);
+  50 			num += damage;
+  51 		}
+  52 		return (int)num;
+  53 	}
+  54 
+  55 	public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList&lt;Creature&gt; participants, ICombatState combatState)
+  63 		{
+  64 			await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), base.Owner, base.Amount, ValueProp.Unblockable | ValueProp.Unpowered, null, null);
+  65 			if (base.Owner.IsAlive)
+  66 			{
+  67 				await PowerCmd.Decrement(this);
+  68 			}
+  69 			else
+  70 			{</code></pre></details><details class="source-entry" id="source-EnvenomPower"><summary>涂毒：攻击连接中毒 <span class="muted">EnvenomPower</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/EnvenomPower.cs</p><p class="muted">SHA256：e972c436d96962037b6308d9f0d2a74e4d2bb19052a53c166dd7845b6f0c3087</p><pre><code>   1 using System.Collections.Generic;
+   2 using System.Threading.Tasks;
+   3 using MegaCrit.Sts2.Core.Commands;
+   4 using MegaCrit.Sts2.Core.Entities.Creatures;
+   5 using MegaCrit.Sts2.Core.Entities.Powers;
+   6 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+   7 using MegaCrit.Sts2.Core.HoverTips;
+   8 using MegaCrit.Sts2.Core.ValueProps;
+   9 
+  10 namespace MegaCrit.Sts2.Core.Models.Powers;
+  11 
+  12 public sealed class EnvenomPower : PowerModel
+  13 {
+  14 	public override PowerType Type =&gt; PowerType.Buff;
+  15 
+  16 	public override PowerStackType StackType =&gt; PowerStackType.Counter;
+  17 
+  18 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;IHoverTip&gt;(HoverTipFactory.FromPower&lt;PoisonPower&gt;());
+  19 
+  20 	public override async Task AfterDamageGiven(PlayerChoiceContext choiceContext, Creature? dealer, DamageResult result, ValueProp props, Creature target, CardModel? cardSource)
+  21 	{
+  22 		if (dealer == base.Owner &amp;&amp; props.IsPoweredAttack() &amp;&amp; result.UnblockedDamage &gt; 0)
+  23 		{
+  24 			await PowerCmd.Apply&lt;PoisonPower&gt;(choiceContext, target, base.Amount, base.Owner, null);
+  25 		}
+  26 	}
+  27 }</code></pre></details><details class="source-entry" id="source-Glacier"><summary>冰川 <span class="muted">Glacier</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Glacier.cs</p><p class="muted">SHA256：bb7ce87df0c7fc7171921411334126a527155e7ad30ceef6857fc6c5647f8e8e</p><p>获得{Block:diff()}点[gold]格挡[/gold]。<br>[gold]生成[/gold]2个[gold]冰霜[/gold]充能球。</p><pre><code>  16 
+  17 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new BlockVar(6m, ValueProp.Move));
+  18 
+  19 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlyArray&lt;IHoverTip&gt;(new IHoverTip[2]
+  20 	{
+  21 		HoverTipFactory.Static(StaticHoverTip.Channeling),
+  22 		HoverTipFactory.FromOrb&lt;FrostOrb&gt;()
+  23 	});
+  32 		await CreatureCmd.TriggerAnim(base.Owner.Creature, &quot;Cast&quot;, base.Owner.Character.CastAnimDelay);
+  33 		await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
+  34 		for (int i = 0; i &lt; 2; i++)
+  35 		{
+  36 			await OrbCmd.Channel&lt;FrostOrb&gt;(choiceContext, base.Owner);
+  37 		}
+  38 	}
+  39 </code></pre></details><details class="source-entry" id="source-Coolheaded"><summary>冷静头脑 <span class="muted">Coolheaded</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Coolheaded.cs</p><p class="muted">SHA256：b64886265eacf6f6124f72189bac7ac3c8fa97fa2af7c9b8b8f327914fde2eac</p><p>[gold]生成[/gold]1个[gold]冰霜[/gold]充能球。<br>抽{Cards:diff()}张牌。</p><pre><code>  13 {
+  14 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new CardsVar(1));
+  15 
+  16 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlyArray&lt;IHoverTip&gt;(new IHoverTip[2]
+  17 	{
+  18 		HoverTipFactory.Static(StaticHoverTip.Channeling),
+  19 		HoverTipFactory.FromOrb&lt;FrostOrb&gt;()
+  20 	});
+  30 		await OrbCmd.Channel&lt;FrostOrb&gt;(choiceContext, base.Owner);
+  31 		await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.BaseValue, base.Owner);
+  32 	}
+  33 
+  34 	protected override void OnUpgrade()
+  35 	{
+  36 		base.DynamicVars.Cards.UpgradeValueBy(1m);
+  37 	}</code></pre></details><details class="source-entry" id="source-LightningOrb"><summary>闪电球 <span class="muted">LightningOrb</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Orbs/LightningOrb.cs</p><p class="muted">SHA256：35cb6dc5d83f297703f625d8898666a3124b04c7fcf9454753ec6c12f6a01c8c</p><pre><code>  34 		Trigger();
+  35 		await ApplyLightningDamage(PassiveVal, target, choiceContext);
+  36 	}
+  37 
+  38 	public override async Task&lt;IEnumerable&lt;Creature&gt;&gt; Evoke(PlayerChoiceContext playerChoiceContext)
+  39 	{
+  40 		return await ApplyLightningDamage(EvokeVal, null, playerChoiceContext);
+  41 	}
+  42 
+  43 	private async Task&lt;IEnumerable&lt;Creature&gt;&gt; ApplyLightningDamage(decimal value, Creature? target, PlayerChoiceContext choiceContext)
+  44 	{
+  45 		List&lt;Creature&gt; list = (from e in base.CombatState.GetOpponentsOf(base.Owner.Creature)
+  46 			where e.IsHittable
+  47 			select e).ToList();
+  48 		if (list.Count == 0)
+  49 		{
+  57 		PlayEvokeSfx();
+  58 		await CreatureCmd.Damage(choiceContext, targets, value, ValueProp.Unpowered, base.Owner.Creature);
+  59 		return targets;
+  60 	}
+  61 }</code></pre></details><details class="source-entry" id="source-DarkOrb"><summary>黑暗球 <span class="muted">DarkOrb</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Orbs/DarkOrb.cs</p><p class="muted">SHA256：4ce6fe29c9e50283afcfadcc79a1338dd42fedbd72d03ac22206604abaad1333</p><pre><code>  52 		Creature weakestEnemy = hittableEnemies.MinBy((Creature c) =&gt; c.CurrentHp);
+  53 		await CreatureCmd.Damage(playerChoiceContext, weakestEnemy, EvokeVal, ValueProp.Unpowered, base.Owner.Creature);
+  54 		return new global::_003C_003Ez__ReadOnlySingleElementList&lt;Creature&gt;(weakestEnemy);
+  55 	}
+  56 }</code></pre></details><details class="source-entry" id="source-Claw"><summary>爪击 <span class="muted">Claw</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Claw.cs</p><p class="muted">SHA256：6144cae49dcf511b873a57dd3841e1d1ec54e782a2f2c930f42b0799618e0ebe</p><p>造成{Damage:diff()}点伤害。<br>本场战斗中所有爪击卡牌的伤害增加{Increase:diff()}点。</p><pre><code>  33 
+  34 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlyArray&lt;DynamicVar&gt;(new DynamicVar[2]
+  35 	{
+  36 		new DamageVar(3m, ValueProp.Move),
+  37 		new DynamicVar(&quot;Increase&quot;, 2m)
+  38 	});
+  39 
+  40 	public Claw()</code></pre></details><details class="source-entry" id="source-AllForOne"><summary>万物一心 <span class="muted">AllForOne</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/AllForOne.cs</p><p class="muted">SHA256：e5b572f3c3853ef94ca0371761424fc521184722604c7c4b897fb01eb751ddbd</p><p>造成{Damage:diff()}点伤害。<br>将你[gold]弃牌堆[/gold]中的所有0{energyPrefix:energyIcons(1)}牌放入你的[gold]手牌[/gold]。</p><pre><code>  14 {
+  15 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new DamageVar(10m, ValueProp.Move));
+  16 
+  17 	public AllForOne()
+  18 		: base(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
+  19 	{
+  20 	}
+  21 </code></pre></details><details class="source-entry" id="source-Soul"><summary>灵魂 <span class="muted">Soul</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Soul.cs</p><p class="muted">SHA256：154b685466724c6dca52e9a1c42f8f0ad9e756a2a6ee8d8a89c62a136596d547</p><p>抽{Cards:diff()}张牌。</p><pre><code>  15 
+  16 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new CardsVar(2));
+  17 
+  18 	public Soul()
+  19 		: base(0, CardType.Skill, CardRarity.Token, TargetType.Self)
+  20 	{
+  21 	}
+  22 
+  55 	{
+  56 		await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.BaseValue, base.Owner);
+  57 	}
+  58 
+  59 	protected override void OnUpgrade()
+  60 	{
+  61 		base.DynamicVars.Cards.UpgradeValueBy(1m);
+  62 	}</code></pre></details><details class="source-entry" id="source-HauntPower"><summary>纠缠：灵魂连接伤害 <span class="muted">HauntPower</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/HauntPower.cs</p><p class="muted">SHA256：7b1ce29d7e32465160ad5f3b5c21360213feeb7bb945a2eaba71b5e5b99c03ba</p><pre><code>  18 
+  19 	public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+  20 	{
+  21 		if (cardPlay.Card is Soul &amp;&amp; cardPlay.Card.Owner.Creature == base.Owner)
+  22 		{
+  23 			IReadOnlyList&lt;Creature&gt; hittableEnemies = base.CombatState.HittableEnemies;
+  24 			if (hittableEnemies.Count != 0)
+  25 			{
+  26 				Creature item = base.Owner.Player.RunState.Rng.CombatTargets.NextItem(hittableEnemies);
+  27 				await CreatureCmd.Damage(choiceContext, new global::_003C_003Ez__ReadOnlySingleElementList&lt;Creature&gt;(item), base.Amount, ValueProp.Unblockable | ValueProp.Unpowered, null, null);
+  28 			}
+  29 		}
+  30 	}
+  31 }</code></pre></details><details class="source-entry" id="source-DevourLifePower"><summary>吞噬生命：灵魂连接召唤 <span class="muted">DevourLifePower</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/DevourLifePower.cs</p><p class="muted">SHA256：565854c2e0424463bd89a8baa3dfc73973b9c37a0ecf22ab086d8490eec99465</p><pre><code>  23 
+  24 	public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+  25 	{
+  26 		if (cardPlay.Card is Soul &amp;&amp; cardPlay.Card.Owner.Creature == base.Owner)
+  27 		{
+  28 			await OstyCmd.Summon(choiceContext, cardPlay.Card.Owner, base.Amount, this);
+  29 		}
+  30 	}
+  31 }</code></pre></details><details class="source-entry" id="source-Unleash"><summary>出击 <span class="muted">Unleash</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Unleash.cs</p><p class="muted">SHA256：601495e26590e4a46b1c4b61e12929b1f4ca3a096c52ce36ba4a9b3d79dda11c</p><p>[gold]奥斯提[/gold]造成{CalculatedDamage:diff()}点伤害。<br>这张牌额外造成等量于[gold]奥斯提[/gold]当前生命值的伤害。</p><pre><code>  19 
+  20 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlyArray&lt;DynamicVar&gt;(new DynamicVar[3]
+  21 	{
+  22 		new CalculationBaseVar(6m),
+  23 		new ExtraDamageVar(1m).FromOsty(),
+  24 		new CalculatedDamageVar(ValueProp.Move).FromOsty().WithMultiplier(delegate(CardModel card, Creature? _)
+  25 		{
+  26 			Creature osty = card.Owner.Osty;
+  27 			return (osty != null &amp;&amp; osty.IsAlive) ? osty.CurrentHp : 0;
+  28 		})
+  29 	});
+  30 </code></pre></details><details class="source-entry" id="source-DoomPower"><summary>灾厄判定 <span class="muted">DoomPower</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/DoomPower.cs</p><p class="muted">SHA256：8682f3c38f8d3945684eaf5565ff952d876cbf47072a5cff59f8572e8ec919c4</p><pre><code>  56 	{
+  57 		return creatures.Where((Creature c) =&gt; c.GetPower&lt;DoomPower&gt;()?.IsOwnerDoomed() ?? false).ToList();
+  58 	}
+  59 
+  60 	/// &lt;summary&gt;
+  61 	/// Will the owner of this power die to Doom at the end of their turn?
+  62 	/// &lt;/summary&gt;
+  63 	public bool IsOwnerDoomed()
+  64 	{
+  65 		return base.Owner.CurrentHp &lt;= base.Amount;
+  66 	}
+  67 
+  68 	public override async Task BeforeSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable&lt;Creature&gt; participants)
+  69 	{
+  70 		if (!CombatManager.Instance.IsOverOrEnding &amp;&amp; participants.Contains(base.Owner) &amp;&amp; !base.Owner.IsDead &amp;&amp; IsOwnerDoomed())
+  71 		{
+  72 			IReadOnlyList&lt;Creature&gt; doomedCreatures = GetDoomedCreatures(base.Owner.CombatState.GetCreaturesOnSide(side));
+  73 			if (doomedCreatures.First() == base.Owner)
+  74 			{
+  75 				await DoomKill(doomedCreatures);
+  76 			}</code></pre></details><details class="source-entry" id="source-EndOfDays"><summary>末日降临 <span class="muted">EndOfDays</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/EndOfDays.cs</p><p class="muted">SHA256：1708eb91fef4a81e881fb0c0e87e69b62443fec0277ec38fe34642221ae4e5a6</p><p>给予所有敌人{DoomPower:diff()}层[gold]灾厄[/gold]。<br>杀死所有[gold]灾厄[/gold]大于等于当前生命值的敌人。</p><pre><code>  21 
+  22 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new PowerVar&lt;DoomPower&gt;(29m));
+  23 
+  24 	protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;IHoverTip&gt;(HoverTipFactory.FromPower&lt;DoomPower&gt;());
+  25 
+  26 	public EndOfDays()
+  27 		: base(3, CardType.Skill, CardRarity.Rare, TargetType.AllEnemies)
+  28 	{</code></pre></details><details class="source-entry" id="source-GatherLight"><summary>收集光辉 <span class="muted">GatherLight</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/GatherLight.cs</p><p class="muted">SHA256：9156fbc9c36875b7058f0523a2c18db47c6dbb381ff7a5f0bb0877faca1fd1b9</p><p>获得{Block:diff()}点[gold]格挡[/gold]。<br>获得{Stars:starIcons()}。</p><pre><code>  14 
+  15 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlyArray&lt;DynamicVar&gt;(new DynamicVar[2]
+  16 	{
+  17 		new BlockVar(8m, ValueProp.Move),
+  18 		new StarsVar(1)
+  19 	});
+  20 
+  21 	public GatherLight()
+  27 	{
+  28 		await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
+  29 		await PlayerCmd.GainStars(base.DynamicVars.Stars.BaseValue, base.Owner);
+  30 	}
+  31 
+  32 	protected override void OnUpgrade()
+  33 	{
+  34 		base.DynamicVars.Block.UpgradeValueBy(3m);</code></pre></details><details class="source-entry" id="source-BigBang"><summary>大爆炸 <span class="muted">BigBang</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BigBang.cs</p><p class="muted">SHA256：2408dc337338333514c2e0fa1cd77ab0109f2c6d11925b2669c3bbccf541f0e8</p><p>抽{Cards:diff()}张牌。<br>获得{Energy:energyIcons()}。<br>获得{Stars:starIcons()}。<br>[gold]铸造[/gold]{Forge:diff()}。</p><pre><code>  14 
+  15 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlyArray&lt;DynamicVar&gt;(new DynamicVar[4]
+  16 	{
+  17 		new CardsVar(1),
+  18 		new EnergyVar(1),
+  19 		new StarsVar(1),
+  20 		new ForgeVar(5)
+  21 	});
+  41 		await CreatureCmd.TriggerAnim(base.Owner.Creature, &quot;Cast&quot;, base.Owner.Character.CastAnimDelay);
+  42 		await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.BaseValue, base.Owner);
+  43 		await PlayerCmd.GainStars(base.DynamicVars.Stars.BaseValue, base.Owner);
+  44 		await PlayerCmd.GainEnergy(base.DynamicVars.Energy.IntValue, base.Owner);
+  45 		await ForgeCmd.Forge(base.DynamicVars.Forge.IntValue, base.Owner, this);
+  46 	}
+  47 
+  48 	protected override void OnUpgrade()
+  49 	{
+  50 		AddKeyword(CardKeyword.Innate);</code></pre></details><details class="source-entry" id="source-Furnace"><summary>熔炉 <span class="muted">Furnace</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Furnace.cs</p><p class="muted">SHA256：9fbcf33c00789d08cdc6126fc7b7b608dcb8198c74dd38abf6936a429dc75055</p><p>在你的回合开始时，[gold]铸造[/gold]{Forge:diff()}。</p><pre><code>  15 
+  16 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new ForgeVar(5));
+  17 
+  18 	public Furnace()
+  19 		: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+  20 	{
+  21 	}
+  22 </code></pre></details><details class="source-entry" id="source-SovereignBlade"><summary>君王之剑 <span class="muted">SovereignBlade</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/SovereignBlade.cs</p><p class="muted">SHA256：3df4ed58fb0fea598d1c9aa4b850f1b034b1ed4de61c2d36073fbe3d02a378a9</p><p>{TargetType:choose(AllEnemies):对所有敌人|}造成{Damage:diff()}点伤害{Repeat:choose(1):|{}次}。{GainsBlock:cond:<br>获得{CalculatedBlock:diff()}点[gold]格挡[/gold].|}</p><pre><code>  95 
+  96 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlyArray&lt;DynamicVar&gt;(new DynamicVar[5]
+  97 	{
+  98 		new DamageVar(10m, ValueProp.Move),
+  99 		new CalculationBaseVar(0m),
+ 100 		new CalculationExtraVar(1m),
+ 101 		new CalculatedBlockVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) =&gt; GetOwnerParryAmount(card)),
+ 102 		new RepeatVar(1)
+ 103 	});
+ 104 
+ 105 	private bool HasSeekingEdge
+ 106 	{
+ 107 		get
+ 130 		{
+ 131 			attackCommand = attackCommand.TargetingAllOpponents(base.CombatState).BeforeDamage(delegate
+ 132 			{
+ 133 				IReadOnlyList&lt;Creature&gt; hittableEnemies = base.CombatState.HittableEnemies;
+ 134 				if (hittableEnemies.Count &lt;= 0)
+ 135 				{
+ 136 					return Task.CompletedTask;
+ 137 				}
+ 149 			ArgumentNullException.ThrowIfNull(cardPlay.Target, &quot;cardPlay.Target&quot;);
+ 150 			attackCommand = attackCommand.Targeting(cardPlay.Target).BeforeDamage(delegate
+ 151 			{
+ 152 				NSovereignBladeVfx vfxNode = GetVfxNode(base.Owner, this);
+ 153 				NCreature nCreature = NCombatRoom.Instance?.GetCreatureNode(cardPlay.Target);
+ 154 				if (vfxNode != null &amp;&amp; nCreature != null)
+ 155 				{
+ 156 					vfxNode.Attack(nCreature.VfxSpawnPosition);
+ 164 		{
+ 165 			await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.CalculatedBlock.Calculate(cardPlay.Target), base.DynamicVars.CalculatedBlock.Props, cardPlay);
+ 166 		}
+ 167 	}
+ 168 
+ 169 	protected override void OnUpgrade()
+ 170 	{
+ 171 		base.EnergyCost.UpgradeBy(-1);
+ 208 
+ 209 	public void AddDamage(decimal amount)
+ 210 	{
+ 211 		base.DynamicVars.Damage.BaseValue += amount;
+ 212 		CurrentDamage = base.DynamicVars.Damage.BaseValue;
+ 213 	}
+ 214 
+ 215 	public void SetRepeats(decimal amount)</code></pre></details><details class="source-entry" id="source-PillarOfCreation"><summary>创世之柱 <span class="muted">PillarOfCreation</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/PillarOfCreation.cs</p><p class="muted">SHA256：d2651393f03294ae817482edc92be1617cbba6a6b01c6ebda33a3c7c728dcc89</p><p>每当你生成一张卡牌, 就获得{Block:diff()}点[gold]格挡[/gold]。</p><pre><code>  16 
+  17 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlySingleElementList&lt;DynamicVar&gt;(new BlockVar(3m, ValueProp.Unpowered));
+  18 
+  19 	public PillarOfCreation()
+  20 		: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+  21 	{
+  22 	}
+  23 </code></pre></details><details class="source-entry" id="source-SevenStars"><summary>七星 <span class="muted">SevenStars</span></summary><p class="source-path">C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/SevenStars.cs</p><p class="muted">SHA256：5abfed38d28232eb66eb4a717800ea5e3a18384318c6017b4276e8163953a4fd</p><p>对所有敌人造成{Damage:diff()}点伤害{Repeat:diff()}次。</p><pre><code>  14 
+  15 	protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new global::_003C_003Ez__ReadOnlyArray&lt;DynamicVar&gt;(new DynamicVar[2]
+  16 	{
+  17 		new DamageVar(7m, ValueProp.Move),
+  18 		new RepeatVar(7)
+  19 	});
+  20 
+  21 	public SevenStars()</code></pre></details><details class="source-entry" id="source-KarenNextStage"><summary>下一个舞台 <span class="muted">KarenNextStage</span></summary><p class="source-path">D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/globalMove/KarenNextStage.cs</p><p class="muted">SHA256：f5611ab917262abb6255b2ec28fbc0b5c829753ec1417ea81c420a98812debfb</p><p>{IfUpgraded:show:此牌在牌堆之间移动时|此牌在被放入或离开[gold]约定牌堆[/gold]时}，抽{Cards:diff()}张牌。</p><pre><code>  17 
+  18     protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; [new CardsVar(1)];
+  19 
+  20     protected override HashSet&lt;CardTag&gt; CanonicalTags =&gt; [KarenCustomEnum.PromisePileRelated];
+  21 
+  22     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+  23     {
+  24         // 无打出效果
+  26 
+  27     public override async Task OnAddedToPromisePile()
+  28     {
+  29         if (!IsUpgraded)
+  30         {
+  31             await TriggerEffect(new BlockingPlayerChoiceContext());
+  32         }
+  33     }
+  34 
+  35     override public async Task OnRemovedFromPromisePile()
+  36     {
+  37         if (!IsUpgraded)
+  38         {
+  39             await TriggerEffect(new BlockingPlayerChoiceContext());
+  40         }
+  41     }
+  43 
+  44     public override async Task OnGlobalMove(PileType from, PileType to, AbstractModel? source)
+  45     {
+  46         if (IsUpgraded)
+  47         {
+  48             await TriggerEffect(new BlockingPlayerChoiceContext());
+  49         }
+  50     }
+  54         // TODO
+  55         await CardPileCmd.Draw(ctx, DynamicVars.Cards.IntValue, Owner);
+  56     }
+  57 }</code></pre></details><details class="source-entry" id="source-KarenSpin"><summary>旋转 <span class="muted">KarenSpin</span></summary><p class="source-path">D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/globalMove/KarenSpin.cs</p><p class="muted">SHA256：db531fcc9e2b50d76ba693fea35499845bb5cb75f562d79a936001afd962bed2</p><p>造成{Damage:diff()}点伤害。<br>此牌在牌堆之间移动时，在本场战斗中伤害增加{Increase:diff()}。</p><pre><code>  25 
+  26     protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt;
+  27     [
+  28         new DamageVar(5m, ValueProp.Move),
+  29         new DynamicVar(IncreaseVarName, 2m)
+  30     ];
+  31 
+  32     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+  54 
+  55     public override async Task OnGlobalMove(PileType from, PileType to, AbstractModel? source)
+  56     {
+  57         // 增加伤害
+  58         decimal increase = DynamicVars[IncreaseVarName].BaseValue;
+  59         BuffDamage(increase);
+  60         MainFile.Logger.Info($&quot;[KarenSpin] 牌堆移动: {from} -&gt; {to}，伤害+{increase}，当前总伤害: {DynamicVars.Damage.BaseValue}&quot;);
+  61     }
+  62 
+  63     /// &lt;summary&gt;增加本张卡牌的伤害值&lt;/summary&gt;
+  64     private void BuffDamage(decimal extraDamage)
+  65     {
+  66         DynamicVars.Damage.BaseValue += extraDamage;
+  67         _extraDamageFromMoves += extraDamage;
+  68     }
+  69 }</code></pre></details><details class="source-entry" id="source-KarenBackToBackCard"><summary>背靠背 <span class="muted">KarenBackToBackCard</span></summary><p class="source-path">D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenBackToBackCard.cs</p><p class="muted">SHA256：f7bd2187f8cd5829b1dda7cfa502c0224c9c098ab0ffd532e137f847c0608d11</p><p>造成[gold]约定牌堆[/gold]中卡牌数量{ExtraDamage:diff()}倍的伤害。{InCombat:<br>（造成{CalculatedDamage:diff()}点伤害。）|}</p><pre><code>  23 
+  24     protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt;
+  25     [
+  26         new CalculationBaseVar(0m),
+  27         new ExtraDamageVar(4m),
+  28         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, _) =&gt; PromisePileManager.GetCount(card.Owner)),
+  29     ];
+  30 
+  31     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+  32     {
+  33         if (cardPlay.Target == null) return;
+  34         await DamageCmd.Attack(DynamicVars.CalculatedDamage)</code></pre></details><details class="source-entry" id="source-KarenStageIsWaitingPower"><summary>舞台正在等待着：取空回能 <span class="muted">KarenStageIsWaitingPower</span></summary><p class="source-path">D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Powers/KarenStageIsWaitingPower.cs</p><p class="muted">SHA256：504ae2f490d0dd08548216fe24a900f2ec352af7c55fd946f7e9ac3dbbaaade6</p><pre><code>  19 
+  20     public override async Task OnPromisePileEmpty()
+  21     {
+  22         if (Owner.Player is Player player)
+  23         {
+  24             Flash();
+  25             await PlayerCmd.GainEnergy(Amount, player);
+  26         }
+  27     }
+  28     
+  29 }</code></pre></details><details class="source-entry" id="source-KarenPastAndFuture"><summary>过去与未来 <span class="muted">KarenPastAndFuture</span></summary><p class="source-path">D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenPastAndFuture.cs</p><p class="muted">SHA256：bda9c49ca8c39efc92385fa69c012d9da8414e2e9625e2e38bc00e94f225e162</p><p>每从[gold]约定牌堆[/gold]中抽出1张牌，获得{StrengthPower:diff()}点[gold]临时力量[/gold]。</p><pre><code>  22 
+  23     protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt;
+  24     [
+  25         new PowerVar&lt;StrengthPower&gt;(1m)
+  26     ];
+  27 
+  28     public override IEnumerable&lt;CardTag&gt; Tags =&gt; [KarenCustomEnum.TmpStrength, KarenCustomEnum.PromisePileRelated];
+  29 </code></pre></details><details class="source-entry" id="source-KarenShineStrikeBarrage"><summary>用你的闪耀贯穿我吧 <span class="muted">KarenShineStrikeBarrage</span></summary><p class="source-path">D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenShineStrikeBarrage.cs</p><p class="muted">SHA256：f3a2a84a91e2b481bb8e888c79d9116834868ad138784d5e37922bfee3fda3d7</p><p>造成{Damage:diff()}点伤害{Repeat:diff()}次。</p><pre><code>  25 
+  26     protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; new DynamicVar[]
+  27     {
+  28         new DamageVar(3m, ValueProp.Move),
+  29         new RepeatVar(4)
+  30     };
+  31 
+  32     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)</code></pre></details><details class="source-entry" id="source-KarenStarlight02Power"><summary>Starlight第二幕：重放与耗尽 <span class="muted">KarenStarlight02Power</span></summary><p class="source-path">D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Powers/KarenStarlight02Power.cs</p><p class="muted">SHA256：e58a5d34aa1140407936b1c7d01968f237cefbcb3054f8083e7c92c991968c42</p><pre><code>  32 
+  33     public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)
+  34     {
+  35         if (card.Owner.Creature != base.Owner)
+  36         {
+  37             return playCount;
+  38         }
+  39         if (!card.IsShineCard())
+  47         // 耗尽闪耀值
+  48         card.SetEnterShinePileAfterPlay(true);
+  49         return playCount + Amount; // 额外打出Amount次
+  50     }
+  51 
+  52     ///// &lt;summary&gt;
+  53     ///// 暂时没找到好扳机用，手动hack一下
+  54     ///// &lt;/summary&gt;
+  55     //public override (PileType, CardPilePosition) ModifyCardPlayResultPileTypeAndPosition(CardModel card, bool isAutoPlay, ResourceInfo resources, PileType pileType, CardPilePosition position)
+  56     //{
+  57     //    if (card.Owner.Creature == base.Owner &amp;&amp; card.IsShineCard())
+  58     //    {
+  59     //        return (KarenCustomEnum.ShineDepletePile, CardPilePosition.Bottom);
+  60     //    }
+  61 </code></pre></details><details class="source-entry" id="source-KarenCarryingGuilt"><summary>我们犯下的罪过 <span class="muted">KarenCarryingGuilt</span></summary><p class="source-path">D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenCarryingGuilt.cs</p><p class="muted">SHA256：cbc090f7ff118e6235af5bb75ce354749defed1c5a9e8cc6b91f66917e519151</p><p>造成{CalculatedDamage:diff()}点伤害。<br>本局游戏中每耗尽一张非同名的[gold]闪耀[/gold]牌，伤害增加{ExtraDamage:diff()}点。{ShinePileUniqueCount:choose(0):|<br>(已耗尽{ShinePileUniqueCount}张)}</p><pre><code>  34 
+  35     protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt;
+  36     [
+  37         new CalculationBaseVar(12m),
+  38         new ExtraDamageVar(4m),
+  39         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, _) =&gt; ShinePileManager.GetDisposedShineCardUniqueCount(card.Owner))
+  40     ];
+  41 
+  42     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+  43     {
+  44         if (cardPlay.Target == null) return;
+  45         ClearAllFocus();
+  62     {
+  63         var count = IsCanonical ? 0 : ShinePileManager.GetDisposedShineCardUniqueCount(Owner);
+  64         description.Add(&quot;ShinePileUniqueCount&quot;, count);
+  65     }
+  66 
+  67 
+  68     // ============== 以下为特效
+  69 </code></pre></details><details class="source-entry" id="source-KarenLastWord"><summary>最后的台词 <span class="muted">KarenLastWord</span></summary><p class="source-path">D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/neutral/KarenLastWord.cs</p><p class="muted">SHA256：606822c6d3307725589b0448d7e200117b4ca38c6e654b47748a9cb80b9040fa</p><p>[gold]约定牌堆[/gold]之外只有这张牌时才能打出。<br>对所有敌人造成{Damage:diff()}点伤害。</p><pre><code>  31 
+  32     protected override IEnumerable&lt;DynamicVar&gt; CanonicalVars =&gt; [new DamageVar(999, ValueProp.Move)];
+  33 
+  34     protected override IEnumerable&lt;IHoverTip&gt; ExtraHoverTips =&gt;
+  35         [new HoverTip(
+  36             new LocString(&quot;cards&quot;, &quot;KAREN_LAST_WORD.tip.title&quot;),
+  37             new LocString(&quot;cards&quot;, &quot;KAREN_LAST_WORD.tip&quot;).GetFormattedText()
+  38         )];
+  41     {
+  42         if (!Condition(base.Owner, this)) { return; }
+  43         if (CombatState == null) return;
+  44 
+  45         // Cmd.Wait skips Instant/non-interactive play; skip the cutscene with it.
+  46         if (!NonInteractiveMode.IsActive &amp;&amp; SaveManager.Instance.PrefsSave.FastMode != FastModeType.Instant)
+  47         {
+  48             bool isLocalOwner = LocalContext.IsMe(Owner);
+  73 
+  74     protected override bool IsPlayable =&gt; Condition(base.Owner, this);
+  75 
+  76     // 抽牌堆，弃牌堆，手牌中，最多只有这张牌
+  77     private static bool Condition(Player player, CardModel card)
+  78     {
+  79         var hand = PileType.Hand.GetPile(player);
+  80         if (hand.Cards.Any(c =&gt; c != card)) return false;
+  81 
+  82         var discardPile = PileType.Discard.GetPile(player);
+  83         if (discardPile.Cards.Any(c =&gt; c != card)) return false;</code></pre></details><p><a href="docs/体系复盘源码依据.json">完整本地来源快照</a> · <a href="docs/体系复盘与补充建议.json">结构化分析与建议</a></p></section><footer>机制复盘与文档整理；未实装新卡或改动游戏源码，未进行实战或数值模型。<a href="惠惠当前设计总览.html">当前总览</a></footer></main></div></body></html>

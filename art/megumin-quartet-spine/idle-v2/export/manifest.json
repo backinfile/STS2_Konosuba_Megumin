@@ -1,0 +1,40 @@
+{
+  "source": "megumin-concepts-20261009\\quartet\\idle-02-right-hand.png",
+  "texture_sha256": "43dd357c46fd3e9b4e0efcaffc7a710c9d4dce86ade2b7cc56393d294a41deca",
+  "texture_unchanged": true,
+  "source_size": [
+    1147,
+    1371
+  ],
+  "source_origin": [
+    608,
+    1348
+  ],
+  "scale": 0.24242424242424243,
+  "bones": 14,
+  "vertices": 2891,
+  "triangles": 5568,
+  "weighted_bones": {
+    "hat": 1003,
+    "head": 629,
+    "chest": 216,
+    "arm_free": 246,
+    "root": 260,
+    "foot_left": 216,
+    "foot_right": 36,
+    "staff": 393,
+    "torso": 137,
+    "grip_right": 120,
+    "hair_left": 49,
+    "hair_right": 21,
+    "cape_left": 67,
+    "cape_right": 28
+  },
+  "loop_seconds": 4,
+  "scope": "Corrected idle only; v1 action prototype retained separately.",
+  "limitations": [
+    "Single continuous weighted mesh supports subtle idle only.",
+    "Large poses need faithful layers and hidden-area artwork.",
+    "No blink or replacement face; no Spine editor or game import verified."
+  ]
+}

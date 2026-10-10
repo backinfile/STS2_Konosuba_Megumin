@@ -1,0 +1,24 @@
+Use case: stylized-concept / character animation model reference.
+Create ONE production animation reference sheet for Megumin from Konosuba in the Isekai Quartet chibi style. Input 1 is the approved exact character design and starting stance. Input 2 is ONLY a reference for the acting of a confident one-handed forward staff point, not the camera angle or screen direction.
+Format: a clean 4 by 4 grid of SIXTEEN distinct consecutive full-body animation drawings, reading left to right then top to bottom. 2048 by 2048 preferred. Transparent background, equal cells, generous empty gutters, NO panels, NO text, NO numbers, NO arrows, NO motion blur, NO magic effects. Every cell same camera, same scale, same fixed floor line (do not draw the floor). All art contained inside its own cell. Show hat, both feet and the whole staff in every cell.
+This is the entire 1.25-second 12-drawings-per-second CHANT ENTER action, not attacks or unrelated poses. Start upright front three-quarter as input 1, turn body and face continuously toward screen RIGHT, finish with a readable right-facing three-quarter SIDE silhouette, right arm extended toward screen right holding the staff and left arm free relaxed slightly behind the hip.
+CRUCIAL ANATOMICAL CONTINUITY: Her anatomical RIGHT hand is the hand holding the staff in input 1 at viewer LEFT; this same arm remains attached to the same shoulder and holds the SAME point on the white wrap in ALL 16 drawings. She never passes the staff to the left hand. Left hand never touches it. As the body turns this right shoulder moves to the near side and the upper arm reaches across and forward naturally. Right arm stays elbow-bent until extending into the final point. Staff is rigid with the exact same crooked wooden tip, red orb and white wrapped shaft, never changes length or bends.
+Maintain character identity and volume: oversized dark witch hat with red/orange zigzag band and red cross emblems; dark brown hair; red dress yellow edging; black cape gold trim; black fingerless gloves; orange boots. Eyepatch is on anatomical LEFT eye and may become naturally hidden on the far side during the right-facing turn; never move it to the right eye. Bandage is on anatomical RIGHT leg, never swap legs. Do NOT flatten a front torso or stretch a front face; redraw the proper perspective for each angle.
+Precise sequence of sixteen drawings:
+00 approved relaxed stance, upright staff on viewer-left.
+01 eyes and head start turning right; body still.
+02 head turns further, right wrist begins raising the staff bottom slightly off ground.
+03 chest follows, right elbow draws naturally inward toward her waist, staff tilts forward.
+04 right shoulder begins to come around toward camera; right forearm bends; staff upright diagonally beside body, tip stays clear of face.
+05 stance opens with a small left-foot step toward screen right; right elbow remains near ribs.
+06 left foot settles, pelvis follows; staff tilts to about 65 degrees above horizontal, right hand at upper waist.
+07 torso at a natural three-quarter side angle, right hand at chest height, staff tilts to 50 degrees; keep face clear.
+08 elbow begins opening outward toward screen right, forearm and staff advance together; head already aiming.
+09 staff 35 degrees above horizontal, shoulder level stable, right forearm foreshortening redrawn correctly.
+10 weight settles over the front foot, right hand moves forward at upper-chest height, staff 25 degrees.
+11 right upper arm and forearm extend farther, elbow still softly bent, left hand remains behind hip.
+12 final side three-quarter silhouette, right arm nearly extended with about 20-degree soft elbow bend, staff points right at 15 degrees above horizontal. The hand is well ahead of chest, NOT below waist.
+13 tiny forward overshoot only, cape lags naturally to the left.
+14 tiny settle back, feet stay planted and shoulder stays relaxed.
+15 exact stable ready-to-chant pose: right arm forward near shoulder height, staff axis 15 degrees upward toward screen right, left hand clearly free at rear hip, determined face.
+Draw a believable animator's successive pose sequence with smooth action arcs and consistent anatomy, NOT the same front sprite translated/rotated sixteen times. No prone or fallen poses on this sheet. High quality crisp clean cel art.

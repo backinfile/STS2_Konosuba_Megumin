@@ -1,0 +1,1325 @@
+{
+  "method": "Per-slot inversion cost over the new continuous world paths, constrained to the source pose interval.",
+  "changes": [
+    {
+      "clip": "chant_enter",
+      "slot": "body",
+      "before": "E01/body",
+      "after": "turn-upright/body",
+      "original": 0.25,
+      "chosen": 0.28333,
+      "beforeCost": 26.460816872099652,
+      "afterCost": 1.0599087702892576
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "body",
+      "before": "turn-upright/body",
+      "after": "E05/body",
+      "original": 0.48333,
+      "chosen": 0.5,
+      "beforeCost": 107.3266048611973,
+      "afterCost": 72.64863361120359
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "cape",
+      "before": "E01/cape",
+      "after": "turn-upright/cape",
+      "original": 0.25,
+      "chosen": 0.16667,
+      "beforeCost": 0.6211215251809336,
+      "afterCost": 0.1854418890269396
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_l",
+      "before": "turn-upright/leg_l",
+      "after": "E05/leg_l",
+      "original": 0.48333,
+      "chosen": 0.51667,
+      "beforeCost": 4.925599431955625,
+      "afterCost": 1.9352383362924095
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_r",
+      "before": "E01/leg_r",
+      "after": "turn-upright/leg_r",
+      "original": 0.25,
+      "chosen": 0.26667,
+      "beforeCost": 1.3758925692915303,
+      "afterCost": 0.5864507919895005
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_r",
+      "before": "turn-upright/leg_r",
+      "after": "E05/leg_r",
+      "original": 0.48333,
+      "chosen": 0.46667,
+      "beforeCost": 0.2548998000899219,
+      "afterCost": 0.23554312317637335
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_r",
+      "before": "E05/leg_r",
+      "after": "E08/leg_r",
+      "original": 0.75,
+      "chosen": 0.65,
+      "beforeCost": 3.273038848192612,
+      "afterCost": 0.2734116572826678
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "arm_l",
+      "before": "E05/arm_l",
+      "after": "E08/arm_l",
+      "original": 0.75,
+      "chosen": 0.73333,
+      "beforeCost": 0.17233114315986964,
+      "afterCost": 0.03333333333333344
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "arm_r",
+      "before": "E00/arm_r",
+      "after": "E01/arm_r",
+      "original": 0.05,
+      "chosen": 0.03333,
+      "beforeCost": 0.07400651089701568,
+      "afterCost": 0.03333333333333334
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "arm_r",
+      "before": "E01/arm_r",
+      "after": "turn-upright/arm_r",
+      "original": 0.25,
+      "chosen": 0.26667,
+      "beforeCost": 14.457277248509975,
+      "afterCost": 0.9415571908014196
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "arm_r",
+      "before": "turn-upright/arm_r",
+      "after": "E05/arm_r",
+      "original": 0.48333,
+      "chosen": 0.53333,
+      "beforeCost": 24.43988137429243,
+      "afterCost": 0.7613237261268517
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "body",
+      "before": "E05/body",
+      "after": "turn-upright/body",
+      "original": 0.83333,
+      "chosen": 0.86667,
+      "beforeCost": 196.3928075857229,
+      "afterCost": 116.12995556000836
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "body",
+      "before": "E01/body",
+      "after": "E00/body",
+      "original": 1.26667,
+      "chosen": 1.23333,
+      "beforeCost": 0.148024081409676,
+      "afterCost": 0.09394028442528449
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "cape",
+      "before": "turn-upright/cape",
+      "after": "E01/cape",
+      "original": 1.06667,
+      "chosen": 1.15,
+      "beforeCost": 0.8918629915977363,
+      "afterCost": 0.4862798267447469
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_l",
+      "before": "E08/leg_l",
+      "after": "E05/leg_l",
+      "original": 0.56667,
+      "chosen": 0.6,
+      "beforeCost": 0.6399610826819818,
+      "afterCost": 0.3077421512382426
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_l",
+      "before": "E05/leg_l",
+      "after": "turn-upright/leg_l",
+      "original": 0.83333,
+      "chosen": 0.85,
+      "beforeCost": 2.9202893254438096,
+      "afterCost": 2.4266887093769824
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_r",
+      "before": "E08/leg_r",
+      "after": "E05/leg_r",
+      "original": 0.56667,
+      "chosen": 0.66667,
+      "beforeCost": 2.600765402577274,
+      "afterCost": 0.3390988926722548
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_r",
+      "before": "E05/leg_r",
+      "after": "turn-upright/leg_r",
+      "original": 0.83333,
+      "chosen": 0.93333,
+      "beforeCost": 3.7627097505862936,
+      "afterCost": 0.43144824408100224
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "arm_r",
+      "before": "E05/arm_r",
+      "after": "turn-upright/arm_r",
+      "original": 0.83333,
+      "chosen": 0.81667,
+      "beforeCost": 8.985030396654746,
+      "afterCost": 0.6373795112854304
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "arm_r",
+      "before": "turn-upright/arm_r",
+      "after": "E01/arm_r",
+      "original": 1.06667,
+      "chosen": 1.1,
+      "beforeCost": 1.203955157531891,
+      "afterCost": 0.6457795905057977
+    },
+    {
+      "clip": "explosion_release",
+      "slot": "cape",
+      "before": "E12/cape",
+      "after": "release/cape",
+      "original": 0.33333,
+      "chosen": 0.41667,
+      "beforeCost": 0.8318331814097921,
+      "afterCost": 0.20218489327263184
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "body",
+      "before": "release/body",
+      "after": "fall-lean/body",
+      "original": 0.25,
+      "chosen": 0.28333,
+      "beforeCost": 0.8189552600458646,
+      "afterCost": 0.3045085393562158
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "cape",
+      "before": "release/cape",
+      "after": "fall-lean/cape",
+      "original": 0.25,
+      "chosen": 0.06667,
+      "beforeCost": 2.121562492427246,
+      "afterCost": 0.44996022081525944
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "leg_l",
+      "before": "release/leg_l",
+      "after": "fall-lean/leg_l",
+      "original": 0.25,
+      "chosen": 0.2,
+      "beforeCost": 12.763045294760731,
+      "afterCost": 0.3681688164759843
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "arm_l",
+      "before": "release/arm_l",
+      "after": "fall-lean/arm_l",
+      "original": 0.25,
+      "chosen": 0.43333,
+      "beforeCost": 8.072445546339807,
+      "afterCost": 0.3913985664492643
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "arm_r",
+      "before": "release/arm_r",
+      "after": "fall-lean/arm_r",
+      "original": 0.25,
+      "chosen": 0.31667,
+      "beforeCost": 29.276356184506753,
+      "afterCost": 2.5441288010547893
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "body",
+      "before": "fall-lean/body",
+      "after": "crouch/body",
+      "original": 0.18333,
+      "chosen": 0.23333,
+      "beforeCost": 1.4338765355515897,
+      "afterCost": 0.8249364510239671
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "body",
+      "before": "crouch/body",
+      "after": "brace/body",
+      "original": 0.45,
+      "chosen": 0.5,
+      "beforeCost": 27.558277491586196,
+      "afterCost": 0.7137684133543735
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "body",
+      "before": "lower/body",
+      "after": "prone/body",
+      "original": 1.06667,
+      "chosen": 1.03333,
+      "beforeCost": 0.7317933744752857,
+      "afterCost": 0.121206963874694
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "cape",
+      "before": "crouch/cape",
+      "after": "brace/cape",
+      "original": 0.45,
+      "chosen": 0.41667,
+      "beforeCost": 2.332379185718819,
+      "afterCost": 1.5964488540955306
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "cape",
+      "before": "brace/cape",
+      "after": "lower/cape",
+      "original": 0.8,
+      "chosen": 0.76667,
+      "beforeCost": 36.376030139266646,
+      "afterCost": 13.99277895709101
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "cape",
+      "before": "lower/cape",
+      "after": "prone/cape",
+      "original": 1.06667,
+      "chosen": 1.01667,
+      "beforeCost": 1.7026516118556416,
+      "afterCost": 0.5705793426087609
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_l",
+      "before": "crouch/leg_l",
+      "after": "brace/leg_l",
+      "original": 0.45,
+      "chosen": 0.48333,
+      "beforeCost": 34.620685531653066,
+      "afterCost": 7.828091056853323
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_l",
+      "before": "brace/leg_l",
+      "after": "lower/leg_l",
+      "original": 0.8,
+      "chosen": 0.76667,
+      "beforeCost": 0.1969974183706654,
+      "afterCost": 0.1606637892104724
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_r",
+      "before": "fall-lean/leg_r",
+      "after": "crouch/leg_r",
+      "original": 0.18333,
+      "chosen": 0.13333,
+      "beforeCost": 0.40855808744821587,
+      "afterCost": 0.24933650599654633
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_r",
+      "before": "brace/leg_r",
+      "after": "lower/leg_r",
+      "original": 0.8,
+      "chosen": 0.85,
+      "beforeCost": 13.668684809110328,
+      "afterCost": 0.6559219198183653
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "arm_l",
+      "before": "fall-lean/arm_l",
+      "after": "crouch/arm_l",
+      "original": 0.18333,
+      "chosen": 0.23333,
+      "beforeCost": 1.3386878145681111,
+      "afterCost": 0.11733407622414099
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "arm_l",
+      "before": "brace/arm_l",
+      "after": "lower/arm_l",
+      "original": 0.8,
+      "chosen": 0.73333,
+      "beforeCost": 91.21542839404057,
+      "afterCost": 30.62010411957946
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "arm_r",
+      "before": "fall-lean/arm_r",
+      "after": "crouch/arm_r",
+      "original": 0.18333,
+      "chosen": 0.2,
+      "beforeCost": 0.7839994628933346,
+      "afterCost": 0.04139174855010595
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "before": "brace/body",
+      "after": "kneel-rise/body",
+      "original": 1.08333,
+      "chosen": 0.95,
+      "beforeCost": 48.16888992027417,
+      "afterCost": 3.023805355052721
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "before": "fall-lean/body",
+      "after": "E12/body",
+      "original": 2.15,
+      "chosen": 2.08333,
+      "beforeCost": 1.2907823828047271,
+      "afterCost": 0.33506566199734755
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "before": "E08/body",
+      "after": "E05/body",
+      "original": 2.93333,
+      "chosen": 2.95,
+      "beforeCost": 4.735720880509707,
+      "afterCost": 1.884151039563226
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "before": "E05/body",
+      "after": "turn-upright/body",
+      "original": 3.2,
+      "chosen": 3.23333,
+      "beforeCost": 208.90147380488787,
+      "afterCost": 106.94156951788588
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "before": "turn-upright/body",
+      "after": "E01/body",
+      "original": 3.43333,
+      "chosen": 3.45,
+      "beforeCost": 2.7388405104142013,
+      "afterCost": 2.173263415188297
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "before": "E01/body",
+      "after": "E00/body",
+      "original": 3.63333,
+      "chosen": 3.6,
+      "beforeCost": 0.10211922258822596,
+      "afterCost": 0.08614343656622428
+    },
+    {
+      "clip": "get_up",
+      "slot": "cape",
+      "before": "prone/cape",
+      "after": "lower/cape",
+      "original": 0.21667,
+      "chosen": 0.26667,
+      "beforeCost": 0.4150684366603903,
+      "afterCost": 0.3551980803267221
+    },
+    {
+      "clip": "get_up",
+      "slot": "cape",
+      "before": "lower/cape",
+      "after": "brace/cape",
+      "original": 0.56667,
+      "chosen": 0.68333,
+      "beforeCost": 60.24873321680177,
+      "afterCost": 6.996115760176223
+    },
+    {
+      "clip": "get_up",
+      "slot": "cape",
+      "before": "brace/cape",
+      "after": "kneel-rise/cape",
+      "original": 1.08333,
+      "chosen": 1.05,
+      "beforeCost": 1.7148066684776109,
+      "afterCost": 1.4151305496871767
+    },
+    {
+      "clip": "get_up",
+      "slot": "cape",
+      "before": "turn-upright/cape",
+      "after": "E01/cape",
+      "original": 3.43333,
+      "chosen": 3.51667,
+      "beforeCost": 15.362974876074944,
+      "afterCost": 0.5121611799759893
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "before": "brace/leg_l",
+      "after": "kneel-rise/leg_l",
+      "original": 1.08333,
+      "chosen": 1.11667,
+      "beforeCost": 19.29275502855962,
+      "afterCost": 4.274614504519944
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "before": "E08/leg_l",
+      "after": "E05/leg_l",
+      "original": 2.93333,
+      "chosen": 2.98333,
+      "beforeCost": 1.1998722895400273,
+      "afterCost": 0.33382949429456954
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "before": "E05/leg_l",
+      "after": "turn-upright/leg_l",
+      "original": 3.2,
+      "chosen": 3.21667,
+      "beforeCost": 3.15649513939904,
+      "afterCost": 1.991524337383146
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "before": "lower/leg_r",
+      "after": "brace/leg_r",
+      "original": 0.56667,
+      "chosen": 0.5,
+      "beforeCost": 59.50542167856763,
+      "afterCost": 0.7414984180884939
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "before": "brace/leg_r",
+      "after": "kneel-rise/leg_r",
+      "original": 1.08333,
+      "chosen": 1.21667,
+      "beforeCost": 8.02717430866233,
+      "afterCost": 0.2870421625418812
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "before": "fall-lean/leg_r",
+      "after": "E12/leg_r",
+      "original": 2.15,
+      "chosen": 2.16667,
+      "beforeCost": 0.37384158374027776,
+      "afterCost": 0.3158391285170141
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "before": "E08/leg_r",
+      "after": "E05/leg_r",
+      "original": 2.93333,
+      "chosen": 3.03333,
+      "beforeCost": 3.8985846366778136,
+      "afterCost": 0.3544148904397226
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "before": "E05/leg_r",
+      "after": "turn-upright/leg_r",
+      "original": 3.2,
+      "chosen": 3.3,
+      "beforeCost": 4.177332025824444,
+      "afterCost": 0.42586184118066506
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "before": "turn-upright/leg_r",
+      "after": "E01/leg_r",
+      "original": 3.43333,
+      "chosen": 3.46667,
+      "beforeCost": 3.8316998299404075,
+      "afterCost": 0.4996588462257096
+    },
+    {
+      "clip": "get_up",
+      "slot": "arm_l",
+      "before": "brace/arm_l",
+      "after": "kneel-rise/arm_l",
+      "original": 1.08333,
+      "chosen": 1.11667,
+      "beforeCost": 0.5418024676668927,
+      "afterCost": 0.5264901749388358
+    },
+    {
+      "clip": "get_up",
+      "slot": "arm_l",
+      "before": "fall-lean/arm_l",
+      "after": "E12/arm_l",
+      "original": 2.15,
+      "chosen": 1.9,
+      "beforeCost": 1.5897331590200627,
+      "afterCost": 0.9272852283781032
+    },
+    {
+      "clip": "get_up",
+      "slot": "arm_l",
+      "before": "E08/arm_l",
+      "after": "E05/arm_l",
+      "original": 2.93333,
+      "chosen": 2.95,
+      "beforeCost": 0.5288655269094582,
+      "afterCost": 0.033339999999999925
+    },
+    {
+      "clip": "get_up",
+      "slot": "arm_r",
+      "before": "brace/arm_r",
+      "after": "kneel-rise/arm_r",
+      "original": 1.08333,
+      "chosen": 1.15,
+      "beforeCost": 4.125852115707918,
+      "afterCost": 1.3804111065166667
+    },
+    {
+      "clip": "get_up",
+      "slot": "arm_r",
+      "before": "kneel-rise/arm_r",
+      "after": "fall-lean/arm_r",
+      "original": 1.6,
+      "chosen": 1.58333,
+      "beforeCost": 0.33152769047072284,
+      "afterCost": 0.2817621555625477
+    },
+    {
+      "clip": "get_up",
+      "slot": "arm_r",
+      "before": "fall-lean/arm_r",
+      "after": "E12/arm_r",
+      "original": 2.15,
+      "chosen": 2.08333,
+      "beforeCost": 11.081601274809532,
+      "afterCost": 0.8983375424880973
+    },
+    {
+      "clip": "get_up",
+      "slot": "arm_r",
+      "before": "E08/arm_r",
+      "after": "E05/arm_r",
+      "original": 2.93333,
+      "chosen": 2.95,
+      "beforeCost": 12.305551240284943,
+      "afterCost": 3.943468508645409
+    },
+    {
+      "clip": "get_up",
+      "slot": "arm_r",
+      "before": "E05/arm_r",
+      "after": "turn-upright/arm_r",
+      "original": 3.2,
+      "chosen": 3.18333,
+      "beforeCost": 7.214063060705838,
+      "afterCost": 0.6829814209708639
+    },
+    {
+      "clip": "get_up",
+      "slot": "arm_r",
+      "before": "turn-upright/arm_r",
+      "after": "E01/arm_r",
+      "original": 3.43333,
+      "chosen": 3.46667,
+      "beforeCost": 30.44345973265814,
+      "afterCost": 0.7206874822084504
+    },
+    {
+      "clip": "get_up",
+      "slot": "arm_r",
+      "before": "E01/arm_r",
+      "after": "E00/arm_r",
+      "original": 3.63333,
+      "chosen": 3.65,
+      "beforeCost": 0.0875493603227369,
+      "afterCost": 0.033339999999999925
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "before": "E00/body",
+      "after": "turn-upright/body",
+      "original": 0.18333,
+      "chosen": 0.25,
+      "beforeCost": 21.70161190609172,
+      "afterCost": 0.41916655618340465
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "before": "turn-upright/body",
+      "after": "fall-lean/body",
+      "original": 0.45,
+      "chosen": 0.33333,
+      "beforeCost": 1.9859342995238694,
+      "afterCost": 0.31128120861341213
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "before": "fall-lean/body",
+      "after": "crouch/body",
+      "original": 0.73333,
+      "chosen": 0.76667,
+      "beforeCost": 1.3250979296969307,
+      "afterCost": 0.8213421551715496
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "before": "crouch/body",
+      "after": "brace/body",
+      "original": 0.95,
+      "chosen": 0.98333,
+      "beforeCost": 17.851601487999233,
+      "afterCost": 0.58333224589857
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "before": "lower/body",
+      "after": "prone/body",
+      "original": 1.46667,
+      "chosen": 1.45,
+      "beforeCost": 0.4678337116761718,
+      "afterCost": 0.3233534946632331
+    },
+    {
+      "clip": "dead",
+      "slot": "cape",
+      "before": "crouch/cape",
+      "after": "brace/cape",
+      "original": 0.95,
+      "chosen": 0.91667,
+      "beforeCost": 2.56262986629863,
+      "afterCost": 1.623468100391771
+    },
+    {
+      "clip": "dead",
+      "slot": "cape",
+      "before": "brace/cape",
+      "after": "lower/cape",
+      "original": 1.23333,
+      "chosen": 1.2,
+      "beforeCost": 48.89870142088074,
+      "afterCost": 16.819432080384807
+    },
+    {
+      "clip": "dead",
+      "slot": "cape",
+      "before": "lower/cape",
+      "after": "prone/cape",
+      "original": 1.46667,
+      "chosen": 1.4,
+      "beforeCost": 1.0841545263454868,
+      "afterCost": 0.43918548830912457
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_l",
+      "before": "turn-upright/leg_l",
+      "after": "fall-lean/leg_l",
+      "original": 0.45,
+      "chosen": 0.48333,
+      "beforeCost": 94.99080241847429,
+      "afterCost": 3.073269434107612
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_l",
+      "before": "crouch/leg_l",
+      "after": "brace/leg_l",
+      "original": 0.95,
+      "chosen": 0.96667,
+      "beforeCost": 22.32337482463243,
+      "afterCost": 4.83116825155267
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_l",
+      "before": "brace/leg_l",
+      "after": "lower/leg_l",
+      "original": 1.23333,
+      "chosen": 1.18333,
+      "beforeCost": 0.2420954666695252,
+      "afterCost": 0.14779670942742226
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_r",
+      "before": "E00/leg_r",
+      "after": "turn-upright/leg_r",
+      "original": 0.18333,
+      "chosen": 0.25,
+      "beforeCost": 1.0910159973853726,
+      "afterCost": 0.21777828563767432
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_r",
+      "before": "turn-upright/leg_r",
+      "after": "fall-lean/leg_r",
+      "original": 0.45,
+      "chosen": 0.4,
+      "beforeCost": 0.7041239626992427,
+      "afterCost": 0.4787435457896208
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_r",
+      "before": "fall-lean/leg_r",
+      "after": "crouch/leg_r",
+      "original": 0.73333,
+      "chosen": 0.7,
+      "beforeCost": 0.43734384753224503,
+      "afterCost": 0.32789504890708787
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_r",
+      "before": "brace/leg_r",
+      "after": "lower/leg_r",
+      "original": 1.23333,
+      "chosen": 1.26667,
+      "beforeCost": 0.7255020420751634,
+      "afterCost": 0.5760380596023514
+    },
+    {
+      "clip": "dead",
+      "slot": "arm_l",
+      "before": "turn-upright/arm_l",
+      "after": "fall-lean/arm_l",
+      "original": 0.45,
+      "chosen": 0.5,
+      "beforeCost": 0.3648684407965266,
+      "afterCost": 0.10456350840104275
+    },
+    {
+      "clip": "dead",
+      "slot": "arm_l",
+      "before": "fall-lean/arm_l",
+      "after": "crouch/arm_l",
+      "original": 0.73333,
+      "chosen": 0.8,
+      "beforeCost": 85.9952007154743,
+      "afterCost": 23.435351211714806
+    },
+    {
+      "clip": "dead",
+      "slot": "arm_l",
+      "before": "brace/arm_l",
+      "after": "lower/arm_l",
+      "original": 1.23333,
+      "chosen": 1.15,
+      "beforeCost": 141.24146382118778,
+      "afterCost": 62.07961656328002
+    },
+    {
+      "clip": "dead",
+      "slot": "arm_r",
+      "before": "E00/arm_r",
+      "after": "turn-upright/arm_r",
+      "original": 0.18333,
+      "chosen": 0.2,
+      "beforeCost": 10.793656170992387,
+      "afterCost": 4.305188953518715
+    },
+    {
+      "clip": "dead",
+      "slot": "arm_r",
+      "before": "turn-upright/arm_r",
+      "after": "fall-lean/arm_r",
+      "original": 0.45,
+      "chosen": 0.55,
+      "beforeCost": 198.5459845389404,
+      "afterCost": 1.164240787080887
+    },
+    {
+      "clip": "dead",
+      "slot": "arm_r",
+      "before": "fall-lean/arm_r",
+      "after": "crouch/arm_r",
+      "original": 0.73333,
+      "chosen": 0.78333,
+      "beforeCost": 9.419857487877373,
+      "afterCost": 0.16187255539492684
+    },
+    {
+      "clip": "dead",
+      "slot": "arm_r",
+      "before": "brace/arm_r",
+      "after": "lower/arm_r",
+      "original": 1.23333,
+      "chosen": 1.15,
+      "beforeCost": 0.25849371810463706,
+      "afterCost": 0.19228873128308663
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "before": "E00/body",
+      "after": "E01/body",
+      "original": 0.03333,
+      "chosen": 0.05,
+      "beforeCost": 0.1383966638473794,
+      "afterCost": 0.11993060614591
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "before": "E01/body",
+      "after": "turn-upright/body",
+      "original": 0.13333,
+      "chosen": 0.15,
+      "beforeCost": 27.628695340120128,
+      "afterCost": 0.6672742853073808
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "before": "turn-upright/body",
+      "after": "E05/body",
+      "original": 0.25,
+      "chosen": 0.26667,
+      "beforeCost": 150.1999997178729,
+      "afterCost": 51.536883476588244
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "before": "E05/body",
+      "after": "turn-upright/body",
+      "original": 1.25,
+      "chosen": 1.28333,
+      "beforeCost": 293.3851552823376,
+      "afterCost": 109.34649175674251
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "before": "E01/body",
+      "after": "E00/body",
+      "original": 1.48333,
+      "chosen": 1.46667,
+      "beforeCost": 0.09783490851405077,
+      "afterCost": 0.04768629535521098
+    },
+    {
+      "clip": "attack_short",
+      "slot": "cape",
+      "before": "E01/cape",
+      "after": "turn-upright/cape",
+      "original": 0.13333,
+      "chosen": 0.08333,
+      "beforeCost": 0.5125353389773711,
+      "afterCost": 0.09999333333333335
+    },
+    {
+      "clip": "attack_short",
+      "slot": "cape",
+      "before": "turn-upright/cape",
+      "after": "E01/cape",
+      "original": 1.38333,
+      "chosen": 1.41667,
+      "beforeCost": 6.945432235526304,
+      "afterCost": 0.43984237280951
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "before": "turn-upright/leg_l",
+      "after": "E05/leg_l",
+      "original": 0.25,
+      "chosen": 0.28333,
+      "beforeCost": 7.23944759728543,
+      "afterCost": 1.626968744316481
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "before": "E08/leg_l",
+      "after": "E05/leg_l",
+      "original": 1.11667,
+      "chosen": 1.15,
+      "beforeCost": 0.617345771755231,
+      "afterCost": 0.3101946510648739
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "before": "E05/leg_l",
+      "after": "turn-upright/leg_l",
+      "original": 1.25,
+      "chosen": 1.26667,
+      "beforeCost": 4.5771923864416975,
+      "afterCost": 2.3534256864670473
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "before": "E01/leg_r",
+      "after": "turn-upright/leg_r",
+      "original": 0.13333,
+      "chosen": 0.15,
+      "beforeCost": 1.4432565435775662,
+      "afterCost": 0.466877967067726
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "before": "E05/leg_r",
+      "after": "E08/leg_r",
+      "original": 0.4,
+      "chosen": 0.33333,
+      "beforeCost": 3.477411142836354,
+      "afterCost": 0.17419386986934815
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "before": "E08/leg_r",
+      "after": "E05/leg_r",
+      "original": 1.11667,
+      "chosen": 1.16667,
+      "beforeCost": 1.7800997704066504,
+      "afterCost": 0.2666974749898432
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "before": "E05/leg_r",
+      "after": "turn-upright/leg_r",
+      "original": 1.25,
+      "chosen": 1.3,
+      "beforeCost": 6.477496163316767,
+      "afterCost": 0.44273931335977756
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "before": "turn-upright/leg_r",
+      "after": "E01/leg_r",
+      "original": 1.38333,
+      "chosen": 1.4,
+      "beforeCost": 1.329617121127324,
+      "afterCost": 0.40482305011521313
+    },
+    {
+      "clip": "attack_short",
+      "slot": "arm_l",
+      "before": "E05/arm_l",
+      "after": "E08/arm_l",
+      "original": 0.4,
+      "chosen": 0.38333,
+      "beforeCost": 0.4786380738109334,
+      "afterCost": 0.033333333333333326
+    },
+    {
+      "clip": "attack_short",
+      "slot": "arm_r",
+      "before": "E00/arm_r",
+      "after": "E01/arm_r",
+      "original": 0.03333,
+      "chosen": 0.01667,
+      "beforeCost": 0.09197839675034629,
+      "afterCost": 0.033326666666666664
+    },
+    {
+      "clip": "attack_short",
+      "slot": "arm_r",
+      "before": "E01/arm_r",
+      "after": "turn-upright/arm_r",
+      "original": 0.13333,
+      "chosen": 0.15,
+      "beforeCost": 15.19538107248518,
+      "afterCost": 0.40734762826800924
+    },
+    {
+      "clip": "attack_short",
+      "slot": "arm_r",
+      "before": "turn-upright/arm_r",
+      "after": "E05/arm_r",
+      "original": 0.25,
+      "chosen": 0.28333,
+      "beforeCost": 32.717237272614554,
+      "afterCost": 0.6074862278137718
+    },
+    {
+      "clip": "attack_short",
+      "slot": "arm_r",
+      "before": "E05/arm_r",
+      "after": "E08/arm_r",
+      "original": 0.4,
+      "chosen": 0.38333,
+      "beforeCost": 11.238632061465198,
+      "afterCost": 8.03024343341912
+    },
+    {
+      "clip": "attack_short",
+      "slot": "arm_r",
+      "before": "turn-upright/arm_r",
+      "after": "E01/arm_r",
+      "original": 1.38333,
+      "chosen": 1.4,
+      "beforeCost": 13.581269665688367,
+      "afterCost": 0.16603456861765184
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "before": "E00/body",
+      "after": "E01/body",
+      "original": 0.03333,
+      "chosen": 0.05,
+      "beforeCost": 0.1383966638473794,
+      "afterCost": 0.11993060614591
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "before": "E01/body",
+      "after": "turn-upright/body",
+      "original": 0.13333,
+      "chosen": 0.15,
+      "beforeCost": 27.628695340120128,
+      "afterCost": 0.6672742853073808
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "before": "turn-upright/body",
+      "after": "E05/body",
+      "original": 0.25,
+      "chosen": 0.26667,
+      "beforeCost": 150.1999997178729,
+      "afterCost": 51.536883476588244
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "before": "E05/body",
+      "after": "turn-upright/body",
+      "original": 1.25,
+      "chosen": 1.28333,
+      "beforeCost": 293.3851552823376,
+      "afterCost": 109.34649175674251
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "before": "E01/body",
+      "after": "E00/body",
+      "original": 1.48333,
+      "chosen": 1.46667,
+      "beforeCost": 0.09783490851405077,
+      "afterCost": 0.04768629535521098
+    },
+    {
+      "clip": "cast_short",
+      "slot": "cape",
+      "before": "E01/cape",
+      "after": "turn-upright/cape",
+      "original": 0.13333,
+      "chosen": 0.08333,
+      "beforeCost": 0.5125353389773711,
+      "afterCost": 0.09999333333333335
+    },
+    {
+      "clip": "cast_short",
+      "slot": "cape",
+      "before": "turn-upright/cape",
+      "after": "E01/cape",
+      "original": 1.38333,
+      "chosen": 1.41667,
+      "beforeCost": 6.945432235526304,
+      "afterCost": 0.43984237280951
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "before": "turn-upright/leg_l",
+      "after": "E05/leg_l",
+      "original": 0.25,
+      "chosen": 0.28333,
+      "beforeCost": 7.23944759728543,
+      "afterCost": 1.626968744316481
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "before": "E08/leg_l",
+      "after": "E05/leg_l",
+      "original": 1.11667,
+      "chosen": 1.15,
+      "beforeCost": 0.617345771755231,
+      "afterCost": 0.3101946510648739
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "before": "E05/leg_l",
+      "after": "turn-upright/leg_l",
+      "original": 1.25,
+      "chosen": 1.26667,
+      "beforeCost": 4.5771923864416975,
+      "afterCost": 2.3534256864670473
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "before": "E01/leg_r",
+      "after": "turn-upright/leg_r",
+      "original": 0.13333,
+      "chosen": 0.15,
+      "beforeCost": 1.4432565435775662,
+      "afterCost": 0.466877967067726
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "before": "E05/leg_r",
+      "after": "E08/leg_r",
+      "original": 0.4,
+      "chosen": 0.33333,
+      "beforeCost": 3.477411142836354,
+      "afterCost": 0.17419386986934815
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "before": "E08/leg_r",
+      "after": "E05/leg_r",
+      "original": 1.11667,
+      "chosen": 1.16667,
+      "beforeCost": 1.7800997704066504,
+      "afterCost": 0.2666974749898432
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "before": "E05/leg_r",
+      "after": "turn-upright/leg_r",
+      "original": 1.25,
+      "chosen": 1.3,
+      "beforeCost": 6.477496163316767,
+      "afterCost": 0.44273931335977756
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "before": "turn-upright/leg_r",
+      "after": "E01/leg_r",
+      "original": 1.38333,
+      "chosen": 1.4,
+      "beforeCost": 1.329617121127324,
+      "afterCost": 0.40482305011521313
+    },
+    {
+      "clip": "cast_short",
+      "slot": "arm_l",
+      "before": "E05/arm_l",
+      "after": "E08/arm_l",
+      "original": 0.4,
+      "chosen": 0.38333,
+      "beforeCost": 0.4786380738109334,
+      "afterCost": 0.033333333333333326
+    },
+    {
+      "clip": "cast_short",
+      "slot": "arm_r",
+      "before": "E00/arm_r",
+      "after": "E01/arm_r",
+      "original": 0.03333,
+      "chosen": 0.01667,
+      "beforeCost": 0.09197839675034629,
+      "afterCost": 0.033326666666666664
+    },
+    {
+      "clip": "cast_short",
+      "slot": "arm_r",
+      "before": "E01/arm_r",
+      "after": "turn-upright/arm_r",
+      "original": 0.13333,
+      "chosen": 0.15,
+      "beforeCost": 15.19538107248518,
+      "afterCost": 0.40734762826800924
+    },
+    {
+      "clip": "cast_short",
+      "slot": "arm_r",
+      "before": "turn-upright/arm_r",
+      "after": "E05/arm_r",
+      "original": 0.25,
+      "chosen": 0.28333,
+      "beforeCost": 32.717237272614554,
+      "afterCost": 0.6074862278137718
+    },
+    {
+      "clip": "cast_short",
+      "slot": "arm_r",
+      "before": "E05/arm_r",
+      "after": "E08/arm_r",
+      "original": 0.4,
+      "chosen": 0.38333,
+      "beforeCost": 11.238632061465198,
+      "afterCost": 8.03024343341912
+    },
+    {
+      "clip": "cast_short",
+      "slot": "arm_r",
+      "before": "turn-upright/arm_r",
+      "after": "E01/arm_r",
+      "original": 1.38333,
+      "chosen": 1.4,
+      "beforeCost": 13.581269665688367,
+      "afterCost": 0.16603456861765184
+    }
+  ]
+}

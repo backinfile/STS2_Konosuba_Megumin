@@ -1,0 +1,69 @@
+reference-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+reference
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+body_base-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+body_base
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1370
+  orig: 1148, 1370
+  offset: 0, 0
+  index: -1
+
+blink-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+blink
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1370
+  orig: 1148, 1370
+  offset: 0, 0
+  index: -1
+
+tired-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+tired
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+support_grip-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+support_grip
+  rotate: false
+  xy: 2, 2
+  size: 1254, 1254
+  orig: 1254, 1254
+  offset: 0, 0
+  index: -1

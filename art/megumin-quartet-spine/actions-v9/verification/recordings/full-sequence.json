@@ -1,0 +1,181 @@
+{
+  "name": "full-sequence",
+  "file": "full-sequence.mp4",
+  "source": "live native game viewport",
+  "playback_rate": 1,
+  "frame_seeking": false,
+  "timeline": [
+    {
+      "clip": "idle_loop",
+      "at": 0.0178,
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "clip": "chant_enter",
+      "at": 2.0277,
+      "seconds": 1.3,
+      "loop": false
+    },
+    {
+      "clip": "chant_loop",
+      "at": 3.3523,
+      "seconds": 2.4,
+      "loop": true
+    },
+    {
+      "clip": "chant_ack",
+      "at": 5.7609,
+      "seconds": 0.5,
+      "loop": false
+    },
+    {
+      "clip": "chant_loop",
+      "at": 6.2845,
+      "seconds": 2.4,
+      "loop": true
+    },
+    {
+      "clip": "explosion_release",
+      "at": 8.6942,
+      "seconds": 0.7,
+      "loop": false
+    },
+    {
+      "clip": "explosion_hold",
+      "at": 9.4188,
+      "seconds": 1.4,
+      "loop": true
+    },
+    {
+      "clip": "explosion_exit",
+      "at": 10.8275,
+      "seconds": 0.6,
+      "loop": false
+    },
+    {
+      "clip": "relaxed_fall",
+      "at": 11.4508,
+      "seconds": 1.4,
+      "loop": false
+    },
+    {
+      "clip": "relaxed_loop",
+      "at": 12.8606,
+      "seconds": 3,
+      "loop": true
+    },
+    {
+      "clip": "get_up",
+      "at": 15.8847,
+      "seconds": 3.67,
+      "loop": false
+    },
+    {
+      "clip": "idle_loop",
+      "at": 19.577,
+      "seconds": 2,
+      "loop": true
+    }
+  ],
+  "capture": {
+    "status": "completed",
+    "output_path": "C:\\Users\\17575\\AppData\\Local\\KarenSTS2MCP\\recordings\\sts2-20261010-074010-9705d794e38f48a7b6a327ab939e7a1b.mp4",
+    "fps": 30,
+    "max_duration_seconds": 26,
+    "width": 1280,
+    "height": 720,
+    "frames_written": 648,
+    "video_duration_seconds": 21.6,
+    "frames_captured": 643,
+    "frames_repeated": 5,
+    "capture_fps": 29.797884609707722,
+    "capture_average_ms": 17.431509797822695,
+    "capture_max_ms": 98.8317,
+    "elapsed_seconds": 21.6432609,
+    "audio": false
+  },
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.64001f",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 331776,
+        "duration": "21.600000",
+        "bit_rate": "468138",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "648",
+        "extradata_size": 44,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.28.100 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v9\\verification\\recordings\\full-sequence.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "21.600000",
+      "size": "1272487",
+      "bit_rate": "471291",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.12.100"
+      }
+    }
+  },
+  "sha256": "5dc5ebef9ffa0fa7c050f1dd52770b38ddd550ea9a535a931f24023251d093bd"
+}

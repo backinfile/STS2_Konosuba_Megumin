@@ -1,0 +1,101 @@
+{
+  "stage": "notch",
+  "grade": "deliverable",
+  "source_before": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\chant-enter-a-rejected.png",
+  "params": {
+    "local_win": 21,
+    "peak_tau": 1.2,
+    "max_support": 80,
+    "low_cut": 24,
+    "feather": 1.5
+  },
+  "channels": [
+    "L"
+  ],
+  "per_channel": {
+    "L": {
+      "components_above_tau": 1670,
+      "isolated_components_kept": 1670,
+      "rejected_large_components": 0,
+      "notched_bins": 1822,
+      "notched_bins_pct": 0.095,
+      "max_peak_excess": 2.993,
+      "peaks_top": [
+        {
+          "excess": 2.993,
+          "support": 1,
+          "period_px": 2.0,
+          "angle_deg": 180.0
+        },
+        {
+          "excess": 2.679,
+          "support": 4,
+          "period_px": 2.0,
+          "angle_deg": -90.0
+        },
+        {
+          "excess": 2.061,
+          "support": 1,
+          "period_px": 19.86,
+          "angle_deg": -90.0
+        },
+        {
+          "excess": 2.061,
+          "support": 1,
+          "period_px": 19.86,
+          "angle_deg": 90.0
+        },
+        {
+          "excess": 2.01,
+          "support": 1,
+          "period_px": 1.41,
+          "angle_deg": -135.0
+        },
+        {
+          "excess": 1.972,
+          "support": 3,
+          "period_px": 32.91,
+          "angle_deg": -90.0
+        },
+        {
+          "excess": 1.972,
+          "support": 3,
+          "period_px": 32.91,
+          "angle_deg": 90.0
+        },
+        {
+          "excess": 1.926,
+          "support": 3,
+          "period_px": 17.45,
+          "angle_deg": -90.0
+        },
+        {
+          "excess": 1.926,
+          "support": 3,
+          "period_px": 17.45,
+          "angle_deg": 90.0
+        },
+        {
+          "excess": 1.89,
+          "support": 2,
+          "period_px": 21.33,
+          "angle_deg": -90.0
+        },
+        {
+          "excess": 1.89,
+          "support": 2,
+          "period_px": 21.33,
+          "angle_deg": 90.0
+        },
+        {
+          "excess": 1.843,
+          "support": 4,
+          "period_px": 40.16,
+          "angle_deg": -102.5
+        }
+      ],
+      "energy_removed_pct": 0.37707
+    }
+  },
+  "time": "2026-10-10T14:50:30+08:00"
+}

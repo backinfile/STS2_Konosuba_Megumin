@@ -1,0 +1,676 @@
+{
+  "tool": "Mi-Ripple",
+  "version": "0.1.0",
+  "commit": "865a1481acc22da80427bbebe11f1d7f00dc99be",
+  "native_resolution": true,
+  "regeneration": false,
+  "assets": [
+    {
+      "input": "references/brace.png",
+      "sha256": "56c5929de720db917b422a61941d58dba9f8f51713f146956d2e019df1c1176d",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/brace/brace_restored.json",
+      "candidate": "verification/moire/references/brace/brace_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/chant-enter-a-rejected.png",
+      "sha256": "dfc2206f4d5a3a4565e33df12a191f3777c52447bbc3aabc2f2b01bdb0913c31",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "notch",
+        "verify",
+        "finish"
+      ],
+      "source_copy": false,
+      "report": "verification/moire/references/chant-enter-a-rejected/chant-enter-a-rejected_restored.json",
+      "candidate": "verification/moire/references/chant-enter-a-rejected/chant-enter-a-rejected_candidate-rgba.png",
+      "pixels_unchanged": false,
+      "alpha_unchanged": true,
+      "disposition": "excluded_rejected_draft"
+    },
+    {
+      "input": "references/chant-enter-draft-rejected.png",
+      "sha256": "1fe8d9cf9f0b2bddc6290e62e48a2425b2c15fc98d539e1da462b95db952bd20",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/chant-enter-draft-rejected/chant-enter-draft-rejected_restored.json",
+      "candidate": "verification/moire/references/chant-enter-draft-rejected/chant-enter-draft-rejected_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/chant-ready.png",
+      "sha256": "da19e5a8b32428506d45287f12caab908222959d79fcbfd6c42493e8d7c8adba",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/chant-ready/chant-ready_restored.json",
+      "candidate": "verification/moire/references/chant-ready/chant-ready_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/crouch.png",
+      "sha256": "e5bf3204803eab6b4d057f88629027e2e051321b30348cb680cf6a5f444db210",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/crouch/crouch_restored.json",
+      "candidate": "verification/moire/references/crouch/crouch_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E00.png",
+      "sha256": "c54aeb54c7b12ba076479a1b4d2c8a594a68d0728e9018a671db7273de9e1db3",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E00/E00_restored.json",
+      "candidate": "verification/moire/references/E00/E00_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E01.png",
+      "sha256": "2cc9baca1bce56bb511ada809ea7b1a602c130bb1a88c6fd0c1dcccb56d4d174",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E01/E01_restored.json",
+      "candidate": "verification/moire/references/E01/E01_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E02.png",
+      "sha256": "339bb6242e57d0ceadf16a098ab3957b0dd3c4074d2b414754888b3ca330a1ea",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E02/E02_restored.json",
+      "candidate": "verification/moire/references/E02/E02_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E03.png",
+      "sha256": "e8d67d2accc73dbc6d8eac6ce6e952ced6d4bea795ba7cc237ea8b0abaf87fc7",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E03/E03_restored.json",
+      "candidate": "verification/moire/references/E03/E03_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E04.png",
+      "sha256": "e0140ea5cbd0011b8094ee83c6bf08084053402410f99d5cfe8dadc6dff9cfef",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E04/E04_restored.json",
+      "candidate": "verification/moire/references/E04/E04_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E05.png",
+      "sha256": "c0a56f999ea66a9a294d0bc0f6d94a6ebb302af1a1e6aa5d7049f4cf96ff3d1a",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E05/E05_restored.json",
+      "candidate": "verification/moire/references/E05/E05_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E06-fixed.png",
+      "sha256": "50c290053847c20ab572da603ae1375aed854748e27063fe233b1587e954e217",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E06-fixed/E06-fixed_restored.json",
+      "candidate": "verification/moire/references/E06-fixed/E06-fixed_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E06.png",
+      "sha256": "6210a455afc40bc196ecce47ee50a5e6df12ecebdaaaf69465a50bd6a09e9bd3",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E06/E06_restored.json",
+      "candidate": "verification/moire/references/E06/E06_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E07.png",
+      "sha256": "8113998f87219f3fe2715dacbf9e5e22fc6caafe2fcb6b095289d3f47f639219",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E07/E07_restored.json",
+      "candidate": "verification/moire/references/E07/E07_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E08.png",
+      "sha256": "b844ea9748d7829a723fee5c73f44312e5750032da984db8dbdff3d434432304",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E08/E08_restored.json",
+      "candidate": "verification/moire/references/E08/E08_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E09.png",
+      "sha256": "6a9b6c516eebc28ee5f320b4c1ad15980060af3de1e00e244330b01cbb25ec3b",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E09/E09_restored.json",
+      "candidate": "verification/moire/references/E09/E09_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E10.png",
+      "sha256": "80a5b43bb3a0e7dc840bf9ca7225459bd656053bd9c34473f4973c9660858eba",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E10/E10_restored.json",
+      "candidate": "verification/moire/references/E10/E10_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E11.png",
+      "sha256": "49ebd05f9296976ed830a300c08a73589bd8f6440b4d182e3a8292bad84c8734",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E11/E11_restored.json",
+      "candidate": "verification/moire/references/E11/E11_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/E12.png",
+      "sha256": "da19e5a8b32428506d45287f12caab908222959d79fcbfd6c42493e8d7c8adba",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/E12/E12_restored.json",
+      "candidate": "verification/moire/references/E12/E12_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/fall-lean.png",
+      "sha256": "7068de6b3542848ed20df3741f726b8433126e159b2fd7c2f4723187450e7ddb",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/fall-lean/fall-lean_restored.json",
+      "candidate": "verification/moire/references/fall-lean/fall-lean_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/kneel-rise.png",
+      "sha256": "440eab0c12062c615ed71b5a5a022e21070c03b43ed26cf6c05956f664ac9e45",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/kneel-rise/kneel-rise_restored.json",
+      "candidate": "verification/moire/references/kneel-rise/kneel-rise_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/lower.png",
+      "sha256": "6555bc2ab2ddcb762ae4f941765aa67f995abfdee2381db979134a0f7f165370",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/lower/lower_restored.json",
+      "candidate": "verification/moire/references/lower/lower_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/prone.png",
+      "sha256": "55ae19fedb8039d5cdaedb8ee1a29dc848941ba30beac91d8e2c1078576003e7",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/prone/prone_restored.json",
+      "candidate": "verification/moire/references/prone/prone_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/release.png",
+      "sha256": "e115418e125d6a7a32c2c8ffed1786bdf4ed938fe8c4d25c3ea4663e96a33f79",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/release/release_restored.json",
+      "candidate": "verification/moire/references/release/release_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "references/turn-upright.png",
+      "sha256": "c20896ee3d33c15fab72eef37891423dc3e04e410fe542d78fc217ef2af5de36",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/references/turn-upright/turn-upright_restored.json",
+      "candidate": "verification/moire/references/turn-upright/turn-upright_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/brace-body.png",
+      "sha256": "4470d6f83683c1b0ddfc94f01ac6fc169884edc0507eaae5dccf9ab3c8d65e9a",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/brace-body/brace-body_restored.json",
+      "candidate": "verification/moire/source/brace-body/brace-body_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/brace.png",
+      "sha256": "4974ed759ef0e99f949485eb2dd74877b9d8b1f2922f2402b889226b0562e088",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/brace/brace_restored.json",
+      "candidate": "verification/moire/source/brace/brace_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/crouch.png",
+      "sha256": "d92c92c5c629cd5f00f11815478c07dcd488b3dbadd382400c9cc93d78400eb2",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/crouch/crouch_restored.json",
+      "candidate": "verification/moire/source/crouch/crouch_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/E00-body.png",
+      "sha256": "f03e41d9acd671f40dacc2a2d7f8656e75b11356985e4b666b0f8fab258c23de",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/E00-body/E00-body_restored.json",
+      "candidate": "verification/moire/source/E00-body/E00-body_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/E00.png",
+      "sha256": "1b4f83df09c68790f73a262336cc77adf20e5ee83dcf676d7a98e73e1c3488ac",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/E00/E00_restored.json",
+      "candidate": "verification/moire/source/E00/E00_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/E01.png",
+      "sha256": "545579e638f2d8f90909bc9e402b21cd175b40a8fdce78e78ca340f83d89d559",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/E01/E01_restored.json",
+      "candidate": "verification/moire/source/E01/E01_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/E05-body.png",
+      "sha256": "6e28fb7a488e3d6b4fcbf7ba04e9e97cc89d37f96f900ca7f71ac5d1e76decb0",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/E05-body/E05-body_restored.json",
+      "candidate": "verification/moire/source/E05-body/E05-body_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/E05.png",
+      "sha256": "c4122fc3dff3b3f547a1e57c659d0e43f74ae539d8aa43e4ecfefaab9dcba3cd",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/E05/E05_restored.json",
+      "candidate": "verification/moire/source/E05/E05_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/E08.png",
+      "sha256": "19e588ddb0cbbd49ac038a35a2814c050bf203ae28e6a80bdde84b588c67a91e",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/E08/E08_restored.json",
+      "candidate": "verification/moire/source/E08/E08_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/E12.png",
+      "sha256": "b3d960ed172dc9126b735c67de753e16243fadcdffa693a00a9996e3aa520a0b",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/E12/E12_restored.json",
+      "candidate": "verification/moire/source/E12/E12_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/fall-lean.png",
+      "sha256": "04c0b2934f0cd9113c22e481abeca72614d9f16ddc5cec8cdc7c387a73e9c2d6",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/fall-lean/fall-lean_restored.json",
+      "candidate": "verification/moire/source/fall-lean/fall-lean_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/kneel-rise.png",
+      "sha256": "dfc0e6fc514b86aaa25135a2e514d2bcd933d51888491373f76ef4c121f5babd",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/kneel-rise/kneel-rise_restored.json",
+      "candidate": "verification/moire/source/kneel-rise/kneel-rise_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/lower.png",
+      "sha256": "7ce8198b33a364c4e95437da85cca2d5b4c36c743452c9dd1855a05e531d7f80",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/lower/lower_restored.json",
+      "candidate": "verification/moire/source/lower/lower_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/prone-body.png",
+      "sha256": "ed5107f5db4155a343bebfe50971cfb7d785e139a8833023e828a3e2bf470c92",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/prone-body/prone-body_restored.json",
+      "candidate": "verification/moire/source/prone-body/prone-body_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/prone.png",
+      "sha256": "af0137c9abd6f1364bcfac3841545471a6d49986bd09624fbcfd9418affcb0fb",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/prone/prone_restored.json",
+      "candidate": "verification/moire/source/prone/prone_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/release.png",
+      "sha256": "b5f9acb74c138b6ca47dab5711107cbe02fbeaa67609b59a3d7d510a46b17b16",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/release/release_restored.json",
+      "candidate": "verification/moire/source/release/release_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/staff-only.png",
+      "sha256": "57816e8617a89b6d496707e76abc839cdb39ec69918aee550f30544e4e41d294",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/staff-only/staff-only_restored.json",
+      "candidate": "verification/moire/source/staff-only/staff-only_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    },
+    {
+      "input": "source/turn-upright.png",
+      "sha256": "21bf3ec39ddffd595e09b378086c438d6e68056c99d5f699dba82f07527cdc7f",
+      "outcome": "delivered",
+      "actions": [
+        "diagnose",
+        "finish"
+      ],
+      "source_copy": true,
+      "report": "verification/moire/source/turn-upright/turn-upright_restored.json",
+      "candidate": "verification/moire/source/turn-upright/turn-upright_candidate-rgba.png",
+      "pixels_unchanged": true,
+      "alpha_unchanged": true,
+      "disposition": "preserve_original"
+    }
+  ],
+  "visual_review": {
+    "reviewed": true,
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-10",
+    "evidence": [
+      "verification/moire/review-heatmaps.jpg",
+      "verification/moire/review-crops-0.jpg",
+      "verification/moire/review-crops-1.jpg",
+      "verification/moire/review-crops-2.jpg",
+      "verification/moire/review-crops-3.jpg",
+      "verification/moire/review-crops-4.jpg",
+      "verification/moire/review-crops-5.jpg"
+    ],
+    "finding": "Active source images have continuous linework and flat fills, with no visible periodic lattice or scale texture. No active pixels were changed. The filtered rejected draft remains excluded from animation."
+  },
+  "inherited_from": {
+    "version": "actions-v8",
+    "report_sha256": "142f6673cb15778d30eab92427e8e426d8b090ca2db30f49a7bb983123863017",
+    "reason": "All active source pixels unchanged; validate_moire.py rechecks the current hashes."
+  }
+}

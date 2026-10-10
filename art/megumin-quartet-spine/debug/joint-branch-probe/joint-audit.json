@@ -1,0 +1,477 @@
+{
+  "version": "debug/joint-branch-probe",
+  "thresholds": {
+    "maxFoldDegrees": 150,
+    "maxJointStepAt240Hz": 3,
+    "branchFlipFoldDegrees": 10
+  },
+  "clips": {
+    "idle_loop": {
+      "peakFold": {
+        "value": 23.87039603668893,
+        "joint": "elbow_r",
+        "time": 3
+      },
+      "peakStep": {
+        "value": 0.16314340253934925,
+        "joint": "knee_r",
+        "time": 1.7625
+      },
+      "flips": []
+    },
+    "cast_short": {
+      "peakFold": {
+        "value": 113.08526627853723,
+        "joint": "elbow_l",
+        "time": 0.5083333333333333
+      },
+      "peakStep": {
+        "value": 1.4963133588997906,
+        "joint": "elbow_l",
+        "time": 0.15
+      },
+      "flips": []
+    },
+    "chant_enter": {
+      "peakFold": {
+        "value": 169.11657894769428,
+        "joint": "elbow_r",
+        "time": 0.775
+      },
+      "peakStep": {
+        "value": 1.6055442866065894,
+        "joint": "elbow_l",
+        "time": 0.625
+      },
+      "flips": []
+    },
+    "chant_loop": {
+      "peakFold": {
+        "value": 168.29752940987947,
+        "joint": "elbow_r",
+        "time": 0.5
+      },
+      "peakStep": {
+        "value": 0.010213149661251307,
+        "joint": "knee_l",
+        "time": 0.9208333333333333
+      },
+      "flips": []
+    },
+    "chant_cancel": {
+      "peakFold": {
+        "value": 169.1109795215756,
+        "joint": "elbow_r",
+        "time": 0.05416666666666667
+      },
+      "peakStep": {
+        "value": 2.2556441291965332,
+        "joint": "elbow_l",
+        "time": 0.1625
+      },
+      "flips": []
+    },
+    "chant_ack": {
+      "peakFold": {
+        "value": 167.91450537131539,
+        "joint": "elbow_r",
+        "time": 0
+      },
+      "peakStep": {
+        "value": 0
+      },
+      "flips": []
+    },
+    "attack_short": {
+      "peakFold": {
+        "value": 162.80118296101796,
+        "joint": "elbow_r",
+        "time": 0.4625
+      },
+      "peakStep": {
+        "value": 2.754286437380242,
+        "joint": "elbow_r",
+        "time": 0.31666666666666665
+      },
+      "flips": []
+    },
+    "explosion_release": {
+      "peakFold": {
+        "value": 167.91450537131539,
+        "joint": "elbow_r",
+        "time": 0
+      },
+      "peakStep": {
+        "value": 1.7121146540261938,
+        "joint": "elbow_l",
+        "time": 0.3541666666666667
+      },
+      "flips": []
+    },
+    "explosion_hold": {
+      "peakFold": {
+        "value": 161.42193621585352,
+        "joint": "elbow_r",
+        "time": 0
+      },
+      "peakStep": {
+        "value": 0
+      },
+      "flips": []
+    },
+    "explosion_exit": {
+      "peakFold": {
+        "value": 169.7837065692088,
+        "joint": "elbow_r",
+        "time": 0.1
+      },
+      "peakStep": {
+        "value": 2.0079403493963355,
+        "joint": "elbow_r",
+        "time": 0.0875
+      },
+      "flips": []
+    },
+    "hit": {
+      "peakFold": {
+        "value": 72.72284095092004,
+        "joint": "elbow_r",
+        "time": 0.07083333333333333
+      },
+      "peakStep": {
+        "value": 1.4410268531289712,
+        "joint": "elbow_r",
+        "time": 0.020833333333333332
+      },
+      "flips": []
+    },
+    "hit_chant": {
+      "peakFold": {
+        "value": 167.91450537131539,
+        "joint": "elbow_r",
+        "time": 0
+      },
+      "peakStep": {
+        "value": 2.0756881197938752,
+        "joint": "knee_r",
+        "time": 0.020833333333333332
+      },
+      "flips": []
+    },
+    "relaxed_fall": {
+      "peakFold": {
+        "value": 180,
+        "joint": "knee_r",
+        "time": 0.2791666666666667
+      },
+      "peakStep": {
+        "value": 10.16693167671014,
+        "joint": "knee_r",
+        "time": 0.29583333333333334
+      },
+      "flips": [
+        {
+          "joint": "knee_r",
+          "time": 0.2791666666666667,
+          "from": 178.48229332348456,
+          "to": -180,
+          "step": 2.0199626392970793
+        },
+        {
+          "joint": "knee_r",
+          "time": 0.29583333333333334,
+          "from": -180,
+          "to": 178.7372874526394,
+          "step": 10.16693167671014
+        }
+      ]
+    },
+    "relaxed_loop": {
+      "peakFold": {
+        "value": 113.83274839460978,
+        "joint": "elbow_r",
+        "time": 0.75
+      },
+      "peakStep": {
+        "value": 0.0007046642800066022,
+        "joint": "elbow_r",
+        "time": 1.4875
+      },
+      "flips": []
+    },
+    "get_up": {
+      "peakFold": {
+        "value": 168.0311705936685,
+        "joint": "knee_r",
+        "time": 1.3791666666666667
+      },
+      "peakStep": {
+        "value": 5.968005587695977,
+        "joint": "knee_r",
+        "time": 1.375
+      },
+      "flips": []
+    },
+    "dead": {
+      "peakFold": {
+        "value": 180,
+        "joint": "knee_r",
+        "time": 0.42916666666666664
+      },
+      "peakStep": {
+        "value": 13.598726929495305,
+        "joint": "knee_r",
+        "time": 0.44166666666666665
+      },
+      "flips": [
+        {
+          "joint": "knee_r",
+          "time": 0.42916666666666664,
+          "from": 179.33234565510736,
+          "to": -180,
+          "step": 3.6573753848926844
+        },
+        {
+          "joint": "knee_r",
+          "time": 0.44166666666666665,
+          "from": -180,
+          "to": 178.06899372985288,
+          "step": 13.598726929495305
+        }
+      ]
+    },
+    "dead_from_down": {
+      "peakFold": {
+        "value": 121.40125585550595,
+        "joint": "elbow_l",
+        "time": 0.44999998807907104
+      },
+      "peakStep": {
+        "value": 0.6327298395755392,
+        "joint": "knee_r",
+        "time": 0.22083333333333333
+      },
+      "flips": []
+    },
+    "hit_down": {
+      "peakFold": {
+        "value": 113.68212577410748,
+        "joint": "elbow_r",
+        "time": 0
+      },
+      "peakStep": {
+        "value": 0.05159757930215717,
+        "joint": "knee_r",
+        "time": 0.016666666666666666
+      },
+      "flips": []
+    },
+    "setup_pose": {
+      "peakFold": {
+        "value": 22.720905235335294,
+        "joint": "elbow_r",
+        "time": 0
+      },
+      "peakStep": {
+        "value": 0
+      },
+      "flips": []
+    }
+  },
+  "violations": [
+    {
+      "clip": "chant_enter",
+      "peakFold": {
+        "value": 169.11657894769428,
+        "joint": "elbow_r",
+        "time": 0.775
+      },
+      "peakStep": {
+        "value": 1.6055442866065894,
+        "joint": "elbow_l",
+        "time": 0.625
+      },
+      "flips": []
+    },
+    {
+      "clip": "chant_loop",
+      "peakFold": {
+        "value": 168.29752940987947,
+        "joint": "elbow_r",
+        "time": 0.5
+      },
+      "peakStep": {
+        "value": 0.010213149661251307,
+        "joint": "knee_l",
+        "time": 0.9208333333333333
+      },
+      "flips": []
+    },
+    {
+      "clip": "chant_cancel",
+      "peakFold": {
+        "value": 169.1109795215756,
+        "joint": "elbow_r",
+        "time": 0.05416666666666667
+      },
+      "peakStep": {
+        "value": 2.2556441291965332,
+        "joint": "elbow_l",
+        "time": 0.1625
+      },
+      "flips": []
+    },
+    {
+      "clip": "chant_ack",
+      "peakFold": {
+        "value": 167.91450537131539,
+        "joint": "elbow_r",
+        "time": 0
+      },
+      "peakStep": {
+        "value": 0
+      },
+      "flips": []
+    },
+    {
+      "clip": "attack_short",
+      "peakFold": {
+        "value": 162.80118296101796,
+        "joint": "elbow_r",
+        "time": 0.4625
+      },
+      "peakStep": {
+        "value": 2.754286437380242,
+        "joint": "elbow_r",
+        "time": 0.31666666666666665
+      },
+      "flips": []
+    },
+    {
+      "clip": "explosion_release",
+      "peakFold": {
+        "value": 167.91450537131539,
+        "joint": "elbow_r",
+        "time": 0
+      },
+      "peakStep": {
+        "value": 1.7121146540261938,
+        "joint": "elbow_l",
+        "time": 0.3541666666666667
+      },
+      "flips": []
+    },
+    {
+      "clip": "explosion_hold",
+      "peakFold": {
+        "value": 161.42193621585352,
+        "joint": "elbow_r",
+        "time": 0
+      },
+      "peakStep": {
+        "value": 0
+      },
+      "flips": []
+    },
+    {
+      "clip": "explosion_exit",
+      "peakFold": {
+        "value": 169.7837065692088,
+        "joint": "elbow_r",
+        "time": 0.1
+      },
+      "peakStep": {
+        "value": 2.0079403493963355,
+        "joint": "elbow_r",
+        "time": 0.0875
+      },
+      "flips": []
+    },
+    {
+      "clip": "hit_chant",
+      "peakFold": {
+        "value": 167.91450537131539,
+        "joint": "elbow_r",
+        "time": 0
+      },
+      "peakStep": {
+        "value": 2.0756881197938752,
+        "joint": "knee_r",
+        "time": 0.020833333333333332
+      },
+      "flips": []
+    },
+    {
+      "clip": "relaxed_fall",
+      "peakFold": {
+        "value": 180,
+        "joint": "knee_r",
+        "time": 0.2791666666666667
+      },
+      "peakStep": {
+        "value": 10.16693167671014,
+        "joint": "knee_r",
+        "time": 0.29583333333333334
+      },
+      "flips": [
+        {
+          "joint": "knee_r",
+          "time": 0.2791666666666667,
+          "from": 178.48229332348456,
+          "to": -180,
+          "step": 2.0199626392970793
+        },
+        {
+          "joint": "knee_r",
+          "time": 0.29583333333333334,
+          "from": -180,
+          "to": 178.7372874526394,
+          "step": 10.16693167671014
+        }
+      ]
+    },
+    {
+      "clip": "get_up",
+      "peakFold": {
+        "value": 168.0311705936685,
+        "joint": "knee_r",
+        "time": 1.3791666666666667
+      },
+      "peakStep": {
+        "value": 5.968005587695977,
+        "joint": "knee_r",
+        "time": 1.375
+      },
+      "flips": []
+    },
+    {
+      "clip": "dead",
+      "peakFold": {
+        "value": 180,
+        "joint": "knee_r",
+        "time": 0.42916666666666664
+      },
+      "peakStep": {
+        "value": 13.598726929495305,
+        "joint": "knee_r",
+        "time": 0.44166666666666665
+      },
+      "flips": [
+        {
+          "joint": "knee_r",
+          "time": 0.42916666666666664,
+          "from": 179.33234565510736,
+          "to": -180,
+          "step": 3.6573753848926844
+        },
+        {
+          "joint": "knee_r",
+          "time": 0.44166666666666665,
+          "from": -180,
+          "to": 178.06899372985288,
+          "step": 13.598726929495305
+        }
+      ]
+    }
+  ]
+}

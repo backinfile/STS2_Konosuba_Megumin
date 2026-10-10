@@ -1,0 +1,14 @@
+{
+  "runtime": "@esotericsoftware/spine-core 4.2.95",
+  "animations": 18,
+  "bones": 16,
+  "samples": 953,
+  "maxRightGripError": 9.978194388211317e-7,
+  "loopsChecked": [
+    "idle_loop",
+    "chant_loop",
+    "explosion_hold",
+    "relaxed_loop"
+  ],
+  "passed": true
+}

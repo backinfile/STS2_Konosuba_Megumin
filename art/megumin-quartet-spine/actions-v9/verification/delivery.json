@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "version": "v9",
+  "skeleton_sha256": "2691ef294c09da2ada158ad6e3c69454d5f83e3cf8aef7f171e710822946150b",
+  "unchanged_v8_sha256": "15ae6e95f141870bf1588290ae3e4c8de9be1a1ed1641beffeee70870ad75d16",
+  "native_clips": 19,
+  "native_sample_times": 57,
+  "normal_combat_actions": 13,
+  "normal_combat_end": "rewards",
+  "native_recordings": 21,
+  "minimum_capture_fps": 29.797884609707722,
+  "mod_zip_sha256": "5c4f350f2388ed089a5294798e6dd5958dd1446204bca84ba1502598510a8e5d",
+  "video_zip_sha256": "5d25bce9b54e459f1a283a822958110c3fa5bc13b183e0ab2b31dd6f74e2bfa8",
+  "limits": [
+    "Discrete drawing contours still differ across large angle changes.",
+    "Spine Editor import not manually checked.",
+    "Gameplay uses placeholder cards and relics."
+  ]
+}

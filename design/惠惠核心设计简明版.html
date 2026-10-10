@@ -1,76 +1,349 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>惠惠核心设计 · 简明版</title><style>
-:root{--bg:#f5f1e8;--surface:#fffdf8;--border:#d9d1c1;--text:#2d2923;--text-dim:#645e54;--red:#a43d28;--green:#416453;--blue:#385e77}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:75px}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 'Microsoft YaHei','PingFang SC',sans-serif}main{max-width:1120px;margin:auto;padding:48px 28px}h1,h2,h3,p{margin:0 0 16px}h1{font:700 clamp(30px,5vw,54px)/1.25 'Microsoft YaHei',sans-serif;letter-spacing:-1px}h2{font-size:30px;line-height:1.4}h3{font-size:23px}a{color:var(--red);text-underline-offset:4px}nav{position:sticky;top:0;background:var(--surface);border-bottom:1px solid var(--border);z-index:2;display:flex;justify-content:center;gap:24px;padding:12px 18px;flex-wrap:wrap}nav a{font-size:15px;text-decoration:none;font-weight:bold}section{margin:48px 0 64px}.eyebrow{color:var(--red);font-size:13px;letter-spacing:2px;font-weight:bold}.lead{font-size:20px;max-width:820px}.note{color:var(--text-dim);font-size:14px}.compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:28px 0}.compare a{display:block;color:var(--text);text-decoration:none;border-top:4px solid var(--red);padding:16px 0}.compare strong{font-size:20px;display:block}.compare span{color:var(--text-dim);font-size:15px}.common{border-left:4px solid var(--green);padding:18px 24px;background:var(--surface)}.common p:last-child{margin:0}.phase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:24px 0}.phase div{border-top:1px solid var(--border);padding-top:12px}.phase b{color:var(--red);display:block;margin-bottom:6px}.phase p{font-size:15px}.route{border-top:1px solid var(--border);padding-top:28px;margin-top:30px}.routehead{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}.routehead h3{margin-bottom:6px}.routehead span{font-size:14px;color:var(--text-dim)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:18px 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:20px;min-width:0}.meta{font-size:12px;color:var(--text-dim)}.card h4{font-size:18px;margin:8px 0 12px}.card p{font-size:16px}.purpose{border-top:1px dashed var(--border);padding-top:12px;color:var(--green);font-size:14px!important;margin:0}.example{padding:14px 18px;background:#e9eee7;font-size:15px}.cost{color:var(--text-dim);font-size:14px;margin-top:10px}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:15px}th,td{padding:12px;text-align:left;border-bottom:1px solid var(--border);min-width:115px}th{background:#eae4d8}details{margin-top:20px}summary{cursor:pointer;font-weight:bold}footer{border-top:1px solid var(--border);padding-top:20px;color:var(--text-dim);font-size:14px}a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:4px}p,td{overflow-wrap:break-word}@media(max-width:760px){main{padding:30px 18px}.compare,.phase,.cards{grid-template-columns:1fr}.compare{gap:0}.phase{gap:0}.card{padding:16px}nav{gap:14px}h2{font-size:26px}.routehead{gap:2px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{nav{position:static}.card{break-inside:avoid}body{background:white}main{max-width:none}}
-</style></head><body><nav aria-label="方案导航"><a href="#time">① 等回合</a><a href="#mana">② 投资源</a><a href="#choice">③ 选效果</a><a href="#recommend">我的推荐</a></nav><main>
-<header><p class="eyebrow">MEGUMIN / 2026.09.30 / 简明设计稿</p><h1>三种爆裂玩法，<br>每种三条构筑路线。</h1><p class="lead">先看核心怎么玩，再看该拿哪些牌。三套是<strong>备选方案，选一套做核心</strong>；同一套里的三条路线可以混搭。</p><p class="note">这是上一版的简明重述。删去审查表、统计和实现细节，保留玩法、取舍与样例牌。所有数值均为未实测的草案。</p></header>
-<div class="compare"><a href="#time"><strong>① 用时间换威力</strong><span>现在炸，还是等更强？</span></a><a href="#mana"><strong>② 用资源换威力</strong><span>现在防御，还是多投一点？</span></a><a href="#choice"><strong>③ 三种效果选两种</strong><span>这一发要伤害、保护，还是手牌？</span></a></div>
-<aside class="common"><p><strong>三套共用的基本流程</strong><br>正常出牌 → 花 2 能量进入预备 → 继续出牌、强化这一发 → 0 能量释放爆裂。</p><p>预备最多跨过两次敌人行动，之后自动释放。释放后，下个玩家回合少 1 能量且不能预备；该回合结束后恢复。场上余波在下回合开始造成一次 3 点群伤，然后消失。</p><p class="note">爆裂是主要输出；余波只是留下的影响。每个例子都可跨回合完成，默认每回合 3 能量。伤害示例未计算敌人格挡等修正，也未计入固定余波。</p></aside>
-
-<section id="time"><p class="eyebrow">时间型 / 原方案：定时咏唱</p><h2>等得越久，爆裂越强</h2><p class="lead">决定现在炸，还是再撑一回合，换一发更强的爆裂。</p><div class="phase">
-<div><b>开始前 → 开始预备</b><p>花 2 能量进入预备，蓄力等级为 1。</p></div>
-<div><b>预备中</b><p>下一回合开始升 1 级，最高 3 级。预备中，每个敌人每轮的首次攻击总伤害减少 2。</p></div>
-<div><b>释放时</b><p>1 / 2 / 3 级分别造成 26 / 34 / 42 点群体伤害，随后失去预备减伤。</p></div>
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>惠惠：魔力积蓄与红魔族宣言</title>
+<style>
+:root{--bg:#f5f1e8;--surface:#fffdf8;--border:#d9d1c1;--text:#2d2923;--text-dim:#645e54;--accent:#a43d28;--gold:#886022}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.85 'Microsoft YaHei','PingFang SC',sans-serif}
+main{max-width:1100px;margin:auto;padding:40px 28px 56px}h1{font-size:32px;line-height:1.4;margin:0 0 10px}h2{font-size:26px;line-height:1.45;margin:0 0 16px}h3{font-size:18px;margin:0 0 12px}p{margin:0 0 16px;overflow-wrap:break-word}
+.intro,.note,footer{font-size:14px;color:var(--text-dim)}nav{display:flex;flex-wrap:wrap;gap:20px;margin:22px 0}nav a{color:var(--accent);text-underline-offset:4px}
+section{border-top:1px solid var(--border);padding:34px 0;scroll-margin-top:20px}.number{color:var(--accent)}.definition{border-left:2px solid var(--border);padding:0 0 0 16px;margin:14px 0;font-size:15px}.definition strong{color:var(--gold)}.kind{font-size:12px;color:var(--text-dim);margin-left:8px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}.card{display:flex;flex-direction:column;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:19px}.card-top{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.energy{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:white;font-weight:700;flex-shrink:0}.resource-cost{font-size:13px;color:var(--gold);border:1px solid var(--border);padding:2px 7px;border-radius:4px}.card h4{font-size:18px;margin:0}.meta{font-size:12px;color:var(--text-dim);margin:9px 0 16px}.card p{font-size:16px;margin:0 0 14px;line-height:1.85}.properties{margin-top:auto;border-top:1px solid var(--border);padding-top:10px;min-height:38px;font-size:14px;color:var(--gold)}abbr{color:var(--gold);font-weight:600;text-decoration:none;cursor:help}footer{border-top:1px solid var(--border);padding-top:18px}a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.starter-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.5fr);gap:24px;margin:26px 0}.starter-relic,.starter-deck{min-width:0}.starter-relic{border-left:3px solid var(--accent);padding-left:16px}.starter-relic h4{font-size:19px;color:var(--gold);margin:0 0 10px}.starter-relic p{font-size:15px}.deck-total{font-size:14px;font-weight:400;color:var(--text-dim);margin-left:8px}.deck-table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.8}.deck-table th{text-align:left;color:var(--text-dim);font-weight:400;border-bottom:1px solid var(--border);padding:0 8px 8px}.deck-table td{border-bottom:1px solid var(--border);padding:10px 8px;vertical-align:top;overflow-wrap:break-word}.deck-table th:first-child,.deck-table td:first-child{padding-left:0;width:23%}.deck-table th:last-child,.deck-table td:last-child{padding-right:0}.deck-count,.deck-cost{width:1%;white-space:nowrap}.deck-card-name{font-weight:600}.deck-type{display:block;font-size:12px;color:var(--text-dim)}.deck-properties{color:var(--gold)}.deck-table .resource-cost{display:block;font-size:12px;margin-top:4px;padding:0 4px}.starter-note{margin-top:12px}
+.generated-note{font-size:14px;padding:10px 14px;background:#ece6d9;margin:16px 0;color:var(--text-dim)}.generated-note strong{color:var(--text)}.basis{margin:18px 0;font-size:14px;color:var(--text-dim)}.basis summary{cursor:pointer;color:var(--accent);width:fit-content}.basis ul{padding-left:22px}.basis li{padding:7px 0;overflow-wrap:break-word}.basis a,footer a{color:var(--accent);text-underline-offset:3px}.adaptation{display:block;margin-top:4px}.evidence{font-size:12px;color:var(--gold)}summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.core{padding:20px 0 26px}.core h2{font-size:21px}.core-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:22px 0;padding:16px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.core-flow b{display:block;font-size:16px;color:var(--accent)}.core-flow span{display:block;font-size:14px;color:var(--text-dim)}.research-row{margin:16px 0}.research-row p{margin:5px 0}.core .definition{margin:16px 0}
+.timing-table{margin:18px 0}.timing-table caption{text-align:left;color:var(--text-dim);font-size:13px;padding-bottom:8px}.timing-table th:first-child,.timing-table td:first-child{width:14%}
+.recommendation{border-left:3px solid var(--accent);padding:12px 18px;background:#ece6d9;margin:22px 0}.recommendation h3{margin-bottom:8px}.recommendation p:last-child{margin:0}.table-scroll{overflow-x:auto;margin:22px 0}.comparison-table{min-width:630px}.comparison-table caption{text-align:left;font-size:14px;color:var(--text-dim);padding-bottom:10px}.comparison-table th:first-child,.comparison-table td:first-child{width:15%}.comparison-table td{width:28%}.comparison-table a{color:var(--accent)}.play-examples li{padding:8px 0}.play-examples strong{color:var(--text)}.play-examples .result{display:block;color:var(--gold)}nav{position:sticky;top:0;z-index:10;background:var(--bg);padding:12px 0;border-bottom:1px solid var(--border);flex-wrap:nowrap;overflow-x:auto}nav a{flex-shrink:0;white-space:nowrap}section{scroll-margin-top:76px}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.starter-layout{grid-template-columns:1fr;gap:16px}}@media(max-width:600px){main{padding:26px 18px}.cards{grid-template-columns:1fr}h1{font-size:26px}h2{font-size:23px}nav{gap:12px;font-size:14px}.deck-table{font-size:13px}.deck-table td,.deck-table th{padding-left:5px;padding-right:5px}}@media print{body{background:white}nav{display:none}.card,.starter-relic,tr{break-inside:avoid}}
+@media(max-width:600px){.core-flow{grid-template-columns:1fr;gap:12px}.recommendation{padding:12px 14px}.comparison-table{font-size:13px}}@media print{.table-scroll{overflow:visible}.comparison-table{min-width:0}}
+.declaration-demo{display:flex;align-items:center;flex-wrap:wrap;gap:24px;margin:20px 0;padding:22px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.declaration-demo [hidden]{display:none}.declaration-token{width:112px;height:112px;border:3px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:var(--surface);flex-shrink:0}.declaration-token strong{font-size:30px;line-height:1.4}.declaration-token span{font-size:12px;color:var(--text-dim)}.declaration-controls{flex:1;min-width:230px}.declaration-controls button{font:inherit;font-size:14px;padding:7px 12px;margin:0 8px 8px 0;border:1px solid var(--border);border-radius:4px;background:var(--surface);color:var(--text);cursor:pointer}.declaration-controls button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.declaration-controls button:disabled{opacity:.5;cursor:default}.declaration-empty{font-size:14px;color:var(--text-dim);max-width:112px}.declaration-status{font-size:15px;min-height:2em}.declaration-reference{max-width:440px}@media print{.declaration-controls button{display:none}}
+</style></head><body><aside data-design-status="legacy-core" aria-label="文档状态" style="margin:0;padding:16px max(20px,calc((100vw - 1320px)/2));background:#eee0cf;border-bottom:2px solid #92332c;color:#392d25;font:14px/1.8 'Microsoft YaHei','Segoe UI',sans-serif"><b>上一版核心与历次候选</b> · 当前为玩家Buff爆裂狂、3费保留消耗的爆裂，回合末按本人吟唱期间技能数加卡牌提供的额外增伤造成一次群伤。威力已降为爆裂内的小配套，不再设关键词；卡面直接写“下一次爆裂魔法造成的伤害提高X点”，结算后清除已用增伤。旧0费积蓄、全部出牌计数与卡组仅供历史追溯。宣言已改为悬挂后连续3张技能触发卡面后续效果，回合结束进度归零；本页格挡条件仅为历史。 <a style="color:#8d2824;font-weight:700" href="惠惠当前设计总览.html">打开当前设计总览 →</a></aside><main>
+<header><h1>惠惠：魔力积蓄与红魔族宣言</h1><p class="intro">保留魔力积蓄与吟唱核心；新增用户指定的悬挂式宣言参考牌：先获得7格挡，再以0/3悬挂，完成后获得2能量并弃牌。</p></header>
+<p class="generated-note"><a href="惠惠其他体系探索.html">惠惠：从本人特点继续挖机制</a>：已记录局外技能点与稀有卡爆裂鉴赏；新增较量中的小聪明、反复练习等本人特点，并保留逐项出处。</p>
+<aside class="recommendation"><h3><a href="原版与Karen流派结构对照.html">原版与Karen流派结构对照</a></h3><p class="note">本地源码对照：区分运转、输出、寿命成长和规则突破；共享机制可以形成不同构筑，独立性要由具体卡牌关系与决策证明。</p></aside>
+<p class="generated-note"><strong>历史宣言：</strong>本页保留按格挡次数完成的旧稿。最新已改为连续3张技能触发，回合结束进度归零，<a href="惠惠当前设计总览.html#declaration">查看当前规则</a>。旧稿为悬挂任务、完成回2能量后弃牌。<a href="#hanging-declaration">查看1费7格挡参考牌与0/3演示</a>。首张限制与回合末判定不再沿用。</p>
+<div class="core" aria-labelledby="fixed-core-title"><h2 id="fixed-core-title">当前核心 · 魔力积蓄</h2><div class="core-flow" aria-label="核心循环">
+<div><b>积蓄手牌</b><span>移入积蓄区；手中缺爆裂就补1张</span></div>
+<div><b>0费爆裂开启吟唱</b><span>把全部积蓄返回手牌，再按各牌的费用打出</span></div>
+<div><b>出牌，再结算</b><span>吟唱中打出N张牌，回合末N点群伤</span></div>
 </div>
-<p class="note">原稿的“咏唱等级”在本页写成“蓄力等级”，只是便于阅读的数值标签；“咏唱”留给下方的延后触发关键字。</p>
-<article class="route"><div class="routehead"><h3>1. 快速爆裂</h3><span>本核心中的一种构筑体系</span></div><p>用牌加速升级，少挨敌人的攻击。</p><div class="cards">
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>简短吟句</h4><p>蓄力等级提高1级。</p><p class="purpose">作用：最直接的加速。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>重整咒句</h4><p>蓄力等级提高1级。抽1张牌。消耗。</p><p class="purpose">作用：加速时顺便补牌。</p></div>
-<div class="card"><div class="meta">0 能量 · 技能</div><h4>舍弃杂念</h4><p>消耗一张其他手牌。蓄力等级提高1级。消耗。</p><p class="purpose">作用：用不要的手牌换加速。</p></div>
-</div><div class="example"><strong>怎么玩：</strong>进入预备 → 打出两张加速牌 → 当回合达到 3 级 → 释放 42 点群伤。</div><p class="cost"><strong>取舍：</strong>省等待时间，但会花掉能量和手牌。</p></article>
-<article class="route"><div class="routehead"><h3>2. 防守蓄力</h3><span>本核心中的一种构筑体系</span></div><p>靠防御和抽牌撑住，让爆裂自己升级。</p><div class="cards">
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>站稳再念</h4><p>获得6点格挡。若处于预备，额外获得3点格挡。</p><p class="purpose">作用：挡住眼前的攻击。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>长咏护送</h4><p>获得5点格挡。若蓄力等级至少2级，下回合开始时获得7点格挡。</p><p class="purpose">作用：同时照顾下一回合。</p></div>
-<div class="card"><div class="meta">1 能量 · 能力</div><h4>帮你看着</h4><p>每次蓄力等级自然提高后，抽1张牌。</p><p class="purpose">作用：等待升级也能补充手牌。</p></div>
-</div><div class="example"><strong>怎么玩：</strong>1 级时防御 → 下回合自然到 2 级并抽牌 → 再撑一轮，3 级释放。</div><p class="cost"><strong>取舍：</strong>更省加速牌，但要承受敌人行动。</p></article>
-<article class="route"><div class="routehead"><h3>3. 单发重击</h3><span>本核心中的一种构筑体系</span></div><p>把增伤和目标集中到这一发，争取解决强敌。</p><div class="cards">
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>此刻正好</h4><p>若蓄力等级为3，本回合释放的爆裂额外造成12点基础伤害。消耗。</p><p class="purpose">作用：满级后进一步增伤。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>单点爆破</h4><p>保留。本次爆裂改为单体，基础伤害翻倍。消耗。</p><p class="purpose">作用：放弃群攻，集中打一个敌人。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>接住倒下的我</h4><p>处于预备时，为本次爆裂安排：释放后，下回合开始时获得12点格挡。消耗。</p><p class="purpose">作用：没有打死时，给下一回合留保护。</p></div>
-</div><div class="example"><strong>怎么玩：</strong>达到 3 级 → 此刻正好 → 单点爆破 → 对一个敌人造成 (42 + 12) × 2 = 108 点伤害。</div><p class="cost"><strong>取舍：</strong>伤害集中，但准备牌多；必须另外拿升级和防御牌。</p></article>
-</section>
-<section id="mana"><p class="eyebrow">资源型 / 原方案：投入蓄爆</p><h2>投入越多，爆裂越强</h2><p class="lead">把能量和手牌投入这一发；投入爆裂的资源，就不能拿去做别的事。</p><div class="phase">
-<div><b>开始前 → 开始预备</b><p>花 2 能量进入预备，本次投入从 0 开始。</p></div>
-<div><b>预备中</b><p>每花 1 能量注能，投入 +1，通常上限 6。每轮首张技能额外给 3 格挡；回合末有剩余能量时，自动花 1 点注能。</p></div>
-<div><b>释放时</b><p>造成 22 + 6 × 投入的群体伤害。投入 3 是 40 点；投入 6 是 58 点。释放后清空投入。</p></div>
+<p class="definition"><strong>魔力积蓄</strong><span class="kind">用户指定关键字</span><br>选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。</p>
+<p class="definition"><strong>爆裂魔法</strong><span class="kind">0费衍生牌 · 用户指定</span><br>进入吟唱，取出所有魔力积蓄。在回合结束时，对所有敌人造成等同于吟唱期间打出卡牌数量的伤害。吟唱期间不能被打出。</p>
+<p class="definition"><strong>吟唱</strong><span class="kind">本轮计数解释</span><br>记录进入吟唱后实际打出的牌数。取回的牌尚不计数；首次开启吟唱的爆裂本身不计数。回合末结算后清空。</p>
+<p class="definition"><strong>魔力积蓄2</strong><span class="kind">数量扩展 · 用户新增</span><br>选择2张不同的手牌放入魔力积蓄。如果手中没有爆裂魔法，则将1张爆裂魔法加入手牌。</p>
+<p class="definition"><strong>吟唱：</strong><span class="kind">条件前缀 · 用户新增</span><br>只有已经处于吟唱状态时，才执行冒号后的效果；这个前缀不会开启吟唱。</p>
+<p class="note">爆裂没有额外1点基础伤害。存入、取回、抽到一张牌都不直接增加伤害；需要在吟唱期间实际打出。获得爆裂本身不自动开启吟唱。</p>
+<details class="basis"><summary>上一版内容的记录与本轮范围</summary><p>当前保留用户指定的魔力积蓄核心、新增三张配套牌和两个建议入口。卡名暂定；仅回流一击指定了9→12的升级，另外两张的升级效果尚未指定。初始Buff、遗物和完整初始牌组仍未指定。</p></details>
+<aside class="recommendation"><h3>新增三张牌：压缩费用、吟唱续牌、自身回收</h3><p>压缩魔力把本次存入的两张牌各变成下次0费；咒文续接在吟唱中提供1能量和2张牌；回流一击打完后进入积蓄，供随后或下回合的爆裂取回。三张牌分别改善打牌成本、出牌素材和跨回合衔接。</p><p class="note">下次0费只用一次，可以跨回合等待；取回不会消耗它。回流一击开吟唱前打出时，可以在本回合取回再打；吟唱中再次进入积蓄后，由于不能再打爆裂，须等下一回合。</p></aside>
+<details class="basis"><summary>建议口径与需要确定的边界</summary><ul>
+<li>魔力积蓄先按一个独立的牌区处理。选择的牌从手牌移入该区；存入不等于打出、弃牌或消耗。该区建议跨回合保留，战斗结束时按战斗牌清理，不能永久删除玩家牌组中的卡。</li>
+<li>取出本身只把原有卡牌全部返回手牌，不复制、自动打出或减费。普通仅限本回合的费用变化不因存入而跨回合冻结；压缩魔力明确写出的“下次打出耗能为0”则跟随该张牌持续到下一次成功打出。</li>
+<li>每次魔力积蓄结算时检查手牌。手中已有爆裂则不生成；手中没有则加入1张。这个检查不是常驻Buff，不会在一般抽牌或弃牌后自动触发。</li>
+<li>爆裂暂沿用此前选择的消耗、保留：未使用时可以等待开吟唱时机；打出后消耗，但吟唱记录继续存在。两个入口样例不附加消耗。卡牌类型与这些属性在新方案中先用于试验。</li>
+<li>首次打出爆裂先开启吟唱并取回积蓄，从后续实际打出的牌开始计数。爆裂自身不为首次吟唱计数，是本轮建议。未打出任何后续牌时，当前原始群伤为0。</li>
+<li>用户已确认吟唱期间不能再打出爆裂魔法。因此吟唱中再次使用魔力积蓄时，新存入的牌不能在本回合靠第二张爆裂取回；生成的爆裂留待未来回合使用。受阻的出牌不计数，也不取回积蓄。</li>
+<li>按用户原文，爆裂也属于可选手牌。把它存入后手中缺少爆裂，会再生成一张；后来取回时便可能持有多张0费爆裂。吟唱限制使这些牌无法在同一回合接连打出，剩余牌按保留留到未来；暂不额外禁止选择爆裂。</li>
+<li>普通魔力积蓄从手牌选择，正在打出的来源牌不能选择自己。回流一击明确写“将这张牌放入魔力积蓄”，按伤害结算后直接移动正在结算的本体处理，作为专门的自行入区效果。没有其他可选手牌时，普通积蓄能否只执行生成爆裂仍待定。</li>
+<li>取回全部积蓄若超过游戏手牌上限，如何容纳仍待定；本轮算例最多积蓄3张，且回收后的手牌不超过8张。不擅自把超出的牌丢弃或改成只取部分。</li>
+<li>建议回合末、敌人行动前结算，随后退出吟唱；战斗提前结束则取消预约。吟唱开始后新存入的牌继续留在积蓄区，不因本次伤害结算而清空；下回合可用保留的爆裂开启新吟唱并取回。</li>
+<li>算例只计算单次吟唱的原始群伤，未叠力量、虚弱、易伤或其他伤害修正。复制和自动打牌如何计数、伤害类型如何接入游戏，留待后续处理。</li>
+<li>魔力积蓄2先选择当前手牌中的两张不同原牌，再一起存入，随后检查并至多生成1张爆裂；不能在本次选择中再选刚生成的爆裂。手牌不足2张时，先按全部存入已有手牌推演，属于试验口径。</li>
+<li>压缩魔力的0费只标记它本次实际存入的牌，不影响积蓄区原来已有的牌。标记在返回手牌、跨回合或未打出而弃牌时均不消失，在该张牌下一次成功打出时使用；取消或受阻的出牌不使用标记。它不取消“不能打出”等限制，也不让吟唱中的爆裂变为可打出。</li>
+<li>同一张牌重复获得“下次0费”暂按同一个待用标记处理，不累积多次免费使用。成功打出后按其他现存费用效果计算后续费用；被设为0费的回流一击再次入区时，不自动保留刚用掉的0费标记。</li>
+<li>吟唱：是条件前缀。咒文续接处于吟唱时回1能量、抽2，并按普通出牌为爆裂计数+1；不在吟唱时两项收益都不生效。消耗是整张牌的属性，本轮允许在非吟唱时打出并消耗，但没有收益；没有把条件擅自改成仅吟唱时可打。</li>
+<li>回流一击按对选定敌人造成9伤害、升级12伤害，之后把原牌本体直接移入积蓄区处理；不再同时放入弃牌堆，也不复制一张。自行入区没有使用“魔力积蓄”关键字，因此本轮按不额外生成爆裂处理；这属于按卡面区分关键字和牌区移动的解释。</li>
+</ul></details>
 </div>
-<article class="route"><div class="routehead"><h3>1. 省能积攒</h3><span>本核心中的一种构筑体系</span></div><p>先用少量牌保护自己，把剩余能量留给爆裂。</p><div class="cards">
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>守住阵形</h4><p>获得6点格挡。若投入至少2，额外获得3点格挡。</p><p class="purpose">作用：投入起来后，防御更划算。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>整理口袋</h4><p>抽2张牌，弃1张牌。若投入至少2，获得3点格挡。</p><p class="purpose">作用：找下一张需要的牌。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>留有余裕</h4><p>获得5点格挡。若投入至少3，下回合开始时获得7点格挡。</p><p class="purpose">作用：提前覆盖下回合的防御。</p></div>
-</div><div class="example"><strong>怎么玩：</strong>进入预备 → 留 1 能量自动注能 → 下回合先防御，再把剩余能量注入爆裂。</div><p class="cost"><strong>取舍：</strong>节约手牌，但慢；剩余能量也是真实成本。</p></article>
-<article class="route"><div class="routehead"><h3>2. 消耗换火力</h3><span>本核心中的一种构筑体系</span></div><p>消耗不需要的手牌，尽快堆高投入。</p><div class="cards">
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>专心注能</h4><p>投入增加2。消耗。</p><p class="purpose">作用：花 1 能量换 2 投入。</p></div>
-<div class="card"><div class="meta">0 能量 · 技能</div><h4>拿这个当燃料</h4><p>消耗一张其他手牌。投入增加2。消耗。</p><p class="purpose">作用：拿一张手牌当燃料。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>焚稿重编</h4><p>消耗所有其他手牌。每消耗一张，本次投入增加1。抽3张牌。消耗。</p><p class="purpose">作用：一次处理整手牌，再补新牌。</p></div>
-</div><div class="example"><strong>怎么玩：</strong>专心注能得到 2 投入 → 拿这个当燃料再得 2 → 现在就能释放 46 点群伤。</div><p class="cost"><strong>取舍：</strong>启动快，但被消耗的牌本场不能再抽到。</p></article>
-<article class="route"><div class="routehead"><h3>3. 高投入爆发</h3><span>本核心中的一种构筑体系</span></div><p>先存到一定投入，再获得抽牌、防护和更高上限。</p><div class="cards">
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>核对投入</h4><p>抽1张牌。若投入至少3，再抽2张牌。消耗。</p><p class="purpose">作用：达到 3 投入后，能一次抽 3 张。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>不留遗憾</h4><p>若投入至少4，本回合爆裂额外造成14点基础伤害。消耗。</p><p class="purpose">作用：达到 4 投入后，为释放加伤。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>超额装载</h4><p>保留。本次爆裂的投入上限变为9。消耗。</p><p class="purpose">作用：允许这一发继续存到 9。</p></div>
-</div><div class="example"><strong>怎么玩：</strong>存到 4 投入 → 不留遗憾 → 本回合释放，造成 22 + 24 + 14 = 60 点群伤。</div><p class="cost"><strong>取舍：</strong>强牌有门槛；提高上限本身不会送你投入。</p></article>
+<nav aria-label="核心方案">
+<a href="#hanging-declaration">宣言参考牌</a><a href="#hanging-examples">费用与进度</a><a href="#hanging-review">强度与待定规则</a>
+<a href="#mana_storage">01 新牌与出牌算例</a>
+</nav>
+<section id="hanging-declaration"><p class="generated-note"><strong>历史条件：</strong>下方获得格挡的规则和演示已停用。<a href="惠惠当前设计总览.html#declaration">当前宣言为连续3张技能触发，回合结束进度归零 →</a></p><h2>红魔族宣言：打出后悬挂的任务牌</h2><p class="note">当前用户参考牌。已确认：1费、罕见、7格挡、后续3次获得格挡、悬挂显示0/3、完成后获得2能量并进入弃牌堆。名称未指定；跨回合、同时推进与槽位规则仍需区分确认状态。</p><p>卡牌先解决眼前需求，再以类似充能球的方式悬挂，记录后续动作。宣言是挂在场上的任务，不再采用前稿的“必须首张打出”或“回合末统一结算”条件。</p><p>魔力积蓄负责保存与取回手牌；宣言负责观察事件并提供能量。宣言可以服务普通攻击、防御与能力，不需要爆裂或吟唱才能完成。两者可以有自然配合，但没有必要把宣言收益绑定到爆裂伤害。</p>
+<article class="card declaration-reference"><div class="card-top"><span class="energy">1</span><h4>宣言参考牌（未命名）</h4></div><div class="meta">罕见 · 技能（按效果归类）</div><p>获得7点<abbr title="格挡抵消受到的伤害。">格挡</abbr>。<br><abbr title="红魔族宣言：本牌效果结算后悬挂并从0开始记录所列条件。完成时获得2点能量，将本牌放入弃牌堆。">红魔族宣言</abbr>：获得3次<abbr title="格挡抵消受到的伤害。">格挡</abbr>。</p><div class="properties">完成宣言：获得2能量，本牌进入弃牌堆。</div></article><p class="note">“先7格挡、后0/3悬挂”意味着自身这7点不计入自己的进度；名称和升级未指定。类似充能球指悬挂展示，尚未确认采用任何球槽数量、被动、激发或顶出规则。</p>
+<div class="declaration-demo" aria-label="单张宣言进度演示"><div id="declaration-token" class="declaration-token"><strong id="declaration-progress">0/3</strong><span>获得格挡</span></div><div id="declaration-empty" class="declaration-empty" hidden>悬挂位置已空<br>本牌进入弃牌堆</div><div class="declaration-controls"><p id="declaration-status" class="declaration-status" role="status" aria-live="polite">已获得本牌的7格挡，现在从0/3开始悬挂。</p><button type="button" id="declaration-advance">模拟获得一次格挡</button><button type="button" id="declaration-reset">重看悬挂过程</button><p class="note">仅演示单张任务；每次点击代表后续一次有效格挡，来源与费用另计。展示一个位置不代表容量上限为1。</p></div></div>
+<script>(()=>{const counter=document.getElementById('declaration-progress'),token=document.getElementById('declaration-token'),empty=document.getElementById('declaration-empty'),status=document.getElementById('declaration-status'),advance=document.getElementById('declaration-advance'),reset=document.getElementById('declaration-reset');let progress=0;advance.addEventListener('click',()=>{if(progress>=3)return;progress++;counter.textContent=progress+'/3';if(progress===3){token.hidden=true;empty.hidden=false;advance.disabled=true;status.textContent='达到3/3：获得2能量；本牌移入弃牌堆，任务结束。'}else{status.textContent='后续已获得'+progress+'次格挡，进度'+progress+'/3；尚未回能。'}});reset.addEventListener('click',()=>{progress=0;counter.textContent='0/3';token.hidden=false;empty.hidden=true;advance.disabled=false;status.textContent='已获得本牌的7格挡，现在从0/3开始悬挂。';});})();</script>
+<ol class="play-examples">
+<li><strong>打出</strong>：支付1能量，先获得7格挡。</li>
+<li><strong>悬挂</strong>：原牌停在悬挂位置，显示0/3；此时未进入弃牌堆。</li>
+<li><strong>推进</strong>：后续第1、2、3次实际获得格挡，分别推进到1/3、2/3、3/3。</li>
+<li><strong>兑现</strong>：完成一次，获得2能量；本牌离开悬挂位置进入弃牌堆。再次抽到并打出时重新从0/3开始。</li>
+</ol><details class="basis"><summary>用户已指定的内容与计数口径</summary><h3>用户已指定</h3><ul>
+<li>用户指定的参考牌费用与稀有度为1费、罕见，立即效果为获得7格挡。</li>
+<li>任务条件是获得3次格挡，按次数而不是累计格挡数值记录；初始悬挂显示0/3。</li>
+<li>沿用用户提出的完成宣言固定获得2点能量；用户随后明确选择完成后的牌进入弃牌堆，可以再次抽到。</li>
+</ul><h3>用于推演的口径与未定边界</h3><ul>
+<li>单张推演先按进度跨回合保留，不受回合开始失去格挡影响。用户只指定悬挂方式，尚未明确这一点，不能把保留进度写成已经确认。</li>
+<li>一次实际获得正数格挡推进1次，无论获得1点还是20点；分三次各获得1点则是3次。获得0格挡不推进，保留已有格挡不算重新获得。</li>
+<li>卡牌、能力、遗物造成的有效获得格挡均可作为条件事件，不额外限制为打出格挡牌。每一来源的结算应对应实际一次格挡增加，而非动画次数。</li>
+<li>先结算本牌的7格挡，再登记自身任务，不追溯此前事件。已有宣言是否被这次7格挡推进，按待确认的多宣言规则处理；本牌其他被动响应的先后顺序留到事件实现时核对。</li>
+<li>每张悬挂原牌有独立进度；完成只支付一次奖励。悬挂期间不同时存在于弃牌或抽牌堆，离场与任务登记必须一起处理。</li>
+</ul></details></section><section id="hanging-examples"><h2>1费的投入，怎样换来后续能量</h2>
+<p class="definition"><strong>普通1费防御不能凭借未来奖励提前启动</strong><br>从3能量开始，打参考牌后剩2能量、7格挡、0/3；再打两张各1费5格挡的防御，剩0能量、17格挡、2/3。此时尚未获得奖励，不能先借用未来的2能量支付第三张防御。</p>
+<p class="definition"><strong>若进度跨回合保留</strong><br>承接2/3状态。下回合恢复3能量，打1费防御获得5格挡后到3/3；支付后先剩2能量，再获得2能量，最终剩4能量，本牌进入弃牌堆。该回合格挡为5，不能把上一回合17格挡一起计算。</p>
+<p class="definition"><strong>同回合完成需要额外的格挡事件</strong><br>在0能量、2/3时，若牌池或已安装能力能够再提供一次有效格挡，即可完成并回2能量。这个格挡来源必须实际存在，不能在算例里凭空算作免费资源。</p>
+<p class="definition"><strong>多段小格挡和大块格挡的价值不同</strong><br>一口气获得15格挡只推进1；分三次各获得1格挡能完成0/3宣言。以获得格挡次数为条件，会改变玩家对多段牌和被动格挡的抓取价值。</p>
+</section><section id="hanging-review"><h2>强度取决于获得格挡的频率</h2><ul>
+<li>定位适合防御与回能引擎。1费7格挡让单卡先提供即时防御，任务完成则把防守转成后续行动；罕见定位值得测试，不必要求这张牌自己直接输出伤害。</li>
+<li>只比较本牌支付1与返还2，账面净回1能量，但不能把完成条件所需的其他卡牌费用、抽牌与时间省掉。因此它不是无条件免费格挡加回能。</li>
+<li>与按打牌数量结算的吟唱有不同的抓牌理由：本牌看重实际格挡事件的频率，一张多段格挡牌就可能独立推进多次，不要求多打几张。</li>
+<li>完成后弃牌使其成为可循环资源。高频格挡、过牌与反复抽到宣言的组合需要检查是否形成净正能量循环；这首先是组合评估问题，不能据此自动添加消耗或次数上限。</li>
+<li>同时悬挂的推进方式会显著影响强度。全体同步推进时，一次格挡可能同时结算多张任务、返还更多能量；只推进最早一张时则更强调排队顺序。两者不可混用同一强度结论。</li>
+</ul><h3>还未定下的规则</h3>
+<p class="definition"><strong>多张任务怎样推进</strong><span class="kind">已向用户询问，暂待回复。</span><br>一次格挡推进全部符合条件的宣言，还是只推进最早悬挂的一张。当前单张算例不依赖此答案。</p>
+<p class="definition"><strong>进度跨回合保留</strong><span class="kind">当前推演建议，未确认。</span><br>悬挂与进度一起保留比较自然；若每回合清零，此牌的启动与强度需要重新评估。</p>
+<p class="definition"><strong>回合外完成时的能量</strong><span class="kind">需要单独决定，尚未写成既定规则。</span><br>第3次格挡若发生在回合末或敌方阶段，立即加当前能量通常无法用来手动出牌。建议讨论将这2能量安排到下次可行动的玩家回合，在基础回能后发放；不默认它会自动保留。</p>
+<p class="definition"><strong>悬挂容量与满位处理</strong><span class="kind">用户尚未指定。</span><br>先展示单个宣言位置；不从“类似充能球”自行推导3槽、强制顶出或未完成时兑现。</p>
+<details class="basis"><summary>本地事件语义核对</summary><p>本地原版CreatureCmd.GainBlock在modifiedAmount为0时仍会调用AfterBlockGained；JuggernautPower会额外过滤amount&lt;=0。因而本任务在实现时必须判断真实正数格挡，不能只计回调次数。当前仅核对了事件语义，未实现任何游戏逻辑。</p></details></section>
+<details class="basis"><summary>前稿对照：回合挑战与气势（已被悬挂任务参考牌修正）</summary>
+<section id="independent-systems"><h2>两个体系可以各自成立</h2><p>用户以约定牌堆与闪耀为例，明确两个体系本身可以完全没有关系。角色可以同时容纳不同的玩法核心；不要求每套机制最终都增加爆裂伤害。独立性也不等于禁止共享普通抽牌、格挡或少量桥接牌。</p><p>当前魔力积蓄、吟唱与爆裂构成一个体系。上一轮专精与过载的主要输出仍绑定爆裂，因此先归入爆裂配套分支；不宣称三套独立体系已经成立。透支机制将来可以发展独立输出，但上一轮并未完成这件事。</p><aside class="recommendation"><p>检查独立候选时，拿掉积蓄、吟唱与爆裂，仍应能说明资源从哪里来、怎样打伤害、如何防守、怎样成长，以及玩家在作什么选择。这个检查用于本轮独立体系探索，不要求所有副轴都独立成为完整卡组。</p></aside></section>
+<section id="declaration-system"><h2>独立候选：红魔族宣言</h2><p class="note">前一版气势与回合挑战草案，保留作历史对照；用户现已提供悬挂任务式宣言参考牌，不再沿用首张限制与回合末判定。</p><p>先看手牌和敌人意图，决定这一回合要立什么宣言，再安排行动兑现承诺。完成宣言得到气势，气势用于直接攻击与防御；玩家经营的是主动选择的行动约束。</p>
+<p class="definition"><strong>宣言</strong><br>宣言牌只能作为本回合第一张打出的牌。打出时，从牌面提供的挑战中选择一项；在本回合结束时判断，成功则获得写明的奖励。失败没有奖励。第一张牌限制使玩家必须事先决定，不能在行动完成后补领奖励。</p>
+<p class="definition"><strong>第一张牌与挑战计数</strong><br>所有成功打出的牌均占用顺序；本样例未接入自动打牌。挑战计算本回合全部实际打出的牌，包括宣言本身；下面的宣言是技能牌，所以不增加攻击数量。每回合结束结算一次，随后清除当次宣言；不自动跨回合续订。</p>
+<p class="definition"><strong>气势（暂名）</strong><br>独立的战斗内资源，跨回合保留，战斗结束清零。本身不自动增加伤害或格挡，由具体卡牌花费。不存放卡牌，没有牌区或闪耀寿命。写明“消耗2气势”的牌需要至少2点才能打出；“消耗至多2”可在不足时消耗现有数量。</p>
+<div class="cards">
+<article class="card independent-card" id="independent-declare_name"><div class="card-top"><span class="energy">0</span><h4>吾名惠惠</h4></div><div class="meta">技能 · 机制样例</div><p>只能作为本回合第一张牌打出。<br><abbr title="宣言牌只能作为本回合第一张打出的牌。打出时，从牌面提供的挑战中选择一项；在本回合结束时判断，成功则获得写明的奖励。失败没有奖励。第一张牌限制使玩家必须事先决定，不能在行动完成后补领奖励。">宣言</abbr>：选择一项挑战。<br>① 本回合打出至少3张攻击牌。<br>② 本回合不打出攻击牌。<br>③ 本回合结束时剩余至少2点能量。<br>完成后，获得3点<abbr title="独立的战斗内资源，跨回合保留，战斗结束清零。本身不自动增加伤害或格挡，由具体卡牌花费。不存放卡牌，没有牌区或闪耀寿命。写明“消耗2气势”的牌需要至少2点才能打出；“消耗至多2”可在不足时消耗现有数量。">气势</abbr>。</p><details class="basis"><summary>用途与边界</summary><p>三项只选一项、奖励只结算一次。没有消耗，可以随牌库循环使用。第一项鼓励进攻，第二项容纳防御／安装能力，第三项用未花出的能量换取未来资源；是否过易，需要测试。</p></details></article>
+<article class="card independent-card" id="independent-genius_strike"><div class="card-top"><span class="energy">1</span><h4>天才一击</h4></div><div class="meta">攻击 · 机制样例</div><p>造成8点伤害。<br><abbr title="在战斗结束前移除。">消耗</abbr>至多2点<abbr title="独立的战斗内资源，跨回合保留，战斗结束清零。本身不自动增加伤害或格挡，由具体卡牌花费。不存放卡牌，没有牌区或闪耀寿命。写明“消耗2气势”的牌需要至少2点才能打出；“消耗至多2”可在不足时消耗现有数量。">气势</abbr>，每点使本次攻击额外造成5点伤害。</p><details class="basis"><summary>用途与边界</summary><p>结算时自动消耗最多2点气势，不弹出可选支付。没有气势仍可作为普通攻击；气势不足2则使用已有数量。</p></details></article>
+<article class="card independent-card" id="independent-pose_defense"><div class="card-top"><span class="energy">1</span><h4>摆好架势</h4></div><div class="meta">技能 · 机制样例</div><p>获得8点<abbr title="格挡抵消受到的伤害。">格挡</abbr>。<br>若你有尚未结算的<abbr title="宣言牌只能作为本回合第一张打出的牌。打出时，从牌面提供的挑战中选择一项；在本回合结束时判断，成功则获得写明的奖励。失败没有奖励。第一张牌限制使玩家必须事先决定，不能在行动完成后补领奖励。">宣言</abbr>，抽1张牌。</p><details class="basis"><summary>用途与边界</summary><p>支持先宣言再防守或寻找攻击牌。其他体系也能拿它当基本防御，不要求牌池隔绝。</p></details></article>
+<article class="card independent-card" id="independent-bold_response"><div class="card-top"><span class="energy">0</span><h4>高调应战</h4></div><div class="meta">技能 · 机制样例</div><p><abbr title="在战斗结束前移除。">消耗</abbr>2点<abbr title="独立的战斗内资源，跨回合保留，战斗结束清零。本身不自动增加伤害或格挡，由具体卡牌花费。不存放卡牌，没有牌区或闪耀寿命。写明“消耗2气势”的牌需要至少2点才能打出；“消耗至多2”可在不足时消耗现有数量。">气势</abbr>。<br>获得10点<abbr title="格挡抵消受到的伤害。">格挡</abbr>，抽2张牌。</p><details class="basis"><summary>用途与边界</summary><p>支付的是气势，不是消耗卡牌；这张牌普通进入弃牌堆。气势不足时不能打出。</p></details></article>
+<article class="card independent-card" id="independent-crimson_pride"><div class="card-top"><span class="energy">1</span><h4>红魔族的骄傲</h4></div><div class="meta">能力 · 机制样例</div><p>每当你完成<abbr title="宣言牌只能作为本回合第一张打出的牌。打出时，从牌面提供的挑战中选择一项；在本回合结束时判断，成功则获得写明的奖励。失败没有奖励。第一张牌限制使玩家必须事先决定，不能在行动完成后补领奖励。">宣言</abbr>，获得1点力量。</p><details class="basis"><summary>用途与边界</summary><p>提供战斗内持续成长，普通攻击可以独立兑现。它可以自然支持爆裂，但不以爆裂作为来源或必要出口。</p></details></article>
+</div></section>
+<section id="declaration-example"><h2>拿掉爆裂后，怎样完成两个回合</h2><p class="note">3基础能量，初始气势与力量均为0。全例没有魔力积蓄、吟唱或爆裂；指定手牌用于检验规则，不代表自然抽到的概率。</p><ol class="play-examples">
+<li>第1回合手牌：吾名惠惠、红魔族的骄傲、摆好架势、防御、天才一击。先宣言“不打出攻击牌”，再花3能量打出骄傲、架势、防御；抽到的牌不使用。获得13格挡，回合末获得3气势与1力量。</li>
+<li>第2回合手牌：吾名惠惠、天才一击、打击、打击、高调应战。先宣言“至少3张攻击”。</li>
+<li>重视防守：先用高调应战花2气势获得10格挡、抽2；再打天才一击，它消耗余下1气势，造成8+5+1=14伤害。两张打击各7伤害，共计28伤害、10格挡，能量与气势均为0。</li>
+<li>重视输出：不打高调应战，天才一击先花2气势，造成8+10+1=19伤害，再打两张打击，共33伤害、0格挡，保留1气势。</li>
+<li>两种选择都花3能量并完成3张攻击的宣言，回合末再获得3气势与1力量。成长与兑现可以在本体系内部继续。</li>
+</ol><p class="definition"><strong>可选桥接</strong><br>两个体系各自成立后，再考虑少量桥接。例如某张专用牌可以增加“吟唱期间打出4张牌”的宣言选项；这只是可选连接，不加入上面的基础挑战，也不要求每张宣言牌提到爆裂。</p><details class="basis"><summary>还需要验证什么</summary><ul>
+<li>挑战若总能无代价完成，就会退化为每回合固定领资源。需要检验三种选择是否真有不同的适用局面。</li>
+<li>宣言必须先打，会让回合中抽到的宣言暂时无法使用。牌池应控制宣言牌密度、评估检索与保留工具；不能先假设每回合都有宣言。</li>
+<li>不攻击的宣言可能鼓励反复拖延刷气势与力量。应观察敌人的成长压力和收益速度，不能凭两回合算例认定没有拖延问题。</li>
+<li>当前仅有一个宣言入口的五张种子牌，足以表达独立循环，尚不足以宣布成熟流派。未指定稀有度、升级、初始牌组或新增初始Buff。</li>
+</ul></details><p class="note">本地资料记录惠惠首次爆裂前报上姓名，红魔族的演说与自我表现提供题材。挑战条件、气势资源和兑现奖励都是Mod新设计，并非原作已有能力。 <a href="素晴爆裂魔法原作资料索引.html#p-b-first">本地资料定位</a></p></section>
+</details>
+<details class="basis"><summary>上一轮爆裂配套讨论：专精与透支</summary><p>这些卡牌仍可作为素材，不再据此声称已有三个独立体系。</p>
+<section id="battle-builds"><h2>上一轮：围绕爆裂的战斗计划分支</h2><p class="note">保留为上一轮配套讨论。当前专精与过载的主要兑现仍依赖爆裂，不能据此证明已经有两个独立体系。</p><p>保留现有的吟唱连打，再提出两条不同的战斗路线：爆裂专精经营整场战斗的持续威力，魔力透支经营现在与未来的能量预算。它们可以混搭，但应产生不同的抓牌与回合计划。</p><p class="note">魔力积蓄、0费爆裂、全部取回、回合末结算和吟唱期间不能再次打出爆裂，均保持用户原规则。新增收益只来自下列建议卡牌；不会自动给每次爆裂附加专精、透支或脱力惩罚。</p>
+<div class="table-scroll"><table class="deck-table comparison-table"><caption>比较整场战斗的计划</caption><thead><tr><th scope="col">路线</th><th scope="col">体验</th><th scope="col">经营的资源</th><th scope="col">付出的代价</th></tr></thead><tbody>
+<tr><td><a href="#build-chant">吟唱连打</a></td><td>把准备好的手牌压缩进一个连续行动的回合，追求越打越顺的一段长咏唱。</td><td>实际可打出的牌、抽牌、能量和一次性免费机会。</td><td>组合密度和兑现当轮的操作空间；如果只抽到增伤而没有可继续打出的牌，威力就上不去。</td></tr>
+<tr><td><a href="#build-mastery">爆裂专精</a></td><td>越打越像只会一招、但这一招越来越强的惠惠。后期不必每回合打很多牌，也能释放有分量的爆裂。</td><td>本场战斗的专精、前几回合的能量投入，以及到达强势期所需的防御。</td><td>前期输出较慢。只学这一招进一步放弃立即击杀小怪的攻击伤害，换取未来爆裂；并非自动应抓的通用稀有。</td></tr>
+<tr><td><a href="#build-debt">魔力透支</a></td><td>决定这一发是否值得把后面几回合押进去。成功时提前终结；失败时要靠事先安排的保护和少量回能度过空档。</td><td>尚未偿还的魔力债务、借来的当轮能量、下一回合的敌人意图与生存余量。</td><td>债务会真实压缩未来行动；不能只写“用完脱力”却不给出扣款规则。是否值得借用，取决于敌人能否在这一发之后继续行动。</td></tr>
+</tbody></table></div><h3>仅由新卡牌引入的规则</h3>
+<p class="definition"><strong>专精（新能力）</strong><br>每点专精使你的爆裂魔法额外造成1点伤害。持续至本场战斗结束，不随释放消耗，也不跨战斗保存。每次爆裂结算时读取当前值；这是角色身上的能力，不是某张原牌的成长。</p>
+<p class="definition"><strong>透支X（新关键词）</strong><br>立即获得X点能量，并增加X点魔力债务。从下回合开始，每回合恢复的基础能量先用于等额偿债；债务未清则继续留到后续回合。以3基础能量、5债务为例：下回合可用0能量、剩2债务；再下一回合可用1能量、债务清零。</p>
+<p class="definition"><strong>还债与其他回能</strong><br>还债只占用该回合原本要恢复的基础能量；咒文续接等卡牌提供的能量仍可使用。升级最大能量后的基础回能按新数值还债。延期偿还只跳过下一回合的一次扣款，不清除债务；多次施加同一个“下回合”效果不叠加成多回合。</p>
+<p class="definition"><strong>下一次爆裂的加成</strong><br>过载咒文在打出时记录当时的债务值。已有吟唱时直接加到当前这一次；否则留给下一次爆裂。允许叠加，释放后清除。之后还债不追溯减少已经记录的加成。</p>
 </section>
-<section id="choice"><p class="eyebrow">组合型 / 原方案：术式装填</p><h2>每一发，选择两种帮助</h2><p class="lead">增伤、防御、抽牌只能选两种。选择会同时改变预备阶段和释放结果。</p><div class="phase">
-<div><b>开始前 → 开始预备</b><p>花 2 能量进入预备，获得两个空位。</p></div>
-<div><b>预备中</b><p>用牌或花 1 能量装入“破 / 护 / 导”。不能重复；装满后可替换。下表说明三者的效果。</p></div>
-<div><b>释放时</b><p>基础是 24 点群伤，再结算选中的两种效果。释放后，两个位置都清空。</p></div>
+<section id="build-chant"><h2>吟唱连打</h2><p class="note">用户现有核心承载的主路线；回流与高费压缩仍是其配件。</p><p>把准备好的手牌压缩进一个连续行动的回合，追求越打越顺的一段长咏唱。</p><p class="definition"><strong>战斗计划</strong><br>压缩魔力准备牌组 → 爆裂取回 → 咒文续接补充资源 → 尽量多打牌。防御牌也能作为咒文的一部分。</p><p><strong>抓牌偏好：</strong>优先低费抽牌、回能、免费标记及回流一击；只提高一次伤害却打断运转的昂贵牌应慎取。</p><p>既有六张牌已经提供发动方式。这里只补一个出牌数量的兑现能力，不再把回流或压缩高费另算流派。</p><div class="cards">
+<article class="card battle-card" id="proposal-grand_chant"><div class="card-top"><span class="energy">1</span><h4>声势浩大</h4></div><div class="meta">能力 · 罕见建议 · 把已有连打引擎转成主输出</div><p>每次<abbr title="进入吟唱，取出所有魔力积蓄。在回合结束时，对所有敌人造成等同于吟唱期间打出卡牌数量的伤害。吟唱期间不能被打出。">爆裂魔法</abbr>结算时，<abbr title="记录进入吟唱后实际打出的牌数。取回的牌尚不计数；首次开启吟唱的爆裂本身不计数。回合末结算后清空。">吟唱</abbr>期间每打出过1张牌，额外造成2点伤害。</p><details class="basis"><summary>用途与规则</summary><p>一层能力将基础N伤害变为3N；专精等独立加成不会被乘3。这里明确是数字兑现配件，不把它宣传成新的体验。</p></details></article>
 </div>
-<div class="tablewrap"><table><caption>破、护、导是设计占位名，并非原作术语。</caption><thead><tr><th>选择</th><th>预备时已经生效</th><th>释放时获得</th></tr></thead><tbody><tr><td>破：增伤</td><td>每轮首张普通攻击额外造成 3 伤害（每目标首段）</td><td>爆裂伤害 +12</td></tr><tr><td>护：防御</td><td>每个敌人每轮首次攻击总伤害减少 2</td><td>12 点格挡</td></tr><tr><td>导：抽牌</td><td>每轮首张技能结算后抽 1 张牌</td><td>抽 2 张牌</td></tr></tbody></table></div><p class="note">首次完整挡住敌人的一次攻击时，本轮可自动装入护：需有空位且尚未装护。装入效果不追溯刚打出的牌，替换也不刷新本轮次数。</p>
-<article class="route"><div class="routehead"><h3>1. 进攻抽牌：破 + 导</h3><span>本核心中的一种构筑体系</span></div><p>要爆裂伤害，也要更多手牌继续操作。</p><div class="cards">
-<div class="card"><div class="meta">1 能量 · 攻击</div><h4>破式起笔</h4><p>造成5点伤害。装入破。</p><p class="purpose">作用：装入增伤效果。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>导式起笔</h4><p>抽1张牌。装入导。消耗。</p><p class="purpose">作用：装入抽牌效果。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>后半段交给我</h4><p>若已装导，抽2张牌。本次爆裂释放后，本回合结束时可保留2张牌。消耗。</p><p class="purpose">作用：把手牌留给后续回合。</p></div>
-</div><div class="example"><strong>怎么玩：</strong>先装破，再装导 → 预备中攻击与技能分别受益 → 释放 36 点群伤，再抽 2 张。</div><p class="cost"><strong>取舍：</strong>没有护的减伤和格挡，需要通用防御牌。</p></article>
-<article class="route"><div class="routehead"><h3>2. 攻守兼顾：破 + 护</h3><span>本核心中的一种构筑体系</span></div><p>保证爆裂伤害，同时保护预备与释放之后。</p><div class="cards">
-<div class="card"><div class="meta">1 能量 · 攻击</div><h4>破式起笔</h4><p>造成5点伤害。装入破。</p><p class="purpose">作用：补伤害并装入破。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>护式起笔</h4><p>获得5点格挡。装入护。</p><p class="purpose">作用：获得格挡并装入护。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>双重确认</h4><p>获得5点格挡。若已装破与护，下回合开始时获得9点格挡。</p><p class="purpose">作用：两种都齐时，提前安排下一回合格挡。</p></div>
-</div><div class="example"><strong>怎么玩：</strong>装破与护 → 双重确认 → 释放 36 点群伤，获得 12 格挡，下回合再得 9 格挡。</div><p class="cost"><strong>取舍：</strong>没有导的抽牌，需要另外补充过牌。</p></article>
-<article class="route"><div class="routehead"><h3>3. 防守运转：护 + 导</h3><span>本核心中的一种构筑体系</span></div><p>用较低的爆裂伤害，换安全和持续找牌。</p><div class="cards">
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>护式起笔</h4><p>获得5点格挡。装入护。</p><p class="purpose">作用：提供预备时的保护。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>导式起笔</h4><p>抽1张牌。装入导。消耗。</p><p class="purpose">作用：让预备和释放都能补牌。</p></div>
-<div class="card"><div class="meta">1 能量 · 技能</div><h4>护式转交</h4><p>保留。本次爆裂的护式格挡改为下回合开始时获得。消耗。</p><p class="purpose">作用：把释放时的格挡推迟到下回合。</p></div>
-</div><div class="example"><strong>怎么玩：</strong>装护与导 → 护式转交 → 释放 24 点群伤并抽 2 张，下回合获得 12 格挡。</div><p class="cost"><strong>取舍：</strong>牺牲破的 12 点增伤，适合更需要生存的战斗。</p></article>
+<aside class="recommendation"><h3>3能量算例 · 计入准备成本</h3><p class="note">沿用用户三张牌的原算例：3能量，压缩魔力存回流一击与防御；爆裂后依次续接、免费回流、免费防御、3张打击。声势浩大须此前另花1能量打出。</p><ol class="play-examples">
+<li>压缩魔力在吟唱前打出，不计本次出牌数。续接补1能量，抽到的两张牌为打击。</li>
+<li>吟唱内实际打出6张；返手和抽牌不计数。</li>
+</ol><p><strong>N=6；爆裂群伤18，直接攻击27，格挡5，剩余能量0。没有声势浩大时仍是原来的6群伤。</strong></p></aside><p><strong>取舍：</strong>组合密度和兑现当轮的操作空间；如果只抽到增伤而没有可继续打出的牌，威力就上不去。</p><details class="basis"><summary>原作主题与新增规则的区别</summary><ul>
+<li>咏唱的表演与施法熟练度提供题材；每张牌计数及倍率由Mod设计。 <a href="素晴爆裂魔法原作资料索引.html#s-chant">本地资料</a></li>
+</ul></details></section>
+<section id="build-mastery"><h2>爆裂专精</h2><p class="note">新路线提案：先投资持续威力，再用稳定防御把战斗打到收益出现。</p><p>越打越像只会一招、但这一招越来越强的惠惠。后期不必每回合打很多牌，也能释放有分量的爆裂。</p><p class="definition"><strong>战斗计划</strong><br>修炼获得初始专精 → 每日一爆推动长期增长 → 熟练施法把成长同时转为生存 → 每回合用小段咏唱稳定释放。</p><p><strong>抓牌偏好：</strong>愿意拿前期没有直接攻击输出的修炼与防御。专精尚未建立时，熟练施法是弱牌；建立后，它能成为防御核心。</p><p>积蓄存了几张、留了几回合，都不会自动增长专精。增长在角色身上，重点是投资与回报，而非经营卡牌位置或寿命。</p><div class="cards">
+<article class="card battle-card" id="proposal-explosion_training"><div class="card-top"><span class="energy">1</span><h4>爆裂修炼</h4></div><div class="meta">技能 · 普通建议 · 入口／缓解投入回合的防御压力</div><p>获得3点<abbr title="每点专精使你的爆裂魔法额外造成1点伤害。持续至本场战斗结束，不随释放消耗，也不跨战斗保存。每次爆裂结算时读取当前值；这是角色身上的能力，不是某张原牌的成长。">专精</abbr>。<br>获得5点<abbr title="格挡抵消受到的伤害。">格挡</abbr>。</p><details class="basis"><summary>用途与规则</summary><p>不消耗；可以随牌库循环继续投资。专精为战斗内成长，不能积到下一场。</p></details></article>
+<article class="card battle-card" id="proposal-daily_explosion"><div class="card-top"><span class="energy">1</span><h4>每日一爆</h4></div><div class="meta">能力 · 罕见建议 · 持续成长</div><p>每次<abbr title="进入吟唱，取出所有魔力积蓄。在回合结束时，对所有敌人造成等同于吟唱期间打出卡牌数量的伤害。吟唱期间不能被打出。">爆裂魔法</abbr>结算后，获得2点<abbr title="每点专精使你的爆裂魔法额外造成1点伤害。持续至本场战斗结束，不随释放消耗，也不跨战斗保存。每次爆裂结算时读取当前值；这是角色身上的能力，不是某张原牌的成长。">专精</abbr>。</p><details class="basis"><summary>用途与规则</summary><p>先结算本次伤害，随后增加专精，不能让第一发提前享受这2点。</p></details></article>
+<article class="card battle-card" id="proposal-practiced_casting"><div class="card-top"><span class="energy">1</span><h4>熟练施法</h4></div><div class="meta">技能 · 普通建议 · 成长兑现为防御／续牌</div><p>获得等同于你<abbr title="每点专精使你的爆裂魔法额外造成1点伤害。持续至本场战斗结束，不随释放消耗，也不跨战斗保存。每次爆裂结算时读取当前值；这是角色身上的能力，不是某张原牌的成长。">专精</abbr>的<abbr title="格挡抵消受到的伤害。">格挡</abbr>。<br>抽1张牌。</p><details class="basis"><summary>用途与规则</summary><p>没有专精时只抽1，不额外补一个保证收益。它有明确的抓取前提。</p></details></article>
+<article class="card battle-card" id="proposal-only_one_spell"><div class="card-top"><span class="energy">2</span><h4>只学这一招</h4></div><div class="meta">能力 · 稀有建议 · 改变整副牌用途的规则牌</div><p>除<abbr title="进入吟唱，取出所有魔力积蓄。在回合结束时，对所有敌人造成等同于吟唱期间打出卡牌数量的伤害。吟唱期间不能被打出。">爆裂魔法</abbr>外，你的攻击牌不再造成伤害。<br>每当你打出这些攻击牌，获得其基础耗能2倍的<abbr title="每点专精使你的爆裂魔法额外造成1点伤害。持续至本场战斗结束，不随释放消耗，也不跨战斗保存。每次爆裂结算时读取当前值；这是角色身上的能力，不是某张原牌的成长。">专精</abbr>。</p><details class="basis"><summary>用途与规则</summary><p>只取消攻击牌的伤害，抽牌、格挡、自行进入积蓄等其他效果保留；打出仍计吟唱数量。基础耗能读取当前升级状态下的固定费用，不受压缩免费影响；X费暂按0处理。回流一击因此变成可回流的修炼，9→12的伤害升级在此能力下失去价值。</p></details></article>
+</div>
+<aside class="recommendation"><h3>3能量算例 · 计入准备成本</h3><p class="note">3能量；此前2个回合已分别打出每日一爆与两次爆裂修炼，并释放2次爆裂：累计专精=3+3+2+2=10。相关能力／修炼此前共花3能量；本例从投入完成后开始。当前手牌：预备魔力、熟练施法、防御、防御、打击；熟练抽到的牌本回合不使用。</p><ol class="play-examples">
+<li>预备魔力存入一张防御，生成爆裂；爆裂取回它。</li>
+<li>打出熟练施法，获得10格挡并抽1；再打出两张防御。共花3能量，吟唱内3张牌。</li>
+</ol><p><strong>爆裂群伤=3+10=13；格挡=10+5+5=20。结算后每日一爆将专精提高到12。伤害与防御的主要收益已经不依赖长连打。</strong></p></aside><p><strong>取舍：</strong>前期输出较慢。只学这一招进一步放弃立即击杀小怪的攻击伤害，换取未来爆裂；并非自动应抓的通用稀有。</p><details class="basis"><summary>原作主题与新增规则的区别</summary><ul>
+<li>把技能点长期投入爆裂威力提供专精主题；战斗内专精数值与攻击转修炼均是新增规则。 <a href="素晴爆裂魔法原作资料索引.html#s-growth">本地资料</a></li>
+<li>长期练习支持成长感，不代表原作每次施法固定增加两点威力。 <a href="素晴爆裂魔法原作资料索引.html#s-practice">本地资料</a></li>
+</ul></details></section>
+<section id="build-debt"><h2>魔力透支</h2><p class="note">新路线提案：用后续回合的行动预算购买当轮爆发。</p><p>决定这一发是否值得把后面几回合押进去。成功时提前终结；失败时要靠事先安排的保护和少量回能度过空档。</p><p class="definition"><strong>战斗计划</strong><br>判断爆裂是否足以击杀 → 透支得到额外行动 → 过载咒文把债务转成当次威力 → 未能结束战斗时进入还债回合；掩护与延期提供应对选择。</p><p><strong>抓牌偏好：</strong>优先大幅透支、过载兑现、还债防御与延期。咒文续接在0基础能量的还债回合价值更高；普通无债务构筑不需要专门的还债能力。</p><p>原料是未来回合的能量，既不来自积蓄中的牌，也不靠制造与消耗状态牌。借来的能量不是无成本的常规回能。</p><div class="cards">
+<article class="card battle-card" id="proposal-extreme_supply"><div class="card-top"><span class="energy">0</span><h4>极限供能</h4></div><div class="meta">技能 · 普通建议 · 能量来源／同时补上可用手牌</div><p><abbr title="立即获得X点能量，并增加X点魔力债务。从下回合开始，每回合恢复的基础能量先用于等额偿债；债务未清则继续留到后续回合。以3基础能量、5债务为例：下回合可用0能量、剩2债务；再下一回合可用1能量、债务清零。">透支</abbr>3。<br>抽2张牌。<br><abbr title="在战斗结束前移除。">消耗</abbr>。</p><details class="basis"><summary>用途与规则</summary><p>立即+3能量并记3债务。单卡可帮连打，但没有击杀或还债方案时不能把它视作免费资源。</p></details></article>
+<article class="card battle-card" id="proposal-overloaded_spell"><div class="card-top"><span class="energy">1</span><h4>过载咒文</h4></div><div class="meta">技能 · 罕见建议 · 把借款变成决定胜负的一发</div><p>下一次<abbr title="进入吟唱，取出所有魔力积蓄。在回合结束时，对所有敌人造成等同于吟唱期间打出卡牌数量的伤害。吟唱期间不能被打出。">爆裂魔法</abbr>额外造成当前<abbr title="立即获得X点能量，并增加X点魔力债务。从下回合开始，每回合恢复的基础能量先用于等额偿债；债务未清则继续留到后续回合。以3基础能量、5债务为例：下回合可用0能量、剩2债务；再下一回合可用1能量、债务清零。">魔力债务</abbr>5倍的伤害。<br><abbr title="在战斗结束前移除。">消耗</abbr>。</p><details class="basis"><summary>用途与规则</summary><p>打出时快照；吟唱中立即加到当前这次爆裂。没有债务时额外伤害为0。</p></details></article>
+<article class="card battle-card" id="proposal-cover_retreat"><div class="card-top"><span class="energy">1</span><h4>留好后路</h4></div><div class="meta">能力 · 罕见建议 · 还债回合的防御</div><p>回合开始时，每偿还1点<abbr title="立即获得X点能量，并增加X点魔力债务。从下回合开始，每回合恢复的基础能量先用于等额偿债；债务未清则继续留到后续回合。以3基础能量、5债务为例：下回合可用0能量、剩2债务；再下一回合可用1能量、债务清零。">魔力债务</abbr>，获得4点<abbr title="格挡抵消受到的伤害。">格挡</abbr>。</p><details class="basis"><summary>用途与规则</summary><p>须先花能量安装；只有实际偿还才触发。延期那一回合既不扣能量，也不会获得这份格挡。</p></details></article>
+<article class="card battle-card" id="proposal-defer_repayment"><div class="card-top"><span class="energy">1</span><h4>延期偿还</h4></div><div class="meta">技能 · 稀有建议 · 改变爆发与低谷的时间安排</div><p>下回合不偿还<abbr title="立即获得X点能量，并增加X点魔力债务。从下回合开始，每回合恢复的基础能量先用于等额偿债；债务未清则继续留到后续回合。以3基础能量、5债务为例：下回合可用0能量、剩2债务；再下一回合可用1能量、债务清零。">魔力债务</abbr>。<br>抽2张牌。<br><abbr title="在战斗结束前移除。">消耗</abbr>。</p><details class="basis"><summary>用途与规则</summary><p>债务保留到再下一回合，不是免债。可以把极限爆发安排成连续两回合，但若仍未结束，后面的欠款都要付。</p></details></article>
+</div>
+<aside class="recommendation"><h3>3能量算例 · 计入准备成本</h3><p class="note">3能量，无预装能力。手牌为护身积蓄、极限供能、过载咒文、防御、打击；极限供能抽到另一张防御与打击。</p><ol class="play-examples">
+<li>护身积蓄花1能量，获得5格挡，存入防御并生成爆裂。爆裂取回防御，进入吟唱，剩2能量。</li>
+<li>极限供能使可用能量变5、债务变3，抽2；然后打出过载咒文、两张防御、两张打击，正好花完5能量。</li>
+<li>吟唱内共6张牌；过载记录3×5=15额外伤害。</li>
+</ol><p><strong>爆裂群伤=6+15=21；直接攻击12；格挡15；剩余能量0。若敌人存活，下回合3点基础能量全部还债，可用基础能量为0。本例没有预装留好后路，因此也没有额外12格挡。</strong></p></aside><p><strong>取舍：</strong>债务会真实压缩未来行动；不能只写“用完脱力”却不给出扣款规则。是否值得借用，取决于敌人能否在这一发之后继续行动。</p><details class="basis"><summary>原作主题与新增规则的区别</summary><ul>
+<li>释放后的魔力与体力空档提供风险主题；把未来能量提前借用是游戏化设计，不是原作已存在的法术规则。 <a href="素晴爆裂魔法原作资料索引.html#s-collapse">本地资料</a></li>
+<li>同伴保护支持留好后路的意象，不自动给惠惠添加其他种类的魔法。 <a href="素晴爆裂魔法原作资料索引.html#s-team">本地资料</a></li>
+</ul></details></section>
+<section id="build-choices"><h2>同一张牌，为什么会作不同选择</h2><div class="table-scroll"><table class="deck-table comparison-table"><thead><tr><th scope="col">局面</th><th scope="col">吟唱连打</th><th scope="col">爆裂专精</th><th scope="col">魔力透支</th></tr></thead><tbody>
+<tr><td>面前有回流一击的9→12伤害升级</td><td>常规连打仍珍惜9→12的直接伤害。</td><td>此时该升级失去伤害价值；更关注卡牌的基础耗能与能否重复使用。</td><td>短期击杀构筑通常不愿放弃攻击伤害，可能根本不拿这张能力。</td></tr>
+<tr><td>熟练施法出现在奖励中</td><td>没有专精来源时，1费只抽1，通常不值得占牌位。</td><td>已有持续专精时，它提供会成长的防御与续牌。</td><td>若不混入专精，它不能解决借款后的生存问题；更想要留好后路。</td></tr>
+<tr><td>本回合能借3能量，但爆裂后精英仍会存活</td><td>借款能延长连打，但必须计算后续能量损失，不能自动全借。</td><td>偏好继续用修炼与格挡成长，不为多打几张牌牺牲后续稳定。</td><td>检查过载是否足以击杀、是否已有掩护或延期；缺少后手时应放弃这次全力借款。</td></tr>
+<tr><td>吟唱中还剩1能量，手里有修炼与一般抽牌</td><td>优先能继续延长出牌链的抽牌。</td><td>修炼的3专精既增加当前爆裂，也持续影响之后每一发，且有5格挡。</td><td>如果过载尚未打出，优先兑现已经承担的债务；之后再考虑续牌。</td></tr>
+</tbody></table></div><p>允许混搭：连打可以借一点能量，专精也能受益于压缩；成长完成后可以透支完成最后一发。区分在于持续投资、承担什么代价和如何应对下一回合，不要求卡池彼此隔绝。原基础公式仍是N；装有一层声势浩大、S专精，并打过一次债务快照为L的过载时，原始群伤为3N+S+5L。</p><aside class="recommendation"><h3>哪些问题还需要验证</h3><ul>
+<li>优先纸面比较“专精守住局面”和“透支押当轮击杀”，因为它们代表相反的时间选择；连打作为现有对照，不再拆分。</li>
+<li>专精的风险是成为所有卡组无脑拿的通用力量。需要观察早期投入是否真实拖慢输出、熟练施法是否过早覆盖全部防御，以及只学这一招是否确实改变选牌。</li>
+<li>透支的风险是战斗结束逃掉未来代价，令极限供能成为所有构筑必抓。若这一点在小怪战测试中成立，应先降低借款／抽牌或调整费用，再判断能否成立独立路线；不能以“已经有代价”自证平衡。</li>
+<li>延期与留好后路不会在同一回合同时提供还债格挡，这是实质取舍。两种工具都必须计入取得与打出的成本。</li>
+<li>目前只核对了静态手牌、费用、计数与规则相容性；没有验证抽到组合的概率、整局强度、敌人具体伤害修正、X费牌体系或复制／自动打牌边界。</li>
+</ul></aside></section>
+</details>
+<details class="basis"><summary>已退出优先方向：驻留成长与脱力转化</summary><p>以下仅保留讨论过程；当前建议以上方战斗计划提案为准。</p>
+<section id="archetypes" aria-labelledby="archetypes-title"><h2 id="archetypes-title">修正流派判定：先让构筑决策不同</h2><p class="note">用户指出：“你这几个流派根本不算流派，太相近了。”撤回上轮“两条主路线＋高费副轴”的流派划分。</p><p>原来的连打、回流、高费压缩，都围绕存牌、减费、返手、出牌兑现运转。它们会争抢相近的抽牌和回能工具，且混在一起通常同时获益。把奖励从出牌数改到取回数，尚不足以证明构筑独立；上轮把配件差异当成了流派差异。</p><aside class="recommendation"><p>把原三组归入一个“积蓄运转”体系。额外探索驻留成长和脱力转化：前者用时间与暂时封存卡牌换成长，后者用牌库污染换即时资源，再把状态清理转成长期收益。两者都是新候选，不计作已成型流派。</p></aside>
+<div class="table-scroll"><table class="deck-table comparison-table"><caption>用资源投入和回合决策比较，不按增伤能力分组</caption><thead><tr><th scope="col">方向</th><th scope="col">核心资源或代价</th><th scope="col">行动选择</th></tr></thead><tbody>
+<tr><td><a href="#accumulation_engine">积蓄运转</a></td><td>手牌、能量与原牌循环。</td><td>为了当回合出牌尽早开启吟唱，同时留下下一轮的供牌；免费名额按收益选择。</td></tr>
+<tr><td><a href="#resident_growth">驻留成长</a></td><td>核心牌留在积蓄区内的回合数，以及因此放弃的当前可用牌和爆裂机会。</td><td>能安全度过当前回合时，可能主动不打爆裂，让核心牌再成长一次；需要斩杀或关键牌救场时才取回。</td></tr>
+<tr><td><a href="#exhaustion_conversion">脱力转化</a></td><td>状态牌占用抽牌和手牌的负担，以及消耗这些状态牌的机会。</td><td>取决于剩余牌库、敌人压力与清理牌位置，决定是否提前透支，何时清掉状态，或先把状态存起来等清理。</td></tr>
+</tbody></table></div><details class="basis"><summary>新候选怎样才算成立</summary><ul>
+<li>同一张牌是否会有明显不同的抓取价值？如果各组都优先拿同一批免费、抽牌、回能牌，只换增伤能力，仍应合并。</li>
+<li>能否指出可比较局面下不同的最佳行动？例如立即开爆裂取回手牌，与为了成长继续把核心牌留在积蓄中。</li>
+<li>专属收益究竟需要哪些专属投入？只换奖励数字不够；留存需要牺牲可用卡牌与施放时机，状态转化需要主动承担污染及清理卡位。</li>
+<li>每个候选是否具备原料、兑现、维持运转的牌间需求？通用防御和抽牌可以共用，但不能把尚未补齐的候选宣称成成熟流派。</li>
+</ul></details></section>
+<section id="accumulation_engine" aria-labelledby="title-accumulation_engine"><h2 id="title-accumulation_engine">积蓄运转</h2><p class="note">现有共同体系：原三组配件全部合并</p><p class="definition"><strong>资源循环</strong><br>存牌与减费 → 爆裂取回 → 抽牌回能、连续打出 → 把可循环的牌存给下一轮。</p><p><strong>抓牌变化：</strong>压缩魔力、咒文续接、回流一击以及普通抽牌和防御。高费目标是压缩的用途，不单独命名为流派。</p><p><strong>区分是否成立：</strong>没有成长牌或状态转化收益时，不值得为了名义上的流派去主动等待或污染牌库。</p>
+<p class="note">与现有核心的连接：它可为其他候选提供取回与费用支持；通用工具共享，不等于所有专属投入也应共享。</p><aside class="recommendation"><h3>尚未解决</h3><p>已有核心与用户配套牌；还需要验证前期生存、长战续航及爆裂输出的占比。原九张配件仍可作为素材，但不再证明三个流派成立。</p></aside>
 </section>
-<section id="keyword"><h2>“咏唱”放在哪里？</h2><p>它是可以加入上述任一方案的<strong>卡牌关键字</strong>，不是第四套核心。</p><aside class="common"><p><strong>咏唱：获得 6 点格挡。</strong><br>已经在预备中：立刻获得。<br>还没进入预备：记下这份效果，下次进入预备时获得一次。</p></aside><p class="note">同一效果只触发一次；多份效果按登记顺序触发，战斗结束清空。这里展示的是新增关键字用法，上面 27 个样例牌展示位沿用原卡表效果，没有偷偷改成延后触发。</p><p>可以用达克妮丝的形象承载格挡、和真的形象承载抽牌、阿库娅的形象承载恢复。队友帮助惠惠准备和善后，主要输出仍交给爆裂。</p></section>
-<section id="recommend"><h2>我推荐先做①，再考虑②。</h2><p class="lead"><strong>①最容易看懂，也最容易表现惠惠“准备一发大爆裂”的感觉。</strong>快速爆裂、防守蓄力、单发重击，三条路线的区别能直接从出牌方式看出来。</p><p>如果你更喜欢每回合精打细算能量与手牌，选②。③更擅长临场组合，但要同时记住三种预备效果和三种释放效果，理解负担最大，而且占位名还需要重新包装。</p><p class="note">这是设计判断，不是测试结论。三条路线目前是构筑草案，还不能算三套已经验证可独立通关的牌组。</p>
-<details><summary>少量共同读牌规则</summary><ul><li>“消耗”：这张牌本场战斗不再进入正常抽牌循环；“保留”：回合结束仍留在手中。</li><li>只有准备效果的牌，需要先进入预备。兼有格挡、攻击、抽牌的牌，预备外仍可使用其普通部分。</li><li>本次增伤、投入、装入效果在释放后清空；普通能力牌按其文本持续生效。</li><li>“每轮”指你的回合开始到下个回合开始前。等级、投入和术式等只属于各自方案，不能混装。</li><li>自动释放发生在跨过两次敌人行动后的玩家回合开始；先处理该方案自然升级，再释放，之后正常刷新能量与抽牌。脱力与余波在释放后的下个玩家回合生效。</li><li>同名的单次爆裂修饰默认不叠加，文中连招均使用不同修饰。</li></ul></details></section>
-<footer>依据：<a href="惠惠爆裂三阶段设计.html">原完整设计</a> · <a href="参考资料/原作名词与命名素材.md">原作名词资料</a><br>样例牌效果来自现有卡表；牌名多为临时设计名，不代表原作技能名称。规则与数值均为 Mod 原创草案。<br>3 个备选核心 · 9 条构筑路线 · 每条 3 张样例牌（不同路线可共用同一张牌）。</footer></main></body></html>
+<section id="resident_growth" aria-labelledby="title-resident_growth"><h2 id="title-resident_growth">驻留成长</h2><p class="note">候选：用暂时封存与延迟释放换单卡成长</p><p class="definition"><strong>资源循环</strong><br>把可成长的核心牌存入 → 用手上其他牌维持防御 → 结算区内成长 → 判断是否值得继续等待 → 爆裂全部取回并兑现。</p><p><strong>抓牌变化：</strong>有区内成长文字的少量核心牌、独立防御与减伤、帮助找到并存入这些核心牌的工具。更多0费牌本身不会加快每回合一次的成长。</p><p><strong>区分是否成立：</strong>爆裂会取回全部积蓄，无法一边每回合取回整套牌、一边继续让原核心留在区内成长。若开爆裂后立刻重新存入也毫无代价，则区分失败，需要调整成长条件。</p>
+<h3>用于推演的机制种子 · 费用与数值均待验证</h3><div class="cards">
+<article class="card direction-seed"><div class="card-top"><span class="energy">1</span><h4>蓄势咒文</h4></div><div class="meta">技能候选</div><p><abbr title="只有已经处于吟唱状态时，才执行冒号后的效果；这个前缀不会开启吟唱。">吟唱：</abbr>本次<abbr title="进入吟唱，取出所有魔力积蓄。在回合结束时，对所有敌人造成等同于吟唱期间打出卡牌数量的伤害。吟唱期间不能被打出。">爆裂魔法</abbr>额外造成6点伤害。<br>回合结束时，若这张牌从本回合开始时起一直位于<abbr title="选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。">魔力积蓄</abbr>中，其额外伤害增加6点，持续到本场战斗结束。</p><details class="basis"><summary>建议口径</summary><p>只计算完整驻留的回合，避免每轮取回再存入仍免费成长。新存入当轮不成长，取回不清空已经获得的成长；例：存入后完整留存2回合，再打出时额外伤害为18。成长跟随这一张原牌，不提升全部同名牌。</p></details></article>
+<article class="card direction-seed"><div class="card-top"><span class="energy">1</span><h4>稳固阵地</h4></div><div class="meta">能力候选</div><p>回合结束时，若<abbr title="选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。">魔力积蓄</abbr>中至少有3张牌，获得8点<abbr title="格挡抵消受到的伤害。">格挡</abbr>。</p><details class="basis"><summary>建议口径</summary><p>为封存卡牌提供持续防御，鼓励保持库存；8是试验数值。此牌也能供通用积蓄使用，不能仅凭它另立格挡流。</p></details></article>
+</div>
+<p class="note">与现有核心的连接：压缩可以帮成长后的大效果兑现，但“原牌下次0费”不会让驻留回合流逝得更快。取回后马上存回，本轮不能获得完整驻留成长。</p><aside class="recommendation"><h3>尚未解决</h3><p>目前只是一个改变节奏的候选种子。还缺第二种不重复文本的成长来源或兑现方式，以及能支持等待的完整防御构筑。要测试等待是否无聊、成长是否太慢、免费牌能否消除封存代价。</p></aside>
+<details class="basis"><summary>原作意象与改编界线</summary><ul>
+<li>专精爆裂、把成长投入威力可提供主题。牌在区内每完整驻留一回合固定成长是Mod新增规则。 <a href="素晴爆裂魔法原作资料索引.html#s-growth">本地资料定位</a></li>
+</ul></details>
+</section>
+<section id="exhaustion_conversion" aria-labelledby="title-exhaustion_conversion"><h2 id="title-exhaustion_conversion">脱力转化</h2><p class="note">候选：主动制造状态负担，再用清理体系兑现</p><p class="definition"><strong>资源循环</strong><br>用透支牌换即时能量并制造脱力 → 抽到或存入这些状态 → 用清理牌消耗 → 获得防御、续牌和长期爆裂增伤。</p><p><strong>抓牌变化：</strong>有明确状态代价的高收益牌、定向消耗状态的清理牌、状态清理收益。无清理体系时，制造脱力是实质缺点；有清理收益时这些牌才可能成为核心原料。</p><p><strong>区分是否成立：</strong>即使本轮打牌不多，状态被消耗后留下的增伤也能强化以后每次爆裂。构筑要解决的是污染与清理能力的比例，不是尽可能增加当前吟唱的出牌数。</p>
+<h3>用于推演的机制种子 · 费用与数值均待验证</h3><div class="cards">
+<article class="card direction-seed"><div class="card-top"><span class="energy">—</span><h4>脱力</h4></div><div class="meta">衍生状态候选</div><p><abbr title="不能被打出的牌无法被打出。">不能被打出</abbr>。</p><details class="basis"><summary>建议口径</summary><p>没有虚无或保留，按普通状态牌弃牌、洗回；不自动减少抽牌数或跳过回合。仅由选择使用的新候选牌生成，不给基础爆裂追加脱力惩罚。</p></details></article>
+<article class="card direction-seed"><div class="card-top"><span class="energy">0</span><h4>榨干魔力</h4></div><div class="meta">技能候选</div><p>获得2点能量。<br>将2张脱力加入弃牌堆。<br><abbr title="在战斗结束前移除。">消耗</abbr>。</p><details class="basis"><summary>建议口径</summary><p>收益先拿、污染通常在之后抽到。未成型时必须与既有咒文续接比较，确认代价有足够回报，而不是强迫玩家拿差牌。</p></details></article>
+<article class="card direction-seed"><div class="card-top"><span class="energy">1</span><h4>恢复行动</h4></div><div class="meta">技能候选</div><p>选择手牌或<abbr title="选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。">魔力积蓄</abbr>中的至多2张状态牌，<abbr title="在战斗结束前移除。">消耗</abbr>它们。<br>每<abbr title="在战斗结束前移除。">消耗</abbr>1张，获得5点<abbr title="格挡抵消受到的伤害。">格挡</abbr>，抽1张牌。</p><details class="basis"><summary>建议口径</summary><p>只消耗状态，不能用普通技能凑数。清理积蓄中的状态不算取回或打出；因此连接到既有牌区时也有不同用途。</p></details></article>
+<article class="card direction-seed"><div class="card-top"><span class="energy">1</span><h4>突破极限</h4></div><div class="meta">能力候选</div><p>每当你<abbr title="在战斗结束前移除。">消耗</abbr>1张状态牌，本场战斗中<abbr title="进入吟唱，取出所有魔力积蓄。在回合结束时，对所有敌人造成等同于吟唱期间打出卡牌数量的伤害。吟唱期间不能被打出。">爆裂魔法</abbr>额外造成3点伤害。</p><details class="basis"><summary>建议口径</summary><p>持续增伤只因状态实际被消耗而增加；存入、取回、普通弃牌都不触发。爆裂与咒文续接自身是攻击／技能，消耗它们不触发。重复消耗已经离区的同一张牌不能再计一次。</p></details></article>
+</div>
+<p class="note">与现有核心的连接：积蓄能暂时把状态隔离出正常抽牌循环，但爆裂会全部取回。状态流可以直接消耗区内状态，拿到专属收益；把状态长期藏起来本身没有转化收益。</p><aside class="recommendation"><h3>尚未解决</h3><p>原料、清理与专属收益已有可推演的雏形，仍缺原料和清理牌的密度验证。需测试状态堵死、敌人提供状态导致收益过高，以及免费回能后的短牌组循环。</p></aside>
+<details class="basis"><summary>原作意象与改编界线</summary><ul>
+<li>施法后消耗魔力与体力、出现脱力提供代价主题；原作没有这套状态牌、抽牌污染与消耗增伤公式。 <a href="素晴爆裂魔法原作资料索引.html#s-collapse">本地资料定位</a></li>
+<li>少量补魔恢复行动可提供恢复题材；不等于原作越疲惫越能增强爆裂。 <a href="素晴爆裂魔法原作资料索引.html#s-transfer">本地资料定位</a></li>
+</ul></details>
+</section>
+<aside class="recommendation"><h3>下一轮验证重点</h3><p>参考原版与Karen的实际卡牌关系，先明确每个候选的来源、运转、输出、防御与兑现方式，再比较同一张待选牌及同一回合局面下的不同决策。驻留成长和脱力转化均继续待验证，不预先确定脱力优先，也不以新增关键词或限制替代构筑证明。</p><p class="note">本轮撤回流派判定，保留用户已给的积蓄、0费爆裂、吟唱限制与三张配套牌。上述成长、脱力及候选牌均为建议，没有成为通用职业惩罚或已确认关键词。</p></aside>
+</details>
+<details class="basis"><summary>上轮九张配件素材（流派划分已撤回）</summary>
+<section id="component-materials" aria-labelledby="component-materials-title"><h2 id="component-materials-title">原九张配件素材 · 不作为独立流派</h2><p class="note">流派判定已撤回。三组归入同一个积蓄运转体系；保留卡牌、算例作为未定稿素材。</p>
+<aside class="recommendation"><h3>配件归类</h3><p>连打、回流与高费压缩只是当前积蓄运转体系里的配合方式，不再称两条主流派或独立副流派。</p></aside><p>现有三牌组合对单体提供27点直接攻击与6点爆裂伤害，曾据此建议补爆裂增伤、防御和持续运转。这是配件需求，不能推出多个独立流派；群体战总输出也不能直接用这两个数字比较。</p><p class="note">曾以N和R监听不同来区分流派，但抓牌偏好与操作链仍高度重合；用户指出后撤回该结论。下面的数值算例只说明卡牌组合，不证明流派独立。</p>
+<div class="table-scroll"><table class="deck-table comparison-table"><caption>配件作用与归类</caption><thead><tr><th scope="col">分组</th><th scope="col">使用目的</th><th scope="col">收益来自什么</th><th scope="col">当前判断</th></tr></thead><tbody>
+<tr><td><a href="#chant_chain">连打配件</a></td><td>尽早开吟唱，把能量与抽牌转化为尽可能长的连段。</td><td>吟唱期间实际打出的牌数 N。</td><td>同一积蓄运转体系内的配件组，非独立流派</td></tr>
+<tr><td><a href="#storage_cycle">回流配件</a></td><td>把好牌送进积蓄，下一轮稳定取回；通过反复准备与释放维持输出和防御。</td><td>原牌进入积蓄的事件，以及爆裂实际取回的牌数 R。</td><td>同一积蓄运转体系内的配件组，非独立流派</td></tr>
+<tr><td><a href="#compressed_heavy">高费目标配件</a></td><td>为高费用、高回报的牌安排下一次免费打出，用较少出牌完成较大的效果。</td><td>压缩指定原牌的下次费用；可选收益监听基础费用，而非本次实际支付费用。</td><td>同一积蓄运转体系内的配件组，非独立流派</td></tr>
+</tbody></table></div><details class="basis"><summary>现有六张牌分别支持什么</summary><div class="table-scroll"><table class="deck-table comparison-table"><thead><tr><th scope="col">牌</th><th scope="col">角色</th><th scope="col">判定原因</th></tr></thead><tbody>
+<tr><td>爆裂魔法</td><td>共同入口与终结</td><td>取回全部积蓄并开启计数；既服务大量出牌，也服务原牌回流。</td></tr>
+<tr><td>压缩魔力</td><td>连接牌／高费副轴的种子</td><td>两张下次0费同时解决连打数量、回流兑现和高费负担；单独一张减费牌尚不是高费流。</td></tr>
+<tr><td>咒文续接</td><td>连打运转</td><td>0费回能抽2扩大本轮连段；消耗限制它在长战中的持续性。</td></tr>
+<tr><td>回流一击</td><td>回流来源与直接输出</td><td>打完进入积蓄，减少对洗牌的依赖；开吟唱前后各打一次，但本身暂不生成爆裂。</td></tr>
+<tr><td>预备魔力</td><td>共同积蓄入口（建议牌）</td><td>0费完成存牌、补爆裂；缺少独立收益，不足以单独定义流派。</td></tr>
+<tr><td>护身积蓄</td><td>共同防御与积蓄入口（建议牌）</td><td>防御时准备下轮，能接上入区收益；尚不是独立格挡流。</td></tr>
+</tbody></table></div></details></section>
+<section id="chant_chain" aria-labelledby="title-chant_chain"><h2 id="title-chant_chain">连打配件</h2><p class="note">同一积蓄运转体系内的配件组，非独立流派</p><p><strong>尽早开吟唱，把能量与抽牌转化为尽可能长的连段。</strong></p>
+<p class="definition"><strong>核心循环</strong><br>先积蓄并压缩费用 → 开吟唱 → 回能、抽牌、继续出牌 → 同时获得格挡与爆裂增伤 → 回合末结算。</p><p><strong>抓牌理由：</strong>优先咒文续接、低费抽牌、能自行替换手牌的技能；删除难以在连段中使用的高费空转牌。高费牌只有能被压缩且回报足够时才进入构筑。</p><p class="note">输出由爆裂升调补足，防御由咏唱屏障随出牌产生；连缀咒文提供可重复抽牌，降低对消耗牌的依赖。</p>
+<h3>三张候选配件 · 数值待测试</h3><div class="cards">
+<article class="card archetype-card" id="candidate-chain_draw"><div class="card-top"><span class="energy" aria-label="1费建议">1</span><h4>连缀咒文</h4></div><div class="meta">技能 · 普通建议 · 基础／持续抽牌</div><p>抽2张牌。<br><abbr title="只有已经处于吟唱状态时，才执行冒号后的效果；这个前缀不会开启吟唱。">吟唱：</abbr>额外抽1张牌。</p><details class="basis"><summary>定位与规则备注</summary><p>非吟唱时也能正常运转；不会开启吟唱，不消耗。</p></details></article>
+<article class="card archetype-card" id="candidate-chant_guard"><div class="card-top"><span class="energy" aria-label="1费建议">1</span><h4>咏唱屏障</h4></div><div class="meta">能力 · 罕见建议 · 防御收益</div><p><abbr title="记录进入吟唱后实际打出的牌数。取回的牌尚不计数；首次开启吟唱的爆裂本身不计数。回合末结算后清空。">吟唱</abbr>期间，每打出3张牌，获得4点<abbr title="格挡抵消受到的伤害。">格挡</abbr>。</p><details class="basis"><summary>定位与规则备注</summary><p>监听本轮吟唱计数的3、6、9…节点；能力必须在节点发生前生效，不补发过去的收益。</p></details></article>
+<article class="card archetype-card" id="candidate-rising_explosion"><div class="card-top"><span class="energy" aria-label="2费建议">2</span><h4>爆裂升调</h4></div><div class="meta">能力 · 罕见建议 · 核心／爆裂收益</div><p><abbr title="记录进入吟唱后实际打出的牌数。取回的牌尚不计数；首次开启吟唱的爆裂本身不计数。回合末结算后清空。">吟唱</abbr>期间，每打出3张牌，本次<abbr title="进入吟唱，取出所有魔力积蓄。在回合结束时，对所有敌人造成等同于吟唱期间打出卡牌数量的伤害。吟唱期间不能被打出。">爆裂魔法</abbr>额外造成4点伤害。</p><details class="basis"><summary>定位与规则备注</summary><p>与屏障共用吟唱计数；增伤仅供本次回合末爆裂，不跨回合保存。它是核心收益牌，不是规则突破牌。</p></details></article>
+</div>
+<aside class="recommendation"><h3>独立算例 · 已计入准备成本</h3><p class="note">两张能力已在此前回合生效，安装共花3能量。本回合3能量，沿用现有三牌组合：压缩存回流与防御 → 爆裂 → 续接 → 免费回流 → 免费防御 → 三张打击。抽到的两张为打击。</p><p>吟唱中打6张：爆裂6＋4×2＝14点群伤；直接攻击27点（回流升级为30）；格挡5＋4×2＝13点；剩余0能量。</p></aside><p><strong>路线取舍：</strong>关键问题是“这张牌能不能让连段继续，以及是否值得凑到下一个3张节点”。同时抽到回能与抽牌时强，断抽或启动能量不足时弱。</p><details class="basis"><summary>风险与原作意象</summary><p>连打收益如果只给额外直接攻击，会削弱爆裂作为终结的存在感。两张能力同时到手还会挤占启动回合；应分别测试只有一张能力与完全未成型的牌组。</p><ul>
+<li>本地索引定位正篇17第1章：咏唱用于稳定与增幅魔法。改编为连段收益有主题依据，但每3张加4是Mod试验数值。 <a href="素晴爆裂魔法原作资料索引.html#s-chant">本地原作定位</a></li>
+<li>寄道1第3章的安心施法依赖前排保护，可支持防御配件的意象；原作没有“念3句获得护盾”的规则。 <a href="素晴爆裂魔法原作资料索引.html#s-team">本地原作定位</a></li>
+</ul><p>以上原作定位来自本地译文整理；规则与数值为Mod改编。</p></details></section>
+<section id="storage_cycle" aria-labelledby="title-storage_cycle"><h2 id="title-storage_cycle">回流配件</h2><p class="note">同一积蓄运转体系内的配件组，非独立流派</p><p><strong>把好牌送进积蓄，下一轮稳定取回；通过反复准备与释放维持输出和防御。</strong></p>
+<p class="definition"><strong>核心循环</strong><br>回流攻击／回流抽牌／手牌积蓄 → 入区时获得防御 → 爆裂取回并锁定额外伤害 → 再把核心牌送回积蓄，为下一轮准备。</p><p><strong>抓牌理由：</strong>优先回流一击、自行入区的抽牌牌和低成本积蓄入口；需要能持续补爆裂的入口，不只收集回流攻击。压缩是好连接牌，但不要求拿到压缩才能运作。</p><p class="note">回流一击提供直接攻击，集束爆裂把取回数量转成爆裂威力；守护预备奖励存牌，反复推敲让少数原牌持续运转。</p>
+<h3>三张候选配件 · 数值待测试</h3><div class="cards">
+<article class="card archetype-card" id="candidate-prepared_guard"><div class="card-top"><span class="energy" aria-label="1费建议">1</span><h4>守护预备</h4></div><div class="meta">能力 · 罕见建议 · 防御收益</div><p>每当1张牌进入<abbr title="选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。">魔力积蓄</abbr>，获得4点<abbr title="格挡抵消受到的伤害。">格挡</abbr>。<br>每回合最多触发2次。</p><details class="basis"><summary>定位与规则备注</summary><p>魔力积蓄2按两张牌触发；自行入区也触发。能力生效前的移动不补发，取回不触发。重复能力叠加格挡数值，不增加每回合次数。</p></details></article>
+<article class="card archetype-card" id="candidate-rehearsal"><div class="card-top"><span class="energy" aria-label="1费建议">1</span><h4>反复推敲</h4></div><div class="meta">技能 · 罕见建议 · 基础／回流抽牌</div><p>抽2张牌。<br>将这张牌放入<abbr title="选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。">魔力积蓄</abbr>。</p><details class="basis"><summary>定位与规则备注</summary><p>仿照回流一击移动原牌，不复制、不额外生成爆裂。先打它再开吟唱可取回再打；吟唱中打后存给下一回合。</p></details></article>
+<article class="card archetype-card" id="candidate-concentrated_explosion"><div class="card-top"><span class="energy" aria-label="2费建议">2</span><h4>集束爆裂</h4></div><div class="meta">能力 · 罕见建议 · 核心／取回收益</div><p><abbr title="进入吟唱，取出所有魔力积蓄。在回合结束时，对所有敌人造成等同于吟唱期间打出卡牌数量的伤害。吟唱期间不能被打出。">爆裂魔法</abbr>每从<abbr title="选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。">魔力积蓄</abbr>取回1张牌，额外造成3点伤害。</p><details class="basis"><summary>定位与规则备注</summary><p>在爆裂取回时记录本次额外伤害，回合末一起结算；无需把取回的牌打出。能力须在取回前生效，不追补已经发生的取回。</p></details></article>
+</div>
+<aside class="recommendation"><h3>独立算例 · 已计入准备成本</h3><p class="note">两张能力已在此前回合生效，安装共花3能量。积蓄里有反复推敲、回流一击、防御；本回合3能量，手持爆裂、护身积蓄与1张普通牌。爆裂取回3张 → 推敲抽2并入区 → 回流攻击并入区 → 护身积蓄把防御存回并补一张本轮不能打出的爆裂。</p><p>吟唱中打3张、取回3张：爆裂3＋3×3＝12点群伤；直接攻击9点（升级12）；格挡4×2＋5＝13点；剩余0能量。积蓄里重新有3张牌，并留有下轮爆裂。</p></aside><p><strong>路线取舍：</strong>先打再收回、早点开吟唱、当前使用或留给下一轮，都是同一积蓄运转体系的内部取舍。取回收益与出牌收益可以区别卡牌用途，但目前不足以证明独立构筑。</p><details class="basis"><summary>风险与原作意象</summary><p>集束爆裂有意奖励“取回”，取回后不打也有3R额外伤害。因此状态、诅咒若允许存入，也可成为取回收益，但会重新占据手牌。先验证这种清理坏牌后又取回的取舍；若变成无成本囤积，再调整候选收益，不能悄悄修改用户的积蓄范围。</p><ul>
+<li>本地索引定位爆焰1第5—6章：长期练习同一咒文。它提供反复磨练的角色主题；原牌回流是卡牌游戏改编，不是原作循环回蓝设定。 <a href="素晴爆裂魔法原作资料索引.html#s-practice">本地原作定位</a></li>
+<li>正篇9序章继续把成长投入爆裂威力，支持让长期准备最终兑现为爆裂收益。 <a href="素晴爆裂魔法原作资料索引.html#s-growth">本地原作定位</a></li>
+</ul><p>以上原作定位来自本地译文整理；规则与数值为Mod改编。</p></details></section>
+<section id="compressed_heavy" aria-labelledby="title-compressed_heavy"><h2 id="title-compressed_heavy">高费目标配件</h2><p class="note">同一积蓄运转体系内的配件组，非独立流派</p><p><strong>为高费用、高回报的牌安排下一次免费打出，用较少出牌完成较大的效果。</strong></p>
+<p class="definition"><strong>核心循环</strong><br>压缩两张高费目标 → 爆裂取回 → 免费打出 → 用剩余能量补连打或继续积蓄。</p><p><strong>抓牌理由：</strong>需要能被压缩的高价值目标，以及少量即使暂时没抽到压缩也付得起费用的牌；牌组堆满3费会放大启动失败。</p><p class="note">重型咒节提供爆裂增伤，厚重咒文提供防御与抽牌，魔力折叠奖励基础费用。现阶段它们是压缩的目标与收益素材，不再单独判为流派。</p>
+<h3>三张候选配件 · 数值待测试</h3><div class="cards">
+<article class="card archetype-card" id="candidate-heavy_verse"><div class="card-top"><span class="energy" aria-label="3费建议">3</span><h4>重型咒节</h4></div><div class="meta">技能 · 罕见建议 · 高费目标／爆裂收益</div><p><abbr title="只有已经处于吟唱状态时，才执行冒号后的效果；这个前缀不会开启吟唱。">吟唱：</abbr>本次<abbr title="进入吟唱，取出所有魔力积蓄。在回合结束时，对所有敌人造成等同于吟唱期间打出卡牌数量的伤害。吟唱期间不能被打出。">爆裂魔法</abbr>额外造成12点伤害。</p><details class="basis"><summary>定位与规则备注</summary><p>未吟唱时无效果；它是依赖核心的终结配件，不是前期入口。取回与存入都不触发这个增伤，仍须打出。</p></details></article>
+<article class="card archetype-card" id="candidate-weighty_words"><div class="card-top"><span class="energy" aria-label="3费建议">3</span><h4>厚重咒文</h4></div><div class="meta">技能 · 罕见建议 · 高费目标／防御运转</div><p>获得18点<abbr title="格挡抵消受到的伤害。">格挡</abbr>。<br>抽2张牌。</p><details class="basis"><summary>定位与规则备注</summary><p>独立打出可换取防御和补牌，压缩后节省3能量。单看此牌只是功能牌，需与免费目标选择形成构筑关系。</p></details></article>
+<article class="card archetype-card" id="candidate-mana_fold"><div class="card-top"><span class="energy" aria-label="1费建议">1</span><h4>魔力折叠</h4></div><div class="meta">能力 · 罕见建议 · 高费收益候选</div><p>每回合首次在<abbr title="记录进入吟唱后实际打出的牌数。取回的牌尚不计数；首次开启吟唱的爆裂本身不计数。回合末结算后清空。">吟唱</abbr>期间打出基础费用不低于2的牌时，抽2张牌。</p><details class="basis"><summary>定位与规则备注</summary><p>基础费用按该牌当前升级版本的原始费用判断，不看临时减费和实付费用；本轮暂不为X费规定基础值。安装之后才监听，不补发之前的出牌。</p></details></article>
+</div>
+<aside class="recommendation"><h3>独立算例 · 已计入准备成本</h3><p class="note">魔力折叠已在此前回合生效，安装花1能量。本回合3能量，手中有压缩、重型咒节、厚重咒文和防御。压缩存两张3费牌 → 爆裂取回 → 免费重型咒节 → 免费厚重咒文。只计算这段连招，之后还可继续行动。</p><p>暂计2张出牌：爆裂2＋12＝14点群伤、18格挡、抽4张，剩余2能量。没有魔力折叠时只抽2张，其余相同；所以这仍是压缩的副轴样例。</p></aside><p><strong>路线取舍：</strong>关键问题是“把免费名额给高费大效果，还是给两张能续上连段的牌”。当前压缩本身能让普通牌变强，副轴无需另建魔力点数资源。</p><details class="basis"><summary>风险与原作意象</summary><p>1费压缩两张3费牌，支付1费后可节省6费。新目标越强，这张用户指定牌的成长上限越高。保持原文先测；若它成为所有构筑的必选，再讨论稀有度、消耗或目标限制，不能在本轮默认加上这些改动。</p><ul>
+<li>本地索引定位正篇16第5章：高品质魔力矿石提供昂贵的外部魔力。可借用储备资源、集中兑现的意象；“卡牌积蓄后变0费”不是原作事实。 <a href="素晴爆裂魔法原作资料索引.html#s-gem">本地原作定位</a></li>
+</ul><p>以上原作定位来自本地译文整理；规则与数值为Mod改编。</p></details></section>
+<section id="archetype-review" aria-labelledby="archetype-review-title"><h2 id="archetype-review-title">配件关系与记录</h2>
+<p>这三组都依赖存牌、返手、费用兑现与出牌，且大量共享优质工具，因此应按配件互补处理。</p>
+<p>原九张牌和三个算例保留作素材；不能因换了一张增伤能力，就把同一套牌算成新的流派。</p>
+<h3>先测试什么</h3><ol class="note">
+<li>原配件只按对共同体系的作用逐张评估，不再分别包装为三套牌组。</li>
+<li>是否成立独立流派，转由上方的资源、成本和最佳行动比较来判断。</li>
+</ol>
+<details class="basis"><summary>暂不独立成流派的效果</summary><ul>
+<li>原三组均是积蓄运转配件。</li>
+<li>抽牌与格挡单独只是功能；必须存在独立投入与专属收益才能成为构筑核心。</li>
+<li>新脱力转化是增加原料、清理与状态专属收益后的候选，不代表现有核心已经自带成熟消耗流。</li>
+</ul></details>
+<details class="basis"><summary>候选规则边界</summary><ul>
+<li>以下保留上轮九张候选与算例的规则边界，全部仍未定稿，且不再作为多个独立流派的证据。</li>
+<li>能力候选在打出后本场战斗持续生效；重复能力先按数值叠加，保留原有触发频率与每回合上限。魔力折叠多层增加抽牌量，不增加首次触发次数。</li>
+<li>咏唱屏障与爆裂升调共用本轮吟唱计数N，在3、6、9…节点触发。中途安装不回溯已过节点；该能力牌自身仍按核心规则贡献1点N，但不因安装后回看自身出牌而补发触发。</li>
+<li>集束爆裂的R只数该次爆裂实际取回的原牌。复制、抽牌、手中已有牌不算取回。其伤害在取回时锁定，之后弃掉、消耗或存回该牌不扣除；无需为每张取回牌增加本回合打出标记。</li>
+<li>本次爆裂增伤在当前吟唱结束时清空。三条算例分开测算，不把所有候选能力默认叠在一起，也不计敌人状态、力量与其他伤害修正。</li>
+<li>入区按每张实际移动的牌结算，压缩2是两次入区；已在区内的牌不因重复操作再次入区。免费标记在成功打出后使用，反复推敲／回流一击再次入区时不会自动恢复免费。</li>
+<li>取回超手牌上限、X费与自动出牌仍未定稿。列出的三条算例都可在取回与抽牌后不超过8张手牌的安排下完成。</li>
+</ul></details>
+<details class="basis"><summary>本轮审阅记录 · 同一助手按不同角度检查</summary><ul>
+<li><strong>用户反馈后的纠正</strong>：撤回N与R足以支撑两主路线的结论；原版方法要求的是构筑维度和决策区别，而不只是监听对象不同。</li>
+<li><strong>保留范围</strong>：原配件尚可逐张评估，数学算例不因分类修正而改变；成长与状态候选需另行证明资源投入与行动偏好不同。</li>
+</ul></details><details class="basis"><summary>阅读依据与用途</summary><ul>
+<li><a href="参考资料/设计方法/体系分析流程.md">体系分析流程</a>：共同核心、扳机与收益、大体系／小体系／效果组判定。</li>
+<li><a href="参考资料/设计方法/体系驱动卡池设计流程.md">体系驱动卡池设计流程</a>：先循环后完整卡池，阶段化评审与追踪。</li>
+<li><a href="参考资料/设计方法/职业卡池设计要求_按五职业规律.md">职业卡池设计要求</a>：第一资源、入口与端口、费用副轴与真正突破。</li>
+<li><a href="参考资料/设计方法/五职业卡牌分析总结.md">五职业卡牌分析总结</a>：不机械套流派数量；连接牌与卡位关系。</li>
+<li><a href="参考资料/设计方法/新角色Mod通用设计指南.md">新角色Mod通用设计指南</a>：主题影响玩家选择、资源输入与使用、复杂度预算。</li>
+<li><a href="惠惠角色特点与设计素材.md">角色特点与设计素材</a>：专精、准备与关键释放的主题。</li>
+<li><a href="素晴爆裂魔法原作资料索引.html">原作资料索引</a>：咏唱、练习、成长、保护与魔力矿石；各路线另列定位。</li>
+</ul></details></section>
+</details>
+<section id="mana_storage" aria-labelledby="title-mana_storage"><h2 id="title-mana_storage"><span class="number">01 / </span>新牌 · 让积蓄中的牌接入吟唱</h2><p>三张新牌分别给存入的牌提供下次0费、在吟唱中回能抽牌、攻击后把自身存入积蓄。吟唱期间不能再次打出爆裂的规则继续适用。</p>
+<p class="note">前三张费用与效果由用户指定，名称暂定。回流一击的9/12按基础／升级伤害解释；另外两张不自行补写升级效果。后面的爆裂与两个入口样例继续用于规则对照。</p>
+<h3>新增三张牌；下方保留爆裂与入口样例</h3><div class="cards">
+<article class="card"><div class="card-top"><span class="energy" aria-label="1费">1</span><h4>压缩魔力</h4></div><div class="meta">技能 · 用户指定 · 暂名</div><p><abbr title="选择2张不同的手牌放入魔力积蓄。如果手中没有爆裂魔法，则将1张爆裂魔法加入手牌。">魔力积蓄2</abbr>。<br>以此法积蓄的牌下次打出耗能为0。</p>
+<p class="note">只影响本次选中的牌。0费可跨回合等待，下一次成功打出后用掉；没有额外消耗属性。</p>
+</article>
+<article class="card"><div class="card-top"><span class="energy" aria-label="0费">0</span><h4>咒文续接</h4></div><div class="meta">技能 · 用户指定 · 暂名</div><p><abbr title="只有已经处于吟唱状态时，才执行冒号后的效果；这个前缀不会开启吟唱。">吟唱：</abbr>获得1点能量，抽2张牌。</p>
+<p class="note">这是处于吟唱时的条件效果，不会自行开启吟唱。非吟唱时打出没有回能和抽牌，仍会消耗。</p>
+<div class="properties"><abbr title="在战斗结束前移除。">消耗</abbr>。</div>
+</article>
+<article class="card"><div class="card-top"><span class="energy" aria-label="1费">1</span><h4>回流一击</h4></div><div class="meta">攻击 · 用户指定 · 暂名</div><p>造成9点伤害（升级后12点）。<br>将这张牌放入<abbr title="选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。">魔力积蓄</abbr>。</p>
+<p class="note">伤害结算后，原牌本体进入积蓄区；本轮按自行入区不额外生成爆裂处理。已在吟唱时入区，需要等未来回合取回。</p>
+</article>
+<article class="card"><div class="card-top"><span class="energy" aria-label="0费">0</span><h4>爆裂魔法</h4></div><div class="meta">攻击（建议） · 费用、效果与吟唱限制为用户指定</div><p>进入<abbr title="记录进入吟唱后实际打出的牌数。取回的牌尚不计数；首次开启吟唱的爆裂本身不计数。回合末结算后清空。">吟唱</abbr>，取出所有<abbr title="选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。">魔力积蓄</abbr>。<br>在回合结束时，对所有敌人造成等同于<abbr title="记录进入吟唱后实际打出的牌数。取回的牌尚不计数；首次开启吟唱的爆裂本身不计数。回合末结算后清空。">吟唱</abbr>期间打出卡牌数量的伤害。<br><abbr title="记录进入吟唱后实际打出的牌数。取回的牌尚不计数；首次开启吟唱的爆裂本身不计数。回合末结算后清空。">吟唱</abbr>期间<abbr title="不能被打出的牌无法被打出。">不能被打出</abbr>。</p>
+<p class="note">消耗、保留先沿用此前选择。取出解释为返回手牌；返回不计伤害，实际打出才计数。</p>
+<div class="properties"><abbr title="在战斗结束前移除。">消耗</abbr>。<abbr title="保留的牌不会在回合结束时被弃掉。">保留</abbr>。</div>
+</article>
+<article class="card"><div class="card-top"><span class="energy" aria-label="0费">0</span><h4>预备魔力</h4></div><div class="meta">技能 · 入口样例 · 名称与费用建议</div><p><abbr title="选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。">魔力积蓄</abbr>。</p>
+<p class="note">先用最简单的0费入口验证存牌和开吟唱顺序。打出此牌本身会离开手牌，不能选择自己存入。</p>
+</article>
+<article class="card"><div class="card-top"><span class="energy" aria-label="1费">1</span><h4>护身积蓄</h4></div><div class="meta">技能 · 防御入口样例 · 数值建议</div><p>获得5点<abbr title="格挡抵消受到的伤害。">格挡</abbr>。<br><abbr title="选择1张手牌放入魔力积蓄。如果你手中没有爆裂魔法，则将一张爆裂魔法加入手牌。">魔力积蓄</abbr>。</p>
+<p class="note">准备回合能先防御并保存组合，也可以当回合取得爆裂立即开吟唱；1能量支出会影响后续出牌数。</p>
+</article>
+</div>
+<details class="basis play-examples" open><summary>出牌与回合选择算例</summary><p>均从3能量出发，只算单次爆裂的原始群伤。各情景的积蓄内容不同，属于规则对照；0费牌仅表示费用结构，不暗示初始牌已有这些牌。所有积蓄都按返回手牌处理。新增三组使用用户指定卡牌，分别检查三牌组合、跨回合0费与攻击前后各打一遍；每组独立起算。</p><ul>
+<li><strong>当回合启动：预备魔力存1张手牌→0费爆裂取回→打出3张1费牌</strong><span class="result">消耗3能量，回合末3点群伤。存入和取回的动作不额外增加计数。</span></li>
+<li><strong>已有3张1费牌的积蓄：0费爆裂取回→选择其中3张打出</strong><span class="result">消耗3能量，仍为3点群伤。多拿回3张牌不会自动增加能量或伤害。</span></li>
+<li><strong>已有3张0费牌的积蓄：0费爆裂取回→打出这3张→再打3张1费牌</strong><span class="result">消耗3能量，回合末6点群伤。积蓄的低费牌让实际出牌数增加。</span></li>
+<li><strong>0费爆裂取回积蓄→不再打出任何牌，直接结束回合</strong><span class="result">回合末0点原始群伤。取回数量不会直接变成伤害，也没有基础1点。</span></li>
+<li><strong>已经持有爆裂：先打2张1费牌→爆裂开吟唱→再打1张1费牌</strong><span class="result">消耗3能量，仅1点群伤。若先开启吟唱再打这3张，则为3点。</span></li>
+<li><strong>已经持有爆裂：爆裂开吟唱→护身积蓄存1张牌并获得新爆裂→再打2张1费牌</strong><span class="result">消耗3能量，回合末3点群伤，护身积蓄还提供5格挡。新爆裂本回合不能打，存入的牌与保留的新爆裂用于下一回合。</span></li>
+<li><strong>3能量，手牌为压缩魔力、咒文续接、回流一击、防御、打击；抽牌堆顶为2张打击：压缩魔力存回流一击与防御→爆裂取回→咒文续接→0费回流一击→0费防御→3张打击</strong><span class="result">回合末6点群伤；另有27点单体伤害（回流升级则30）与5格挡。1能量支付压缩，回能后打完3张1费打击，剩余0能量；回流一击再次进入积蓄，下次恢复按1费计算。</span></li>
+<li><strong>跨回合减费：本回合用压缩魔力存入两张1费牌并结束；下一回合爆裂取回，打出这两张0费牌，再打3张1费牌</strong><span class="result">释放回合消耗3能量、5点群伤。减费在取回时仍在，成功打出后才用掉；上回合压缩支付的1能量不算本回合支出。</span></li>
+<li><strong>已经持有爆裂：回流一击（1费）→爆裂取回回流一击→回流一击（1费）→防御（1费）</strong><span class="result">两次攻击共18点单体伤害，升级后24点；5格挡，回合末2点群伤。爆裂前的第一击不计吟唱出牌数；第二击再次入区后，本回合不能第三次取回。</span></li>
+</ul><p>第一张开吟唱的爆裂不计数；吟唱中的咒文续接与回流一击照常计数。压缩减费只覆盖两张指定牌的一次打出，自行入区的攻击不会在本回合无限回收。</p></details>
+<details class="basis"><summary>这个方向要检查什么</summary><ul>
+<li>值得保留的核心：从当前手牌中拿走一张，换来未来更确定的组合；是否立即取回由0费爆裂控制。来源、返手和按出牌数结算形成完整循环。</li>
+<li>第一项测试：同样积蓄3张，分别放1费牌、0费牌和抽牌／产能牌。若只有0费堆叠能产生收益，需要给储存后的返手提供有限供能，而不是只继续增加积蓄数量。</li>
+<li>第二项测试：在当前回合开吟唱能击杀小怪，和本回合需要防御、下回合需要完整组合的两种场面中，应出现不同的取回选择。若总是立刻开吟唱，积蓄会退化成繁琐的生成爆裂动作。</li>
+<li>第三项测试：吟唱中再次存牌并取得爆裂，确认不能重打，也不会提前取回新积蓄。当前一发的伤害照常结算，未来一发的牌继续留存，让准备与输出可以交替进行。</li>
+<li>吟唱中存牌本身贡献一次出牌计数，却会从当前手牌拿走一个潜在后续出牌。若这张牌当前用得上，就是当回合收益与下回合准备的直接取舍。</li>
+<li>三张新牌已经提供明确的减费和回能入口，先用它们验证积蓄的出牌上限，再考虑额外供能能力。压缩魔力的两张免费目标可以很贵，且本身未带消耗，应观察高费牌组合的收益。</li>
+<li>回流一击可以先攻击再被爆裂取回，在同一回合打第二次；第二次进入积蓄后被“吟唱中不能再打爆裂”自然隔到后续回合。免费标记只用一次，不能因为自行入区就无限延续。</li>
+</ul></details>
+</section>
+<footer>2026-10-08：魔力积蓄核心与三张配套牌按用户要求记录。压缩魔力、咒文续接、回流一击为暂名；1／0／1费用、积蓄2与下次0费、吟唱中回1能量抽2并消耗、9→12攻击后自行入区由用户指定。数量不足、非吟唱空放、免费标记和自行入区不生成爆裂等细则为本轮解释。尚未实装或进行实战测试。<br><a href="素晴爆裂魔法原作资料索引.html">原作资料索引（含剧透与证据分级）</a> · <a href="暂存/爆裂狂_出牌蓄爆_2026-10-05.html">暂存方案：爆裂狂与出牌蓄爆</a></footer></main></body></html>

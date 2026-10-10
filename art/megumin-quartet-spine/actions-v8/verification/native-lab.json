@@ -1,0 +1,152 @@
+{
+  "game": "0.107.1",
+  "character": "MEGUMINMOD-MEGUMIN",
+  "save_dir": "C:/Users/17575/AppData/Roaming/MeguminModLab-STS2_Konosuba_Megumin",
+  "skeleton_sha256": "15ae6e95f141870bf1588290ae3e4c8de9be1a1ed1641beffeee70870ad75d16",
+  "native_clips": [
+    "attack_short",
+    "cast_short",
+    "chant_ack",
+    "chant_cancel",
+    "chant_enter",
+    "chant_loop",
+    "dead",
+    "dead_from_down",
+    "dead_loop",
+    "explosion_exit",
+    "explosion_hold",
+    "explosion_release",
+    "get_up",
+    "hit",
+    "hit_chant",
+    "hit_down",
+    "idle_loop",
+    "relaxed_fall",
+    "relaxed_loop"
+  ],
+  "actions": [
+    {
+      "card": "HEMOKINESIS",
+      "result": {
+        "status": "ok",
+        "message": "Playing '御血术' targeting 缩小甲虫"
+      }
+    },
+    {
+      "card": "STRIKE_IRONCLAD",
+      "result": {
+        "status": "ok",
+        "message": "Playing '打击' targeting 缩小甲虫"
+      }
+    },
+    {
+      "card": "STRIKE_IRONCLAD",
+      "result": {
+        "status": "ok",
+        "message": "Playing '打击' targeting 缩小甲虫"
+      }
+    },
+    {
+      "status": "ok",
+      "message": "Ending turn"
+    },
+    {
+      "card": "STRIKE_IRONCLAD",
+      "result": {
+        "status": "ok",
+        "message": "Playing '打击' targeting 缩小甲虫"
+      }
+    },
+    {
+      "card": "STRIKE_IRONCLAD",
+      "result": {
+        "status": "ok",
+        "message": "Playing '打击' targeting 缩小甲虫"
+      }
+    },
+    {
+      "card": "DEFEND_IRONCLAD",
+      "result": {
+        "status": "ok",
+        "message": "Playing '防御'"
+      }
+    },
+    {
+      "status": "ok",
+      "message": "Ending turn"
+    },
+    {
+      "card": "BASH",
+      "result": {
+        "status": "ok",
+        "message": "Playing '痛击' targeting 缩小甲虫"
+      }
+    }
+  ],
+  "combat_start": {
+    "hp": 65,
+    "enemies": [
+      {
+        "entity_id": "SHRINKER_BEETLE_0",
+        "combat_id": 1,
+        "name": "缩小甲虫",
+        "hp": 39,
+        "max_hp": 39,
+        "block": 0,
+        "status": [],
+        "intents": [
+          {
+            "type": "DebuffStrong",
+            "label": "",
+            "title": "策略",
+            "description": "这个敌人将要对你施加一个负面效果。"
+          }
+        ]
+      }
+    ]
+  },
+  "combat_end": {
+    "state_type": "rewards",
+    "rewards": {
+      "items": [
+        {
+          "index": 0,
+          "type": "gold",
+          "description": "12金币",
+          "gold_amount": 12
+        },
+        {
+          "index": 1,
+          "type": "card",
+          "description": "将一张牌添加到你的牌组。"
+        }
+      ],
+      "can_proceed": true
+    },
+    "run": {
+      "act": 1,
+      "floor": 3,
+      "ascension": 0
+    },
+    "player": {
+      "character": "惠惠（测试）",
+      "hp": 67,
+      "max_hp": 70,
+      "block": 0,
+      "gold": 114,
+      "status": [],
+      "relics": [
+        {
+          "id": "BURNING_BLOOD",
+          "name": "燃烧之血",
+          "description": "在战斗结束时，回复6点生命。",
+          "counter": null,
+          "keywords": []
+        }
+      ],
+      "potions": [],
+      "max_potion_slots": 3
+    }
+  },
+  "passed": true
+}

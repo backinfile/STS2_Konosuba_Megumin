@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>暂存｜惠惠：爆裂狂与出牌蓄爆</title>
+<style>
+:root{--bg:#f5f1e8;--surface:#fffdf8;--border:#d9d1c1;--text:#2d2923;--text-dim:#645e54;--accent:#a43d28;--gold:#886022}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.85 'Microsoft YaHei','PingFang SC',sans-serif}
+main{max-width:1100px;margin:auto;padding:40px 28px 56px}h1{font-size:32px;line-height:1.4;margin:0 0 10px}h2{font-size:26px;line-height:1.45;margin:0 0 16px}h3{font-size:18px;margin:0 0 12px}p{margin:0 0 16px;overflow-wrap:break-word}
+.intro,.note,footer{font-size:14px;color:var(--text-dim)}nav{display:flex;flex-wrap:wrap;gap:20px;margin:22px 0}nav a{color:var(--accent);text-underline-offset:4px}
+section{border-top:1px solid var(--border);padding:34px 0;scroll-margin-top:20px}.number{color:var(--accent)}.definition{border-left:2px solid var(--border);padding:0 0 0 16px;margin:14px 0;font-size:15px}.definition strong{color:var(--gold)}.kind{font-size:12px;color:var(--text-dim);margin-left:8px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}.card{display:flex;flex-direction:column;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:19px}.card-top{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.energy{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:white;font-weight:700;flex-shrink:0}.resource-cost{font-size:13px;color:var(--gold);border:1px solid var(--border);padding:2px 7px;border-radius:4px}.card h4{font-size:18px;margin:0}.meta{font-size:12px;color:var(--text-dim);margin:9px 0 16px}.card p{font-size:16px;margin:0 0 14px;line-height:1.85}.properties{margin-top:auto;border-top:1px solid var(--border);padding-top:10px;min-height:38px;font-size:14px;color:var(--gold)}abbr{color:var(--gold);font-weight:600;text-decoration:none;cursor:help}footer{border-top:1px solid var(--border);padding-top:18px}a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.starter-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.5fr);gap:24px;margin:26px 0}.starter-relic,.starter-deck{min-width:0}.starter-relic{border-left:3px solid var(--accent);padding-left:16px}.starter-relic h4{font-size:19px;color:var(--gold);margin:0 0 10px}.starter-relic p{font-size:15px}.deck-total{font-size:14px;font-weight:400;color:var(--text-dim);margin-left:8px}.deck-table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.8}.deck-table th{text-align:left;color:var(--text-dim);font-weight:400;border-bottom:1px solid var(--border);padding:0 8px 8px}.deck-table td{border-bottom:1px solid var(--border);padding:10px 8px;vertical-align:top;overflow-wrap:break-word}.deck-table th:first-child,.deck-table td:first-child{padding-left:0;width:23%}.deck-table th:last-child,.deck-table td:last-child{padding-right:0}.deck-count,.deck-cost{width:1%;white-space:nowrap}.deck-card-name{font-weight:600}.deck-type{display:block;font-size:12px;color:var(--text-dim)}.deck-properties{color:var(--gold)}.deck-table .resource-cost{display:block;font-size:12px;margin-top:4px;padding:0 4px}.starter-note{margin-top:12px}
+.generated-note{font-size:14px;padding:10px 14px;background:#ece6d9;margin:16px 0;color:var(--text-dim)}.generated-note strong{color:var(--text)}.basis{margin:18px 0;font-size:14px;color:var(--text-dim)}.basis summary{cursor:pointer;color:var(--accent);width:fit-content}.basis ul{padding-left:22px}.basis li{padding:7px 0;overflow-wrap:break-word}.basis a,footer a{color:var(--accent);text-underline-offset:3px}.adaptation{display:block;margin-top:4px}.evidence{font-size:12px;color:var(--gold)}summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.core{padding:20px 0 26px}.core h2{font-size:21px}.core-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:22px 0;padding:16px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.core-flow b{display:block;font-size:16px;color:var(--accent)}.core-flow span{display:block;font-size:14px;color:var(--text-dim)}.research-row{margin:16px 0}.research-row p{margin:5px 0}.core .definition{margin:16px 0}
+.timing-table{margin:18px 0}.timing-table caption{text-align:left;color:var(--text-dim);font-size:13px;padding-bottom:8px}.timing-table th:first-child,.timing-table td:first-child{width:14%}
+.recommendation{border-left:3px solid var(--accent);padding:12px 18px;background:#ece6d9;margin:22px 0}.recommendation h3{margin-bottom:8px}.recommendation p:last-child{margin:0}.table-scroll{overflow-x:auto;margin:22px 0}.comparison-table{min-width:630px}.comparison-table caption{text-align:left;font-size:14px;color:var(--text-dim);padding-bottom:10px}.comparison-table th:first-child,.comparison-table td:first-child{width:15%}.comparison-table td{width:28%}.comparison-table a{color:var(--accent)}.play-examples li{padding:8px 0}.play-examples strong{color:var(--text)}.play-examples .result{display:block;color:var(--gold)}nav{position:sticky;top:0;z-index:10;background:var(--bg);padding:12px 0;border-bottom:1px solid var(--border);flex-wrap:nowrap;overflow-x:auto}nav a{flex-shrink:0;white-space:nowrap}section{scroll-margin-top:76px}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.starter-layout{grid-template-columns:1fr;gap:16px}}@media(max-width:600px){main{padding:26px 18px}.cards{grid-template-columns:1fr}h1{font-size:26px}h2{font-size:23px}nav{gap:12px;font-size:14px}.deck-table{font-size:13px}.deck-table td,.deck-table th{padding-left:5px;padding-right:5px}}@media print{body{background:white}nav{display:none}.card,.starter-relic,tr{break-inside:avoid}}
+@media(max-width:600px){.core-flow{grid-template-columns:1fr;gap:12px}.recommendation{padding:12px 14px}.comparison-table{font-size:13px}}@media print{.table-scroll{overflow:visible}.comparison-table{min-width:0}}
+</style></head><body><main>
+<header><h1>暂存｜惠惠：爆裂狂与出牌蓄爆</h1><p class="intro">回合开始补充可保留的爆裂魔法。减费启动后继续出牌增伤，增伤牌可立即强化正在咏唱的这一发，回合末结算群伤。</p></header>
+<div class="core" aria-labelledby="fixed-core-title"><h2 id="fixed-core-title">当前核心 · 用户指定规则</h2><div class="core-flow" aria-label="核心循环">
+<div><b>回合开始补牌</b><span>手牌没有爆裂时，获得1张</span></div>
+<div><b>减费启动，继续出牌</b><span>增伤牌也可立即强化当前咏唱</span></div>
+<div><b>本回合结束</b><span>兑现1＋额外伤害＋后续出牌数</span></div>
+</div>
+<p class="definition"><strong>爆裂狂</strong><span class="kind">角色初始Buff · 用户指定</span><br>回合开始时，如果手牌中没有爆裂魔法，则获得一张爆裂魔法。</p>
+<p class="definition"><strong>爆裂魔法</strong><span class="kind">2费衍生牌 · 用户指定效果，文案整理</span><br>开始咏唱。本回合结束时，对所有敌人造成1点伤害。咏唱期间，每打出一张牌，伤害增加1点。消耗。保留。</p>
+<p class="definition"><strong>下一次爆裂</strong><span class="kind">增伤生效时点 · 用户修订</span><br>如果正在咏唱，额外伤害立即加入本次爆裂；否则准备给之后的下一次爆裂。</p>
+<p class="note">获得爆裂不会自动施放；玩家支付费用打出后才开始咏唱。初始牌的1/0费按升级前1费、升级后0费解释；升级不改-2费用或+5伤害。</p>
+<details class="basis"><summary>上一版内容的记录与本轮范围</summary><p>此为2026-10-08暂存的爆裂狂方案，保留当时的规则、初始牌与算例。更早方案已按用户要求删除。</p></details>
+<aside class="recommendation"><h3>先验证启动费用与后续出牌的收益</h3><p>公式：本次爆裂基础伤害＝1＋本次额外伤害＋开启后的出牌数。减费→爆裂→增伤→防御，未升级时为8点群伤与5格挡；两张专属牌都升级后，减费→爆裂→增伤→2防御→打击，为10点群伤、10格挡和6点单体伤害。</p><p class="note">直接2费爆裂＋1费防御仅有2点群伤。减费牌可能成为必要启动条件，增伤牌可能主导早期输出；先用当前数值比较抽到不同初始牌的回合，再决定是否调整。</p></aside>
+<details class="basis"><summary>原作依据与命名核查</summary>
+<div class="research-row"><strong>爆裂狂的命名出处</strong><p>官方外传动画第5话标题为“爆裂狂の誕生（プレリュード）”，可以确认爆裂狂这一用词有官方出处。</p><p>设计建议：作为角色初始Buff名称；生成卡牌和按出牌数累积伤害是Mod规则。</p><a href="https://konosuba.com/bakuen/story/?mode=story5" target="_blank" rel="noopener noreferrer">动画官方：第5话标题与简介</a><span class="evidence"> · 官方日文正文</span> · <a href="../参考资料/原作名词与命名素材.md">本地命名词表</a></div>
+</details>
+<details class="basis"><summary>本轮解释、待定项与结算边界</summary><ul>
+<li>按打出爆裂魔法后建立当发咏唱处理，爆裂自身不为自己增加1点伤害；在此之前打出的牌不追溯计数。这里只是本轮解释，用户未逐项确认。</li>
+<li>减费牌的“下一张”按下一次成功打出的爆裂魔法处理，须在目标爆裂之前打出；不会退还已支付的费用。增伤牌的“下一次”改按下一次尚未释放的爆裂处理：正在咏唱时立即+5给本次，否则准备给之后的下一次。</li>
+<li>咏唱中打出增伤牌，同时贡献该牌本身的1点出牌增伤与卡面5点额外伤害，当前预计伤害合计增加6。先于爆裂打出时，只给目标爆裂准备5点，不追溯计入出牌数。</li>
+<li>没有咏唱时，建议减费和增伤准备持续到下一张爆裂被成功打出，允许跨回合保留，并在战斗结束清空。取消出牌或没有足够能量时不消耗准备。</li>
+<li>减费最低为0，准备期间应在手牌中预览下一张爆裂的费用。建议多个减费或增伤准备数值累加，由下一张成功打出的爆裂一次取用；超过费用的减费不返还能量。重复准备的叠加方式尚未定稿。</li>
+<li>回合开始的检查仅看手牌，不看抽牌堆、弃牌堆或消耗牌堆。本回合打出爆裂后，不会立即再触发爆裂狂补牌。建议在正常抽牌完成后检查，避免先生成再抽到同名牌；具体时序尚未接入游戏。</li>
+<li>用户确认爆裂魔法带消耗、保留。打出后消耗，但已经开启的咏唱继续到回合末；未打出时保留到下一回合。保留本身不启动咏唱。下回合手牌已有该牌时，爆裂狂不再生成新牌。</li>
+<li>建议回合结束时、敌人行动前结算本次群伤，随后清空当发出牌计数与已取用增伤。没有打出爆裂，则本回合没有预约爆裂。战斗提前结束时，终止未释放记录。</li>
+<li>初始算例只统计玩家主动打出的后续牌；抽牌、弃牌、消耗牌或回合末伤害本身不算打出一张牌。复制与自动打牌是否计数、多个爆裂是否各自预约，均留待后续确定，不擅自加每回合只能一发的限制。</li>
+<li>本轮类型暂建议爆裂为攻击牌，两张准备牌为技能牌。是否受力量、虚弱、易伤等通常攻击修正影响，待实际游戏接入确定；算例只计算未修正伤害。</li>
+<li>沿用此前4打击4防御加两张专属初始牌的10张框架作为试验组合；本轮用户仅指定两张专属牌的效果与费用，普通牌数量、暂名和卡牌类型不是新增用户定稿。</li>
+</ul></details>
+</div>
+<nav aria-label="核心方案">
+<a href="#card_chant">01 初始基础包</a>
+</nav>
+<section id="card_chant" aria-labelledby="title-card_chant"><h2 id="title-card_chant"><span class="number">01 / </span>爆裂狂 · 减费启动与后续出牌</h2><p>减费牌准备下一张打出的爆裂；增伤牌既能提前准备，也能立即强化已经开启的咏唱。随后每张牌都为回合末群伤增加1点，未使用的爆裂可以保留。</p>
+<p class="note">减费要在爆裂前打；增伤可以在爆裂后打，立即+5并再贡献1点出牌增伤。两张初始牌的名称暂用简短咏唱、爆裂宣言。</p>
+<div class="starter-layout"><aside class="starter-relic" aria-labelledby="starter-effect-card_chant"><h3 id="starter-effect-card_chant">初始Buff</h3><h4>爆裂狂</h4><p>回合开始时，如果手牌中没有<abbr title="开始咏唱。本回合结束时，对所有敌人造成1点伤害。咏唱期间，每打出一张牌，伤害增加1点。消耗。保留。">爆裂魔法</abbr>，则获得一张<abbr title="开始咏唱。本回合结束时，对所有敌人造成1点伤害。咏唱期间，每打出一张牌，伤害增加1点。消耗。保留。">爆裂魔法</abbr>。</p><p class="note">角色自带，无需从牌库抽到入口。未打出的爆裂会保留，所以下回合仍持有时不再补牌；打出后也不会在本回合立即补牌。</p></aside>
+<div class="starter-deck"><h3 id="deck-card_chant">初始牌组<span class="deck-total">10 张</span></h3><table class="deck-table" aria-labelledby="deck-card_chant"><thead><tr><th scope="col">卡牌</th><th scope="col">数量</th><th scope="col">费用</th><th scope="col">效果</th></tr></thead><tbody>
+<tr><td><span class="deck-card-name">打击</span><small class="deck-type">攻击</small></td><td class="deck-count">×4</td><td class="deck-cost">1费</td><td>造成6点伤害。</td></tr>
+<tr><td><span class="deck-card-name">防御</span><small class="deck-type">技能</small></td><td class="deck-count">×4</td><td class="deck-cost">1费</td><td>获得5点<abbr title="格挡抵消受到的伤害。">格挡</abbr>。</td></tr>
+<tr><td><span class="deck-card-name">简短咏唱</span><small class="deck-type">技能</small></td><td class="deck-count">×1</td><td class="deck-cost">1费<small class="deck-type">升级后0费</small></td><td>下一张<abbr title="开始咏唱。本回合结束时，对所有敌人造成1点伤害。咏唱期间，每打出一张牌，伤害增加1点。消耗。保留。">爆裂魔法</abbr>费用降低2。</td></tr>
+<tr><td><span class="deck-card-name">爆裂宣言</span><small class="deck-type">技能</small></td><td class="deck-count">×1</td><td class="deck-cost">1费<small class="deck-type">升级后0费</small></td><td><abbr title="如果正在咏唱，额外伤害立即加入本次爆裂；否则准备给之后的下一次爆裂。">下一次爆裂</abbr>魔法额外造成5点伤害。</td></tr>
+</tbody></table><p class="note starter-note">沿用10张试验框架：4打击、4防御、两张专属牌各1。爆裂魔法由Buff在战斗中生成，不占初始10张；初始遗物效果本轮未指定。</p></div></div><h3>两张专属初始牌与衍生爆裂</h3><div class="cards">
+<article class="card"><div class="card-top"><span class="energy" aria-label="1费">1</span><h4>简短咏唱</h4></div><div class="meta">技能 · 初始牌 · 暂名 · 升级后0费</div><p>下一张<abbr title="开始咏唱。本回合结束时，对所有敌人造成1点伤害。咏唱期间，每打出一张牌，伤害增加1点。消耗。保留。">爆裂魔法</abbr>费用降低2。</p>
+</article>
+<article class="card"><div class="card-top"><span class="energy" aria-label="1费">1</span><h4>爆裂宣言</h4></div><div class="meta">技能 · 初始牌 · 暂名 · 升级后0费</div><p><abbr title="如果正在咏唱，额外伤害立即加入本次爆裂；否则准备给之后的下一次爆裂。">下一次爆裂</abbr>魔法额外造成5点伤害。</p>
+<p class="note">正在咏唱时，立即强化本次爆裂；否则留给下一次。</p>
+</article>
+<article class="card"><div class="card-top"><span class="energy" aria-label="2费">2</span><h4>爆裂魔法</h4></div><div class="meta">攻击 · 爆裂狂生成 · 类型建议</div><p>开始咏唱。<br>本回合结束时，对所有敌人造成1点伤害。<br>咏唱期间，每打出一张牌，伤害增加1点。</p>
+<p class="note">未打出不会开始咏唱，保留到下回合；打出后消耗，咏唱仍在回合末释放。</p>
+<div class="properties"><abbr title="在战斗结束前移除。">消耗</abbr>。<abbr title="保留的牌不会在回合结束时被弃掉。">保留</abbr>。</div>
+</article>
+</div>
+<details class="basis play-examples"><summary>一回合怎么选</summary><p>3能量，常规手牌为简短咏唱、爆裂宣言、2防御、1打击；Buff另给1张爆裂。除最后一行外均未升级。不含初始遗物、敌人和其他伤害修正；每个选项独立起算。</p><ul>
+<li><strong>爆裂（2费）→防御（1费）</strong><span class="result">2点群伤（1＋1），5格挡；用完3能量。</span></li>
+<li><strong>简短咏唱（1费）→爆裂（0费）→防御→打击</strong><span class="result">3点群伤（1＋2），5格挡，6点单体伤害；用完3能量。</span></li>
+<li><strong>爆裂宣言（1费）→爆裂（2费）</strong><span class="result">6点群伤（1＋5），没有后续出牌；用完3能量。</span></li>
+<li><strong>简短咏唱→爆裂宣言→爆裂（0费）→防御</strong><span class="result">7点群伤（1＋5＋1），5格挡；用完3能量。</span></li>
+<li><strong>简短咏唱→爆裂（0费）→爆裂宣言→防御</strong><span class="result">8点群伤（1＋5＋2），5格挡；增伤牌也算后续出牌，用完3能量。</span></li>
+<li><strong>两张专属牌均升级：简短咏唱（0费）→爆裂（0费）→爆裂宣言（0费）→防御→防御→打击</strong><span class="result">10点群伤（1＋5＋4），10格挡，6点单体伤害；用完3能量。</span></li>
+</ul><p>同样的3能量与4张出牌，减费→增伤→爆裂→防御为7点群伤，减费→爆裂→增伤→防御为8点。正在咏唱时，增伤牌立即给当前一发+5，同时自身再贡献1点。未使用的爆裂保留，下回合不额外补牌。</p></details>
+<details class="basis"><summary>这个方向要检查什么</summary><ul>
+<li>优点：入口稳定，防御、攻击与运转牌都能参与同一发爆裂；只需展示当前爆裂预计伤害、下一张减费和下一张增伤。</li>
+<li>首要风险：裸打2费爆裂再接1张普通牌只有2点群伤，减费牌可能成为必要组件。比较没抽到专属牌、只抽到其中一张、两张都抽到的实际回合。</li>
+<li>第二风险：廉价抽牌与0费牌既提高牌组运转，又给群伤+1；先观察每回合打牌数和启动后的有效能量，避免奖励牌全都变成同一种刷牌选择。</li>
+<li>两张专属牌升级后都0费，会显著改善启动与剩余能量。先比较未升级、只升级减费牌、两张均升级的差距。</li>
+<li>爆裂已确定消耗、保留：无需施放时可以暂存入口；没有把生成牌逐渐混入弃牌堆的常规负担。咏唱中增伤兼得+5和出牌+1，先观察延后打增伤是否总是更优。</li>
+
+</ul></details>
+</section>
+<footer>当前为用户指定基础包的设计记录。Buff、2费爆裂的1点基础伤害、每张后续牌+1、消耗保留，以及两张1/0费专属牌和咏唱中立即增伤来自用户；爆裂自身不计数、跨回合准备、抽牌检查顺序与10张框架为本轮解释或试验建议，多发规则待定。尚未接入游戏或实战测试。<br><a href="../素晴爆裂魔法原作资料索引.html">原作资料索引（含剧透与证据分级）</a> · <a href="../惠惠核心设计简明版.html">查看当前魔力积蓄方案</a></footer></main></body></html>

@@ -1,0 +1,10 @@
+{
+  "game_version": "0.107.1",
+  "spine_sha256": "15ae6e95f141870bf1588290ae3e4c8de9be1a1ed1641beffeee70870ad75d16",
+  "bridge_recording_source_sha256": "8b49566aba9f520985399c71aaa17059e3688a3431dc95eb70d3b4cece04b1e9",
+  "video_count": 21,
+  "playback_rate": 1,
+  "capture_method": "live native game viewport with per-capture refresh while minimized",
+  "frame_seeking": false,
+  "audio": false
+}

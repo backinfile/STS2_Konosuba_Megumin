@@ -1,0 +1,2378 @@
+{
+  "passed": true,
+  "limits": {
+    "headSwitchAreaJump": 0.06,
+    "headSwitchCentroid": 4,
+    "headWithinPoseAreaDrift": 0.05
+  },
+  "switches": [
+    {
+      "clip": "chant_enter",
+      "slot": "head",
+      "time": 0.05,
+      "from": "E00/head",
+      "to": "E01/head",
+      "areaJump": 0.00005975510434286235,
+      "centroidJump": 0.016282109888358546
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "head",
+      "time": 0.25,
+      "from": "E01/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.001368438926825588,
+      "centroidJump": 0.1326173668750537
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "head",
+      "time": 0.48333,
+      "from": "turn-upright/head",
+      "to": "E05/head",
+      "areaJump": 0.0031917951309883286,
+      "centroidJump": 0.37473706013857416
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "head",
+      "time": 0.75,
+      "from": "E05/head",
+      "to": "E08/head",
+      "areaJump": 0.011474409694871124,
+      "centroidJump": 0.9973300825235851
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "head",
+      "time": 0.95,
+      "from": "E08/head",
+      "to": "E12/head",
+      "areaJump": 0.002720092399170815,
+      "centroidJump": 0.18490028519140295
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "hand_r",
+      "time": 0.05,
+      "from": "E00/hand_r",
+      "to": "E01/hand_r",
+      "areaJump": 0.0005374505918893657,
+      "centroidJump": 0.03444476422912738
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "hand_r",
+      "time": 0.25,
+      "from": "E01/hand_r",
+      "to": "turn-upright/hand_r",
+      "areaJump": 0.00006919264703442174,
+      "centroidJump": 0.06700090844175356
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "hand_r",
+      "time": 0.48333,
+      "from": "turn-upright/hand_r",
+      "to": "E05/hand_r",
+      "areaJump": 0.0004091716904038867,
+      "centroidJump": 0.045093891793594555
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "hand_r",
+      "time": 0.75,
+      "from": "E05/hand_r",
+      "to": "E08/hand_r",
+      "areaJump": 0.00018895788051342954,
+      "centroidJump": 0.021101202806563687
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "hand_r",
+      "time": 0.95,
+      "from": "E08/hand_r",
+      "to": "E12/hand_r",
+      "areaJump": 0.0006472997602633423,
+      "centroidJump": 0.008302787298449247
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_l",
+      "time": 0.05,
+      "from": "E00/leg_l",
+      "to": "E01/leg_l",
+      "areaJump": 0.06414011481492465,
+      "centroidJump": 2.240713534287182
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_l",
+      "time": 0.25,
+      "from": "E01/leg_l",
+      "to": "turn-upright/leg_l",
+      "areaJump": 0.18966017536675528,
+      "centroidJump": 3.1640860106692
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_l",
+      "time": 0.48333,
+      "from": "turn-upright/leg_l",
+      "to": "E05/leg_l",
+      "areaJump": 0.042032315080815286,
+      "centroidJump": 5.318724434228108
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_l",
+      "time": 0.75,
+      "from": "E05/leg_l",
+      "to": "E08/leg_l",
+      "areaJump": 0.006548503921148585,
+      "centroidJump": 4.770851565054059
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_l",
+      "time": 0.95,
+      "from": "E08/leg_l",
+      "to": "E12/leg_l",
+      "areaJump": 0.0032326284490150625,
+      "centroidJump": 3.663771089001749
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_r",
+      "time": 0.05,
+      "from": "E00/leg_r",
+      "to": "E01/leg_r",
+      "areaJump": 0.06801598099570483,
+      "centroidJump": 1.2582870519334797
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_r",
+      "time": 0.25,
+      "from": "E01/leg_r",
+      "to": "turn-upright/leg_r",
+      "areaJump": 0.09887527952942454,
+      "centroidJump": 1.0513750260678907
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_r",
+      "time": 0.48333,
+      "from": "turn-upright/leg_r",
+      "to": "E05/leg_r",
+      "areaJump": 0.2999031272589756,
+      "centroidJump": 4.069915750303299
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_r",
+      "time": 0.75,
+      "from": "E05/leg_r",
+      "to": "E08/leg_r",
+      "areaJump": 0.07609620914031745,
+      "centroidJump": 4.354501434864107
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "leg_r",
+      "time": 0.95,
+      "from": "E08/leg_r",
+      "to": "E12/leg_r",
+      "areaJump": 0.019436123595393262,
+      "centroidJump": 2.306951745386951
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "body",
+      "time": 0.05,
+      "from": "E00/body",
+      "to": "E01/body",
+      "areaJump": 0.04152767546288383,
+      "centroidJump": 1.6420779229705877
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "body",
+      "time": 0.25,
+      "from": "E01/body",
+      "to": "turn-upright/body",
+      "areaJump": 0.0591234780721801,
+      "centroidJump": 4.408413220885171
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "body",
+      "time": 0.48333,
+      "from": "turn-upright/body",
+      "to": "E05/body",
+      "areaJump": 0.07647667458097018,
+      "centroidJump": 7.603417896108407
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "body",
+      "time": 0.75,
+      "from": "E05/body",
+      "to": "E08/body",
+      "areaJump": 0.1683184349369906,
+      "centroidJump": 16.699223812167524
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "body",
+      "time": 0.95,
+      "from": "E08/body",
+      "to": "E12/body",
+      "areaJump": 0.04317719475252113,
+      "centroidJump": 0.4765595048288954
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "head",
+      "time": 0.36667,
+      "from": "E12/head",
+      "to": "E08/head",
+      "areaJump": 0.0027127495990685313,
+      "centroidJump": 0.18478622622766466
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "head",
+      "time": 0.56667,
+      "from": "E08/head",
+      "to": "E05/head",
+      "areaJump": 0.011607642517055927,
+      "centroidJump": 0.9975916155638697
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "head",
+      "time": 0.83333,
+      "from": "E05/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0032021091222538267,
+      "centroidJump": 0.3747906082390418
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "head",
+      "time": 1.06667,
+      "from": "turn-upright/head",
+      "to": "E01/head",
+      "areaJump": 0.0013702839232763164,
+      "centroidJump": 0.13273719993298963
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "head",
+      "time": 1.26667,
+      "from": "E01/head",
+      "to": "E00/head",
+      "areaJump": 0.000059730399473600926,
+      "centroidJump": 0.014244274743235766
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "hand_r",
+      "time": 0.36667,
+      "from": "E12/hand_r",
+      "to": "E08/hand_r",
+      "areaJump": 0.0006473589238473743,
+      "centroidJump": 0.007786969009219073
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "hand_r",
+      "time": 0.56667,
+      "from": "E08/hand_r",
+      "to": "E05/hand_r",
+      "areaJump": 0.0001887764455240637,
+      "centroidJump": 0.022599293690369726
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "hand_r",
+      "time": 0.83333,
+      "from": "E05/hand_r",
+      "to": "turn-upright/hand_r",
+      "areaJump": 0.00040944038156442986,
+      "centroidJump": 0.04632490344366432
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "hand_r",
+      "time": 1.06667,
+      "from": "turn-upright/hand_r",
+      "to": "E01/hand_r",
+      "areaJump": 0.00006901281056426178,
+      "centroidJump": 0.07202957677608884
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "hand_r",
+      "time": 1.26667,
+      "from": "E01/hand_r",
+      "to": "E00/hand_r",
+      "areaJump": 0.0005376331325654959,
+      "centroidJump": 0.028753055213855634
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_l",
+      "time": 0.36667,
+      "from": "E12/leg_l",
+      "to": "E08/leg_l",
+      "areaJump": 0.00253329881623654,
+      "centroidJump": 3.6834598395216256
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_l",
+      "time": 0.56667,
+      "from": "E08/leg_l",
+      "to": "E05/leg_l",
+      "areaJump": 0.007933580316286326,
+      "centroidJump": 4.725467415799135
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_l",
+      "time": 0.83333,
+      "from": "E05/leg_l",
+      "to": "turn-upright/leg_l",
+      "areaJump": 0.03180498098591811,
+      "centroidJump": 4.632498261330148
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_l",
+      "time": 1.06667,
+      "from": "turn-upright/leg_l",
+      "to": "E01/leg_l",
+      "areaJump": 0.16256646670072483,
+      "centroidJump": 3.2511151600003636
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_l",
+      "time": 1.26667,
+      "from": "E01/leg_l",
+      "to": "E00/leg_l",
+      "areaJump": 0.06807217533718113,
+      "centroidJump": 2.1306312483427776
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_r",
+      "time": 0.36667,
+      "from": "E12/leg_r",
+      "to": "E08/leg_r",
+      "areaJump": 0.01961786211168981,
+      "centroidJump": 2.309855613685624
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_r",
+      "time": 0.56667,
+      "from": "E08/leg_r",
+      "to": "E05/leg_r",
+      "areaJump": 0.07777319284628115,
+      "centroidJump": 4.053264962862692
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_r",
+      "time": 0.83333,
+      "from": "E05/leg_r",
+      "to": "turn-upright/leg_r",
+      "areaJump": 0.4231866799140731,
+      "centroidJump": 3.913908036722521
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_r",
+      "time": 1.06667,
+      "from": "turn-upright/leg_r",
+      "to": "E01/leg_r",
+      "areaJump": 0.12425208878193938,
+      "centroidJump": 0.7404094153193694
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "leg_r",
+      "time": 1.26667,
+      "from": "E01/leg_r",
+      "to": "E00/leg_r",
+      "areaJump": 0.06601891304167284,
+      "centroidJump": 1.2920348342154386
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "body",
+      "time": 0.36667,
+      "from": "E12/body",
+      "to": "E08/body",
+      "areaJump": 0.04578246738082581,
+      "centroidJump": 0.47789639080127555
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "body",
+      "time": 0.56667,
+      "from": "E08/body",
+      "to": "E05/body",
+      "areaJump": 0.12545044854949594,
+      "centroidJump": 15.61188222579952
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "body",
+      "time": 0.83333,
+      "from": "E05/body",
+      "to": "turn-upright/body",
+      "areaJump": 0.02869622210115641,
+      "centroidJump": 8.272143189745108
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "body",
+      "time": 1.06667,
+      "from": "turn-upright/body",
+      "to": "E01/body",
+      "areaJump": 0.08056028754047928,
+      "centroidJump": 4.930234696893899
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "body",
+      "time": 1.26667,
+      "from": "E01/body",
+      "to": "E00/body",
+      "areaJump": 0.04102272149221764,
+      "centroidJump": 1.6307768845653074
+    },
+    {
+      "clip": "explosion_release",
+      "slot": "head",
+      "time": 0.33333,
+      "from": "E12/head",
+      "to": "release/head",
+      "areaJump": 0.0059900390610923004,
+      "centroidJump": 0.6287131718572672
+    },
+    {
+      "clip": "explosion_release",
+      "slot": "hand_r",
+      "time": 0.33333,
+      "from": "E12/hand_r",
+      "to": "release/hand_r",
+      "areaJump": 0.0003170954331350728,
+      "centroidJump": 0.01823333449015006
+    },
+    {
+      "clip": "explosion_release",
+      "slot": "leg_l",
+      "time": 0.33333,
+      "from": "E12/leg_l",
+      "to": "release/leg_l",
+      "areaJump": 0.020610584790084818,
+      "centroidJump": 2.3634842011814
+    },
+    {
+      "clip": "explosion_release",
+      "slot": "leg_r",
+      "time": 0.33333,
+      "from": "E12/leg_r",
+      "to": "release/leg_r",
+      "areaJump": 0.16610095344780806,
+      "centroidJump": 1.171761160545944
+    },
+    {
+      "clip": "explosion_release",
+      "slot": "body",
+      "time": 0.33333,
+      "from": "E12/body",
+      "to": "release/body",
+      "areaJump": 0.21859497136828399,
+      "centroidJump": 6.063970729931856
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "head",
+      "time": 0.25,
+      "from": "release/head",
+      "to": "fall-lean/head",
+      "areaJump": 0.007508938643901786,
+      "centroidJump": 0.6931933919152871
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "hand_r",
+      "time": 0.25,
+      "from": "release/hand_r",
+      "to": "fall-lean/hand_r",
+      "areaJump": 0.00018141956065897968,
+      "centroidJump": 0.023275488241340996
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "leg_l",
+      "time": 0.25,
+      "from": "release/leg_l",
+      "to": "fall-lean/leg_l",
+      "areaJump": 0.02999154364076939,
+      "centroidJump": 5.344900804866116
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "leg_r",
+      "time": 0.25,
+      "from": "release/leg_r",
+      "to": "fall-lean/leg_r",
+      "areaJump": 0.43287639202570904,
+      "centroidJump": 2.538939804856939
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "body",
+      "time": 0.25,
+      "from": "release/body",
+      "to": "fall-lean/body",
+      "areaJump": 0.19007048078889466,
+      "centroidJump": 10.38233182809868
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "head",
+      "time": 0.18333,
+      "from": "fall-lean/head",
+      "to": "crouch/head",
+      "areaJump": 0.00003544753593143213,
+      "centroidJump": 0.10203047861438098
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "head",
+      "time": 0.45,
+      "from": "crouch/head",
+      "to": "brace/head",
+      "areaJump": 0.0008235181293675398,
+      "centroidJump": 0.04736982065836633
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "head",
+      "time": 0.8,
+      "from": "brace/head",
+      "to": "lower/head",
+      "areaJump": 0.03485495111412806,
+      "centroidJump": 2.2813708285728533
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "head",
+      "time": 1.06667,
+      "from": "lower/head",
+      "to": "prone/head",
+      "areaJump": 0.01947217553235936,
+      "centroidJump": 1.1877650101553487
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "hand_r",
+      "time": 0.18333,
+      "from": "fall-lean/hand_r",
+      "to": "crouch/hand_r",
+      "areaJump": 0.0008854374782001351,
+      "centroidJump": 0.056008128804459295
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "hand_r",
+      "time": 0.45,
+      "from": "crouch/hand_r",
+      "to": "brace/hand_r",
+      "areaJump": 0.0006582816226712307,
+      "centroidJump": 0.04146664690368554
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "hand_r",
+      "time": 0.8,
+      "from": "brace/hand_r",
+      "to": "lower/hand_r",
+      "areaJump": 0.0007479912709759118,
+      "centroidJump": 0.015673553123533857
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "hand_r",
+      "time": 1.06667,
+      "from": "lower/hand_r",
+      "to": "prone/hand_r",
+      "areaJump": 0.0008276473972681497,
+      "centroidJump": 0.0029525547632576516
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_l",
+      "time": 0.18333,
+      "from": "fall-lean/leg_l",
+      "to": "crouch/leg_l",
+      "areaJump": 0.5171438917362275,
+      "centroidJump": 18.04896784706791
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_l",
+      "time": 0.45,
+      "from": "crouch/leg_l",
+      "to": "brace/leg_l",
+      "areaJump": 0.04921260203589517,
+      "centroidJump": 35.518377623353544
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_l",
+      "time": 0.8,
+      "from": "brace/leg_l",
+      "to": "lower/leg_l",
+      "areaJump": 0.0264309037774757,
+      "centroidJump": 25.978793353272064
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_l",
+      "time": 1.06667,
+      "from": "lower/leg_l",
+      "to": "prone/leg_l",
+      "areaJump": 0.5708766704161684,
+      "centroidJump": 6.564816423243094
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_r",
+      "time": 0.18333,
+      "from": "fall-lean/leg_r",
+      "to": "crouch/leg_r",
+      "areaJump": 0.24861056180816865,
+      "centroidJump": 3.127375093215413
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_r",
+      "time": 0.45,
+      "from": "crouch/leg_r",
+      "to": "brace/leg_r",
+      "areaJump": 0.014264200922179282,
+      "centroidJump": 5.2787100098467254
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_r",
+      "time": 0.8,
+      "from": "brace/leg_r",
+      "to": "lower/leg_r",
+      "areaJump": 0.01960203466875632,
+      "centroidJump": 9.08250424824509
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "leg_r",
+      "time": 1.06667,
+      "from": "lower/leg_r",
+      "to": "prone/leg_r",
+      "areaJump": 0.03888072269897391,
+      "centroidJump": 0.6592768291639447
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "body",
+      "time": 0.18333,
+      "from": "fall-lean/body",
+      "to": "crouch/body",
+      "areaJump": 0.8956396439062102,
+      "centroidJump": 19.564406481048255
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "body",
+      "time": 0.45,
+      "from": "crouch/body",
+      "to": "brace/body",
+      "areaJump": 0.17020939672466207,
+      "centroidJump": 8.54490919845679
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "body",
+      "time": 0.8,
+      "from": "brace/body",
+      "to": "lower/body",
+      "areaJump": 0.7340994765603308,
+      "centroidJump": 9.742044848796137
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "body",
+      "time": 1.06667,
+      "from": "lower/body",
+      "to": "prone/body",
+      "areaJump": 0.17313826885732198,
+      "centroidJump": 3.3656332241693474
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 0.21667,
+      "from": "prone/head",
+      "to": "lower/head",
+      "areaJump": 0.019858885627680012,
+      "centroidJump": 1.1874850496497742
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 0.56667,
+      "from": "lower/head",
+      "to": "brace/head",
+      "areaJump": 0.03611371164248833,
+      "centroidJump": 2.2887313178606226
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 1.08333,
+      "from": "brace/head",
+      "to": "kneel-rise/head",
+      "areaJump": 0.0008750619429385154,
+      "centroidJump": 0.014753914517907973
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 1.6,
+      "from": "kneel-rise/head",
+      "to": "fall-lean/head",
+      "areaJump": 0.000015407651714038906,
+      "centroidJump": 0.028339184891189778
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 2.15,
+      "from": "fall-lean/head",
+      "to": "E12/head",
+      "areaJump": 0.013362887962387493,
+      "centroidJump": 1.3147541985304525
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 2.73333,
+      "from": "E12/head",
+      "to": "E08/head",
+      "areaJump": 0.0027126937940862295,
+      "centroidJump": 0.1848175803739521
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 2.93333,
+      "from": "E08/head",
+      "to": "E05/head",
+      "areaJump": 0.011607530292582657,
+      "centroidJump": 0.9975558269579019
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 3.2,
+      "from": "E05/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0032021544266862545,
+      "centroidJump": 0.3747819054665536
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 3.43333,
+      "from": "turn-upright/head",
+      "to": "E01/head",
+      "areaJump": 0.0013702699537212482,
+      "centroidJump": 0.13272210923120958
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 3.63333,
+      "from": "E01/head",
+      "to": "E00/head",
+      "areaJump": 0.00005971371027135852,
+      "centroidJump": 0.01479590150478407
+    },
+    {
+      "clip": "get_up",
+      "slot": "hand_r",
+      "time": 0.21667,
+      "from": "prone/hand_r",
+      "to": "lower/hand_r",
+      "areaJump": 0.0008269178014014278,
+      "centroidJump": 0.0034599877281509183
+    },
+    {
+      "clip": "get_up",
+      "slot": "hand_r",
+      "time": 0.56667,
+      "from": "lower/hand_r",
+      "to": "brace/hand_r",
+      "areaJump": 0.0007484302090086103,
+      "centroidJump": 0.009391347643086124
+    },
+    {
+      "clip": "get_up",
+      "slot": "hand_r",
+      "time": 1.08333,
+      "from": "brace/hand_r",
+      "to": "kneel-rise/hand_r",
+      "areaJump": 0.0009951904290802505,
+      "centroidJump": 0.06061837336028177
+    },
+    {
+      "clip": "get_up",
+      "slot": "hand_r",
+      "time": 1.6,
+      "from": "kneel-rise/hand_r",
+      "to": "fall-lean/hand_r",
+      "areaJump": 0.0012240991772325405,
+      "centroidJump": 0.00984016547720514
+    },
+    {
+      "clip": "get_up",
+      "slot": "hand_r",
+      "time": 2.15,
+      "from": "fall-lean/hand_r",
+      "to": "E12/hand_r",
+      "areaJump": 0.0001353501090788356,
+      "centroidJump": 0.026799715182209288
+    },
+    {
+      "clip": "get_up",
+      "slot": "hand_r",
+      "time": 2.73333,
+      "from": "E12/hand_r",
+      "to": "E08/hand_r",
+      "areaJump": 0.0006468592387172123,
+      "centroidJump": 0.007912551883437978
+    },
+    {
+      "clip": "get_up",
+      "slot": "hand_r",
+      "time": 2.93333,
+      "from": "E08/hand_r",
+      "to": "E05/hand_r",
+      "areaJump": 0.00018891776315221875,
+      "centroidJump": 0.022375357955479583
+    },
+    {
+      "clip": "get_up",
+      "slot": "hand_r",
+      "time": 3.2,
+      "from": "E05/hand_r",
+      "to": "turn-upright/hand_r",
+      "areaJump": 0.0004095329551925264,
+      "centroidJump": 0.04616478351070102
+    },
+    {
+      "clip": "get_up",
+      "slot": "hand_r",
+      "time": 3.43333,
+      "from": "turn-upright/hand_r",
+      "to": "E01/hand_r",
+      "areaJump": 0.00006904864303458602,
+      "centroidJump": 0.07132417298063705
+    },
+    {
+      "clip": "get_up",
+      "slot": "hand_r",
+      "time": 3.63333,
+      "from": "E01/hand_r",
+      "to": "E00/hand_r",
+      "areaJump": 0.0005375345496039241,
+      "centroidJump": 0.030313290818563102
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "time": 0.21667,
+      "from": "prone/leg_l",
+      "to": "lower/leg_l",
+      "areaJump": 1.3357515842464305,
+      "centroidJump": 6.554598437656428
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "time": 0.56667,
+      "from": "lower/leg_l",
+      "to": "brace/leg_l",
+      "areaJump": 0.049023678303533824,
+      "centroidJump": 26.43246161634795
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "time": 1.08333,
+      "from": "brace/leg_l",
+      "to": "kneel-rise/leg_l",
+      "areaJump": 1.8823455632678714,
+      "centroidJump": 21.379262101893108
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "time": 1.6,
+      "from": "kneel-rise/leg_l",
+      "to": "fall-lean/leg_l",
+      "areaJump": 0.11645548604389155,
+      "centroidJump": 3.162829223843368
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "time": 2.15,
+      "from": "fall-lean/leg_l",
+      "to": "E12/leg_l",
+      "areaJump": 0.07347397053169158,
+      "centroidJump": 4.7561102801767445
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "time": 2.73333,
+      "from": "E12/leg_l",
+      "to": "E08/leg_l",
+      "areaJump": 0.0026721788789068057,
+      "centroidJump": 3.6795905838112968
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "time": 2.93333,
+      "from": "E08/leg_l",
+      "to": "E05/leg_l",
+      "areaJump": 0.00766470618338444,
+      "centroidJump": 4.733562931980224
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "time": 3.2,
+      "from": "E05/leg_l",
+      "to": "turn-upright/leg_l",
+      "areaJump": 0.033734639056866245,
+      "centroidJump": 4.77009567192147
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "time": 3.43333,
+      "from": "turn-upright/leg_l",
+      "to": "E01/leg_l",
+      "areaJump": 0.16193204748116596,
+      "centroidJump": 3.2330910512905846
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_l",
+      "time": 3.63333,
+      "from": "E01/leg_l",
+      "to": "E00/leg_l",
+      "areaJump": 0.06815004604927832,
+      "centroidJump": 2.150694500269528
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "time": 0.21667,
+      "from": "prone/leg_r",
+      "to": "lower/leg_r",
+      "areaJump": 0.04024532790293889,
+      "centroidJump": 0.6648001234852976
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "time": 0.56667,
+      "from": "lower/leg_r",
+      "to": "brace/leg_r",
+      "areaJump": 0.03268510782139855,
+      "centroidJump": 9.268859320340225
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "time": 1.08333,
+      "from": "brace/leg_r",
+      "to": "kneel-rise/leg_r",
+      "areaJump": 0.18635425988912724,
+      "centroidJump": 6.861166198579151
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "time": 1.6,
+      "from": "kneel-rise/leg_r",
+      "to": "fall-lean/leg_r",
+      "areaJump": 0.19014626372138432,
+      "centroidJump": 13.078767936601121
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "time": 2.15,
+      "from": "fall-lean/leg_r",
+      "to": "E12/leg_r",
+      "areaJump": 0.21496029901979752,
+      "centroidJump": 5.026797045969745
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "time": 2.73333,
+      "from": "E12/leg_r",
+      "to": "E08/leg_r",
+      "areaJump": 0.019657649638272767,
+      "centroidJump": 2.3092890231535406
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "time": 2.93333,
+      "from": "E08/leg_r",
+      "to": "E05/leg_r",
+      "areaJump": 0.07640152629718322,
+      "centroidJump": 4.110842110176193
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "time": 3.2,
+      "from": "E05/leg_r",
+      "to": "turn-upright/leg_r",
+      "areaJump": 0.4239804828894431,
+      "centroidJump": 3.9449214699667454
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "time": 3.43333,
+      "from": "turn-upright/leg_r",
+      "to": "E01/leg_r",
+      "areaJump": 0.1209638408043685,
+      "centroidJump": 0.7946445651615679
+    },
+    {
+      "clip": "get_up",
+      "slot": "leg_r",
+      "time": 3.63333,
+      "from": "E01/leg_r",
+      "to": "E00/leg_r",
+      "areaJump": 0.06558848483902935,
+      "centroidJump": 1.2853095163394934
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "time": 0.21667,
+      "from": "prone/body",
+      "to": "lower/body",
+      "areaJump": 0.14334908635916255,
+      "centroidJump": 3.0959619025599494
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "time": 0.56667,
+      "from": "lower/body",
+      "to": "brace/body",
+      "areaJump": 0.42315267812787816,
+      "centroidJump": 9.879576342018842
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "time": 1.08333,
+      "from": "brace/body",
+      "to": "kneel-rise/body",
+      "areaJump": 0.05333352130876767,
+      "centroidJump": 46.81530680963631
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "time": 1.6,
+      "from": "kneel-rise/body",
+      "to": "fall-lean/body",
+      "areaJump": 0.3402469322390903,
+      "centroidJump": 7.283663982912002
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "time": 2.15,
+      "from": "fall-lean/body",
+      "to": "E12/body",
+      "areaJump": 0.008899479612395567,
+      "centroidJump": 13.235948693485646
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "time": 2.73333,
+      "from": "E12/body",
+      "to": "E08/body",
+      "areaJump": 0.045654226656153485,
+      "centroidJump": 0.4775910906800772
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "time": 2.93333,
+      "from": "E08/body",
+      "to": "E05/body",
+      "areaJump": 0.13036763415605013,
+      "centroidJump": 15.853920958877808
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "time": 3.2,
+      "from": "E05/body",
+      "to": "turn-upright/body",
+      "areaJump": 0.03958675840970871,
+      "centroidJump": 8.12837382671644
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "time": 3.43333,
+      "from": "turn-upright/body",
+      "to": "E01/body",
+      "areaJump": 0.07463380588856894,
+      "centroidJump": 4.78639382605715
+    },
+    {
+      "clip": "get_up",
+      "slot": "body",
+      "time": 3.63333,
+      "from": "E01/body",
+      "to": "E00/body",
+      "areaJump": 0.04144951886971904,
+      "centroidJump": 1.6331556666520963
+    },
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 0.18333,
+      "from": "E00/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0014280884651566295,
+      "centroidJump": 0.1416068586915497
+    },
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 0.45,
+      "from": "turn-upright/head",
+      "to": "fall-lean/head",
+      "areaJump": 0.001432726219589675,
+      "centroidJump": 0.14084944193151497
+    },
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 0.73333,
+      "from": "fall-lean/head",
+      "to": "crouch/head",
+      "areaJump": 0.0000354748486722789,
+      "centroidJump": 0.13672412207512283
+    },
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 0.95,
+      "from": "crouch/head",
+      "to": "brace/head",
+      "areaJump": 0.0008235018140506645,
+      "centroidJump": 0.04103817170781156
+    },
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 1.23333,
+      "from": "brace/head",
+      "to": "lower/head",
+      "areaJump": 0.03485495946967743,
+      "centroidJump": 2.273974538082767
+    },
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 1.46667,
+      "from": "lower/head",
+      "to": "prone/head",
+      "areaJump": 0.019472190157999725,
+      "centroidJump": 1.1876496605636915
+    },
+    {
+      "clip": "dead",
+      "slot": "hand_r",
+      "time": 0.18333,
+      "from": "E00/hand_r",
+      "to": "turn-upright/hand_r",
+      "areaJump": 0.0006065664037447904,
+      "centroidJump": 0.06425896051347682
+    },
+    {
+      "clip": "dead",
+      "slot": "hand_r",
+      "time": 0.45,
+      "from": "turn-upright/hand_r",
+      "to": "fall-lean/hand_r",
+      "areaJump": 0.000562770296422821,
+      "centroidJump": 0.03250814666274943
+    },
+    {
+      "clip": "dead",
+      "slot": "hand_r",
+      "time": 0.73333,
+      "from": "fall-lean/hand_r",
+      "to": "crouch/hand_r",
+      "areaJump": 0.0008853492237143046,
+      "centroidJump": 0.07583154126726314
+    },
+    {
+      "clip": "dead",
+      "slot": "hand_r",
+      "time": 0.95,
+      "from": "crouch/hand_r",
+      "to": "brace/hand_r",
+      "areaJump": 0.0006582433282065203,
+      "centroidJump": 0.05324775210702312
+    },
+    {
+      "clip": "dead",
+      "slot": "hand_r",
+      "time": 1.23333,
+      "from": "brace/hand_r",
+      "to": "lower/hand_r",
+      "areaJump": 0.0007479090342797923,
+      "centroidJump": 0.021662017083191404
+    },
+    {
+      "clip": "dead",
+      "slot": "hand_r",
+      "time": 1.46667,
+      "from": "lower/hand_r",
+      "to": "prone/hand_r",
+      "areaJump": 0.0008277674506689259,
+      "centroidJump": 0.003191359988524166
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_l",
+      "time": 0.18333,
+      "from": "E00/leg_l",
+      "to": "turn-upright/leg_l",
+      "areaJump": 0.13028723161478517,
+      "centroidJump": 1.5846459959326635
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_l",
+      "time": 0.45,
+      "from": "turn-upright/leg_l",
+      "to": "fall-lean/leg_l",
+      "areaJump": 0.10913386417957938,
+      "centroidJump": 6.411538204171689
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_l",
+      "time": 0.73333,
+      "from": "fall-lean/leg_l",
+      "to": "crouch/leg_l",
+      "areaJump": 0.5232914423279778,
+      "centroidJump": 18.375701116351546
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_l",
+      "time": 0.95,
+      "from": "crouch/leg_l",
+      "to": "brace/leg_l",
+      "areaJump": 0.13124479710469972,
+      "centroidJump": 33.86946672648156
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_l",
+      "time": 1.23333,
+      "from": "brace/leg_l",
+      "to": "lower/leg_l",
+      "areaJump": 0.010140290885055414,
+      "centroidJump": 25.16970850358857
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_l",
+      "time": 1.46667,
+      "from": "lower/leg_l",
+      "to": "prone/leg_l",
+      "areaJump": 0.5709459463283861,
+      "centroidJump": 6.565917930928202
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_r",
+      "time": 0.18333,
+      "from": "E00/leg_r",
+      "to": "turn-upright/leg_r",
+      "areaJump": 0.09213943948054126,
+      "centroidJump": 0.6519495151662079
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_r",
+      "time": 0.45,
+      "from": "turn-upright/leg_r",
+      "to": "fall-lean/leg_r",
+      "areaJump": 0.030539247662821234,
+      "centroidJump": 5.391429419807814
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_r",
+      "time": 0.73333,
+      "from": "fall-lean/leg_r",
+      "to": "crouch/leg_r",
+      "areaJump": 0.2373187711262803,
+      "centroidJump": 3.1762343940939393
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_r",
+      "time": 0.95,
+      "from": "crouch/leg_r",
+      "to": "brace/leg_r",
+      "areaJump": 0.02213014336516861,
+      "centroidJump": 4.744057515010427
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_r",
+      "time": 1.23333,
+      "from": "brace/leg_r",
+      "to": "lower/leg_r",
+      "areaJump": 0.0068109015161004205,
+      "centroidJump": 8.436685925338999
+    },
+    {
+      "clip": "dead",
+      "slot": "leg_r",
+      "time": 1.46667,
+      "from": "lower/leg_r",
+      "to": "prone/leg_r",
+      "areaJump": 0.038843180117327236,
+      "centroidJump": 0.6585317607907011
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "time": 0.18333,
+      "from": "E00/body",
+      "to": "turn-upright/body",
+      "areaJump": 0.006538262190075583,
+      "centroidJump": 2.3590123979544044
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "time": 0.45,
+      "from": "turn-upright/body",
+      "to": "fall-lean/body",
+      "areaJump": 0.040526054709147497,
+      "centroidJump": 15.099630727010059
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "time": 0.73333,
+      "from": "fall-lean/body",
+      "to": "crouch/body",
+      "areaJump": 0.8928174876286499,
+      "centroidJump": 19.44076050770052
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "time": 0.95,
+      "from": "crouch/body",
+      "to": "brace/body",
+      "areaJump": 0.16677820301640245,
+      "centroidJump": 8.41719700911683
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "time": 1.23333,
+      "from": "brace/body",
+      "to": "lower/body",
+      "areaJump": 0.7252255698406644,
+      "centroidJump": 9.422661888460782
+    },
+    {
+      "clip": "dead",
+      "slot": "body",
+      "time": 1.46667,
+      "from": "lower/body",
+      "to": "prone/body",
+      "areaJump": 0.17278281507849558,
+      "centroidJump": 3.3443293079127803
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 0.03333,
+      "from": "E00/head",
+      "to": "E01/head",
+      "areaJump": 0.00005973437350470512,
+      "centroidJump": 0.02583123904960102
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 0.13333,
+      "from": "E01/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0013684090236143476,
+      "centroidJump": 0.13389350441164685
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 0.25,
+      "from": "turn-upright/head",
+      "to": "E05/head",
+      "areaJump": 0.0031918381293160047,
+      "centroidJump": 0.37683220864252387
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 0.4,
+      "from": "E05/head",
+      "to": "E08/head",
+      "areaJump": 0.011474433942416207,
+      "centroidJump": 0.9994525520877504
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 0.5,
+      "from": "E08/head",
+      "to": "E12/head",
+      "areaJump": 0.0027201057831665043,
+      "centroidJump": 0.1867774205690912
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 1.01667,
+      "from": "E12/head",
+      "to": "E08/head",
+      "areaJump": 0.0027127409261141766,
+      "centroidJump": 0.18627578829375938
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 1.11667,
+      "from": "E08/head",
+      "to": "E05/head",
+      "areaJump": 0.011607574963949263,
+      "centroidJump": 1.0010108084266534
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 1.25,
+      "from": "E05/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0032021130282031685,
+      "centroidJump": 0.3768887772928981
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 1.38333,
+      "from": "turn-upright/head",
+      "to": "E01/head",
+      "areaJump": 0.0013703219513510057,
+      "centroidJump": 0.13439660845437582
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 1.48333,
+      "from": "E01/head",
+      "to": "E00/head",
+      "areaJump": 0.00005972154270028618,
+      "centroidJump": 0.019039094191478288
+    },
+    {
+      "clip": "attack_short",
+      "slot": "hand_r",
+      "time": 0.03333,
+      "from": "E00/hand_r",
+      "to": "E01/hand_r",
+      "areaJump": 0.000537304037530606,
+      "centroidJump": 0.060791745223204185
+    },
+    {
+      "clip": "attack_short",
+      "slot": "hand_r",
+      "time": 0.13333,
+      "from": "E01/hand_r",
+      "to": "turn-upright/hand_r",
+      "areaJump": 0.00006908193957666509,
+      "centroidJump": 0.11431040045517918
+    },
+    {
+      "clip": "attack_short",
+      "slot": "hand_r",
+      "time": 0.25,
+      "from": "turn-upright/hand_r",
+      "to": "E05/hand_r",
+      "areaJump": 0.000409147180766678,
+      "centroidJump": 0.08443528972824364
+    },
+    {
+      "clip": "attack_short",
+      "slot": "hand_r",
+      "time": 0.4,
+      "from": "E05/hand_r",
+      "to": "E08/hand_r",
+      "areaJump": 0.0001893782508757269,
+      "centroidJump": 0.032962177155021075
+    },
+    {
+      "clip": "attack_short",
+      "slot": "hand_r",
+      "time": 0.5,
+      "from": "E08/hand_r",
+      "to": "E12/hand_r",
+      "areaJump": 0.000647514642448499,
+      "centroidJump": 0.01717275791038458
+    },
+    {
+      "clip": "attack_short",
+      "slot": "hand_r",
+      "time": 1.01667,
+      "from": "E12/hand_r",
+      "to": "E08/hand_r",
+      "areaJump": 0.0006470264295560524,
+      "centroidJump": 0.014822906916461447
+    },
+    {
+      "clip": "attack_short",
+      "slot": "hand_r",
+      "time": 1.11667,
+      "from": "E08/hand_r",
+      "to": "E05/hand_r",
+      "areaJump": 0.00018883020003834794,
+      "centroidJump": 0.04170787790251471
+    },
+    {
+      "clip": "attack_short",
+      "slot": "hand_r",
+      "time": 1.25,
+      "from": "E05/hand_r",
+      "to": "turn-upright/hand_r",
+      "areaJump": 0.0004095940607364845,
+      "centroidJump": 0.08579274505969992
+    },
+    {
+      "clip": "attack_short",
+      "slot": "hand_r",
+      "time": 1.38333,
+      "from": "turn-upright/hand_r",
+      "to": "E01/hand_r",
+      "areaJump": 0.00006908643204384113,
+      "centroidJump": 0.13179969356882149
+    },
+    {
+      "clip": "attack_short",
+      "slot": "hand_r",
+      "time": 1.48333,
+      "from": "E01/hand_r",
+      "to": "E00/hand_r",
+      "areaJump": 0.0005377756151985214,
+      "centroidJump": 0.04207308321915531
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "time": 0.03333,
+      "from": "E00/leg_l",
+      "to": "E01/leg_l",
+      "areaJump": 0.06415450956506308,
+      "centroidJump": 2.3358698901095187
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "time": 0.13333,
+      "from": "E01/leg_l",
+      "to": "turn-upright/leg_l",
+      "areaJump": 0.18779385271341842,
+      "centroidJump": 3.1301797827268674
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "time": 0.25,
+      "from": "turn-upright/leg_l",
+      "to": "E05/leg_l",
+      "areaJump": 0.04079796418231307,
+      "centroidJump": 5.219897443462505
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "time": 0.4,
+      "from": "E05/leg_l",
+      "to": "E08/leg_l",
+      "areaJump": 0.005003584640616898,
+      "centroidJump": 4.822558266253109
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "time": 0.5,
+      "from": "E08/leg_l",
+      "to": "E12/leg_l",
+      "areaJump": 0.0038357430709303753,
+      "centroidJump": 3.648049600697465
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "time": 1.01667,
+      "from": "E12/leg_l",
+      "to": "E08/leg_l",
+      "areaJump": 0.002153463254926713,
+      "centroidJump": 3.694944405807064
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "time": 1.11667,
+      "from": "E08/leg_l",
+      "to": "E05/leg_l",
+      "areaJump": 0.008391155976450126,
+      "centroidJump": 4.710703256309309
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "time": 1.25,
+      "from": "E05/leg_l",
+      "to": "turn-upright/leg_l",
+      "areaJump": 0.03539901443366589,
+      "centroidJump": 4.903505877112438
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "time": 1.38333,
+      "from": "turn-upright/leg_l",
+      "to": "E01/leg_l",
+      "areaJump": 0.16553430442643957,
+      "centroidJump": 3.3401035024274073
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_l",
+      "time": 1.48333,
+      "from": "E01/leg_l",
+      "to": "E00/leg_l",
+      "areaJump": 0.06754588129148198,
+      "centroidJump": 2.0773160196359957
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "time": 0.03333,
+      "from": "E00/leg_r",
+      "to": "E01/leg_r",
+      "areaJump": 0.06565813650697083,
+      "centroidJump": 1.2381580111974602
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "time": 0.13333,
+      "from": "E01/leg_r",
+      "to": "turn-upright/leg_r",
+      "areaJump": 0.09510992752446412,
+      "centroidJump": 1.1722362210297752
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "time": 0.25,
+      "from": "turn-upright/leg_r",
+      "to": "E05/leg_r",
+      "areaJump": 0.29920612221324294,
+      "centroidJump": 4.042118568404366
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "time": 0.4,
+      "from": "E05/leg_r",
+      "to": "E08/leg_r",
+      "areaJump": 0.0670472989257862,
+      "centroidJump": 4.709531009485868
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "time": 0.5,
+      "from": "E08/leg_r",
+      "to": "E12/leg_r",
+      "areaJump": 0.01959075092240692,
+      "centroidJump": 2.304692023527384
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "time": 1.01667,
+      "from": "E12/leg_r",
+      "to": "E08/leg_r",
+      "areaJump": 0.019497615299122417,
+      "centroidJump": 2.3116056369711626
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "time": 1.11667,
+      "from": "E08/leg_r",
+      "to": "E05/leg_r",
+      "areaJump": 0.07942352128053431,
+      "centroidJump": 3.992450266781021
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "time": 1.25,
+      "from": "E05/leg_r",
+      "to": "turn-upright/leg_r",
+      "areaJump": 0.4242746914935125,
+      "centroidJump": 3.9699858638703294
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "time": 1.38333,
+      "from": "turn-upright/leg_r",
+      "to": "E01/leg_r",
+      "areaJump": 0.14067414743523643,
+      "centroidJump": 0.7118816508112534
+    },
+    {
+      "clip": "attack_short",
+      "slot": "leg_r",
+      "time": 1.48333,
+      "from": "E01/leg_r",
+      "to": "E00/leg_r",
+      "areaJump": 0.06709437681711228,
+      "centroidJump": 1.3123279862652597
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "time": 0.03333,
+      "from": "E00/body",
+      "to": "E01/body",
+      "areaJump": 0.04348561315980004,
+      "centroidJump": 1.6573749067692014
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "time": 0.13333,
+      "from": "E01/body",
+      "to": "turn-upright/body",
+      "areaJump": 0.0494317617032316,
+      "centroidJump": 4.249470549672526
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "time": 0.25,
+      "from": "turn-upright/body",
+      "to": "E05/body",
+      "areaJump": 0.06990167097718913,
+      "centroidJump": 7.693461529481339
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "time": 0.4,
+      "from": "E05/body",
+      "to": "E08/body",
+      "areaJump": 0.1780160129907633,
+      "centroidJump": 17.570892805663398
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "time": 0.5,
+      "from": "E08/body",
+      "to": "E12/body",
+      "areaJump": 0.042803925030655,
+      "centroidJump": 0.4743919806488731
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "time": 1.01667,
+      "from": "E12/body",
+      "to": "E08/body",
+      "areaJump": 0.046267101937974564,
+      "centroidJump": 0.4776933908833139
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "time": 1.11667,
+      "from": "E08/body",
+      "to": "E05/body",
+      "areaJump": 0.119887202300488,
+      "centroidJump": 15.327967651474376
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "time": 1.25,
+      "from": "E05/body",
+      "to": "turn-upright/body",
+      "areaJump": 0.04990025185086555,
+      "centroidJump": 7.994228257068886
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "time": 1.38333,
+      "from": "turn-upright/body",
+      "to": "E01/body",
+      "areaJump": 0.12012174820169552,
+      "centroidJump": 6.074032028233746
+    },
+    {
+      "clip": "attack_short",
+      "slot": "body",
+      "time": 1.48333,
+      "from": "E01/body",
+      "to": "E00/body",
+      "areaJump": 0.040028661093531204,
+      "centroidJump": 1.6301934130004274
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 0.03333,
+      "from": "E00/head",
+      "to": "E01/head",
+      "areaJump": 0.00005973437350470512,
+      "centroidJump": 0.02583123904960102
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 0.13333,
+      "from": "E01/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0013684090236143476,
+      "centroidJump": 0.13389350441164685
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 0.25,
+      "from": "turn-upright/head",
+      "to": "E05/head",
+      "areaJump": 0.0031918381293160047,
+      "centroidJump": 0.37683220864252387
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 0.4,
+      "from": "E05/head",
+      "to": "E08/head",
+      "areaJump": 0.011474433942416207,
+      "centroidJump": 0.9994525520877504
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 0.5,
+      "from": "E08/head",
+      "to": "E12/head",
+      "areaJump": 0.0027201057831665043,
+      "centroidJump": 0.1867774205690912
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 1.01667,
+      "from": "E12/head",
+      "to": "E08/head",
+      "areaJump": 0.0027127409261141766,
+      "centroidJump": 0.18627578829375938
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 1.11667,
+      "from": "E08/head",
+      "to": "E05/head",
+      "areaJump": 0.011607574963949263,
+      "centroidJump": 1.0010108084266534
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 1.25,
+      "from": "E05/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0032021130282031685,
+      "centroidJump": 0.3768887772928981
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 1.38333,
+      "from": "turn-upright/head",
+      "to": "E01/head",
+      "areaJump": 0.0013703219513510057,
+      "centroidJump": 0.13439660845437582
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 1.48333,
+      "from": "E01/head",
+      "to": "E00/head",
+      "areaJump": 0.00005972154270028618,
+      "centroidJump": 0.019039094191478288
+    },
+    {
+      "clip": "cast_short",
+      "slot": "hand_r",
+      "time": 0.03333,
+      "from": "E00/hand_r",
+      "to": "E01/hand_r",
+      "areaJump": 0.000537304037530606,
+      "centroidJump": 0.060791745223204185
+    },
+    {
+      "clip": "cast_short",
+      "slot": "hand_r",
+      "time": 0.13333,
+      "from": "E01/hand_r",
+      "to": "turn-upright/hand_r",
+      "areaJump": 0.00006908193957666509,
+      "centroidJump": 0.11431040045517918
+    },
+    {
+      "clip": "cast_short",
+      "slot": "hand_r",
+      "time": 0.25,
+      "from": "turn-upright/hand_r",
+      "to": "E05/hand_r",
+      "areaJump": 0.000409147180766678,
+      "centroidJump": 0.08443528972824364
+    },
+    {
+      "clip": "cast_short",
+      "slot": "hand_r",
+      "time": 0.4,
+      "from": "E05/hand_r",
+      "to": "E08/hand_r",
+      "areaJump": 0.0001893782508757269,
+      "centroidJump": 0.032962177155021075
+    },
+    {
+      "clip": "cast_short",
+      "slot": "hand_r",
+      "time": 0.5,
+      "from": "E08/hand_r",
+      "to": "E12/hand_r",
+      "areaJump": 0.000647514642448499,
+      "centroidJump": 0.01717275791038458
+    },
+    {
+      "clip": "cast_short",
+      "slot": "hand_r",
+      "time": 1.01667,
+      "from": "E12/hand_r",
+      "to": "E08/hand_r",
+      "areaJump": 0.0006470264295560524,
+      "centroidJump": 0.014822906916461447
+    },
+    {
+      "clip": "cast_short",
+      "slot": "hand_r",
+      "time": 1.11667,
+      "from": "E08/hand_r",
+      "to": "E05/hand_r",
+      "areaJump": 0.00018883020003834794,
+      "centroidJump": 0.04170787790251471
+    },
+    {
+      "clip": "cast_short",
+      "slot": "hand_r",
+      "time": 1.25,
+      "from": "E05/hand_r",
+      "to": "turn-upright/hand_r",
+      "areaJump": 0.0004095940607364845,
+      "centroidJump": 0.08579274505969992
+    },
+    {
+      "clip": "cast_short",
+      "slot": "hand_r",
+      "time": 1.38333,
+      "from": "turn-upright/hand_r",
+      "to": "E01/hand_r",
+      "areaJump": 0.00006908643204384113,
+      "centroidJump": 0.13179969356882149
+    },
+    {
+      "clip": "cast_short",
+      "slot": "hand_r",
+      "time": 1.48333,
+      "from": "E01/hand_r",
+      "to": "E00/hand_r",
+      "areaJump": 0.0005377756151985214,
+      "centroidJump": 0.04207308321915531
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "time": 0.03333,
+      "from": "E00/leg_l",
+      "to": "E01/leg_l",
+      "areaJump": 0.06415450956506308,
+      "centroidJump": 2.3358698901095187
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "time": 0.13333,
+      "from": "E01/leg_l",
+      "to": "turn-upright/leg_l",
+      "areaJump": 0.18779385271341842,
+      "centroidJump": 3.1301797827268674
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "time": 0.25,
+      "from": "turn-upright/leg_l",
+      "to": "E05/leg_l",
+      "areaJump": 0.04079796418231307,
+      "centroidJump": 5.219897443462505
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "time": 0.4,
+      "from": "E05/leg_l",
+      "to": "E08/leg_l",
+      "areaJump": 0.005003584640616898,
+      "centroidJump": 4.822558266253109
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "time": 0.5,
+      "from": "E08/leg_l",
+      "to": "E12/leg_l",
+      "areaJump": 0.0038357430709303753,
+      "centroidJump": 3.648049600697465
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "time": 1.01667,
+      "from": "E12/leg_l",
+      "to": "E08/leg_l",
+      "areaJump": 0.002153463254926713,
+      "centroidJump": 3.694944405807064
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "time": 1.11667,
+      "from": "E08/leg_l",
+      "to": "E05/leg_l",
+      "areaJump": 0.008391155976450126,
+      "centroidJump": 4.710703256309309
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "time": 1.25,
+      "from": "E05/leg_l",
+      "to": "turn-upright/leg_l",
+      "areaJump": 0.03539901443366589,
+      "centroidJump": 4.903505877112438
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "time": 1.38333,
+      "from": "turn-upright/leg_l",
+      "to": "E01/leg_l",
+      "areaJump": 0.16553430442643957,
+      "centroidJump": 3.3401035024274073
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_l",
+      "time": 1.48333,
+      "from": "E01/leg_l",
+      "to": "E00/leg_l",
+      "areaJump": 0.06754588129148198,
+      "centroidJump": 2.0773160196359957
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "time": 0.03333,
+      "from": "E00/leg_r",
+      "to": "E01/leg_r",
+      "areaJump": 0.06565813650697083,
+      "centroidJump": 1.2381580111974602
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "time": 0.13333,
+      "from": "E01/leg_r",
+      "to": "turn-upright/leg_r",
+      "areaJump": 0.09510992752446412,
+      "centroidJump": 1.1722362210297752
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "time": 0.25,
+      "from": "turn-upright/leg_r",
+      "to": "E05/leg_r",
+      "areaJump": 0.29920612221324294,
+      "centroidJump": 4.042118568404366
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "time": 0.4,
+      "from": "E05/leg_r",
+      "to": "E08/leg_r",
+      "areaJump": 0.0670472989257862,
+      "centroidJump": 4.709531009485868
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "time": 0.5,
+      "from": "E08/leg_r",
+      "to": "E12/leg_r",
+      "areaJump": 0.01959075092240692,
+      "centroidJump": 2.304692023527384
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "time": 1.01667,
+      "from": "E12/leg_r",
+      "to": "E08/leg_r",
+      "areaJump": 0.019497615299122417,
+      "centroidJump": 2.3116056369711626
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "time": 1.11667,
+      "from": "E08/leg_r",
+      "to": "E05/leg_r",
+      "areaJump": 0.07942352128053431,
+      "centroidJump": 3.992450266781021
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "time": 1.25,
+      "from": "E05/leg_r",
+      "to": "turn-upright/leg_r",
+      "areaJump": 0.4242746914935125,
+      "centroidJump": 3.9699858638703294
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "time": 1.38333,
+      "from": "turn-upright/leg_r",
+      "to": "E01/leg_r",
+      "areaJump": 0.14067414743523643,
+      "centroidJump": 0.7118816508112534
+    },
+    {
+      "clip": "cast_short",
+      "slot": "leg_r",
+      "time": 1.48333,
+      "from": "E01/leg_r",
+      "to": "E00/leg_r",
+      "areaJump": 0.06709437681711228,
+      "centroidJump": 1.3123279862652597
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "time": 0.03333,
+      "from": "E00/body",
+      "to": "E01/body",
+      "areaJump": 0.04348561315980004,
+      "centroidJump": 1.6573749067692014
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "time": 0.13333,
+      "from": "E01/body",
+      "to": "turn-upright/body",
+      "areaJump": 0.0494317617032316,
+      "centroidJump": 4.249470549672526
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "time": 0.25,
+      "from": "turn-upright/body",
+      "to": "E05/body",
+      "areaJump": 0.06990167097718913,
+      "centroidJump": 7.693461529481339
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "time": 0.4,
+      "from": "E05/body",
+      "to": "E08/body",
+      "areaJump": 0.1780160129907633,
+      "centroidJump": 17.570892805663398
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "time": 0.5,
+      "from": "E08/body",
+      "to": "E12/body",
+      "areaJump": 0.042803925030655,
+      "centroidJump": 0.4743919806488731
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "time": 1.01667,
+      "from": "E12/body",
+      "to": "E08/body",
+      "areaJump": 0.046267101937974564,
+      "centroidJump": 0.4776933908833139
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "time": 1.11667,
+      "from": "E08/body",
+      "to": "E05/body",
+      "areaJump": 0.119887202300488,
+      "centroidJump": 15.327967651474376
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "time": 1.25,
+      "from": "E05/body",
+      "to": "turn-upright/body",
+      "areaJump": 0.04990025185086555,
+      "centroidJump": 7.994228257068886
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "time": 1.38333,
+      "from": "turn-upright/body",
+      "to": "E01/body",
+      "areaJump": 0.12012174820169552,
+      "centroidJump": 6.074032028233746
+    },
+    {
+      "clip": "cast_short",
+      "slot": "body",
+      "time": 1.48333,
+      "from": "E01/body",
+      "to": "E00/body",
+      "areaJump": 0.040028661093531204,
+      "centroidJump": 1.6301934130004274
+    }
+  ],
+  "maxima": {
+    "head": {
+      "areaJump": 0.03611371164248833,
+      "centroidJump": 2.2887313178606226
+    },
+    "hand_r": {
+      "areaJump": 0.0012240991772325405,
+      "centroidJump": 0.13179969356882149
+    },
+    "leg_l": {
+      "areaJump": 1.8823455632678714,
+      "centroidJump": 35.518377623353544
+    },
+    "leg_r": {
+      "areaJump": 0.43287639202570904,
+      "centroidJump": 13.078767936601121
+    },
+    "body": {
+      "areaJump": 0.8956396439062102,
+      "centroidJump": 46.81530680963631
+    }
+  },
+  "failingSwitches": [],
+  "headStretch": [],
+  "teleports": [],
+  "switchCount": 260,
+  "measurement": "Alpha-weighted triangle area and centroid",
+  "note": "Perspective and occlusion change body/leg visible area. Head and gripping hand size, within-pose deformation and arm teleports are the hard regression guards; visual replay must still check drawing changes."
+}

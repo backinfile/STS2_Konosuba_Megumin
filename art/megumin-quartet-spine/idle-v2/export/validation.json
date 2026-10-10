@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "runtime": "@esotericsoftware/spine-core 4.2.95",
+  "samples": 241,
+  "textureByteIdentical": true,
+  "bones": 14,
+  "vertices": 2891,
+  "triangles": 5568,
+  "maxRestErrorAt320px": 0.00002866802793732859,
+  "maxLoopSeamAt320px": 0,
+  "maxAnchorDriftAt320px": 0,
+  "maxMotionAt320px": 0.6164534347814431,
+  "landmarkDriftAt320px": {
+    "staffTip": 0,
+    "orb": 0,
+    "grip": 0,
+    "staffBase": 0,
+    "rightToe": 0,
+    "leftToe": 0
+  },
+  "minTriangleAreaRatio": 0.8831288885643693,
+  "maxTriangleAreaRatio": 1.1220359960065998
+}

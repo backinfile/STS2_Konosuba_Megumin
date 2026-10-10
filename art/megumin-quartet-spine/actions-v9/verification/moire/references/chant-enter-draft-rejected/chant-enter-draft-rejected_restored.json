@@ -1,0 +1,44 @@
+{
+  "stage": "restore",
+  "outcome": "delivered",
+  "human_note": "",
+  "source": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\chant-enter-draft-rejected.png",
+  "source_sha256": "1fe8d9cf9f0b2bddc6290e62e48a2425b2c15fc98d539e1da462b95db952bd20",
+  "final": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-draft-rejected\\chant-enter-draft-rejected_restored.png",
+  "final_sha256": "1fe8d9cf9f0b2bddc6290e62e48a2425b2c15fc98d539e1da462b95db952bd20",
+  "final_is_source_copy": true,
+  "regen_rounds": 0,
+  "mode": "rules",
+  "diag": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-draft-rejected\\chant-enter-draft-rejected_input_diag.json",
+  "verify": null,
+  "steps": [
+    {
+      "n": 1,
+      "current": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\chant-enter-draft-rejected.png",
+      "action": "diagnose",
+      "by": "rules",
+      "reason": "Diagnosis is required before treatment.",
+      "result": {
+        "action": "diagnose",
+        "lattice": false,
+        "granule_level": "none",
+        "scale_tile_pct": 0.0,
+        "scale_level": "none",
+        "board": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-draft-rejected\\chant-enter-draft-rejected_input_diag_board.png",
+        "scale_heatmap": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-draft-rejected\\chant-enter-draft-rejected_input_scaleheat.png"
+      }
+    },
+    {
+      "n": 2,
+      "current": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\chant-enter-draft-rejected.png",
+      "action": "finish",
+      "by": "rules",
+      "reason": "No supported artifact class was detected.",
+      "result": {
+        "action": "finish"
+      }
+    }
+  ],
+  "acceptance": "A person must inspect the boards and decide whether to accept the candidate.",
+  "time": "2026-10-10T14:50:30+08:00"
+}

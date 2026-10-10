@@ -1,0 +1,382 @@
+{
+  "runtime": "Spine Core 4.2.95",
+  "samples": 3511,
+  "bones": 63,
+  "slots": 11,
+  "gameplayClips": 19,
+  "bindPoses": 13,
+  "gripError": 0,
+  "staffLengthDrift": 0.00004687954606197309,
+  "referenceMappingError": 0.006593337109336517,
+  "loops": {
+    "idle_loop": 0.0000152587890625,
+    "chant_loop": 0.0000152587890625,
+    "explosion_hold": 0,
+    "relaxed_loop": 0,
+    "dead_loop": 0
+  },
+  "seams": {
+    "idle_loop -> chant_enter": 0.0000152587890625,
+    "chant_enter -> chant_loop": 0,
+    "chant_ack -> chant_loop": 0,
+    "chant_cancel -> idle_loop": 0,
+    "explosion_release -> explosion_hold": 0,
+    "explosion_hold -> explosion_exit": 0,
+    "explosion_exit -> relaxed_fall": 0.00000762939453125,
+    "relaxed_fall -> relaxed_loop": 0,
+    "relaxed_loop -> get_up": 0,
+    "get_up -> idle_loop": 0.000030517578125,
+    "hit -> idle_loop": 0,
+    "hit_chant -> chant_loop": 0,
+    "hit_down -> relaxed_loop": 0,
+    "dead -> dead_loop": 0,
+    "dead_from_down -> dead_loop": 0,
+    "attack_short -> idle_loop": 0.000030517578125,
+    "cast_short -> idle_loop": 0.000030517578125
+  },
+  "events": {
+    "release": 1,
+    "impact": 1
+  },
+  "regression": {
+    "chant_enter": 7.75,
+    "relaxed_fall": 7.92,
+    "get_up": 0.53
+  },
+  "foldPeaks": {
+    "idle_loop": {
+      "time": 0,
+      "foldedArea": 0,
+      "slots": []
+    },
+    "chant_enter": {
+      "time": 0.475,
+      "foldedArea": 75.25,
+      "slots": [
+        {
+          "slot": "body_under",
+          "area": 0.15,
+          "triangles": 2
+        },
+        {
+          "slot": "body",
+          "area": 70.34,
+          "triangles": 42
+        },
+        {
+          "slot": "leg_l",
+          "area": 0.95,
+          "triangles": 8
+        },
+        {
+          "slot": "leg_r",
+          "area": 0.46,
+          "triangles": 6
+        },
+        {
+          "slot": "arm_r",
+          "area": 0.42,
+          "triangles": 2
+        },
+        {
+          "slot": "hand_r",
+          "area": 2.93,
+          "triangles": 5
+        }
+      ]
+    },
+    "chant_loop": {
+      "time": 0,
+      "foldedArea": 0,
+      "slots": []
+    },
+    "chant_cancel": {
+      "time": 0.825,
+      "foldedArea": 106.61,
+      "slots": [
+        {
+          "slot": "body_under",
+          "area": 0.11,
+          "triangles": 1
+        },
+        {
+          "slot": "body",
+          "area": 37.25,
+          "triangles": 26
+        },
+        {
+          "slot": "leg_l",
+          "area": 1.74,
+          "triangles": 7
+        },
+        {
+          "slot": "arm_r",
+          "area": 10.63,
+          "triangles": 9
+        },
+        {
+          "slot": "head",
+          "area": 1.11,
+          "triangles": 1
+        },
+        {
+          "slot": "hand_r",
+          "area": 55.68,
+          "triangles": 23
+        }
+      ]
+    },
+    "chant_ack": {
+      "time": 0,
+      "foldedArea": 0,
+      "slots": []
+    },
+    "explosion_release": {
+      "time": 0,
+      "foldedArea": 0,
+      "slots": []
+    },
+    "explosion_hold": {
+      "time": 0,
+      "foldedArea": 0,
+      "slots": []
+    },
+    "explosion_exit": {
+      "time": 0.24166666666666667,
+      "foldedArea": 18.3,
+      "slots": [
+        {
+          "slot": "leg_l",
+          "area": 18.13,
+          "triangles": 6
+        }
+      ]
+    },
+    "relaxed_fall": {
+      "time": 0.8,
+      "foldedArea": 37.98,
+      "slots": [
+        {
+          "slot": "cape",
+          "area": 32.88,
+          "triangles": 5
+        },
+        {
+          "slot": "body",
+          "area": 3.54,
+          "triangles": 8
+        },
+        {
+          "slot": "leg_l",
+          "area": 0.13,
+          "triangles": 1
+        },
+        {
+          "slot": "leg_r",
+          "area": 0.88,
+          "triangles": 2
+        },
+        {
+          "slot": "arm_l",
+          "area": 0.27,
+          "triangles": 2
+        },
+        {
+          "slot": "arm_r",
+          "area": 0.14,
+          "triangles": 2
+        },
+        {
+          "slot": "head",
+          "area": 0.14,
+          "triangles": 1
+        }
+      ]
+    },
+    "relaxed_loop": {
+      "time": 0,
+      "foldedArea": 0,
+      "slots": []
+    },
+    "get_up": {
+      "time": 3.2,
+      "foldedArea": 138.42,
+      "slots": [
+        {
+          "slot": "body_under",
+          "area": 0.12,
+          "triangles": 1
+        },
+        {
+          "slot": "body",
+          "area": 50,
+          "triangles": 27
+        },
+        {
+          "slot": "leg_l",
+          "area": 2.44,
+          "triangles": 7
+        },
+        {
+          "slot": "arm_r",
+          "area": 13.58,
+          "triangles": 9
+        },
+        {
+          "slot": "head",
+          "area": 1.28,
+          "triangles": 1
+        },
+        {
+          "slot": "hand_r",
+          "area": 70.9,
+          "triangles": 23
+        }
+      ]
+    },
+    "hit": {
+      "time": 0.2,
+      "foldedArea": 0.07,
+      "slots": []
+    },
+    "hit_chant": {
+      "time": 0,
+      "foldedArea": 0,
+      "slots": []
+    },
+    "hit_down": {
+      "time": 0,
+      "foldedArea": 0,
+      "slots": []
+    },
+    "dead": {
+      "time": 1.225,
+      "foldedArea": 49.87,
+      "slots": [
+        {
+          "slot": "cape",
+          "area": 41.98,
+          "triangles": 5
+        },
+        {
+          "slot": "body",
+          "area": 5.91,
+          "triangles": 9
+        },
+        {
+          "slot": "leg_l",
+          "area": 0.16,
+          "triangles": 1
+        },
+        {
+          "slot": "leg_r",
+          "area": 0.94,
+          "triangles": 2
+        },
+        {
+          "slot": "arm_l",
+          "area": 0.31,
+          "triangles": 2
+        },
+        {
+          "slot": "arm_r",
+          "area": 0.19,
+          "triangles": 2
+        },
+        {
+          "slot": "head",
+          "area": 0.37,
+          "triangles": 1
+        }
+      ]
+    },
+    "dead_from_down": {
+      "time": 0,
+      "foldedArea": 0,
+      "slots": []
+    },
+    "dead_loop": {
+      "time": 0,
+      "foldedArea": 0,
+      "slots": []
+    },
+    "attack_short": {
+      "time": 0.4,
+      "foldedArea": 101.24,
+      "slots": [
+        {
+          "slot": "body",
+          "area": 23.7,
+          "triangles": 23
+        },
+        {
+          "slot": "leg_l",
+          "area": 1.56,
+          "triangles": 7
+        },
+        {
+          "slot": "leg_r",
+          "area": 5.36,
+          "triangles": 8
+        },
+        {
+          "slot": "arm_l",
+          "area": 2.82,
+          "triangles": 3
+        },
+        {
+          "slot": "arm_r",
+          "area": 64.32,
+          "triangles": 37
+        },
+        {
+          "slot": "head",
+          "area": 3.47,
+          "triangles": 7
+        }
+      ]
+    },
+    "cast_short": {
+      "time": 0.4,
+      "foldedArea": 101.24,
+      "slots": [
+        {
+          "slot": "body",
+          "area": 23.7,
+          "triangles": 23
+        },
+        {
+          "slot": "leg_l",
+          "area": 1.56,
+          "triangles": 7
+        },
+        {
+          "slot": "leg_r",
+          "area": 5.36,
+          "triangles": 8
+        },
+        {
+          "slot": "arm_l",
+          "area": 2.82,
+          "triangles": 3
+        },
+        {
+          "slot": "arm_r",
+          "area": 64.32,
+          "triangles": 37
+        },
+        {
+          "slot": "head",
+          "area": 3.47,
+          "triangles": 7
+        }
+      ]
+    }
+  },
+  "passed": true,
+  "notVerified": [
+    "Spine Editor import",
+    "Godot/STS2 integration"
+  ],
+  "note": "Fold peaks include transparent triangles; numbers do not certify animation quality or floor contact."
+}

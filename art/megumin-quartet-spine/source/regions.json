@@ -1,0 +1,142 @@
+{
+  "head": {
+    "page": "standing-parts.png",
+    "x": 3,
+    "y": 52,
+    "w": 359,
+    "h": 356
+  },
+  "hat": {
+    "page": "standing-parts.png",
+    "x": 377,
+    "y": 95,
+    "w": 405,
+    "h": 269
+  },
+  "dress": {
+    "page": "standing-parts.png",
+    "x": 796,
+    "y": 62,
+    "w": 232,
+    "h": 294
+  },
+  "cape": {
+    "page": "standing-parts.png",
+    "x": 1083,
+    "y": 29,
+    "w": 343,
+    "h": 343
+  },
+  "upper_r": {
+    "page": "standing-parts.png",
+    "x": 88,
+    "y": 422,
+    "w": 159,
+    "h": 261
+  },
+  "upper_l": {
+    "page": "standing-parts.png",
+    "x": 496,
+    "y": 419,
+    "w": 160,
+    "h": 265
+  },
+  "fore_r": {
+    "page": "standing-parts.png",
+    "x": 764,
+    "y": 482,
+    "w": 264,
+    "h": 133
+  },
+  "fore_l_open": {
+    "page": "standing-parts.png",
+    "x": 1203,
+    "y": 411,
+    "w": 126,
+    "h": 281
+  },
+  "leg_r": {
+    "page": "standing-parts.png",
+    "x": 118,
+    "y": 699,
+    "w": 127,
+    "h": 355
+  },
+  "leg_l": {
+    "page": "standing-parts.png",
+    "x": 508,
+    "y": 699,
+    "w": 130,
+    "h": 355
+  },
+  "staff": {
+    "page": "standing-parts.png",
+    "x": 862,
+    "y": 658,
+    "w": 90,
+    "h": 411
+  },
+  "fore_l_grip": {
+    "page": "standing-parts.png",
+    "x": 1152,
+    "y": 791,
+    "w": 254,
+    "h": 153
+  },
+  "head_blink": {
+    "page": "expressions-down.png",
+    "x": 32,
+    "y": 45,
+    "w": 413,
+    "h": 402
+  },
+  "head_chant": {
+    "page": "expressions-down.png",
+    "x": 545,
+    "y": 45,
+    "w": 415,
+    "h": 402
+  },
+  "head_hurt": {
+    "page": "expressions-down.png",
+    "x": 1085,
+    "y": 45,
+    "w": 411,
+    "h": 402
+  },
+  "sit": {
+    "page": "expressions-down.png",
+    "x": 35,
+    "y": 464,
+    "w": 451,
+    "h": 520
+  },
+  "supine": {
+    "page": "expressions-down.png",
+    "x": 454,
+    "y": 518,
+    "w": 579,
+    "h": 477
+  },
+  "defeat": {
+    "page": "expressions-down.png",
+    "x": 1048,
+    "y": 574,
+    "w": 467,
+    "h": 379
+  },
+  "upper_r_clean": {
+    "page": "upper-connectors.png",
+    "x": 433,
+    "y": 158,
+    "w": 264,
+    "h": 571
+  },
+  "upper_l_clean": {
+    "page": "upper-connectors.png",
+    "x": 1077,
+    "y": 158,
+    "w": 264,
+    "h": 571
+  }
+}

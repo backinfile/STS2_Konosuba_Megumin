@@ -1,0 +1,251 @@
+E00.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+E00
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+E01.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+E01
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+turn-upright.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+turn-upright
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+E05.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+E05
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+E08.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+E08
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+E12.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+E12
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+release.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+release
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+fall-lean.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+fall-lean
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+crouch.png
+size: 2048,1024
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+crouch
+  rotate: false
+  xy: 2, 2
+  size: 1672, 941
+  orig: 1672, 941
+  offset: 0, 0
+  index: -1
+
+brace.png
+size: 2048,1024
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+brace
+  rotate: false
+  xy: 2, 2
+  size: 1672, 941
+  orig: 1672, 941
+  offset: 0, 0
+  index: -1
+
+lower.png
+size: 2048,1024
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+lower
+  rotate: false
+  xy: 2, 2
+  size: 1670, 942
+  orig: 1670, 942
+  offset: 0, 0
+  index: -1
+
+prone.png
+size: 2048,1024
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+prone
+  rotate: false
+  xy: 2, 2
+  size: 1671, 941
+  orig: 1671, 941
+  offset: 0, 0
+  index: -1
+
+kneel-rise.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+kneel-rise
+  rotate: false
+  xy: 2, 2
+  size: 1441, 1091
+  orig: 1441, 1091
+  offset: 0, 0
+  index: -1
+
+E00-body.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+E00-body
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+E05-body.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+E05-body
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+brace-body.png
+size: 2048,1024
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+brace-body
+  rotate: false
+  xy: 2, 2
+  size: 1672, 941
+  orig: 1672, 941
+  offset: 0, 0
+  index: -1
+
+prone-body.png
+size: 2048,1024
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+prone-body
+  rotate: false
+  xy: 2, 2
+  size: 1671, 941
+  orig: 1671, 941
+  offset: 0, 0
+  index: -1
+
+staff-master.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+staff-master
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1

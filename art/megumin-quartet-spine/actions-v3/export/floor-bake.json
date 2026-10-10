@@ -1,0 +1,5 @@
+{
+  "timelines": 6,
+  "maxWorldLift": 31.765128326416015,
+  "method": "Weighted mesh local inverse transforms; constant ground at y=0.45; texture unchanged"
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-09",
+  "version": "actions-v5",
+  "runtime": "official Spine WebGL 4.2.95",
+  "reviewedFrameGroups": ["idle-cast-hit", "chant-turn-cancel", "attack-explosion", "relaxed-fall", "supported-get-up", "death"],
+  "reviewFrames": 54,
+  "changesAfterFirstReview": ["separated old cape opacity from attachment timeline", "moved free left hand below and away from the staff tail", "added stooped load-bearing recovery pose"],
+  "recheckedChangedViews": ["chant_loop at full display size", "chant_loop at 320 px on dark background", "get_up nine-frame sequence", "final nine-pose gallery"],
+  "completeDemo": {"finishedAt": "idle_loop", "releaseEvents": 1, "damagePulses": 3, "includes": ["chant_ack", "hit_chant", "explosion_exit", "relaxed_fall", "relaxed_loop", "get_up"]},
+  "consoleErrors": [],
+  "consoleWarnings": [],
+  "screenshots": ["actions-v5-side-ready.png", "actions-v5-keyframes.png"],
+  "limits": ["No native Spine editor import verified", "No STS2 game integration verified", "Numerical joint audit does not replace visual art judgment"]
+}

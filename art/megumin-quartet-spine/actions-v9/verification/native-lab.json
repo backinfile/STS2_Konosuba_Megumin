@@ -1,0 +1,29 @@
+{
+  "game": "0.107.1",
+  "character": "MEGUMINMOD-MEGUMIN",
+  "save_dir": "C:/Users/17575/AppData/Roaming/MeguminModLab-STS2_Konosuba_Megumin",
+  "skeleton_sha256": "2691ef294c09da2ada158ad6e3c69454d5f83e3cf8aef7f171e710822946150b",
+  "native_clips": [
+    "attack_short",
+    "cast_short",
+    "chant_ack",
+    "chant_cancel",
+    "chant_enter",
+    "chant_loop",
+    "dead",
+    "dead_from_down",
+    "dead_loop",
+    "explosion_exit",
+    "explosion_hold",
+    "explosion_release",
+    "get_up",
+    "hit",
+    "hit_chant",
+    "hit_down",
+    "idle_loop",
+    "relaxed_fall",
+    "relaxed_loop"
+  ],
+  "actions": [],
+  "passed": true
+}

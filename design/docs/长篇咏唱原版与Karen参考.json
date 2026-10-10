@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-09",
+  "scope": "原版本地v0.107.1快照与Karen本地源码，不声称当前最新版本；游戏行为未实测。",
+  "files": [
+    {
+      "id": "Adrenaline",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Adrenaline.cs",
+      "title": "肾上腺素",
+      "verified": "0费稀有技能，获得1能量并抽2，消耗；升级能量+1。对照已有续接的启动强度。",
+      "sha256": "596def70723291255840c345b0be949a930fe14713560034bd25cae2abd1de92",
+      "source": "using System.Collections.Generic;\nusing System.Threading.Tasks;\nusing MegaCrit.Sts2.Core.Commands;\nusing MegaCrit.Sts2.Core.Context;\nusing MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.HoverTips;\nusing MegaCrit.Sts2.Core.Localization.DynamicVars;\n\nnamespace MegaCrit.Sts2.Core.Models.Cards;\n\npublic sealed class Adrenaline : CardModel\n{\n\tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n\t{\n\t\tnew EnergyVar(1),\n\t\tnew CardsVar(2)\n\t});\n\n\tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(base.EnergyHoverTip);\n\n\tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n\n\tpublic Adrenaline()\n\t\t: base(0, CardType.Skill, CardRarity.Rare, TargetType.Self)\n\t{\n\t}\n\n\tprotected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n\t{\n\t\tif (LocalContext.IsMe(base.Owner))\n\t\t{\n\t\t\tVfxCmd.PlayFullScreenInCombat(\"vfx/vfx_adrenaline\", base.Owner.Creature);\n\t\t}\n\t\tawait PlayerCmd.GainEnergy(base.DynamicVars.Energy.IntValue, base.Owner);\n\t\tawait CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.BaseValue, base.Owner);\n\t}\n\n\tprotected override void OnUpgrade()\n\t{\n\t\tbase.DynamicVars.Energy.UpgradeValueBy(1m);\n\t}\n}\n"
+    },
+    {
+      "id": "BurningPact",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BurningPact.cs",
+      "title": "燃烧契约",
+      "verified": "1费罕见技能，消耗1张手牌并抽2；升级抽3。新删繁就简增加本牌消耗且明确要求支付手牌。",
+      "sha256": "b802324268261d68dec777a4198b9532b86a1e9633b7e2de62c4d88f9c096ef5",
+      "source": "using System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\nusing MegaCrit.Sts2.Core.CardSelection;\nusing MegaCrit.Sts2.Core.Commands;\nusing MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.HoverTips;\nusing MegaCrit.Sts2.Core.Localization.DynamicVars;\n\nnamespace MegaCrit.Sts2.Core.Models.Cards;\n\npublic sealed class BurningPact : CardModel\n{\n\tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new CardsVar(2));\n\n\tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromKeyword(CardKeyword.Exhaust));\n\n\tpublic BurningPact()\n\t\t: base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)\n\t{\n\t}\n\n\tprotected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n\t{\n\t\tCardModel cardModel = (await CardSelectCmd.FromHand(prefs: new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, 1), context: choiceContext, player: base.Owner, filter: null, source: this)).FirstOrDefault();\n\t\tif (cardModel != null)\n\t\t{\n\t\t\tawait CardCmd.Exhaust(choiceContext, cardModel);\n\t\t}\n\t\tawait CreatureCmd.TriggerAnim(base.Owner.Creature, \"Cast\", base.Owner.Character.CastAnimDelay);\n\t\tawait CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.BaseValue, base.Owner);\n\t}\n\n\tprotected override void OnUpgrade()\n\t{\n\t\tbase.DynamicVars.Cards.UpgradeValueBy(1m);\n\t}\n}\n"
+    },
+    {
+      "id": "Backflip",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Backflip.cs",
+      "title": "后空翻",
+      "verified": "1费普通技能，5格挡并抽2；升级格挡+3。只借防守兼继续行动的角色。",
+      "sha256": "af5ff7bc9381a70cbc39af78a55f5ca845855bafb90e62292365fc086ee10f10",
+      "source": "using System.Collections.Generic;\nusing System.Threading.Tasks;\nusing MegaCrit.Sts2.Core.Commands;\nusing MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.Localization.DynamicVars;\nusing MegaCrit.Sts2.Core.ValueProps;\n\nnamespace MegaCrit.Sts2.Core.Models.Cards;\n\npublic sealed class Backflip : CardModel\n{\n\tpublic override bool GainsBlock => true;\n\n\tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n\t{\n\t\tnew BlockVar(5m, ValueProp.Move),\n\t\tnew CardsVar(2)\n\t});\n\n\tpublic Backflip()\n\t\t: base(1, CardType.Skill, CardRarity.Common, TargetType.Self)\n\t{\n\t}\n\n\tprotected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n\t{\n\t\tawait CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);\n\t\tawait CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.BaseValue, base.Owner);\n\t}\n\n\tprotected override void OnUpgrade()\n\t{\n\t\tbase.DynamicVars.Block.UpgradeValueBy(3m);\n\t}\n}\n"
+    },
+    {
+      "id": "Expertise",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Expertise.cs",
+      "title": "独门技术",
+      "verified": "1费罕见技能，抽至6手牌；升级7。用于检查低手牌时补牌的意义，未直接改名照搬。",
+      "sha256": "8745d2a756df32a75a478da186262087b228fe2f12ad157bbc54064515fda2a7",
+      "source": "using System;\nusing System.Collections.Generic;\nusing System.Threading.Tasks;\nusing MegaCrit.Sts2.Core.Commands;\nusing MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.Localization.DynamicVars;\n\nnamespace MegaCrit.Sts2.Core.Models.Cards;\n\npublic sealed class Expertise : CardModel\n{\n\tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new CardsVar(6));\n\n\tpublic Expertise()\n\t\t: base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)\n\t{\n\t}\n\n\tprotected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n\t{\n\t\tdecimal baseValue = base.DynamicVars.Cards.BaseValue;\n\t\tint count = base.Owner.PlayerCombatState.Hand.Cards.Count;\n\t\tdecimal count2 = Math.Max(0m, baseValue - (decimal)count);\n\t\tawait CardPileCmd.Draw(choiceContext, count2, base.Owner);\n\t}\n\n\tprotected override void OnUpgrade()\n\t{\n\t\tbase.DynamicVars.Cards.UpgradeValueBy(1m);\n\t}\n}\n"
+    },
+    {
+      "id": "Prepared",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Prepared.cs",
+      "title": "早有准备",
+      "verified": "0费普通技能，抽1弃1，升级2。说明0费并不自动增加总手牌数量。",
+      "sha256": "55f51600963dd8a97a7320265e58d3b11d2072272da5737c06f837be4dfb15b6",
+      "source": "using System.Collections.Generic;\nusing System.Threading.Tasks;\nusing MegaCrit.Sts2.Core.CardSelection;\nusing MegaCrit.Sts2.Core.Commands;\nusing MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.Localization.DynamicVars;\n\nnamespace MegaCrit.Sts2.Core.Models.Cards;\n\npublic sealed class Prepared : CardModel\n{\n\tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new CardsVar(1));\n\n\tpublic Prepared()\n\t\t: base(0, CardType.Skill, CardRarity.Common, TargetType.Self)\n\t{\n\t}\n\n\tprotected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n\t{\n\t\tint cardCount = base.DynamicVars.Cards.IntValue;\n\t\tawait CardPileCmd.Draw(choiceContext, cardCount, base.Owner);\n\t\tawait CardCmd.Discard(choiceContext, await CardSelectCmd.FromHandForDiscard(choiceContext, base.Owner, new CardSelectorPrefs(CardSelectorPrefs.DiscardSelectionPrompt, cardCount), null, this));\n\t}\n\n\tprotected override void OnUpgrade()\n\t{\n\t\tbase.DynamicVars.Cards.UpgradeValueBy(1m);\n\t}\n}\n"
+    },
+    {
+      "id": "KarenRapid",
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenRapid.cs",
+      "title": "极速下降",
+      "verified": "0费罕见技能，保留、消耗；选择从约定牌堆取2张，或从手中放入2张，升级3。以实际选项为准，忽略过时注释。",
+      "sha256": "d7b6e16b6c53c0f2306358276063edd717dd3e9129f84903ecff506c1008e0f6",
+      "source": "using MegaCrit.Sts2.Core.CardSelection;\nusing MegaCrit.Sts2.Core.Commands;\nusing MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.Localization;\nusing MegaCrit.Sts2.Core.Localization.DynamicVars;\nusing MegaCrit.Sts2.Core.Models;\nusing MegaCrit.Sts2.Core.ValueProps;\nusing ShoujoKagekiAijoKaren.src.Core;\nusing ShoujoKagekiAijoKaren.src.Core.Commands;\nusing ShoujoKagekiAijoKaren.src.Core.Models.Cards;\nusing ShoujoKagekiAijoKaren.src.Core.Models.Cards.token.options;\nusing ShoujoKagekiAijoKaren.src.Core.PromisePileSystem;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\n\nnamespace ShoujoKagekiAijoKaren.src.Core.Models.Cards.promisePile;\n\n/// <summary>\n/// 极速下降 - 0费技能，从约定牌堆中选择2张加入手牌，弃置其余\n/// </summary>\npublic sealed class KarenRapid : KarenBaseCardModel\n{\n    public KarenRapid() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }\n\n    protected override HashSet<CardTag> CanonicalTags => [KarenCustomEnum.PromisePileRelated];\n\n    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain, CardKeyword.Exhaust];\n\n    protected override IEnumerable<DynamicVar> CanonicalVars =>\n    [\n        new CardsVar(2)\n    ];\n\n    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n    {\n        await CardPileCmdEx.SelectOption(choiceContext, cardPlay, Owner, CombatState, [\n            ModelDb.Card<KarenRapidTakeOption>(),\n            ModelDb.Card<KarenRapidPutOption>()\n        ], IsUpgraded);\n    }\n\n    protected override void OnUpgrade()\n    {\n        DynamicVars.Cards.UpgradeValueBy(1m);\n    }\n}\n"
+    },
+    {
+      "id": "KarenRapidTakeOption",
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/token/options/KarenRapidTakeOption.cs",
+      "title": "极速下降：取回",
+      "verified": "只取选中的2／3张，不根据父类注释推定弃置其余。",
+      "sha256": "66c73166f1acdf54417f5a417e360568a7dd75c1822b26f08b7519743094ec36",
+      "source": "using MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.Localization.DynamicVars;\nusing ShoujoKagekiAijoKaren.src.Core.Commands;\nusing System.Collections.Generic;\nusing System.Threading.Tasks;\n\nnamespace ShoujoKagekiAijoKaren.src.Core.Models.Cards.token.options\n{\n    internal class KarenRapidTakeOption : KarenBaseCardModel\n    {\n        public KarenRapidTakeOption() : base(-1, CardType.Skill, CardRarity.Token, TargetType.None)\n        {\n        }\n\n        protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(2)];\n\n        public override async Task DoOption(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n        {\n            await PromisePileCmd.SelectedToHand(choiceContext, Owner, DynamicVars.Cards.IntValue);\n        }\n\n        protected override void OnUpgrade()\n        {\n            DynamicVars.Cards.UpgradeValueBy(1);\n        }\n\n    }\n}\n"
+    },
+    {
+      "id": "KarenRapidPutOption",
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/token/options/KarenRapidPutOption.cs",
+      "title": "极速下降：放入",
+      "verified": "从手中选择2／3张放入约定牌堆。",
+      "sha256": "7b2342074c70bdae0a713238eea54721363a17c16db6687d5c3b65aaf53657c4",
+      "source": "using MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.Localization.DynamicVars;\nusing ShoujoKagekiAijoKaren.src.Core.Commands;\nusing System.Collections.Generic;\nusing System.Threading.Tasks;\n\nnamespace ShoujoKagekiAijoKaren.src.Core.Models.Cards.token.options\n{\n    internal class KarenRapidPutOption : KarenBaseCardModel\n    {\n        public KarenRapidPutOption() : base(-1, CardType.Skill, CardRarity.Token, TargetType.None)\n        {\n        }\n\n        protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(2)];\n\n        public override async Task DoOption(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n        {\n            await PromisePileCmd.AddFromHand(choiceContext, Owner, DynamicVars.Cards.IntValue, this);\n        }\n\n        protected override void OnUpgrade()\n        {\n            DynamicVars.Cards.UpgradeValueBy(1);\n        }\n\n    }\n}\n"
+    },
+    {
+      "id": "KarenStageIsWaiting",
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenStageIsWaiting.cs",
+      "title": "舞台正在等待着",
+      "verified": "2费罕见能力，升级1费；施加的能量数值为1，不采用注释中的2。",
+      "sha256": "fef863c9003db19b5b79214a2b4f30471255ffe665ff389a9cc22369ad3703ee",
+      "source": "using MegaCrit.Sts2.Core.Commands;\nusing MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.Localization.DynamicVars;\nusing MegaCrit.Sts2.Core.Models;\nusing ShoujoKagekiAijoKaren.src.Core.Models.Cards;\nusing ShoujoKagekiAijoKaren.src.Core.Models.Powers;\nusing System.Collections.Generic;\nusing System.Threading.Tasks;\n\nnamespace ShoujoKagekiAijoKaren.src.Core.Models.Cards.neutral;\n\n/// <summary>\n/// 舞台正在等待着 - 约定牌堆被清空时，获得2能量\n/// </summary>\npublic sealed class KarenStageIsWaiting : KarenBaseCardModel\n{\n    public KarenStageIsWaiting() : base(2, CardType.Power, CardRarity.Uncommon, TargetType.Self) { }\n\n    protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(1)];\n\n    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n    {\n        await PowerCmd.Apply<KarenStageIsWaitingPower>(choiceContext, Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);\n    }\n\n    protected override void OnUpgrade()\n    {\n        EnergyCost.UpgradeBy(-1);\n    }\n}\n"
+    },
+    {
+      "id": "KarenStageIsWaitingPower",
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Powers/KarenStageIsWaitingPower.cs",
+      "title": "舞台正在等待着：能力",
+      "verified": "约定牌堆清空时按能力层数回能。只借状态变化提供资源的关系，不引入该牌区。",
+      "sha256": "504ae2f490d0dd08548216fe24a900f2ec352af7c55fd946f7e9ac3dbbaaade6",
+      "source": "using MegaCrit.Sts2.Core.Commands;\nusing MegaCrit.Sts2.Core.Context;\nusing MegaCrit.Sts2.Core.Entities.Players;\nusing MegaCrit.Sts2.Core.Entities.Powers;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.Models;\nusing MegaCrit.Sts2.Core.Models.Powers;\nusing System.Threading.Tasks;\n\nnamespace ShoujoKagekiAijoKaren.src.Core.Models.Powers;\n\n/// <summary>\n/// Power类 - 舞台正在等待着：约定牌堆被清空时，获得能量\n/// </summary>\npublic class KarenStageIsWaitingPower : KarenBasePower\n{\n    public override PowerStackType StackType => PowerStackType.Counter;\n    public override PowerType Type => PowerType.Buff;\n\n    public override async Task OnPromisePileEmpty()\n    {\n        if (Owner.Player is Player player)\n        {\n            Flash();\n            await PlayerCmd.GainEnergy(Amount, player);\n        }\n    }\n    \n}\n"
+    }
+  ]
+}

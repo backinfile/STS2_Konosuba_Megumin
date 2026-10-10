@@ -1,0 +1,152 @@
+{
+  "version": "0.5.0",
+  "spine": "4.2.11",
+  "bones": 25,
+  "slots": 28,
+  "animations": [
+    "idle_loop",
+    "cast_short",
+    "chant_enter",
+    "chant_loop",
+    "chant_cancel",
+    "chant_ack",
+    "attack_short",
+    "explosion_release",
+    "explosion_hold",
+    "explosion_exit",
+    "hit",
+    "hit_chant",
+    "relaxed_fall",
+    "relaxed_loop",
+    "get_up",
+    "dead",
+    "dead_from_down",
+    "hit_down",
+    "setup_pose"
+  ],
+  "attachments": {
+    "costume_under": [
+      "costume_under"
+    ],
+    "body_repair": [
+      "body_repair",
+      "body_repair_upper"
+    ],
+    "body": [
+      "body"
+    ],
+    "leg_l": [
+      "leg_l"
+    ],
+    "leg_r": [
+      "leg_r"
+    ],
+    "staff": [
+      "staff"
+    ],
+    "arm_l": [
+      "arm_l"
+    ],
+    "arm_r": [
+      "arm_r"
+    ],
+    "hand_r": [
+      "hand_r",
+      "hand_free"
+    ],
+    "hand_l": [
+      "hand_open",
+      "hand_support",
+      "hand_cast",
+      "hand_ground"
+    ],
+    "head_repair": [
+      "head_repair"
+    ],
+    "head": [
+      "head"
+    ],
+    "eye": [
+      "eye_blink",
+      "eye_tired",
+      "face_focus",
+      "face_release",
+      "face_hit",
+      "side_shout",
+      "side_hit"
+    ],
+    "upper_piece_r": [
+      "upper_piece_r"
+    ],
+    "fore_piece_r": [
+      "fore_piece_r"
+    ],
+    "thigh_piece_r": [
+      "thigh_piece_r"
+    ],
+    "shin_piece_r": [
+      "shin_piece_r"
+    ],
+    "boot_piece_r": [
+      "boot_piece_r",
+      "boot_sole_r"
+    ],
+    "upper_piece_l": [
+      "upper_piece_l"
+    ],
+    "fore_piece_l": [
+      "fore_piece_l"
+    ],
+    "thigh_piece_l": [
+      "thigh_piece_l"
+    ],
+    "shin_piece_l": [
+      "shin_piece_l"
+    ],
+    "boot_piece_l": [
+      "boot_piece_l",
+      "boot_sole_l"
+    ],
+    "torso_fill": [
+      "torso_fill"
+    ],
+    "ground_cape": [
+      "ground_cape"
+    ],
+    "side_head": [
+      "side_head"
+    ],
+    "side_body": [
+      "side_body"
+    ],
+    "side_front": [
+      "side_front"
+    ]
+  },
+  "source_scale": 0.24242424242424243,
+  "source_origin": [
+    608,
+    1353
+  ],
+  "texture_filters": "MipMapLinearLinear / Linear; power-of-two padding, no raster resampling",
+  "artwork": "Approved idle retained; a separate torso pivot, reachable arm arcs and knee branch changes at extension. Built-in imagegen side-facing head/torso/cape parts for one-handed forward casting, plus inherited limb/hand/boot/expression correctives. Original raster pixels preserved in atlas packing.",
+  "sources": {
+    "arms-hands.png": "dcb5291acf77677507dfa3c441e6a29aeb9d338f7148361e0b81772f5ad740b3",
+    "blink-source.png": "c6eac57ad8b0ba1f22b668e90ab74eeaa97e85848302f02f8c7f87af967620b3",
+    "body-base.png": "0b17a88c4aa08f8431de0e79d24861cfdbbcfa296de6b3df3711c04ac124ce9f",
+    "clean-reference.png": "c54aeb54c7b12ba076479a1b4d2c8a594a68d0728e9018a671db7273de9e1db3",
+    "costume-plates.png": "923273da7c08bcba7a4a5de06cf14d60be6b882e9c83eb4d1072e161acf37b4c",
+    "costume-underpaint.png": "6e5e4f99eeaf4aaa430a94e8dcbc0d859b02b3cfb62dcc9e1cc06f401b38ac43",
+    "focus-expression.png": "0964cc6742d2664bd591e09a867603a2858197ac7ea9f1ec8960c0cf9e3e20e7",
+    "hit-expression.png": "d7d1e978b94d9019216508e866bedcfbe05222d404ef724f0f4f0ea7eabafca4",
+    "legs-boots.png": "76dcc1664e9307de0edb5ffe79302e1cfb510e8701e506e3a69d1f6a2af9360d",
+    "release-expression.png": "b16ab4f3e2f8752de213a6e2efd061688f7aebde0468e02a62e8e1abfddd2826",
+    "side-parts.png": "b11db4eb0ec2141f0bcba3fef95a7f78bf6d9ee167128e69b64c82bc2b6258ba",
+    "support-grip.png": "4cca111ff23fe7fbbed3f92988b9047ac4ea8fc97e65a03e15af3d68ea525fdf",
+    "tired-expression.png": "04eb8b35553687002ee581b4c75d9255db969cba4671ac61c6bc2d0b05e2127f"
+  },
+  "limitations": [
+    "No native Spine editor or STS2 import verified.",
+    "Drawings and motion require visual review; source-aligned pose alone is not an animation-quality guarantee."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-09",
+  "renderer": "Official Spine WebGL 4.2.95",
+  "page": "preview.html (self-contained bundle, served locally for inspection)",
+  "checked": [
+    "Idle assembled artwork and alpha on light background",
+    "Chant and release hand/shaft visibility",
+    "Relaxed pose mesh excludes neighboring source-sheet fragments",
+    "Enter chant then receive hit returns to chant_loop",
+    "Manual release, three damage pulses, finish transitions to relaxed_loop",
+    "Full demo completes three pulses, recovery and return to idle_loop",
+    "Death from relaxed selects dead_from_down and disables combat controls",
+    "320 px display and bone/grip overlay",
+    "No browser warning/error logs observed after final renderer changes"
+  ],
+  "not_verified": ["Spine Editor Import Data", "Native Godot Spine runtime", "STS2 in-game integration"],
+  "known_art_limitations": ["Whole-pose swaps during fall/get-up need in-betweens", "Expression replacement shapes still differ slightly"]
+}

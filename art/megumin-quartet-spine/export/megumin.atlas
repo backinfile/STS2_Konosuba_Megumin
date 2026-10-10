@@ -1,0 +1,160 @@
+standing-parts.png
+size: 1448,1086
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pma: false
+head
+  rotate: false
+  xy: 3, 52
+  size: 359, 356
+  orig: 359, 356
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 377, 95
+  size: 405, 269
+  orig: 405, 269
+  offset: 0, 0
+  index: -1
+dress
+  rotate: false
+  xy: 796, 62
+  size: 232, 294
+  orig: 232, 294
+  offset: 0, 0
+  index: -1
+cape
+  rotate: false
+  xy: 1083, 29
+  size: 343, 343
+  orig: 343, 343
+  offset: 0, 0
+  index: -1
+upper_r
+  rotate: false
+  xy: 88, 422
+  size: 159, 261
+  orig: 159, 261
+  offset: 0, 0
+  index: -1
+upper_l
+  rotate: false
+  xy: 496, 419
+  size: 160, 265
+  orig: 160, 265
+  offset: 0, 0
+  index: -1
+fore_r
+  rotate: false
+  xy: 764, 482
+  size: 264, 133
+  orig: 264, 133
+  offset: 0, 0
+  index: -1
+fore_l_open
+  rotate: false
+  xy: 1203, 411
+  size: 126, 281
+  orig: 126, 281
+  offset: 0, 0
+  index: -1
+leg_r
+  rotate: false
+  xy: 118, 699
+  size: 127, 355
+  orig: 127, 355
+  offset: 0, 0
+  index: -1
+leg_l
+  rotate: false
+  xy: 508, 699
+  size: 130, 355
+  orig: 130, 355
+  offset: 0, 0
+  index: -1
+staff
+  rotate: false
+  xy: 862, 658
+  size: 90, 411
+  orig: 90, 411
+  offset: 0, 0
+  index: -1
+fore_l_grip
+  rotate: false
+  xy: 1152, 791
+  size: 254, 153
+  orig: 254, 153
+  offset: 0, 0
+  index: -1
+
+expressions-down.png
+size: 1536,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pma: false
+head_blink
+  rotate: false
+  xy: 32, 45
+  size: 413, 402
+  orig: 413, 402
+  offset: 0, 0
+  index: -1
+head_chant
+  rotate: false
+  xy: 545, 45
+  size: 415, 402
+  orig: 415, 402
+  offset: 0, 0
+  index: -1
+head_hurt
+  rotate: false
+  xy: 1085, 45
+  size: 411, 402
+  orig: 411, 402
+  offset: 0, 0
+  index: -1
+sit
+  rotate: false
+  xy: 35, 464
+  size: 451, 520
+  orig: 451, 520
+  offset: 0, 0
+  index: -1
+supine
+  rotate: false
+  xy: 454, 518
+  size: 579, 477
+  orig: 579, 477
+  offset: 0, 0
+  index: -1
+defeat
+  rotate: false
+  xy: 1048, 574
+  size: 467, 379
+  orig: 467, 379
+  offset: 0, 0
+  index: -1
+
+upper-connectors.png
+size: 1774,887
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pma: false
+upper_r_clean
+  rotate: false
+  xy: 433, 158
+  size: 264, 571
+  orig: 264, 571
+  offset: 0, 0
+  index: -1
+upper_l_clean
+  rotate: false
+  xy: 1077, 158
+  size: 264, 571
+  orig: 264, 571
+  offset: 0, 0
+  index: -1

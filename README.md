@@ -1,8 +1,18 @@
 # STS2 · 惠惠角色 Mod
 
-当前包含**玩法设计研究与独立的角色美术／动画原型**。尚未接入 Slay the Spire 2，不是可安装的 Mod，也不代表卡池、数值或游戏接口已经定稿。
+当前已有可运行的**惠惠测试角色 Mod**和项目内独立游戏环境。动画使用游戏原生 Spine；卡牌、遗物等暂用原版测试数据，正式玩法尚未接入。
 
-## 当前五状态交付 v6
+## 当前测试版
+
+- [构建、启动与 MCP 测试说明](docs/mod-lab.md)
+- [动作 v9：连续速度、弧线与身体跟随](art/megumin-quartet-spine/actions-v9/README.md)
+- [v9 动画离线预览](art/megumin-quartet-spine/actions-v9/preview.html)
+- [游戏内原速录像：19 个动作、完整动作链、正常战斗](art/megumin-quartet-spine/actions-v9/verification/recordings/index.html)
+- [v8 / v9 原速对照](art/megumin-quartet-spine/actions-v9/verification/recordings/comparison.html)
+
+下列 v1–v6 内容为历史阶段记录。
+
+## 历史五状态交付 v6
 
 - [v6 工程与使用说明](art/megumin-v6/README.md)：Idle / Cast / Attack / Hit / Relaxed 五状态
 - [五状态无特效预览](art/megumin-v6/preview/megumin_v6_five_states_review.mp4)：19.366667 秒、581 帧、30 fps、1440 × 960
@@ -30,8 +40,12 @@ v2 视频是从实际 Godot 动画／网格数据生成的软件光栅预览，*
 
 ## 从这里开始
 
-- [玩法设计导航](design/README.md)：当前方案、历史探索、结构化卡表与原作资料
-- [核心设计简明版](design/惠惠核心设计简明版.html)：三个备选核心与构筑示例（下载后用浏览器打开 HTML）
+- [玩法设计导航](design/README.md)：当前设计总览、待重做卡表、候选与原作资料
+- [惠惠角色体系设计](design/惠惠角色体系设计.md)：爆裂Power原文、准备与引爆的节奏、体系配合及新版样例牌。
+- [当前设计总览](design/惠惠当前设计总览.html)：积累爆裂，整回合不主动出牌则在回合末清空并造成等量群伤1次；魔力积蓄让所存手牌在下回合开始自动打出，消耗能量。
+- [原版五职业、华恋与惠惠体系表](design/原版五职业与华恋及惠惠体系表.html) · [Markdown版](design/原版五职业与华恋及惠惠体系表.md)：每个职业一张表，统一列出体系定位、合并的端口与收益、卡牌数量和统计范围；运转区分抽牌与能量恢复，不明确的保留为运转端口，并注明局外／跨战斗成长。华恋明确标注为Mod资料。
+- [当前设计数据](design/docs/当前设计总览.json)：区分用户指定、最新方向、助手解释、备用与历史；旧核心原文仍保留供追溯。
+- [暂存：爆裂狂与出牌蓄爆](design/暂存/爆裂狂_出牌蓄爆_2026-10-05.html)：此前2费消耗保留爆裂与两张1/0费初始牌。更早方案已按2026-10-08的用户要求删除。
 - [v1 美术与动画使用说明](art/megumin/README.md)：Godot 4.6 项目、六个状态、依赖和验证方法
 - [v1 原速动作预览](art/megumin/preview/megumin_reel.mp4)：21.13 秒，30 fps，1440 × 900
 - [透明站立终稿](art/megumin/assets/runtime/megumin_idle_neutral.png)：1600 × 1760，地面锚点 (760, 1640)
@@ -39,14 +53,17 @@ v2 视频是从实际 Godot 动画／网格数据生成的软件光栅预览，*
 
 ## 目录
 
-- `design/`：原有 20 个研究文件，目录关系与文件内容原样保留；其中 `docs/` 为结构化卡表、追踪记录与设计页生成脚本，`参考资料/` 为出处和设计方法
+- `design/`：当前方案、单独暂存的上一方案与原作资料；其中 `docs/` 为结构化数据、追踪记录与生成脚本，`参考资料/` 为出处和设计方法
 - `art/megumin/`：角色美术与 Godot 动画原型的独立项目根；源图、运行资源、预览、工具和测试分别管理
 - `art/megumin-v2/`：独立的六关键姿态重做版，保留自己的项目根和导入设置；与 v1 并列比较
 - `art/megumin-v3/`：连续 FK/IK 版本，保留自己的源图、原生时间轴、验证和无特效预览
 - `art/megumin-v6/`：侧身造型的五状态交付，Dead 未完成，保留检查和未验候选标注
+- `art/megumin-quartet-spine/actions-v8/`：当前 Spine 动画、源图、预览与原生游戏验证证据
+- `mod/`：惠惠测试角色 C# 工程；`tools/`：构建、启动、MCP 与回归脚本
+- `.local/`：不提交的独立测试游戏、存档、工具环境与日志；`dist/`：可安装 Mod 输出
 - `docs/`：跨目录导航和工程接入说明；具体美术制作与验证记录随美术项目保存
 
-先完成角色资源与动作验证，再根据实际 STS2 Mod 接口引入游戏工程。不提前建立空的 cards、powers、relics 等目录，也不把 Godot 展示代码误标为已实现的游戏逻辑。
+当前已接入 STS2 测试角色；正式卡牌、能力和遗物机制仍待实现，使用完整原版内容池保证基础测试流程可运行。
 
 ## 内容与权利
 

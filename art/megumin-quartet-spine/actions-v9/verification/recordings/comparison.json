@@ -1,0 +1,85 @@
+{
+  "method": "Original-speed native videos aligned at animation command time, cropped and joined. No optical-flow interpolation or retiming.",
+  "clips": [
+    {
+      "clip": "chant_enter",
+      "file": "compare-chant_enter.mp4",
+      "sources": [
+        {
+          "version": "v8",
+          "file": "actions-v8\\verification\\recordings\\chant_enter.mp4",
+          "sha256": "411ae41700216d6e60ca092417d061239b481fa3d160e4b466217bea30ca5df6",
+          "trim_start": 0.9957,
+          "duration": 1.9
+        },
+        {
+          "version": "v9",
+          "file": "actions-v9\\verification\\recordings\\chant_enter.mp4",
+          "sha256": "2fe35091f695af2d12b631bd0ddee6e52785bee80508dc84166589c757646c18",
+          "trim_start": 0.9729000000000001,
+          "duration": 1.9
+        }
+      ]
+    },
+    {
+      "clip": "relaxed_fall",
+      "file": "compare-relaxed_fall.mp4",
+      "sources": [
+        {
+          "version": "v8",
+          "file": "actions-v8\\verification\\recordings\\relaxed_fall.mp4",
+          "sha256": "e9b4dc51f298b115cacaa9908012965a9b803d5c4d44cd980d757b7f3c82b43c",
+          "trim_start": 0.371,
+          "duration": 2.0
+        },
+        {
+          "version": "v9",
+          "file": "actions-v9\\verification\\recordings\\relaxed_fall.mp4",
+          "sha256": "2395207b43d149a21d361109e4c5ff1024126b1022dd866658bba6d027ba189e",
+          "trim_start": 0.39690000000000003,
+          "duration": 2.0
+        }
+      ]
+    },
+    {
+      "clip": "get_up",
+      "file": "compare-get_up.mp4",
+      "sources": [
+        {
+          "version": "v8",
+          "file": "actions-v8\\verification\\recordings\\get_up.mp4",
+          "sha256": "a561cbb7e7cd3a3400b60c1b7c44a2f6ebac91b7caa763a78df26e02ce1dcca2",
+          "trim_start": 0.9729000000000001,
+          "duration": 4.27
+        },
+        {
+          "version": "v9",
+          "file": "actions-v9\\verification\\recordings\\get_up.mp4",
+          "sha256": "c4c87fa6d4929af604a0e52e3fc0e8cac9895b0b0d50530a6e3b2320b2bc0ec3",
+          "trim_start": 0.972,
+          "duration": 4.27
+        }
+      ]
+    },
+    {
+      "clip": "dead",
+      "file": "compare-dead.mp4",
+      "sources": [
+        {
+          "version": "v8",
+          "file": "actions-v8\\verification\\recordings\\dead.mp4",
+          "sha256": "65e1915ee22d0f5e58f6ab1063beeffc28afe4e2bd26150f3c6c2390e2befa15",
+          "trim_start": 0.9806999999999999,
+          "duration": 2.45
+        },
+        {
+          "version": "v9",
+          "file": "actions-v9\\verification\\recordings\\dead.mp4",
+          "sha256": "17a3e36f69488ed5f51b8f6dc6a934638585c844439709dca1a120c737d6589e",
+          "trim_start": 0.9712000000000001,
+          "duration": 2.45
+        }
+      ]
+    }
+  ]
+}

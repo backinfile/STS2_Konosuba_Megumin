@@ -1,0 +1,570 @@
+{
+  "scope": "纸面指定序列，不是游戏实测；全部未升级。",
+  "cases": [
+    {
+      "explosion_cost": 3,
+      "skills": 8,
+      "bonus": 6,
+      "damage": 14,
+      "block": 6,
+      "energy": 0,
+      "max_hand": 6,
+      "remaining_hand": [
+        "defend",
+        "unfold_b",
+        "steady_b"
+      ],
+      "stopped": "剩0能量，不能支付咒文展开的1费。",
+      "steps": [
+        {
+          "action": "爆裂魔法",
+          "paid": 3,
+          "energy": 0,
+          "hand": 5,
+          "skills": 0,
+          "bonus": 0,
+          "block": 0,
+          "detail": "开始吟唱；本牌不计K，结算后进入消耗牌堆。"
+        },
+        {
+          "action": "咒文续接",
+          "paid": 0,
+          "energy": 1,
+          "hand": 6,
+          "skills": 1,
+          "bonus": 0,
+          "block": 0,
+          "detail": "回1能量，抽稳住声线与防御；本牌消耗。"
+        },
+        {
+          "action": "一息贯通",
+          "paid": 0,
+          "energy": 1,
+          "hand": 5,
+          "skills": 2,
+          "bonus": 0,
+          "block": 0,
+          "detail": "下一张技能减费1；本牌消耗。"
+        },
+        {
+          "action": "咒文展开",
+          "paid": 0,
+          "energy": 1,
+          "hand": 6,
+          "skills": 3,
+          "bonus": 0,
+          "block": 0,
+          "detail": "生成2张咒文；生成本身不计K。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 1,
+          "hand": 5,
+          "skills": 4,
+          "bonus": 2,
+          "block": 0,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 1,
+          "hand": 4,
+          "skills": 5,
+          "bonus": 4,
+          "block": 0,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "稳住声线",
+          "paid": 1,
+          "energy": 0,
+          "hand": 4,
+          "skills": 6,
+          "bonus": 4,
+          "block": 6,
+          "detail": "获得6格挡并生成1张咒文。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 0,
+          "hand": 3,
+          "skills": 7,
+          "bonus": 6,
+          "block": 6,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "删繁就简",
+          "paid": 0,
+          "energy": 0,
+          "hand": 3,
+          "skills": 8,
+          "bonus": 6,
+          "block": 6,
+          "detail": "消耗打击，抽第二张展开与稳住声线；本牌也消耗。"
+        }
+      ],
+      "post_resolution_bonus": 0
+    },
+    {
+      "explosion_cost": 2,
+      "skills": 11,
+      "bonus": 10,
+      "damage": 21,
+      "block": 6,
+      "energy": 0,
+      "max_hand": 6,
+      "remaining_hand": [
+        "defend",
+        "steady_b"
+      ],
+      "stopped": "剩0能量，不能支付稳住声线的1费。",
+      "steps": [
+        {
+          "action": "爆裂魔法",
+          "paid": 2,
+          "energy": 1,
+          "hand": 5,
+          "skills": 0,
+          "bonus": 0,
+          "block": 0,
+          "detail": "开始吟唱；本牌不计K，结算后进入消耗牌堆。"
+        },
+        {
+          "action": "咒文续接",
+          "paid": 0,
+          "energy": 2,
+          "hand": 6,
+          "skills": 1,
+          "bonus": 0,
+          "block": 0,
+          "detail": "回1能量，抽稳住声线与防御；本牌消耗。"
+        },
+        {
+          "action": "一息贯通",
+          "paid": 0,
+          "energy": 2,
+          "hand": 5,
+          "skills": 2,
+          "bonus": 0,
+          "block": 0,
+          "detail": "下一张技能减费1；本牌消耗。"
+        },
+        {
+          "action": "咒文展开",
+          "paid": 0,
+          "energy": 2,
+          "hand": 6,
+          "skills": 3,
+          "bonus": 0,
+          "block": 0,
+          "detail": "生成2张咒文；生成本身不计K。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 2,
+          "hand": 5,
+          "skills": 4,
+          "bonus": 2,
+          "block": 0,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 2,
+          "hand": 4,
+          "skills": 5,
+          "bonus": 4,
+          "block": 0,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "稳住声线",
+          "paid": 1,
+          "energy": 1,
+          "hand": 4,
+          "skills": 6,
+          "bonus": 4,
+          "block": 6,
+          "detail": "获得6格挡并生成1张咒文。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 1,
+          "hand": 3,
+          "skills": 7,
+          "bonus": 6,
+          "block": 6,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "删繁就简",
+          "paid": 0,
+          "energy": 1,
+          "hand": 3,
+          "skills": 8,
+          "bonus": 6,
+          "block": 6,
+          "detail": "消耗打击，抽第二张展开与稳住声线；本牌也消耗。"
+        },
+        {
+          "action": "咒文展开",
+          "paid": 1,
+          "energy": 0,
+          "hand": 4,
+          "skills": 9,
+          "bonus": 6,
+          "block": 6,
+          "detail": "生成2张咒文；生成本身不计K。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 0,
+          "hand": 3,
+          "skills": 10,
+          "bonus": 8,
+          "block": 6,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 0,
+          "hand": 2,
+          "skills": 11,
+          "bonus": 10,
+          "block": 6,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        }
+      ],
+      "post_resolution_bonus": 0
+    },
+    {
+      "explosion_cost": 1,
+      "skills": 13,
+      "bonus": 12,
+      "damage": 25,
+      "block": 12,
+      "energy": 0,
+      "max_hand": 6,
+      "remaining_hand": [
+        "defend"
+      ],
+      "stopped": "剩0能量，不能支付防御的1费。",
+      "steps": [
+        {
+          "action": "爆裂魔法",
+          "paid": 1,
+          "energy": 2,
+          "hand": 5,
+          "skills": 0,
+          "bonus": 0,
+          "block": 0,
+          "detail": "开始吟唱；本牌不计K，结算后进入消耗牌堆。"
+        },
+        {
+          "action": "咒文续接",
+          "paid": 0,
+          "energy": 3,
+          "hand": 6,
+          "skills": 1,
+          "bonus": 0,
+          "block": 0,
+          "detail": "回1能量，抽稳住声线与防御；本牌消耗。"
+        },
+        {
+          "action": "一息贯通",
+          "paid": 0,
+          "energy": 3,
+          "hand": 5,
+          "skills": 2,
+          "bonus": 0,
+          "block": 0,
+          "detail": "下一张技能减费1；本牌消耗。"
+        },
+        {
+          "action": "咒文展开",
+          "paid": 0,
+          "energy": 3,
+          "hand": 6,
+          "skills": 3,
+          "bonus": 0,
+          "block": 0,
+          "detail": "生成2张咒文；生成本身不计K。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 3,
+          "hand": 5,
+          "skills": 4,
+          "bonus": 2,
+          "block": 0,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 3,
+          "hand": 4,
+          "skills": 5,
+          "bonus": 4,
+          "block": 0,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "稳住声线",
+          "paid": 1,
+          "energy": 2,
+          "hand": 4,
+          "skills": 6,
+          "bonus": 4,
+          "block": 6,
+          "detail": "获得6格挡并生成1张咒文。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 2,
+          "hand": 3,
+          "skills": 7,
+          "bonus": 6,
+          "block": 6,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "删繁就简",
+          "paid": 0,
+          "energy": 2,
+          "hand": 3,
+          "skills": 8,
+          "bonus": 6,
+          "block": 6,
+          "detail": "消耗打击，抽第二张展开与稳住声线；本牌也消耗。"
+        },
+        {
+          "action": "咒文展开",
+          "paid": 1,
+          "energy": 1,
+          "hand": 4,
+          "skills": 9,
+          "bonus": 6,
+          "block": 6,
+          "detail": "生成2张咒文；生成本身不计K。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 1,
+          "hand": 3,
+          "skills": 10,
+          "bonus": 8,
+          "block": 6,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 1,
+          "hand": 2,
+          "skills": 11,
+          "bonus": 10,
+          "block": 6,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "稳住声线",
+          "paid": 1,
+          "energy": 0,
+          "hand": 2,
+          "skills": 12,
+          "bonus": 10,
+          "block": 12,
+          "detail": "获得6格挡并生成1张咒文。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 0,
+          "hand": 1,
+          "skills": 13,
+          "bonus": 12,
+          "block": 12,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        }
+      ],
+      "post_resolution_bonus": 0
+    },
+    {
+      "explosion_cost": 0,
+      "skills": 14,
+      "bonus": 12,
+      "damage": 26,
+      "block": 17,
+      "energy": 0,
+      "max_hand": 6,
+      "remaining_hand": [],
+      "stopped": null,
+      "steps": [
+        {
+          "action": "爆裂魔法",
+          "paid": 0,
+          "energy": 3,
+          "hand": 5,
+          "skills": 0,
+          "bonus": 0,
+          "block": 0,
+          "detail": "开始吟唱；本牌不计K，结算后进入消耗牌堆。"
+        },
+        {
+          "action": "咒文续接",
+          "paid": 0,
+          "energy": 4,
+          "hand": 6,
+          "skills": 1,
+          "bonus": 0,
+          "block": 0,
+          "detail": "回1能量，抽稳住声线与防御；本牌消耗。"
+        },
+        {
+          "action": "一息贯通",
+          "paid": 0,
+          "energy": 4,
+          "hand": 5,
+          "skills": 2,
+          "bonus": 0,
+          "block": 0,
+          "detail": "下一张技能减费1；本牌消耗。"
+        },
+        {
+          "action": "咒文展开",
+          "paid": 0,
+          "energy": 4,
+          "hand": 6,
+          "skills": 3,
+          "bonus": 0,
+          "block": 0,
+          "detail": "生成2张咒文；生成本身不计K。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 4,
+          "hand": 5,
+          "skills": 4,
+          "bonus": 2,
+          "block": 0,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 4,
+          "hand": 4,
+          "skills": 5,
+          "bonus": 4,
+          "block": 0,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "稳住声线",
+          "paid": 1,
+          "energy": 3,
+          "hand": 4,
+          "skills": 6,
+          "bonus": 4,
+          "block": 6,
+          "detail": "获得6格挡并生成1张咒文。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 3,
+          "hand": 3,
+          "skills": 7,
+          "bonus": 6,
+          "block": 6,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "删繁就简",
+          "paid": 0,
+          "energy": 3,
+          "hand": 3,
+          "skills": 8,
+          "bonus": 6,
+          "block": 6,
+          "detail": "消耗打击，抽第二张展开与稳住声线；本牌也消耗。"
+        },
+        {
+          "action": "咒文展开",
+          "paid": 1,
+          "energy": 2,
+          "hand": 4,
+          "skills": 9,
+          "bonus": 6,
+          "block": 6,
+          "detail": "生成2张咒文；生成本身不计K。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 2,
+          "hand": 3,
+          "skills": 10,
+          "bonus": 8,
+          "block": 6,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 2,
+          "hand": 2,
+          "skills": 11,
+          "bonus": 10,
+          "block": 6,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "稳住声线",
+          "paid": 1,
+          "energy": 1,
+          "hand": 2,
+          "skills": 12,
+          "bonus": 10,
+          "block": 12,
+          "detail": "获得6格挡并生成1张咒文。"
+        },
+        {
+          "action": "爆裂咒文",
+          "paid": 0,
+          "energy": 1,
+          "hand": 1,
+          "skills": 13,
+          "bonus": 12,
+          "block": 12,
+          "detail": "下一次爆裂魔法造成的伤害提高2点；作为技能也计1次K，随后消耗。"
+        },
+        {
+          "action": "防御",
+          "paid": 1,
+          "energy": 0,
+          "hand": 0,
+          "skills": 14,
+          "bonus": 12,
+          "block": 17,
+          "detail": "只有爆裂0费的比较中还有能量打出这张普通防御。"
+        }
+      ],
+      "post_resolution_bonus": 0
+    }
+  ]
+}

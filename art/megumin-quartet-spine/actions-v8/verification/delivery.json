@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "skeleton_sha256": "15ae6e95f141870bf1588290ae3e4c8de9be1a1ed1641beffeee70870ad75d16",
+  "mod_sha256": "aa125f0904466c002ee0b0e94fa4fc1982255861cacef643afb6e6b41d5329e8",
+  "archive_sha256": "35fca6f4adc155ccdd168ac5a3d773b1efb39ca60873ead4cbf9be5bbb05b740",
+  "verified_same_skeleton": [
+    "export/megumin.json",
+    "dist/MeguminMod/animation/megumin.spine-json",
+    ".local/game/mods/MeguminMod/animation/megumin.spine-json",
+    "MeguminMod-0.1.0-dev.zip"
+  ],
+  "head_area_jump_before": 0.4240696816716967,
+  "head_area_jump_after": 0.03611371164248833,
+  "visual_review": "Checked native chant_enter/get_up/relaxed_fall switch neighborhoods at game display size. Head/hand size stabilized. Perspective changes retain discrete drawn contour changes."
+}

@@ -1,0 +1,109 @@
+{
+  "version": "v0.107.1",
+  "root": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d",
+  "purpose": "战士攻击牌体系的结构参照，不声明是最新版本",
+  "localization": {
+    "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/localization-extract/localization/zhs/cards.json",
+    "sha256": "f7f4f74ade9f998c49e2171bbffdc0a4e486f86dc58bd967353a0a6261b95208"
+  },
+  "files": [
+    {
+      "id": "InfernalBlade",
+      "title": "地狱之刃",
+      "text": "将一张随机攻击牌加入你的[gold]手牌[/gold]。那张牌在本回合内可以免费打出。",
+      "constructor": ": base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/InfernalBlade.cs",
+      "sha256": "f74fdf5b2750e2ded89ceb780ffd4d762dd57488ad21584e1c9eaa82f679dc0b",
+      "excerpts": "13: public override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n16: : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)\n23: where c.Type == CardType.Attack\n32: protected override void OnUpgrade()\n34: base.EnergyCost.UpgradeBy(-1);",
+      "verified": "1费罕见技能，生成随机攻击，本回合0费，消耗；升级自身0费。"
+    },
+    {
+      "id": "PommelStrike",
+      "title": "剑柄打击",
+      "text": "造成{Damage:diff()}点伤害。\n抽{Cards:diff()}张牌。",
+      "constructor": ": base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/PommelStrike.cs",
+      "sha256": "3a3330a2970eda5de7a717121aa9f7973b918ded9da5678240e514740f56a681",
+      "excerpts": "14: protected override HashSet<CardTag> CanonicalTags => new HashSet<CardTag> { CardTag.Strike };\n16: protected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n18: new DamageVar(9m, ValueProp.Move),\n19: new CardsVar(1)\n23: : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)\n30: await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n36: protected override void OnUpgrade()\n38: base.DynamicVars.Damage.UpgradeValueBy(1m);\n39: base.DynamicVars.Cards.UpgradeValueBy(1m);",
+      "verified": "1费普通攻击，9伤害、抽1；升级10伤害、抽2。"
+    },
+    {
+      "id": "TwinStrike",
+      "title": "双重打击",
+      "text": "造成{Damage:diff()}点伤害两次。",
+      "constructor": ": base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/TwinStrike.cs",
+      "sha256": "87131a9fa3797d8bc26be299aafc745ab698082346b98cbf6ac91d2697f63b29",
+      "excerpts": "14: protected override HashSet<CardTag> CanonicalTags => new HashSet<CardTag> { CardTag.Strike };\n16: protected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(5m, ValueProp.Move));\n19: : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)\n26: await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(2).FromCard(this)\n32: protected override void OnUpgrade()\n34: base.DynamicVars.Damage.UpgradeValueBy(2m);",
+      "verified": "1费普通攻击，5伤害2次；升级7伤害2次。"
+    },
+    {
+      "id": "Bludgeon",
+      "title": "重锤",
+      "text": "造成{Damage:diff()}点伤害。",
+      "constructor": ": base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Bludgeon.cs",
+      "sha256": "2770f0c34b301cc901d0f9865192f83847b7d4c0687ff393c9d36e21fd9c6ab8",
+      "excerpts": "15: protected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(32m, ValueProp.Move));\n18: : base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)\n25: await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n32: protected override void OnUpgrade()\n34: base.DynamicVars.Damage.UpgradeValueBy(10m);",
+      "verified": "3费罕见攻击，32伤害；升级42。"
+    },
+    {
+      "id": "Pillage",
+      "title": "劫掠",
+      "text": "造成{Damage:diff()}点伤害。\n抽牌直到你抽到一张非攻击牌。",
+      "constructor": ": base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Pillage.cs",
+      "sha256": "2590dc1223707c3b0f93d1c58ae914b54db0de346bf44a66e416dfde8ab3b6ed",
+      "excerpts": "15: protected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(6m, ValueProp.Move));\n18: : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)\n25: await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n33: while (cardModel != null && cardModel.Type == CardType.Attack && CardPile.GetCards(base.Owner, PileType.Hand).Count() < CardPile.MaxCardsInHand);\n36: protected override void OnUpgrade()\n38: base.DynamicVars.Damage.UpgradeValueBy(3m);",
+      "verified": "1费罕见攻击，6伤害，抽到非攻击牌为止；升级伤害9。"
+    },
+    {
+      "id": "Rage",
+      "title": "狂怒",
+      "text": "打出此牌后，你在这个回合内每打出一张攻击牌，获得{Power:diff()}点[gold]格挡[/gold]。",
+      "constructor": ": base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Rage.cs",
+      "sha256": "ca126d5e9f49350158798985389427f9c124a07474fa0ed9fa1a06fdcfa9f08a",
+      "excerpts": "16: protected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DynamicVar(\"Power\", 3m));\n18: protected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.Static(StaticHoverTip.Block));\n21: : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)\n31: protected override void OnUpgrade()\n33: base.DynamicVars[\"Power\"].UpgradeValueBy(2m);",
+      "verified": "0费罕见技能，此后本回合每打出攻击牌获得3格挡；升级5。"
+    },
+    {
+      "id": "Stomp",
+      "title": "踩踏",
+      "text": "对所有敌人造成{Damage:diff()}点伤害。\n你在本回合中每打出过一张攻击牌，其耗能减少1{energyPrefix:energyIcons(1)}。",
+      "constructor": ": base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Stomp.cs",
+      "sha256": "0cdf6de7d279ff5fb1f3bfe99dd8eab793b137b86d4c5d67e26665bb1cc50882",
+      "excerpts": "5: using MegaCrit.Sts2.Core.Combat.History.Entries;\n21: protected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(12m, ValueProp.Move));\n24: : base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)\n35: await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(base.CombatState)\n42: protected override void OnUpgrade()\n44: base.DynamicVars.Damage.UpgradeValueBy(3m);\n57: int amount = CombatManager.Instance.History.CardPlaysFinished.Count((CardPlayFinishedEntry e) => e.CardPlay.Card.Type == CardType.Attack && e.CardPlay.Card.Owner == base.Owner && e.HappenedThisTurn(base.CombatState));\n62: public override Task BeforeCardPlayed(CardPlay cardPlay)\n68: if (cardPlay.Card.Type != CardType.Attack)",
+      "verified": "3费罕见攻击，12群伤；本回合每打出攻击牌减1费；升级15群伤。"
+    },
+    {
+      "id": "Aggression",
+      "title": "好勇斗狠",
+      "text": "在你的回合开始时，将你[gold]弃牌堆[/gold]的一张随机攻击牌放入你的[gold]手牌[/gold]并将其[gold]升级[/gold]。",
+      "constructor": ": base(1, CardType.Power, CardRarity.Rare, TargetType.Self)",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Aggression.cs",
+      "sha256": "f93b9da1d02671aa49f21db9f84948e35242caa8b85df8954722d5b362f4956c",
+      "excerpts": "12: : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)\n22: protected override void OnUpgrade()\n24: AddKeyword(CardKeyword.Innate);",
+      "verified": "1费稀有能力，回合开始从弃牌堆随机取回1张攻击并升级；升级固有。"
+    },
+    {
+      "id": "RagePower",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/RagePower.cs",
+      "sha256": "19f1631dca760fb5a22f079e921a2cc88cb9cdba3481254dc427b94fa0793e9f",
+      "excerpts": "using System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\nusing MegaCrit.Sts2.Core.Combat;\nusing MegaCrit.Sts2.Core.Commands;\nusing MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.Entities.Creatures;\nusing MegaCrit.Sts2.Core.Entities.Powers;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\nusing MegaCrit.Sts2.Core.HoverTips;\nusing MegaCrit.Sts2.Core.ValueProps;\n\nnamespace MegaCrit.Sts2.Core.Models.Powers;\n\npublic sealed class RagePower : PowerModel\n{\n\tpublic override PowerType Type => PowerType.Buff;\n\n\tpublic override PowerStackType StackType => PowerStackType.Counter;\n\n\tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.Static(StaticHoverTip.Block));\n\n\tpublic override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n\t{\n\t\tif (cardPlay.Card.Owner == base.Owner.Player && cardPlay.Card.Type == CardType.Attack)\n\t\t{\n\t\t\tawait CreatureCmd.GainBlock(base.Owner, base.Amount, ValueProp.Unpowered, null);\n\t\t}\n\t}\n\n\tpublic override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)\n\t{\n\t\tif (participants.Contains(base.Owner))\n\t\t{\n\t\t\tawait PowerCmd.Remove(this);\n\t\t}\n\t}\n}\n"
+    },
+    {
+      "id": "AggressionPower",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/AggressionPower.cs",
+      "sha256": "fb1e98f4f2eb27c090ddf7401c0ba66d895fd892994980f357a29f28a6ecc47d",
+      "excerpts": "using System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\nusing MegaCrit.Sts2.Core.Combat;\nusing MegaCrit.Sts2.Core.Commands;\nusing MegaCrit.Sts2.Core.Entities.Cards;\nusing MegaCrit.Sts2.Core.Entities.Creatures;\nusing MegaCrit.Sts2.Core.Entities.Powers;\nusing MegaCrit.Sts2.Core.Extensions;\nusing MegaCrit.Sts2.Core.GameActions.Multiplayer;\n\nnamespace MegaCrit.Sts2.Core.Models.Powers;\n\npublic sealed class AggressionPower : PowerModel\n{\n\tpublic override PowerType Type => PowerType.Buff;\n\n\tpublic override PowerStackType StackType => PowerStackType.Counter;\n\n\tpublic override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)\n\t{\n\t\tif (!participants.Contains(base.Owner))\n\t\t{\n\t\t\treturn;\n\t\t}\n\t\tCardPile pile = PileType.Discard.GetPile(base.Owner.Player);\n\t\tIEnumerable<CardModel> source = pile.Cards.Where((CardModel c) => c.Type == CardType.Attack);\n\t\tIEnumerable<CardModel> enumerable = source.ToList().UnstableShuffle(base.Owner.Player.RunState.Rng.CombatCardSelection).Take(base.Amount);\n\t\tforeach (CardModel card in enumerable)\n\t\t{\n\t\t\tawait CardPileCmd.Add(card, PileType.Hand);\n\t\t\tif (card.IsUpgradable)\n\t\t\t{\n\t\t\t\tCardCmd.Upgrade(card);\n\t\t\t}\n\t\t}\n\t}\n}\n"
+    },
+    {
+      "id": "IroncladCardPool",
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.CardPools/IroncladCardPool.cs",
+      "sha256": "98aa14d13c962dab79573dfcae53ace20553d7fa6d2828193d9f379e3dce8e2c",
+      "excerpts": "using System.Collections.Generic;\nusing System.Linq;\nusing Godot;\nusing MegaCrit.Sts2.Core.Models.Cards;\nusing MegaCrit.Sts2.Core.Timeline.Epochs;\nusing MegaCrit.Sts2.Core.Unlocks;\n\nnamespace MegaCrit.Sts2.Core.Models.CardPools;\n\npublic sealed class IroncladCardPool : CardPoolModel\n{\n\tpublic override string Title => \"ironclad\";\n\n\tpublic override string EnergyColorName => \"ironclad\";\n\n\tpublic override string CardFrameMaterialPath => \"card_frame_red\";\n\n\tpublic override Color DeckEntryCardColor => new Color(\"D62000\");\n\n\tpublic override Color EnergyOutlineColor => new Color(\"802020\");\n\n\tpublic override bool IsColorless => false;\n\n\tprotected override CardModel[] GenerateAllCards()\n\t{\n\t\treturn new CardModel[87]\n\t\t{\n\t\t\tModelDb.Card<Aggression>(),\n\t\t\tModelDb.Card<Anger>(),\n\t\t\tModelDb.Card<Armaments>(),\n\t\t\tModelDb.Card<AshenStrike>(),\n\t\t\tModelDb.Card<Barricade>(),\n\t\t\tModelDb.Card<Bash>(),\n\t\t\tModelDb.Card<BattleTrance>(),\n\t\t\tModelDb.Card<BloodWall>(),\n\t\t\tModelDb.Card<Bloodletting>(),\n\t\t\tModelDb.Card<Bludgeon>(),\n\t\t\tModelDb.Card<BodySlam>(),\n\t\t\tModelDb.Card<Brand>(),\n\t\t\tModelDb.Card<Break>(),\n\t\t\tModelDb.Card<Breakthrough>(),\n\t\t\tModelDb.Card<Bully>(),\n\t\t\tModelDb.Card<BurningPact>(),\n\t\t\tModelDb.Card<Cascade>(),\n\t\t\tModelDb.Card<Cinder>(),\n\t\t\tModelDb.Card<Colossus>(),\n\t\t\tModelDb.Card<Conflagration>(),\n\t\t\tModelDb.Card<Corruption>(),\n\t\t\tModelDb.Card<CrimsonMantle>(),\n\t\t\tModelDb.Card<Cruelty>(),\n\t\t\tModelDb.Card<DarkEmbrace>(),\n\t\t\tModelDb.Card<DefendIronclad>(),\n\t\t\tModelDb.Card<DemonForm>(),\n\t\t\tModelDb.Card<DemonicShield>(),\n\t\t\tModelDb.Card<Dismantle>(),\n\t\t\tModelDb.Card<Dominate>(),\n\t\t\tModelDb.Card<DrumOfBattle>(),\n\t\t\tModelDb.Card<EvilEye>(),\n\t\t\tModelDb.Card<ExpectAFight>(),\n\t\t\tModelDb.Card<Feed>(),\n\t\t\tModelDb.Card<FeelNoPain>(),\n\t\t\tModelDb.Card<FiendFire>(),\n\t\t\tModelDb.Card<FightMe>(),\n\t\t\tModelDb.Card<FlameBarrier>(),\n\t\t\tModelDb.Card<ForgottenRitual>(),\n\t\t\tModelDb.Card<Havoc>(),\n\t\t\tModelDb.Card<Headbutt>(),\n\t\t\tModelDb.Card<Hellraiser>(),\n\t\t\tModelDb.Card<Hemokinesis>(),\n\t\t\tModelDb.Card<HowlFromBeyond>(),\n\t\t\tModelDb.Card<Impervious>(),\n\t\t\tModelDb.Card<InfernalBlade>(),\n\t\t\tModelDb.Card<Inferno>(),\n\t\t\tModelDb.Card<Inflame>(),\n\t\t\tModelDb.Card<IronWave>(),\n\t\t\tModelDb.Card<Juggernaut>(),\n\t\t\tModelDb.Card<Juggling>(),\n\t\t\tModelDb.Card<Mangle>(),\n\t\t\tModelDb.Card<MoltenFist>(),\n\t\t\tModelDb.Card<NotYet>(),\n\t\t\tModelDb.Card<Offering>(),\n\t\t\tModelDb.Card<OneTwoPunch>(),\n\t\t\tModelDb.Card<PactsEnd>(),\n\t\t\tModelDb.Card<PerfectedStrike>(),\n\t\t\tModelDb.Card<Pillage>(),\n\t\t\tModelDb.Card<PommelStrike>(),\n\t\t\tModelDb.Card<PrimalForce>(),\n\t\t\tModelDb.Card<Pyre>(),\n\t\t\tModelDb.Card<Rage>(),\n\t\t\tModelDb.Card<Rampage>(),\n\t\t\tModelDb.Card<Rupture>(),\n\t\t\tModelDb.Card<SecondWind>(),\n\t\t\tModelDb.Card<SetupStrike>(),\n\t\t\tModelDb.Card<ShrugItOff>(),\n\t\t\tModelDb.Card<Spite>(),\n\t\t\tModelDb.Card<Stampede>(),\n\t\t\tModelDb.Card<Stoke>(),\n\t\t\tModelDb.Card<Stomp>(),\n\t\t\tModelDb.Card<StoneArmor>(),\n\t\t\tModelDb.Card<StrikeIronclad>(),\n\t\t\tModelDb.Card<SwordBoomerang>(),\n\t\t\tModelDb.Card<Tank>(),\n\t\t\tModelDb.Card<Taunt>(),\n\t\t\tModelDb.Card<TearAsunder>(),\n\t\t\tModelDb.Card<Thrash>(),\n\t\t\tModelDb.Card<Thunderclap>(),\n\t\t\tModelDb.Card<Tremble>(),\n\t\t\tModelDb.Card<TrueGrit>(),\n\t\t\tModelDb.Card<TwinStrike>(),\n\t\t\tModelDb.Card<Unmovable>(),\n\t\t\tModelDb.Card<Unrelenting>(),\n\t\t\tModelDb.Card<Uppercut>(),\n\t\t\tModelDb.Card<Vicious>(),\n\t\t\tModelDb.Card<Whirlwind>()\n\t\t};\n\t}\n\n\tprotected override IEnumerable<CardModel> FilterThroughEpochs(UnlockState unlockState, IEnumerable<CardModel> cards)\n\t{\n\t\tList<CardModel> list = cards.ToList();\n\t\tif (!unlockState.IsEpochRevealed<Ironclad2Epoch>())\n\t\t{\n\t\t\tlist.RemoveAll((CardModel c) => Ironclad2Epoch.Cards.Any((CardModel card) => card.Id == c.Id));\n\t\t}\n\t\tif (!unlockState.IsEpochRevealed<Ironclad5Epoch>())\n\t\t{\n\t\t\tlist.RemoveAll((CardModel c) => Ironclad5Epoch.Cards.Any((CardModel card) => card.Id == c.Id));\n\t\t}\n\t\tif (!unlockState.IsEpochRevealed<Ironclad7Epoch>())\n\t\t{\n\t\t\tlist.RemoveAll((CardModel c) => Ironclad7Epoch.Cards.Any((CardModel card) => card.Id == c.Id));\n\t\t}\n\t\treturn list;\n\t}\n}\n"
+    }
+  ]
+}

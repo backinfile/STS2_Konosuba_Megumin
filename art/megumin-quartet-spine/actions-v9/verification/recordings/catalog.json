@@ -1,0 +1,149 @@
+[
+  {
+    "file": "full-sequence.mp4",
+    "label": "完整动作链：吟唱 → 释放 → 脱力 → 起身",
+    "seconds": 21.6,
+    "capture_fps": 29.8,
+    "repeated_frames": 5
+  },
+  {
+    "file": "normal-combat.mp4",
+    "label": "正常战斗：出牌、受击、胜利与奖励",
+    "seconds": 41.83,
+    "capture_fps": 29.91,
+    "repeated_frames": 4
+  },
+  {
+    "file": "idle_loop.mp4",
+    "label": "待机",
+    "seconds": 6.83,
+    "capture_fps": 30.02,
+    "repeated_frames": 0
+  },
+  {
+    "file": "chant_enter.mp4",
+    "label": "进入吟唱",
+    "seconds": 3.77,
+    "capture_fps": 29.89,
+    "repeated_frames": 1
+  },
+  {
+    "file": "chant_loop.mp4",
+    "label": "持续吟唱",
+    "seconds": 4.83,
+    "capture_fps": 30.11,
+    "repeated_frames": 0
+  },
+  {
+    "file": "chant_cancel.mp4",
+    "label": "取消吟唱",
+    "seconds": 3.77,
+    "capture_fps": 30.16,
+    "repeated_frames": 0
+  },
+  {
+    "file": "chant_ack.mp4",
+    "label": "吟唱确认",
+    "seconds": 2.97,
+    "capture_fps": 30.18,
+    "repeated_frames": 0
+  },
+  {
+    "file": "explosion_release.mp4",
+    "label": "爆裂释放",
+    "seconds": 3.37,
+    "capture_fps": 30.16,
+    "repeated_frames": 0
+  },
+  {
+    "file": "explosion_hold.mp4",
+    "label": "释放保持",
+    "seconds": 4.03,
+    "capture_fps": 30.18,
+    "repeated_frames": 0
+  },
+  {
+    "file": "explosion_exit.mp4",
+    "label": "释放后卸力",
+    "seconds": 3.47,
+    "capture_fps": 30.17,
+    "repeated_frames": 0
+  },
+  {
+    "file": "relaxed_fall.mp4",
+    "label": "脱力趴地",
+    "seconds": 3.27,
+    "capture_fps": 30.08,
+    "repeated_frames": 0
+  },
+  {
+    "file": "relaxed_loop.mp4",
+    "label": "趴地休息",
+    "seconds": 6.03,
+    "capture_fps": 30.09,
+    "repeated_frames": 0
+  },
+  {
+    "file": "get_up.mp4",
+    "label": "撑地起身",
+    "seconds": 6.13,
+    "capture_fps": 30.1,
+    "repeated_frames": 0
+  },
+  {
+    "file": "hit.mp4",
+    "label": "站立受击",
+    "seconds": 2.87,
+    "capture_fps": 30.2,
+    "repeated_frames": 0
+  },
+  {
+    "file": "hit_chant.mp4",
+    "label": "吟唱受击",
+    "seconds": 2.87,
+    "capture_fps": 30.19,
+    "repeated_frames": 0
+  },
+  {
+    "file": "hit_down.mp4",
+    "label": "倒地受击",
+    "seconds": 2.87,
+    "capture_fps": 29.84,
+    "repeated_frames": 1
+  },
+  {
+    "file": "dead.mp4",
+    "label": "站立死亡",
+    "seconds": 4.6,
+    "capture_fps": 30.12,
+    "repeated_frames": 0
+  },
+  {
+    "file": "dead_from_down.mp4",
+    "label": "倒地死亡",
+    "seconds": 3.2,
+    "capture_fps": 30.01,
+    "repeated_frames": 0
+  },
+  {
+    "file": "dead_loop.mp4",
+    "label": "死亡保持",
+    "seconds": 4.03,
+    "capture_fps": 30.13,
+    "repeated_frames": 0
+  },
+  {
+    "file": "attack_short.mp4",
+    "label": "普通攻击",
+    "seconds": 3.93,
+    "capture_fps": 30.08,
+    "repeated_frames": 0
+  },
+  {
+    "file": "cast_short.mp4",
+    "label": "普通施放",
+    "seconds": 3.93,
+    "capture_fps": 30.07,
+    "repeated_frames": 0
+  }
+]

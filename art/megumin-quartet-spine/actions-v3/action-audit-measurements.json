@@ -1,0 +1,57 @@
+{
+  "coordinate_unit": "world pixels; nominal character height 320 px",
+  "get_up_065_left_grip_height": 73.78787879999999,
+  "sitting_feet_horizontal_offsets": {
+    "right": 44.96753714685483,
+    "left": 42.96897985555747
+  },
+  "chant_grip_separation": 31.27930489856549,
+  "explosion_release_head_world_angle": -0.9999999433049895,
+  "down_pelvis_world_angle": 77.00000239978282,
+  "dead_pelvis_world_angle": 82.00000251517402,
+  "down_and_dead_use_same_expression": true,
+  "fixed_draw_order": [
+    "costume_under",
+    "body_repair",
+    "body",
+    "leg_l",
+    "leg_r",
+    "head_repair",
+    "staff",
+    "arm_l",
+    "arm_r",
+    "hand_r",
+    "hand_l",
+    "head",
+    "eye"
+  ],
+  "clips_with_draw_order_tracks": [],
+  "hat_hair_separate_bones": [],
+  "clip_hand_angle_max_adjacent_step": {
+    "idle_loop": 0.7400921,
+    "cast_short": 14.013479700000005,
+    "chant_enter": 2.6701782000000023,
+    "chant_loop": 0.02894310000000644,
+    "chant_cancel": 3.1151483000000013,
+    "chant_ack": 0,
+    "attack_short": 9.9551358,
+    "explosion_release": 2.539558800000009,
+    "explosion_hold": 0,
+    "explosion_exit": 3.0471002999999968,
+    "hit": 1.9098083,
+    "hit_chant": 0.610153000000011,
+    "relaxed_fall": 3.553502899999998,
+    "relaxed_loop": 0.011075300000001675,
+    "get_up": 2.8989006000000046,
+    "dead": 4.9999258,
+    "dead_from_down": 1.0790811999999974,
+    "hit_down": 0.13404510000000158,
+    "setup_pose": 0
+  },
+  "floor_bake": {
+    "timelines": 6,
+    "maxWorldLift": 31.765128326416015,
+    "method": "Weighted mesh local inverse transforms; constant ground at y=0.45; texture unchanged"
+  },
+  "note": "These explain observed artifacts. Low numerical error does not establish a good pose."
+}

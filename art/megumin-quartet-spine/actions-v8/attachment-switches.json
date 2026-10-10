@@ -1,0 +1,167 @@
+{
+  "thresholds": {
+    "E00 > E01": 0.2,
+    "E01 > turn-upright": 0.6,
+    "turn-upright > E05": 0.54,
+    "E05 > E08": 0.65,
+    "E08 > E12": 0.3,
+    "E12 > E08": 0.63,
+    "E08 > E05": 0.28,
+    "E05 > turn-upright": 0.38,
+    "turn-upright > E01": 0.3,
+    "E01 > E00": 0.63,
+    "E12 > release": 0.5,
+    "release > fall-lean": 0.34,
+    "fall-lean > crouch": 0.54,
+    "crouch > brace": 0.3,
+    "brace > lower": 0.43,
+    "lower > prone": 0.22,
+    "prone > lower": 0.75,
+    "lower > brace": 0.57,
+    "brace > kneel-rise": 0.61,
+    "kneel-rise > fall-lean": 0.53,
+    "fall-lean > E12": 0.66,
+    "E00 > turn-upright": 0.65,
+    "turn-upright > fall-lean": 0.5
+  },
+  "report": [
+    {
+      "pair": "E00 > E01",
+      "before": 0.15,
+      "after": 0.11,
+      "threshold": 0.2
+    },
+    {
+      "pair": "E01 > turn-upright",
+      "before": 100.94,
+      "after": 18.35,
+      "threshold": 0.6
+    },
+    {
+      "pair": "turn-upright > E05",
+      "before": 160.17,
+      "after": 70.83,
+      "threshold": 0.54
+    },
+    {
+      "pair": "E05 > E08",
+      "before": 23.6,
+      "after": 5.34,
+      "threshold": 0.65
+    },
+    {
+      "pair": "E08 > E12",
+      "before": 0.26,
+      "after": 0.03,
+      "threshold": 0.3
+    },
+    {
+      "pair": "E12 > E08",
+      "before": 0.29,
+      "after": 0.03,
+      "threshold": 0.63
+    },
+    {
+      "pair": "E08 > E05",
+      "before": 23.6,
+      "after": 5.34,
+      "threshold": 0.28
+    },
+    {
+      "pair": "E05 > turn-upright",
+      "before": 160.17,
+      "after": 65.32,
+      "threshold": 0.38
+    },
+    {
+      "pair": "turn-upright > E01",
+      "before": 50.92,
+      "after": 20.45,
+      "threshold": 0.3
+    },
+    {
+      "pair": "E01 > E00",
+      "before": 0.29,
+      "after": 0.11,
+      "threshold": 0.63
+    },
+    {
+      "pair": "E12 > release",
+      "before": 0,
+      "after": 0,
+      "threshold": 0.5
+    },
+    {
+      "pair": "release > fall-lean",
+      "before": 59.23,
+      "after": 17.06,
+      "threshold": 0.34
+    },
+    {
+      "pair": "fall-lean > crouch",
+      "before": 1.5,
+      "after": 1.23,
+      "threshold": 0.54
+    },
+    {
+      "pair": "crouch > brace",
+      "before": 34.97,
+      "after": 4.05,
+      "threshold": 0.3
+    },
+    {
+      "pair": "brace > lower",
+      "before": 37.98,
+      "after": 35.39,
+      "threshold": 0.43
+    },
+    {
+      "pair": "lower > prone",
+      "before": 2.61,
+      "after": 0.51,
+      "threshold": 0.22
+    },
+    {
+      "pair": "prone > lower",
+      "before": 3.02,
+      "after": 0.28,
+      "threshold": 0.75
+    },
+    {
+      "pair": "lower > brace",
+      "before": 56.39,
+      "after": 32.78,
+      "threshold": 0.57
+    },
+    {
+      "pair": "brace > kneel-rise",
+      "before": 151.82,
+      "after": 62.62,
+      "threshold": 0.61
+    },
+    {
+      "pair": "kneel-rise > fall-lean",
+      "before": 0.62,
+      "after": 0.55,
+      "threshold": 0.53
+    },
+    {
+      "pair": "fall-lean > E12",
+      "before": 72.73,
+      "after": 8.76,
+      "threshold": 0.66
+    },
+    {
+      "pair": "E00 > turn-upright",
+      "before": 149.53,
+      "after": 29.58,
+      "threshold": 0.65
+    },
+    {
+      "pair": "turn-upright > fall-lean",
+      "before": 31.41,
+      "after": 31.41,
+      "threshold": 0.5
+    }
+  ]
+}

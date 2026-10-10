@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "reasons": [],
+  "limits": {
+    "structure_max_diff_std": 0.6,
+    "structure_min_hf_ratio": 0.9,
+    "flat_max_band_increase": 0.02,
+    "whole_max_diff_std": 1.0
+  },
+  "whole_image": {
+    "hf_std_before": 6.2367,
+    "hf_std_after": 6.2182,
+    "hf_std_ratio": 0.997,
+    "band_std_before": 5.2165,
+    "band_std_after": 5.1763,
+    "diff_std": 0.7293,
+    "diff_abs_max": 6.2527
+  },
+  "flat_windows": [],
+  "structure_windows": [
+    {
+      "hf_std_before": 0.1551,
+      "hf_std_after": 0.192,
+      "hf_std_ratio": 1.237,
+      "band_std_before": 0.1216,
+      "band_std_after": 0.1438,
+      "diff_std": 0.2493,
+      "diff_abs_max": 0.9962,
+      "box": [
+        1407,
+        919,
+        1503,
+        1015
+      ],
+      "ok": true
+    },
+    {
+      "hf_std_before": 0.1483,
+      "hf_std_after": 0.1864,
+      "hf_std_ratio": 1.256,
+      "band_std_before": 0.1047,
+      "band_std_after": 0.1382,
+      "diff_std": 0.318,
+      "diff_abs_max": 0.927,
+      "box": [
+        1388,
+        772,
+        1484,
+        868
+      ],
+      "ok": true
+    },
+    {
+      "hf_std_before": 0.1558,
+      "hf_std_after": 0.1962,
+      "hf_std_ratio": 1.26,
+      "band_std_before": 0.127,
+      "band_std_after": 0.1686,
+      "diff_std": 0.3238,
+      "diff_abs_max": 1.1845,
+      "box": [
+        23,
+        340,
+        119,
+        436
+      ],
+      "ok": true
+    }
+  ],
+  "stage": "verify",
+  "before": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\chant-enter-a-rejected.png",
+  "after": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_notch.png",
+  "time": "2026-10-10T14:50:31+08:00",
+  "board": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_verify_board.png"
+}

@@ -1,0 +1,12 @@
+{
+  "runtime": "Spine WebGL 4.2.95",
+  "comparison": "Setup weighted mesh versus original PNG as an ordinary region attachment, same camera and WebGL context",
+  "renderSize": [1147, 1371],
+  "maxChannelDifference": 0,
+  "meanChannelDifference": 0,
+  "channelsOver2": 0,
+  "pixelsCompared": 1572537,
+  "uiChecks": ["side-by-side", "overlay", "play-pause", "time-scrub", "320px", "dark-background", "runtime-mesh-overlay"],
+  "screenshot": "../../verification/idle-v2-comparison.png",
+  "scope": "Browser preview only; no Spine editor or game import validation"
+}

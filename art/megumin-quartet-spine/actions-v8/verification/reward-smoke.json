@@ -1,0 +1,77 @@
+{
+  "state_type": "card_reward",
+  "card_reward": {
+    "cards": [
+      {
+        "id": "TREMBLE",
+        "name": "战栗",
+        "type": "Skill",
+        "cost": "1",
+        "star_cost": null,
+        "description": "给予3层易伤。 消耗。",
+        "rarity": "Common",
+        "is_upgraded": false,
+        "keywords": [
+          {
+            "name": "易伤",
+            "description": "易伤的生物从攻击中受到的伤害增加50%。"
+          },
+          {
+            "name": "消耗",
+            "description": "在战斗结束前移除。"
+          }
+        ],
+        "index": 0
+      },
+      {
+        "id": "HEADBUTT",
+        "name": "头槌",
+        "type": "Attack",
+        "cost": "1",
+        "star_cost": null,
+        "description": "造成9点伤害。 将你弃牌堆中的一张牌放到抽牌堆顶部。",
+        "rarity": "Common",
+        "is_upgraded": false,
+        "keywords": [],
+        "index": 1
+      },
+      {
+        "id": "HEMOKINESIS",
+        "name": "御血术",
+        "type": "Attack",
+        "cost": "1",
+        "star_cost": null,
+        "description": "失去2点生命。 造成15点伤害。",
+        "rarity": "Uncommon",
+        "is_upgraded": false,
+        "keywords": [],
+        "index": 2
+      }
+    ],
+    "can_skip": true
+  },
+  "run": {
+    "act": 1,
+    "floor": 1,
+    "ascension": 0
+  },
+  "player": {
+    "character": "惠惠（测试）",
+    "hp": 63,
+    "max_hp": 70,
+    "block": 0,
+    "gold": 114,
+    "status": [],
+    "relics": [
+      {
+        "id": "BURNING_BLOOD",
+        "name": "燃烧之血",
+        "description": "在战斗结束时，回复6点生命。",
+        "counter": null,
+        "keywords": []
+      }
+    ],
+    "potions": [],
+    "max_potion_slots": 3
+  }
+}

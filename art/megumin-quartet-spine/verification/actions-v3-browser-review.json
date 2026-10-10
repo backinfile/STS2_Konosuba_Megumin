@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-09",
+  "renderer": "Official Spine WebGL 4.2.95 in Codex in-app browser",
+  "pages": ["actions-v3/preview.html", "actions-v3/keyframes.html"],
+  "observations": {
+    "full_demo_returns_to_idle": true,
+    "demo_release_event_count": 1,
+    "demo_damage_pulses": 3,
+    "chant_hit_returns_to_chant": true,
+    "manual_damage_pulses_keep_explosion_hold": true,
+    "finish_runs_exit_fall_and_down_loop": true,
+    "death_from_down_uses_dead_from_down": true,
+    "death_locks_action_buttons_until_reset": true,
+    "reset_returns_to_idle": true,
+    "bones_and_grip_targets_visible": true,
+    "dark_background_and_320px_reviewed": true,
+    "neutral_closed_eye_down_expression_reviewed": true,
+    "nine_keyframes_render_without_clipping": true,
+    "console_warning_or_error_count": 0
+  },
+  "screenshots": ["actions-v3-keyframes.png", "actions-v3-preview.png"],
+  "limits": [
+    "Down/get-up poses remain cutout-like; leg perspective and joint art can be refined.",
+    "Texture cleanup and mipmap sampling were reviewed in browser; game import settings are unverified.",
+    "Native Spine editor import and STS2 integration were not tested."
+  ]
+}

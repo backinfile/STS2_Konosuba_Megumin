@@ -1,0 +1,44 @@
+{
+  "stage": "restore",
+  "outcome": "delivered",
+  "human_note": "",
+  "source": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\E06-fixed.png",
+  "source_sha256": "50c290053847c20ab572da603ae1375aed854748e27063fe233b1587e954e217",
+  "final": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\E06-fixed\\E06-fixed_restored.png",
+  "final_sha256": "50c290053847c20ab572da603ae1375aed854748e27063fe233b1587e954e217",
+  "final_is_source_copy": true,
+  "regen_rounds": 0,
+  "mode": "rules",
+  "diag": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\E06-fixed\\E06-fixed_input_diag.json",
+  "verify": null,
+  "steps": [
+    {
+      "n": 1,
+      "current": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\E06-fixed.png",
+      "action": "diagnose",
+      "by": "rules",
+      "reason": "Diagnosis is required before treatment.",
+      "result": {
+        "action": "diagnose",
+        "lattice": false,
+        "granule_level": "none",
+        "scale_tile_pct": 0.0,
+        "scale_level": "none",
+        "board": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\E06-fixed\\E06-fixed_input_diag_board.png",
+        "scale_heatmap": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\E06-fixed\\E06-fixed_input_scaleheat.png"
+      }
+    },
+    {
+      "n": 2,
+      "current": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\E06-fixed.png",
+      "action": "finish",
+      "by": "rules",
+      "reason": "No supported artifact class was detected.",
+      "result": {
+        "action": "finish"
+      }
+    }
+  ],
+  "acceptance": "A person must inspect the boards and decide whether to accept the candidate.",
+  "time": "2026-10-10T14:50:46+08:00"
+}

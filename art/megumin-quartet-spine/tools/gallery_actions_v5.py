@@ -1,0 +1,22 @@
+"""Offline contact sheet rendered from actual Spine data, not mockup images."""
+from pathlib import Path
+import base64,json
+ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'actions-v5'
+poses=[['原图站姿','setup_pose',0],['普通施放','cast_short',.28],['侧身单手预备','chant_loop',0],['爆裂释放','explosion_hold',0],['受击回缩','hit',.1],['坐倒过渡','relaxed_fall',.46],['仰躺脱力','relaxed_loop',0],['撑起恢复','get_up',.65],['死亡保持','dead',1.5]]
+bundle={'skeleton':json.loads((OUT/'export/megumin.json').read_text(encoding='utf-8')),'atlas':(OUT/'export/megumin.atlas').read_text(encoding='utf-8'),'pages':{f.name:'data:image/png;base64,'+base64.b64encode(f.read_bytes()).decode('ascii') for f in (OUT/'export').glob('*.png')},'poses':poses}
+html='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>惠惠 · 九帧动作对照</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f0e7;color:#322b28;font:14px/1.7 'Microsoft YaHei',sans-serif}main{max-width:1220px;padding:24px 25px;margin:auto}h1{font-size:25px;margin:4px 0}p{margin:6px 0 16px;color:#786b64}.sheet{position:relative;background:#fffcf6;border:1px solid #d8cbbf}canvas{width:100%;height:1020px;display:block}.labels{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,340px);pointer-events:none}.label{padding:11px 15px;border-right:1px solid #d8cbbf;border-bottom:1px solid #d8cbbf;font-size:12px}.label small{color:#a39286;display:block;font:10px Consolas,monospace}a{color:#a44032}#error{color:#a44032;white-space:pre-wrap}</style><main><div style="color:#a44032;font:11px Consolas,monospace;letter-spacing:.15em">MEGUMIN / LAYERED MOTION V5</div><h1>同一套美术，九个动作时刻。</h1><p>原图分层与遮挡补画；局部眨眼；清理细密纹理并使用缩小采样。下方全部由实际 Spine 数据渲染。<a href="preview.html">播放完整动作 →</a></p><div class="sheet"><canvas id="canvas" aria-label="九个动作关键帧"></canvas><div class="labels">__LABELS__</div></div><p id="error"></p><p>保留原图待机；补画动作手型、弯曲四肢与落地披风。尚未接入游戏。</p></main><script id="packed" type="application/json">__DATA__</script><script>__RUNTIME__</script><script type="module">
+const p=JSON.parse(document.getElementById('packed').textContent),cv=document.getElementById('canvas');
+try{const gl=cv.getContext('webgl',{alpha:true,premultipliedAlpha:true,antialias:true,preserveDrawingBuffer:true}),atlas=new spine.TextureAtlas(p.atlas);
+await Promise.all(atlas.pages.map(page=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{page.setTexture(new spine.GLTexture(gl,im));resolve()};im.onerror=reject;im.src=p.pages[page.name]})));
+const data=new spine.SkeletonJson(new spine.AtlasAttachmentLoader(atlas)).readSkeletonData(p.skeleton),renderer=new spine.SceneRenderer(cv,gl);
+function draw(){const dpr=Math.min(devicePixelRatio||1,2),width=cv.clientWidth,height=1020;cv.width=Math.round(width*dpr);cv.height=Math.round(height*dpr);gl.viewport(0,0,cv.width,cv.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);gl.enable(gl.SCISSOR_TEST);
+p.poses.forEach(([label,name,t],i)=>{const col=i%3,row=Math.floor(i/3),x=Math.round(col*cv.width/3),y=Math.round((2-row)*cv.height/3),w=Math.round(cv.width/3),h=Math.round(cv.height/3);gl.viewport(x,y,w,h);gl.scissor(x,y,w,h);const sk=new spine.Skeleton(data);data.findAnimation(name).apply(sk,0,t,false,[],1,spine.MixBlend.setup,spine.MixDirection.mixIn);sk.updateWorldTransform(spine.Physics.update);const scale=Math.min((w/dpr-28)/((name.startsWith('relaxed')||name.startsWith('dead')||name==='get_up'||name==='hit_down')?490:435),(h/dpr-56)/325),sw=w/dpr/scale,sh=h/dpr/scale;renderer.camera.setViewport(sw,sh);renderer.camera.position.set(name.startsWith('relaxed')||name.startsWith('dead')||name==='get_up'||name==='hit_down'?-20:20,sh/2-18/scale,0);renderer.camera.update();renderer.begin();renderer.drawSkeleton(sk,false);renderer.end()});gl.disable(gl.SCISSOR_TEST);}
+draw();addEventListener('resize',draw);
+}catch(e){document.getElementById('error').textContent=e.stack;console.error(e)}
+</script></html>'''
+labels=''.join(f'<div class="label">{a}<small>{b} / {c:.2f}s</small></div>' for a,b,c in poses)
+html=html.replace('__LABELS__',labels).replace('__DATA__',json.dumps(bundle,separators=(',',':')).replace('</','<\\/')).replace('__RUNTIME__',(ROOT/'vendor/spine-webgl-4.2.95.min.js').read_text(encoding='utf-8'))
+(OUT/'keyframes.html').write_text(html,encoding='utf-8')
+print('Gallery:',(OUT/'keyframes.html').stat().st_size)
+
+

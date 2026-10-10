@@ -1,0 +1,930 @@
+{
+  "README.md": {
+    "bytes": 2098,
+    "sha256": "e83496aa3ed5bb423f1853f668ba39d6a1bfef7dc3d00a30ecde86a65b4710d9"
+  },
+  "SPINE-RUNTIME-LICENSE.txt": {
+    "bytes": 1468,
+    "sha256": "435774fb793b0f67892899fc934f98009e64fd90ad3ab964117274e279a0f50e"
+  },
+  "authoring.json": {
+    "bytes": 289520,
+    "sha256": "8f2e3cfe793d879657db91dc0d66b62607589e816cf6a71df1204de464ff9a22"
+  },
+  "attachment-switches.json": {
+    "bytes": 3302,
+    "sha256": "193f5b322c18aa20d7bbf81b1aa4ce4a956ecc8dc4b508c6111fe855852079de"
+  },
+  "frame-plan.csv": {
+    "bytes": 118771,
+    "sha256": "bae2ea7cd4be1051ac4a3dc3831445ff0646b1ff1db3490cd9a1c90665d2c7b1"
+  },
+  "export/megumin.json": {
+    "bytes": 9586446,
+    "sha256": "2691ef294c09da2ada158ad6e3c69454d5f83e3cf8aef7f171e710822946150b"
+  },
+  "export/megumin.spine-json": {
+    "bytes": 9586446,
+    "sha256": "2691ef294c09da2ada158ad6e3c69454d5f83e3cf8aef7f171e710822946150b"
+  },
+  "export/megumin.atlas": {
+    "bytes": 3902,
+    "sha256": "102fc1f82d23137db3d48c3cde52116b5270758dcc4b796de96ceef5b51cb9c5"
+  },
+  "export/validation.json": {
+    "bytes": 6654,
+    "sha256": "fc929d655fbddd4fb6db3ac646cc814067edf5bb88b66c7d133718f2982f13af"
+  },
+  "docs/Spine动画制作指引.md": {
+    "bytes": 37994,
+    "sha256": "b1d00097ebda9af23618a04a2364a2593b4af5eea0462ade37b0aae906dcc11f"
+  },
+  "export/E00.png": {
+    "bytes": 923068,
+    "sha256": "4d05c3b321c2810bdcb340ad7b3c092a8cc2925a0219f951cbd2661c10c96d6e"
+  },
+  "export/E01.png": {
+    "bytes": 875668,
+    "sha256": "f4e660647c0e324c5416e88e3816fb5bd5c1313cd36aa02b5bd807463847738e"
+  },
+  "export/turn-upright.png": {
+    "bytes": 918747,
+    "sha256": "f4f7be8662c4e7f4fe13fb0eceaa0adf0584f2c70f6f6b3ea623a5a7af78a01e"
+  },
+  "export/E05.png": {
+    "bytes": 935738,
+    "sha256": "9eb05f768433daad55a006de4be1f7d2ee68a2a365fdbe66da7ccb12b8ac0794"
+  },
+  "export/E08.png": {
+    "bytes": 875894,
+    "sha256": "0b2a89a84a6b1c8c171f07f363abdb4721959027441f17628eaefe4eb714d01a"
+  },
+  "export/E12.png": {
+    "bytes": 855798,
+    "sha256": "d28213d1e41f11ecfb584760e50922445416795f8ccc44c57a20a1faacf124d1"
+  },
+  "export/release.png": {
+    "bytes": 828558,
+    "sha256": "22a651fa44f3fb7647eafaf94c03e3dcdc7ba06d99c5f879b3f51aaf7994ff46"
+  },
+  "export/fall-lean.png": {
+    "bytes": 892897,
+    "sha256": "f70a48611215c245f028e69404ba9b8fc1cd092013d67bb5b128e34f7d49fbc4"
+  },
+  "export/crouch.png": {
+    "bytes": 804555,
+    "sha256": "1d1a683e7939f839a369e3c58a398c4f58b3a42c4afee570772168875dc6d067"
+  },
+  "export/brace.png": {
+    "bytes": 710960,
+    "sha256": "e5691e6b8fa30aa490f345bf0d1cf46006f81a0539bae3c31afd665943888287"
+  },
+  "export/lower.png": {
+    "bytes": 671314,
+    "sha256": "2928eb0e47d69b0035fe91fabc5941e7236a30c471bdc0299d2a0918d9b7a340"
+  },
+  "export/prone.png": {
+    "bytes": 630687,
+    "sha256": "c04c52ed7081e5c79c8f8e7bc26afb4dbf1f5318edcdc8b78c57784d28dc2cc8"
+  },
+  "export/kneel-rise.png": {
+    "bytes": 786768,
+    "sha256": "4b2f4c8dbf9d9c9822f283d523796a2aa524d98d244453c98b6d7a57f30e28a5"
+  },
+  "export/E00-body.png": {
+    "bytes": 895385,
+    "sha256": "fb830bff0df39695fc4ce4c6bdadcb54e94b7b3422fdd61e8e047720b0f94932"
+  },
+  "export/E05-body.png": {
+    "bytes": 891193,
+    "sha256": "2fcfc6586316be253cf3fc7f5a9c6ca5c5539331fd7f7646aff81e1a191f0ace"
+  },
+  "export/brace-body.png": {
+    "bytes": 767280,
+    "sha256": "ffbd3e8fa77708b0df7fcec236322cf5eb6d8e0e13e83c44edbca14dba4e8898"
+  },
+  "export/prone-body.png": {
+    "bytes": 682139,
+    "sha256": "ee2699ac6ee2a7fe70c6691e32b77664d9d7aef5942e1daff1e9a3078a3b329b"
+  },
+  "export/staff-master.png": {
+    "bytes": 262785,
+    "sha256": "aacc16eef391b6b04bf6eecb97e28bf7891d64d16e1ae69ff276c4b9ca4e44f9"
+  },
+  "images/brace-body.png": {
+    "bytes": 776239,
+    "sha256": "4470d6f83683c1b0ddfc94f01ac6fc169884edc0507eaae5dccf9ab3c8d65e9a"
+  },
+  "images/brace.png": {
+    "bytes": 720859,
+    "sha256": "4974ed759ef0e99f949485eb2dd74877b9d8b1f2922f2402b889226b0562e088"
+  },
+  "images/crouch.png": {
+    "bytes": 808554,
+    "sha256": "d92c92c5c629cd5f00f11815478c07dcd488b3dbadd382400c9cc93d78400eb2"
+  },
+  "images/E00-body.png": {
+    "bytes": 877329,
+    "sha256": "f03e41d9acd671f40dacc2a2d7f8656e75b11356985e4b666b0f8fab258c23de"
+  },
+  "images/E00.png": {
+    "bytes": 904388,
+    "sha256": "1b4f83df09c68790f73a262336cc77adf20e5ee83dcf676d7a98e73e1c3488ac"
+  },
+  "images/E01.png": {
+    "bytes": 857727,
+    "sha256": "545579e638f2d8f90909bc9e402b21cd175b40a8fdce78e78ca340f83d89d559"
+  },
+  "images/E05-body.png": {
+    "bytes": 873226,
+    "sha256": "6e28fb7a488e3d6b4fcbf7ba04e9e97cc89d37f96f900ca7f71ac5d1e76decb0"
+  },
+  "images/E05.png": {
+    "bytes": 918432,
+    "sha256": "c4122fc3dff3b3f547a1e57c659d0e43f74ae539d8aa43e4ecfefaab9dcba3cd"
+  },
+  "images/E08.png": {
+    "bytes": 855390,
+    "sha256": "19e588ddb0cbbd49ac038a35a2814c050bf203ae28e6a80bdde84b588c67a91e"
+  },
+  "images/E12.png": {
+    "bytes": 839358,
+    "sha256": "b3d960ed172dc9126b735c67de753e16243fadcdffa693a00a9996e3aa520a0b"
+  },
+  "images/fall-lean.png": {
+    "bytes": 885777,
+    "sha256": "04c0b2934f0cd9113c22e481abeca72614d9f16ddc5cec8cdc7c387a73e9c2d6"
+  },
+  "images/kneel-rise.png": {
+    "bytes": 772605,
+    "sha256": "dfc0e6fc514b86aaa25135a2e514d2bcd933d51888491373f76ef4c121f5babd"
+  },
+  "images/lower.png": {
+    "bytes": 684698,
+    "sha256": "7ce8198b33a364c4e95437da85cca2d5b4c36c743452c9dd1855a05e531d7f80"
+  },
+  "images/prone-body.png": {
+    "bytes": 709860,
+    "sha256": "ed5107f5db4155a343bebfe50971cfb7d785e139a8833023e828a3e2bf470c92"
+  },
+  "images/prone.png": {
+    "bytes": 652975,
+    "sha256": "af0137c9abd6f1364bcfac3841545471a6d49986bd09624fbcfd9418affcb0fb"
+  },
+  "images/release.png": {
+    "bytes": 813843,
+    "sha256": "b5f9acb74c138b6ca47dab5711107cbe02fbeaa67609b59a3d7d510a46b17b16"
+  },
+  "images/staff-master.png": {
+    "bytes": 262864,
+    "sha256": "57816e8617a89b6d496707e76abc839cdb39ec69918aee550f30544e4e41d294"
+  },
+  "images/turn-upright.png": {
+    "bytes": 897361,
+    "sha256": "21bf3ec39ddffd595e09b378086c438d6e68056c99d5f699dba82f07527cdc7f"
+  },
+  "references/E00.png": {
+    "bytes": 1025163,
+    "sha256": "c54aeb54c7b12ba076479a1b4d2c8a594a68d0728e9018a671db7273de9e1db3"
+  },
+  "references/E01.png": {
+    "bytes": 968731,
+    "sha256": "2cc9baca1bce56bb511ada809ea7b1a602c130bb1a88c6fd0c1dcccb56d4d174"
+  },
+  "references/turn-upright.png": {
+    "bytes": 928930,
+    "sha256": "c20896ee3d33c15fab72eef37891423dc3e04e410fe542d78fc217ef2af5de36"
+  },
+  "references/E05.png": {
+    "bytes": 981938,
+    "sha256": "c0a56f999ea66a9a294d0bc0f6d94a6ebb302af1a1e6aa5d7049f4cf96ff3d1a"
+  },
+  "references/E08.png": {
+    "bytes": 966151,
+    "sha256": "b844ea9748d7829a723fee5c73f44312e5750032da984db8dbdff3d434432304"
+  },
+  "references/E12.png": {
+    "bytes": 950866,
+    "sha256": "da19e5a8b32428506d45287f12caab908222959d79fcbfd6c42493e8d7c8adba"
+  },
+  "references/release.png": {
+    "bytes": 913431,
+    "sha256": "e115418e125d6a7a32c2c8ffed1786bdf4ed938fe8c4d25c3ea4663e96a33f79"
+  },
+  "references/fall-lean.png": {
+    "bytes": 970122,
+    "sha256": "7068de6b3542848ed20df3741f726b8433126e159b2fd7c2f4723187450e7ddb"
+  },
+  "references/crouch.png": {
+    "bytes": 931079,
+    "sha256": "e5bf3204803eab6b4d057f88629027e2e051321b30348cb680cf6a5f444db210"
+  },
+  "references/brace.png": {
+    "bytes": 839524,
+    "sha256": "56c5929de720db917b422a61941d58dba9f8f51713f146956d2e019df1c1176d"
+  },
+  "references/lower.png": {
+    "bytes": 802800,
+    "sha256": "6555bc2ab2ddcb762ae4f941765aa67f995abfdee2381db979134a0f7f165370"
+  },
+  "references/prone.png": {
+    "bytes": 766993,
+    "sha256": "55ae19fedb8039d5cdaedb8ee1a29dc848941ba30beac91d8e2c1078576003e7"
+  },
+  "references/kneel-rise.png": {
+    "bytes": 833026,
+    "sha256": "440eab0c12062c615ed71b5a5a022e21070c03b43ed26cf6c05956f664ac9e45"
+  },
+  "references/brace-prompt.txt": {
+    "bytes": 1481,
+    "sha256": "ec41bdec8d9914ee488e493406d1a752d689307469bed521501efffce34399c8"
+  },
+  "references/chant-enter-a-prompt.txt": {
+    "bytes": 2957,
+    "sha256": "4bd0cbde4c2aab0946373dd125c9c5a531cf6d026cd69748992dc67c8462fb38"
+  },
+  "references/chant-enter-prompt.txt": {
+    "bytes": 4321,
+    "sha256": "c08af13c69f8ab13474897ff2c71d1e39c9f4ea461fd382b849c7dd5481c6301"
+  },
+  "references/chant-ready-prompt.txt": {
+    "bytes": 2141,
+    "sha256": "1c3b242af6756b04f0561efb3dcb50df26b1e8fc9a8a59d6bb8067104f529c5e"
+  },
+  "references/crouch-prompt.txt": {
+    "bytes": 872,
+    "sha256": "a69459bd199e25a88c09f9e30adb9dad8553111f20b18ea065c443e419af631b"
+  },
+  "references/E01-prompt.txt": {
+    "bytes": 994,
+    "sha256": "aa48f5cdd68aec91514f5aa1b72dbdc4afc29c91d443165b44043765c849274a"
+  },
+  "references/E02-prompt.txt": {
+    "bytes": 1447,
+    "sha256": "37e3afd8ddf87e0b55e519627671963da4a11b3f89202db7ce6081997c8769fc"
+  },
+  "references/E03-prompt.txt": {
+    "bytes": 1261,
+    "sha256": "c5549df10d1d26c7b6904704088118b51da30fd97a5f8aca0e77db04e5d7b4cb"
+  },
+  "references/E04-prompt.txt": {
+    "bytes": 1582,
+    "sha256": "b8d3899e0de0a52d8100ee33e32f3ae2d0b2d0d9a51ad3418457342283a8ae65"
+  },
+  "references/E05-prompt.txt": {
+    "bytes": 1164,
+    "sha256": "ad11b7c1646325c7d1c6d53be6c026d6707a20be7570c990fa2574242361f25e"
+  },
+  "references/E06-fixed-prompt.txt": {
+    "bytes": 471,
+    "sha256": "8902aede3ccc88988b12a12bcbad4d6be49b14622c386c21fee2f15a7b4ad52b"
+  },
+  "references/E06-prompt.txt": {
+    "bytes": 1591,
+    "sha256": "c0f88a13a5aeae1f9a762d3186a46a83bd94a95aa3bebc81cab26966abae844c"
+  },
+  "references/E07-prompt.txt": {
+    "bytes": 1172,
+    "sha256": "81d2569ebc024370ab40675a708499b19f7657a630f89c05c761e6115b113765"
+  },
+  "references/E08-prompt.txt": {
+    "bytes": 1534,
+    "sha256": "d74c66b7675f82525fc31594f2cac59fed815170cc9ecc01fbdab75e23d55941"
+  },
+  "references/E09-prompt.txt": {
+    "bytes": 1102,
+    "sha256": "ed06e8bcb422554ea3b195e2b7a878aecbdaa980171b7933fe0e05da4af10218"
+  },
+  "references/E10-prompt.txt": {
+    "bytes": 531,
+    "sha256": "60f8dc97373dbe9dd2f352170016260f131549878fa27dbce563baba2a6102bc"
+  },
+  "references/E11-prompt.txt": {
+    "bytes": 377,
+    "sha256": "2bd74ca0edebbb65d5c86a0216631c7b86186431686b90c2949fefa65da4856d"
+  },
+  "references/fall-lean-prompt.txt": {
+    "bytes": 1239,
+    "sha256": "724416bbfd9d5dccb80fc1afd73184ebc734edefa6aeda3ca4bb57e775a7185c"
+  },
+  "references/kneel-rise-prompt.txt": {
+    "bytes": 819,
+    "sha256": "9ba1083a0618ddf02963258da81b2df88db369fc7ef33be37de35e64eb319a8a"
+  },
+  "references/lower-prompt.txt": {
+    "bytes": 840,
+    "sha256": "20e95a53bdb97689763780f281ab79800daa6d92ac5533f33ab996c66f6acec6"
+  },
+  "references/prone-prompt.txt": {
+    "bytes": 2009,
+    "sha256": "2351ab6800172356c267f9e616f98f451fa17b0ed4eff296db5848e106724e5b"
+  },
+  "references/release-prompt.txt": {
+    "bytes": 1153,
+    "sha256": "956a329f8d4635a13f711a7d750932ace60fe0619c7d7ee8236c446f6f3c4768"
+  },
+  "references/turn-upright-prompt.txt": {
+    "bytes": 1005,
+    "sha256": "2c16170186dd7e47730fe88362877d7c68310a8a5f90b3fca3df2f5732b99398"
+  },
+  "source/body-fill-prompt.txt": {
+    "bytes": 720,
+    "sha256": "6e3eec37da6e0f94b8cab020b6cfcecaed54bda19be693ef6ec4b08a76e2fab6"
+  },
+  "source/staff-only-prompt.txt": {
+    "bytes": 672,
+    "sha256": "7526735439054bc37820501b898fe08afad8116b4cb80012c7405e0c88966173"
+  },
+  "source/staff-removal-prompt.txt": {
+    "bytes": 762,
+    "sha256": "63887e9fb322ccdce5ccd992f38a66094e603bbe58123bd0688ccf07fa2e7ed5"
+  },
+  "verification/alpha-triangles.json": {
+    "bytes": 1195518,
+    "sha256": "d6ad5c52a91607d3d69e38564f8fced74e3041cdddf44db8d57dd515ee1f2779"
+  },
+  "verification/attachment-timing.json": {
+    "bytes": 33465,
+    "sha256": "e76b744d1c6721d332e5abaf102421013540a5c505a389a8dc371d98d139e664"
+  },
+  "verification/continuity.json": {
+    "bytes": 58811,
+    "sha256": "73b5a34a6fe4999274ee9643ad0abc1615652640de96459c3c13ff90d5e2ff67"
+  },
+  "verification/delivery.json": {
+    "bytes": 797,
+    "sha256": "00197483e2fdbfea844a8bb972f0d3c6dd30d659b56b5111f22eeb0ee6821d90"
+  },
+  "verification/moire.json": {
+    "bytes": 24329,
+    "sha256": "947c64463cefe07190ac53d5b290c048d123f9acf069644de5bb02ca56c85044"
+  },
+  "verification/motion-rhythm-before.json": {
+    "bytes": 90033,
+    "sha256": "06f11b4bb3864adf22123c29f5d28f12005fb0c980170548f2438f5af9d39094"
+  },
+  "verification/motion-rhythm.json": {
+    "bytes": 90022,
+    "sha256": "58fe1724aa89fc3d8bd2e6490bb4dc95874c0d771cd3b52ec65f6ef5bf54c959"
+  },
+  "verification/native-lab.json": {
+    "bytes": 667,
+    "sha256": "9755d1cb8fd7ec53b44381bac41b77b50faffe2c0043a5e3546b133dfff14467"
+  },
+  "docs/mod-lab.md": {
+    "bytes": 6010,
+    "sha256": "65969171fb8ec4bce84a466b0653c511ddf0caba17ad33b97ebb9eb93d094fa9"
+  },
+  "verification/moire/source/brace/brace_input_diag.json": {
+    "bytes": 4614,
+    "sha256": "637410df313cda69f4870f5c7ab23950e7731e8191a412b8f445d1f467671ff6"
+  },
+  "verification/moire/source/brace/brace_restored.json": {
+    "bytes": 1976,
+    "sha256": "4889ec04d5888cad57ff07ce3c9d213d5a9347a17072171e31de40e6e4118f2e"
+  },
+  "verification/moire/source/brace-body/brace-body_input_diag.json": {
+    "bytes": 4638,
+    "sha256": "7a717f88c244fd5e0c36d9d882f6bc74dcc073ecc6ec673732b22202374814c7"
+  },
+  "verification/moire/source/brace-body/brace-body_restored.json": {
+    "bytes": 2031,
+    "sha256": "d5389aaad8ea3994b8ee1dae8f03b400b5f94a76d7976296dd25ec0c6b18d29f"
+  },
+  "verification/moire/source/crouch/crouch_input_diag.json": {
+    "bytes": 4620,
+    "sha256": "666857c01990cd2dd59aba8082964061272a37b1399390fdede303090b7dd986"
+  },
+  "verification/moire/source/crouch/crouch_restored.json": {
+    "bytes": 1987,
+    "sha256": "cbe375fa776d40bf3cfbb1d2e44b1918f4559822f08c58be6b7189824b010f09"
+  },
+  "verification/moire/source/E00/E00_input_diag.json": {
+    "bytes": 4605,
+    "sha256": "65a0aa3827cb1ef3a09317677c873648be35c4450ac9f57e693a652c1c46190c"
+  },
+  "verification/moire/source/E00/E00_restored.json": {
+    "bytes": 1954,
+    "sha256": "ce0ac021b5933cf076e14dfd268655c2bde10e30c11c5504d0dbbadd10d72e5b"
+  },
+  "verification/moire/source/E00-body/E00-body_input_diag.json": {
+    "bytes": 4628,
+    "sha256": "99316c6b7f4c2d2373578462bc7610d6c70f60b89672567caf0e90bfc7d12165"
+  },
+  "verification/moire/source/E00-body/E00-body_restored.json": {
+    "bytes": 2009,
+    "sha256": "0f07268684fa5367a887e3a5823ff36812ec389cd0d19b2e814c7f34f22f0533"
+  },
+  "verification/moire/source/E01/E01_input_diag.json": {
+    "bytes": 4604,
+    "sha256": "7589ed23ce96908b2c5418307496e329accea1b8836e523a865a4bdbe36c621b"
+  },
+  "verification/moire/source/E01/E01_restored.json": {
+    "bytes": 1954,
+    "sha256": "4482b8f5dd2e4378c522022c92123098361a10efade33ea49dd5df5aa089df11"
+  },
+  "verification/moire/source/E05/E05_input_diag.json": {
+    "bytes": 4603,
+    "sha256": "552ff238a047a8ba02e59fc7e02d1d637085147804ae83fb6377ec4812e4df85"
+  },
+  "verification/moire/source/E05/E05_restored.json": {
+    "bytes": 1954,
+    "sha256": "d0b3750213bf95c14b7dc0d7c60707edfd863170bdaff989f84ab155cd0c2bcc"
+  },
+  "verification/moire/source/E05-body/E05-body_input_diag.json": {
+    "bytes": 4631,
+    "sha256": "d1ad2775b4d329a367422f743d72ddff74f349a3d01254e89071a5c3b50da4b3"
+  },
+  "verification/moire/source/E05-body/E05-body_restored.json": {
+    "bytes": 2009,
+    "sha256": "cfd1c0bf8bd60cac0997e21c850089527645782e89137c326833092a2045aa26"
+  },
+  "verification/moire/source/E08/E08_input_diag.json": {
+    "bytes": 4606,
+    "sha256": "cc03d2ef12d380ae424b8977a0d26a46233244ee12fde1a6dafd4ef4de3b6d12"
+  },
+  "verification/moire/source/E08/E08_restored.json": {
+    "bytes": 1954,
+    "sha256": "09851f17050368b21feccd85fd65c8172d6adc55af3cabe2c152d90ca5abd86d"
+  },
+  "verification/moire/source/E12/E12_input_diag.json": {
+    "bytes": 4607,
+    "sha256": "5bfd238e6fe1c726c66cb3e4575939438f8d89b9ae6cc698d0922afc3fb234e1"
+  },
+  "verification/moire/source/E12/E12_restored.json": {
+    "bytes": 1954,
+    "sha256": "ae44fc4b576c2cd1741b63e71f408471b16d7b0d7bb5b8fc5207689586727ceb"
+  },
+  "verification/moire/source/fall-lean/fall-lean_input_diag.json": {
+    "bytes": 4634,
+    "sha256": "d569bc5486e323050eddae587f471de7897ca2604c063d3255433c21864ff92d"
+  },
+  "verification/moire/source/fall-lean/fall-lean_restored.json": {
+    "bytes": 2020,
+    "sha256": "9183c4e9ebb7fe2d2846e564ef59b7f3038be40c420ad9a8ca553f724ef7e7dc"
+  },
+  "verification/moire/source/kneel-rise/kneel-rise_input_diag.json": {
+    "bytes": 4640,
+    "sha256": "175428d471757b1d632c94246f72fe290d1f08ec18019b554c1404679ec0a44c"
+  },
+  "verification/moire/source/kneel-rise/kneel-rise_restored.json": {
+    "bytes": 2031,
+    "sha256": "5ccc060fa2999d958b8ae63ad6a89ad14afd9de67b8e722cfab4308762943cb7"
+  },
+  "verification/moire/source/lower/lower_input_diag.json": {
+    "bytes": 4621,
+    "sha256": "d689921e3afd5c34c3eb617b32ab312baf5d6b694806de00d6729c2fbf9fc236"
+  },
+  "verification/moire/source/lower/lower_restored.json": {
+    "bytes": 1976,
+    "sha256": "d64277ce960d9822cdfaacbb7c6d16b5055893a4d86b30e2730b28fd31f8e8ff"
+  },
+  "verification/moire/source/prone/prone_input_diag.json": {
+    "bytes": 4613,
+    "sha256": "b4caa5dfbd1a2479fdee417f0ae01ea56ae4cef9e5b81630b41277d26f811eff"
+  },
+  "verification/moire/source/prone/prone_restored.json": {
+    "bytes": 1976,
+    "sha256": "64c7aba548530ef1943e13bf0338f8d553ec33d978b517d6e5b58d3c5ba4b998"
+  },
+  "verification/moire/source/prone-body/prone-body_input_diag.json": {
+    "bytes": 4645,
+    "sha256": "805ced2ff851760d7656d114cdc590a857b4192b607c514a4bd6a7319e74078e"
+  },
+  "verification/moire/source/prone-body/prone-body_restored.json": {
+    "bytes": 2031,
+    "sha256": "cb8f23be6df5ea81313ebdaeff9d370ef2484522979113b54f2dc500c3adbf13"
+  },
+  "verification/moire/source/release/release_input_diag.json": {
+    "bytes": 4628,
+    "sha256": "46fd295aa01532c0fb66f1f757a406c903d7806755191ce43d5081f1f03abb23"
+  },
+  "verification/moire/source/release/release_restored.json": {
+    "bytes": 1998,
+    "sha256": "3812e2b163ece2a3deb03f5180cbfa66c0ab9d06e019ea0310b250577f21f23a"
+  },
+  "verification/moire/source/staff-only/staff-only_input_diag.json": {
+    "bytes": 4651,
+    "sha256": "60d2133b85f7209c7b20d271f50d7229ffe20d3450811004a7a0735992ff31dc"
+  },
+  "verification/moire/source/staff-only/staff-only_restored.json": {
+    "bytes": 2031,
+    "sha256": "ad24ec9879f826d2320440ebff80a9b1ece2b4064625cd4c7dafd116b9864627"
+  },
+  "verification/moire/source/turn-upright/turn-upright_input_diag.json": {
+    "bytes": 4650,
+    "sha256": "342bea5c65fe21a9220416ffa49cee08c9ba5501e48e9761a74f70dec06cb303"
+  },
+  "verification/moire/source/turn-upright/turn-upright_restored.json": {
+    "bytes": 2053,
+    "sha256": "8a50e248175146c7e9a7e0c71b34a911c2aa497ebb8c2b5b0c8c7f93847b4e54"
+  },
+  "verification/moire/references/brace/brace_input_diag.json": {
+    "bytes": 4628,
+    "sha256": "fd5a758e9a0d7618ec6313b65b4704def0b144962bfd0fda989af0b4d3dc81e2"
+  },
+  "verification/moire/references/brace/brace_restored.json": {
+    "bytes": 2004,
+    "sha256": "6a95508840119d7ea3c378d0f1cfd334ee6426861c49dba70c3a52036300ab8f"
+  },
+  "verification/moire/references/chant-enter-a-rejected/chant-enter-a-rejected_input_diag.json": {
+    "bytes": 4719,
+    "sha256": "a9f239ccd89ef01174344a68aefe2363a3942e92d860cf8f41db29d5f234d25e"
+  },
+  "verification/moire/references/chant-enter-a-rejected/chant-enter-a-rejected_notch.json": {
+    "bytes": 2351,
+    "sha256": "ffa1d9a8a642bf3b8cb4c8a7b4babb3ff48d9db930619c47a74f90424fc16430"
+  },
+  "verification/moire/references/chant-enter-a-rejected/chant-enter-a-rejected_restored.json": {
+    "bytes": 3869,
+    "sha256": "a0c01775d380bb7cdaf2eeb66f8e96c75bb2bebe93aa68e2062f996591f9e9f3"
+  },
+  "verification/moire/references/chant-enter-a-rejected/chant-enter-a-rejected_verify.json": {
+    "bytes": 2040,
+    "sha256": "f9cebf4732591de2070014d7dd2e57f87011178f7bd16a1c42facbd06919fb5e"
+  },
+  "verification/moire/references/chant-enter-draft-rejected/chant-enter-draft-rejected_input_diag.json": {
+    "bytes": 4744,
+    "sha256": "bcf6736ab231b8d02a491239dc06fbc1b9d92c2e1b1287bee86204c79a8b4d84"
+  },
+  "verification/moire/references/chant-enter-draft-rejected/chant-enter-draft-rejected_restored.json": {
+    "bytes": 2235,
+    "sha256": "8410242ad4df5240e79f6fe3ab7b226982ebd6d713d65a4c63c6f1a3995ad06a"
+  },
+  "verification/moire/references/chant-ready/chant-ready_input_diag.json": {
+    "bytes": 4660,
+    "sha256": "d11c8193c276e43eb57cd086236d9792c578962cf793f75995d8514d3644e7d8"
+  },
+  "verification/moire/references/chant-ready/chant-ready_restored.json": {
+    "bytes": 2070,
+    "sha256": "750fb26f3e806a87d58dab6b17ba89787451311bea1dc5eeee0150ac89f954a9"
+  },
+  "verification/moire/references/crouch/crouch_input_diag.json": {
+    "bytes": 4625,
+    "sha256": "b5c2b989073b4174b75f93f85f9178b629b41cef5b66407e425e2526a5717dc7"
+  },
+  "verification/moire/references/crouch/crouch_restored.json": {
+    "bytes": 2015,
+    "sha256": "ec63966b7053b990aa40d4461413550d269b54eed8b9148a71e21461778dffa3"
+  },
+  "verification/moire/references/E00/E00_input_diag.json": {
+    "bytes": 4613,
+    "sha256": "049fce1eaf16b23b26809b2158f0d4fac08a980b98419efc6be0c2dddbcf0fa3"
+  },
+  "verification/moire/references/E00/E00_restored.json": {
+    "bytes": 1982,
+    "sha256": "ae8e99abf0885c712217a2147b98f2ba55965b26fba65f70d3869ad07a9b9737"
+  },
+  "verification/moire/references/E01/E01_input_diag.json": {
+    "bytes": 4619,
+    "sha256": "824d14cbd06533a84b7ad4f69ef7c412e2c85a84aaac2f733155e4d07809083c"
+  },
+  "verification/moire/references/E01/E01_restored.json": {
+    "bytes": 1982,
+    "sha256": "d60e6aba56d7e6fc82b25cca21e42e43d210d451945afaf633264bd0ca1e96eb"
+  },
+  "verification/moire/references/E02/E02_input_diag.json": {
+    "bytes": 4614,
+    "sha256": "05c31bab41c3076a21e014ca35171215eba9a5b9093570c91893ce723da08b8b"
+  },
+  "verification/moire/references/E02/E02_restored.json": {
+    "bytes": 1982,
+    "sha256": "2c53b1330a11c9091a7c36cc6d44353db8cff78f1ef010538eeb0acda82a0678"
+  },
+  "verification/moire/references/E03/E03_input_diag.json": {
+    "bytes": 4622,
+    "sha256": "448ae1933309b57f90dc078b9cb379c806a1cbcfbcf22e3b4623700660c770b5"
+  },
+  "verification/moire/references/E03/E03_restored.json": {
+    "bytes": 1982,
+    "sha256": "021e6c9f9a76fb64a5354469454b58f4d1a1516b2149836344dd1e49fc76964a"
+  },
+  "verification/moire/references/E04/E04_input_diag.json": {
+    "bytes": 4623,
+    "sha256": "d1fc017de2b5b9d1fef838673c18f41480201316a03dcc2a5a90c4b98b07f5fd"
+  },
+  "verification/moire/references/E04/E04_restored.json": {
+    "bytes": 1982,
+    "sha256": "cf552742376cdcdb6a393c980f24a80fa9cc39418d2ca25f5a13d0dde3866b37"
+  },
+  "verification/moire/references/E05/E05_input_diag.json": {
+    "bytes": 4613,
+    "sha256": "8323e5f7e1fdc6c2364078b5bde165f2ab880b9b4386aeefe7aa4c9d752997cd"
+  },
+  "verification/moire/references/E05/E05_restored.json": {
+    "bytes": 1982,
+    "sha256": "d2bd3848aa9c69671927a40e85ffe6d7712dc6a6b75a16b14238d873de592674"
+  },
+  "verification/moire/references/E06/E06_input_diag.json": {
+    "bytes": 4625,
+    "sha256": "489eed189867a1b9c35e932d1cba4ebb9abc7652d0fd5b48e165f8228757779f"
+  },
+  "verification/moire/references/E06/E06_restored.json": {
+    "bytes": 1982,
+    "sha256": "c72c3a92b0ec985aa54e5719d369435722404e8ace34044b42bfd24f191e6f0e"
+  },
+  "verification/moire/references/E06-fixed/E06-fixed_input_diag.json": {
+    "bytes": 4653,
+    "sha256": "3fe8d0992207ab56bc6fbf302184a5bbe9749aef028377e0e98295924cc0ca6e"
+  },
+  "verification/moire/references/E06-fixed/E06-fixed_restored.json": {
+    "bytes": 2048,
+    "sha256": "066bc05bc81e35573ed52b50c6116a159757ad46bb7a76b2a95859d3c03a2ffe"
+  },
+  "verification/moire/references/E07/E07_input_diag.json": {
+    "bytes": 4619,
+    "sha256": "afdc1c1e20c3944d2c35f76f81c42a6e1968f98c614df97f9f410b90b7d22f2b"
+  },
+  "verification/moire/references/E07/E07_restored.json": {
+    "bytes": 1982,
+    "sha256": "c0a429f9b6c2e6b033bfdb98483e0a19248153417bb9eeae907f577a1ab922c9"
+  },
+  "verification/moire/references/E08/E08_input_diag.json": {
+    "bytes": 4624,
+    "sha256": "d591c2e2dc4dece21268d34f2376f4f43da9c1ebd68ca2ace4cbeec6a95f7b4f"
+  },
+  "verification/moire/references/E08/E08_restored.json": {
+    "bytes": 1982,
+    "sha256": "f9a05a14a8954986600a74a532f11d5c6de593083860cf31f61c29cd187ad7fb"
+  },
+  "verification/moire/references/E09/E09_input_diag.json": {
+    "bytes": 4620,
+    "sha256": "4a3f3346596c6f713b0e8e9042aeaecbcc91ecace483cc65389968d6decf7d12"
+  },
+  "verification/moire/references/E09/E09_restored.json": {
+    "bytes": 1982,
+    "sha256": "08a6ab5a3f571dc24b7bea6227712345a153760804dc9937acfab2e6214de13e"
+  },
+  "verification/moire/references/E10/E10_input_diag.json": {
+    "bytes": 4627,
+    "sha256": "951dc9221cb8c06378d08d3689736a1e219d3b91df1e3908970e7b79c3c32a4e"
+  },
+  "verification/moire/references/E10/E10_restored.json": {
+    "bytes": 1982,
+    "sha256": "5bef5a2c06f37f8871c05611b2c12be73f2e6632dceaccceef5c5d0b161b9159"
+  },
+  "verification/moire/references/E11/E11_input_diag.json": {
+    "bytes": 4618,
+    "sha256": "e740944cdfd27868d1cead1b1d2ac31679460c36a84a49f9d2462dec7a53b4e2"
+  },
+  "verification/moire/references/E11/E11_restored.json": {
+    "bytes": 1982,
+    "sha256": "a2d460d9a62b1ecdb91a82df0a87ca0ec9031bcab9dfe9e400241dd9e75c7848"
+  },
+  "verification/moire/references/E12/E12_input_diag.json": {
+    "bytes": 4620,
+    "sha256": "fce65c8eb01bfd58fa9b2a3dea36a85a26a4874d3ef8bdd7a1721660f26cafcd"
+  },
+  "verification/moire/references/E12/E12_restored.json": {
+    "bytes": 1982,
+    "sha256": "6b3191f3392c8ab4d5f6238a4bc7ab5a662a3bf2882158fc512dc3561996c46e"
+  },
+  "verification/moire/references/fall-lean/fall-lean_input_diag.json": {
+    "bytes": 4652,
+    "sha256": "7bb8d703ecb92f17890ee846e16b6a3c7a7f9bb90444e0b82efdcec0aced086a"
+  },
+  "verification/moire/references/fall-lean/fall-lean_restored.json": {
+    "bytes": 2048,
+    "sha256": "428ffcec637ab0dbaba67f330d37cff7b25c7aac4e518e4ef2e6ec35e4ca5dab"
+  },
+  "verification/moire/references/kneel-rise/kneel-rise_input_diag.json": {
+    "bytes": 4649,
+    "sha256": "f063c421dbc6fee69d7af61c0f76bbe3caef489f592585d434b4a462daa7cd75"
+  },
+  "verification/moire/references/kneel-rise/kneel-rise_restored.json": {
+    "bytes": 2059,
+    "sha256": "3e30b8ff3d92ed837d739062d544a6bd517922d9ddce4d1182132cfc97abdeec"
+  },
+  "verification/moire/references/lower/lower_input_diag.json": {
+    "bytes": 4629,
+    "sha256": "a401ac338f7d1b08f746350a5dcfd5ba9da19e7e648546b8e810cebce8191681"
+  },
+  "verification/moire/references/lower/lower_restored.json": {
+    "bytes": 2004,
+    "sha256": "8aaab520a047469fe459a141328fa2e5bb7e23181f71327d7212b638efa84fd0"
+  },
+  "verification/moire/references/prone/prone_input_diag.json": {
+    "bytes": 4626,
+    "sha256": "b49d91cfdf5013b705002469487dedd85d34a6d50797e82af0d7f67f195d5490"
+  },
+  "verification/moire/references/prone/prone_restored.json": {
+    "bytes": 2004,
+    "sha256": "eea71833b259b9ed9b234481d984230ffdb030a282c21769e4b5272d091a12a1"
+  },
+  "verification/moire/references/release/release_input_diag.json": {
+    "bytes": 4649,
+    "sha256": "13040e3f4a2518868ca75dedbb301a51aedf1a2a0c89199169abf97743a8c866"
+  },
+  "verification/moire/references/release/release_restored.json": {
+    "bytes": 2026,
+    "sha256": "81b50dcd7e3bc4d37033093e981b286b8942743a765bcbf658abc600594a107e"
+  },
+  "verification/moire/references/turn-upright/turn-upright_input_diag.json": {
+    "bytes": 4665,
+    "sha256": "44869077be0ba2646b85a259c72a174c49fafa1306f21f45e591088377e85395"
+  },
+  "verification/moire/references/turn-upright/turn-upright_restored.json": {
+    "bytes": 2081,
+    "sha256": "08dd62e23c0dc6c0785490305e991d1b648f749ee13232c32e23a44eef765dc7"
+  },
+  "verification/moire/source/brace/brace_trace.xml": {
+    "bytes": 1433,
+    "sha256": "455ae54295d63a2f3f1bdecda6414048a20ff66c55d010e79e57a36691c77996"
+  },
+  "verification/moire/source/brace-body/brace-body_trace.xml": {
+    "bytes": 1458,
+    "sha256": "cd8a121bc0d62e2fcfb88783f55d6f96706280cd27d6a3cfe3a3bca981121e0b"
+  },
+  "verification/moire/source/crouch/crouch_trace.xml": {
+    "bytes": 1438,
+    "sha256": "a8832c0b0489d3fa64fd3f23ddd8a2dd3b571caf394da99258ac5f624324d106"
+  },
+  "verification/moire/source/E00/E00_trace.xml": {
+    "bytes": 1423,
+    "sha256": "5bc0e04f0cd5cb2b901cb702f3a1c7514d3466f5fd26f2d554d561fcde35be28"
+  },
+  "verification/moire/source/E00-body/E00-body_trace.xml": {
+    "bytes": 1448,
+    "sha256": "b7502384e4dfca15f7d234a6736bc774873b6906609cee41049b616f72023cd9"
+  },
+  "verification/moire/source/E01/E01_trace.xml": {
+    "bytes": 1423,
+    "sha256": "a736f5a7d4687184e221beebea8cda18af2c50dccf725d5cc51c101a60472d32"
+  },
+  "verification/moire/source/E05/E05_trace.xml": {
+    "bytes": 1423,
+    "sha256": "2de653369d74c6baa716a543d9b47f6697838336a59887560191412a054e30fd"
+  },
+  "verification/moire/source/E05-body/E05-body_trace.xml": {
+    "bytes": 1448,
+    "sha256": "537bd8d25cbea4c0a9d44d552694ba27c19635f8568ee3529d15182ddb719ccf"
+  },
+  "verification/moire/source/E08/E08_trace.xml": {
+    "bytes": 1423,
+    "sha256": "49ce40f2ae1616b4ab959a257d1056d5b4edb7cfc440729c3eae994a93ee827f"
+  },
+  "verification/moire/source/E12/E12_trace.xml": {
+    "bytes": 1423,
+    "sha256": "e3b0c68e9dfcb54a497848cd5146bb414649795c1eba95948c41966c893f767c"
+  },
+  "verification/moire/source/fall-lean/fall-lean_trace.xml": {
+    "bytes": 1452,
+    "sha256": "5abdb154fc2fbf8cfd971272e3a647ce94573561da501302f1e192eb65389e84"
+  },
+  "verification/moire/source/kneel-rise/kneel-rise_trace.xml": {
+    "bytes": 1458,
+    "sha256": "16a0647e37951641b48ac3e522091f12a507f74f7ad153ce71e294abe74c3a36"
+  },
+  "verification/moire/source/lower/lower_trace.xml": {
+    "bytes": 1433,
+    "sha256": "d7e211209b4313ca00cace84fa63ecd5daaeb2456bf198972a97fb0d865119b7"
+  },
+  "verification/moire/source/prone/prone_trace.xml": {
+    "bytes": 1433,
+    "sha256": "198d7850b075eb97d8e702690636548c8f077f1e82fbd474b31f2cfabe78d6d9"
+  },
+  "verification/moire/source/prone-body/prone-body_trace.xml": {
+    "bytes": 1458,
+    "sha256": "2d5bdca9384187f1e82b44ba1b7600704d745aa563e207d4df8ce0f25cc88271"
+  },
+  "verification/moire/source/release/release_trace.xml": {
+    "bytes": 1443,
+    "sha256": "1d7257d9a0386b3f0d8629f45697336e9470c3e04fe734757eeddc16afb95088"
+  },
+  "verification/moire/source/staff-only/staff-only_trace.xml": {
+    "bytes": 1458,
+    "sha256": "6ed76587e29c4094d98a2b37f5b0d4fbbd2237ad1e446c31275336350e0a3724"
+  },
+  "verification/moire/source/turn-upright/turn-upright_trace.xml": {
+    "bytes": 1468,
+    "sha256": "8e90ee3448f549e3ccbcf35d4f4d8618bfbc2a15a2893ec885321f1290d53c94"
+  },
+  "verification/moire/references/brace/brace_trace.xml": {
+    "bytes": 1444,
+    "sha256": "f0225a3d0f1c8bfa2f6f6f1af3fdaf37901b965521e889016479052d6cc9139f"
+  },
+  "verification/moire/references/chant-enter-a-rejected/chant-enter-a-rejected_trace.xml": {
+    "bytes": 3122,
+    "sha256": "5130683e1e479e4d3633e96273537dc668b8721dd66320168c2a895d349ead7a"
+  },
+  "verification/moire/references/chant-enter-draft-rejected/chant-enter-draft-rejected_trace.xml": {
+    "bytes": 1551,
+    "sha256": "cfec89584e9f963bcd14adba056462839076be9319aa4659fbad8c3f5b460d91"
+  },
+  "verification/moire/references/chant-ready/chant-ready_trace.xml": {
+    "bytes": 1475,
+    "sha256": "c644204a8739ee4738fd432659ae17abf4ec3dc2ea7a7b0bbeec52d7f375d3e1"
+  },
+  "verification/moire/references/crouch/crouch_trace.xml": {
+    "bytes": 1449,
+    "sha256": "f5285e639422486af4a1cab9093bcb3785bd4f3687eb5adbe56b2d6cc1c373b6"
+  },
+  "verification/moire/references/E00/E00_trace.xml": {
+    "bytes": 1435,
+    "sha256": "83d13e342e4898299183a6168d875d6f6f0d823c6cbcdfb19b4e9217b8300f21"
+  },
+  "verification/moire/references/E01/E01_trace.xml": {
+    "bytes": 1435,
+    "sha256": "844cc382f5d2b1cbcded1da45d6c924c94c1824bb2dfe7c04ca11da8ab8ff765"
+  },
+  "verification/moire/references/E02/E02_trace.xml": {
+    "bytes": 1435,
+    "sha256": "cd96cdf21507335b88274328dd68f28b6a1ca9fe3105c072b2bfd1cbbb8c932b"
+  },
+  "verification/moire/references/E03/E03_trace.xml": {
+    "bytes": 1435,
+    "sha256": "41e16084217410512c03a2fe9d62d1ec9a672f72ee0cc6439f8071ba186e6af2"
+  },
+  "verification/moire/references/E04/E04_trace.xml": {
+    "bytes": 1435,
+    "sha256": "ac1c34c926445ff1872a87d78b8ec45a43b4861b449c6654219b510dffbe52cd"
+  },
+  "verification/moire/references/E05/E05_trace.xml": {
+    "bytes": 1435,
+    "sha256": "e238d93ed48cd4f724d1ec42c65d61434819699814f862a84b774e1414e960b0"
+  },
+  "verification/moire/references/E06/E06_trace.xml": {
+    "bytes": 1435,
+    "sha256": "df736507911186c7a0c294b580806469c13daab4ef3190b029fe10b5a8a0c0f8"
+  },
+  "verification/moire/references/E06-fixed/E06-fixed_trace.xml": {
+    "bytes": 1465,
+    "sha256": "b128369218227adde90dc83d1f03a5b8a9beec3d6709f39f707c64bc2921f623"
+  },
+  "verification/moire/references/E07/E07_trace.xml": {
+    "bytes": 1435,
+    "sha256": "95c48e91a6a79018e1b66aae7a75cbb9412d980d353811c1629d833bf8846197"
+  },
+  "verification/moire/references/E08/E08_trace.xml": {
+    "bytes": 1435,
+    "sha256": "1a294416b778ddfdcc928a916719ed564d417ead0e8a2934f4e08d20acb517d2"
+  },
+  "verification/moire/references/E09/E09_trace.xml": {
+    "bytes": 1435,
+    "sha256": "577151151e09953848160696328f7e080142e5126e84efbed61558f096a886dc"
+  },
+  "verification/moire/references/E10/E10_trace.xml": {
+    "bytes": 1435,
+    "sha256": "850c7de5f18eaa948a050dd30ee2e2e2b709286e15c3e7cfef491e830eb2029d"
+  },
+  "verification/moire/references/E11/E11_trace.xml": {
+    "bytes": 1434,
+    "sha256": "55cc62734fab34d7fa82b4317c09a883716143ed16a4256d7ad5023df7e5c3ec"
+  },
+  "verification/moire/references/E12/E12_trace.xml": {
+    "bytes": 1435,
+    "sha256": "b4d77d91c0e4643978a1c151a5a5fa978030f58b5ce0b0df91792f4ae5842064"
+  },
+  "verification/moire/references/fall-lean/fall-lean_trace.xml": {
+    "bytes": 1465,
+    "sha256": "96d1657a517a48d8b1aa2e79416bba41d425dc9c8ddb85a5a0ee0be66d89d3e8"
+  },
+  "verification/moire/references/kneel-rise/kneel-rise_trace.xml": {
+    "bytes": 1470,
+    "sha256": "870c0a50f0b67246d6f5653abf3de5531f894cbb82935db1d4c22dbeb02a9c45"
+  },
+  "verification/moire/references/lower/lower_trace.xml": {
+    "bytes": 1445,
+    "sha256": "8df342f0269f81b1895ef5ddbc77963ed56e866669ac866d035d28616ff5cc42"
+  },
+  "verification/moire/references/prone/prone_trace.xml": {
+    "bytes": 1445,
+    "sha256": "00e20b9b10cbe7f17a4972337bc472431c7b7f7b7ff26431e0e5100a3ccdd4fd"
+  },
+  "verification/moire/references/release/release_trace.xml": {
+    "bytes": 1455,
+    "sha256": "965e39c6016056a82d4be5342b4b72d249d091fd3c7ee76dd22b9509b76667d6"
+  },
+  "verification/moire/references/turn-upright/turn-upright_trace.xml": {
+    "bytes": 1480,
+    "sha256": "879bfd1ccdc6422cfc1db73db97d253934669b817aa397dfab39d1b3ca6c2b1d"
+  },
+  "verification/moire/review-crops-0.jpg": {
+    "bytes": 261766,
+    "sha256": "748fc21d8faa716ecd5a401be520fa016dbadeaf449f923bd13d0ca81c28a572"
+  },
+  "verification/moire/review-crops-1.jpg": {
+    "bytes": 250367,
+    "sha256": "a469a2cd7c368af0311d4f5692af1ab38e4ee2d4809fcddd5ce0918204de028a"
+  },
+  "verification/moire/review-crops-2.jpg": {
+    "bytes": 257111,
+    "sha256": "e813396214385a8af830f0088832e5a69ee08a65f322a046f0d67da831634a47"
+  },
+  "verification/moire/review-crops-3.jpg": {
+    "bytes": 278257,
+    "sha256": "88e534e047c221ba3ae2b4a7ddde06a75f2f78c589c30f2eaeaa08f47f41cc6c"
+  },
+  "verification/moire/review-crops-4.jpg": {
+    "bytes": 265444,
+    "sha256": "ed07b61aeec31ebf1efdd702a391a01d4691f05397866d22a9ea3899dc5c361c"
+  },
+  "verification/moire/review-crops-5.jpg": {
+    "bytes": 278830,
+    "sha256": "938d1fd6d7bd901c6f2d1eeec336975664b2b43a0685c905d771ab81d1f41422"
+  },
+  "verification/moire/review-heatmaps.jpg": {
+    "bytes": 330767,
+    "sha256": "3ee07ea2b4fc8e4393d81b2183f08addf053d6648e76110ad47876a0d5e64f18"
+  }
+}

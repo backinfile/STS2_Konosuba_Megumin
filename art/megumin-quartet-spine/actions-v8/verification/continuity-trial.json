@@ -1,0 +1,23 @@
+{
+  "passed": false,
+  "limits": {
+    "headSwitchAreaJump": 0.06,
+    "headSwitchCentroid": 4,
+    "headWithinPoseAreaDrift": 0.05
+  },
+  "failingSwitches": [
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 0.56667,
+      "from": "lower/head",
+      "to": "brace/head",
+      "areaJump": 0.05847342216576745,
+      "centroidJump": 4.007455278346924
+    }
+  ],
+  "headStretch": [],
+  "teleports": [],
+  "switchCount": 260,
+  "note": "Geometry includes some transparent border; use visual replay to confirm silhouette and interior drawing changes."
+}

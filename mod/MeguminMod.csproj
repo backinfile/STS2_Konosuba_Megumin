@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>MeguminMod</AssemblyName>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>12</LangVersion>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sts2"><HintPath>$(STS2GameDir)/data_sts2_windows_x86_64/sts2.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="GodotSharp"><HintPath>$(STS2GameDir)/data_sts2_windows_x86_64/GodotSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(STS2GameDir)/data_sts2_windows_x86_64/0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BaseLib"><HintPath>$(BaseLibDir)/BaseLib.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,44 @@
+{
+  "stage": "restore",
+  "outcome": "delivered",
+  "human_note": "",
+  "source": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\E08.png",
+  "source_sha256": "b844ea9748d7829a723fee5c73f44312e5750032da984db8dbdff3d434432304",
+  "final": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\E08\\E08_restored.png",
+  "final_sha256": "b844ea9748d7829a723fee5c73f44312e5750032da984db8dbdff3d434432304",
+  "final_is_source_copy": true,
+  "regen_rounds": 0,
+  "mode": "rules",
+  "diag": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\E08\\E08_input_diag.json",
+  "verify": null,
+  "steps": [
+    {
+      "n": 1,
+      "current": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\E08.png",
+      "action": "diagnose",
+      "by": "rules",
+      "reason": "Diagnosis is required before treatment.",
+      "result": {
+        "action": "diagnose",
+        "lattice": false,
+        "granule_level": "none",
+        "scale_tile_pct": 0.0,
+        "scale_level": "none",
+        "board": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\E08\\E08_input_diag_board.png",
+        "scale_heatmap": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\E08\\E08_input_scaleheat.png"
+      }
+    },
+    {
+      "n": 2,
+      "current": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\E08.png",
+      "action": "finish",
+      "by": "rules",
+      "reason": "No supported artifact class was detected.",
+      "result": {
+        "action": "finish"
+      }
+    }
+  ],
+  "acceptance": "A person must inspect the boards and decide whether to accept the candidate.",
+  "time": "2026-10-10T14:50:51+08:00"
+}

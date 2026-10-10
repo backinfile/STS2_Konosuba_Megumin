@@ -1,0 +1,1247 @@
+{
+  "date": "2026-10-09",
+  "original_version": "v0.107.1",
+  "original_commit": "59260271",
+  "original_build_date": "2026-06-18",
+  "karen_head": "e5a9115",
+  "scope": "本地 stable 程序集及匹配中文文本；Karen 当前工作区源码（不假设等于 HEAD）。",
+  "evidence": {
+    "Abrasive": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Abrasive.cs",
+      "sha256": "843912702bf205461319e5d85fc5dafe230134f9f8af5359097f79b7880fa1ba",
+      "title": "磨蚀",
+      "description": "获得{DexterityPower:diff()}点[gold]敏捷[/gold]。\n获得{ThornsPower:diff()}点[gold]荆棘[/gold]。",
+      "excerpts": "  21  \n  22  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  23  \t{\n  24  \t\tnew PowerVar<ThornsPower>(4m),\n  25  \t\tnew PowerVar<DexterityPower>(1m)\n  26  \t});\n  27  \n  28  \tpublic Abrasive()\n  41  \t{\n  42  \t\tbase.DynamicVars[\"ThornsPower\"].UpgradeValueBy(2m);\n  43  \t}\n  44  }"
+    },
+    "Accelerant": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Accelerant.cs",
+      "sha256": "19bd79a95c03d076213dac4a64eec8673e39c5f457cb5b186d18c2c538e15560",
+      "title": "触媒",
+      "description": "[gold]中毒[/gold]会额外触发{Accelerant:diff()}次。",
+      "excerpts": "  17  \n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DynamicVar(\"Accelerant\", 1m));\n  19  \n  20  \tpublic Accelerant()\n  21  \t\t: base(1, CardType.Power, CardRarity.Rare, TargetType.Self)\n  32  \t{\n  33  \t\tbase.DynamicVars[\"Accelerant\"].UpgradeValueBy(1m);\n  34  \t}\n  35  }"
+    },
+    "Accuracy": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Accuracy.cs",
+      "sha256": "1b3831369faab98080eb841161ea57eb53cc0e24cfd8451d0290e516819362e3",
+      "title": "精准",
+      "description": "[gold]小刀[/gold]额外造成{AccuracyPower:diff()}点伤害。",
+      "excerpts": "  13  {\n  14  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<AccuracyPower>(4m));\n  15  \n  16  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromCard<Shiv>());\n  17  \n  30  \t{\n  31  \t\tbase.DynamicVars[\"AccuracyPower\"].UpgradeValueBy(2m);\n  32  \t}\n  33  }"
+    },
+    "Acrobatics": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Acrobatics.cs",
+      "sha256": "3ee3ccd097acd1f4593ab643653b0f283d114e11b7a3bb62c77dc84d73d17c2a",
+      "title": "杂技",
+      "description": "抽{Cards:diff()}张牌。\n丢弃1张牌。",
+      "excerpts": "  13  {\n  14  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new CardsVar(3));\n  15  \n  16  \tpublic Acrobatics()\n  17  \t\t: base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)\n  32  \t{\n  33  \t\tbase.DynamicVars.Cards.UpgradeValueBy(1m);\n  34  \t}\n  35  }"
+    },
+    "AdaptiveStrike": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/AdaptiveStrike.cs",
+      "sha256": "1a88562b426047126700e2b83e437a924dbf007408d034c224bd924fd16bce93",
+      "title": "适应打击",
+      "description": "造成{Damage:diff()}点伤害。\n将这张牌的一张0{energyPrefix:energyIcons(1)}复制品添加到你的[gold]弃牌堆[/gold]。",
+      "excerpts": "  15  \n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(18m, ValueProp.Move));\n  17  \n  18  \tpublic AdaptiveStrike()\n  19  \t\t: base(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)\n  25  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  26  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  27  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  28  \t\t\t.Execute(choiceContext);\n  29  \t\tCardModel cardModel = CreateClone();\n  35  \t{\n  36  \t\tbase.DynamicVars.Damage.UpgradeValueBy(5m);\n  37  \t}\n  38  }"
+    },
+    "AllForOne": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/AllForOne.cs",
+      "sha256": "e5b572f3c3853ef94ca0371761424fc521184722604c7c4b897fb01eb751ddbd",
+      "title": "万物一心",
+      "description": "造成{Damage:diff()}点伤害。\n将你[gold]弃牌堆[/gold]中的所有0{energyPrefix:energyIcons(1)}牌放入你的[gold]手牌[/gold]。",
+      "excerpts": "  14  {\n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(10m, ValueProp.Move));\n  16  \n  17  \tpublic AllForOne()\n  18  \t\t: base(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)\n  24  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  25  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  26  \t\t\t.WithHitFx(\"vfx/vfx_heavy_blunt\", null, \"blunt_attack.mp3\")\n  27  \t\t\t.WithHitVfxSpawnedAtBase()\n  28  \t\t\t.Execute(choiceContext);\n  50  \t{\n  51  \t\tbase.DynamicVars.Damage.UpgradeValueBy(4m);\n  52  \t}\n  53  }"
+    },
+    "Arsenal": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Arsenal.cs",
+      "sha256": "7db4bfb9b191a9edd0773cc5e67cf90e0a62cd0c9e3137cb2310c03b05241965",
+      "title": "武器库",
+      "description": "每当你生成一张牌，就获得{ArsenalPower:diff()}点[gold]力量[/gold]。",
+      "excerpts": "  15  \n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<ArsenalPower>(1m));\n  17  \n  18  \tpublic Arsenal()\n  19  \t\t: base(1, CardType.Power, CardRarity.Rare, TargetType.Self)"
+    },
+    "ArsenalPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/ArsenalPower.cs",
+      "sha256": "b7ac0881a99191bc700229a9a379ca68c3b710bbfcb908efa22cc41a46275607",
+      "title": "ArsenalPower",
+      "description": "",
+      "excerpts": "  18  \n  19  \tpublic override async Task AfterCardGeneratedForCombat(CardModel card, Player? creator)\n  20  \t{\n  21  \t\tif (creator != null && creator.Creature == base.Owner)\n  22  \t\t{"
+    },
+    "AshenStrike": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/AshenStrike.cs",
+      "sha256": "7024789ffbcf1e36cd296f9cce1b8909a61bf01728152e1b9f558572dcb6e01c",
+      "title": "灰烬打击",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你的[gold]消耗牌堆[/gold]中每有一张牌，伤害增加{ExtraDamage:diff()}。",
+      "excerpts": "  17  \n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  19  \t{\n  20  \t\tnew CalculationBaseVar(6m),\n  21  \t\tnew ExtraDamageVar(3m),\n  22  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => PileType.Exhaust.GetPile(card.Owner).Cards.Count)\n  23  \t});\n  24  \n  25  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromKeyword(CardKeyword.Exhaust));\n  26  \n  27  \tpublic AshenStrike()\n  28  \t\t: base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)\n  34  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  35  \t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  36  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\", null, \"blunt_attack.mp3\")\n  37  \t\t\t.Execute(choiceContext);\n  38  \t}\n  41  \t{\n  42  \t\tbase.DynamicVars.ExtraDamage.UpgradeValueBy(1m);\n  43  \t}\n  44  }"
+    },
+    "AstralPulse": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/AstralPulse.cs",
+      "sha256": "3761654ced162e3959d7aff778019d56022111c9ff4a575d5d63784d5692a316",
+      "title": "星界脉冲",
+      "description": "对所有敌人造成{Damage:diff()}点伤害两次。",
+      "excerpts": "  12  {\n  13  \tpublic override int CanonicalStarCost => 3;\n  14  \n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(6m, ValueProp.Move));\n  16  \n  17  \tpublic AstralPulse()\n  18  \t\t: base(0, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)\n  23  \t{\n  24  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(base.CombatState)\n  25  \t\t\t.WithHitCount(2)\n  26  \t\t\t.WithHitFx(\"vfx/vfx_starry_impact\")\n  27  \t\t\t.SpawningHitVfxOnEachCreature()\n  32  \t{\n  33  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  34  \t}\n  35  }"
+    },
+    "BansheesCry": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BansheesCry.cs",
+      "sha256": "d7a3aa240c2206cd9558e119a34450c9d5aba06dc8988159712fde490bd8d7b0",
+      "title": "女妖之嚎",
+      "description": "对所有敌人造成{Damage:diff()}点伤害。\n本场战斗中每打出过一张[gold]虚无[/gold]牌，此牌的耗能就减少{Energy:energyIcons()}。",
+      "excerpts": "   4  using MegaCrit.Sts2.Core.Combat;\n   5  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   6  using MegaCrit.Sts2.Core.Commands;\n   7  using MegaCrit.Sts2.Core.Entities.Cards;\n   8  using MegaCrit.Sts2.Core.GameActions.Multiplayer;\n  18  \n  19  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  20  \t{\n  21  \t\tnew DamageVar(33m, ValueProp.Move),\n  22  \t\tnew EnergyVar(2)\n  23  \t});\n  24  \n  25  \tpublic BansheesCry()\n  31  \t{\n  32  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(base.CombatState)\n  33  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  34  \t\t\t.Execute(choiceContext);\n  35  \t}\n  41  \n  42  \tpublic override Task AfterCardEnteredCombat(CardModel card)\n  43  \t{\n  44  \t\tif (card != this)\n  45  \t\t{\n  51  \t\t}\n  52  \t\tint num = CombatManager.Instance.History.CardPlaysFinished.Count((CardPlayFinishedEntry e) => e.WasEthereal && e.CardPlay.Card.Owner == base.Owner);\n  53  \t\tbase.EnergyCost.AddThisCombat(-num * base.DynamicVars.Energy.IntValue);\n  54  \t\treturn Task.CompletedTask;\n  55  \t}\n  56  \n  57  \tpublic override Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  58  \t{\n  59  \t\tif (cardPlay.Card.Owner != base.Owner)\n  60  \t\t{"
+    },
+    "Barrage": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Barrage.cs",
+      "sha256": "302eccaa1a15fe931947927fa0995df5651dc88e4ea1dcd4c00276f101f85d8c",
+      "title": "弹幕齐射",
+      "description": "当前每有一个[gold]充能球[/gold]，造成{Damage:diff()}点伤害。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "excerpts": "  19  \n  20  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[4]\n  21  \t{\n  22  \t\tnew DamageVar(5m, ValueProp.Move),\n  23  \t\tnew CalculationBaseVar(0m),\n  24  \t\tnew CalculationExtraVar(1m),\n  25  \t\tnew CalculatedVar(\"CalculatedHits\").WithMultiplier((CardModel card, Creature? _) => card.Owner.PlayerCombatState.OrbQueue.Orbs.Count)\n  26  \t});\n  27  \n  28  \tpublic Barrage()\n  35  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  36  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount((int)((CalculatedVar)base.DynamicVars[\"CalculatedHits\"]).Calculate(cardPlay.Target)).FromCard(this)\n  37  \t\t\t.Targeting(cardPlay.Target)\n  38  \t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\")\n  39  \t\t\t.Execute(choiceContext);\n  43  \t{\n  44  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  45  \t}\n  46  }"
+    },
+    "Barricade": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Barricade.cs",
+      "sha256": "71b82ac3b4c8e22d7b1b2606d296b6760b27c80ffce8999c87764bf3aa0e6f21",
+      "title": "壁垒",
+      "description": "[gold]格挡[/gold]不再在你的回合开始时消失。",
+      "excerpts": ""
+    },
+    "BlackHole": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BlackHole.cs",
+      "sha256": "5b965164a7a7b954c261033e9a10514de179d3be7614ad4e521048c7e7803dbd",
+      "title": "黑洞",
+      "description": "每当你花费或获得{singleStarIcon}时，对所有敌人造成{BlackHolePower:diff()}点伤害。",
+      "excerpts": "  12  {\n  13  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<BlackHolePower>(3m));\n  14  \n  15  \tpublic BlackHole()\n  16  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  27  \t{\n  28  \t\tbase.DynamicVars[\"BlackHolePower\"].UpgradeValueBy(1m);\n  29  \t}\n  30  }"
+    },
+    "BlackHolePower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/BlackHolePower.cs",
+      "sha256": "0513478ad7310329c379841f5c1dff1633141ebf8129574b04fdfd87a3c9ef50",
+      "title": "BlackHolePower",
+      "description": "",
+      "excerpts": "  17  \t/// <remarks>\n  18  \t/// We do this in AfterCardPlayed instead of AfterStarsSpent because stars are spent at the beginning of the card\n  19  \t/// play, but Black Hole should trigger after the card is played.\n  20  \t/// </remarks>\n  21  \tpublic override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  22  \t{\n  23  \t\tif (cardPlay.Resources.StarsSpent > 0 && cardPlay.Card.Owner == base.Owner.Player && cardPlay.IsLastInSeries)\n  24  \t\t{\n  25  \t\t\tawait DealDamageToAllEnemies();\n  26  \t\t}\n  28  \n  29  \tpublic override async Task AfterStarsGained(int amount, Player gainer)\n  30  \t{\n  31  \t\tif (amount > 0 && gainer == base.Owner.Player)\n  32  \t\t{\n  39  \t\tFlash();\n  40  \t\tawait CreatureCmd.Damage(new BlockingPlayerChoiceContext(), base.CombatState.HittableEnemies, base.Amount, ValueProp.Unpowered, base.Owner, null);\n  41  \t}\n  42  }"
+    },
+    "BladeDance": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BladeDance.cs",
+      "sha256": "54bcb906b97d99882db1a72781208faf47bdc8c4bab3ba1e0b4898f590323931",
+      "title": "刀刃之舞",
+      "description": "添加{Cards:diff()}张[gold]小刀[/gold]到你的[gold]手牌[/gold]。",
+      "excerpts": "  12  {\n  13  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n  14  \n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new CardsVar(3));\n  16  \n  17  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromCard<Shiv>());\n  18  \n  35  \t{\n  36  \t\tbase.DynamicVars.Cards.UpgradeValueBy(1m);\n  37  \t}\n  38  }"
+    },
+    "BlightStrike": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BlightStrike.cs",
+      "sha256": "e246395457ee49e7bffc56773b38c5f890a241ff71de53170d68721fa10afa22",
+      "title": "荒疫打击",
+      "description": "造成{Damage:diff()}点伤害。\n给予等量于所造成伤害的[gold]灾厄[/gold]。",
+      "excerpts": "  20  \n  21  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(8m, ValueProp.Move));\n  22  \n  23  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<DoomPower>());\n  24  \n  32  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  33  \t\tAttackCommand attackCommand = await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  34  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  35  \t\t\t.Execute(choiceContext);\n  36  \t\tawait PowerCmd.Apply<DoomPower>(choiceContext, cardPlay.Target, attackCommand.Results.SelectMany((List<DamageResult> r) => r).Sum((DamageResult r) => r.TotalDamage), base.Owner.Creature, this);\n  40  \t{\n  41  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  42  \t}\n  43  }"
+    },
+    "BodySlam": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BodySlam.cs",
+      "sha256": "b554a0550946c792f2564eb1bb1a2f028679ab3a39c6d5166ffc5f9d3089b4d3",
+      "title": "全身撞击",
+      "description": "造成你当前[gold]格挡[/gold]值的伤害。{InCombat:\n（造成{CalculatedDamage:diff()}点伤害）|}",
+      "excerpts": "  15  {\n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  17  \t{\n  18  \t\tnew CalculationBaseVar(0m),\n  19  \t\tnew ExtraDamageVar(1m),\n  20  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.Creature.Block)\n  21  \t});\n  22  \n  23  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.Static(StaticHoverTip.Block));\n  32  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  33  \t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  34  \t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  35  \t\t\t.Execute(choiceContext);\n  36  \t}"
+    },
+    "Bombardment": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Bombardment.cs",
+      "sha256": "97634c7f31f70efa8eeb486a4a0312f9ecb7f2e8d549747fe0c026a8e45178a4",
+      "title": "轰击",
+      "description": "造成{Damage:diff()}点伤害。\n你的回合开始时，如果这张牌在你的[gold]消耗牌堆[/gold]中，则将其打出。",
+      "excerpts": "  19  {\n  20  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n  21  \n  22  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(18m, ValueProp.Move));\n  23  \n  24  \tpublic Bombardment()\n  25  \t\t: base(3, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)\n  38  \t\t}\n  39  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  40  \t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  41  \t\t\t.Execute(choiceContext);\n  42  \t}\n  47  \t/// </remarks>\n  48  \tpublic override async Task AfterAutoPrePlayPhaseEnteredEarly(PlayerChoiceContext choiceContext, Player player)\n  49  \t{\n  50  \t\tCardPile? pile = base.Pile;\n  51  \t\tif (pile != null && pile.Type == PileType.Exhaust && player == base.Owner)\n  58  \t{\n  59  \t\tbase.DynamicVars.Damage.UpgradeValueBy(6m);\n  60  \t}\n  61  }"
+    },
+    "BulkUp": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/BulkUp.cs",
+      "sha256": "23731da07be709d8b900fbe8cb1753d1367bd9bed1bbd13de6c750b79900c9c5",
+      "title": "暴涨",
+      "description": "失去{OrbSlots:diff()}个充能球栏位。\n获得{StrengthPower:diff()}点[gold]力量[/gold]。\n获得{DexterityPower:diff()}点[gold]敏捷[/gold]。",
+      "excerpts": "  21  \n  22  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  23  \t{\n  24  \t\tnew DynamicVar(\"OrbSlots\", 1m),\n  25  \t\tnew PowerVar<StrengthPower>(2m),\n  26  \t\tnew PowerVar<DexterityPower>(2m)\n  27  \t});\n  28  \n  29  \tpublic BulkUp()\n  43  \t{\n  44  \t\tbase.DynamicVars.Strength.UpgradeValueBy(1m);\n  45  \t\tbase.DynamicVars.Dexterity.UpgradeValueBy(1m);\n  46  \t}\n  47  }"
+    },
+    "Bully": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Bully.cs",
+      "sha256": "779897707970d9e46565efeab5e1c2e17e6ddb8fe327c474661c280bf01fce78",
+      "title": "欺凌",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n该敌人身上每有一层[gold]易伤[/gold]就额外造成{ExtraDamage:diff()}点伤害。",
+      "excerpts": "  16  {\n  17  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  18  \t{\n  19  \t\tnew CalculationBaseVar(4m),\n  20  \t\tnew ExtraDamageVar(2m),\n  21  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel _, Creature? target) => target?.GetPowerAmount<VulnerablePower>() ?? 0)\n  22  \t});\n  23  \n  24  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<VulnerablePower>());\n  33  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  34  \t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  35  \t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  36  \t\t\t.Execute(choiceContext);\n  37  \t}\n  40  \t{\n  41  \t\tbase.DynamicVars.ExtraDamage.UpgradeValueBy(1m);\n  42  \t}\n  43  }"
+    },
+    "Calcify": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Calcify.cs",
+      "sha256": "a173f6d8c8cca17dc4f0ad3e8457cd159ba1233bd10e5eb27d3640e6eedd50ff",
+      "title": "钙化",
+      "description": "[gold]奥斯提[/gold]的攻击额外造成{CalcifyPower:diff()}点伤害。",
+      "excerpts": "  12  {\n  13  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<CalcifyPower>(4m));\n  14  \n  15  \tpublic Calcify()\n  16  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  27  \t{\n  28  \t\tbase.DynamicVars[\"CalcifyPower\"].UpgradeValueBy(2m);\n  29  \t}\n  30  }"
+    },
+    "Capacitor": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Capacitor.cs",
+      "sha256": "0b11188751cb4c31779afadf7d692eb8ad63ecf5d40239f1bc5febb064a1b3a3",
+      "title": "扩容",
+      "description": "获得{Repeat:diff()}个充能球栏位。",
+      "excerpts": "  11  {\n  12  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new RepeatVar(2));\n  13  \n  14  \tpublic Capacitor()\n  15  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  26  \t{\n  27  \t\tbase.DynamicVars.Repeat.UpgradeValueBy(1m);\n  28  \t}\n  29  }"
+    },
+    "CardModel": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models/CardModel.cs",
+      "sha256": "2e0c6eea66dfc1098c82386fa15838c6d376a83953a895c028b4f2ef60816919",
+      "title": "CardModel",
+      "description": "",
+      "excerpts": "2070  \tprotected virtual PileType GetResultPileTypeForCardPlay()\n2071  \t{\n2072  \t\tif (IsDupe || Type == CardType.Power)\n2073  \t\t{\n2074  \t\t\treturn PileType.None;\n2075  \t\t}\n2076  \t\tif (ExhaustOnNextPlay || Keywords.Contains(CardKeyword.Exhaust))\n2077  \t\t{\n2078  \t\t\tExhaustOnNextPlay = false;\n2079  \t\t\treturn PileType.Exhaust;\n2080  \t\t}\n2081  \t\treturn PileType.Discard;\n2082  \t}\n2083  \n2084  \t/// <summary>\n2085  \t/// Send the card to the correct pile after it was attempted to be played while unplayable.\n2086  \t/// This is the same as MoveCardToResultPileAfterPlay with one important exception: Power cards do not get sent"
+    },
+    "Claw": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Claw.cs",
+      "sha256": "6144cae49dcf511b873a57dd3841e1d1ec54e782a2f2c930f42b0799618e0ebe",
+      "title": "爪击",
+      "description": "造成{Damage:diff()}点伤害。\n本场战斗中所有爪击卡牌的伤害增加{Increase:diff()}点。",
+      "excerpts": "  20  \n  21  \tprivate decimal ExtraDamageFromClawPlays\n  22  \t{\n  23  \t\tget\n  24  \t\t{\n  33  \n  34  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  35  \t{\n  36  \t\tnew DamageVar(3m, ValueProp.Move),\n  37  \t\tnew DynamicVar(\"Increase\", 2m)\n  38  \t});\n  39  \n  40  \tpublic Claw()\n  47  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  48  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  49  \t\t\t.WithHitVfxNode((Creature t) => NScratchVfx.Create(t, goingRight: true))\n  50  \t\t\t.Execute(choiceContext);\n  51  \t\tIEnumerable<Claw> enumerable = base.Owner.PlayerCombatState.AllCards.OfType<Claw>();\n  54  \t\t{\n  55  \t\t\titem.BuffFromClawPlay(baseValue);\n  56  \t\t}\n  57  \t}\n  58  \n  60  \t{\n  61  \t\tbase.DynamicVars.Damage.UpgradeValueBy(1m);\n  62  \t\tbase.DynamicVars[\"Increase\"].UpgradeValueBy(1m);\n  63  \t}\n  64  \n  65  \tprotected override void AfterDowngraded()\n  67  \t\tbase.AfterDowngraded();\n  68  \t\tbase.DynamicVars.Damage.BaseValue += ExtraDamageFromClawPlays;\n  69  \t}\n  70  \n  71  \tprivate void BuffFromClawPlay(decimal extraDamage)\n  72  \t{\n  73  \t\tbase.DynamicVars.Damage.BaseValue += extraDamage;\n  74  \t\tExtraDamageFromClawPlays += extraDamage;\n  75  \t}\n  76  }"
+    },
+    "Conqueror": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Conqueror.cs",
+      "sha256": "ea9c91026ce3c600f32b922c0852d01f896de611f0aaf3b2add4bb867b990ba1",
+      "title": "征服者",
+      "description": "[gold]铸造[/gold]{Forge:diff()}。\n[gold]君王之剑[/gold]在本回合对敌人造成双倍伤害。",
+      "excerpts": "  14  {\n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new ForgeVar(3));\n  16  \n  17  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => HoverTipFactory.FromForge();\n  18  \n  33  \t{\n  34  \t\tbase.DynamicVars.Forge.UpgradeValueBy(2m);\n  35  \t}\n  36  }"
+    },
+    "CreativeAi": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/CreativeAi.cs",
+      "sha256": "b69cded42a10e284d767a373a74e229c4d2c0956deeb61d7fdf0e7d30e692c67",
+      "title": "创造性AI",
+      "description": "在你的回合开始时，将一张随机能力牌加入你的[gold]手牌[/gold]。",
+      "excerpts": "  14  \n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DynamicVar(\"CreativeAi\", 1m));\n  16  \n  17  \tpublic CreativeAi()\n  18  \t\t: base(3, CardType.Power, CardRarity.Rare, TargetType.Self)"
+    },
+    "CrescentSpear": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/CrescentSpear.cs",
+      "sha256": "2d6b91217f68569565b696d5d1d0d31be45e005bc8734aaf5d4b7daeb1bb277f",
+      "title": "新月长矛",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你每有一张拥有{singleStarIcon}耗能的卡牌，这张牌就额外造成{ExtraDamage:diff()}点伤害。",
+      "excerpts": "  15  {\n  16  \tpublic override int CanonicalStarCost => 1;\n  17  \n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  19  \t{\n  20  \t\tnew CalculationBaseVar(8m),\n  21  \t\tnew ExtraDamageVar(2m),\n  22  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.PlayerCombatState.AllCards.Count((CardModel c) => c.CanonicalStarCost >= 0 || c.HasStarCostX))\n  23  \t});\n  24  \n  25  \tpublic CrescentSpear()\n  32  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  33  \t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  34  \t\t\t.WithHitFx(\"vfx/vfx_starry_impact\")\n  35  \t\t\t.Execute(choiceContext);\n  36  \t}\n  39  \t{\n  40  \t\tbase.DynamicVars.ExtraDamage.UpgradeValueBy(1m);\n  41  \t}\n  42  }"
+    },
+    "Cruelty": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Cruelty.cs",
+      "sha256": "a395863cfb5d8d79dc37cdae9ef2ec8bcf5df8d6fa8a21796cacf9bb46dcfa34",
+      "title": "残酷",
+      "description": "有[gold]易伤[/gold]状态的敌人额外受到{CrueltyPower:diff()}%的伤害。",
+      "excerpts": "  13  {\n  14  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<CrueltyPower>(25m));\n  15  \n  16  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<VulnerablePower>());\n  17  \n  30  \t{\n  31  \t\tbase.DynamicVars[\"CrueltyPower\"].UpgradeValueBy(25m);\n  32  \t}\n  33  }"
+    },
+    "CrueltyPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/CrueltyPower.cs",
+      "sha256": "c36e414226a11ef82fe64b4900eff2c53ce28193d88d908516111fdcad95e0ba",
+      "title": "CrueltyPower",
+      "description": "",
+      "excerpts": ""
+    },
+    "DarkOrb": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Orbs/DarkOrb.cs",
+      "sha256": "4ce6fe29c9e50283afcfadcc79a1338dd42fedbd72d03ac22206604abaad1333",
+      "title": "DarkOrb",
+      "description": "",
+      "excerpts": "  52  \t\tCreature weakestEnemy = hittableEnemies.MinBy((Creature c) => c.CurrentHp);\n  53  \t\tawait CreatureCmd.Damage(playerChoiceContext, weakestEnemy, EvokeVal, ValueProp.Unpowered, base.Owner.Creature);\n  54  \t\treturn new global::_003C_003Ez__ReadOnlySingleElementList<Creature>(weakestEnemy);\n  55  \t}\n  56  }"
+    },
+    "Darkness": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Darkness.cs",
+      "sha256": "4608170256635176c1236b6bc8166eb7bd6849d8488d02c141a6fde8e0a07e43",
+      "title": "漆黑",
+      "description": "[gold]生成[/gold]1[gold]黑暗[/gold]充能球。\n触发所有[gold]黑暗[/gold]充能球的被动{IfUpgraded:show:两次|}。",
+      "excerpts": ""
+    },
+    "DeadlyPoison": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/DeadlyPoison.cs",
+      "sha256": "cd1d91f32d2638f938a845d5bdeb9306da6e0966d7d47b28c53c50281f6803b8",
+      "title": "致命毒药",
+      "description": "给予{PoisonPower:diff()}层[gold]中毒[/gold]。",
+      "excerpts": "  19  \n  20  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<PoisonPower>(5m));\n  21  \n  22  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<PoisonPower>());\n  23  \n  39  \t{\n  40  \t\tbase.DynamicVars.Poison.UpgradeValueBy(2m);\n  41  \t}\n  42  }"
+    },
+    "DeathMarch": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/DeathMarch.cs",
+      "sha256": "28b1fbc8476078e0eab57ef44b3a115bff15e951a9d006bad4e2462773077de5",
+      "title": "死亡行军",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你在回合进行中每抽到一张牌，都会使其额外造成{ExtraDamage:diff()}点伤害。",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.Entities.Creatures;\n  17  {\n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  19  \t{\n  20  \t\tnew CalculationBaseVar(8m),\n  21  \t\tnew ExtraDamageVar(4m),\n  22  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => CombatManager.Instance.History.Entries.OfType<CardDrawnEntry>().Count((CardDrawnEntry e) => e.HappenedThisTurn(card.CombatState) && e.Actor == card.Owner.Creature && !e.FromHandDraw))\n  23  \t});\n  24  \n  25  \tpublic DeathMarch()\n  32  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  33  \t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  34  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  35  \t\t\t.Execute(choiceContext);\n  36  \t}\n  39  \t{\n  40  \t\tbase.DynamicVars.CalculationBase.UpgradeValueBy(1m);\n  41  \t\tbase.DynamicVars.ExtraDamage.UpgradeValueBy(2m);\n  42  \t}\n  43  }"
+    },
+    "DefectCardPool": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.CardPools/DefectCardPool.cs",
+      "sha256": "da2a0899612a7a7344da8bedf808613ad5693d531b6368c813268253abe58b37",
+      "title": "DefectCardPool",
+      "description": "",
+      "excerpts": ""
+    },
+    "Defragment": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Defragment.cs",
+      "sha256": "80ee08a81619587aafe7c152604d933367c9a12798c8e9da82a6742f2155df80",
+      "title": "碎片整理",
+      "description": "获得{FocusPower:diff()}点[gold]集中[/gold]。",
+      "excerpts": "  15  \n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<FocusPower>(1m));\n  17  \n  18  \tpublic Defragment()\n  19  \t\t: base(1, CardType.Power, CardRarity.Rare, TargetType.Self)\n  30  \t{\n  31  \t\tbase.DynamicVars[\"FocusPower\"].UpgradeValueBy(1m);\n  32  \t}\n  33  }"
+    },
+    "DemonForm": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/DemonForm.cs",
+      "sha256": "668a291971ddf0f55638f93fab2a87a479598f5a285076dff72b82edbb7dcf7a",
+      "title": "恶魔形态",
+      "description": "在你的回合开始时，获得{StrengthPower:diff()}点[gold]力量[/gold]。",
+      "excerpts": "  15  \n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<StrengthPower>(2m));\n  17  \n  18  \tpublic DemonForm()\n  19  \t\t: base(3, CardType.Power, CardRarity.Rare, TargetType.Self)\n  30  \t{\n  31  \t\tbase.DynamicVars[\"StrengthPower\"].UpgradeValueBy(1m);\n  32  \t}\n  33  }"
+    },
+    "DoomPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/DoomPower.cs",
+      "sha256": "8682f3c38f8d3945684eaf5565ff952d876cbf47072a5cff59f8572e8ec919c4",
+      "title": "DoomPower",
+      "description": "",
+      "excerpts": "  39  \t/// </summary>\n  40  \tpublic static async Task DoomKill(IReadOnlyList<Creature> creatures)\n  41  \t{\n  42  \t\tif (creatures.Count == 0)\n  43  \t\t{\n  56  \t{\n  57  \t\treturn creatures.Where((Creature c) => c.GetPower<DoomPower>()?.IsOwnerDoomed() ?? false).ToList();\n  58  \t}\n  59  \n  60  \t/// <summary>\n  62  \t/// </summary>\n  63  \tpublic bool IsOwnerDoomed()\n  64  \t{\n  65  \t\treturn base.Owner.CurrentHp <= base.Amount;\n  66  \t}\n  69  \t{\n  70  \t\tif (!CombatManager.Instance.IsOverOrEnding && participants.Contains(base.Owner) && !base.Owner.IsDead && IsOwnerDoomed())\n  71  \t\t{\n  72  \t\t\tIReadOnlyList<Creature> doomedCreatures = GetDoomedCreatures(base.Owner.CombatState.GetCreaturesOnSide(side));\n  73  \t\t\tif (doomedCreatures.First() == base.Owner)\n  74  \t\t\t{\n  75  \t\t\t\tawait DoomKill(doomedCreatures);\n  76  \t\t\t}\n  77  \t\t}\n  78  \t}"
+    },
+    "EndOfDays": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/EndOfDays.cs",
+      "sha256": "1708eb91fef4a81e881fb0c0e87e69b62443fec0277ec38fe34642221ae4e5a6",
+      "title": "末日降临",
+      "description": "给予所有敌人{DoomPower:diff()}层[gold]灾厄[/gold]。\n杀死所有[gold]灾厄[/gold]大于等于当前生命值的敌人。",
+      "excerpts": "  21  \n  22  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<DoomPower>(29m));\n  23  \n  24  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<DoomPower>());\n  25  \n  47  \t\t}\n  48  \t\tawait DoomPower.DoomKill(DoomPower.GetDoomedCreatures(base.CombatState.HittableEnemies));\n  49  \t}\n  50  \n  51  \tprotected override void OnUpgrade()\n  52  \t{\n  53  \t\tbase.DynamicVars.Doom.UpgradeValueBy(8m);\n  54  \t}\n  55  }"
+    },
+    "Envenom": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Envenom.cs",
+      "sha256": "a844d07c07afee5265ddc070cfbd5fb37451e52444228702b687d54a6bb5ea39",
+      "title": "涂毒",
+      "description": "每有一次攻击造成未被格挡的伤害，就给予{EnvenomPower:diff()}层[gold]中毒[/gold]。",
+      "excerpts": "  13  {\n  14  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<EnvenomPower>(1m));\n  15  \n  16  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<PoisonPower>());\n  17  \n  30  \t{\n  31  \t\tbase.DynamicVars[\"EnvenomPower\"].UpgradeValueBy(1m);\n  32  \t}\n  33  }"
+    },
+    "FanOfKnives": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/FanOfKnives.cs",
+      "sha256": "5e94917294b3819aa1d87223bf1a6499970a0cb5a2914809287c26a7ab96e339",
+      "title": "刀扇",
+      "description": "[gold]小刀[/gold]现在会攻击所有敌人。\n将{Shivs:diff()}张[gold]小刀[/gold]添加到你的[gold]手牌[/gold]。",
+      "excerpts": "  18  \n  19  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new CardsVar(\"Shivs\", 4));\n  20  \n  21  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromCard<Shiv>());\n  22  \n  47  \t{\n  48  \t\tbase.DynamicVars[\"Shivs\"].UpgradeValueBy(1m);\n  49  \t}\n  50  }"
+    },
+    "Feral": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Feral.cs",
+      "sha256": "d447bba0ac462ade9c23895552101152d1a2dab6aa446f80c7e1884816b1d2ca",
+      "title": "野性",
+      "description": "你每回合打出的{FeralPower:choose(1):第一张|前{FeralPower:diff()}张}\n耗能为0{energyPrefix:energyIcons(1)}的攻击牌，\n会放回你的[gold]手牌[/gold]。",
+      "excerpts": "  12  {\n  13  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<FeralPower>(1m));\n  14  \n  15  \tpublic Feral()\n  16  \t\t: base(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)"
+    },
+    "FiendFire": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/FiendFire.cs",
+      "sha256": "d13c22a1cc57fdc71ceb86811d03c7463b1e12d4984618c36f4228329437a329",
+      "title": "恶魔之焰",
+      "description": "[gold]消耗[/gold]所有[gold]手牌[/gold]。\n每张被[gold]消耗[/gold]的牌造成{Damage:diff()}点伤害。",
+      "excerpts": "  18  {\n  19  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(7m, ValueProp.Move));\n  20  \n  21  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n  22  \n  23  \tprotected override IEnumerable<string> ExtraRunAssetPaths => NGroundFireVfx.AssetPaths;\n  24  \n  39  \t\tfloat scale = 0.8f;\n  40  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(cardCount).FromCard(this)\n  41  \t\t\t.Targeting(cardPlay.Target)\n  42  \t\t\t.BeforeDamage(delegate\n  43  \t\t\t{\n  44  \t\t\t\tNGroundFireVfx nGroundFireVfx = NGroundFireVfx.Create(cardPlay.Target);\n  45  \t\t\t\tif (nGroundFireVfx == null)\n  59  \t{\n  60  \t\tbase.DynamicVars.Damage.UpgradeValueBy(3m);\n  61  \t}\n  62  }"
+    },
+    "Finisher": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Finisher.cs",
+      "sha256": "abf82cba30d51edbc1fe7627c52d3395540395997b7a38245a9eb320e409e14a",
+      "title": "终结技",
+      "description": "在这个回合内每打出过一张攻击牌，就造成{Damage:diff()}点伤害一次。{InCombat:\n（攻击{CalculatedHits:diff()}次）|}",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.Entities.Creatures;\n  20  \n  21  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[4]\n  22  \t{\n  23  \t\tnew DamageVar(6m, ValueProp.Move),\n  24  \t\tnew CalculationBaseVar(0m),\n  25  \t\tnew CalculationExtraVar(1m),\n  26  \t\tnew CalculatedVar(\"CalculatedHits\").WithMultiplier((CardModel card, Creature? _) => CombatManager.Instance.History.CardPlaysFinished.Count((CardPlayFinishedEntry e) => e.HappenedThisTurn(card.CombatState) && e.CardPlay.Card.Type == CardType.Attack && e.CardPlay.Card.Owner == card.Owner))\n  27  \t});\n  28  \n  29  \tpublic Finisher()\n  36  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  37  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount((int)((CalculatedVar)base.DynamicVars[\"CalculatedHits\"]).Calculate(cardPlay.Target)).FromCard(this)\n  38  \t\t\t.Targeting(cardPlay.Target)\n  39  \t\t\t.WithHitVfxNode((Creature t) => NStabVfx.Create(t, facingEnemies: true))\n  40  \t\t\t.WithHitFx(null, null, \"blunt_attack.mp3\")\n  45  \t{\n  46  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  47  \t}\n  48  }"
+    },
+    "FlakCannon": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/FlakCannon.cs",
+      "sha256": "d68a5a73f91af8d75f1d9e65aa6b345575a6dcbb32c2cfb1581ed140a5c02f82",
+      "title": "散射炮",
+      "description": "[gold]消耗[/gold]你所有的状态牌。\n每有一张被[gold]消耗[/gold]的牌，就随机对敌人造成{Damage:diff()}点伤害。{InCombat:\n（攻击{CalculatedHits:diff()}次）|}",
+      "excerpts": "  18  \n  19  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[4]\n  20  \t{\n  21  \t\tnew DamageVar(8m, ValueProp.Move),\n  22  \t\tnew CalculationBaseVar(0m),\n  23  \t\tnew CalculationExtraVar(1m),\n  24  \t\tnew CalculatedVar(\"CalculatedHits\").WithMultiplier((CardModel card, Creature? _) => GetStatuses(card.Owner).Count())\n  25  \t});\n  26  \n  27  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromKeyword(CardKeyword.Exhaust));\n  28  \n  29  \tpublic FlakCannon()\n  30  \t\t: base(2, CardType.Attack, CardRarity.Rare, TargetType.RandomEnemy)\n  41  \t\t}\n  42  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(statusCount).FromCard(this)\n  43  \t\t\t.TargetingRandomOpponents(base.CombatState)\n  44  \t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  45  \t\t\t.Execute(choiceContext);\n  54  \t{\n  55  \t\tbase.DynamicVars.Damage.UpgradeValueBy(3m);\n  56  \t}\n  57  }"
+    },
+    "Flatten": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Flatten.cs",
+      "sha256": "e176507e590ca59da8f374a2a3b7dadb6b09b79b0c2583b28b6e441a2064f0da",
+      "title": "重压",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n如果[gold]奥斯提[/gold]本回合攻击过，则这张牌的耗能变为0{energyPrefix:energyIcons(1)}。",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Commands.Builders;\n   9  using MegaCrit.Sts2.Core.Entities.Cards;\n  24  \n  25  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new OstyDamageVar(12m, ValueProp.Move));\n  26  \n  27  \tprivate bool HasOstyAttackedThisTurn => CombatManager.Instance.History.Entries.OfType<CreatureAttackedEntry>().Any((CreatureAttackedEntry e) => e.Actor == base.Owner.Osty && e.HappenedThisTurn(base.CombatState));\n  28  \n  29  \tpublic Flatten()\n  30  \t\t: base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)\n  38  \t\t{\n  39  \t\t\tawait DamageCmd.Attack(base.DynamicVars.OstyDamage.BaseValue).FromOsty(base.Owner.Osty, this).Targeting(cardPlay.Target)\n  40  \t\t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  41  \t\t\t\t.Execute(choiceContext);\n  42  \t\t}\n  46  \t{\n  47  \t\tbase.DynamicVars.OstyDamage.UpgradeValueBy(4m);\n  48  \t}\n  49  \n  50  \tpublic override Task AfterCardEnteredCombat(CardModel card)\n  51  \t{\n  52  \t\tif (card != this)\n  53  \t\t{"
+    },
+    "Flechettes": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Flechettes.cs",
+      "sha256": "a61e58427508f0528cd6fb9a3168dec451a6b2a05881cf0ea4c7046c972c43b7",
+      "title": "飞镖",
+      "description": "[gold]手牌[/gold]中每有一张技能牌，造成{Damage:diff()}点伤害。{InCombat:\n（攻击{CalculatedHits:diff()}次）|}",
+      "excerpts": "  17  \n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[4]\n  19  \t{\n  20  \t\tnew DamageVar(5m, ValueProp.Move),\n  21  \t\tnew CalculationBaseVar(0m),\n  22  \t\tnew CalculationExtraVar(1m),\n  23  \t\tnew CalculatedVar(\"CalculatedHits\").WithMultiplier((CardModel card, Creature? _) => PileType.Hand.GetPile(card.Owner).Cards.Count((CardModel c) => c.Type == CardType.Skill))\n  24  \t});\n  25  \n  26  \tpublic Flechettes()\n  33  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  34  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount((int)((CalculatedVar)base.DynamicVars[\"CalculatedHits\"]).Calculate(cardPlay.Target)).FromCard(this)\n  35  \t\t\t.Targeting(cardPlay.Target)\n  36  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\", null, \"dagger_throw.mp3\")\n  37  \t\t\t.Execute(choiceContext);\n  41  \t{\n  42  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  43  \t}\n  44  }"
+    },
+    "FocusPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/FocusPower.cs",
+      "sha256": "7eb737066e10aabf6364edbe8869c194c916b287602d6124c918b4a94578fc89",
+      "title": "FocusPower",
+      "description": "",
+      "excerpts": ""
+    },
+    "Furnace": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Furnace.cs",
+      "sha256": "9fbcf33c00789d08cdc6126fc7b7b608dcb8198c74dd38abf6936a429dc75055",
+      "title": "熔炉",
+      "description": "在你的回合开始时，[gold]铸造[/gold]{Forge:diff()}。",
+      "excerpts": "  15  \n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new ForgeVar(5));\n  17  \n  18  \tpublic Furnace()\n  19  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  30  \t{\n  31  \t\tbase.DynamicVars.Forge.UpgradeValueBy(2m);\n  32  \t}\n  33  }"
+    },
+    "GlassOrb": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Orbs/GlassOrb.cs",
+      "sha256": "d2ae920c1b463d0d6fb8d30e8707283fbbee2625bcb5abec3bca3a878c2601cb",
+      "title": "GlassOrb",
+      "description": "",
+      "excerpts": "  38  \t\t\t_passiveVal = Math.Max(0m, _passiveVal - 1m);\n  39  \t\t\tawait CreatureCmd.Damage(choiceContext, targets, passiveVal, ValueProp.Unpowered, base.Owner.Creature);\n  40  \t\t}\n  41  \t}\n  42  \n  49  \t\t}\n  50  \t\tawait CreatureCmd.Damage(playerChoiceContext, enemies, EvokeVal, ValueProp.Unpowered, base.Owner.Creature);\n  51  \t\treturn enemies;\n  52  \t}\n  53  }"
+    },
+    "Glasswork": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Glasswork.cs",
+      "sha256": "2839877755bca869e9e00c6d9f2c5f375c0871fcba79638b08ff71d3aeb36d00",
+      "title": "玻璃工艺",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]生成[/gold]1个[gold]玻璃[/gold]充能球。",
+      "excerpts": "  22  \n  23  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new BlockVar(5m, ValueProp.Move));\n  24  \n  25  \tpublic Glasswork()\n  26  \t\t: base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)\n  38  \t{\n  39  \t\tbase.DynamicVars.Block.UpgradeValueBy(3m);\n  40  \t}\n  41  }"
+    },
+    "GlobalMoveSystem": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/GlobalMoveSystem/GlobalMoveSystem.cs",
+      "sha256": "375db8a6771697d8b98a42ec7713dec30183bea0da1172e247dadb3716dff287",
+      "title": "GlobalMoveSystem",
+      "description": "",
+      "excerpts": "  26              {\n  27                  await karenCard.OnGlobalMove(from, to, source);\n  28              }\n  29          }\n  30  "
+    },
+    "GrandFinale": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/GrandFinale.cs",
+      "sha256": "a26ee84f13f42f9365ad5d332be95c8aacf2db8d8ebfdc02bb5dbefbc7658bb2",
+      "title": "华丽收场",
+      "description": "只有当你的[gold]抽牌堆[/gold]中没有牌时才能打出。对所有敌人造成{Damage:diff()}点伤害。",
+      "excerpts": "  15  {\n  16  \tprotected override bool ShouldGlowGoldInternal => IsPlayable;\n  17  \n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(60m, ValueProp.Move));\n  19  \n  20  \tprotected override bool IsPlayable => PileType.Draw.GetPile(base.Owner).Cards.Count == 0;\n  21  \n  22  \tpublic GrandFinale()\n  23  \t\t: base(0, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)\n  34  \t\t}\n  35  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(base.CombatState)\n  36  \t\t\t.WithHitVfxNode(NGrandFinaleImpactVfx.Create)\n  37  \t\t\t.WithHitFx(null, null, \"blunt_attack.mp3\")\n  38  \t\t\t.Execute(choiceContext);\n  42  \t{\n  43  \t\tbase.DynamicVars.Damage.UpgradeValueBy(15m);\n  44  \t}\n  45  }"
+    },
+    "Hailstorm": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Hailstorm.cs",
+      "sha256": "f0e7fc03b8af26d3a43dd7252b621731ed37b92b7e63dd042607d86258c4fba7",
+      "title": "冰雹风暴",
+      "description": "在你的回合结束时，如果你有[gold]冰霜[/gold]充能球，则对所有敌人造成{HailstormPower:diff()}点伤害。",
+      "excerpts": "  16  \n  17  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<HailstormPower>(6m));\n  18  \n  19  \tpublic Hailstorm()\n  20  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  31  \t{\n  32  \t\tbase.DynamicVars[\"HailstormPower\"].UpgradeValueBy(2m);\n  33  \t}\n  34  }"
+    },
+    "HailstormPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/HailstormPower.cs",
+      "sha256": "c4a12ef6e596fd14dcc13619f18ec7541e50138a1d8860e8649117b9aad72c11",
+      "title": "HailstormPower",
+      "description": "",
+      "excerpts": "  27  \n  28  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DynamicVar(\"FrostOrbs\", 1m));\n  29  \n  30  \tpublic override async Task BeforeSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)\n  31  \t{\n  37  \t\t\t\tFlash();\n  38  \t\t\t\tawait CreatureCmd.Damage(choiceContext, base.CombatState.HittableEnemies, base.Amount, ValueProp.Unpowered, base.Owner);\n  39  \t\t\t}\n  40  \t\t}\n  41  \t}"
+    },
+    "Hang": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Hang.cs",
+      "sha256": "219debc28fd662f8476c1c3685bdfb8fa6611b1c29e96e7fe6416311c9c37ab7",
+      "title": "吊杀",
+      "description": "造成{Damage:diff()}点伤害。\n让所有“吊杀”牌对这名敌人造成的伤害翻倍。",
+      "excerpts": "  14  {\n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(10m, ValueProp.Move));\n  16  \n  17  \tpublic Hang()\n  18  \t\t: base(1, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)\n  24  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  25  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  26  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  27  \t\t\t.Execute(choiceContext);\n  28  \t\tint powerAmount = cardPlay.Target.GetPowerAmount<HangPower>();\n  38  \t{\n  39  \t\tbase.DynamicVars.Damage.UpgradeValueBy(3m);\n  40  \t}\n  41  }"
+    },
+    "HangPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/HangPower.cs",
+      "sha256": "a78303ebec05fd34b3fb9a9302fc2c8913211aa10c4d0b74b597dbfb4eba8bb7",
+      "title": "HangPower",
+      "description": "",
+      "excerpts": ""
+    },
+    "Haunt": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Haunt.cs",
+      "sha256": "0d6bcfd7052b25fc046aeb581111e6e475474d0e018ea5fb25ac4c90e8879362",
+      "title": "纠缠",
+      "description": "每当你打出一张[gold]灵魂[/gold]时，随机一名敌人失去{HpLoss:diff()}点生命。",
+      "excerpts": "  13  {\n  14  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new HpLossVar(6m));\n  15  \n  16  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromCard<Soul>());\n  17  \n  30  \t{\n  31  \t\tbase.DynamicVars.HpLoss.UpgradeValueBy(2m);\n  32  \t}\n  33  }"
+    },
+    "HauntPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/HauntPower.cs",
+      "sha256": "7b1ce29d7e32465160ad5f3b5c21360213feeb7bb945a2eaba71b5e5b99c03ba",
+      "title": "HauntPower",
+      "description": "",
+      "excerpts": "  18  \n  19  \tpublic override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  20  \t{\n  21  \t\tif (cardPlay.Card is Soul && cardPlay.Card.Owner.Creature == base.Owner)\n  22  \t\t{\n  26  \t\t\t\tCreature item = base.Owner.Player.RunState.Rng.CombatTargets.NextItem(hittableEnemies);\n  27  \t\t\t\tawait CreatureCmd.Damage(choiceContext, new global::_003C_003Ez__ReadOnlySingleElementList<Creature>(item), base.Amount, ValueProp.Unblockable | ValueProp.Unpowered, null, null);\n  28  \t\t\t}\n  29  \t\t}\n  30  \t}"
+    },
+    "Haze": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Haze.cs",
+      "sha256": "088a80866ed9bfa6856955df4dea06fa83c07eac097d8f32b647ed298f99f6e7",
+      "title": "迷雾",
+      "description": "给予所有敌人{PoisonPower:diff()}层[gold]中毒[/gold]。",
+      "excerpts": "  20  \n  21  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<PoisonPower>(4m));\n  22  \n  23  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<PoisonPower>());\n  24  \n  57  \t{\n  58  \t\tbase.DynamicVars.Poison.UpgradeValueBy(2m);\n  59  \t}\n  60  }"
+    },
+    "HelixDrill": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/HelixDrill.cs",
+      "sha256": "58954bc6019e2faa631879bd0718c7a69a1bc080fb7b77739b8a95baa7e81a31",
+      "title": "螺旋钻击",
+      "description": "在本回合中，每个被使用的{energyPrefix:energyIcons(1)}，都会使此牌造成{Damage:diff()}点伤害一次。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.Entities.Creatures;\n  20  \n  21  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[4]\n  22  \t{\n  23  \t\tnew DamageVar(3m, ValueProp.Move),\n  24  \t\tnew CalculationBaseVar(0m),\n  25  \t\tnew CalculationExtraVar(1m),\n  26  \t\tnew CalculatedVar(\"CalculatedHits\").WithMultiplier(delegate(CardModel card, Creature? _)\n  27  \t\t{\n  28  \t\t\tif (card.Pile == null)\n  29  \t\t\t{\n  31  \t\t\t}\n  32  \t\t\tint num = (from e in CombatManager.Instance.History.Entries.OfType<EnergySpentEntry>()\n  33  \t\t\t\twhere e.HappenedThisTurn(card.CombatState) && e.Actor.Player == card.Owner\n  34  \t\t\t\tselect e).Sum((EnergySpentEntry c) => c.Amount);\n  35  \t\t\tif (card.Pile.Type == PileType.Play)\n  52  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  53  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount((int)((CalculatedVar)base.DynamicVars[\"CalculatedHits\"]).Calculate(cardPlay.Target)).FromCard(this)\n  54  \t\t\t.Targeting(cardPlay.Target)\n  55  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  56  \t\t\t.Execute(choiceContext);\n  60  \t{\n  61  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  62  \t}\n  63  }"
+    },
+    "Hellraiser": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Hellraiser.cs",
+      "sha256": "48e8afb46028a32de0a7d01dea6a0269a9d4d079723e2ed4664e2afe451330c8",
+      "title": "地狱狂徒",
+      "description": "每当你抽到名字中有“打击”的牌时，对一名随机敌人打出这张牌。",
+      "excerpts": ""
+    },
+    "HighFive": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/HighFive.cs",
+      "sha256": "306734b3e1d637656f91369c90d0fa185ac07bd369387bb63d0da36eaeb8d4cc",
+      "title": "击掌",
+      "description": "[gold]奥斯提[/gold]对所有敌人\n造成{OstyDamage:diff()}点伤害并给予它们\n{VulnerablePower:diff()}层[gold]易伤[/gold]。",
+      "excerpts": "  17  \n  18  \tprotected override bool IsPlayable => !base.Owner.IsOstyMissing;\n  19  \n  20  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  21  \t{\n  22  \t\tnew OstyDamageVar(11m, ValueProp.Move),\n  23  \t\tnew PowerVar<VulnerablePower>(2m)\n  24  \t});\n  25  \n  26  \tprotected override HashSet<CardTag> CanonicalTags => new HashSet<CardTag> { CardTag.OstyAttack };\n  38  \t\t{\n  39  \t\t\tawait DamageCmd.Attack(base.DynamicVars.OstyDamage.BaseValue).FromOsty(base.Owner.Osty, this).TargetingAllOpponents(base.CombatState)\n  40  \t\t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  41  \t\t\t\t.Execute(choiceContext);\n  42  \t\t\tawait PowerCmd.Apply<VulnerablePower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars.Vulnerable.BaseValue, base.Owner.Creature, this);\n  47  \t{\n  48  \t\tbase.DynamicVars.OstyDamage.UpgradeValueBy(2m);\n  49  \t\tbase.DynamicVars.Vulnerable.UpgradeValueBy(1m);\n  50  \t}\n  51  }"
+    },
+    "Hologram": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Hologram.cs",
+      "sha256": "359226c94f37b81d2c4021fc3983a10fa42048afeaca3121dec58d4cdcff2abf",
+      "title": "全息影像",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n将[gold]弃牌堆[/gold]中的一张牌放入你的[gold]手牌[/gold]。",
+      "excerpts": "  16  \n  17  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new BlockVar(3m, ValueProp.Move));\n  18  \n  19  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n  20  \n  21  \tpublic Hologram()\n  22  \t\t: base(1, CardType.Skill, CardRarity.Common, TargetType.Self)\n  37  \t{\n  38  \t\tbase.DynamicVars.Block.UpgradeValueBy(2m);\n  39  \t\tRemoveKeyword(CardKeyword.Exhaust);\n  40  \t}\n  41  }"
+    },
+    "HowlFromBeyond": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/HowlFromBeyond.cs",
+      "sha256": "140f3bc98dd8d3634fb50c6a9101478c07857598a6449412956763ecf1ed65e0",
+      "title": "彼岸咆哮",
+      "description": "对所有敌人造成{Damage:diff()}点伤害。\n在你的回合结束时，如果这张牌在你的[gold]消耗牌堆[/gold]中，则将其打出。",
+      "excerpts": "  14  {\n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(16m, ValueProp.Move));\n  16  \n  17  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromKeyword(CardKeyword.Exhaust));\n  18  \n  19  \tpublic HowlFromBeyond()\n  20  \t\t: base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)\n  25  \t{\n  26  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(base.CombatState)\n  27  \t\t\t.WithAttackerAnim(\"Cast\", base.Owner.Character.CastAnimDelay)\n  28  \t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"heavy_attack.mp3\")\n  29  \t\t\t.Execute(choiceContext);\n  31  \n  32  \tpublic override async Task AfterAutoPostPlayPhaseEntered(PlayerChoiceContext choiceContext, Player player)\n  33  \t{\n  34  \t\tCardPile? pile = base.Pile;\n  35  \t\tif (pile != null && pile.Type == PileType.Exhaust && player == base.Owner)\n  42  \t{\n  43  \t\tbase.DynamicVars.Damage.UpgradeValueBy(5m);\n  44  \t}\n  45  }"
+    },
+    "Hyperbeam": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Hyperbeam.cs",
+      "sha256": "ea830fe96ac227a59384790af3a8d566b7fd02c808238a0ce9cbe07875c00b75",
+      "title": "超能光束",
+      "description": "对所有敌人造成{Damage:diff()}点伤害。\n失去{FocusPower:diff()}点[gold]集中[/gold]。",
+      "excerpts": "  19  {\n  20  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  21  \t{\n  22  \t\tnew DamageVar(28m, ValueProp.Move),\n  23  \t\tnew PowerVar<FocusPower>(3m)\n  24  \t});\n  25  \n  26  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<FocusPower>());\n  34  \t{\n  35  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(base.CombatState)\n  36  \t\t\t.WithAttackerAnim(\"Cast\", 0.5f)\n  37  \t\t\t.BeforeDamage(async delegate\n  38  \t\t\t{\n  39  \t\t\t\tList<Creature> enemies = base.CombatState.Enemies.Where((Creature e) => e.IsAlive).ToList();\n  40  \t\t\t\tNHyperbeamVfx nHyperbeamVfx = NHyperbeamVfx.Create(base.Owner.Creature, enemies.Last());\n  60  \t{\n  61  \t\tbase.DynamicVars.Damage.UpgradeValueBy(8m);\n  62  \t}\n  63  }"
+    },
+    "Inferno": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Inferno.cs",
+      "sha256": "61a885725e242acb055502b51479c7fc9f9410aaa627f67812f61af87de27919",
+      "title": "狱火",
+      "description": "在你的回合开始时，失去1点生命。\n每当你在你的回合内失去生命时，对所有敌人造成{InfernoPower:diff()}点伤害。",
+      "excerpts": "  12  {\n  13  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<InfernoPower>(6m));\n  14  \n  15  \tpublic Inferno()\n  16  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  22  \t\tawait CreatureCmd.TriggerAnim(base.Owner.Creature, \"PowerUp\", base.Owner.Character.PowerUpAnimDelay);\n  23  \t\t(await PowerCmd.Apply<InfernoPower>(choiceContext, base.Owner.Creature, base.DynamicVars[\"InfernoPower\"].BaseValue, base.Owner.Creature, this))?.IncrementSelfDamage();\n  24  \t}\n  25  \n  26  \tprotected override void OnUpgrade()\n  27  \t{\n  28  \t\tbase.DynamicVars[\"InfernoPower\"].UpgradeValueBy(3m);\n  29  \t}\n  30  }"
+    },
+    "InfernoPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/InfernoPower.cs",
+      "sha256": "37f6cc144213a345db6ddb7e2b4e91c70ea67ac0c52a6ef529b3f1fac28b61e2",
+      "title": "InfernoPower",
+      "description": "",
+      "excerpts": "  23  \n  24  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(\"SelfDamage\", 0m, ValueProp.Unblockable | ValueProp.Unpowered));\n  25  \n  26  \tpublic override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)\n  27  \t{\n  28  \t\tif (player == base.Owner.Player)\n  29  \t\t{\n  32  \t\t\tDamageVar damageVar = (DamageVar)base.DynamicVars[\"SelfDamage\"];\n  33  \t\t\tawait CreatureCmd.Damage(choiceContext, base.Owner, damageVar.BaseValue, damageVar.Props, base.Owner, null);\n  34  \t\t}\n  35  \t}\n  36  \n  47  \t\t}\n  48  \t\tawait CreatureCmd.Damage(choiceContext, base.CombatState.HittableEnemies, base.Amount, ValueProp.Unpowered, base.Owner, null);\n  49  \t}\n  50  \n  51  \tpublic void IncrementSelfDamage()\n  52  \t{\n  53  \t\tAssertMutable();\n  54  \t\tbase.DynamicVars[\"SelfDamage\"].BaseValue++;"
+    },
+    "InfiniteBlades": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/InfiniteBlades.cs",
+      "sha256": "ec83b9606e634e3d0217b894b66962aecf704fc407ad1e3e025262ff5ec17349",
+      "title": "无尽刀刃",
+      "description": "在你的回合开始时，在你的[gold]手牌[/gold]中加入1张[gold]小刀[/gold]。",
+      "excerpts": ""
+    },
+    "Inflame": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Inflame.cs",
+      "sha256": "adacf6eebe8337b67563e62dfee2bb3370fb65ff99bb5072ae2360cf966ad810",
+      "title": "燃烧",
+      "description": "获得{StrengthPower:diff()}点[gold]力量[/gold]。",
+      "excerpts": "  17  {\n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<StrengthPower>(2m));\n  19  \n  20  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<StrengthPower>());\n  21  \n  42  \t{\n  43  \t\tbase.DynamicVars[\"StrengthPower\"].UpgradeValueBy(1m);\n  44  \t}\n  45  }"
+    },
+    "IroncladCardPool": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.CardPools/IroncladCardPool.cs",
+      "sha256": "98aa14d13c962dab79573dfcae53ace20553d7fa6d2828193d9f379e3dce8e2c",
+      "title": "IroncladCardPool",
+      "description": "",
+      "excerpts": ""
+    },
+    "Juggernaut": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Juggernaut.cs",
+      "sha256": "7b2ac0d9d3e9f2771b6d6b15876cf99ff589a380ce4b4d72e0c2c214a2451579",
+      "title": "势不可当",
+      "description": "每当你获得[gold]格挡[/gold]时，对随机敌人造成{JuggernautPower:diff()}点伤害。",
+      "excerpts": "  15  \n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<JuggernautPower>(6m));\n  17  \n  18  \tpublic Juggernaut()\n  19  \t\t: base(2, CardType.Power, CardRarity.Rare, TargetType.Self)\n  30  \t{\n  31  \t\tbase.DynamicVars[\"JuggernautPower\"].UpgradeValueBy(2m);\n  32  \t}\n  33  }"
+    },
+    "JuggernautPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/JuggernautPower.cs",
+      "sha256": "0b1b726e0ef4b220d56194110286b4cda5bab270ae48615298804f5e717acae2",
+      "title": "JuggernautPower",
+      "description": "",
+      "excerpts": "  25  \t\t\t\tFlash();\n  26  \t\t\t\tawait CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), target, base.Amount, ValueProp.Unpowered, base.Owner, null);\n  27  \t\t\t}\n  28  \t\t}\n  29  \t}"
+    },
+    "KarenBackToBackCard": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenBackToBackCard.cs",
+      "sha256": "f7bd2187f8cd5829b1dda7cfa502c0224c9c098ab0ffd532e137f847c0608d11",
+      "title": "背靠背",
+      "description": "造成[gold]约定牌堆[/gold]中卡牌数量{ExtraDamage:diff()}倍的伤害。{InCombat:\n（造成{CalculatedDamage:diff()}点伤害。）|}",
+      "excerpts": "  23  \n  24      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  25      [\n  26          new CalculationBaseVar(0m),\n  27          new ExtraDamageVar(4m),\n  28          new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, _) => PromisePileManager.GetCount(card.Owner)),\n  29      ];\n  30  \n  31      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  33          if (cardPlay.Target == null) return;\n  34          await DamageCmd.Attack(DynamicVars.CalculatedDamage)\n  35              .FromPlayedCard(this, cardPlay)\n  36              .Targeting(cardPlay.Target)\n  37              .WithHitFx(VfxCmd.slashPath)\n  42      {\n  43          DynamicVars.ExtraDamage.UpgradeValueBy(2m);\n  44      }\n  45  }"
+    },
+    "KarenBanana": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/token/KarenBanana.cs",
+      "sha256": "3f3dc30ae88846176cdd0522180ca4c7f4afa94aeac308e33a728818f83856f8",
+      "title": "banana晚餐",
+      "description": "获得{StrengthPower:diff()}点[gold]力量[/gold]。",
+      "excerpts": "  22  \n  23      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  24      [\n  25          new PowerVar<StrengthPower>(8m)\n  26      ];\n  27  \n  28      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  39      {\n  40          DynamicVars.Strength.UpgradeValueBy(2m);\n  41      }\n  42  }"
+    },
+    "KarenBananaMuffin": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/strength/KarenBananaMuffin.cs",
+      "sha256": "1f41455d416246e41f15f2606aa1f7cb029e3b0f3524c57c03caf648685c9599",
+      "title": "Banana松饼",
+      "description": "获得{StrengthPower:diff()}点[gold]临时力量[/gold]。\n抽{Cards:diff()}张牌。",
+      "excerpts": "  20  \n  21      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  22      [\n  23          new PowerVar<StrengthPower>(3m),\n  24          new CardsVar(1)\n  25      ];\n  26  \n  27      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  40      {\n  41          DynamicVars.Cards.UpgradeValueBy(1m);\n  42      }\n  43  }"
+    },
+    "KarenBurn": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/neutral/KarenBurn.cs",
+      "sha256": "c6015717cc6fde4e9aab84e1854ad9ce451477168105442a1667db9455d21571",
+      "title": "燃烧吧燃烧吧",
+      "description": "从[gold]约定牌堆[/gold]抽出的牌将被[gold]升级[/gold]，且被打出时[gold]消耗[/gold]。",
+      "excerpts": ""
+    },
+    "KarenCardPool": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/CardPools/KarenCardPool.cs",
+      "sha256": "ac6e2c318d4b5521171ec97dfb526a1b239f4295a9f1e021cb319c2e9910eb76",
+      "title": "KarenCardPool",
+      "description": "",
+      "excerpts": ""
+    },
+    "KarenCarryingGuilt": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenCarryingGuilt.cs",
+      "sha256": "cbc090f7ff118e6235af5bb75ce354749defed1c5a9e8cc6b91f66917e519151",
+      "title": "我们犯下的罪过",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n本局游戏中每耗尽一张非同名的[gold]闪耀[/gold]牌，伤害增加{ExtraDamage:diff()}点。{ShinePileUniqueCount:choose(0):|\n(已耗尽{ShinePileUniqueCount}张)}",
+      "excerpts": "  34  \n  35      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  36      [\n  37          new CalculationBaseVar(12m),\n  38          new ExtraDamageVar(4m),\n  39          new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, _) => ShinePileManager.GetDisposedShineCardUniqueCount(card.Owner))\n  40      ];\n  41  \n  42      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  47          await Cmd.Wait(0.25f);\n  48          await DamageCmd.Attack(DynamicVars.CalculatedDamage)\n  49              .FromPlayedCard(this, cardPlay)\n  50              .Targeting(cardPlay.Target)\n  51              //.WithHitFx(VfxCmd.heavyBluntPath)\n  56      {\n  57          DynamicVars.CalculationBase.UpgradeValueBy(3m);\n  58          DynamicVars.ExtraDamage.UpgradeValueBy(1m);\n  59      }\n  60  \n  61      protected override void AddExtraArgsToDescription(LocString description)\n  62      {\n  63          var count = IsCanonical ? 0 : ShinePileManager.GetDisposedShineCardUniqueCount(Owner);\n  64          description.Add(\"ShinePileUniqueCount\", count);\n  65      }\n  66  "
+    },
+    "KarenContinue": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/token/KarenContinue.cs",
+      "sha256": "fd6cd224b03a135e8932d3351c56908ae6f4e74185d86525b60918f1992b7e4e",
+      "title": "续演",
+      "description": "造成{Damage:diff()}点伤害。",
+      "excerpts": "  24      [\n  25          CardKeyword.Exhaust\n  26      ];\n  27  \n  28      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  29      [\n  30          new DamageVar(4m, ValueProp.Move)\n  31      ];\n  32  \n  33      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  35          ArgumentNullException.ThrowIfNull(cardPlay.Target);\n  36          await DamageCmd.Attack(DynamicVars.Damage.BaseValue)\n  37              .FromPlayedCard(this, cardPlay)\n  38              .Targeting(cardPlay.Target)\n  39              .WithHitFx(VfxCmd.slashPath)\n  44      {\n  45          DynamicVars.Damage.UpgradeValueBy(2);\n  46      }\n  47  }"
+    },
+    "KarenContinue02": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenContinue02.cs",
+      "sha256": "37e9dd9d33c6c58c3aaac5372696e4da23533276e088963ec1320276d4fb2377",
+      "title": "永无结束的命运舞台",
+      "description": "造成{Damage:diff()}点伤害。\n能被多次[gold]升级[/gold]。",
+      "excerpts": "  29  \n  30      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  31      [\n  32          new DamageVar(12m, ValueProp.Move)\n  33      ];\n  34  \n  35      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  38  \n  39          await DamageCmd.Attack(DynamicVars.Damage.BaseValue)\n  40              .FromPlayedCard(this, cardPlay)\n  41              .Targeting(cardPlay.Target)\n  42              .WithHitFx(VfxCmd.slashPath)\n  47      {\n  48          DynamicVars.Damage.UpgradeValueBy(4m + _upgradeCount);\n  49          _upgradeCount++;\n  50      }\n  51  "
+    },
+    "KarenCounter": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/token/KarenCounter.cs",
+      "sha256": "e7ee231c4f6941a7c3967f2a36f191f2bd172c34b292621c9843c3e68265e6d0",
+      "title": "回击",
+      "description": "对所有敌人造成{Damage:diff()}点伤害三次。",
+      "excerpts": "  18  {\n  19      public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];\n  20      public KarenCounter() : base(1, CardType.Attack, CardRarity.Token, TargetType.AllEnemies)\n  21      {\n  22      }\n  23  \n  24      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  25      [\n  26          new DamageVar(4m, ValueProp.Move)\n  27      ];\n  28  \n  29      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  31          if (CombatState == null) return;\n  32          await DamageCmd.Attack(DynamicVars.Damage.BaseValue)\n  33                  .FromPlayedCard(this, cardPlay)\n  34                  .WithHitCount(3)\n  35                  .TargetingAllOpponents(CombatState)\n  41      {\n  42          DynamicVars.Damage.UpgradeValueBy(2m);\n  43      }\n  44  }"
+    },
+    "KarenDebut": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenDebut.cs",
+      "sha256": "44a74818b489380d1c45fd9b9c66690bdc9432a130c73c8c1aa6913d64162db5",
+      "title": "出场",
+      "description": "对所有敌人造成{Damage:diff()}点伤害{Repeat:diff()}次。",
+      "excerpts": "  24  \n  25      protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]\n  26      {\n  27          new DamageVar(3m, ValueProp.Move),\n  28          new RepeatVar(3)\n  29      };\n  30  \n  31      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  34  \n  35          await DamageCmd.Attack(DynamicVars.Damage.BaseValue)\n  36              .WithHitCount(DynamicVars.Repeat.IntValue)\n  37              .FromPlayedCard(this, cardPlay)\n  38              .TargetingAllOpponents(CombatState)\n  44      {\n  45          DynamicVars.Repeat.UpgradeValueBy(1m);\n  46      }\n  47  }"
+    },
+    "KarenEatTogether": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/strength/KarenEatTogether.cs",
+      "sha256": "13fc46883d93dff5f3541c4735fbfd1f51a5b2ca4923a02f860b59f4e03c3741",
+      "title": "一起吃饭吧",
+      "description": "获得{StrengthPower:diff()}点[gold]临时力量[/gold]。\n[gold]保留力量[/gold]{Turns}回合。",
+      "excerpts": "  27  \n  28      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  29      [\n  30          new PowerVar<StrengthPower>(3m),\n  31          new DynamicVar(\"Turns\", 1m)\n  32      ];\n  33  \n  34      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  54      {\n  55          DynamicVars.Strength.UpgradeValueBy(1m);\n  56      }\n  57  }"
+    },
+    "KarenFinancier": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/relic/KarenFinancier.cs",
+      "sha256": "67c0029fa62867da1eda3bc3dbc135ecd8c4cec3faa985a3ba59d519e47e426c",
+      "title": "Banana费南雪",
+      "description": "获得{StrengthPower:diff()}点[gold]力量[/gold]。\n每两回合[gold]保留力量[/gold]1回合。",
+      "excerpts": "  23  \n  24      protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<StrengthPower>(1m)];\n  25  \n  26      protected override HashSet<CardTag> CanonicalTags => [KarenCustomEnum.RetainTmpStrength];\n  27  "
+    },
+    "KarenGeer": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/neutral/KarenGeer.cs",
+      "sha256": "e1cc44c30ecb9e7307fb24b0fbb13decedd54392bf89d202e59ec2fa1e1cd47c",
+      "title": "命运的齿轮",
+      "description": "回合开始时，从[gold]约定牌堆[/gold]中选择1张牌打出。",
+      "excerpts": ""
+    },
+    "KarenGeerPower": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Powers/KarenGeerPower.cs",
+      "sha256": "a64b44f28dda43b9a254eac2d49cc6e42a882e233226bb6e54777e05af34454f",
+      "title": "KarenGeerPower",
+      "description": "",
+      "excerpts": "  19  \n  20      public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)\n  21      {\n  22          if (player.Creature != Owner) return;\n  23  "
+    },
+    "KarenLastWord": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/neutral/KarenLastWord.cs",
+      "sha256": "606822c6d3307725589b0448d7e200117b4ca38c6e654b47748a9cb80b9040fa",
+      "title": "最后的台词",
+      "description": "[gold]约定牌堆[/gold]之外只有这张牌时才能打出。\n对所有敌人造成{Damage:diff()}点伤害。",
+      "excerpts": "  31  \n  32      protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(999, ValueProp.Move)];\n  33  \n  34      protected override IEnumerable<IHoverTip> ExtraHoverTips =>\n  35          [new HoverTip(\n  41      {\n  42          if (!Condition(base.Owner, this)) { return; }\n  43          if (CombatState == null) return;\n  44  \n  45          // Cmd.Wait skips Instant/non-interactive play; skip the cutscene with it.\n  68  \n  69          await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromPlayedCard(this, cardPlay).TargetingAllOpponents(CombatState)\n  70              //.WithHitFx(VfxCmd.slashPath)\n  71              .Execute(choiceContext);\n  72      }\n  73  \n  74      protected override bool IsPlayable => Condition(base.Owner, this);\n  75  \n  76      // 抽牌堆，弃牌堆，手牌中，最多只有这张牌\n  77      private static bool Condition(Player player, CardModel card)\n  78      {\n  79          var hand = PileType.Hand.GetPile(player);\n  80          if (hand.Cards.Any(c => c != card)) return false;\n  95      {\n  96          DynamicVars.Damage.UpgradeValueBy(9000m);\n  97      }\n  98  }"
+    },
+    "KarenPastAndFuture": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenPastAndFuture.cs",
+      "sha256": "bda9c49ca8c39efc92385fa69c012d9da8414e2e9625e2e38bc00e94f225e162",
+      "title": "过去与未来",
+      "description": "每从[gold]约定牌堆[/gold]中抽出1张牌，获得{StrengthPower:diff()}点[gold]临时力量[/gold]。",
+      "excerpts": "  22  \n  23      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  24      [\n  25          new PowerVar<StrengthPower>(1m)\n  26      ];\n  27  \n  28      public override IEnumerable<CardTag> Tags => [KarenCustomEnum.TmpStrength, KarenCustomEnum.PromisePileRelated];"
+    },
+    "KarenPromisePilePower": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Powers/KarenPromisePilePower.cs",
+      "sha256": "592abdce8c1910db6e2a59957d8450557879fc71d66ae108f55833807710ff35",
+      "title": "KarenPromisePilePower",
+      "description": "",
+      "excerpts": "  31      Void = 1 << 0,                   // 虚空模式：交互重定向到抽牌堆\n  32      InfiniteReinforcement = 1 << 1,  // 无限强化：约定牌堆始终为10张续演\n  33      Burn = 1 << 2,          // 从约定牌堆抽出的牌升级且打出时消耗\n  34      PastAndFuture = 1 << 3, // 从约定牌堆抽牌时获得临时力量\n  35  }\n  38  /// 约定牌堆计数 Power，显示约定牌堆中的卡牌数量及卡牌列表\n  39  /// 支持多种 Mode：Void、InfiniteReinforcement、UpgradeOnDraw、ExhaustOnPlay\n  40  /// Mode 可以同时激活\n  41  /// </summary>\n  42  public sealed class KarenPromisePilePower : FakeAmountPower\n  53      /// <summary>判断是否处于指定 Mode</summary>\n  54      public bool IsInMode(PromisePileMode mode) => (_activeModes & mode) == mode;\n  55  \n  56      /// <summary>进入指定 Mode（支持组合）</summary>\n  57      public void EnterMode(PromisePileMode mode)\n  71      // ===== 便捷属性 =====\n  72      public bool IsVoidMode => IsInMode(PromisePileMode.Void);\n  73      public bool IsInfiniteReinforcement => IsInMode(PromisePileMode.InfiniteReinforcement);\n  74      public bool IsBurnMode => IsInMode(PromisePileMode.Burn);\n  75      public bool IsPastAndFutureMode => IsInMode(PromisePileMode.PastAndFuture);\n  76      public decimal PastAndFutureAmount => _pastAndFutureAmount;\n  77  \n  78      public void AddPastAndFutureAmount(decimal amount)\n  91      /// <summary>当约定牌堆数量为0时不显示数字</summary>\n  92      public override bool ShowFakeAmount => FakeAmount > 0 && !IsVoidMode && !IsInfiniteReinforcement;\n  93  \n  94      /// <summary>更新约定牌堆卡牌名列表（升级牌名带 +）</summary>\n  95      public void UpdateCount()\n 119              // Void 模式和 Infinite 模式下不显示卡牌列表\n 120              if (IsVoidMode || IsInfiniteReinforcement)\n 121                  yield break;\n 122  \n 123              if (_cardNames.Count == 0) yield break;\n 146  \n 147          if (IsInMode(PromisePileMode.Void))\n 148              modes.Add(Tips.PromisePilePowerModeVoid.GetFormattedText());\n 149          if (IsInMode(PromisePileMode.InfiniteReinforcement))\n 150              modes.Add(Tips.PromisePilePowerModeInfinite.GetFormattedText());\n 151          if (IsInMode(PromisePileMode.Burn))\n 152              modes.Add(Tips.PromisePilePowerModeBurn.GetFormattedText());\n 153          if (IsInMode(PromisePileMode.PastAndFuture))\n 154              modes.Add(LocManager.Instance.SmartFormat(Tips.PromisePilePowerModePastAndFuture, new Dictionary<string, object> { [\"Amount\"] = PastAndFutureAmount }));\n 155  \n 156          return string.Join(\"\\n\", modes);\n 177          CardCmd.Upgrade(card);\n 178          if (!card.Keywords.Contains(CardKeyword.Exhaust))\n 179          {\n 180              card.AddKeyword(CardKeyword.Exhaust);\n 181          }\n 182          MarkBurnDraw(card);\n 183          NCard.FindOnTable(card)?.UpdateVisuals(card.Pile?.Type ?? PileType.None, CardPreviewMode.Normal);\n 203  \n 204      public override async Task OnCardRemovedFromPromisePile(CardModel card)\n 205      {\n 206          if (card.Owner != Owner?.Player) return;\n 207  \n 208          if (IsInMode(PromisePileMode.Burn))\n 209          {\n 210              AddBurnEffect(card);\n 211          }\n 212          if (IsInMode(PromisePileMode.PastAndFuture))\n 213          {\n 214              // 特效更新\n 215              if (Owner.Player is Player player) KarenPastAndFutureRingVfxManager.Pulse(player);"
+    },
+    "KarenReady": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenReady.cs",
+      "sha256": "337340b3e778c350e2c6b1d5e4e822dd0e8b1a53e2d3411a110013f5a6396759",
+      "title": "准备完成",
+      "description": "获得{StrengthPower:diff()}点[gold]力量[/gold]。\n抽1张牌。",
+      "excerpts": "  26      public override IEnumerable<CardKeyword> CanonicalKeywords =>\n  27          [CardKeyword.Innate, CardKeyword.Exhaust];\n  28  \n  29      protected override IEnumerable<IHoverTip> ExtraHoverTips =>\n  30      [\n  33  \n  34      protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]\n  35      {\n  36          new PowerVar<StrengthPower>(1m)\n  37      };\n  38  \n  39      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  46      {\n  47          DynamicVars.Strength.UpgradeValueBy(1m);\n  48      }\n  49  }"
+    },
+    "KarenRewrite": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenRewrite.cs",
+      "sha256": "f94126268bd058007ccc2c793025a7e21f025822f89ba46f1d58c3985b6abe1f",
+      "title": "续写",
+      "description": "造成{Damage:diff()}点伤害。\n打出所有耗尽的[gold]续写[/gold]。{InCombat:\n（已耗尽{Cnt}张。）|}",
+      "excerpts": "  34  \n  35      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  36      [\n  37          new DamageVar(10m, ValueProp.Move)\n  38      ];\n  39  \n  40      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  45  \n  46          await DamageCmd.Attack(DynamicVars.Damage.BaseValue)\n  47              .FromPlayedCard(this, cardPlay)\n  48              .Targeting(cardPlay.Target)\n  49              .WithHitFx(VfxCmd.slashPath)\n  57          var count = shineCards.Count;\n  58          for (int skip = 0; skip < count; skip++)\n  59          {\n  60              // 打出所有已经耗尽的此牌\n  61              var clones = new List<CardModel>();\n  62              foreach (var card in shineCards.Skip(skip))\n  63              {\n  64                  var clone = CombatState.CloneCard(card);\n  65                  AccessTools.PropertySetter(typeof(CardModel), \"IsDupe\").Invoke(clone, [true]);\n  79      {\n  80          DynamicVars.Damage.UpgradeValueBy(4m);\n  81      }\n  82  \n  83      protected override void AddExtraArgsToDescription(LocString description)\n  88          var cnt = ShinePileManager.GetShinePile(Owner).Cards.Where(card => card is KarenRewrite).Count();\n  89          description.Add(new DynamicVar(\"Cnt\", cnt));\n  90      }\n  91  }"
+    },
+    "KarenShineStrikeBarrage": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenShineStrikeBarrage.cs",
+      "sha256": "f3a2a84a91e2b481bb8e888c79d9116834868ad138784d5e37922bfee3fda3d7",
+      "title": "用你的闪耀贯穿我吧",
+      "description": "造成{Damage:diff()}点伤害{Repeat:diff()}次。",
+      "excerpts": "  25  \n  26      protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]\n  27      {\n  28          new DamageVar(3m, ValueProp.Move),\n  29          new RepeatVar(4)\n  30      };\n  31  \n  32      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  35  \n  36          await DamageCmd.Attack(DynamicVars.Damage.BaseValue)\n  37              .WithHitCount(DynamicVars.Repeat.IntValue)\n  38              .FromPlayedCard(this, cardPlay)\n  39              .Targeting(cardPlay.Target)\n  45      {\n  46          DynamicVars.Repeat.UpgradeValueBy(1m);\n  47      }\n  48  }"
+    },
+    "KarenSmallSnack": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenSmallSnack.cs",
+      "sha256": "08b1bf0973c13e6294d475734cb9c483784985412a6f141db00eb223d6a33a7a",
+      "title": "Banana什锦",
+      "description": "获得{StrengthPower:diff()}点[gold]临时力量[/gold]。\n回合结束时如果这张牌在[gold]约定牌堆[/gold]中，变化为[gold]banana晚餐{IfUpgraded:show:+|}[/gold]。",
+      "excerpts": "  29  \n  30      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  31      [\n  32          new PowerVar<StrengthPower>(8m)\n  33      ];\n  34  \n  35      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  44  \n  45      public override async Task OnTurnEndInPromisePile()\n  46      {\n  47          if (CombatState == null) return;\n  48  \n  59      {\n  60          DynamicVars.Strength.UpgradeValueBy(2m);\n  61      }\n  62  }"
+    },
+    "KarenSpin": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/globalMove/KarenSpin.cs",
+      "sha256": "db531fcc9e2b50d76ba693fea35499845bb5cb75f562d79a936001afd962bed2",
+      "title": "旋转",
+      "description": "造成{Damage:diff()}点伤害。\n此牌在牌堆之间移动时，在本场战斗中伤害增加{Increase:diff()}。",
+      "excerpts": "  25  \n  26      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  27      [\n  28          new DamageVar(5m, ValueProp.Move),\n  29          new DynamicVar(IncreaseVarName, 2m)\n  30      ];\n  31  \n  32      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  35  \n  36          await DamageCmd.Attack(DynamicVars.Damage.BaseValue)\n  37              .FromPlayedCard(this, cardPlay)\n  38              .Targeting(cardPlay.Target)\n  39              .WithHitFx(VfxCmd.slashPath)\n  44      {\n  45          DynamicVars[IncreaseVarName].UpgradeValueBy(1m);\n  46      }\n  47  \n  48      protected override void AfterDowngraded()\n  54  \n  55      public override async Task OnGlobalMove(PileType from, PileType to, AbstractModel? source)\n  56      {\n  57          // 增加伤害\n  58          decimal increase = DynamicVars[IncreaseVarName].BaseValue;\n  59          BuffDamage(increase);\n  60          MainFile.Logger.Info($\"[KarenSpin] 牌堆移动: {from} -> {to}，伤害+{increase}，当前总伤害: {DynamicVars.Damage.BaseValue}\");\n  61      }\n  62  \n  63      /// <summary>增加本张卡牌的伤害值</summary>\n  64      private void BuffDamage(decimal extraDamage)\n  65      {\n  66          DynamicVars.Damage.BaseValue += extraDamage;\n  67          _extraDamageFromMoves += extraDamage;"
+    },
+    "KarenStageReproduce": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenStageReproduce.cs",
+      "sha256": "ab5484ade3a5cd843a719a823c6abe1e7bccdca775fa791229bfc344926ba9cd",
+      "title": "命运舞台的再生产",
+      "description": "以无限的[gold]续演[/gold]充满[gold]约定牌堆[/gold]。",
+      "excerpts": "  30      {\n  31          await PromisePileCmd.EnterMode(Owner, PromisePileMode.InfiniteReinforcement);\n  32      }\n  33  \n  34      protected override void OnUpgrade()"
+    },
+    "KarenStarlight02Card": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenStarlight02Card.cs",
+      "sha256": "48b921af0e5248064b95760e8eca4d5d6489ce1cc3e9e1a835285003bfc55577",
+      "title": "Starlight第二幕",
+      "description": "打出的[gold]闪耀[/gold]牌会额外打出{KarenStarlight02Power:diff()}次，然后耗尽闪耀值。",
+      "excerpts": "  18  {\n  19      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  20      [\n  21          new PowerVar<KarenStarlight02Power>(2m)\n  22      ];\n  23  \n  24      public override IEnumerable<CardTag> Tags => [KarenCustomEnum.ShineRelated];\n  38      {\n  39          //DynamicVars[nameof(KarenStarlight02Power)].UpgradeValueBy(1m);\n  40          EnergyCost.UpgradeBy(-1);\n  41      }\n  42  }"
+    },
+    "KarenStarlight02Power": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Powers/KarenStarlight02Power.cs",
+      "sha256": "e58a5d34aa1140407936b1c7d01968f237cefbcb3054f8083e7c92c991968c42",
+      "title": "KarenStarlight02Power",
+      "description": "",
+      "excerpts": "   1  using MegaCrit.Sts2.Core.Combat;\n   2  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   3  using MegaCrit.Sts2.Core.Commands;\n   4  using MegaCrit.Sts2.Core.Context;\n   5  using MegaCrit.Sts2.Core.Entities.Cards;\n  32  \n  33      public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)\n  34      {\n  35          if (card.Owner.Creature != base.Owner)\n  36          {"
+    },
+    "KarenStarlight03Card": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenStarlight03Card.cs",
+      "sha256": "aa47ff0eef68bffd16c5c7f49bd522024aae9d22e6d55aee39a20651025950db",
+      "title": "Starlight第三幕",
+      "description": "获得[gold]闪耀牌奖励[/gold]。",
+      "excerpts": ""
+    },
+    "KarenStarlightCard": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/shine/KarenStarlightCard.cs",
+      "sha256": "56c9ec1dd2990981893edd402c44e52cd70b287de88f44a775c2119b1ffdcd1c",
+      "title": "Starlight第一幕",
+      "description": "打出[gold]闪耀[/gold]牌后，抽{KarenStarlightPower:diff()}张牌。",
+      "excerpts": "  22  {\n  23      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  24      [\n  25          new PowerVar<KarenStarlightPower>(1m)\n  26      ];\n  27  \n  28      public override IEnumerable<CardTag> Tags => [KarenCustomEnum.ShineRelated];\n  42      {\n  43          DynamicVars[nameof(KarenStarlightPower)].UpgradeValueBy(1m);\n  44      }\n  45  }"
+    },
+    "KarenVoid": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenVoid.cs",
+      "sha256": "1e6ee5c53c2dfc8adcb34ca98e0ff614955dc6f24b795dc5c41ca0251d4abad4",
+      "title": "世界上最空虚的人",
+      "description": "摧毁抽牌堆，然后以[gold]约定牌堆[/gold]代替抽牌堆。",
+      "excerpts": "  37  \n  38          if (PromisePileManager.IsInMode(Owner, PromisePileMode.Void))\n  39          {\n  40              MainFile.Logger.Info($\"KarenVoid: Already in Void mode. No action taken.\");\n  41              return;"
+    },
+    "KarenWhosPromise": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenWhosPromise.cs",
+      "sha256": "dde421a5f8800c536127f9f815de8b6f377aef77674b54b04acbb4ada3523936",
+      "title": "双人舞",
+      "description": "造成{Damage:diff()}点伤害。\n从[gold]约定牌堆[/gold]抽{Cards:diff()}张牌，然后放入{Cards:diff()}张牌。",
+      "excerpts": "  20  \n  21      protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]\n  22      {\n  23          new DamageVar(10m, ValueProp.Move),\n  24          new CardsVar(1),\n  25      };\n  26  \n  27      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  31          {\n  32              await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromPlayedCard(this, cardPlay).Targeting(cardPlay.Target)\n  33                  .WithHitFx(VfxCmd.slashPath)\n  34                  .Execute(choiceContext);\n  35          }\n  44      {\n  45          DynamicVars.Damage.UpgradeValueBy(2m);\n  46          DynamicVars.Cards.UpgradeValueBy(1m);\n  47      }\n  48  }"
+    },
+    "KarenYesterglow": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Models/Cards/promisePile/KarenYesterglow.cs",
+      "sha256": "56ebdd1d90b208978c606bee8167d3df45c645b743ae6f8f7e7c666fc9b2e2be",
+      "title": "昨日夜空",
+      "description": "造成{Damage:diff()}点伤害。\n将弃牌堆中的{Cards}张牌放入[gold]约定牌堆[/gold]。",
+      "excerpts": "  26  \n  27      protected override IEnumerable<DynamicVar> CanonicalVars =>\n  28      [\n  29          new DamageVar(9m, ValueProp.Move),\n  30          new CardsVar(1)\n  31      ];\n  32  \n  33      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  36  \n  37          await DamageCmd.Attack(DynamicVars.Damage.BaseValue)\n  38              .FromPlayedCard(this, cardPlay)\n  39              .Targeting(cardPlay.Target)\n  40              .WithHitFx(VfxCmd.slashPath)\n  47      {\n  48          DynamicVars.Damage.UpgradeValueBy(1m);\n  49          DynamicVars.Cards.UpgradeValueBy(1m);\n  50      }\n  51  }"
+    },
+    "KinglyPunch": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/KinglyPunch.cs",
+      "sha256": "b6d62ed260819854265ad141cd774198aac4b4e251fd477fa6e0d15f01f9cd6b",
+      "title": "王者之拳",
+      "description": "造成{Damage:diff()}点伤害。\n每当你抽到这张牌时，在这场战斗中其伤害增加{Increase:diff()}。",
+      "excerpts": "  30  \n  31  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  32  \t{\n  33  \t\tnew DamageVar(8m, ValueProp.Move),\n  34  \t\tnew DynamicVar(\"Increase\", 4m)\n  35  \t});\n  36  \n  37  \tpublic KinglyPunch()\n  44  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  45  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  46  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  47  \t\t\t.Execute(choiceContext);\n  48  \t}\n  49  \n  50  \tpublic override Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)\n  51  \t{\n  52  \t\tif (card != this)\n  53  \t\t{\n  63  \t{\n  64  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  65  \t\tbase.DynamicVars[\"Increase\"].UpgradeValueBy(2m);\n  66  \t}\n  67  \n  68  \tprotected override void AfterDowngraded()"
+    },
+    "LightningOrb": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Orbs/LightningOrb.cs",
+      "sha256": "35cb6dc5d83f297703f625d8898666a3124b04c7fcf9454753ec6c12f6a01c8c",
+      "title": "LightningOrb",
+      "description": "",
+      "excerpts": "  34  \t\tTrigger();\n  35  \t\tawait ApplyLightningDamage(PassiveVal, target, choiceContext);\n  36  \t}\n  37  \n  38  \tpublic override async Task<IEnumerable<Creature>> Evoke(PlayerChoiceContext playerChoiceContext)\n  39  \t{\n  40  \t\treturn await ApplyLightningDamage(EvokeVal, null, playerChoiceContext);\n  41  \t}\n  42  \n  43  \tprivate async Task<IEnumerable<Creature>> ApplyLightningDamage(decimal value, Creature? target, PlayerChoiceContext choiceContext)\n  44  \t{\n  45  \t\tList<Creature> list = (from e in base.CombatState.GetOpponentsOf(base.Owner.Creature)\n  46  \t\t\twhere e.IsHittable\n  57  \t\tPlayEvokeSfx();\n  58  \t\tawait CreatureCmd.Damage(choiceContext, targets, value, ValueProp.Unpowered, base.Owner.Creature);\n  59  \t\treturn targets;\n  60  \t}\n  61  }"
+    },
+    "Loop": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Loop.cs",
+      "sha256": "0fdf0ed7c92c23008a44839943b7ded8f1388d071a2e5151da3bc60c34070dcd",
+      "title": "循环",
+      "description": "在你的回合开始时，触发你最右侧的一个充能球的被动能力{IfUpgraded:show:2次}。",
+      "excerpts": "  14  \n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DynamicVar(\"Loop\", 1m));\n  16  \n  17  \tpublic Loop()\n  18  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  29  \t{\n  30  \t\tbase.DynamicVars[\"Loop\"].UpgradeValueBy(1m);\n  31  \t}\n  32  }"
+    },
+    "LunarBlast": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/LunarBlast.cs",
+      "sha256": "ba80f56275cd34be092ddbb903a9a88df47435432d5413ea19aa5ab3d134a26a",
+      "title": "月面射击",
+      "description": "本回合中每打出过一张技能牌，此牌额外造成{Damage:diff()}点伤害一次。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.Entities.Creatures;\n  19  \n  20  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[4]\n  21  \t{\n  22  \t\tnew DamageVar(4m, ValueProp.Move),\n  23  \t\tnew CalculationBaseVar(0m),\n  24  \t\tnew CalculationExtraVar(1m),\n  25  \t\tnew CalculatedVar(\"CalculatedHits\").WithMultiplier((CardModel card, Creature? _) => CombatManager.Instance.History.CardPlaysFinished.Count((CardPlayFinishedEntry e) => e.HappenedThisTurn(card.CombatState) && e.CardPlay.Card.Type == CardType.Skill && e.CardPlay.Card.Owner == card.Owner))\n  26  \t});\n  27  \n  28  \tpublic LunarBlast()\n  35  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  36  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount((int)((CalculatedVar)base.DynamicVars[\"CalculatedHits\"]).Calculate(cardPlay.Target)).FromCard(this)\n  37  \t\t\t.Targeting(cardPlay.Target)\n  38  \t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  39  \t\t\t.Execute(choiceContext);\n  43  \t{\n  44  \t\tbase.DynamicVars.Damage.UpgradeValueBy(1m);\n  45  \t}\n  46  }"
+    },
+    "MakeItSo": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/MakeItSo.cs",
+      "sha256": "9be55e43ba34b4944920f37741c55ddd7cddaa7f0f991394d8693f195b913af1",
+      "title": "如此甚好",
+      "description": "造成{Damage:diff()}点伤害。\n你每在一回合内打出{Cards:diff()}张技能牌，就将这张牌放入你的[gold]手牌[/gold]。",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.GameActions.Multiplayer;\n  16  {\n  17  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  18  \t{\n  19  \t\tnew DamageVar(6m, ValueProp.Move),\n  20  \t\tnew CardsVar(3)\n  21  \t});\n  22  \n  23  \tpublic MakeItSo()\n  30  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  31  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  32  \t\t\t.WithHitFx(\"vfx/vfx_starry_impact\")\n  33  \t\t\t.Execute(choiceContext);\n  34  \t}\n  35  \n  36  \tpublic override async Task AfterCardPlayedLate(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  37  \t{\n  38  \t\tif (cardPlay.Card.Owner == base.Owner && cardPlay.Card.Type == CardType.Skill && base.Pile.Type != PileType.Hand)\n  39  \t\t{\n  40  \t\t\tint num = CombatManager.Instance.History.CardPlaysFinished.Count((CardPlayFinishedEntry e) => e.HappenedThisTurn(base.CombatState) && e.CardPlay.Card.Type == CardType.Skill && e.CardPlay.Card.Owner == base.Owner);\n  41  \t\t\tif (num % base.DynamicVars.Cards.IntValue == 0)\n  42  \t\t\t{\n  43  \t\t\t\tawait CardPileCmd.Add(this, PileType.Hand);\n  49  \t{\n  50  \t\tbase.DynamicVars.Damage.UpgradeValueBy(3m);\n  51  \t}\n  52  }"
+    },
+    "MementoMori": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/MementoMori.cs",
+      "sha256": "420746d47e4b8ffc37bab2d0a973144a40f6f5e2e354eae8959e5399efadb31a",
+      "title": "铭记死亡",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n本回合每丢弃过一张牌，则增加{ExtraDamage:diff()}点额外伤害。",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.Entities.Creatures;\n  17  {\n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  19  \t{\n  20  \t\tnew CalculationBaseVar(9m),\n  21  \t\tnew ExtraDamageVar(4m),\n  22  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => CombatManager.Instance.History.Entries.OfType<CardDiscardedEntry>().Count((CardDiscardedEntry e) => e.HappenedThisTurn(card.CombatState) && e.Card.Owner == card.Owner))\n  23  \t});\n  24  \n  25  \tpublic MementoMori()\n  32  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  33  \t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  34  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  35  \t\t\t.Execute(choiceContext);\n  36  \t}\n  39  \t{\n  40  \t\tbase.DynamicVars.CalculationBase.UpgradeValueBy(2m);\n  41  \t\tbase.DynamicVars.ExtraDamage.UpgradeValueBy(1m);\n  42  \t}\n  43  }"
+    },
+    "MoltenFist": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/MoltenFist.cs",
+      "sha256": "35a3922f45fd0a09dcf7a4cb894a352deb0f4d9d221d8ec4c9d5d5564d41b8a5",
+      "title": "熔融之拳",
+      "description": "造成{Damage:diff()}点伤害。\n将该敌人身上的[gold]易伤[/gold]层数翻倍。",
+      "excerpts": "  20  \n  21  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n  22  \n  23  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(10m, ValueProp.Move));\n  24  \n  25  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<VulnerablePower>());\n  26  \n  34  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  35  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  36  \t\t\t.WithHitFx(\"vfx/vfx_molten_fist\", null, \"blunt_attack.mp3\")\n  37  \t\t\t.Execute(choiceContext);\n  38  \t\tint num = (cardPlay.Target.IsAlive ? cardPlay.Target.GetPowerAmount<VulnerablePower>() : 0);\n  46  \t{\n  47  \t\tbase.DynamicVars.Damage.UpgradeValueBy(4m);\n  48  \t}\n  49  }"
+    },
+    "MultiCast": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/MultiCast.cs",
+      "sha256": "a0125b82240f6f4c74cf49a4a473c32e88f0cf5686710a284a85fe3cf7060786",
+      "title": "多重释放",
+      "description": "[gold]激发[/gold]你最右侧的充能球{IfUpgraded:show:X+1|X}次。",
+      "excerpts": ""
+    },
+    "Murder": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Murder.cs",
+      "sha256": "e3ae0b9f078df6e6a7255107c0c5bc354904d29c08f030b4c6e8b2f49df11f46",
+      "title": "谋杀",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你在本场战斗中每抽过一张牌，此牌就额外造成{ExtraDamage:diff()}点伤害。",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.Entities.Creatures;\n  17  {\n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  19  \t{\n  20  \t\tnew CalculationBaseVar(1m),\n  21  \t\tnew ExtraDamageVar(1m),\n  22  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => CombatManager.Instance.History.Entries.OfType<CardDrawnEntry>().Count((CardDrawnEntry e) => e.Actor == card.Owner.Creature))\n  23  \t});\n  24  \n  25  \tpublic Murder()\n  32  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  33  \t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  34  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  35  \t\t\t.Execute(choiceContext);\n  36  \t}"
+    },
+    "NecroMastery": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/NecroMastery.cs",
+      "sha256": "a771c61406c3f323f9a3ff9f9ff5e1a49cb63b0cc5f5960a4c12c32531dd665b",
+      "title": "亡灵精通",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。\n每当[gold]奥斯提[/gold]失去生命值时，\n所有敌人失去等量生命值。",
+      "excerpts": "  13  {\n  14  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new SummonVar(5m));\n  15  \n  16  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.Static(StaticHoverTip.SummonDynamic, base.DynamicVars.Summon));\n  17  \n  31  \t{\n  32  \t\tbase.DynamicVars.Summon.UpgradeValueBy(3m);\n  33  \t}\n  34  }"
+    },
+    "NecroMasteryPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/NecroMasteryPower.cs",
+      "sha256": "9de328ce325ca761d0d322737dd80c2828caf6564e385e8fcc4fa50177a926ed",
+      "title": "NecroMasteryPower",
+      "description": "",
+      "excerpts": "  16  \n  17  \tpublic override async Task AfterCurrentHpChanged(Creature creature, decimal delta)\n  18  \t{\n  19  \t\tif (!(delta >= 0m) && creature.Monster is Osty && creature.PetOwner == base.Owner.Player)\n  20  \t\t{\n  21  \t\t\tawait CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), creature.CombatState.HittableEnemies, -delta * (decimal)base.Amount, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner, null);\n  22  \t\t}\n  23  \t}\n  24  }"
+    },
+    "NecrobinderCardPool": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.CardPools/NecrobinderCardPool.cs",
+      "sha256": "14a8d8b419419d1587d041798c40eb6d0a0571c1a73e1840f38a9793853dad8f",
+      "title": "NecrobinderCardPool",
+      "description": "",
+      "excerpts": ""
+    },
+    "NoxiousFumes": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/NoxiousFumes.cs",
+      "sha256": "ebffac99f31337c8e236db34fccdc228e354efb5743ff4549390669973d40909",
+      "title": "毒雾",
+      "description": "在你的回合开始时，给予所有敌人{PoisonPerTurn:diff()}层[gold]中毒[/gold]。",
+      "excerpts": "  15  \n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DynamicVar(\"PoisonPerTurn\", 2m));\n  17  \n  18  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<PoisonPower>());\n  19  \n  32  \t{\n  33  \t\tbase.DynamicVars[\"PoisonPerTurn\"].UpgradeValueBy(1m);\n  34  \t}\n  35  }"
+    },
+    "Outbreak": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Outbreak.cs",
+      "sha256": "7c5b6eadfec6292fc8a3b2820d910ccee8b397a6787b01474cdc92283c4d0afa",
+      "title": "毒性爆发",
+      "description": "每当你给予{Repeat:diff()}次[gold]中毒[/gold]，就对所有敌人造成{OutbreakPower:diff()}点伤害。",
+      "excerpts": "  15  \n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  17  \t{\n  18  \t\tnew PowerVar<OutbreakPower>(11m),\n  19  \t\tnew RepeatVar(3)\n  20  \t});\n  21  \n  22  \tpublic Outbreak()\n  34  \t{\n  35  \t\tbase.DynamicVars[\"OutbreakPower\"].UpgradeValueBy(4m);\n  36  \t}\n  37  }"
+    },
+    "OutbreakPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/OutbreakPower.cs",
+      "sha256": "42e81cfb06b51f27b504a218f68fe80daf693025cc804a677b1b3b048ed84219",
+      "title": "OutbreakPower",
+      "description": "",
+      "excerpts": "  27  \n  28  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new RepeatVar(3));\n  29  \n  30  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<PoisonPower>());\n  31  \n  46  \t\t\t\tFlash();\n  47  \t\t\t\tawait CreatureCmd.Damage(choiceContext, base.Owner.CombatState.HittableEnemies, base.Amount, ValueProp.Unpowered, base.Owner, null);\n  48  \t\t\t\tdata.timesPoisoned %= 3;\n  49  \t\t\t}\n  50  \t\t\tInvokeDisplayAmountChanged();"
+    },
+    "PactsEnd": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/PactsEnd.cs",
+      "sha256": "c924fae262fbe5b9c429436e31ed6076e47bae12f322ed42301ce71086901052",
+      "title": "契约终结",
+      "description": "如果你的[gold]消耗牌堆[/gold]拥有大于等于{Cards:diff()}张{Cards:plural:牌|牌}，\n则对所有敌人造成{Damage:diff()}点伤害。",
+      "excerpts": "  14  {\n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  16  \t{\n  17  \t\tnew DamageVar(17m, ValueProp.Move),\n  18  \t\tnew CardsVar(3)\n  19  \t});\n  20  \n  21  \tprotected override bool ShouldGlowGoldInternal => CanDealDamage;\n  33  \t\t{\n  34  \t\t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(base.CombatState)\n  35  \t\t\t\t.WithAttackerAnim(Ironclad.GetHeavyAnimIfApplicable(base.Owner.Character), Ironclad.GetHeavyAttackDelayIfApplicable(base.Owner.Character))\n  36  \t\t\t\t.WithHitFx(\"vfx/vfx_heavy_blunt\", null, \"heavy_attack.mp3\")\n  37  \t\t\t\t.WithHitVfxSpawnedAtBase()\n  43  \t{\n  44  \t\tbase.DynamicVars.Damage.UpgradeValueBy(6m);\n  45  \t}\n  46  }"
+    },
+    "Parry": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Parry.cs",
+      "sha256": "bceeb01804cf753adeac19cd6fcd902631d6ed48ff75b3423c005272b4be95a2",
+      "title": "招架",
+      "description": "[gold]君王之剑[/gold]现在能让你获得{ParryPower:diff()}点[gold]格挡[/gold]。",
+      "excerpts": "  19  \n  20  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<ParryPower>(10m));\n  21  \n  22  \tpublic Parry()\n  23  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  34  \t{\n  35  \t\tbase.DynamicVars[\"ParryPower\"].UpgradeValueBy(4m);\n  36  \t}\n  37  }"
+    },
+    "PerfectedStrike": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/PerfectedStrike.cs",
+      "sha256": "d3c99b130922f4ed892e14a7f05278fc474d03d3a27ecd7301cc977e177735c7",
+      "title": "完美打击",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你每有一张名字中含有“打击”的牌，伤害+{ExtraDamage:diff()}。",
+      "excerpts": "  20  \n  21  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  22  \t{\n  23  \t\tnew CalculationBaseVar(6m),\n  24  \t\tnew ExtraDamageVar(2m),\n  25  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.PlayerCombatState.AllCards.Count((CardModel c) => c.Tags.Contains(CardTag.Strike)))\n  26  \t});\n  27  \n  28  \tpublic PerfectedStrike()\n  35  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  36  \t\tAttackCommand attackCommand = DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  37  \t\t\t.WithHitFx(null, null, \"heavy_attack.mp3\")\n  38  \t\t\t.WithHitVfxNode((Creature t) => NBigSlashVfx.Create(t))\n  39  \t\t\t.WithHitVfxNode((Creature t) => NBigSlashImpactVfx.Create(t));\n  48  \t{\n  49  \t\tbase.DynamicVars.ExtraDamage.UpgradeValueBy(1m);\n  50  \t}\n  51  }"
+    },
+    "PhantomBlades": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/PhantomBlades.cs",
+      "sha256": "3f3dcd26011d47aa228a612b0cb4df77e24996341c8614e97ab440a68245370b",
+      "title": "幻影之刃",
+      "description": "[gold]小刀[/gold]获得[gold]保留[/gold]。\n你在每回合打出的第一张[gold]小刀[/gold]额外造成{PhantomBladesPower:diff()}点伤害。",
+      "excerpts": "  21  \n  22  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<PhantomBladesPower>(9m));\n  23  \n  24  \tpublic PhantomBlades()\n  25  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  36  \t{\n  37  \t\tbase.DynamicVars[\"PhantomBladesPower\"].UpgradeValueBy(3m);\n  38  \t}\n  39  }"
+    },
+    "PillarOfCreation": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/PillarOfCreation.cs",
+      "sha256": "d2651393f03294ae817482edc92be1617cbba6a6b01c6ebda33a3c7c728dcc89",
+      "title": "创世之柱",
+      "description": "每当你生成一张卡牌, 就获得{Block:diff()}点[gold]格挡[/gold]。",
+      "excerpts": "  16  \n  17  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new BlockVar(3m, ValueProp.Unpowered));\n  18  \n  19  \tpublic PillarOfCreation()\n  20  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  30  \t{\n  31  \t\tbase.DynamicVars.Block.UpgradeValueBy(1m);\n  32  \t}\n  33  }"
+    },
+    "PoisonPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/PoisonPower.cs",
+      "sha256": "7cf6dfc3987122ccc4a8a0d175871435a30bf0a756b171eb30019a693441b609",
+      "title": "PoisonPower",
+      "description": "",
+      "excerpts": "  30  \t/// </summary>\n  31  \tprivate int TriggerCount\n  32  \t{\n  33  \t\tget\n  34  \t\t{\n  44  \t\tdecimal num = default(decimal);\n  45  \t\tint num2 = Math.Min(base.Amount, TriggerCount);\n  46  \t\tfor (int i = 0; i < num2; i++)\n  47  \t\t{\n  48  \t\t\tdecimal damage = base.Amount - i;\n  49  \t\t\tdamage = Hook.ModifyDamage(base.Owner.CombatState.RunState, base.Owner.CombatState, base.Owner, null, damage, ValueProp.Unblockable | ValueProp.Unpowered, null, ModifyDamageHookType.All, CardPreviewMode.None, out IEnumerable<AbstractModel> _);\n  50  \t\t\tnum += damage;\n  51  \t\t}\n  52  \t\treturn (int)num;\n  54  \n  55  \tpublic override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)\n  56  \t{\n  57  \t\tif (!participants.Contains(base.Owner))\n  58  \t\t{\n  60  \t\t}\n  61  \t\tint iterations = TriggerCount;\n  62  \t\tfor (int i = 0; i < iterations; i++)\n  63  \t\t{\n  64  \t\t\tawait CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), base.Owner, base.Amount, ValueProp.Unblockable | ValueProp.Unpowered, null, null);\n  65  \t\t\tif (base.Owner.IsAlive)\n  66  \t\t\t{\n  67  \t\t\t\tawait PowerCmd.Decrement(this);"
+    },
+    "Poke": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Poke.cs",
+      "sha256": "beca78353903c8d64077d5b3ac0e7beaf9c88c0a75f662fa4e26fe4f9e3a7477",
+      "title": "戳击",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。",
+      "excerpts": "  18  \n  19  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new OstyDamageVar(6m, ValueProp.Move));\n  20  \n  21  \tpublic Poke()\n  22  \t\t: base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)\n  30  \t\t{\n  31  \t\t\tawait DamageCmd.Attack(base.DynamicVars.OstyDamage.BaseValue).FromOsty(base.Owner.Osty, this).Targeting(cardPlay.Target)\n  32  \t\t\t\t.WithAttackerAnim(\"attack_poke\", 0.3f)\n  33  \t\t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  34  \t\t\t\t.Execute(choiceContext);\n  39  \t{\n  40  \t\tbase.DynamicVars.OstyDamage.UpgradeValueBy(3m);\n  41  \t}\n  42  }"
+    },
+    "PromisePileHooks": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/PromisePileSystem/PromisePileHooks.cs",
+      "sha256": "67b8dd88cf1ce847df96bace7d709aefbbc034438b46641f79ba7b83e3dd2680",
+      "title": "PromisePileHooks",
+      "description": "",
+      "excerpts": "  27              // 无限能力下不触发这个扳机\n  28              if (PromisePileManager.IsInMode(player, PromisePileMode.InfiniteReinforcement))\n  29              {\n  30                  return;\n  31              }\n  59                      {\n  60                          await karenCard.OnTurnEndInPromisePile();\n  61                      }\n  62                  }\n  63                  return;\n  71                      {\n  72                          await karenCard.OnTurnEndInPromisePile();\n  73                      }\n  74                  }\n  75              }\n  96          /// <summary>\n  97          /// 触发玩家身上所有的 OnCardRemovedFromPromisePile 扳机\n  98          /// </summary>\n  99          public static async Task TriggerOnCardRemoved(Player player, CardModel card)\n 100          {\n 106              {\n 107                  await power.OnCardRemovedFromPromisePile(card);\n 108              }\n 109              if (card is KarenBaseCardModel karenCard)\n 110              {"
+    },
+    "PromisePileManager": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/PromisePileSystem/PromisePileManager.cs",
+      "sha256": "dbf044d0b5dfd0fc0e828c697eec3f4de141c53778e6bb474e36988291e4cb72",
+      "title": "PromisePileManager",
+      "description": "",
+      "excerpts": "  68  \n  69      public static bool IsInMode(Player player, PromisePileMode mode)\n  70      {\n  71          if (player?.Creature == null) return false;\n  72          var power = player.Creature.GetPower<KarenPromisePilePower>();\n  73          return power?.IsInMode(mode) == true;\n  74      }\n  75  \n  76      public static decimal GetPastAndFutureAmount(Player player)\n 139          await CardPileCmd.Add(card, PileType.Hand, CardPilePosition.Top);\n 140          //await Hook.AfterCardChangedPiles(card.Owner.RunState, card.CombatState, card, KarenCustomEnum.PromisePile, null);\n 141  \n 142          // 更新 Power\n 143          await UpdatePowerAsync(player);\n 296  \n 297          if (IsInMode(player, PromisePileMode.InfiniteReinforcement))\n 298          {\n 299              var combat = player.PlayerCombatState;\n 300              // Removing old Draw cards in Void mode invokes this hook recursively.\n 305              {\n 306                  await RefillWithContinueAsync(player);\n 307              }\n 308              finally\n 309              {\n 326      /// </summary>\n 327      private static async Task RefillWithContinueAsync(Player player)\n 328      {\n 329          if (player?.PlayerCombatState == null) return;\n 330  \n 332  \n 333          var inVoidMode = IsInMode(player, PromisePileMode.Void);\n 334          if (!inVoidMode)\n 335          {\n 336              var pile = GetPromisePile(player);\n 416              var copyCard = card.CreateClone();\n 417              CombatManager.Instance.History.CardGenerated(combatState, copyCard, player);\n 418              await PromisePileCmd.Add(player, copyCard);\n 419              await Hook.AfterCardGeneratedForCombat(combatState, copyCard, player);\n 420          }\n 421      }\n 422  "
+    },
+    "PullFromBelow": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/PullFromBelow.cs",
+      "sha256": "3790b492941c27f38a4452431f35644c4e7652e61e396c68a139431f67dcc6ab",
+      "title": "亡魂牵引",
+      "description": "本场战斗中每打出过一张[gold]虚无[/gold]牌，此牌就造成{Damage:diff()}点伤害一次。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.Entities.Creatures;\n  22  \n  23  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[4]\n  24  \t{\n  25  \t\tnew DamageVar(5m, ValueProp.Move),\n  26  \t\tnew CalculationBaseVar(0m),\n  27  \t\tnew CalculationExtraVar(1m),\n  28  \t\tnew CalculatedVar(\"CalculatedHits\").WithMultiplier((CardModel card, Creature? _) => CombatManager.Instance.History.Entries.OfType<CardPlayFinishedEntry>().Count((CardPlayFinishedEntry e) => e.CardPlay.Card.Owner == card.Owner && e.WasEthereal))\n  29  \t});\n  30  \n  31  \tpublic PullFromBelow()\n  38  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  39  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount((int)((CalculatedVar)base.DynamicVars[\"CalculatedHits\"]).Calculate(cardPlay.Target)).FromCard(this)\n  40  \t\t\t.Targeting(cardPlay.Target)\n  41  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  42  \t\t\t.Execute(choiceContext);\n  46  \t{\n  47  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  48  \t}\n  49  }"
+    },
+    "Radiate": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Radiate.cs",
+      "sha256": "7301268b8f58d82fb9f85803b81f4b269a3cb29b0b4578de2d63ad8651a6b0ec",
+      "title": "辐射",
+      "description": "你在本回合每获得一点{Stars:starIcons()}，此牌就对所有敌人造成{Damage:diff()}点伤害一次。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "excerpts": "   4  using MegaCrit.Sts2.Core.Combat;\n   5  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   6  using MegaCrit.Sts2.Core.Commands;\n   7  using MegaCrit.Sts2.Core.Entities.Cards;\n   8  using MegaCrit.Sts2.Core.Entities.Creatures;\n  18  \n  19  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[5]\n  20  \t{\n  21  \t\tnew DamageVar(3m, ValueProp.Move),\n  22  \t\tnew StarsVar(1),\n  23  \t\tnew CalculationBaseVar(0m),\n  24  \t\tnew CalculationExtraVar(1m),\n  25  \t\tnew CalculatedVar(\"CalculatedHits\").WithMultiplier((CardModel card, Creature? _) => (from e in CombatManager.Instance.History.Entries.OfType<StarsModifiedEntry>()\n  26  \t\t\twhere e.HappenedThisTurn(card.CombatState) && e.Amount > 0 && e.Actor == card.Owner.Creature\n  27  \t\t\tselect e).Sum((StarsModifiedEntry e) => e.Amount))\n  28  \t});\n  36  \t{\n  37  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount((int)((CalculatedVar)base.DynamicVars[\"CalculatedHits\"]).Calculate(cardPlay.Target)).FromCard(this)\n  38  \t\t\t.TargetingAllOpponents(base.CombatState)\n  39  \t\t\t.WithHitFx(\"vfx/vfx_starry_impact\", null, \"slash_attack.mp3\")\n  40  \t\t\t.SpawningHitVfxOnEachCreature()\n  45  \t{\n  46  \t\tbase.DynamicVars.Damage.UpgradeValueBy(1m);\n  47  \t}\n  48  }"
+    },
+    "Rampage": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Rampage.cs",
+      "sha256": "aea1b8eda1a15597c0263b20c5e1aa85e62fd861d0d2cf3263a779758a94f96c",
+      "title": "暴走",
+      "description": "造成{Damage:diff()}点伤害。\n将这张牌在本场战斗中的伤害增加{Increase:diff()}。",
+      "excerpts": "  17  \n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  19  \t{\n  20  \t\tnew DamageVar(9m, ValueProp.Move),\n  21  \t\tnew DynamicVar(\"Increase\", 5m)\n  22  \t});\n  23  \n  24  \t/// <summary>\n  26  \t/// </summary>\n  27  \tprivate decimal ExtraDamageFromPlays\n  28  \t{\n  29  \t\tget\n  30  \t\t{\n  47  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  48  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  49  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  50  \t\t\t.Execute(choiceContext);\n  51  \t\tbase.DynamicVars.Damage.BaseValue += base.DynamicVars[\"Increase\"].BaseValue;\n  52  \t\tExtraDamageFromPlays += base.DynamicVars[\"Increase\"].BaseValue;\n  53  \t}\n  54  \n  55  \tprotected override void AfterDowngraded()\n  57  \t\tbase.AfterDowngraded();\n  58  \t\tbase.DynamicVars.Damage.BaseValue += ExtraDamageFromPlays;\n  59  \t}\n  60  \n  61  \tprotected override void OnUpgrade()\n  62  \t{\n  63  \t\tbase.DynamicVars[\"Increase\"].UpgradeValueBy(4m);\n  64  \t}\n  65  }"
+    },
+    "Rattle": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Rattle.cs",
+      "sha256": "3b49cac2cdbb6ed86f1c7f85f10868c00e734c87ecfa3a1164fd671377bbdd09",
+      "title": "猛晃",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n本回合每使用过一次奥斯提攻击牌，此牌就额外造成一次伤害。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.Entities.Creatures;\n  24  \n  25  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[4]\n  26  \t{\n  27  \t\tnew OstyDamageVar(7m, ValueProp.Move),\n  28  \t\tnew CalculationBaseVar(0m),\n  29  \t\tnew CalculationExtraVar(1m),\n  30  \t\tnew CalculatedVar(\"CalculatedHits\").WithMultiplier((CardModel card, Creature? _) => 1 + CombatManager.Instance.History.Entries.OfType<CreatureAttackedEntry>().Count((CreatureAttackedEntry e) => e.Actor == card.Owner.Osty && e.HappenedThisTurn(card.CombatState)))\n  31  \t});\n  32  \n  33  \tpublic Rattle()\n  42  \t\t{\n  43  \t\t\tawait DamageCmd.Attack(base.DynamicVars.OstyDamage.BaseValue).FromOsty(base.Owner.Osty, this).Targeting(cardPlay.Target)\n  44  \t\t\t\t.WithHitCount((int)((CalculatedVar)base.DynamicVars[\"CalculatedHits\"]).Calculate(cardPlay.Target))\n  45  \t\t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  46  \t\t\t\t.Execute(choiceContext);\n  51  \t{\n  52  \t\tbase.DynamicVars.OstyDamage.UpgradeValueBy(2m);\n  53  \t}\n  54  }"
+    },
+    "ReaperForm": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/ReaperForm.cs",
+      "sha256": "7f420745b00ca927ab6ec2ee49b85dc7c3bb58c4af2e39d692ad5f8637e171ee",
+      "title": "死神形态",
+      "description": "每当你的攻击造成伤害时，同时给予等量的[gold]灾厄[/gold]。",
+      "excerpts": ""
+    },
+    "Reflex": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Reflex.cs",
+      "sha256": "9da35e8290ad693e532dbc718e9f03c937d8a21703bdaa96d893b75441411690",
+      "title": "本能反应",
+      "description": "抽{Cards:diff()}张牌。",
+      "excerpts": "  11  {\n  12  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new CardsVar(2));\n  13  \n  14  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Sly);\n  15  \n  28  \t{\n  29  \t\tbase.DynamicVars.Cards.UpgradeValueBy(1m);\n  30  \t}\n  31  }"
+    },
+    "RegentCardPool": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.CardPools/RegentCardPool.cs",
+      "sha256": "754f39ac8e099ceb0fc70896d6a9e54482952a6b93d3343d17555f436ae9c6d7",
+      "title": "RegentCardPool",
+      "description": "",
+      "excerpts": ""
+    },
+    "RetainTmpStrengthPatch": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/Patches/RetainTmpStrengthPatch.cs",
+      "sha256": "9d1a17de5d2788ff6e7effeee14ab2f7c137e52521cfc1e99f66f2230ee7d790",
+      "title": "RetainTmpStrengthPatch",
+      "description": "",
+      "excerpts": "  17  /// </summary>\n  18  [HarmonyPatch(typeof(TemporaryStrengthPower), nameof(TemporaryStrengthPower.AfterSideTurnEnd))]\n  19  public class RetainTmpStrengthPatch\n  20  {\n  21      private static bool Prefix(TemporaryStrengthPower __instance, PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants, ref Task __result)"
+    },
+    "Ricochet": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Ricochet.cs",
+      "sha256": "bfcd8a72977aa3d0f4b832b528dd253e29f8983ddb924c6e7d1f88f49f085df0",
+      "title": "连续反弹",
+      "description": "随机对敌人造成{Damage:diff()}点伤害{Repeat:diff()}次。",
+      "excerpts": "  12  {\n  13  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  14  \t{\n  15  \t\tnew DamageVar(3m, ValueProp.Move),\n  16  \t\tnew RepeatVar(4)\n  17  \t});\n  18  \n  19  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Sly);\n  27  \t{\n  28  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(base.DynamicVars.Repeat.IntValue).FromCard(this)\n  29  \t\t\t.TargetingRandomOpponents(base.CombatState)\n  30  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  31  \t\t\t.Execute(choiceContext);\n  35  \t{\n  36  \t\tbase.DynamicVars.Repeat.UpgradeValueBy(1m);\n  37  \t}\n  38  }"
+    },
+    "RightHandHand": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/RightHandHand.cs",
+      "sha256": "bef45f4019e409c563b3dbb0d98efe2a502b9957f48633e58cffc5f16f116b55",
+      "title": "得力助手",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n每当你打出耗能为{Energy:energyIcons()}或以上的牌，将此牌从[gold]弃牌堆[/gold]放回你的[gold]手牌[/gold]。",
+      "excerpts": "  21  \n  22  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  23  \t{\n  24  \t\tnew OstyDamageVar(4m, ValueProp.Move),\n  25  \t\tnew EnergyVar(2)\n  26  \t});\n  27  \n  28  \tpublic RightHandHand()\n  37  \t\t{\n  38  \t\t\tawait DamageCmd.Attack(base.DynamicVars.OstyDamage.BaseValue).FromOsty(base.Owner.Osty, this).Targeting(cardPlay.Target)\n  39  \t\t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  40  \t\t\t\t.Execute(choiceContext);\n  41  \t\t}\n  43  \n  44  \tpublic override async Task AfterCardPlayedLate(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  45  \t{\n  46  \t\tif (cardPlay.Card.Owner == base.Owner && cardPlay.Resources.EnergyValue >= base.DynamicVars.Energy.IntValue)\n  47  \t\t{\n  57  \t{\n  58  \t\tbase.DynamicVars.OstyDamage.UpgradeValueBy(2m);\n  59  \t}\n  60  }"
+    },
+    "Rupture": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Rupture.cs",
+      "sha256": "910670cb0b0b8e2b443acc2c737a99c03b458a3fadbad4335e6b0f2858d62d79",
+      "title": "撕裂",
+      "description": "每当你在你的回合失去生命值时, 获得{StrengthPower:diff()}点[gold]力量[/gold]。",
+      "excerpts": "  13  {\n  14  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<StrengthPower>(1m));\n  15  \n  16  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<StrengthPower>());\n  17  \n  29  \t{\n  30  \t\tbase.DynamicVars.Strength.UpgradeValueBy(1m);\n  31  \t}\n  32  }"
+    },
+    "RupturePower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/RupturePower.cs",
+      "sha256": "c2a59a15cc8628370abec825ccaf9ed52b4c7a6da0327347da198840822b3001",
+      "title": "RupturePower",
+      "description": "",
+      "excerpts": "  59  \n  60  \tpublic override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  61  \t{\n  62  \t\tif (cardPlay.Card.Owner.Creature == base.Owner && GetInternalData<Data>().playedCards.Remove(cardPlay.Card, out var value))\n  63  \t\t{"
+    },
+    "SeekingEdge": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/SeekingEdge.cs",
+      "sha256": "05c53d4d26966738dde10b867f3a2781b64bdc8635d6edce0c36e4cfd2fd3709",
+      "title": "追踪之刃",
+      "description": "[gold]铸造[/gold]{Forge:diff()}。\n[gold]君王之剑[/gold]现在会对所有敌人造成伤害。",
+      "excerpts": "  15  \n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new ForgeVar(7));\n  17  \n  18  \tpublic SeekingEdge()\n  19  \t\t: base(1, CardType.Power, CardRarity.Rare, TargetType.Self)\n  31  \t{\n  32  \t\tbase.DynamicVars.Forge.UpgradeValueBy(4m);\n  33  \t}\n  34  }"
+    },
+    "SerpentForm": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/SerpentForm.cs",
+      "sha256": "588fe81c3cfbc57b1fa0ec7d4648e7b50e6f546abe52bad2ca80fa807e48bc1e",
+      "title": "群蛇形态",
+      "description": "你每打出一张牌，就对随机一名敌人造成{SerpentFormPower:diff()}点伤害。",
+      "excerpts": "  12  {\n  13  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<SerpentFormPower>(4m));\n  14  \n  15  \tpublic SerpentForm()\n  16  \t\t: base(3, CardType.Power, CardRarity.Rare, TargetType.Self)\n  27  \t{\n  28  \t\tbase.DynamicVars[\"SerpentFormPower\"].UpgradeValueBy(2m);\n  29  \t}\n  30  }"
+    },
+    "SerpentFormPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/SerpentFormPower.cs",
+      "sha256": "c3a849921e381d0cad60665cc0ed31497dd9c1c81535d47a1c3b53e792c8d719",
+      "title": "SerpentFormPower",
+      "description": "",
+      "excerpts": "  42  \n  43  \tpublic override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  44  \t{\n  45  \t\tif (cardPlay.Card.Owner == base.Owner.Player && GetInternalData<Data>().amountsForPlayedCards.Remove(cardPlay.Card, out var damage) && damage > 0)\n  46  \t\t{\n  51  \t\t\t\tVfxCmd.PlayOnCreatureCenter(creature, \"vfx/vfx_attack_blunt\");\n  52  \t\t\t\tawait CreatureCmd.Damage(choiceContext, creature, damage, ValueProp.Unpowered, base.Owner);\n  53  \t\t\t}\n  54  \t\t}\n  55  \t}"
+    },
+    "SevenStars": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/SevenStars.cs",
+      "sha256": "5abfed38d28232eb66eb4a717800ea5e3a18384318c6017b4276e8163953a4fd",
+      "title": "七星",
+      "description": "对所有敌人造成{Damage:diff()}点伤害{Repeat:diff()}次。",
+      "excerpts": "  12  {\n  13  \tpublic override int CanonicalStarCost => 7;\n  14  \n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  16  \t{\n  17  \t\tnew DamageVar(7m, ValueProp.Move),\n  18  \t\tnew RepeatVar(7)\n  19  \t});\n  20  \n  21  \tpublic SevenStars()\n  27  \t{\n  28  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(base.DynamicVars.Repeat.IntValue).FromCard(this)\n  29  \t\t\t.TargetingAllOpponents(base.CombatState)\n  30  \t\t\t.WithHitFx(\"vfx/vfx_starry_impact\", null, \"slash_attack.mp3\")\n  31  \t\t\t.SpawningHitVfxOnEachCreature()"
+    },
+    "ShineExhaustRestorePatch": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/ShineSystem/Patches/ShineExhaustRestorePatch.cs",
+      "sha256": "cc551bb6d088e068753addb554c2c3c366e5e8ad402cc8628f24974886edc9c7",
+      "title": "ShineExhaustRestorePatch",
+      "description": "",
+      "excerpts": "  15  {\n  16      [HarmonyPatch(typeof(Hook), nameof(Hook.AfterCardChangedPiles))]\n  17      public static class CardPileCmd_Add_ExhaustRestore_Postfix\n  18      {\n  19          [HarmonyPrefix]\n  28                      // 恢复闪耀值\n  29                      card.RestoreShineToMax();\n  30                      if (card.GetShineMaxValue() < 0) card.SetShineCurrent(-1);\n  31                      MainFile.Logger.Info($\"[ShineExhaustRestorePatch] 卡牌 '{card.Title}' 进入消耗牌堆，闪耀值已恢复 ({card.GetShineValue()}/{card.GetShineMaxValue()})\");\n  32                  }"
+    },
+    "ShinePileManager": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/ShineSystem/ShinePileManager.cs",
+      "sha256": "b88996d8bc260c741ee0017ea6b8ffa916ed19e0e3d7b11a436f548270421bc9",
+      "title": "ShinePileManager",
+      "description": "",
+      "excerpts": "  98          // 重置数据\n  99          card.RestoreShineToMax();\n 100          card.SetEnterShinePileAfterPlay(false);\n 101          if (original != card)\n 102          {\n 103              original.RestoreShineToMax();\n 104              original.SetEnterShinePileAfterPlay(false);\n 105          }\n 106          // 非闪耀牌，就去掉他的闪耀值\n 111          // 记录本局游戏中已耗尽的闪耀牌（用于 CarryingGuilt 等效果）\n 112          UpdateShineCardDisposedCount(card.Owner);\n 113  \n 114          // 触发卡牌上的闪耀耗尽扳机\n 115          if (original is KarenBaseCardModel karenCard)\n 173      /// </summary>\n 174      public static int GetDisposedShineCardUniqueCount(Player player)\n 175      {\n 176          if (player == null) return 0;\n 177          return _disposedShineCardUniqueCounts.Get(player);\n 183      /// </summary>\n 184      public static void UpdateShineCardDisposedCount(Player player)\n 185      {\n 186          if (player == null) return;\n 187          _disposedShineCardUniqueCounts.Set(player, _disposedShineCardPile.Get(player)!.Cards.Select(c => c.Id.Entry).Distinct().Count());\n 188          MainFile.Logger.Info($\"[ShinePileManager] Updated disposed shine card count for player {player.NetId}: total={GetShinePileCount(player)}, unique={GetDisposedShineCardUniqueCount(player)}\");\n 189      }\n 190  \n 191      public static HoverTip GetShinePileUniqueCountHoverTip(Player player)\n 195          var description1 = Tips.DisposedPileUniqueCountDesc1;\n 196          var description = String.Format(\"{0}{2}{1}\", description0, description1, GetDisposedShineCardUniqueCount(player));\n 197          return new HoverTip(title, description);\n 198      }\n 199  "
+    },
+    "ShineUpgradePatch": {
+      "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/src/Core/ShineSystem/Patches/ShineUpgradePatch.cs",
+      "sha256": "1a7491e808fdb1764bba17c573f03adb462a5348ad0aa867bc8cd773f9f93018",
+      "title": "ShineUpgradePatch",
+      "description": "",
+      "excerpts": "  41                  }\n  42                  card.RestoreShineToMax();\n  43              }\n  44          }\n  45  "
+    },
+    "SilentCardPool": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.CardPools/SilentCardPool.cs",
+      "sha256": "31359adf51ece51bd64d8d8d0217a07aa4ce404d20d9292a549dad4a1a47c31d",
+      "title": "SilentCardPool",
+      "description": "",
+      "excerpts": ""
+    },
+    "Smokestack": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Smokestack.cs",
+      "sha256": "5ec4835dc881ed3d16e140f242943354240be6a38afefa726ee52386676a99d2",
+      "title": "烟囱",
+      "description": "每当你生成一张状态牌时，对所有敌人造成{SmokestackPower:diff()}点伤害。",
+      "excerpts": "  12  {\n  13  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<SmokestackPower>(5m));\n  14  \n  15  \tpublic Smokestack()\n  16  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  27  \t{\n  28  \t\tbase.DynamicVars[\"SmokestackPower\"].UpgradeValueBy(2m);\n  29  \t}\n  30  }"
+    },
+    "SmokestackPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/SmokestackPower.cs",
+      "sha256": "fc6510f1f8388031308eb5ee9004c0780f856c7b54eb869d513c1a1d5bc3d1d0",
+      "title": "SmokestackPower",
+      "description": "",
+      "excerpts": "  16  \n  17  \tpublic override async Task AfterCardGeneratedForCombat(CardModel card, Player? creator)\n  18  \t{\n  19  \t\tif (card.Type == CardType.Status && creator != null && creator.Creature == base.Owner)\n  20  \t\t{\n  21  \t\t\tFlash();\n  22  \t\t\tawait CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), base.CombatState.HittableEnemies, base.Amount, ValueProp.Unpowered, base.Owner, null);\n  23  \t\t}\n  24  \t}\n  25  }"
+    },
+    "Soul": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Soul.cs",
+      "sha256": "154b685466724c6dca52e9a1c42f8f0ad9e756a2a6ee8d8a89c62a136596d547",
+      "title": "灵魂",
+      "description": "抽{Cards:diff()}张牌。",
+      "excerpts": "  13  {\n  14  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n  15  \n  16  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new CardsVar(2));\n  17  \n  18  \tpublic Soul()\n  19  \t\t: base(0, CardType.Skill, CardRarity.Token, TargetType.Self)\n  60  \t{\n  61  \t\tbase.DynamicVars.Cards.UpgradeValueBy(1m);\n  62  \t}\n  63  }"
+    },
+    "SoulStorm": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/SoulStorm.cs",
+      "sha256": "04599c208bd462548a8cd6b5c38566495f2d6d46e7f6db2f1c92a869e3fe9566",
+      "title": "灵魂风暴",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你的[gold]消耗牌堆[/gold]中每有一张[gold]灵魂[/gold]，伤害增加{ExtraDamage:diff()}。",
+      "excerpts": "  18  \n  19  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  20  \t{\n  21  \t\tnew CalculationBaseVar(9m),\n  22  \t\tnew ExtraDamageVar(2m),\n  23  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.PlayerCombatState?.ExhaustPile.Cards.Count((CardModel c) => c is Soul) ?? 0)\n  24  \t});\n  25  \n  26  \tpublic SoulStorm()\n  33  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  34  \t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  35  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  36  \t\t\t.Execute(choiceContext);\n  37  \t}\n  40  \t{\n  41  \t\tbase.DynamicVars.ExtraDamage.UpgradeValueBy(1m);\n  42  \t}\n  43  }"
+    },
+    "SovereignBlade": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/SovereignBlade.cs",
+      "sha256": "3df4ed58fb0fea598d1c9aa4b850f1b034b1ed4de61c2d36073fbe3d02a378a9",
+      "title": "君王之剑",
+      "description": "{TargetType:choose(AllEnemies):对所有敌人|}造成{Damage:diff()}点伤害{Repeat:choose(1):|{}次}。{GainsBlock:cond:\n获得{CalculatedBlock:diff()}点[gold]格挡[/gold].|}",
+      "excerpts": "  95  \n  96  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[5]\n  97  \t{\n  98  \t\tnew DamageVar(10m, ValueProp.Move),\n  99  \t\tnew CalculationBaseVar(0m),\n 100  \t\tnew CalculationExtraVar(1m),\n 101  \t\tnew CalculatedBlockVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => GetOwnerParryAmount(card)),\n 102  \t\tnew RepeatVar(1)\n 103  \t});\n 104  \n 105  \tprivate bool HasSeekingEdge\n 125  \t\tfloat delay = ((base.Owner.Character is Regent) ? 0.25f : base.Owner.Character.CastAnimDelay);\n 126  \t\tAttackCommand attackCommand = DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).WithHitCount(base.DynamicVars.Repeat.IntValue)\n 127  \t\t\t.WithAttackerAnim(animName, delay)\n 128  \t\t\t.WithAttackerFx(null, \"event:/sfx/characters/regent/regent_sovereign_blade\");\n 129  \t\tif (HasSeekingEdge)\n 130  \t\t{\n 131  \t\t\tattackCommand = attackCommand.TargetingAllOpponents(base.CombatState).BeforeDamage(delegate\n 132  \t\t\t{\n 133  \t\t\t\tIReadOnlyList<Creature> hittableEnemies = base.CombatState.HittableEnemies;\n 134  \t\t\t\tif (hittableEnemies.Count <= 0)\n 149  \t\t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n 150  \t\t\tattackCommand = attackCommand.Targeting(cardPlay.Target).BeforeDamage(delegate\n 151  \t\t\t{\n 152  \t\t\t\tNSovereignBladeVfx vfxNode = GetVfxNode(base.Owner, this);\n 153  \t\t\t\tNCreature nCreature = NCombatRoom.Instance?.GetCreatureNode(cardPlay.Target);\n 191  \n 192  \tpublic override Task AfterCardChangedPiles(CardModel card, PileType oldPileType, AbstractModel? clonedBy)\n 193  \t{\n 194  \t\tif (card != this)\n 195  \t\t{\n 208  \n 209  \tpublic void AddDamage(decimal amount)\n 210  \t{\n 211  \t\tbase.DynamicVars.Damage.BaseValue += amount;\n 212  \t\tCurrentDamage = base.DynamicVars.Damage.BaseValue;"
+    },
+    "Speedster": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Speedster.cs",
+      "sha256": "72f77a1d35d8682dd692482301ae73fa5294e26618534c37f508773825f54192",
+      "title": "速行者",
+      "description": "每当你在回合进行中抽到一张牌时，对所有敌人造成{SpeedsterPower:diff()}点伤害。",
+      "excerpts": "  12  {\n  13  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<SpeedsterPower>(2m));\n  14  \n  15  \tpublic Speedster()\n  16  \t\t: base(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)"
+    },
+    "SpeedsterPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/SpeedsterPower.cs",
+      "sha256": "79ae0acdb18508e151e55b60507518debc31d6224ba414e2cc2aecbaad512dcd",
+      "title": "SpeedsterPower",
+      "description": "",
+      "excerpts": "  14  \n  15  \tpublic override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)\n  16  \t{\n  17  \t\tif (!fromHandDraw && card.Owner.Creature == base.Owner && card.Owner.Creature.CombatState.CurrentSide == card.Owner.Creature.Side)\n  18  \t\t{\n  20  \t\t\tSfxCmd.Play(\"slash_attack.mp3\");\n  21  \t\t\tawait CreatureCmd.Damage(choiceContext, base.CombatState.HittableEnemies, base.Amount, ValueProp.Unpowered, base.Owner, null);\n  22  \t\t}\n  23  \t}\n  24  }"
+    },
+    "Squeeze": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Squeeze.cs",
+      "sha256": "11ab0f3dfaec2974b5a7a4fe278522deaf056d7ca339614e208f8b263f1bd7ab",
+      "title": "榨取",
+      "description": "[gold]奥斯提[/gold]造成{CalculatedDamage:diff()}点伤害。\n你每有一张[gold]奥斯提[/gold]的攻击牌，这张牌就额外造成{ExtraDamage:diff()}点伤害。",
+      "excerpts": "  20  \n  21  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  22  \t{\n  23  \t\tnew CalculationBaseVar(25m),\n  24  \t\tnew ExtraDamageVar(5m).FromOsty(),\n  25  \t\tnew CalculatedDamageVar(ValueProp.Move).FromOsty().WithMultiplier((CardModel card, Creature? _) => card.Owner.PlayerCombatState.AllCards.Count((CardModel c) => c.Tags.Contains(CardTag.OstyAttack) && c != card))\n  26  \t});\n  27  \n  28  \tpublic Squeeze()\n  37  \t\t{\n  38  \t\t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromOsty(base.Owner.Osty, this).Targeting(cardPlay.Target)\n  39  \t\t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  40  \t\t\t\t.Execute(choiceContext);\n  41  \t\t}\n  45  \t{\n  46  \t\tbase.DynamicVars.CalculationBase.UpgradeValueBy(5m);\n  47  \t\tbase.DynamicVars.ExtraDamage.UpgradeValueBy(1m);\n  48  \t}\n  49  }"
+    },
+    "Storm": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Storm.cs",
+      "sha256": "50884d5636320c78fbf85d1d80df8546f3b46a740e90e72714f4ff1c0daf2070",
+      "title": "雷暴",
+      "description": "每当你打出一张能力牌时，[gold]生成[/gold]{StormPower:diff()}个[gold]闪电[/gold]充能球。",
+      "excerpts": "  14  {\n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<StormPower>(1m));\n  16  \n  17  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlyArray<IHoverTip>(new IHoverTip[2]\n  18  \t{\n  35  \t{\n  36  \t\tbase.DynamicVars[\"StormPower\"].UpgradeValueBy(1m);\n  37  \t}\n  38  }"
+    },
+    "Strangle": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Strangle.cs",
+      "sha256": "476d8845a191468db23b2b821e79992a63f4495e0675eb8c8d40b948725fc356",
+      "title": "紧勒",
+      "description": "造成{Damage:diff()}点伤害。\n你在这个回合内每出一张牌，该名敌人都会失去{StranglePower:diff()}点生命。",
+      "excerpts": "  14  {\n  15  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  16  \t{\n  17  \t\tnew DamageVar(8m, ValueProp.Move),\n  18  \t\tnew PowerVar<StranglePower>(2m)\n  19  \t});\n  20  \n  21  \tpublic Strangle()\n  28  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  29  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  30  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  31  \t\t\t.Execute(choiceContext);\n  32  \t\tawait PowerCmd.Apply<StranglePower>(choiceContext, cardPlay.Target, base.DynamicVars[\"StranglePower\"].BaseValue, base.Owner.Creature, this);\n  36  \t{\n  37  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  38  \t\tbase.DynamicVars[\"StranglePower\"].UpgradeValueBy(1m);\n  39  \t}\n  40  }"
+    },
+    "StranglePower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/StranglePower.cs",
+      "sha256": "b62b0cee78456da85e0ceec4b478106c5a5d510217cc81975fb4f4cdc796c0b3",
+      "title": "StranglePower",
+      "description": "",
+      "excerpts": "  49  \n  50  \tpublic override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)\n  51  \t{\n  52  \t\tif (GetInternalData<Data>().amountsForPlayedCards.Remove(cardPlay.Card, out var value))\n  53  \t\t{\n  54  \t\t\tFlash();\n  55  \t\t\tawait CreatureCmd.Damage(choiceContext, base.Owner, value, ValueProp.Unblockable | ValueProp.Unpowered, null, null);\n  56  \t\t}\n  57  \t}\n  58  \n  59  \tpublic override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)\n  60  \t{\n  61  \t\tif (participants.Contains(base.Owner))\n  62  \t\t{"
+    },
+    "Subroutine": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Subroutine.cs",
+      "sha256": "bfff698d1f8ccffac1e04e661d341a1126a0cad4af0cc008d32f61a321328b8b",
+      "title": "子程序",
+      "description": "当你打出一张能力牌时，获得{energyPrefix:energyIcons(1)}。",
+      "excerpts": ""
+    },
+    "SummonForth": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/SummonForth.cs",
+      "sha256": "e6bd1b3723b0ff86e0f73338e3fd40ca1753c981e36ea29ba039d89b7424ee1e",
+      "title": "征召上前",
+      "description": "不论何处，将[gold]君王之剑[/gold]放入你的[gold]手牌[/gold]。\n[gold]铸造[/gold]{Forge:diff()}。",
+      "excerpts": "  13  {\n  14  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new ForgeVar(8));\n  15  \n  16  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips\n  17  \t{\n  45  \t{\n  46  \t\tbase.DynamicVars.Forge.UpgradeValueBy(3m);\n  47  \t}\n  48  }"
+    },
+    "Supermassive": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Supermassive.cs",
+      "sha256": "cab8c2c2ca8a51d0d6be54325dba98e3d02243aa5ead21bdcb43d37435b53225",
+      "title": "超质量体",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你在本场战斗中每生成过一张牌，这张牌就额外造成{ExtraDamage:diff()}点伤害。",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.Entities.Creatures;\n  17  {\n  18  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  19  \t{\n  20  \t\tnew CalculationBaseVar(5m),\n  21  \t\tnew ExtraDamageVar(3m),\n  22  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => CombatManager.Instance.History.Entries.OfType<CardGeneratedEntry>().Count((CardGeneratedEntry c) => c.Creator == card.Owner))\n  23  \t});\n  24  \n  25  \tpublic Supermassive()\n  32  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  33  \t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  34  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\", null, \"heavy_attack.mp3\")\n  35  \t\t\t.Execute(choiceContext);\n  36  \t}\n  39  \t{\n  40  \t\tbase.DynamicVars.ExtraDamage.UpgradeValueBy(1m);\n  41  \t}\n  42  }"
+    },
+    "SwordSage": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/SwordSage.cs",
+      "sha256": "945d041dcb8e3665cdf88c191977054351a5ea5430a9d113e0180900ebb1c4d1",
+      "title": "剑圣",
+      "description": "[gold]君王之剑[/gold]获得[gold]重放[/gold]{SwordSagePower:diff()}。",
+      "excerpts": "  24  \n  25  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<SwordSagePower>(1m));\n  26  \n  27  \tpublic SwordSage()\n  28  \t\t: base(2, CardType.Power, CardRarity.Rare, TargetType.Self)"
+    },
+    "Tactician": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Tactician.cs",
+      "sha256": "c08e162652f37088de6be037ac0120c18bb3ac374b7094bfc5097328d069275d",
+      "title": "战术大师",
+      "description": "获得{Energy:energyIcons()}。",
+      "excerpts": "  12  {\n  13  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new EnergyVar(1));\n  14  \n  15  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Sly);\n  16  \n  30  \t{\n  31  \t\tbase.DynamicVars.Energy.UpgradeValueBy(1m);\n  32  \t}\n  33  }"
+    },
+    "TearAsunder": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/TearAsunder.cs",
+      "sha256": "420206af4340353b34934718085ab27ed69c4b72783e169bf0403c8b23d2e8b8",
+      "title": "扯碎",
+      "description": "造成{Damage:diff()}点伤害。\n在本场战斗中，你每失去过一次生命值，这张牌就额外造成一次伤害。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "excerpts": "   5  using MegaCrit.Sts2.Core.Combat;\n   6  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   7  using MegaCrit.Sts2.Core.Commands;\n   8  using MegaCrit.Sts2.Core.Entities.Cards;\n   9  using MegaCrit.Sts2.Core.Entities.Creatures;\n  19  \n  20  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[5]\n  21  \t{\n  22  \t\tnew DamageVar(5m, ValueProp.Move),\n  23  \t\tnew RepeatVar(1),\n  24  \t\tnew CalculationBaseVar(0m),\n  25  \t\tnew CalculationExtraVar(1m),\n  26  \t\tnew CalculatedVar(\"CalculatedHits\").WithMultiplier((CardModel card, Creature? _) => 1 + CombatManager.Instance.History.Entries.OfType<DamageReceivedEntry>().Count((DamageReceivedEntry e) => e.Receiver == card.Owner.Creature && e.Result.UnblockedDamage > 0))\n  27  \t});\n  28  \n  29  \tpublic TearAsunder()\n  36  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  37  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount((int)((CalculatedVar)base.DynamicVars[\"CalculatedHits\"]).Calculate(cardPlay.Target)).FromCard(this)\n  38  \t\t\t.Targeting(cardPlay.Target)\n  39  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  40  \t\t\t.Execute(choiceContext);\n  44  \t{\n  45  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  46  \t}\n  47  }"
+    },
+    "TeslaCoil": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/TeslaCoil.cs",
+      "sha256": "cc8a3414dffb183c41e02a86e17cf4ae13c5d4f45d6dac8ef411a69408831557",
+      "title": "特斯拉线圈",
+      "description": "造成{Damage:diff()}点伤害。\n对该敌人触发你的所有[gold]闪电[/gold]充能球的被动{IfUpgraded:show: 两次|}。",
+      "excerpts": "  18  \n  19  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(3m, ValueProp.Move));\n  20  \n  21  \tpublic TeslaCoil()\n  22  \t\t: base(0, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)\n  28  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  29  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  30  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  31  \t\t\t.Execute(choiceContext);\n  32  \t\tList<LightningOrb> list = base.Owner.PlayerCombatState.OrbQueue.Orbs.OfType<LightningOrb>().ToList();\n  44  \t{\n  45  \t\tbase.DynamicVars.Damage.UpgradeValueBy(1m);\n  46  \t}\n  47  }"
+    },
+    "TheScythe": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/TheScythe.cs",
+      "sha256": "5097151929df20e4595fbdbcdce2facd4804c2e3fbe960a23294400b95028d08",
+      "title": "巨镰",
+      "description": "造成{Damage:diff()}点伤害。\n这张牌在本局游戏中的伤害永久性增加{Increase:diff()}。",
+      "excerpts": "  51  \n  52  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n  53  \n  54  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[2]\n  55  \t{\n  56  \t\tnew DamageVar(CurrentDamage, ValueProp.Move),\n  57  \t\tnew IntVar(\"Increase\", 4m)\n  58  \t});\n  59  \n  60  \tpublic TheScythe()\n  67  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  68  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)\n  69  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  70  \t\t\t.Execute(choiceContext);\n  71  \t\tint intValue = base.DynamicVars[\"Increase\"].IntValue;\n  72  \t\tBuffFromPlay(intValue);\n  73  \t\t(base.DeckVersion as TheScythe)?.BuffFromPlay(intValue);\n  74  \t}\n  75  \n  76  \tprotected override void OnUpgrade()\n  77  \t{\n  78  \t\tbase.DynamicVars[\"Increase\"].UpgradeValueBy(1m);\n  79  \t}\n  80  \n  81  \tprotected override void AfterDowngraded()\n  82  \t{\n  83  \t\tUpdateDamage();\n  84  \t}\n  85  \n  86  \tprivate void BuffFromPlay(int extraDamage)\n  87  \t{\n  88  \t\tIncreasedDamage += extraDamage;\n  89  \t\tUpdateDamage();\n  90  \t}\n  91  \n  92  \tprivate void UpdateDamage()\n  93  \t{\n  94  \t\tCurrentDamage = 13 + IncreasedDamage;\n  95  \t}"
+    },
+    "Thrash": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Thrash.cs",
+      "sha256": "f2b5b5395f30bc61ff798b5e44bb581077db3645fa942634a01147be279082d8",
+      "title": "痛殴",
+      "description": "造成{Damage:diff()}点伤害两次。\n[gold]消耗[/gold]你的[gold]手牌[/gold]中随机一张攻击牌，并将它的伤害添加给这张牌。",
+      "excerpts": "  19  \n  20  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromKeyword(CardKeyword.Exhaust));\n  21  \n  22  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(4m, ValueProp.Move));\n  23  \n  24  \tprivate decimal ExtraDamage\n  25  \t{\n  44  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  45  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(2).FromCard(this)\n  46  \t\t\t.Targeting(cardPlay.Target)\n  47  \t\t\t.WithHitFx(\"vfx/vfx_thrash\")\n  48  \t\t\t.Execute(choiceContext);\n  69  \t\t\t}\n  70  \t\t\tdamage = Hook.ModifyDamage(base.Owner.RunState, base.Owner.Creature.CombatState, null, base.Owner.Creature, damage, ValueProp.Move, cardModel, ModifyDamageHookType.All, CardPreviewMode.None, out IEnumerable<AbstractModel> _);\n  71  \t\t\tbase.DynamicVars.Damage.BaseValue += damage;\n  72  \t\t\tExtraDamage += damage;\n  73  \t\t\tawait CardCmd.Exhaust(choiceContext, cardModel);\n  84  \t{\n  85  \t\tbase.DynamicVars.Damage.UpgradeValueBy(2m);\n  86  \t}\n  87  }"
+    },
+    "Thunder": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Thunder.cs",
+      "sha256": "97923adc92a93634af2eb0ab2781d213e8514f7a64f04c775821a7088ed9fd58",
+      "title": "雷霆",
+      "description": "每当你[gold]激发闪电[/gold]充能球时，对被命中的敌人造成{ThunderPower:diff()}点伤害。",
+      "excerpts": "  20  \n  21  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new PowerVar<ThunderPower>(6m));\n  22  \n  23  \tpublic Thunder()\n  24  \t\t: base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)\n  35  \t{\n  36  \t\tbase.DynamicVars[\"ThunderPower\"].UpgradeValueBy(2m);\n  37  \t}\n  38  }"
+    },
+    "ThunderPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/ThunderPower.cs",
+      "sha256": "d2269d7f49e91d7990f90653d874059b00674825ed6445595f5de5db2fb5aeec",
+      "title": "ThunderPower",
+      "description": "",
+      "excerpts": "  34  \t\t\tawait CreatureCmd.TriggerAnim(orb.Owner.Creature, \"Attack\", base.Owner.Player.Character.AttackAnimDelay);\n  35  \t\t\tawait CreatureCmd.Damage(choiceContext, livingTargets, base.Amount, ValueProp.Unpowered, base.Owner, null);\n  36  \t\t}\n  37  \t}\n  38  }"
+    },
+    "TimesUp": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/TimesUp.cs",
+      "sha256": "5231066fd958aa9c1b4fb62d200fd6d3cd1f809ba62aeec4e5b7a447b9a4d72a",
+      "title": "大限已至",
+      "description": "造成等量于该敌人身上的[gold]灾厄[/gold]层数的伤害。{IsTargeting:\n（造成{CalculatedDamage:diff()}点伤害）|}",
+      "excerpts": "  16  {\n  17  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n  18  \n  19  \tprotected override IEnumerable<IHoverTip> ExtraHoverTips => new global::_003C_003Ez__ReadOnlySingleElementList<IHoverTip>(HoverTipFactory.FromPower<DoomPower>());\n  20  \n  21  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  22  \t{\n  23  \t\tnew CalculationBaseVar(0m),\n  24  \t\tnew ExtraDamageVar(1m),\n  25  \t\tnew CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel _, Creature? target) => target?.GetPowerAmount<DoomPower>() ?? 0)\n  26  \t});\n  27  \n  28  \tpublic TimesUp()\n  35  \t\tArgumentNullException.ThrowIfNull(cardPlay.Target, \"cardPlay.Target\");\n  36  \t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)\n  37  \t\t\t.WithHitFx(\"vfx/vfx_attack_slash\")\n  38  \t\t\t.Execute(choiceContext);\n  39  \t}"
+    },
+    "Tracking": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Tracking.cs",
+      "sha256": "31a0526085956446c92082e663fcce256ba1a4a0ae07fe002f33546422789739",
+      "title": "跟踪",
+      "description": "对[gold]虚弱[/gold]状态的敌人，你所造成的攻击伤害翻倍。",
+      "excerpts": ""
+    },
+    "TrackingPower": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/TrackingPower.cs",
+      "sha256": "661faa5c70589a3df5181d43aa4571dd9ce13d5b66ef6a1d1a2b8868fb6b562e",
+      "title": "TrackingPower",
+      "description": "",
+      "excerpts": ""
+    },
+    "Unleash": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Unleash.cs",
+      "sha256": "601495e26590e4a46b1c4b61e12929b1f4ca3a096c52ce36ba4a9b3d79dda11c",
+      "title": "出击",
+      "description": "[gold]奥斯提[/gold]造成{CalculatedDamage:diff()}点伤害。\n这张牌额外造成等量于[gold]奥斯提[/gold]当前生命值的伤害。",
+      "excerpts": "  19  \n  20  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  21  \t{\n  22  \t\tnew CalculationBaseVar(6m),\n  23  \t\tnew ExtraDamageVar(1m).FromOsty(),\n  24  \t\tnew CalculatedDamageVar(ValueProp.Move).FromOsty().WithMultiplier(delegate(CardModel card, Creature? _)\n  25  \t\t{\n  26  \t\t\tCreature osty = card.Owner.Osty;\n  27  \t\t\treturn (osty != null && osty.IsAlive) ? osty.CurrentHp : 0;\n  40  \t\t{\n  41  \t\t\tawait DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromOsty(base.Owner.Osty, this).Targeting(cardPlay.Target)\n  42  \t\t\t\t.WithHitFx(\"vfx/vfx_attack_blunt\", null, \"blunt_attack.mp3\")\n  43  \t\t\t\t.Execute(choiceContext);\n  44  \t\t}\n  48  \t{\n  49  \t\tbase.DynamicVars.CalculationBase.UpgradeValueBy(3m);\n  50  \t}\n  51  }"
+    },
+    "Voltaic": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Voltaic.cs",
+      "sha256": "2d79fa1d508620b6dc25f224d3a2dd52986833aeeeac20562dd5cbc5981b74e4",
+      "title": "电流相生",
+      "description": "[gold]生成[/gold]等量于你在这场战斗中[gold]生成过[/gold]的[gold]闪电[/gold]充能球数量的[gold]闪电[/gold]充能球。{InCombat:\n（[gold]生成[/gold]{CalculatedChannels:diff()}个[gold]闪电[/gold]充能球）|}",
+      "excerpts": "   4  using MegaCrit.Sts2.Core.Combat;\n   5  using MegaCrit.Sts2.Core.Combat.History.Entries;\n   6  using MegaCrit.Sts2.Core.Commands;\n   7  using MegaCrit.Sts2.Core.Entities.Cards;\n   8  using MegaCrit.Sts2.Core.Entities.Creatures;\n  25  \n  26  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlyArray<DynamicVar>(new DynamicVar[3]\n  27  \t{\n  28  \t\tnew CalculationBaseVar(0m),\n  29  \t\tnew CalculationExtraVar(1m),\n  30  \t\tnew CalculatedVar(\"CalculatedChannels\").WithMultiplier((CardModel card, Creature? _) => CombatManager.Instance.History.Entries.OfType<OrbChanneledEntry>().Count((OrbChanneledEntry e) => e.Actor.Player == card.Owner && e.Orb is LightningOrb))\n  31  \t});\n  32  \n  33  \tpublic override IEnumerable<CardKeyword> CanonicalKeywords => new global::_003C_003Ez__ReadOnlySingleElementList<CardKeyword>(CardKeyword.Exhaust);\n  34  \n  35  \tpublic Voltaic()\n  36  \t\t: base(3, CardType.Skill, CardRarity.Rare, TargetType.Self)\n  51  \t{\n  52  \t\tRemoveKeyword(CardKeyword.Exhaust);\n  53  \t}\n  54  }"
+    },
+    "Whirlwind": {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Whirlwind.cs",
+      "sha256": "ffdb3485ce9ae1ed83f8cb076faf6aa4020813131e05e26ee5731220914aafe2",
+      "title": "旋风斩",
+      "description": "对所有敌人造成{Damage:diff()}点伤害X次。",
+      "excerpts": "  23  \n  24  \tprotected override IEnumerable<DynamicVar> CanonicalVars => new global::_003C_003Ez__ReadOnlySingleElementList<DynamicVar>(new DamageVar(5m, ValueProp.Move));\n  25  \n  26  \tpublic Whirlwind()\n  27  \t\t: base(0, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)\n  41  \t\t}\n  42  \t\tawait DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(num).FromCard(this)\n  43  \t\t\t.TargetingAllOpponents(base.CombatState)\n  44  \t\t\t.WithHitFx(\"vfx/vfx_giant_horizontal_slash\")\n  45  \t\t\t.Execute(choiceContext);\n  49  \t{\n  50  \t\tbase.DynamicVars.Damage.UpgradeValueBy(3m);\n  51  \t}\n  52  }"
+    }
+  },
+  "original_assembly": {
+    "path": "D:/Godot/Proj/STS2_ShoujoKagekiAijoKaren/artifacts/dev-game/stable/game/data_sts2_windows_x86_64/sts2.dll",
+    "sha256": "a1f9e653f1e28e4076558fee1e60d218619cb7e057b887c6417f62c62c6d7a52"
+  },
+  "keyword_evidence": {
+    "ETHEREAL.description": "如果这张牌在这个回合结束时留在你的[gold]手牌[/gold]中，则将其[gold]消耗[/gold]。",
+    "ETHEREAL.title": "虚无",
+    "EXHAUST.description": "在战斗结束前移除。",
+    "EXHAUST.title": "消耗",
+    "SLY.description": "如果这张牌在你的回合结束前从你的[gold]手牌[/gold]中被丢弃，则免费将其打出。",
+    "SLY.title": "奇巧"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "version": "0.1.0",
+  "spine": "4.2.11",
+  "artwork": "Built-in imagegen; original PNGs preserved in source/",
+  "reference_model": "../megumin-concepts-20261009/quartet/idle-02-right-hand.png",
+  "bones": 16,
+  "slots": 12,
+  "attachments": 18,
+  "atlas_regions": 20,
+  "animations": [
+    "idle_loop",
+    "cast_short",
+    "chant_enter",
+    "chant_loop",
+    "chant_cancel",
+    "chant_ack",
+    "attack_short",
+    "explosion_release",
+    "explosion_hold",
+    "explosion_exit",
+    "hit",
+    "hit_chant",
+    "relaxed_fall",
+    "relaxed_loop",
+    "get_up",
+    "dead",
+    "dead_from_down",
+    "hit_down"
+  ],
+  "limitations": [
+    "Standing rig uses rigid region attachments and two arm IK constraints.",
+    "Sitting/supine/defeat use whole-pose attachment replacements; fall/get-up transitions are prototype blocking. Two outlined meshes exclude adjacent sheet fragments without altering source pixels.",
+    "Not integrated into the playable STS2 mod; no native .spine or binary .skel was authored."
+  ]
+}

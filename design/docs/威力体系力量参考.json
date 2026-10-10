@@ -1,0 +1,86 @@
+{
+  "version": "本地原版v0.107.1源码快照，用于结构参考；不声明为2026-10-09最新平衡版本",
+  "files": [
+    {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/DemonForm.cs",
+      "sha256": "668a291971ddf0f55638f93fab2a87a479598f5a285076dff72b82edbb7dcf7a"
+    },
+    {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Inflame.cs",
+      "sha256": "adacf6eebe8337b67563e62dfee2bb3370fb65ff99bb5072ae2360cf966ad810"
+    },
+    {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/SwordBoomerang.cs",
+      "sha256": "c2158cac3112be02890e281ac32cd61ff13efc048a8f97e2fd71ee2ab265aa2d"
+    },
+    {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Cards/Whirlwind.cs",
+      "sha256": "ffdb3485ce9ae1ed83f8cb076faf6aa4020813131e05e26ee5731220914aafe2"
+    },
+    {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/DemonFormPower.cs",
+      "sha256": "8c5b4dbd0d3cbec51cc7ba947ee9cce833f11153928144bc201601cf150b67a8"
+    },
+    {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/RupturePower.cs",
+      "sha256": "c2a59a15cc8628370abec825ccaf9ed52b4c7a6da0327347da198840822b3001"
+    },
+    {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/StrengthPower.cs",
+      "sha256": "267b986f0d1fc9666919f8ef2e3f714114f40355506a74c5bcc3977c283ffe49"
+    },
+    {
+      "path": "C:/Users/17575/AppData/Local/Temp/megumin-damage-v01071-5f8e954d/MegaCrit.Sts2.Core.Models.Powers/TemporaryStrengthPower.cs",
+      "sha256": "0b0ae6f9f69dd2a451b4f307b51b2c69b00515114660c26e9e7d3b472b25a398"
+    }
+  ],
+  "mapping": [
+    {
+      "role": "直接投资",
+      "reference": "燃烧 / Inflame",
+      "verified": "本地v0.107.1：1费能力，获得2点力量，升级3点。",
+      "design": "威力上升：先按1费获得1／2点常驻威力打样。爆裂默认三段群伤且另有免费吟唱来源，不直接照抄2／3。",
+      "files": [
+        "MegaCrit.Sts2.Core.Models.Cards/Inflame.cs"
+      ]
+    },
+    {
+      "role": "临时爆发",
+      "reference": "临时力量与FlexPotion",
+      "verified": "临时力量会在己方回合结束阶段回收所加力量。此处参考生命周期，不声称二代仍有一代Flex卡。",
+      "design": "吟唱是基础临时来源；全力吟唱付费提供额外临时威力，消耗限制重复循环。清理安排在爆裂之后。",
+      "files": [
+        "MegaCrit.Sts2.Core.Models.Powers/TemporaryStrengthPower.cs"
+      ]
+    },
+    {
+      "role": "持续或条件成长",
+      "reference": "恶魔形态 / 撕裂",
+      "verified": "本地v0.107.1：恶魔形态在自身回合开始加力量；撕裂以自身回合失去生命为增长事件。",
+      "design": "每日一爆：付启动成本，整次爆裂结束后加常驻威力；采用与惠惠已有动作相连的成长事件，不额外引入自伤体系。",
+      "files": [
+        "MegaCrit.Sts2.Core.Models.Cards/DemonForm.cs",
+        "MegaCrit.Sts2.Core.Models.Powers/DemonFormPower.cs",
+        "MegaCrit.Sts2.Core.Models.Powers/RupturePower.cs"
+      ]
+    },
+    {
+      "role": "反复兑现",
+      "reference": "飞剑回旋镖 / 旋风斩",
+      "verified": "本地v0.107.1：飞剑为3伤随机攻击3次，升级4次；旋风斩为5／8点群伤X次。多段分别获得力量加值。",
+      "design": "爆裂与增段牌承担多段群伤；连锁引爆承担即时随机多段。两者争夺能量和出牌时点，不能都自动取得最大收益。",
+      "files": [
+        "MegaCrit.Sts2.Core.Models.Cards/SwordBoomerang.cs",
+        "MegaCrit.Sts2.Core.Models.Cards/Whirlwind.cs",
+        "MegaCrit.Sts2.Core.Models.Powers/StrengthPower.cs"
+      ]
+    },
+    {
+      "role": "上限与补洞",
+      "reference": "沿用力量常见的倍率收益思路；下列为本项目设计判断",
+      "verified": "这里不主张二代当前卡池包含一代所有力量牌，也不将一代数值作为本项目平衡依据。",
+      "design": "超越极限提供稀有的威力翻倍；魔力护身让一张防御牌读取威力。首版不追加临时转永久、全局威力转格挡或回血规则。",
+      "files": []
+    }
+  ]
+}

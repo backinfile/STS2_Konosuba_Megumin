@@ -1,0 +1,6 @@
+{
+  "id": "MeguminMod", "name": "惠惠 · 动画测试角色", "author": "Megumin mod project",
+  "description": "开发测试版。原版卡组、遗物与数值为占位数据，用于验证角色和动画。",
+  "version": "0.1.0-dev", "has_dll": true, "has_pck": false,
+  "min_game_version": "0.107.1", "dependencies": [{"id":"BaseLib", "min_version":"3.4.7"}], "affects_gameplay": true
+}

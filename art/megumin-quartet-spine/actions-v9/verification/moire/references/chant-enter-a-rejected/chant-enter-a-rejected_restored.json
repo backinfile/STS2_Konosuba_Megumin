@@ -1,0 +1,79 @@
+{
+  "stage": "restore",
+  "outcome": "delivered",
+  "human_note": "",
+  "source": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\chant-enter-a-rejected.png",
+  "source_sha256": "dfc2206f4d5a3a4565e33df12a191f3777c52447bbc3aabc2f2b01bdb0913c31",
+  "final": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_restored.png",
+  "final_sha256": "7865ffd1d77e8b6935cc7cf992d3e58ad4997ea7b9059bb7d75d51eeed586048",
+  "final_is_source_copy": false,
+  "regen_rounds": 0,
+  "mode": "rules",
+  "diag": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_input_diag.json",
+  "verify": {
+    "passed": true,
+    "reasons": [],
+    "board": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_verify_board.png"
+  },
+  "steps": [
+    {
+      "n": 1,
+      "current": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\chant-enter-a-rejected.png",
+      "action": "diagnose",
+      "by": "rules",
+      "reason": "Diagnosis is required before treatment.",
+      "result": {
+        "action": "diagnose",
+        "lattice": true,
+        "granule_level": "none",
+        "scale_tile_pct": 0.0,
+        "scale_level": "none",
+        "board": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_input_diag_board.png",
+        "scale_heatmap": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_input_scaleheat.png"
+      }
+    },
+    {
+      "n": 2,
+      "current": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\references\\chant-enter-a-rejected.png",
+      "action": "notch",
+      "by": "rules",
+      "reason": "An isolated periodic lattice was detected.",
+      "result": {
+        "action": "notch",
+        "output": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_notch.png",
+        "components_above_tau": 1670,
+        "isolated_components_kept": 1670,
+        "rejected_large_components": 0,
+        "notched_bins": 1822,
+        "notched_bins_pct": 0.095,
+        "max_peak_excess": 2.993,
+        "energy_removed_pct": 0.37707
+      }
+    },
+    {
+      "n": 3,
+      "current": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_notch.png",
+      "action": "verify",
+      "by": "rules",
+      "reason": "Verify aligned filtering distortion.",
+      "result": {
+        "action": "verify",
+        "passed": true,
+        "reasons": [],
+        "board": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_verify_board.png"
+      }
+    },
+    {
+      "n": 4,
+      "current": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v8\\verification\\moire\\references\\chant-enter-a-rejected\\chant-enter-a-rejected_notch.png",
+      "action": "finish",
+      "by": "rules",
+      "reason": "No further processing is required.",
+      "result": {
+        "action": "finish"
+      }
+    }
+  ],
+  "acceptance": "A person must inspect the boards and decide whether to accept the candidate.",
+  "time": "2026-10-10T14:50:31+08:00"
+}

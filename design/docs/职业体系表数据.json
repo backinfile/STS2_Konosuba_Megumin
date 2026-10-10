@@ -1,0 +1,1300 @@
+{
+  "date": "2026-10-10",
+  "scope": [
+    "原版五职业（研究快照）＋华恋Mod＋惠惠草稿，共7张表。",
+    "卡数、触发与收益数均有交集；“—”表示未统计。跨战斗成长指本局内保留的成长。",
+    "运转细分抽牌、能量恢复；其他或不明确的写“运转端口”。减费、回手与星不计为回能。"
+  ],
+  "characters": [
+    {
+      "id": "ironclad",
+      "name": "铁甲战士",
+      "kind": "STS2原版 · 既有研究统计",
+      "total": 87,
+      "pool_note": "原文职业卡池为87种牌，含基础牌；体系之间允许重复归属。",
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\ironclad_card_analysis_zh.md",
+      "rows": [
+        {
+          "name": "易伤体系",
+          "scale": "大体系",
+          "position": "易伤状态驱动的输出与抽牌",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 13,
+          "trigger": 7,
+          "reward": 7,
+          "note": "入口和收益成对存在，`凶恶` 把易伤转为抽牌后，易伤不只是增伤状态。",
+          "members": [],
+          "classes": [
+            3,
+            5,
+            3,
+            1,
+            1
+          ],
+          "engine_detail": [
+            "抽牌：凶恶，给予易伤时抽牌"
+          ],
+          "short_note": "易伤兼顾增伤与抽牌。",
+          "short_position": "易伤联动"
+        },
+        {
+          "name": "消耗体系",
+          "scale": "大体系",
+          "position": "消耗事件驱动的资源转换主轴",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 18,
+          "trigger": 10,
+          "reward": 12,
+          "note": "触发、收益、抽牌、能量和防御都完整，是铁甲战士最成熟的体系之一。",
+          "members": [],
+          "classes": [
+            3,
+            4,
+            7,
+            2,
+            2
+          ],
+          "engine_detail": [
+            "抽牌：黑暗之拥、战鼓",
+            "能量恢复：战鼓被消耗时回能",
+            "运转端口：腐化减费等支持"
+          ],
+          "short_note": "消耗换资源，配套完整。",
+          "short_position": "消耗换资源"
+        },
+        {
+          "name": "自损与生命资源体系",
+          "scale": "大体系",
+          "position": "生命作为成本与触发资源",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 12,
+          "trigger": 9,
+          "reward": 4,
+          "note": "触发多于收益，构筑强度取决于能否把生命损失转成输出或运转。",
+          "members": [],
+          "classes": [
+            1,
+            4,
+            2,
+            2,
+            3
+          ],
+          "engine_detail": [
+            "抽牌：祭品",
+            "能量恢复：放血、祭品"
+          ],
+          "short_note": "失去生命换输出与资源。",
+          "short_position": "生命换收益"
+        },
+        {
+          "name": "格挡体系",
+          "scale": "大体系",
+          "position": "格挡的取得、保留与兑现",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 20,
+          "trigger": 15,
+          "reward": 5,
+          "note": "格挡来源极多，真正质变来自保留格挡和格挡转伤害。",
+          "members": [],
+          "classes": [
+            1,
+            12,
+            2,
+            2,
+            3
+          ],
+          "engine_detail": [
+            "抽牌：耸肩无视"
+          ],
+          "short_note": "保留格挡，再转为伤害。",
+          "short_position": "格挡积累与转伤"
+        },
+        {
+          "name": "攻击牌连动体系",
+          "scale": "小体系",
+          "position": "低费攻击、复制与连打插件",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 10,
+          "trigger": 7,
+          "reward": 4,
+          "note": "触发条件太宽，更像低费攻击、复制和连打插件，而不是独立主体系。",
+          "members": [],
+          "classes": [
+            1,
+            3,
+            3,
+            1,
+            2
+          ],
+          "engine_detail": [
+            "抽牌：剑柄打击",
+            "运转端口：复制与连打"
+          ],
+          "short_note": "低费攻击与复制配套。",
+          "short_position": "低费攻击与复制"
+        },
+        {
+          "name": "力量与多段输出轴",
+          "scale": "小体系",
+          "position": "力量放大多段攻击的输出副轴",
+          "ports": [
+            "覆盖",
+            "缺失／外接",
+            "覆盖"
+          ],
+          "count": 15,
+          "trigger": 7,
+          "reward": 9,
+          "note": "输出轴很清楚，但缺少防御端，需要依附格挡、消耗或自损体系。",
+          "members": [],
+          "classes": [
+            3,
+            3,
+            3,
+            2,
+            4
+          ],
+          "engine_detail": [
+            "运转端口：沿用原文覆盖判断，具体抽牌／回能未单独拆分"
+          ],
+          "short_note": "多段放大力量收益。",
+          "short_position": "力量放大多段"
+        },
+        {
+          "name": "打击名称体系",
+          "scale": "小体系",
+          "position": "打击名称标签副轴",
+          "ports": [
+            "覆盖",
+            "缺失／外接",
+            "覆盖"
+          ],
+          "count": 7,
+          "trigger": 5,
+          "reward": 2,
+          "note": "名称核心明确但规模小，主要作为早期输出和副轴奖励。",
+          "members": [],
+          "classes": [
+            1,
+            4,
+            0,
+            1,
+            1
+          ],
+          "engine_detail": [
+            "抽牌：剑柄打击",
+            "运转端口：打击牌自动打出"
+          ],
+          "short_note": "按“打击”名称联动。",
+          "short_position": "打击名称联动"
+        }
+      ],
+      "notes": [
+        "大／小体系、卡数和端口均沿用原文。触发数和收益数含交集，不能相加当体系总数。",
+        "跨战斗成长：狂宴提高最大生命。"
+      ],
+      "member_notes": [],
+      "growth_note": "跨战斗成长：狂宴提高最大生命。",
+      "display_notes": [
+        "跨战斗成长：狂宴提高最大生命。"
+      ]
+    },
+    {
+      "id": "silent",
+      "name": "静默猎手",
+      "kind": "STS2原版 · 既有研究统计",
+      "total": 88,
+      "pool_note": "原文职业卡池为88种牌，含基础牌；体系之间允许重复归属。",
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\silent_card_analysis_zh.md",
+      "rows": [
+        {
+          "name": "中毒体系",
+          "scale": "大体系",
+          "position": "持续中毒与额外毒结算",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "缺失／外接"
+          ],
+          "count": 12,
+          "trigger": 9,
+          "reward": 4,
+          "note": "中毒来源充足，输出收益清楚，但运转端主要依赖弃牌和抽牌体系外接。",
+          "members": [],
+          "classes": [
+            1,
+            5,
+            4,
+            2,
+            0
+          ],
+          "engine_detail": [
+            "运转端口：缺失／外接"
+          ],
+          "short_note": "持续伤害，运转外接。",
+          "short_position": "持续中毒"
+        },
+        {
+          "name": "小刀体系",
+          "scale": "大体系",
+          "position": "小刀生成、强化与使用",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 12,
+          "trigger": 9,
+          "reward": 4,
+          "note": "小刀生成、增伤、保留和群体化完整，是静默最直观的低费攻击体系。",
+          "members": [],
+          "classes": [
+            1,
+            5,
+            2,
+            2,
+            2
+          ],
+          "engine_detail": [
+            "运转端口：小刀生成、保留与重放"
+          ],
+          "short_note": "生成、强化、保留小刀。",
+          "short_position": "小刀生成与强化"
+        },
+        {
+          "name": "弃牌与奇巧体系",
+          "scale": "大体系",
+          "position": "弃牌触发奇巧与资源收益",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 20,
+          "trigger": 11,
+          "reward": 10,
+          "note": "触发和收益最完整，既能过牌也能制造小刀和爆发，是职业主体系。",
+          "members": [],
+          "classes": [
+            2,
+            7,
+            5,
+            3,
+            3
+          ],
+          "engine_detail": [
+            "抽牌：杂技、早有准备、本能反应",
+            "能量恢复：战术大师",
+            "运转端口：弃牌触发奇巧"
+          ],
+          "short_note": "弃牌换资源，主体系。",
+          "short_position": "弃牌与奇巧"
+        },
+        {
+          "name": "出牌与抽牌连动体系",
+          "scale": "小体系",
+          "position": "大量出牌／抽牌的奖励层",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 11,
+          "trigger": 3,
+          "reward": 8,
+          "note": "触发条件很宽，更像多牌连打奖励层，需要弃牌、小刀或低费牌支撑。",
+          "members": [],
+          "classes": [
+            1,
+            3,
+            3,
+            2,
+            2
+          ],
+          "engine_detail": [
+            "运转端口：覆盖，出牌／抽牌连动"
+          ],
+          "short_note": "奖励多次出牌与抽牌。",
+          "short_position": "出牌／抽牌奖励"
+        },
+        {
+          "name": "虚弱与增伤状态轴",
+          "scale": "小体系",
+          "position": "虚弱减伤与攻击增幅副轴",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "缺失／外接"
+          ],
+          "count": 11,
+          "trigger": 9,
+          "reward": 2,
+          "note": "虚弱来源很多，但收益牌少，主要作为防御和攻击倍率副轴。",
+          "members": [],
+          "classes": [
+            0,
+            5,
+            1,
+            1,
+            4
+          ],
+          "engine_detail": [
+            "运转端口：缺失／外接"
+          ],
+          "short_note": "来源多，专属收益少。",
+          "short_position": "虚弱减伤与增伤"
+        },
+        {
+          "name": "技能牌标签体系",
+          "scale": "小体系",
+          "position": "以技能密度支撑复制和弃牌收益",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 9,
+          "trigger": 4,
+          "reward": 6,
+          "note": "技能密度高，但本体系更像弃牌/连打体系的插件，不适合单独成型。",
+          "members": [],
+          "classes": [
+            1,
+            3,
+            1,
+            2,
+            2
+          ],
+          "engine_detail": [
+            "抽牌：逃脱计划",
+            "运转端口：技能复制与奇巧联动"
+          ],
+          "short_note": "服务弃牌与连打。",
+          "short_position": "技能密度联动"
+        }
+      ],
+      "notes": [
+        "大／小体系、卡数和端口均沿用原文。触发数和收益数含交集，不能相加当体系总数。",
+        "战后收益：狩猎增加卡牌奖励。"
+      ],
+      "member_notes": [],
+      "growth_note": "战后收益：狩猎增加卡牌奖励。",
+      "display_notes": [
+        "战后收益：狩猎增加卡牌奖励。"
+      ]
+    },
+    {
+      "id": "defect",
+      "name": "故障机器人",
+      "kind": "STS2原版 · 既有研究统计",
+      "total": 88,
+      "pool_note": "原文职业卡池为88种牌，含基础牌；体系之间允许重复归属。",
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\defect_card_analysis_zh.md",
+      "rows": [
+        {
+          "name": "充能球体系",
+          "scale": "大体系",
+          "position": "球种、槽位、集中、被动与激发的主体系",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 41,
+          "trigger": 22,
+          "reward": 21,
+          "note": "职业绝对主体系，球种、槽位、集中、被动和激发都形成完整闭环。",
+          "members": [],
+          "classes": [
+            2,
+            19,
+            9,
+            6,
+            5
+          ],
+          "engine_detail": [
+            "抽牌：冷静头脑、编译冲击",
+            "能量恢复：等离子球的被动与激发",
+            "运转端口：球种、槽位与激发调度"
+          ],
+          "short_note": "职业主体系，配套完整。",
+          "short_position": "球种、槽位与激发"
+        },
+        {
+          "name": "状态牌废料体系",
+          "scale": "小体系",
+          "position": "把状态牌副作用转成资源",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 11,
+          "trigger": 7,
+          "reward": 6,
+          "note": "有生成与收益，但更像“副作用转资源”插件，需要状态牌密度支持。",
+          "members": [],
+          "classes": [
+            1,
+            5,
+            3,
+            1,
+            1
+          ],
+          "engine_detail": [
+            "抽牌：超频、迭代",
+            "能量恢复：内核加速",
+            "运转端口：处理状态牌副作用"
+          ],
+          "short_note": "把状态牌副作用转为收益。",
+          "short_position": "状态牌转资源"
+        },
+        {
+          "name": "零费与一费回收体系",
+          "scale": "小体系",
+          "position": "低费攻击复用与回收",
+          "ports": [
+            "覆盖",
+            "缺失／外接",
+            "覆盖"
+          ],
+          "count": 8,
+          "trigger": 5,
+          "reward": 4,
+          "note": "低费回收能形成输出/运转循环，但缺少防御端。",
+          "members": [],
+          "classes": [
+            1,
+            3,
+            1,
+            2,
+            1
+          ],
+          "engine_detail": [
+            "抽牌：刮削、超越光速",
+            "运转端口：低费牌回收"
+          ],
+          "short_note": "低费循环，防御外接。",
+          "short_position": "低费牌复用"
+        },
+        {
+          "name": "能力牌连动体系",
+          "scale": "小体系",
+          "position": "能力生成、复制与出牌奖励层",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 9,
+          "trigger": 3,
+          "reward": 6,
+          "note": "依赖罕见/稀有能力牌密度，常作为充能球和零费体系的上限层。",
+          "members": [],
+          "classes": [
+            0,
+            2,
+            2,
+            3,
+            2
+          ],
+          "engine_detail": [
+            "抽牌：机器学习",
+            "能量恢复：子程序，打出能力牌时回能",
+            "运转端口：能力牌生成与复制"
+          ],
+          "short_note": "依赖能力牌密度。",
+          "short_position": "能力牌联动"
+        }
+      ],
+      "notes": [
+        "大／小体系、卡数和端口均沿用原文。触发数和收益数含交集，不能相加当体系总数。",
+        "跨战斗成长：遗传算法提高自身格挡。"
+      ],
+      "member_notes": [],
+      "growth_note": "跨战斗成长：遗传算法提高自身格挡。",
+      "display_notes": [
+        "跨战斗成长：遗传算法提高自身格挡。"
+      ]
+    },
+    {
+      "id": "necrobinder",
+      "name": "亡灵契约师",
+      "kind": "STS2原版 · 既有研究统计",
+      "total": 88,
+      "pool_note": "原文职业卡池为88种牌，含基础牌；体系之间允许重复归属。",
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\necrobinder_card_analysis_zh.md",
+      "rows": [
+        {
+          "name": "奥斯提与召唤体系",
+          "scale": "大体系",
+          "position": "召唤与奥斯提生命／攻击主轴",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 25,
+          "trigger": 17,
+          "reward": 10,
+          "note": "职业第一主体系，召唤、奥斯提攻击、奥斯提死亡和最大生命收益都有闭环。",
+          "members": [],
+          "classes": [
+            1,
+            11,
+            5,
+            5,
+            3
+          ],
+          "engine_detail": [
+            "抽牌：取回",
+            "能量恢复：唤起（下回合）"
+          ],
+          "short_note": "召唤、攻击、死亡联动。",
+          "short_position": "奥斯提召唤与攻击"
+        },
+        {
+          "name": "灾厄与负面状态体系",
+          "scale": "大体系",
+          "position": "灾厄阈值与负面状态收益",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 20,
+          "trigger": 14,
+          "reward": 8,
+          "note": "灾厄既是斩杀阈值也是负面状态触发源，输出和防御收益都完整。",
+          "members": [],
+          "classes": [
+            1,
+            7,
+            6,
+            4,
+            2
+          ],
+          "engine_detail": [
+            "抽牌：鞭打",
+            "运转端口：负面状态连动"
+          ],
+          "short_note": "灾厄斩杀与负面状态收益。",
+          "short_position": "灾厄与负面状态"
+        },
+        {
+          "name": "灵魂体系",
+          "scale": "小体系",
+          "position": "以灵魂衍生牌连接抽牌与召唤",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 11,
+          "trigger": 7,
+          "reward": 4,
+          "note": "灵魂本身是抽牌衍生物，收益牌少但能连接召唤和消耗牌堆。",
+          "members": [],
+          "classes": [
+            0,
+            5,
+            2,
+            1,
+            3
+          ],
+          "engine_detail": [
+            "抽牌：灵魂衍生牌",
+            "运转端口：生成灵魂与召唤联动"
+          ],
+          "short_note": "衔接抽牌与召唤。",
+          "short_position": "灵魂衍生牌"
+        },
+        {
+          "name": "虚无牌体系",
+          "scale": "大体系",
+          "position": "虚无标签驱动的一次性牌与持续收益",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 16,
+          "trigger": 12,
+          "reward": 4,
+          "note": "虚无有稳定来源和明确奖励，偏向用一次性牌制造长期规则收益。",
+          "members": [],
+          "classes": [
+            0,
+            8,
+            2,
+            3,
+            3
+          ],
+          "engine_detail": [
+            "抽牌：书页风暴",
+            "运转端口：虚无牌生成与减费"
+          ],
+          "short_note": "一次性牌换持续收益。",
+          "short_position": "虚无牌联动"
+        },
+        {
+          "name": "高费与死亡节奏轴",
+          "scale": "小体系",
+          "position": "高费、死亡与终结节奏副轴",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 10,
+          "trigger": 7,
+          "reward": 3,
+          "note": "读取 2 费以上、死亡或高费终结，更多是节奏副轴而非独立主体系。",
+          "members": [],
+          "classes": [
+            1,
+            1,
+            3,
+            1,
+            4
+          ],
+          "engine_detail": [
+            "运转端口：高费牌回收与死亡降费"
+          ],
+          "short_note": "高费终结与死亡奖励。",
+          "short_position": "高费与死亡联动"
+        }
+      ],
+      "notes": [
+        "大／小体系、卡数和端口均沿用原文。触发数和收益数含交集，不能相加当体系总数。",
+        "跨战斗成长：巨镰提高自身伤害；禁忌魔典提供战后删牌。"
+      ],
+      "member_notes": [],
+      "growth_note": "跨战斗成长：巨镰提高自身伤害；禁忌魔典提供战后删牌。",
+      "display_notes": [
+        "跨战斗成长：巨镰提高自身伤害；禁忌魔典提供战后删牌。"
+      ]
+    },
+    {
+      "id": "regent",
+      "name": "储君",
+      "kind": "STS2原版 · 既有研究统计",
+      "total": 88,
+      "pool_note": "原文职业卡池为88种牌，含基础牌；体系之间允许重复归属。",
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\regent_card_analysis_zh.md",
+      "rows": [
+        {
+          "name": "星资源体系",
+          "scale": "大体系",
+          "position": "星的获取、支付与读取",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 31,
+          "trigger": 10,
+          "reward": 23,
+          "note": "职业第一主体系，星既是替代费用，也是触发、花费和收益资源。",
+          "members": [],
+          "classes": [
+            2,
+            8,
+            7,
+            3,
+            11
+          ],
+          "engine_detail": [
+            "抽牌：辉光、大爆炸",
+            "能量恢复：星位序列、大爆炸",
+            "运转端口：星的获取与支付（独立于能量）"
+          ],
+          "short_note": "星为独立资源。",
+          "short_position": "星的获取与支付"
+        },
+        {
+          "name": "铸造与君王之剑体系",
+          "scale": "大体系",
+          "position": "铸造持续强化君王之剑",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 13,
+          "trigger": 9,
+          "reward": 7,
+          "note": "铸造持续强化君王之剑，稀有能力负责改变范围、重放和防御端。",
+          "members": [],
+          "classes": [
+            1,
+            4,
+            3,
+            4,
+            1
+          ],
+          "engine_detail": [
+            "抽牌：战利品、大爆炸",
+            "能量恢复：淬炼刀刃（下回合）、大爆炸"
+          ],
+          "short_note": "强化君王之剑。",
+          "short_position": "铸造强化剑"
+        },
+        {
+          "name": "生成牌体系",
+          "scale": "大体系",
+          "position": "生成事件与生成牌收益",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 14,
+          "trigger": 11,
+          "reward": 3,
+          "note": "生成来源很多，收益集中在 `创世之柱`、`武器库`、`超质量体`。",
+          "members": [],
+          "classes": [
+            0,
+            7,
+            2,
+            2,
+            3
+          ],
+          "engine_detail": [
+            "运转端口：生成牌及其使用奖励"
+          ],
+          "short_note": "来源多，收益集中。",
+          "short_position": "生成牌奖励"
+        },
+        {
+          "name": "牌堆顶部与自动打出体系",
+          "scale": "小体系",
+          "position": "安排牌堆顶并自动打出",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 8,
+          "trigger": 7,
+          "reward": 2,
+          "note": "有明确牌堆顶操控和自动打出，但收益牌较少，更像稳定性副轴。",
+          "members": [],
+          "classes": [
+            1,
+            3,
+            1,
+            0,
+            3
+          ],
+          "engine_detail": [
+            "抽牌：光子切割、微光",
+            "运转端口：牌堆顶调度与自动打出"
+          ],
+          "short_note": "调度牌堆顶，提高稳定性。",
+          "short_position": "牌堆顶与自动打出"
+        },
+        {
+          "name": "技能与多牌连打体系",
+          "scale": "小体系",
+          "position": "技能密度与多牌出牌奖励层",
+          "ports": [
+            "覆盖",
+            "覆盖",
+            "覆盖"
+          ],
+          "count": 10,
+          "trigger": 3,
+          "reward": 7,
+          "note": "技能计数和出牌计数有奖励，但需要星、生成牌或低费牌支撑。",
+          "members": [],
+          "classes": [
+            1,
+            2,
+            3,
+            3,
+            1
+          ],
+          "engine_detail": [
+            "运转端口：技能与多牌连打的资源支持"
+          ],
+          "short_note": "依赖星、生成牌或低费牌。",
+          "short_position": "技能与多牌奖励"
+        }
+      ],
+      "notes": [
+        "大／小体系、卡数和端口均沿用原文。触发数和收益数含交集，不能相加当体系总数。",
+        "战后收益：王国资产提供金币。铸造仅在战斗内成长。"
+      ],
+      "member_notes": [],
+      "growth_note": "战后收益：王国资产提供金币。铸造仅在战斗内成长。",
+      "display_notes": [
+        "战后收益：王国资产提供金币。铸造仅在战斗内成长。"
+      ]
+    },
+    {
+      "id": "karen",
+      "name": "爱城华恋",
+      "kind": "Mod资料 · 本次按明确成员重新计数",
+      "total": 86,
+      "pool_note": "主卡池86种；另有27张Token／选项／诅咒等衍生牌，不计入本表的体系成员数。",
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\karen_mod_character_cards_zh.md",
+      "rows": [
+        {
+          "name": "约定牌堆",
+          "scale": "大体系／主轴",
+          "position": "存入、取回、清空与专属牌区管理",
+          "ports": [
+            "牌数转伤害、自动打出",
+            "入库格挡、生成防御牌",
+            "抽取、取空回能、检索"
+          ],
+          "count": 41,
+          "trigger": null,
+          "reward": null,
+          "note": "41张直接关系牌；升级后才出现约定效果的唤醒也计入。",
+          "members": [
+            "坠落",
+            "RevueDuet",
+            "不再遥不可及",
+            "勇气打击",
+            "双人舞",
+            "昨日夜空",
+            "舞动",
+            "东京塔下",
+            "我们的约定",
+            "观察情况",
+            "重逢",
+            "神圣星辰",
+            "背靠背",
+            "落地",
+            "下一个舞台",
+            "不再犹豫",
+            "命运与本能",
+            "命运交换之日",
+            "开拓星辰",
+            "拉伸",
+            "新的一天",
+            "极速下降",
+            "行动",
+            "闪避",
+            "Banana午餐",
+            "信封",
+            "水族馆",
+            "舞台正在等待着",
+            "最后的台词",
+            "唤醒",
+            "星光指引",
+            "约定之塔桥",
+            "Banana什锦",
+            "世界上最空虚的人",
+            "两人的梦想",
+            "命运的齿轮",
+            "命运舞台的再生产",
+            "燃烧吧燃烧吧",
+            "过去与未来",
+            "门票",
+            "为什么要离开？我的朋友"
+          ],
+          "engine_detail": [
+            "抽牌：命运与本能等，从约定牌堆抽取",
+            "能量恢复：命运与本能、舞台正在等待着",
+            "运转端口：存入、取回与检索"
+          ],
+          "short_note": "含升级后生效与生成约定牌。",
+          "short_position": "约定牌堆存取"
+        },
+        {
+          "name": "闪耀",
+          "scale": "大体系／主轴",
+          "position": "闪耀牌、闪耀耗尽与奖励",
+          "ports": [
+            "闪耀攻击、耗尽成长、重放",
+            "闪耀防御牌、总闪耀转格挡",
+            "闪耀牌抽牌／回能及出牌奖励"
+          ],
+          "count": 31,
+          "trigger": null,
+          "reward": null,
+          "note": "31张含闪耀属性或明确读取／处理闪耀的牌。",
+          "members": [
+            "闪耀打击",
+            "上挑",
+            "出场",
+            "星星串起了我们的友谊",
+            "用你的闪耀贯穿我吧",
+            "蓄力打击",
+            "体操练习",
+            "武术练习",
+            "迈向那个舞台",
+            "以觉悟的名义",
+            "永无结束的命运舞台",
+            "续写",
+            "耀眼的阳光",
+            "不再犹豫",
+            "准备完成",
+            "土豆",
+            "歌唱吧舞蹈吧互相争斗吧",
+            "水分补充",
+            "舞蹈练习",
+            "Starlight第一幕",
+            "Starlight第三幕",
+            "NONNON哒哟",
+            "嫉妒",
+            "我们犯下的罪过",
+            "永不遗忘的闪耀",
+            "投下燃料",
+            "星光指引",
+            "星光闪耀之时",
+            "激情",
+            "Starlight第二幕",
+            "一起闪耀吧"
+          ],
+          "engine_detail": [
+            "抽牌：Starlight第一幕、投下燃料",
+            "能量恢复：迈向那个舞台、投下燃料",
+            "运转端口：闪耀牌重放"
+          ],
+          "outside_growth": "跨战斗成长／遗物收益",
+          "short_note": "含闪耀属性与相关收益牌。",
+          "short_position": "闪耀与耗尽收益"
+        },
+        {
+          "name": "临时力量与保留",
+          "scale": "副轴",
+          "position": "获取临时力量并延长可用时间",
+          "ports": [
+            "力量强化攻击",
+            "保留牌附带格挡／格挡保留",
+            "保留、补牌；连接约定取回"
+          ],
+          "count": 9,
+          "trigger": null,
+          "reward": null,
+          "note": "9张直接来源、三明治生成或力量保留牌；不把所有多段攻击都算进来。",
+          "members": [
+            "Banana松饼",
+            "一起吃饭吧",
+            "观察情况",
+            "约定的那天",
+            "Banana午餐",
+            "Banana费南雪",
+            "棒球",
+            "Banana什锦",
+            "过去与未来"
+          ],
+          "engine_detail": [
+            "抽牌：Banana松饼",
+            "运转端口：手牌／能量保留与约定取回"
+          ],
+          "short_note": "临时力量来源与保留配套。",
+          "short_position": "临时力量与保留"
+        },
+        {
+          "name": "移牌收益",
+          "scale": "连接层",
+          "position": "牌区移动或手牌增减触发",
+          "ports": [
+            "旋转成长",
+            "添麻烦了、招架",
+            "下一个舞台抽牌"
+          ],
+          "count": 4,
+          "trigger": null,
+          "reward": null,
+          "note": "仅计4张专属收益牌；触发来源借用约定等体系，未在本行重复加总。",
+          "members": [
+            "旋转",
+            "下一个舞台",
+            "招架",
+            "添麻烦了"
+          ],
+          "engine_detail": [
+            "抽牌：下一个舞台"
+          ],
+          "short_note": "仅计专属收益牌。",
+          "short_position": "移牌触发"
+        },
+        {
+          "name": "禁用遗物",
+          "scale": "运转副轴",
+          "position": "牺牲遗物功能换当回合资源",
+          "ports": [
+            "无直接收益",
+            "无直接收益",
+            "摘星回能、星罪抽牌"
+          ],
+          "count": 2,
+          "trigger": null,
+          "reward": null,
+          "note": "2张直接禁用遗物的牌；产遗物牌属于外部来源，不一并扩张计数。",
+          "members": [
+            "摘星",
+            "星罪"
+          ],
+          "engine_detail": [
+            "抽牌：星罪",
+            "能量恢复：摘星"
+          ],
+          "short_note": "仅计禁用遗物牌。",
+          "short_position": "遗物换资源"
+        }
+      ],
+      "notes": [
+        "原文只有卡牌表，没有现成的体系汇总。本表的主轴／副轴定位与端口是本次根据卡面归纳，成员数可由下面清单复核。",
+        "计数看基础或升级效果，以及闪耀数值属性；不按牌名联想。约定额外计入生成约定之塔的东京塔下、门票。",
+        "移牌行只数专属收益牌，其他行数明确相关成员，故这些数字不能作为与原版体系规模一比一的平衡配额。",
+        "触发／收益和五类定位没有在原文中统计，本次不伪造精确拆分。“—”表示未统计，不表示0。",
+        "跨战斗成长：我们犯下的罪过；遗物收益：嫉妒、激情等。"
+      ],
+      "member_notes": [
+        {
+          "title": "约定牌堆：41张",
+          "text": "坠落、RevueDuet、不再遥不可及、勇气打击、双人舞、昨日夜空、舞动、东京塔下、我们的约定、观察情况、重逢、神圣星辰、背靠背、落地、下一个舞台、不再犹豫、命运与本能、命运交换之日、开拓星辰、拉伸、新的一天、极速下降、行动、闪避、Banana午餐、信封、水族馆、舞台正在等待着、最后的台词、唤醒、星光指引、约定之塔桥、Banana什锦、世界上最空虚的人、两人的梦想、命运的齿轮、命运舞台的再生产、燃烧吧燃烧吧、过去与未来、门票、为什么要离开？我的朋友"
+        },
+        {
+          "title": "闪耀：31张",
+          "text": "闪耀打击、上挑、出场、星星串起了我们的友谊、用你的闪耀贯穿我吧、蓄力打击、体操练习、武术练习、迈向那个舞台、以觉悟的名义、永无结束的命运舞台、续写、耀眼的阳光、不再犹豫、准备完成、土豆、歌唱吧舞蹈吧互相争斗吧、水分补充、舞蹈练习、Starlight第一幕、Starlight第三幕、NONNON哒哟、嫉妒、我们犯下的罪过、永不遗忘的闪耀、投下燃料、星光指引、星光闪耀之时、激情、Starlight第二幕、一起闪耀吧"
+        },
+        {
+          "title": "临时力量与保留：9张",
+          "text": "Banana松饼、一起吃饭吧、观察情况、约定的那天、Banana午餐、Banana费南雪、棒球、Banana什锦、过去与未来"
+        },
+        {
+          "title": "移牌收益：4张",
+          "text": "旋转、下一个舞台、招架、添麻烦了"
+        },
+        {
+          "title": "禁用遗物：2张",
+          "text": "摘星、星罪"
+        }
+      ],
+      "growth_note": "跨战斗成长：我们犯下的罪过；遗物收益：嫉妒、激情等。",
+      "display_notes": [
+        "按主卡池卡面归纳；移牌体系仅计收益牌。",
+        "跨战斗成长：我们犯下的罪过；遗物收益：嫉妒、激情等。"
+      ]
+    },
+    {
+      "id": "megumin",
+      "name": "惠惠",
+      "kind": "爆裂Power版 · 规模与样例待验证",
+      "total": null,
+      "pool_note": "核心已更新；旧卡数不作为新版统计。样例牌不等于已定卡池。",
+      "path": "D:\\Github\\STS2_Konosuba_Megumin\\design\\docs\\当前设计总览.json",
+      "rows": [
+        {
+          "name": "爆裂体系",
+          "scale": "大体系",
+          "position": "第一大体系；蓄积与群伤",
+          "ports": [
+            "主输出",
+            "技能体系外接",
+            "蓄积与结算"
+          ],
+          "count": null,
+          "trigger": null,
+          "reward": null,
+          "note": "用户已修改核心；配套为待验证方案；20–26张（建议）",
+          "members": [],
+          "count_display": "待统计",
+          "engine_detail": [
+            "运转端口：蓄积与结算配套待设计"
+          ],
+          "short_note": "20–26张为规划建议；新卡待设计。",
+          "short_position": "积累爆裂，停手引爆",
+          "short_ports": "主输出；防御、运转通过联动补足"
+        },
+        {
+          "name": "技能牌体系",
+          "scale": "大体系",
+          "position": "第二大体系；防御与基础抽牌",
+          "ports": [
+            "接爆裂来源",
+            "主防御",
+            "基础抽牌"
+          ],
+          "count": null,
+          "trigger": null,
+          "reward": null,
+          "note": "定位保留；改为支持准备与引爆两个回合；18–24张（建议）",
+          "members": [],
+          "count_display": "待统计",
+          "engine_detail": [
+            "抽牌：基础运转；引爆回合优先提前防护"
+          ],
+          "short_note": "18–24张建议；补跨回合防守。",
+          "short_position": "即时与跨回合防守",
+          "short_ports": "主防御／抽牌；部分牌提供爆裂"
+        },
+        {
+          "name": "红魔族宣言体系",
+          "scale": "小体系",
+          "position": "准备回合的抽牌与能量恢复",
+          "ports": [
+            "少量联动",
+            "外接",
+            "抽牌与能量恢复"
+          ],
+          "count": null,
+          "trigger": null,
+          "reward": null,
+          "note": "关键词不变；旧卡按新核心重审；6–9张，上限10张",
+          "members": [],
+          "count_display": "待统计",
+          "engine_detail": [
+            "抽牌：准备回合",
+            "能量恢复：准备回合"
+          ],
+          "short_note": "6–9张建议；上限10张。",
+          "short_position": "准备回合运转",
+          "short_ports": "抽牌／能量恢复（准备回合）"
+        },
+        {
+          "name": "魔力积蓄体系",
+          "scale": "运转体系（规模待定）",
+          "position": "手牌延后自动打出，消耗能量",
+          "ports": [
+            "取决于所存卡牌",
+            "取决于所存卡牌",
+            "延后自动出牌（消耗能量）"
+          ],
+          "count": null,
+          "trigger": null,
+          "reward": null,
+          "note": "用户已指定新关键词；执行细则与配套待设计；规模待定",
+          "members": [],
+          "count_display": "待统计",
+          "engine_detail": [
+            "运转端口：下回合开始自动打出所存手牌，消耗能量"
+          ],
+          "short_note": "关键词已定；规模与能量不足处理待定。",
+          "short_position": "延后自动出牌",
+          "short_ports": "运转端口：下回合自动打出（消耗能量）"
+        },
+        {
+          "name": "技能点",
+          "scale": "全局成长资源",
+          "position": "少量全局点数；额外获取卡牌",
+          "ports": [
+            "尚未设计",
+            "尚未设计",
+            "尚未设计"
+          ],
+          "count": null,
+          "trigger": null,
+          "reward": null,
+          "note": "沿用已定方向，具体方式待设计；卡位待定",
+          "members": [],
+          "count_display": "不适用",
+          "engine_detail": [],
+          "outside_growth": "全局成长：额外获取卡牌",
+          "short_note": "点数少量获取；获牌方式待设计。",
+          "short_position": "额外获取卡牌"
+        }
+      ],
+      "notes": [
+        "爆裂规则由用户指定；其余规模、样例牌与细则为建议。",
+        "全局成长：少量技能点提供额外卡牌获取，方式待设计。"
+      ],
+      "member_notes": [],
+      "growth_note": "全局成长：少量技能点提供额外卡牌获取，方式待设计。",
+      "display_notes": [
+        "旧卡不计作新版卡池；规模建议见结构说明。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\ironclad_card_analysis_zh.md",
+      "sha256": "d6b353de9d3a4e3a816748ffa7916fab9f88136958e4b863c8b19aa59a4b7261",
+      "purpose": "铁甲战士：体系规模、端口、数量、触发收益与五类定位"
+    },
+    {
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\silent_card_analysis_zh.md",
+      "sha256": "661804e7f6ca5adcee9fc45f8f35aa7a5cf54103fce3630c6538eb5b63aadf04",
+      "purpose": "静默猎手：体系规模、端口、数量、触发收益与五类定位"
+    },
+    {
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\defect_card_analysis_zh.md",
+      "sha256": "a9c9d91f90f52b77c712236b617e01dad90e611952b3d8234e8a0b41d86e8330",
+      "purpose": "故障机器人：体系规模、端口、数量、触发收益与五类定位"
+    },
+    {
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\necrobinder_card_analysis_zh.md",
+      "sha256": "183dff39184388b216273be68626e26cd56cdfce2b7627bf7508a4931b606fdb",
+      "purpose": "亡灵契约师：体系规模、端口、数量、触发收益与五类定位"
+    },
+    {
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\regent_card_analysis_zh.md",
+      "sha256": "0408e8cf68dffb5f44dd406683b2209890a07c810cae86cda9ab086f4bc441d9",
+      "purpose": "储君：体系规模、端口、数量、触发收益与五类定位"
+    },
+    {
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\体系分析流程.md",
+      "sha256": "0ce4ca7ae85c02b6584ae6d8b3dd2516e2e66e3862a43192ae75c3cdb0f16cf7",
+      "purpose": "体系核心、三个端口和大／小体系判定方法"
+    },
+    {
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\卡牌分析流程.md",
+      "sha256": "831b7f9f0a0cb6e4f24c3df77d010d0ab9885df889e4247472557707fa48f0f5",
+      "purpose": "统计与五类单卡定位口径"
+    },
+    {
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\sts2_five_classes_card_analysis_summary_zh.md",
+      "sha256": "c15fff17599503176aa8c5c0a95b812a83f219df9520464693e84a62c787e01d",
+      "purpose": "五职业卡池总数与体系结构复核"
+    },
+    {
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\sts2_character_cards_zh.md",
+      "sha256": "4caaa592baac7217fc658a2e97fa5171e6116ab1b1d9e5d0de486c0a8bea0e8d",
+      "purpose": "原版抽牌、能量恢复与本局跨战斗成长的卡面依据"
+    },
+    {
+      "path": "D:\\Github\\spire-codex\\extraction\\raw\\src\\Core\\Models\\Orbs\\PlasmaOrb.cs",
+      "sha256": "99d433f9e7f28945617f0427e1925f19180cc717c3d1ec679855fb45d222ed29",
+      "purpose": "补充核对等离子回能、子程序回能或灵魂抽牌，避免静态文本遗漏"
+    },
+    {
+      "path": "D:\\Github\\spire-codex\\extraction\\raw\\src\\Core\\Models\\Powers\\SubroutinePower.cs",
+      "sha256": "bd95052382fafc202e100a7323debb981cb8abcd680e60d1b806de3b6dabb362",
+      "purpose": "补充核对等离子回能、子程序回能或灵魂抽牌，避免静态文本遗漏"
+    },
+    {
+      "path": "D:\\Github\\spire-codex\\extraction\\raw\\src\\Core\\Models\\Cards\\Soul.cs",
+      "sha256": "154b685466724c6dca52e9a1c42f8f0ad9e756a2a6ee8d8a89c62a136596d547",
+      "purpose": "补充核对等离子回能、子程序回能或灵魂抽牌，避免静态文本遗漏"
+    },
+    {
+      "path": "D:\\Github\\STS2_Card_Reserch\\docs\\mods\\karen_mod_character_cards_zh.md",
+      "sha256": "30a02ccceb5bd64f53bc0d32a9e04a670f8c26cbfec8de722ccb14fa397d0198",
+      "purpose": "华恋Mod：86张主卡池与27张衍生／选项牌的静态提取表"
+    },
+    {
+      "path": "D:\\Github\\STS2_Konosuba_Megumin\\design\\docs\\当前设计总览.json",
+      "sha256": "d3c7b03db64a319913b4ef26c6e925849d19fc3d5fc916242448f8eafb8ce1e6",
+      "purpose": "惠惠：当前核心、体系职责与版本状态"
+    }
+  ]
+}

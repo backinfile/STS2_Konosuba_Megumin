@@ -1,0 +1,30 @@
+{
+  "name": "megumin-quartet-spine-preview",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "py -X utf8 tools/build_spine.py && py -X utf8 tools/package_preview.py",
+    "test": "node tools/validate.mjs",
+    "build:idle": "py -X utf8 tools/build_idle_v2.py && node tools/validate_idle_v2.mjs && py -X utf8 tools/package_idle_v2.py",
+    "test:idle": "node tools/validate_idle_v2.mjs",
+    "build:actions": "py -X utf8 tools/build_actions_v3.py && node tools/bake_floor_v3.mjs && node tools/validate_actions_v3.mjs && py -X utf8 tools/package_actions_v3.py && py -X utf8 tools/gallery_actions_v3.py",
+    "test:actions": "node tools/validate_actions_v3.mjs",
+    "preview": "py -m http.server 11151 --bind 127.0.0.1",
+    "build:actions:v4": "py -X utf8 tools/build_actions_v4.py && node tools/bake_floor_v4.mjs && node tools/validate_actions_v4.mjs && py -X utf8 tools/package_actions_v4.py && py -X utf8 tools/build_review_v4.py",
+    "test:actions:v4": "node tools/validate_actions_v4.mjs",
+    "build:actions:v5": "py -X utf8 tools/build_actions_v5.py && node tools/bake_floor_v5.mjs && node tools/validate_actions_v5.mjs && node tools/audit_joint_logic.mjs actions-v5 --strict && py -X utf8 tools/package_actions_v5.py && py -X utf8 tools/build_review_v5.py",
+    "test:actions:v5": "node tools/validate_actions_v5.mjs && node tools/audit_joint_logic.mjs actions-v5 --strict",
+    "build:actions:v6": "py -X utf8 tools/build_chant_enter_plan.py && py -X utf8 tools/build_actions_v6.py && node tools/bake_floor_v6.mjs && node tools/bake_turn_v6.mjs && node tools/validate_actions_v6.mjs && node tools/audit_joint_logic.mjs actions-v6 --strict && py -X utf8 tools/package_actions_v6.py && py -X utf8 tools/build_review_v6.py && py -X utf8 tools/package_chant_plan.py",
+    "test:actions:v6": "node tools/validate_actions_v6.mjs && node tools/audit_joint_logic.mjs actions-v6 --strict",
+    "build:actions:v7": "py -X utf8 tools/build_actions_v7.py && node tools/validate_actions_v7.mjs && py -X utf8 tools/package_actions_v7.py",
+    "test:actions:v7": "node tools/validate_actions_v7.mjs",
+    "build:actions:v8": "node tools/actions_v8.mjs --build",
+    "test:actions:v8": "node tools/actions_v8.mjs",
+    "build:actions:v9": "node tools/actions_v9.mjs --build",
+    "test:actions:v9": "node tools/actions_v9.mjs"
+  },
+  "dependencies": {
+    "@esotericsoftware/spine-core": "4.2.95",
+    "@esotericsoftware/spine-webgl": "4.2.95"
+  }
+}

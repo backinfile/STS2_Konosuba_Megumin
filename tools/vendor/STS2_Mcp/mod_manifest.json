@@ -1,0 +1,11 @@
+{
+  "name": "Karen STS2 MCP",
+  "has_dll": true,
+  "min_game_version": "v0.107.1",
+  "affects_gameplay": false,
+  "version": "0.1.0",
+  "id": "KarenSTS2MCP",
+  "description": "STS2 MCP bridge with dev console commands and menu controls",
+  "has_pck": false,
+  "author": "Codex / Kunologist"
+}

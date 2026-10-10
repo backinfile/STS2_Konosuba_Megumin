@@ -1,0 +1,127 @@
+{
+  "name": "cast_short",
+  "file": "cast_short.mp4",
+  "source": "live native game viewport",
+  "playback_rate": 1,
+  "frame_seeking": false,
+  "timeline": [
+    {
+      "clip": "idle_loop",
+      "at": 0.0138,
+      "seconds": 1.2,
+      "loop": true
+    },
+    {
+      "clip": "cast_short",
+      "at": 1.2229,
+      "seconds": 1.496,
+      "loop": false
+    },
+    {
+      "clip": "idle_loop",
+      "at": 2.7229,
+      "seconds": 1.2,
+      "loop": true
+    }
+  ],
+  "capture": {
+    "status": "completed",
+    "output_path": "C:\\Users\\17575\\AppData\\Local\\KarenSTS2MCP\\recordings\\sts2-20261010-074006-461c9e49f76f475c8540ded6e1462ec6.mp4",
+    "fps": 30,
+    "max_duration_seconds": 8,
+    "width": 1280,
+    "height": 720,
+    "frames_written": 118,
+    "video_duration_seconds": 3.933333333333333,
+    "frames_captured": 118,
+    "frames_repeated": 0,
+    "capture_fps": 30.06866000137908,
+    "capture_average_ms": 13.17869322033898,
+    "capture_max_ms": 22.2635,
+    "elapsed_seconds": 4.006741,
+    "audio": false
+  },
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.64001f",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 60416,
+        "duration": "3.933333",
+        "bit_rate": "510896",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "118",
+        "extradata_size": 44,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.28.100 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "D:\\Github\\STS2_Konosuba_Megumin\\art\\megumin-quartet-spine\\actions-v9\\verification\\recordings\\cast_short.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "3.933333",
+      "size": "253456",
+      "bit_rate": "515503",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.12.100"
+      }
+    }
+  },
+  "sha256": "2d7867f6985ab2672886fb19bd556dbb43562636314df41a8ca5c9ab632cdb33"
+}

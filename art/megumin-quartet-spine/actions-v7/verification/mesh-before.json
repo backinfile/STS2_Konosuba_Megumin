@@ -1,0 +1,115 @@
+[
+  {
+    "name": "chant_enter",
+    "t": 0.45,
+    "slot": "cape",
+    "area": 53.84,
+    "triangles": 13
+  },
+  {
+    "name": "chant_enter",
+    "t": 0.45,
+    "slot": "body",
+    "area": 136.34,
+    "triangles": 23
+  },
+  {
+    "name": "chant_enter",
+    "t": 0.45,
+    "slot": "leg_l",
+    "area": 6.82,
+    "triangles": 16
+  },
+  {
+    "name": "chant_enter",
+    "t": 0.45,
+    "slot": "leg_r",
+    "area": 0.8,
+    "triangles": 3
+  },
+  {
+    "name": "chant_enter",
+    "t": 0.45,
+    "slot": "head",
+    "area": 0.68,
+    "triangles": 1
+  },
+  {
+    "name": "chant_enter",
+    "t": 0.45,
+    "slot": "hand_r",
+    "area": 89.92,
+    "triangles": 14
+  },
+  {
+    "name": "chant_enter",
+    "t": 0.45,
+    "foldedArea": 288.4
+  },
+  {
+    "name": "relaxed_fall",
+    "t": 0.82,
+    "slot": "cape",
+    "area": 7.28,
+    "triangles": 5
+  },
+  {
+    "name": "relaxed_fall",
+    "t": 0.82,
+    "slot": "body",
+    "area": 2.88,
+    "triangles": 2
+  },
+  {
+    "name": "relaxed_fall",
+    "t": 0.82,
+    "slot": "leg_l",
+    "area": 0.74,
+    "triangles": 1
+  },
+  {
+    "name": "relaxed_fall",
+    "t": 0.82,
+    "slot": "leg_r",
+    "area": 116.4,
+    "triangles": 22
+  },
+  {
+    "name": "relaxed_fall",
+    "t": 0.82,
+    "slot": "hand_l",
+    "area": 1.78,
+    "triangles": 3
+  },
+  {
+    "name": "relaxed_fall",
+    "t": 0.82,
+    "slot": "arm_r",
+    "area": 3.03,
+    "triangles": 3
+  },
+  {
+    "name": "relaxed_fall",
+    "t": 0.82,
+    "foldedArea": 132.12
+  },
+  {
+    "name": "get_up",
+    "t": 1.58,
+    "slot": "leg_r",
+    "area": 1.77,
+    "triangles": 3
+  },
+  {
+    "name": "get_up",
+    "t": 1.58,
+    "slot": "hand_l",
+    "area": 0.16,
+    "triangles": 1
+  },
+  {
+    "name": "get_up",
+    "t": 1.58,
+    "foldedArea": 1.93
+  }
+]

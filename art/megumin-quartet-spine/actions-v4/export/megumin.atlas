@@ -1,0 +1,153 @@
+reference-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+reference
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+body_base-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+body_base
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1370
+  orig: 1148, 1370
+  offset: 0, 0
+  index: -1
+
+blink-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+blink
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1370
+  orig: 1148, 1370
+  offset: 0, 0
+  index: -1
+
+tired-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+tired
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+support_grip-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+support_grip
+  rotate: false
+  xy: 2, 2
+  size: 1254, 1254
+  orig: 1254, 1254
+  offset: 0, 0
+  index: -1
+
+arms-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+arms
+  rotate: false
+  xy: 2, 2
+  size: 1536, 1024
+  orig: 1536, 1024
+  offset: 0, 0
+  index: -1
+
+legs-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+legs
+  rotate: false
+  xy: 2, 2
+  size: 1536, 1024
+  orig: 1536, 1024
+  offset: 0, 0
+  index: -1
+
+costume-atlas.png
+size: 4096,4096
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+costume
+  rotate: false
+  xy: 2, 2
+  size: 2098, 749
+  orig: 2098, 749
+  offset: 0, 0
+  index: -1
+
+focus-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+focus
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+release_face-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+release_face
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1
+
+hit_face-atlas.png
+size: 2048,2048
+format: RGBA8888
+filter: MipMapLinearLinear,Linear
+repeat: none
+pma: false
+hit_face
+  rotate: false
+  xy: 2, 2
+  size: 1148, 1371
+  orig: 1148, 1371
+  offset: 0, 0
+  index: -1

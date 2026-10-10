@@ -1,0 +1,381 @@
+{
+  "passed": false,
+  "limits": {
+    "headSwitchAreaJump": 0.06,
+    "headSwitchCentroid": 4,
+    "headWithinPoseAreaDrift": 0.05
+  },
+  "failingSwitches": [
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 0.73333,
+      "from": "fall-lean/head",
+      "to": "crouch/head",
+      "areaJump": 0.40623384920954564,
+      "centroidJump": 28.81496329552864
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "head",
+      "time": 0.18333,
+      "from": "fall-lean/head",
+      "to": "crouch/head",
+      "areaJump": 0.4055878771618322,
+      "centroidJump": 28.824575464102114
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 0.56667,
+      "from": "lower/head",
+      "to": "brace/head",
+      "areaJump": 0.227639289624757,
+      "centroidJump": 5.817137015941956
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 1.08333,
+      "from": "brace/head",
+      "to": "kneel-rise/head",
+      "areaJump": 0.2088177217809073,
+      "centroidJump": 24.598830501383187
+    },
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 1.23333,
+      "from": "brace/head",
+      "to": "lower/head",
+      "areaJump": 0.18991742887023877,
+      "centroidJump": 5.344494576510325
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "head",
+      "time": 0.8,
+      "from": "brace/head",
+      "to": "lower/head",
+      "areaJump": 0.18707801041156902,
+      "centroidJump": 5.640276332491673
+    },
+    {
+      "clip": "explosion_exit",
+      "slot": "head",
+      "time": 0.25,
+      "from": "release/head",
+      "to": "fall-lean/head",
+      "areaJump": 0.149856799911384,
+      "centroidJump": 8.997282547744252
+    },
+    {
+      "clip": "relaxed_fall",
+      "slot": "head",
+      "time": 1.06667,
+      "from": "lower/head",
+      "to": "prone/head",
+      "areaJump": 0.10986245419885354,
+      "centroidJump": 5.531358962425049
+    },
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 1.46667,
+      "from": "lower/head",
+      "to": "prone/head",
+      "areaJump": 0.10983170982112567,
+      "centroidJump": 5.531449239498319
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 0.21667,
+      "from": "prone/head",
+      "to": "lower/head",
+      "areaJump": 0.09849258745611245,
+      "centroidJump": 5.482665004741607
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 1.11667,
+      "from": "E08/head",
+      "to": "E05/head",
+      "areaJump": 0.07665378496439645,
+      "centroidJump": 2.079865332356612
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 1.11667,
+      "from": "E08/head",
+      "to": "E05/head",
+      "areaJump": 0.07665378496439645,
+      "centroidJump": 2.079865332356612
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "head",
+      "time": 0.56667,
+      "from": "E08/head",
+      "to": "E05/head",
+      "areaJump": 0.07655292540778258,
+      "centroidJump": 2.086349048029164
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 2.93333,
+      "from": "E08/head",
+      "to": "E05/head",
+      "areaJump": 0.07649388904410448,
+      "centroidJump": 2.0938284636612807
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "head",
+      "time": 0.75,
+      "from": "E05/head",
+      "to": "E08/head",
+      "areaJump": 0.07087089371512822,
+      "centroidJump": 2.122400872427678
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 0.4,
+      "from": "E05/head",
+      "to": "E08/head",
+      "areaJump": 0.07079004629490548,
+      "centroidJump": 2.150124993581705
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 0.4,
+      "from": "E05/head",
+      "to": "E08/head",
+      "areaJump": 0.07079004629490548,
+      "centroidJump": 2.150124993581705
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 1.6,
+      "from": "kneel-rise/head",
+      "to": "fall-lean/head",
+      "areaJump": 0.06553992495066807,
+      "centroidJump": 4.796370390152336
+    },
+    {
+      "clip": "explosion_release",
+      "slot": "head",
+      "time": 0.33333,
+      "from": "E12/head",
+      "to": "release/head",
+      "areaJump": 0.06524201398124929,
+      "centroidJump": 7.702652023277207
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 2.15,
+      "from": "fall-lean/head",
+      "to": "E12/head",
+      "areaJump": 0.05723500204273335,
+      "centroidJump": 4.533437172214868
+    },
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 0.45,
+      "from": "turn-upright/head",
+      "to": "fall-lean/head",
+      "areaJump": 0.053277582890073005,
+      "centroidJump": 7.223381386943481
+    },
+    {
+      "clip": "dead",
+      "slot": "head",
+      "time": 0.18333,
+      "from": "E00/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.04862199161960745,
+      "centroidJump": 7.914606664742528
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 1.25,
+      "from": "E05/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0379728579437435,
+      "centroidJump": 7.169246131420807
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 1.25,
+      "from": "E05/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0379728579437435,
+      "centroidJump": 7.169246131420807
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 3.2,
+      "from": "E05/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.037803529723997364,
+      "centroidJump": 7.177457391149933
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "head",
+      "time": 0.83333,
+      "from": "E05/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.037631796490482206,
+      "centroidJump": 7.184827711806673
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "head",
+      "time": 0.48333,
+      "from": "turn-upright/head",
+      "to": "E05/head",
+      "areaJump": 0.03704205949706385,
+      "centroidJump": 7.149507343341077
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 0.25,
+      "from": "turn-upright/head",
+      "to": "E05/head",
+      "areaJump": 0.03694549315538764,
+      "centroidJump": 7.152333493481151
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 0.25,
+      "from": "turn-upright/head",
+      "to": "E05/head",
+      "areaJump": 0.03694549315538764,
+      "centroidJump": 7.152333493481151
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 0.13333,
+      "from": "E01/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0034836719008928263,
+      "centroidJump": 5.657685133338697
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 0.13333,
+      "from": "E01/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0034836719008928263,
+      "centroidJump": 5.657685133338697
+    },
+    {
+      "clip": "chant_enter",
+      "slot": "head",
+      "time": 0.25,
+      "from": "E01/head",
+      "to": "turn-upright/head",
+      "areaJump": 0.0034426364301722856,
+      "centroidJump": 5.658829908421696
+    },
+    {
+      "clip": "get_up",
+      "slot": "head",
+      "time": 3.43333,
+      "from": "turn-upright/head",
+      "to": "E01/head",
+      "areaJump": 0.003340426245482364,
+      "centroidJump": 5.659545910461275
+    },
+    {
+      "clip": "chant_cancel",
+      "slot": "head",
+      "time": 1.06667,
+      "from": "turn-upright/head",
+      "to": "E01/head",
+      "areaJump": 0.003316873444569879,
+      "centroidJump": 5.65974243695108
+    },
+    {
+      "clip": "attack_short",
+      "slot": "head",
+      "time": 1.38333,
+      "from": "turn-upright/head",
+      "to": "E01/head",
+      "areaJump": 0.0031962400329392793,
+      "centroidJump": 5.659824974046198
+    },
+    {
+      "clip": "cast_short",
+      "slot": "head",
+      "time": 1.38333,
+      "from": "turn-upright/head",
+      "to": "E01/head",
+      "areaJump": 0.0031962400329392793,
+      "centroidJump": 5.659824974046198
+    }
+  ],
+  "headStretch": [],
+  "teleports": [
+    {
+      "clip": "chant_enter",
+      "time": 0.4666666666666667,
+      "bone": "hand_l",
+      "distance": 54.403021876657334
+    },
+    {
+      "clip": "chant_cancel",
+      "time": 0.85,
+      "bone": "hand_l",
+      "distance": 54.40292461620694
+    },
+    {
+      "clip": "get_up",
+      "time": 3.216666666666667,
+      "bone": "hand_l",
+      "distance": 54.4029564414052
+    },
+    {
+      "clip": "attack_short",
+      "time": 0.25,
+      "bone": "hand_l",
+      "distance": 55.76634677912451
+    },
+    {
+      "clip": "attack_short",
+      "time": 1.2666666666666666,
+      "bone": "hand_l",
+      "distance": 55.76842963338746
+    },
+    {
+      "clip": "cast_short",
+      "time": 0.25,
+      "bone": "hand_l",
+      "distance": 55.76634677912451
+    },
+    {
+      "clip": "cast_short",
+      "time": 1.2666666666666666,
+      "bone": "hand_l",
+      "distance": 55.76842963338746
+    }
+  ],
+  "switchCount": 260,
+  "note": "Geometry includes some transparent border; use visual replay to confirm silhouette and interior drawing changes."
+}

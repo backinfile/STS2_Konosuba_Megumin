@@ -1,0 +1,17 @@
+{
+  "version": "actions-v6",
+  "date": "2026-10-10",
+  "reviewGroups": 6,
+  "reviewFrames": 54,
+  "planRows": 73,
+  "frameControls": [
+    "typed 30 -> F30, elbow 0 degrees",
+    "step -> F31",
+    "play -> F72 and stop",
+    "scrub -> F42",
+    "previous -> F41"
+  ],
+  "demo": "returned to idle after one release, three damage pulses, prone fall, prone loop and get_up",
+  "darkBackground320px": true,
+  "consoleErrors": []
+}
